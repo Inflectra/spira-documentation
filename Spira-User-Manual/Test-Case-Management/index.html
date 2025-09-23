@@ -10349,6 +10349,9 @@
 
 
 <h1 id="test-case-management">Test Case Management<a class="headerlink" href="#test-case-management" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -10496,7 +10499,7 @@ gray.</p>
 <h3 id="printing-items">Printing Items<a class="headerlink" href="#printing-items" title="Permanent link">&para;</a></h3>
 <p>To quickly print a single test case, test folder or list of test cases you can select the items' checkboxes and then click Tools &gt; Print Items. This will create a printable report of the selected items in a new window.</p>
 <h3 id="right-click-context-menu">Right-Click Context Menu<a class="headerlink" href="#right-click-context-menu" title="Permanent link">&para;</a></h3>
-<p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test case list and the following menu will be displayed:</p>
+<p>Spira provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test case list and the following menu will be displayed:</p>
 <p><img alt="" src="../img/Test_Case_Management_135.png" /></p>
 <p>You can now choose any of these options as an alternative to using the icons in the toolbar.</p>
 <h2 id="test-case-details">Test Case Details<a class="headerlink" href="#test-case-details" title="Permanent link">&para;</a></h2>
@@ -10563,7 +10566,7 @@ gray.</p>
 <p>Clicking on the "<strong><em>Insert Link</em></strong>" button brings up the following dialog box that allows you to either choose an existing test case to be inserted or create a new test case and step with parameters:</p>
 <p><img alt="" src="../img/Test_Case_Management_143.png" /></p>
 <p>When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared <a href="#parameters">parameters</a> you will see a list of parameters to fill out.</p>
-<p>If it makes sense for your tests you can fill out the parameter values and then click "<strong><em>Add</em></strong>". The system will insert the test case as a link. These paramter values are passed down to the linked test at execution. These values override any default parameter values set on the test case. If a test step was already selected the link is inserted above that test step, otherwise the link is added at the end of the test step list.</p>
+<p>If it makes sense for your tests you can fill out the parameter values and then click "<strong><em>Add</em></strong>". The system will insert the test case as a link. These parameter values are passed down to the linked test at execution. These values override any default parameter values set on the test case. If a test step was already selected the link is inserted above that test step, otherwise the link is added at the end of the test step list.</p>
 <p>If you want to create a test step with specific parameters and parameter values, you can do so by clicking the "<strong><em>Create New Test Case</em></strong>". This will change the dialog to one where you can assign a folder, name, and parameters to a new test case. On clicking the "<strong><em>Add</em></strong>" button: the new test case is created; a test step is created within that new test case; the parameters specified in the dialog are assigned to that test step, with the values set as the defaults for the step; and the new test case is added as a linked test case in the list of test steps.</p>
 <p><img alt="" src="../img/Test_Case_Management_144.png" /></p>
 <h3 id="delete_1">Delete<a class="headerlink" href="#delete_1" title="Permanent link">&para;</a></h3>
@@ -10630,22 +10633,22 @@ gray.</p>
 <p>The Automation section displays the automated test script associated with the test case. To activate this section, choose an Automation Engine from the dropdown in the section. Automation can only run if it has an engine that it will run on - the application / framework that will actually run the script (e.g. Rapise). You can set up automation engines in <a href="../../Spira-Administration-Guide/System-Integration/#test-automation">system administration</a>. </p>
 <p>There are three types of automated test:</p>
 <ul>
-<li><strong>Attached</strong>: this is when SpiraPlan physically stores the test script as an attachment in the system. This is only available for test automation tools that store their test scripts as plain text files. Examples of such tools are Selenium-RC and Squish.</li>
-<li><strong>Linked</strong>: this is when SpiraPlan stores the location of the test script stored on the automation host itself or on an external network drive.</li>
-<li><strong>Repository</strong>: This is a special option only available when using Rapise™, the test automation system from Inflectra. This allows you to store an entire folder of automated test script files in SpiraPlan and have them linked to the test case.</li>
+<li><strong>Attached</strong>: this is when Spira physically stores the test script as an attachment in the system. This is only available for test automation tools that store their test scripts as plain text files. Examples of such tools are Selenium-RC and Squish.</li>
+<li><strong>Linked</strong>: this is when Spira stores the location of the test script stored on the automation host itself or on an external network drive.</li>
+<li><strong>Repository</strong>: This is a special option only available when using Rapise™, the test automation system from Inflectra. This allows you to store an entire folder of automated test script files in Spira and have them linked to the test case.</li>
 </ul>
 <p>The screenshot below illustrates a sample Rapise automated test script attached to a test case:</p>
 <p><img alt="" src="../img/Test_Case_Management_148.png" /></p>
-<p>The automation screen includes the following fields that you should populate when using SpiraPlan® to store an automated test script:</p>
+<p>The automation screen includes the following fields that you should populate when using Spira to store an automated test script:</p>
 <ul>
 <li><strong>Automation Engine (required)</strong>: this should be the name of the test automation engine that the test script should be executed with, as set up in <a href="../../Spira-Administration-Guide/System-Integration/#test-automation">system administration</a>.</li>
-<li><strong>Script Type</strong>: This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in SpiraPlan. If you choose linked, the test script is stored externally and SpiraPlan just stores a reference to it. The "repository" option is never selectable within SpiraPlan and will be automatically set by Rapise when it attaches a test script to the test case.</li>
-<li><strong>Filename</strong>: If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please search for the automation engine name on this website. For non-Rapise scripts, beneathe filename is a link to open the test script attachment's dedicated document page</li>
+<li><strong>Script Type</strong>: This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in Spira. If you choose linked, the test script is stored externally and Spira just stores a reference to it. The "repository" option is never selectable within Spira and will be automatically set by Rapise when it attaches a test script to the test case.</li>
+<li><strong>Filename</strong>: If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please search for the automation engine name on this website. For non-Rapise scripts, beneath the filename is a link to open the test script attachment's dedicated document page</li>
 <li><strong>Document Type</strong>: This should be set to the document type that you want the test script associated with.</li>
 <li><strong>Document Folder</strong>: This should be set to the document folder that you want the test script to be stored in. Note that if the script type is repository then the folder is set automatically and cannot be edited by the user.</li>
 <li><strong>Version</strong>: This should contain the version number of the test script.</li>
 <li><strong>Test Script</strong>: If you are attaching a test script, this should contain the actual program code for executing the test script. The language and syntax will be dependent on the test automation engine being used. If you are linking the test script, this section will be disabled.</li>
-<li><strong>Parameters</strong>: You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that SpiraPlan integrates with will support the passing of parameter values from SpiraPlan to the automation tool.</li>
+<li><strong>Parameters</strong>: You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that Spira integrates with will support the passing of parameter values from Spira to the automation tool.</li>
 </ul>
 <h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#comments">how the comments works</a></p>
@@ -10673,11 +10676,11 @@ gray.</p>
 <li>Customize the fields shown using the <strong>Show/Hide Columns</strong> dropdown</li>
 <li><strong>Refresh</strong>: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time</li>
 <li><strong>Remove</strong>: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and all relevant test run steps and test steps. Note: this feature is currently only available if baselining is disabled for the product.</li>
-<li><strong>Filter</strong> the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</li>
+<li><strong>Filter</strong> the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or click the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</li>
 <li><strong>Edit</strong>: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.</li>
 </ul>
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
-<p>In this tab, the main pane displays the list of documents that have been "attached" to the test case. The documents can be in any format, though SpiraPlan® will only display an icon for certain known types.</p>
+<p>In this tab, the main pane displays the list of documents that have been "attached" to the test case. The documents can be in any format, though Spira will only display an icon for certain known types.</p>
 <p><img alt="" src="../img/Test_Case_Management_155.png" /></p>
 <p>The attachment list includes the filename that was originally uploaded together with the file-size (in KB), name of the person who attached it and the date uploaded. In addition, if you position the pointer over the filename and hold it there for a few seconds, a detailed description is displayed as a tooltip.</p>
 <p>To actually view the document, simply click on the filename hyperlink and a new web browser window will open. Depending on the type of file, this window will either display the document or prompt you for a place to save it on your local computer. To delete an existing attachment from a test case, simply click the "<strong><em>Remove</em></strong>" button and the attachment will be removed from the list.</p>
@@ -10689,9 +10692,12 @@ gray.</p>
 <a href="http://mywebsite.com/?Document=1">http://mywebsite.com?Document=1</a>), an optional description and then click the "<strong><em>Upload</em></strong>" button to attach the web-link.</p>
 <p>To attach a screenshot to the artifact, you need to choose "Screenshot" as the type and then copy the image to your computer's clipboard (e.g. on Windows computers, the PRINT SCREEN button captures the current page and adds to the clipboard). Once the image is in the clipboard, paste it into the editor using CTRL+V (or the equivalent keystroke for your operating system) and the item will appear in the preview window. You can then fill in the other fields and click "<strong><em>Upload</em></strong>" to attach the image.</p>
 <p>Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't put file extensions on filenames (e.g. .xls for an Excel sheet) automatically, then you will need to manually add the file extension to the filename before uploading if you want it to be displayed with the correct icon in the attachment list.</p>
-<p>You can also associate an existing document (that's already stored in SpiraTeam) with the test case. To do that, click on the "<strong><em>Add Existing</em></strong>" button to bring up the add file association dialog box:</p>
+<p>You can also associate an existing document (that's already stored in Spira) with the test case. To do that, click on the "<strong><em>Add Existing</em></strong>" button to bring up the add file association dialog box:</p>
 <p><img alt="g4197" src="../img/Test_Case_Management_156.png" /></p>
-<p>You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.</p>
+<p class="edition-spiraplan edition-spirateam">You can then choose to either associate a document:
+- stored in the SpiraPlan Documents repository or
+- from the linked source code repository</p>
+<p>In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.</p>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>In this tab, the main pane displays the list of changes that have been performed on the test case artifact since its creation. An example test case change history is depicted below:</p>
 <p><img alt="" src="../img/Test_Case_Management_157.png" /></p>
@@ -10703,7 +10709,7 @@ gray.</p>
 <p>You can also filter the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "<strong><em>Filter</em></strong>" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
 <div class="admonition abstract">
-<p class="admonition-title">Available in SpiraTeam, SpiraPlan</p>
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
 </div>
 <table>
 <thead>
@@ -10774,7 +10780,7 @@ gray.</p>
 <hr />
 <ol>
 <li id="fn:rq-suspect">
-<p>only certain changes to a requirement will trigger the suspect flag. These are any change to standard field only. Changes to comments, assocations, attachments, use case steps, and custom properties will not trigger the suspect flag.&#160;<a class="footnote-backref" href="#fnref:rq-suspect" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>only certain changes to a requirement will trigger the suspect flag. These are any change to standard field only. Changes to comments, associations, attachments, use case steps, and custom properties will not trigger the suspect flag.&#160;<a class="footnote-backref" href="#fnref:rq-suspect" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:folder-url">
 <p>when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.&#160;<a class="footnote-backref" href="#fnref:folder-url" title="Jump back to footnote 2 in the text">&#8617;</a></p>

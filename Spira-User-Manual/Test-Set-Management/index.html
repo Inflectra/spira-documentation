@@ -9613,6 +9613,9 @@
 
 
 <h1 id="test-set-management">Test Set Management<a class="headerlink" href="#test-set-management" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -9726,7 +9729,7 @@ TG(Configuration) --&gt; TX;</code></pre>
 <p>To quickly print a single test set, test set folder or list of test sets you can select the items' checkboxes and then click Tools &gt; Print Items. This will display a popup window containing a printable version of the selected items.</p>
 <p>Alternatively you can save the selected items into a number of formats, available via the Tools dropdown.</p>
 <h3 id="right-click-context-menu">Right-Click Context Menu<a class="headerlink" href="#right-click-context-menu" title="Permanent link">&para;</a></h3>
-<p>SpiraPlan® provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test set list and the following menu will be displayed:</p>
+<p>Spira provides a shortcut -- called the <em>context menu</em> - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test set list and the following menu will be displayed:</p>
 <p><img alt="" src="../img/Test_Case_Management_215.png" /></p>
 <p>You can now choose any of these options as an alternative to using the icons in the toolbar.</p>
 <h2 id="test-set-details">Test Set Details<a class="headerlink" href="#test-set-details" title="Permanent link">&para;</a></h2>
@@ -9778,7 +9781,7 @@ TG(Configuration) --&gt; TX;</code></pre>
 <p>The <strong>Display For</strong> field in the "Releases" section tells you what release execution status results are displaying for the test set. This field controls the results for the test set overall and also for its individual test cases. This field is read only. To change it, you must use the "Display For" dropdown on the list page.</p>
 <p>The Detailed Information section contains the long, formatted description of the test case, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.</p>
 <p><img alt="" src="../img/Test_Case_Management_218.png" /></p>
-<p>If you have <strong>test configuration sets</strong> defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the <strong>Configuration</strong> dropdown value. If you have a test configuration associated with the test set, when you execute the test set, SpiraPlan will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.</p>
+<p>If you have <strong>test configuration sets</strong> defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the <strong>Configuration</strong> dropdown value. If you have a test configuration associated with the test set, when you execute the test set, Spira will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.</p>
 <p>The Description section contains the long, formatted description of the test set. You can enter rich text or paste in from a word processing program or web page.</p>
 <div class="admonition info">
 <p class="admonition-title">Manual or Automated Test Sets</p>
@@ -9806,11 +9809,11 @@ TG(Configuration) --&gt; TX;</code></pre>
 <ul>
 <li>For manual test sets, only the date component is used. </li>
 <li>For automated tests you also set the time. This time is based on the time zone of the application (for reference, this is shown in the footer of the application on all pages).</li>
-<li>You can additionally specify a <strong>recurrence schedule</strong> for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc so that SpiraPlan executes the same test set according to the specified frequency.</li>
+<li>You can additionally specify a <strong>recurrence schedule</strong> for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc so that Spira executes the same test set according to the specified frequency.</li>
 </ul>
 <p>Use the <strong>Schedule on Build</strong> field:</p>
 <ul>
-<li>This will tell SpiraPlan to automatically set the <em>Planned Date</em> to the exact date and time that a relevant build completes</li>
+<li>This will tell Spira to automatically set the <em>Planned Date</em> to the exact date and time that a relevant build completes</li>
 <li>Using the <strong>Post Build Wait Time</strong> field you can add an offset (in seconds) for how long after the build to kick off the test sets</li>
 <li>Only builds that finish against the release or sprint that the test set is set to will trigger the test set to execute</li>
 <li>With this method, test sets can be setup to automatically run only after the build completes and at the exact delay you need.</li>

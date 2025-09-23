@@ -10275,6 +10275,9 @@
 
 
 <h1 id="release-management">Release Management<a class="headerlink" href="#release-management" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -10352,6 +10355,9 @@ RK(Risk) --&gt; RL;</code></pre>
 <p>If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tests in each execution status.</p>
 <p>Each release shows the overall execution status of test cases assigned to that release for that release. For each test case the execution status shown is the most recent result from when that test case was run against that particular release (if at all). <strong>Note:</strong> a major release will also show the results from test cases assigned to it directly that are also assigned to and run against its child sprints. </p>
 <h3 id="task-progress">Task Progress<a class="headerlink" href="#task-progress" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>This columns shows a mini chart of the count of all active tasks<sup id="fnref:active-tasks"><a class="footnote-ref" href="#fn:active-tasks">1</a></sup> assigned to the release, by progress category for the release. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.</p>
 <p>If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tasks in each category.</p>
 <p>How are the different categories calculated?</p>
@@ -10383,10 +10389,15 @@ RK(Risk) --&gt; RL;</code></pre>
 </li>
 </ul>
 <h3 id="task-effort">Task Effort<a class="headerlink" href="#task-effort" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the <a href="../../Spira-Administration-Guide/Product-Planning/#planning-options">Planning Options</a> page of product administration.</p>
 <p>Task effort calculations are described in more detail <a href="../Product-Homepage/#release-task-progress">here</a>. </p>
 <h2 id="baselining">Baselining<a class="headerlink" href="#baselining" title="Permanent link">&para;</a></h2>
-<p>NOTE: <strong>Baselining is only available in SpiraTeam and SpiraPlan</strong>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">What is baselining in SpiraPlan</p>
 <p>Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines (or between the baseline and when the product was first created if you are looking at the earliest baseline).</p>
@@ -10437,7 +10448,7 @@ RK(Risk) --&gt; RL;</code></pre>
 <li>insert a child sprint</li>
 </ul>
 <p>If you insert a release or sprint (not as a child) the new item is inserted <em>above</em> the currently selected item -- i.e. at the same level in the hierarchy but visually above the release with the checked checkbox. If you insert an item with no release selected, the item is inserted at the bottom of the list (at the same level in the hierarchy as the item release or sprint that was previously at the bottom).</p>
-<p>If you insert a child release or sprint, the new item is inserted <em>below</em> the currently selected item - i.e. nested insde the selected release as a child (a sprint cannot have  child sprints or releases).</p>
+<p>If you insert a child release or sprint, the new item is inserted <em>below</em> the currently selected item - i.e. nested inside the selected release as a child (a sprint cannot have  child sprints or releases).</p>
 <p>Once the new release has been inserted, the item is switched to "Edit" mode so you can change its name, version number or other information.</p>
 <h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
 <p>Clicking on the "<strong><em>Delete</em></strong>" button deletes all the releases whose check-boxes have been selected. If any of the releases have child releases/sprint, then the child releases and sprints are also deleted.</p>
@@ -10508,6 +10519,9 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <p>You can pick between each of these views using the view selection button group at the top right of any requirement list page.</p>
 <p><img alt="" src="../img/releases-list-selector.png" /></p>
 <h2 id="release-gantt-chart">Release Gantt Chart<a class="headerlink" href="#release-gantt-chart" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>This displays all active releases and sprints<sup id="fnref:active-release"><a class="footnote-ref" href="#fn:active-release">2</a></sup> nested in the same hierarchy as on the main release list page. Any release that has active children has an expand / collapse toggle to the left of its name. To the right of the release names is the timeline bar, which graphically shows the length of each release between their start and end dates in individual horizontal bars.</p>
 <p>Part of a release may be shaded darker than normal, from its left (see Library System Release 1.1 below). This represents the <a href="#requirements-completion">requirements completion percentage</a> for that release. So if a release bar stretches for 3 months and 33% of its requirements are complete, the first month of the bar will be shaded darker. </p>
 <p>The names of the releases on the left or in the horizontal bar are clickable and will open the specific release.</p>
@@ -10524,6 +10538,9 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <p><em>Note</em>: only fields that users are able to edit are shown - fields that are always read only (like the creation date) are not shown in this view. </p>
 <p><img alt="" src="../img/releases-gantt-chart-editing.png" /></p>
 <h2 id="releases-mind-map">Releases Mind Map<a class="headerlink" href="#releases-mind-map" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>The releases Mind Map / Pert chart displays the first 5,000 releases in the release hierarchy of the product as a connected tree view / mindmap. The root node shows the name of the product at the top. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. </p>
 <p><img alt="" src="../img/releases-mind-map.png" /></p>
 <p>For each release the map displays the name and ID of the release, with a tooltip that additionally shows the release's version number. Each node is color coded by the release type: product is the darkest; major and minor releases are less dark; sprints and phases are the lightest.</p>
@@ -10670,7 +10687,9 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#associations">how the associations tab works</a></p>
 <h3 id="baselines">Baselines<a class="headerlink" href="#baselines" title="Permanent link">&para;</a></h3>
-<p>NOTE: <strong>Baselining is only available in SpiraTeam and SpiraPlan</strong> and this tab will be only then be visible if baselining has been turned on for a product.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>This view displays the list of all baselines created for this release. If you have permissions for releases to create/modify/delete then you can perform the same actions for baselines.</p>
 <p><img alt="baselines tab" src="../img/Release_Management_baselines_tab.png" /></p>
 <p>You can view the following information about a baseline here:</p>
@@ -10716,6 +10735,9 @@ Paste Items option. The release/sprint will now be moved into the destination lo
 <p>Beneath the header bar are a number of collapsible sections, each of which show specific information about the build or links between the build and other parts of the system. This sections are: "Commits", "Associations", "Test Runs", "Incidents", and "Full Log". These are described below.</p>
 <p>the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.</p>
 <h3 id="commits">Commits<a class="headerlink" href="#commits" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>This section shows all source code commits included in the current build. The grid can be sorted and filtered by using the appropriate controls.</p>
 <p><img alt="" src="../img/Release_Management_279.png" /></p>
 <h3 id="associations_1">Associations<a class="headerlink" href="#associations_1" title="Permanent link">&para;</a></h3>

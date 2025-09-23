@@ -9635,7 +9635,10 @@
 
 
 <h1 id="incident-tracking">Incident Tracking<a class="headerlink" href="#incident-tracking" title="Permanent link">&para;</a></h1>
-<p>This section outlines how the incident/defect tracking features of SpiraPlan® can be used to manage key product artifacts during the software development lifecycle. In addition to managing the defects raised during the execution of test cases in the test management module, the Incident Tracker is also a powerful risk/issue/bug tracking system in its own right. When coupled with the <a href="../User-Product-Management/#product-home">product dashboard</a> it is a powerful tool for representing all the key risks and issues associated with a product in a single, graphical format.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section outlines how the incident/defect tracking features of Spira can be used to manage key product artifacts during the software development lifecycle. In addition to managing the defects raised during the execution of test cases in the test management module, the Incident Tracker is also a powerful risk/issue/bug tracking system in its own right. When coupled with the <a href="../User-Product-Management/#product-home">product dashboard</a> it is a powerful tool for representing all the key risks and issues associated with a product in a single, graphical format.</p>
 <p>Unlike a standalone bug/issue tracking tool however, you can trace the incidents/defects back to the test case and the underlying requirement that generated them, giving the product manager unprecedented power in analyzing the "in-process" quality of a system during its lifecycle. This power is clearly illustrated in the <a href="../Product-Homepage/#requirement-incident-count">Requirement Incident Count</a> widget on the Product Homepage.</p>
 <h2 id="incident-list">Incident List<a class="headerlink" href="#incident-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Tracking &gt; Incidents global navigation link, you will initially be taken to the incidents list screen illustrated below:</p>
@@ -9721,7 +9724,7 @@
 <p>When editing an existing incident, the fields that are available and the fields that are required will depend on your stage in the incident workflow. Read about <a href="../Application-Wide/#workflows">using workflows to change the status of your artifact</a>, and how <a href="../Application-Wide/#electronic-signatures">electronic signatures</a> can further control how you progress an incident through the workflow.</p>
 <p>You can print the current incident by clicking Tools &gt; Print, which will display a printable version of the page in a separate window. Alternatively, you can export the incident to a number of formats by selecting the appropriate option from the Tools menu.</p>
 <h3 id="inserting-a-new-incident">Inserting a New Incident<a class="headerlink" href="#inserting-a-new-incident" title="Permanent link">&para;</a></h3>
-<p>If you are creating a new incident, the fields that are available and the fields that are required will depend on how your product has been for configured. For example, some products may require that all incidents be started with Status=New and Type=Incident, others may allow you to specify the incident type. The types of change allowed will depend on how your product administrator has setup the system for you. Administrators should refer to the <em>SpiraPlan Administration Guide</em> for details on configuring the incident workflows to meet their needs.</p>
+<p>If you are creating a new incident, the fields that are available and the fields that are required will depend on how your product has been for configured. For example, some products may require that all incidents be started with Status=New and Type=Incident, others may allow you to specify the incident type. The types of change allowed will depend on how your product administrator has setup the system for you. Administrators should refer to the <em>Spira Administration Guide</em> for details on configuring the incident workflows to meet their needs.</p>
 <p>Once you've filled out the appropriate incident fields, you can either click "<strong><em>Save</em></strong>" or one of the options from the "<strong><em>Save</em></strong>" dropdown list to commit the changes or click on "<strong><em>Back to Incident List</em></strong>" to discard the insertion and return back to the incident list.</p>
 <h3 id="overview-comments">Overview - Comments<a class="headerlink" href="#overview-comments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#comments">how the comments works</a></p>
@@ -9793,8 +9796,8 @@
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
-<p>You can associate other incidents, requirements, test steps, tasks, and risks to an incident from this tab. </p>
-<p>The incidents and tasks in this list are ones that a user has decided are relevant to the current one and has created a direct link between them. In the case of requirements and test cases, the association can be either due to the creator of an incident directly linking the incident to the requirement or test step, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.</p>
+<p>From this tab you can associate an incident to other relevant artifacts. </p>
+<p>Associated requirements and test cases can be present either due to directly linking the incident to that requirement or test case, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.</p>
 <p>Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a></p>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#history">how the history tab works</a></p>
@@ -9811,9 +9814,12 @@
 <h3 id="incident-followers">Incident Followers<a class="headerlink" href="#incident-followers" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#followers">how to add and manage followers to an artifact</a></p>
 <h2 id="incident-board">Incident Board<a class="headerlink" href="#incident-board" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Incident Board Overview</p>
-<p>The SpiraPlan incident board is a streamlined and highly customizable "kanban" style board. It lets you visualize incidents in a single place across a product. Based on the principles of <strong>agile methodologies</strong> such as Scrum and Kanban, the incident board is a great tool for planning and managing incidents.</p>
+<p>The Spira incident board is a streamlined and highly customizable "kanban" style board. It lets you visualize incidents in a single place across a product. Based on the principles of <strong>agile methodologies</strong> such as Scrum and Kanban, the incident board is a great tool for planning and managing incidents.</p>
 <p>To learn more about how boards in Spira are structured and their general features refer to our <a href="../Application-Wide/#boards">board overview</a>. Here you can learn about:</p>
 <ul>
 <li><a href="../Application-Wide/#board-structure">board structure and configuration</a></li>

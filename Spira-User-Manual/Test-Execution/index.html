@@ -9291,13 +9291,16 @@
 
 
 <h1 id="execution-of-test-cases">Execution of Test Case(s)<a class="headerlink" href="#execution-of-test-cases" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Customizing Test Execution</p>
 <p>There are a number of ways that a product admin can tailor or customize test execution. Certain features can be disabled / enabled via the <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> page. The below describes using test execution with default settings and flags the key places where customizing these settings can change testers' experiences. </p>
 </div>
 <p>This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the <a href="../Incident-Tracking/">incident tracking module</a> and, optionally, to <a href="../Task-Tracking/">tasks</a>.</p>
-<p>You start test case execution in SpiraPlan by either:</p>
+<p>You start test case execution in Spira by either:</p>
 <ol>
 <li>selecting test cases or test sets on their respective page(s) and clicking the "<strong><em>Execute</em></strong>" button;</li>
 <li>clicking the "<strong><em>Execute</em></strong>" button on the test cases / test sets listed on your personalized home page under "My Test Cases" or "My Test Sets".</li>
@@ -9403,10 +9406,12 @@
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>If you need to attach documents to the test run (in addition to any screenshots), you can either attach a new or link an existing document. From the inspector, go to the "Attachments" tab to see any documents already linked, or to add a document as needed. In the table display mode, select either "Add New Attachment" or "Link Existing Attachment" from the "+" dropdown menu. See <a href="#attachments">Attachments</a> for additional information about how to the different available options (e.g. either upload a document, url link, or screenshot, or to link a document or from source code).</p>
 <h3 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>By default you will not see a Task tab during test execution. But a "Tasks" tab will be visible if:</p>
 <ul>
 <li>this feature has been enabled for a product on the <a href="../../Spira-Administration-Guide/Product-Planning/#testing-settings">testing settings</a> page</li>
-<li>you are using SpiraTeam or SpiraPlan</li>
 <li>you have permissions to view and create tasks</li>
 </ul>
 <p>The task tab allows the tester to quickly create tasks based on the current test step. These tasks are attached to the test run as a whole, so any previously entered tasks will be visible even when changing steps. Creating a task is a light touch way of communicating with others about your findings and alerting them that some work is likely required to fix or clarify a feature. It is quicker to enter and manage than an incident.</p>
@@ -9462,7 +9467,12 @@
 <p><strong>move an existing step</strong>: to move an editable step click and drag it to the desired location in the test step list.</p>
 </li>
 </ul>
-<p>Below the main detailed section there are two or three tabs. SpiraTest users will only see two tabs -- incidents and attachements. SpiraPlan users may see the additional  tasks tab (if enabled by the product admin). </p>
+<p>Below the main detailed section there a number of tabs</p>
+<ul>
+<li>incidents</li>
+<li>attachments</li>
+<li class="edition-spiraplan edition-spirateam">tasks (if enabled by the product admin)</li>
+</ul>
 <p>The toolbar at the top right of the page has a number of buttons:</p>
 <p><img alt="" src="../img/Test_Case_Management_199.png" /></p>
 <ul>

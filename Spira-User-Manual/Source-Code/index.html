@@ -9247,32 +9247,35 @@
 
 
 <h1 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>SpiraTeam®'s and SpiraPlan®'s source code integration features let you:</p>
+<p>Spira's source code integration features let you:</p>
 <ul>
 <li>browse the source code associated with a particular product </li>
 <li>view all the active branches available in the source code (branches with "/" in them are shown as nested within a folder structure to help view your branch structure more easily)</li>
 <li>browse all commits made over time</li>
 <li>see how the source code evolved over time by seeing how individual files changed between two commits</li>
-<li>link source code commits and files to SpiraPlan artifacts. </li>
-<li>view source code files from within SpiraPlan giving you end-to-end traceability from requirements, tasks, incidents, and more.</li>
+<li>link source code commits and files to Spira artifacts. </li>
+<li>view source code files from within Spira giving you end-to-end traceability from requirements, tasks, incidents, and more.</li>
 </ul>
-<p>SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using plugins for the different SCM's (including <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a> and <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>).</p>
-<p>This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. <a href="../Commits/">The Commit section</a> outlines viewing and working with commits and the changes made in them.</p>
+<p>Spira integrates with many different source code / Software Configuration Management (SCM). You can connect Spira and your source code using plugins for the different SCM's (including <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a> and <a href="../../Version-Control-Integration/Integrating-with-Subversion/">Subversion</a>).</p>
+<p>This section outlines Spira's source code features, whatever type of source code provider you are using. <a href="../Commits/">The Commit section</a> outlines viewing and working with commits and the changes made in them.</p>
 <h2 id="getting-started-with-source-code">Getting Started With Source Code<a class="headerlink" href="#getting-started-with-source-code" title="Permanent link">&para;</a></h2>
 <p>To use the source code features in SpiraPlan you need to do 3 things:</p>
 <ol>
 <li>a system administrator has setup the source code provider (for example, <a href="../../Version-Control-Integration/Integrating-with-Git/#configuring-git-in-spira">Git</a>)</li>
 <li>a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, <a href="../../Version-Control-Integration/Integrating-with-Git/#use-git-for-your-product">Git</a>)</li>
-<li>SpiraPlan users have a <a href="../../Spira-Administration-Guide/System-Users/#view-edit-product-roles">role</a> that lets them view source code (and commits) in the application. </li>
+<li>Spira users have a <a href="../../Spira-Administration-Guide/System-Users/#view-edit-product-roles">role</a> that lets them view source code (and commits) in the application. </li>
 </ol>
-<p>Once these steps are complete, the source code will be viewable within SpiraPlan. The rest of this section assumes these steps have all been taken.</p>
+<p>Once these steps are complete, the source code will be viewable within Spira. The rest of this section assumes these steps have all been taken.</p>
 <h2 id="troubleshooting-source-code-integration">Troubleshooting Source Code Integration<a class="headerlink" href="#troubleshooting-source-code-integration" title="Permanent link">&para;</a></h2>
 <p>Integration with a source code provider can sometimes not work as you expect:</p>
 <ul>
 <li>When you first view the source code or commits, this starts the process of generating the data to display. It may take several minutes for this data to properly load. You will see a message on the page explaining that the 'cache' is building. Please refresh the page after a few minutes and try again.</li>
-<li>If SpiraPlan does not correctly load the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the source code provider dll or some of its dependent assemblies are not in the correct folder of the SpiraPlan installation. If you installed these yourself, make sure you are using the correct 32 bit or 64 bit version of the files. Download the correct version from the Inflectra website, and overwrite the files in the VersionControl folder.</li>
-<li>If SpiraPlan reports that the source code login information is incorrect, double check the source code settings (at the system admin level and for the specific product). Note, product settings over-ride system level settings for source code. Make sure the login information is correct and that the user specified can access all branches of the source code.</li>
+<li>If Spira does not correctly load the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the source code provider dll or some of its dependent assemblies are not in the correct folder of the Spira installation. If you installed these yourself, make sure you are using the correct 32 bit or 64 bit version of the files. Download the correct version from the Inflectra website, and overwrite the files in the VersionControl folder.</li>
+<li>If Spira reports that the source code login information is incorrect, double check the source code settings (at the system admin level and for the specific product). Note, product settings over-ride system level settings for source code. Make sure the login information is correct and that the user specified can access all branches of the source code.</li>
 </ul>
 <h2 id="source-code-file-list">Source Code File List<a class="headerlink" href="#source-code-file-list" title="Permanent link">&para;</a></h2>
 <p>When you click on Developing &gt; Source Code on the global navigation bar, you will be taken to the source code repository file list screen. This shows you all file in the current folder and the current branch. You can change the branch, sort and filter this list, or browse the different pages of files (up to 500 files can be displayed on the page at any one time).</p>
@@ -9341,7 +9344,7 @@
 </ul>
 <h3 id="associations">Associations<a class="headerlink" href="#associations" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/Source_Code_399.png" /></p>
-<p>This shows all current associations between this file and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).</p>
+<p>This shows all current associations between this file and any artifacts in Spira. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).</p>
 <p>You can also add artifact associations to many other artifacts in the system from this panel. Read more about <a href="../Application-Wide/#associations">how to manage and add associations to this artifact</a>.</p>
 <h2 id="source-code-revision-list">Source Code Revision List<a class="headerlink" href="#source-code-revision-list" title="Permanent link">&para;</a></h2>
 <p>Updated documentation is <a href="../Commits/#commit-list">here</a>.</p>

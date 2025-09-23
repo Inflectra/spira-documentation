@@ -10431,7 +10431,10 @@
 
 
 <h1 id="reports-center">Reports Center<a class="headerlink" href="#reports-center" title="Permanent link">&para;</a></h1>
-<p>This section describes the reporting features of SpiraPlan®, including an overview of each of the report types that are available. When you click on the "Reports" tab on the global navigation bar, you will initially be taken to the reports home page illustrated below:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
+<p>This section describes the reporting features of Spira, including an overview of each of the report types that are available. When you click on the "Reports" tab on the global navigation bar, you will initially be taken to the reports home page illustrated below:</p>
 <p><img alt="" src="../img/Reports_Center_335.png" /></p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This page consists of four main areas:</p>
@@ -10443,7 +10446,7 @@
 <p>The right-hand pane is a dashboard that contains the set of graph widgets configured by the current user. By default the dashboard will display: the Incident Progress Rate, Test Run Progress Rate, Requirement Summary, Test Case Summary, Incident Aging and Task Burndown. When "All Releases" is selected from the dropdown release picker, some widgets show information for every single release and sprint, and others only for active releases/sprints<sup id="fnref:active-release"><a class="footnote-ref" href="#fn:active-release">1</a></sup>:</p>
 <ul>
 <li>Requirement Graphs widget: only active releases</li>
-<li>Task Graphs widgets: only active releases</li>
+<li class="edition-spiraplan edition-spirateam">Task Graphs widgets: only active releases</li>
 <li>All Summary Graphs widgets: all releases</li>
 <li>All Date-Range Graphs widgets: all releases</li>
 <li>Custom Graphs that use the token ${ReleaseId}: no data</li>
@@ -10536,6 +10539,9 @@
 <p>This printable report displays all of the incidents tracked for the current product sorted by incident number. For each individual incident, the name, type, priority, status, opener, owner and close date are displayed, along with tables containing the detailed description and resolutions as well as a tabular list of attached documents, linked requirements/incidents and the change history:</p>
 <p><img alt="" src="../img/Reports_Center_357.png" /></p>
 <h2 id="task-reports">Task Reports<a class="headerlink" href="#task-reports" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <h3 id="task-summary-report">Task Summary Report<a class="headerlink" href="#task-summary-report" title="Permanent link">&para;</a></h3>
 <p>This report displays all of the tasks tracked for the current product. The task's details are displayed in a summary list form:</p>
 <p><img alt="" src="../img/Reports_Center_358.png" /></p>
@@ -10638,6 +10644,9 @@ priority, and the individual bars are grouped by the status of task. If a specif
 <p><img alt="" src="../img/Reports_Center_376.png" /></p>
 <p>This report can be filtered by the type of incident, so for example you can see the turnaround time of just bugs, or just issues for the product in question. Clicking on "<strong><em>Display Data Grid</em></strong>" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
 <h3 id="task-velocity-chart">Task Velocity Chart<a class="headerlink" href="#task-velocity-chart" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>The Task Velocity graph shows the total estimated and actual effort (in number of hours) delivered in each product release and/or sprint:</p>
 <p><img alt="" src="../img/Reports_Center_377.png" /></p>
 <p>The y-axis of the graph displays the total estimated and actual effort delivered (in hours). The x-axis display will change based on the selection of the <a href="#overview">dropdown release picker</a>:</p>
@@ -10649,6 +10658,9 @@ priority, and the individual bars are grouped by the status of task. If a specif
 </ul>
 <p>Clicking on the "<strong><em>Display Data Grid</em></strong>" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
 <h3 id="task-burnup-chart">Task Burnup Chart<a class="headerlink" href="#task-burnup-chart" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>The Task Burnup graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated and ideal burnup. In addition, the graph includes bars for the remaining and completed effort in each time period on the x-axis.</p>
 <p><img alt="" src="../img/Reports_Center_378.png" /></p>
 <p>The y-axis of the graph displays the cumulative increase in work (in hours) for the product (the actual burnup), with a blue line indicating the ideal burnup. In addition, there are bars displayed at each interval of the x-axis that shows the remaining effort and completed effort for that interval.</p>
@@ -10661,6 +10673,9 @@ priority, and the individual bars are grouped by the status of task. If a specif
 </ul>
 <p>Clicking on the "<strong><em>Display Data Grid</em></strong>" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
 <h3 id="task-burndown-chart">Task Burndown Chart<a class="headerlink" href="#task-burndown-chart" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <p>The Task Burndown graph shows the effort (in hours) on the y-axis. The x-axis shows releases/sprints - the releases/sprints shown changes as you change the release selector at the top of the page. To be useful tasks in the product have to have their effort fields populated (specifically Estimated Effort and Remaining Effort).</p>
 <p>The blue line on the graphs indicates the ideal burndown. The other line shows the estimated actual burndown. The graph also shows bars for the remaining and completed effort for each relevant release/sprint.</p>
 <p><img alt="" src="../img/Reports_Center_379.png" /></p>
@@ -10707,7 +10722,7 @@ priority, and the individual bars are grouped by the status of task. If a specif
 <p>In this version of the report, the y-axis represents the number of incidents, and the x-axis represents a specific week in the time-span. The exact count of each bar in the stacked histogram can be viewed by positioning the mouse pointer over the bar, and a "tooltip" will pop-up listing the actual data value. You can also filter the type of incident being reported, as well as change the date interval. If you choose a smaller date-range, the x-axis will switch from weekly to daily and if you choose a larger date-range, the x-axis will switch to monthly.</p>
 <p>Clicking on the "<strong><em>Display Data Grid</em></strong>" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
 <h2 id="custom-graphs">Custom Graphs<a class="headerlink" href="#custom-graphs" title="Permanent link">&para;</a></h2>
-<p>These are the graphs that a SpiraPlan administrator has created in the Administration section of the system and published for use by end users. They rely on specific ESQL data queries, so the data represented will depend on the query created by the administrator.</p>
+<p>These are the graphs that a Spira administrator has created in the Administration section of the system and published for use by end users. They rely on specific ESQL data queries, so the data represented will depend on the query created by the administrator.</p>
 <p>To add a custom graph to your reports dashboard, click on the <strong>Add Items</strong> icon and click on the "Custom Graphs" button to show available custom graphs:</p>
 <p><img alt="" src="../img/Reports_Center_387.png" /></p>
 <p>Once you add the Custom Graphs widget to your dashboard, it will look just like any other graph:</p>
@@ -10719,6 +10734,9 @@ priority, and the individual bars are grouped by the status of task. If a specif
 <p>In addition, clicking on the "<strong><em>Download Data as CSV</em></strong>" button will export the data grid into Comma Separated Values (CSV) format that can be opened in MS-Excel.</p>
 <p>Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).</p>
 <h2 id="risk-reports">Risk Reports<a class="headerlink" href="#risk-reports" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
 <h3 id="risk-summary-report">Risk Summary Report<a class="headerlink" href="#risk-summary-report" title="Permanent link">&para;</a></h3>
 <p>This report displays all of the risks tracked for the current project. The risks are displayed, along with a tabular list of mitigations, tasks, comments, attached documents, and change history:</p>
 <p><img alt="" src="../img/Reports_Center_392.png" /></p>

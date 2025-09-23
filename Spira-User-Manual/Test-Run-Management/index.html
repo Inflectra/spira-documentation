@@ -9369,6 +9369,9 @@
 
 
 <h1 id="test-run-management">Test Run Management<a class="headerlink" href="#test-run-management" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTest, SpiraTeam, SpiraPlan</p>
+</div>
 <h2 id="test-run-list">Test Run List<a class="headerlink" href="#test-run-list" title="Permanent link">&para;</a></h2>
 <p>When you click on the Testing &gt; Test Runs global navigation link, you will be taken to the test run list screen illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_202.png" /></p>
@@ -9392,19 +9395,13 @@
 <p><img alt="" src="../img/Test_Case_Management_203.png" /></p>
 <p>This page consists of three panes:</p>
 <ol>
-<li>
-<p>The left hand navigation pane displays a list of related test runs with a color indicator for their current execution status. The display dropdown will let you choose whether the list contains test runs that are for the same release, test case or test set, or are just a filtered/unfiltered list based on your last search in the main test run list page.</p>
-</li>
-<li>
-<p>The top right area shows headline information about the test run details of the test run itself</p>
-</li>
-<li>
-<p>The main pane on the right displays tabs for detailed information about the test run, and its associations. The overview tab is initially loaded and shows the name, description, release, test set, estimated and actual duration, tester name, test run type, automation host fields, along with others, including custom fields. Underneath this is shown the list of test run steps, and any console output from a test automation engine such as Rapise, NUnit, JUnit, QTP, or Selenium.</p>
-</li>
+<li>The left hand navigation pane displays a list of related test runs with a color indicator for their current execution status. The display dropdown will let you choose whether the list contains test runs that are for the same release, test case or test set, or are just a filtered/unfiltered list based on your last search in the main test run list page.</li>
+<li>The top right area shows headline information about the test run details of the test run itself</li>
+<li>The main pane on the right displays tabs for detailed information about the test run, and its associations. The overview tab is initially loaded and shows the name, description, release, test set, estimated and actual duration, tester name, test run type, automation host fields, along with others, including custom fields. Underneath this is shown the list of test run steps, and any console output from a test automation engine such as Rapise, NUnit, JUnit, QTP, or Selenium.</li>
 </ol>
 <h3 id="re-running-a-test">Re-running a Test<a class="headerlink" href="#re-running-a-test" title="Permanent link">&para;</a></h3>
 <p>There is a button on the main test run toolbar called
-'<strong><em>Re-Test</em></strong>". If you click this button, SpiraPlan will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers. NOTE: this button will not display if the product does not allow you to execute test cases (instead only letting you execute test sets).</p>
+'<strong><em>Re-Test</em></strong>". If you click this button, Spira will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers. NOTE: this button will not display if the product does not allow you to execute test cases (instead only letting you execute test sets).</p>
 <h3 id="editing-a-test-run">Editing a Test Run<a class="headerlink" href="#editing-a-test-run" title="Permanent link">&para;</a></h3>
 <p>When reviewing the test run, you may find that you need to change the results of the test run (e.g. the user selected the wrong release or custom property value). Many of the fields are editable at a later date, and to make changes, just modify the appropriate fields and click any "<strong><em>Save</em></strong>" button.</p>
 <h3 id="deleting-the-test-run">Deleting the Test Run<a class="headerlink" href="#deleting-the-test-run" title="Permanent link">&para;</a></h3>
@@ -9420,7 +9417,7 @@
 <h3 id="console-output">Console Output<a class="headerlink" href="#console-output" title="Permanent link">&para;</a></h3>
 <p>In the case of an automated test run, this tab will display the details of the test run as reported from the test runner application. These details will vary depending on the type of automated tool being used, but typically they include the name of the automated test runner, the number of assertions raised, the name of the corresponding test case in the tool, the status of the test run and a detailed error message, and the stack-trace in the case of a failure. An example test run as reported from the NUnit automated test runner is illustrated below:</p>
 <p><img alt="" src="../img/Test_Case_Management_206.png" /></p>
-<p>Details on how to use SpiraPlan® in conjunction with an automated testing tool are provided in the <em>SpiraPlan® Automated Testing Integration Guide,</em> which can be downloaded from the Inflectra<sup>®</sup>
+<p>Details on how to use Spira in conjunction with an automated testing tool are provided in the <em>Spira Automated Testing Integration Guide,</em> which can be downloaded from the Inflectra<sup>®</sup>
 website.</p>
 <h3 id="attachments">Attachments<a class="headerlink" href="#attachments" title="Permanent link">&para;</a></h3>
 <p>Read about <a href="../Application-Wide/#attachments">how the attachments tab works</a></p>
@@ -9434,11 +9431,14 @@ website.</p>
 <li>Customize the fields shown using the <strong>Show/Hide Columns</strong> dropdown</li>
 <li><strong>Refresh</strong>: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time</li>
 <li><strong>Remove</strong>: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and any relevant test run steps of the test run. Note: this feature is currently only available if baselining is disabled for the product.</li>
-<li><strong>Filter</strong> the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</li>
+<li><strong>Filter</strong> the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or click the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.</li>
 <li><strong>Edit</strong>: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.</li>
 </ul>
 <h3 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
-<p>This tab is only visible to users of SpiraPlan or SpiraTeam. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
+</div>
+<p>This tab shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.</p>
 <p><img alt="" src="../img/Test_Case_Management_209.png" /></p>
 
 
