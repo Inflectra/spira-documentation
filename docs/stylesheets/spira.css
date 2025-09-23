@@ -115,3 +115,8 @@
 .feature-inflectraai::after {
   content: "Inflectra.ai";
 }
+
+/* reduce spacing from the abstract admonition and the h1 - used for saying what editions the page supports */
+h1 + .admonition.abstract {
+  margin-top: -1.5rem;
+}
