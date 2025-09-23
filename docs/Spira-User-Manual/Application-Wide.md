@@ -68,15 +68,15 @@ Spira provides a shortcut -- called the *context menu* - for accessing some of t
 
 You can export the following artifacts from the current product to any other product that you have access to:
 
-| Artifact     | Export from List Page | Export from Details Page | Updates screenshots |
-| ------------ | --------------------- | ------------------------ | ------------------- |
-| Incidents    | Y                     | N                        | Y                   |
-| Releases     | Y                     | N                        | N                   |
-| Requirements | Y                     | N                        | N                   |
-| Risks        | Y                     | N                        | N                   |
-| Tasks        | Y                     | N                        | N                   |
-| Test cases   | Y                     | N                        | Y                   |
-| Test sets    | N                     | Y                        | Y                   |
+| Artifact      | Export from List Page | Export from Details Page | Updates screenshots |
+| ------------- | --------------------- | ------------------------ | ------------------- |
+| Incidents     | Y                     | N                        | Y                   |
+| Releases      | Y                     | N                        | N                   |
+| Requirements  | Y                     | N                        | N                   |
+| Risks [^STSP] | Y                     | N                        | N                   |
+| Tasks [^STSP] | Y                     | N                        | N                   |
+| Test cases    | Y                     | N                        | Y                   |
+| Test sets     | N                     | Y                        | Y                   |
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
@@ -155,7 +155,9 @@ Workflows are managed by the product's template. Read more about workflow admini
 - [Test Cases](../Spira-Administration-Guide/Template-Test-Cases.md/#test-case-workflows)
 - [Incidents](../Spira-Administration-Guide/Template-Incidents.md/#incident-workflows)
 - [Tasks](../Spira-Administration-Guide/Template-Tasks.md/#task-workflows)
+    {: .edition-spiraplan .edition-spirateam}
 - [Risks](../Spira-Administration-Guide/Template-Risks.md/#risk-workflows)
+    {: .edition-spiraplan .edition-spirateam}
 
 
 ### Electronic Signatures
@@ -368,19 +370,19 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Association Tab Of             | Available artifacts                                                                                             |
-    | ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+    | Association Tab Of             | Available artifacts                                                                                                             |
+    | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
     | **Documents**                  | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
-    | **Incidents**                  | Requirements, Test Steps, Tasks [^STSP], Incidents, Risks [^STSP]                                                              |
-    | **Releases**                   | Releases, Requirements                                                                                          |
-    | **Requirements**               | Releases, Requirements, Incidents, Risks [^STSP]                                                                       |
-    | **Risks**                      | Requirements, Incidents, Risks [^STSP], Test Cases                                                                      |
+    | **Incidents**                  | Requirements, Test Steps, Tasks [^STSP], Incidents, Risks [^STSP]                                                               |
+    | **Releases**                   | Releases, Requirements                                                                                                          |
+    | **Requirements**               | Releases, Requirements, Incidents, Risks [^STSP]                                                                                |
+    | **Risks**                      | Requirements, Incidents, Risks [^STSP], Test Cases                                                                              |
     | **Source code commits**        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
     | **Source code files**          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
-    | **Tasks**                      | Tasks [^STSP], Incidents                                                                                                |
-    | **Test cases**                 | Tasks [^STSP], Risks [^STSP]                                                                                      |
-    | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                      |
-    | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                              |
+    | **Tasks**                      | Tasks [^STSP], Incidents                                                                                                        |
+    | **Test cases**                 | Tasks [^STSP], Risks [^STSP]                                                                                                    |
+    | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                                      |
+    | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                                              |
 
 [^STSP]: Available in SpiraTeam & SpiraPlan
 [^SP]: Available in SpiraPlan
