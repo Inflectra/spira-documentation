@@ -1,4 +1,6 @@
 # Test Set Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 | Artifact icon and name                   | Token | Description                           |
 | ---------------------------------------- | ----- | ------------------------------------- |
 | ![](img/artifact-tx.png) &nbsp; Test Set | TX    | Combine test cases together to create |
@@ -121,7 +123,7 @@ To quickly print a single test set, test set folder or list of test sets you can
 Alternatively you can save the selected items into a number of formats, available via the Tools dropdown.
 
 ### Right-Click Context Menu
-SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test set list and the following menu will be displayed:
+Spira provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test set list and the following menu will be displayed:
 
 ![](img/Test_Case_Management_215.png)
 
@@ -129,7 +131,6 @@ You can now choose any of these options as an alternative to using the icons in 
 
 
 ## Test Set Details
-
 When you click on a test set item in the test set list described in the previous section, you are taken to the test set details page illustrated below:
 
 ![](img/Test_Case_Management_216.png)
@@ -174,7 +175,6 @@ At the top of the pane, you will see the test set's:
 Initially the pane will be set to the "Overview" tab, but it can be switched to "Test Runs", "Attachments", "Incidents" and "History" tabs. Each of these is described separately below.
 
 ### Overview -- Details
-
 The top part of this tab displays the various standard fields and custom properties associated with the test set. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding releases are in the "Releases" group and dates are grouped together in the "Dates and Times" area.
 
 The **Display For** field in the "Releases" section tells you what release execution status results are displaying for the test set. This field controls the results for the test set overall and also for its individual test cases. This field is read only. To change it, you must use the "Display For" dropdown on the list page.
@@ -183,7 +183,7 @@ The Detailed Information section contains the long, formatted description of the
 
 ![](img/Test_Case_Management_218.png)
 
-If you have **test configuration sets** defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the **Configuration** dropdown value. If you have a test configuration associated with the test set, when you execute the test set, SpiraPlan will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.
+If you have **test configuration sets** defined in your product, you can assign them to a specific Test Set and use them for both manual and automated testing by setting the **Configuration** dropdown value. If you have a test configuration associated with the test set, when you execute the test set, Spira will generate a test run entry for each of the test configuration entries multiplied by each of the test cases in the set.
 
 The Description section contains the long, formatted description of the test set. You can enter rich text or paste in from a word processing program or web page.
 
@@ -214,17 +214,16 @@ Use the *Planned Date* field:
 
 - For manual test sets, only the date component is used. 
 - For automated tests you also set the time. This time is based on the time zone of the application (for reference, this is shown in the footer of the application on all pages).
-- You can additionally specify a **recurrence schedule** for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc so that SpiraPlan executes the same test set according to the specified frequency.
+- You can additionally specify a **recurrence schedule** for the test set by changing the recurrence dropdown from "One Time" to "Hourly", "Daily", etc so that Spira executes the same test set according to the specified frequency.
 
 Use the **Schedule on Build** field:
 
-- This will tell SpiraPlan to automatically set the *Planned Date* to the exact date and time that a relevant build completes
+- This will tell Spira to automatically set the *Planned Date* to the exact date and time that a relevant build completes
 - Using the **Post Build Wait Time** field you can add an offset (in seconds) for how long after the build to kick off the test sets
 - Only builds that finish against the release or sprint that the test set is set to will trigger the test set to execute
 - With this method, test sets can be setup to automatically run only after the build completes and at the exact delay you need.
 
 ### Overview - Parameters
-
 Test cases can have [parameters](Test-Case-Management.md/#parameters) associated with them. This enables one test case to be called several times and have different parameters passed in each case, making the operation different. E.g. you could have a generic "login to application" test case that others call as an initial step, which could be provided with different login information depending on the calling test case. In addition these parameters may be used by certain test automation engines.
 
 The Parameters section on the test set page lets you set a shared value for all of the parameters contained within the different test cases of the test set. The screenshot below shows that there are three parameters contained in the test cases that have been set at the test set level. In this example, every case that has a Parameter called 'browserName' will have its value set to 'Safari'. This is a quick way of setting values for many test cases at once. Test Set Values will override any default values of a Parameter (defined for each specific test case).
@@ -243,7 +242,6 @@ Note that the Default Value is derived from the test cases that use a specific P
 
 
 ### Overview - Test Cases
-
 This section displays the list of test cases currently contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case *when run in the context of the current test set and, if specified, the release we are displaying data for*.
 
 ![](img/Test_Case_Management_222.png)
@@ -325,7 +323,6 @@ Please note:
 - The cross-product Test Cases of the Test Set are not exported
 
 ### Test Runs
-
 This tab displays the list of all the test runs executed against the test set. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the overall execution status for the test case in that run and a link to the [actual test run details](./Test-Run-Management.md/#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
 
 ![](img/Test_Case_Management_227.png)
@@ -336,23 +333,15 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Attachments
-
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
-
 ### History
-
 Read about [how the history tab works](Application-Wide.md#history)
 
-
 ### Incidents
-
 This tab displays the list of incidents associated with the current test set. Each incident will either have been: created during the execution of a test case in the test set (and are thereby linked to one of the test runs); or manually linked to one of the test steps in a test case of the set.
 
 ![](img/Test_Case_Management_229.png)
-
-
-
 
 
 [^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.

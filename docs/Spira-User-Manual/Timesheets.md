@@ -1,5 +1,5 @@
 # Timesheets
-!!! abstract "Available in SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 Spira's timesheets functionality lets users track how much time they have spent on incidents and tasks across all their products. They can record time against each artifact for a given day in the current week or any week in the past. This time data is used to update the effort recorded against each artifact. Users can also easily see timesheets from the past.
 
@@ -13,7 +13,7 @@ You can access "My Timesheet" from the User Profile dropdown on the [Global Navi
 
 When you load the My Timesheet page, the page will have the following parts:
 
-- **View all timesheets**: chech this checkbox to open a summary list of all your timesheets. You can navigate to any timesheet by clicking on it. This only appears if you have at least 1 timesheet.
+- **View all timesheets**: check this checkbox to open a summary list of all your timesheets. You can navigate to any timesheet by clicking on it. This only appears if you have at least 1 timesheet.
 - **Navigation buttons**: these let you navigate backward or forward to see previously saved timesheets. Each button is disabled if there are no earlier/later timesheets to navigate to.
 - **Artifact dropdown**: this lists all the incidents and tasks you own across all active products you are a member of.
 - **Timesheet data range**: a heading showing the start and end date of the current timesheet. Click on it to bring up a datepicker. Selecting a date will navigate you to the timesheet for that relevant period. If there is no timesheet for that date then a new timesheet is automatically created.

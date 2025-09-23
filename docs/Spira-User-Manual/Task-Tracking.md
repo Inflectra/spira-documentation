@@ -1,8 +1,10 @@
 # Task Tracking
-| Artifact icon and name                              | Token | Description                                                                    | Edition              |
-| --------------------------------------------------- | ----- | ------------------------------------------------------------------------------ | -------------------- |
-| ![](img/artifact-tk.png) &nbsp; Task                | TK    | Manage small pieces of work with tasks, especially useful against requirements | SpiraTeam, SpiraPlan |
-| ![](img/artifact-pr.png) &nbsp; Task (pull request) | TK    | Review pull requests in Spira                                                  | SpiraTeam, SpiraPlan |
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+| Artifact icon and name                              | Token | Description                                                                    |
+| --------------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
+| ![](img/artifact-tk.png) &nbsp; Task                | TK    | Manage small pieces of work with tasks, especially useful against requirements |
+| ![](img/artifact-pr.png) &nbsp; Task (pull request) | TK    | Review pull requests in Spira                                                  |
 
 ## Feature Overview and Tips
 A task is a single piece of work. Tasks are flexible and can be used for lots of different activities. If you link tasks to a specific release or sprint, you can easily see the progress of all tasks in that release - this makes tasks a very powerful part of release management. You can break down [requirements](Requirements-Management.md/#tasks) or user stories into smaller chunks of work using tasks, to more easily divide up and manage the work.
@@ -60,7 +62,7 @@ Essentially, the gray section of the bar indicates the % of the task yet to be c
 
 ### Task Folders
 
-SpiraPlan lets you group product tasks into different folders to make organization easier. In the left-hand **Quick Filters** panel, the system displays the various task folders defined in the product:
+Spira lets you group product tasks into different folders to make organization easier. In the left-hand **Quick Filters** panel, the system displays the various task folders defined in the product:
 
 ![](img/Task_Tracking_288.png)
 
@@ -135,7 +137,7 @@ You can pick between each of these views using the view selection button group a
 ## Task board
 !!! info "Task Board Overview"
     
-    The SpiraPlan task board is a streamlined and highly customizable "kanban" style board. It lets you visualize tasks in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the task board is a great tool for planning and managing tasks.
+    The Spira task board is a streamlined and highly customizable "kanban" style board. It lets you visualize tasks in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the task board is a great tool for planning and managing tasks.
 
     To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 
@@ -190,7 +192,6 @@ Below is an example of a task card showing all available data
 
 
 ## Task Gantt Chart
-
 This displays all active releases and sprints[^active-release] nested in the same hierarchy as on the main release list page (releases or sprints without any tasks are also shown). It also displays any task that are assigned to one of these releases.
 
 Any release that has active children or open tasks has an expand / collapse toggle to the left of its name. This will show the child releases and/or the assigned tasks
@@ -207,7 +208,7 @@ Part of a release or task may be shaded darker than normal, from its left - this
 Above the Gantt chart is a toolbar that lets you:
 
 - **refresh** the Gantt chart
-- **add a new task**: users with permissions to create tasks can click the `Add` button to add a new dispaly a popup to fill in information about the new task. The new task's release is filled in if you select a release on the Gantt chart, or otherwise by the release you are filtering the page on (see below).  Click `Add Task` to add the task into the product.
+- **add a new task**: users with permissions to create tasks can click the `Add` button to add a new display a popup to fill in information about the new task. The new task's release is filled in if you select a release on the Gantt chart, or otherwise by the release you are filtering the page on (see below).  Click `Add Task` to add the task into the product.
 - **filter the releases and tasks shown**: use the dropdown to pick a release. This shows a list of all active releases[^active-release] and syncs up with the release you set in other parts of the system (for instance on the product home page, or the reporting home page).
 
 ### Gantt Chart Inline Editing
@@ -300,7 +301,6 @@ The top part of this tab displays the various standard fields and custom propert
 
 
 ### Effort Fields
-
 You can enter/edit the start-date, end-date (i.e. the due-date), estimated, actual and remaining effort. From this the system will calculate the progress, percentage complete and projected final effort.
 
 The different effort values mean the following:
@@ -319,7 +319,6 @@ The different effort values mean the following:
 
 
 ### Followers
-
 Using the "***Subscribe***" button on the toolbar, you can quickly follow the item, and receive updates on certain changes to it. Depending on your role, you may also see a dropdown to this button, which let's you add another product member as a follower to this item.
 
 ![](img/Task_Tracking_99.png)

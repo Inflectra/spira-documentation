@@ -1,8 +1,9 @@
 # Planning Board
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 !!! info "Planning Board Overview"
     
-    The SpiraPlan planning board is a streamlined and highly customizable "kanban" style board. It lets you visualize backlog requirements and incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the planning board is a great tool for planning and managing agile products.
+    The Spira planning board is a streamlined and highly customizable "kanban" style board. It lets you visualize backlog requirements and incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the planning board is a great tool for planning and managing agile products.
 
     To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 

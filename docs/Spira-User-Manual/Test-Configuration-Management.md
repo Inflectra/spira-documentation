@@ -1,8 +1,9 @@
 # Test Configuration Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Test Configurations List
 
-This section outlines how to use the Test Configuration features of SpiraPlan® to create and manage different configurations of parameters that tests (both manual and automated) can be run against. This offers tools to quickly create every combination of different parameters.
+This section outlines how to use the Test Configuration features of Spira to create and manage different configurations of parameters that tests (both manual and automated) can be run against. This offers tools to quickly create every combination of different parameters.
 
 When you click on the Testing \> Test Configuration global navigation link, you will initially be taken to the test configuration list screen illustrated below:
 
@@ -74,7 +75,7 @@ You must select a parameter from the left dropdown (which contains a list of all
 
 ![](img/Test_Case_Management_236.png)
 
-Note: Custom lists are usually used in SpiraPlan for custom fields on various artifacts. However, you can create custom lists that are solely for the purpose of test configurations, should you so wish -- for instance, to contain a list of usernames.
+Note: Custom lists are usually used in Spira for custom fields on various artifacts. However, you can create custom lists that are solely for the purpose of test configurations, should you so wish -- for instance, to contain a list of usernames.
 
 Once you are happy with the lists and parameters selected, click the "***Populate***" button. This will overwrite all existing entries in this test configuration. It will create every combination based on the lists specified. So if you select two parameters, each with a list that has ten items, one hundred entries will be created in the test configuration.
 

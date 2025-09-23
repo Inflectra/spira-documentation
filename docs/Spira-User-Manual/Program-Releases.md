@@ -1,5 +1,7 @@
 # Program Releases
-The program release plan is only available in SpiraPlan. If you are using SpiraPlan, to access the program release plan, you must be a member of the program (i.e. a program owner or executive).
+!!! abstract "Available in SpiraPlan only"
+
+To access the program release plan, you must be a member of the program (i.e. a program owner or executive).
 
 The program release plan lets you see all of the products in the current program, together with their releases, sprints, and phases displayed in an integrated hierarchical view:
 

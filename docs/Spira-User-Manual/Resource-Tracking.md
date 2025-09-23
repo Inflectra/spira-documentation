@@ -1,6 +1,7 @@
 # Resource Tracking
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-This section outlines how you can use the Resource Tracking features of SpiraPlan® and SpiraTeam® to view the total workload for each of the product personnel resources assigned to a specific product. This allows you to verify that the work is evenly distributed amongst the product members and that no individual resource is overloaded.
+This section outlines how you can use the Resource Tracking features of Spira to view the total workload for each of the product personnel resources assigned to a specific product. This allows you to verify that the work is evenly distributed amongst the product members and that no individual resource is overloaded.
 
 When you click Tracking \> Resources on the global navigation bar, you will initially be taken to the product resources list screen illustrated below:
 
@@ -29,7 +30,6 @@ The toolbar also lets you:
 
 
 ## Resource Details
-
 The resource details page will show you what artifacts a resource has been assigned, and time values for the items. A small panel on the left will show current configured values for the product for \# of hours per workday, \# of days per week, and how many non-work hours per month there are.
 
 ![](img/Resource_Tracking_313.png)
@@ -39,37 +39,27 @@ There are two options related to the instant messenger beneath the user's avatar
 
 Tabs along the bottom will show assigned requirements and tasks, incidents, test cases, test sets and recent actions. The views for each item are a subset of available columns, to show progress and completion information for all items listed. Clicking on an artifact's name will take you to the artifact details page. The data in all of these tabs can be filtered by all releases, by a release and its children, or by a specific sprint.
 
-
 ### Reqs & Tasks
-
 This tab displays the list of requirements and child tasks that are assigned to the current resource:
 
 ![](img/Resource_Tracking_314.png)
 
-
 ### Incidents
-
 This tab displays the list of incidents that are assigned to the current resource:
 
 ![](img/Resource_Tracking_315.png)
 
-
 ### Test Cases
-
 This tab displays the list of test cases that are assigned to the current resource:
 
 ![](img/Resource_Tracking_316.png)
 
-
 ### Test Sets
-
 This tab displays the list of test sets that are assigned to the current resource:
 
 ![](img/Resource_Tracking_317.png)
 
-
 ### Actions
-
 This tab displays the list of recent actions make by the user in the product. It lets you quickly see all the changes they have made:
 
 ![](img/Resource_Tracking_318.png)

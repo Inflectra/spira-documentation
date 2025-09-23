@@ -1,5 +1,7 @@
 # Program Products
-This page outlines how to access and use the program product pages. These pages are only available in SpiraPlan. 
+!!! abstract "Available in SpiraPlan only"
+
+This page outlines how to access and use the program product pages.
 
 From the program product pages you can view information about each product in the program.
 

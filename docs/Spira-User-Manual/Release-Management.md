@@ -1,4 +1,6 @@
 # Release Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 | Artifact icon and name                                  | Token | Description                                                   |
 | ------------------------------------------------------- | ----- | ------------------------------------------------------------- |
 | ![](img/artifact-rl.png) &nbsp; Release                 | RL    | A way to group work together to deliver by a certain deadline |
@@ -62,6 +64,8 @@ If you hover the mouse over the mini chart it will display a tooltip that provid
 Each release shows the overall execution status of test cases assigned to that release for that release. For each test case the execution status shown is the most recent result from when that test case was run against that particular release (if at all). **Note:** a major release will also show the results from test cases assigned to it directly that are also assigned to and run against its child sprints. 
 
 ### Task Progress
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This columns shows a mini chart of the count of all active tasks[^active-tasks] assigned to the release, by progress category for the release. The 'On Schedule', 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category.
 
 If you hover the mouse over the mini chart it will display a tooltip that provides a more detailed description of the number of tasks in each category.
@@ -91,13 +95,15 @@ How are the different categories calculated?
 
 
 ### Task Effort
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 Rollup of effort from requirements associated to the release are summed together in the relevant release effort fields. Other artifacts's effort values can also be included in these calculations, controlled on the [Planning Options](../Spira-Administration-Guide/Product-Planning.md/#planning-options) page of product administration.
 
 Task effort calculations are described in more detail [here](Product-Homepage.md/#release-task-progress). 
 
 
 ## Baselining
-NOTE: **Baselining is only available in SpiraTeam and SpiraPlan**.
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 !!! question "What is baselining in SpiraPlan"
     Baselining allows you to take a snapshot of the entire product at a specific point in time. You can use this feature to see the state of every test case, requirement, and incident as they were the moment that baseline was created. You can see how an artifact changed between 2 baselines (or between the baseline and when the product was first created if you are looking at the earliest baseline).
@@ -132,7 +138,6 @@ Here is a step by step overview on getting started with baselines:
 
 
 ## Release List
-
 When you click on the Planning \> Releases global navigation link, you will initially be taken to the release list screen illustrated below:
 
 ![](img/Release_Management_258.png)
@@ -165,7 +170,7 @@ The "***Insert***" button has an attached dropdown menu that lets you:
 
 If you insert a release or sprint (not as a child) the new item is inserted *above* the currently selected item -- i.e. at the same level in the hierarchy but visually above the release with the checked checkbox. If you insert an item with no release selected, the item is inserted at the bottom of the list (at the same level in the hierarchy as the item release or sprint that was previously at the bottom).
 
-If you insert a child release or sprint, the new item is inserted *below* the currently selected item - i.e. nested insde the selected release as a child (a sprint cannot have  child sprints or releases).
+If you insert a child release or sprint, the new item is inserted *below* the currently selected item - i.e. nested inside the selected release as a child (a sprint cannot have  child sprints or releases).
 
 Once the new release has been inserted, the item is switched to "Edit" mode so you can change its name, version number or other information.
 
@@ -261,6 +266,7 @@ You can pick between each of these views using the view selection button group a
 
 
 ## Release Gantt Chart
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This displays all active releases and sprints[^active-release] nested in the same hierarchy as on the main release list page. Any release that has active children has an expand / collapse toggle to the left of its name. To the right of the release names is the timeline bar, which graphically shows the length of each release between their start and end dates in individual horizontal bars.
 
@@ -289,6 +295,7 @@ You can **edit releases** straight from the Gantt chart. Users with bulk edit pe
 [^active-release]: any release / sprint / phase with a status that is *not* "Closed", "Deferred", or "Cancelled".
 
 ## Releases Mind Map
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 The releases Mind Map / Pert chart displays the first 5,000 releases in the release hierarchy of the product as a connected tree view / mindmap. The root node shows the name of the product at the top. The top most level nodes are connected underneath this, with their successive children shown from top to bottom. 
 
@@ -314,7 +321,6 @@ You can **edit releases** straight from the mindmap. Users with bulk edit permis
 ![](img/releases-mind-map-editing.png)
 
 ## Release Details
-
 When you click on release item in the [release list](#release-list), you are taken to the release details page illustrated below:
 
 ![](img/Release_Management_263.png)
@@ -463,7 +469,6 @@ You can perform the following actions on a task from this screen:
 
 
 ### Test Cases
-
 This tab shows the test coverage information for the release in question:
 
 ![](img/Release_Management_270.png)
@@ -491,7 +496,6 @@ Finally, as a shortcut you can click the "***Create Test Set from This Release**
 
 
 ### Test Runs
-
 This view displays the list of all the test runs executed against the release. Each test run is listed together with the date of execution, the name of the test case, the name of the tester, the release/version of the system that the test was executed against, the name of the test set (if applicable), the overall execution status for the test case in that run and a link to the actual [test run details](Test-Case-Management.md/#test-run-details). In addition, you can choose to display any of the custom properties associated with the test run.
 
 ![](img/Release_Management_274.png)
@@ -508,7 +512,7 @@ Read about [how the attachments tab works](Application-Wide.md#attachments)
 Read about [how the associations tab works](Application-Wide.md#associations)
 
 ### Baselines
-NOTE: **Baselining is only available in SpiraTeam and SpiraPlan** and this tab will be only then be visible if baselining has been turned on for a product.
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This view displays the list of all baselines created for this release. If you have permissions for releases to create/modify/delete then you can perform the same actions for baselines.
 
@@ -571,6 +575,8 @@ Beneath the header bar are a number of collapsible sections, each of which show 
  the details of the build including a detailed description of why it succeeded or failed. Since builds are populated from an external Continuous Integration server the build information will always be read-only inside the SpiraPlan user interface.
 
 ### Commits
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This section shows all source code commits included in the current build. The grid can be sorted and filtered by using the appropriate controls.
 
 ![](img/Release_Management_279.png)

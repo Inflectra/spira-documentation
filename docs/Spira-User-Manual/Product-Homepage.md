@@ -1,4 +1,6 @@
 # Product Homepage
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 When you click on either the "Product Home" tab or the name of the product in the "My Page" product list, you will be taken to the homepage of the specific product in question:
 
@@ -50,12 +52,14 @@ By default, the product home page shows the "General" view. The following table 
 | Incident Test Coverage           |         |             |         |
 | Incident Summary                 | Y       | Y           | Y       |
 | Top Open Issues                  | Y       | Y           |         |
-| Risk Summary                     | Y       |             |         |
-| Top Open Risks                   | Y       |             |         |
-| Late Finishing Tasks             | Y       | Y           |         |
-| Late Starting Tasks              |         | Y           |         |
-| Task Graphs                      | Y       | Y           |         |
+| Risk Summary [^STSP]             | Y       |             |         |
+| Top Open Risks [^STSP]           | Y       |             |         |
+| Late Finishing Tasks [^STSP]     | Y       | Y           |         |
+| Late Starting Tasks [^STSP]      |         | Y           |         |
+| Task Graphs [^STSP]              | Y       | Y           |         |
 | Source Code Commits              |         | Y           |         |
+
+[^STSP]: Available in SpiraTeam & SpiraPlan
 
 Please note that different widgets are shown by default for the "Developer" and for the "Tester" views.
 
@@ -69,7 +73,6 @@ Each of the different widgets listed is described in more detail below:
 
 
 ## Product Overview
-
 This section displays:
 
 - the name of the product
@@ -81,7 +84,6 @@ This section displays:
 - the product's template
 
 ## Activity Stream
-
 This section shows a list of the most recent changes made by any product member anywhere in the product. It only displays changes to artifacts that the current user is allowed to view (based on their product role). Here is an example activity item - you can see that it displays information about the user who made the change, what was changed, how it was changed, and when:
 
 > System Administrator modified Incident [IN:1] - Cannot log into the application | Tuesday, November 2, 2021 2:01:34 PM
@@ -99,10 +101,9 @@ Clicking the "View All" button at the top of this section will open the "Activit
 - User
 
 ## Shared Searches
-
 This section lists any filters/searches have been saved from the various artifact list screens throughout the application and marked as **shared filters**. This allows users to store specific combinations of searches that the product team needs to perform on a regular basis (e.g. display all newly logged incidents, display all requirements that are completed but have no test coverage).
 
-The name of the saved search is displayed along with an icon that depicts which artifact it's for and the person who created it. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. If you are the creator of the saved search, clicking the "***Delete***" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of SpiraPlan.
+The name of the saved search is displayed along with an icon that depicts which artifact it's for and the person who created it. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. If you are the creator of the saved search, clicking the "***Delete***" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of Spira.
 
 ## Schedule
 This Gantt chart shows all active releases[^active-release] and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.
@@ -118,7 +119,6 @@ This section displays a count of the total number of incidents, and the number o
 
 
 ## Requirements Coverage
-
 This section consists of a bar graph that displays the aggregated count of requirements test coverage for the product. The Passed, Failed, Blocked, Caution and Not-Run bars indicate the total count of requirements that have tests covering them, allocated across the execution status of the covering tests. For example, if a requirement is covered by *four tests*, two that have passed, one that has failed and one that has not yet been run, the counts would be passed = 0.5, failed
 = 0.25 and not-run 0.25. These fractional quantities are then summed across all the requirements to give the execution status breakdown of the covered requirements.
 
@@ -130,7 +130,6 @@ When you filter the product home by release/sprint, this widget will filter the 
 
 
 ## Requirements Graphs
-
 This widget lets you quickly view four different graphs used when measuring the progress of requirements in an agile methodology. They are described in more detail in [Reports](Reports-Center.md/#snapshot-graphs).
 
 1. **[Requirement Velocity](Reports-Center.md/#requirements-velocity-graph)**: this graph shows the actual velocity delivered in each product release and/or sprint compared to the product average and the rolling average.
@@ -200,14 +199,13 @@ Schedule Progress color definitions:
 
     Tip: You can hover over a bar to get more information.
 
-## Releases/Sprints Relatize Size
+## Releases/Sprints Relative Size
 This chart shows the number of active requirements in each active release. Hovering over a segment will show its percentage of all requirements (this is visually represented by the size of the donut wedge). Please note, releases with no active requirements are not shown.
 
 !!! question "Displaying for a Release"
-    Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget. The widget will also show sprints if you ONLY have ative sprints in this product (i.e. if there are no active major or minor releases at all).
+    Normally this widget does not show sprints. However if you have set the dashboard to display information for a particular release, this widget will show any children of that release - including any sprints. The specific release you are displaying for is not shown in the widget. The widget will also show sprints if you ONLY have active sprints in this product (i.e. if there are no active major or minor releases at all).
 
 ## Recent Builds
-
 This widget displays a list of the most recent builds that have been performed as part of the current release or sprint:
 
 ![](img/UserProduct_Management_70.png)
@@ -216,14 +214,12 @@ For each build it will display whether the build succeeded or failed, the date t
 
 
 ## Test Case Cumulative Progress
-
 This section consists of a chart that displays the last 30 days of test case executions cumulatively. That means it will display for each day, the total number of test cases executed plus the status from any previous days that have not been changed. Any test cases not executed up to that point will be considered "not run" and will appear in the "not run" category. For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 2 failed and 5 not run.
 
 ![](img/UserProduct_Management_72.png)
 
 
 ## Test Execution Status
-
 This section consists of a bar graph that displays the aggregated count of test cases in each execution status for the product. Note that this graph does not consider past test-runs when calculating the totals in each status (Passed, Failed, Not Run, etc.), it simply looks at each test-case and uses the last-run status as the best health indicator. Thus if a test case that previously passed, has subsequently failed upon re-execution, it will be considered a failure only.
 
 If you position the mouse pointer over any of the five bars, the color of the bar changes slightly and the underlying raw data is displayed as a tooltip, together with the percentage equivalent. Clicking on any of the bars will bring up the [product test case list](Test-Case-Management.md/#test-case-list) with the appropriate filter applied.
@@ -283,10 +279,14 @@ This widget shows a breakdown of the top issues logged in the product, in order 
 
 
 ## Risk Summary
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This section displays a two dimensional matrix of the open risks logged against the product of impact against probability. Combined these two dimensions are reflected in the risks exposure and each differently colored rectangle in the matrix represents one possible exposure. The number of risks that have a particular exposure are shown inside each rectangle as appropriate. Clicking on that number will take you to the risk list page filtered by the relevant exposure.
 
 
 ## Top Open Risks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This widget displays a breakdown of the top open risks in the product, in order of decreasing risk exposure. For each row you see:
 
 - **Risk name**: hovering shows more information about the risk, and clicking the name opens the risk details page
@@ -299,10 +299,14 @@ You can edit the widget to: show/hide the risk owner column; show/hide the risk 
 
 
 ## Late Finishing Tasks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This section displays the list of any product tasks that have not yet been completed, but whose scheduled end date has already elapsed. A graphical progress bar is included with each task in the grid, so that you can easily see which tasks are nearest completion.
 
 
 ## Late Starting Tasks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This section displays the list of any product tasks that have not yet started, but whose scheduled start date has already elapsed:
 
 ![](img/UserProduct_Management_66.png)
@@ -311,6 +315,8 @@ Each task is listed along with its owner, priority and due-date so that you quic
 
 
 ## Task Graphs
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This widget lets you quickly view the three main graphs used when measuring the progress of tasks in an agile methodology. They are described in more detail in [Reports](Reports-Center.md/#snapshot-graphs).
 
 1.  **[Task Velocity](Reports-Center.md/#task-velocity-chart)**: this graph shows the total estimated and actual effort delivered in each product release and/or sprint
@@ -319,6 +325,7 @@ This widget lets you quickly view the three main graphs used when measuring the 
 
 
 ## Source Code Commits
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 ![](img/UserProduct_Management_73.png)
 

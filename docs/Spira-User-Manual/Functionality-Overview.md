@@ -1,4 +1,6 @@
 # Application Overview
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 Spira is an easy to use, quick to configure, application designed to work wherever you do (from big screens to tiny screens). It has powerful features to help you and your team collaborate to deliver high quality products to specification and on time. It is specifically focused on helping teams software and application development processes in a structured way.
 
 This guide explains Spira's approach, what its different pieces are, how they fit together, and how you can use them together most effectively. This guide will explain the happy "good practice" paths to using it successfully. Most people work these ways and very successfully. Others take full use of Spira's flexibility and customization options to stretch the application to work outside the lines. These users are usually very successful too.  The opening tip to this guide is this: where possible, work with the application not against it to have the greatest and easiest success. 
@@ -158,32 +160,40 @@ See the links below to read specific information about each artifact.
 
 ## Artifact overviews
 === "Test Automation"
-    As well as being able to store and manage manual test cases, SpiraPlan® can be used to manage the scheduling and execution of automated test scripts for a variety of third-party test automation engines. This allows you to centrally plan your automated testing and monitor the results of automated unit, functional and load testing remotely. For example, you could schedule a set of automated functional tests to run on five different machines (each with a different browser/OS combination) at 2:00 AM and have the results be ready for the next morning.
+    As well as being able to store and manage manual test cases, Spira can be used to manage the scheduling and execution of automated test scripts for a variety of third-party test automation engines. This allows you to centrally plan your automated testing and monitor the results of automated unit, functional and load testing remotely. For example, you could schedule a set of automated functional tests to run on five different machines (each with a different browser/OS combination) at 2:00 AM and have the results be ready for the next morning.
 
 === "Incidents"
-    SpiraPlan® provides the ability to create, edit, assign, track, manage and close incidents that are raised during the testing of the software system under development. These incidents can be categorized into bugs, enhancements, issues, training items, limitations, change requests, and risks, and each type has its own specific workflow and business rules. Typically each incident is raised initially as a 'New' item of type 'Incident'. Following the review by the product manager and customer, they are changed to one of the other specific types, given a priority (critical, high, medium or low), and status changed to 'Open'. Once it is assigned to a developer for fixing, it is changed to status 'Assigned'.
+    Spira provides the ability to create, edit, assign, track, manage and close incidents that are raised during the testing of the software system under development. These incidents can be categorized into bugs, enhancements, issues, training items, limitations, change requests, and risks, and each type has its own specific workflow and business rules. Typically each incident is raised initially as a 'New' item of type 'Incident'. Following the review by the product manager and customer, they are changed to one of the other specific types, given a priority (critical, high, medium or low), and status changed to 'Open'. Once it is assigned to a developer for fixing, it is changed to status 'Assigned'.
 
-    The developer now works to correct the incident, after which time its status changes to 'Fixed' or 'Not Reproducible' depending on the actions taken (or not taken). Finally the product manager and customer verify that it has indeed been fixed, and the status is changed to 'Closed'. SpiraPlan® provides robust sorting and filtering of all the incidents in the system, as well as the ability to view the incidents associated with particular test cases and test runs, enabling drill-down from the requirements coverage display, right through to the open incidents that are affecting the requirement in question.
+    The developer now works to correct the incident, after which time its status changes to 'Fixed' or 'Not Reproducible' depending on the actions taken (or not taken). Finally the product manager and customer verify that it has indeed been fixed, and the status is changed to 'Closed'. Spira provides robust sorting and filtering of all the incidents in the system, as well as the ability to view the incidents associated with particular test cases and test runs, enabling drill-down from the requirements coverage display, right through to the open incidents that are affecting the requirement in question.
 
 === "Tasks"
-    As described above, in addition to storing the requirements for a product, SpiraPlan® includes the capability of drilling each lowest-level requirement down further into a series of work items called 'Tasks'. These tasks are the discrete activities that each member of the development team would need to carry out for the requirement to be fulfilled. Each task can be assigned to an individual user as well as associated with a particular release or sprint. The system can then be used by the product manager to track the completion of the different tasks to determine if the product is on schedule.
+    !!! abstract "Available in SpiraTeam and SpiraPlan only" 
+    
+    As described above, in addition to storing the requirements for a product, Spira includes the capability of drilling each lowest-level requirement down further into a series of work items called 'Tasks'. These tasks are the discrete activities that each member of the development team would need to carry out for the requirement to be fulfilled. Each task can be assigned to an individual user as well as associated with a particular release or sprint. The system can then be used by the product manager to track the completion of the different tasks to determine if the product is on schedule.
 
     The tasks can be organized into different folders as well as categorized by different types (development, testing, infrastructure, etc.), each of which can have its own *workflow* which defines the process by which the task changes status during the product lifecycle.
 
 === "Document Management"
-    SpiraPlan® includes an integrated document management collaboration system that can be used to upload, manage and share documents between the different members of the product. This module includes support for uploading files and URLs, versioning of documents, the ability to organize into folders and categorize and search using meta-tags.
+    Spira includes an integrated document management collaboration system that can be used to upload, manage and share documents between the different members of the product. This module includes support for uploading files and URLs, versioning of documents, the ability to organize into folders and categorize and search using meta-tags.
 
 
 === "Risk Management"
-    SpiraPlan® (not available in SpiraTest or SpiraTeam) enables a complete risk management workflow. This module aids in the analyzing and categorizing of risks based on their Probability and their impact, which produces a calculated risk exposure. The tool tracks both risks and their mitigations, and provides dynamic risk reporting tools.
+    !!! abstract "Available in SpiraTeam and SpiraPlan only"
+    
+    Spira enables a complete risk management workflow. This module aids in the analyzing and categorizing of risks based on their Probability and their impact, which produces a calculated risk exposure. The tool tracks both risks and their mitigations, and provides dynamic risk reporting tools.
 
 === "Source Code"
-    SpiraTeam® and SpiraPlan® let you browse your source code from within the main web application. This is an excellent way to browse all a product's code files, commits, and how a file changed in a commit (the 'diff'). There is no need to install version control software on your own computer or to clone the source code to your machine. All users can link source code commits with any SpiraPlan® artifact. This gives you traceability from requirements, incidents, tasks, and more to right code changes. This let you easily see what code was edited to implement a feature, or fix a bug. If the bug is reopened later, you can quickly see the associated source code commits to check if the changes made actually did fix things properly.
+    !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+    Spira lets you browse your source code from within the main web application. This is an excellent way to browse all a product's code files, commits, and how a file changed in a commit (the 'diff'). There is no need to install version control software on your own computer or to clone the source code to your machine. All users can link source code commits with any Spira artifact. This gives you traceability from requirements, incidents, tasks, and more to right code changes. This let you easily see what code was edited to implement a feature, or fix a bug. If the bug is reopened later, you can quickly see the associated source code commits to check if the changes made actually did fix things properly.
 
 
 === "Build"
-    SpiraPlan® integrates with a variety of continuous integration / automated build servers so that the results of automated builds can be displayed in SpiraPlan linked to the associated release or sprint. In addition, the results of automated tests and source code operations can be linked to the build events, providing traceability from a specific build to the bugs that were fixed, tests that were run, and source code files that were modified.
+    Spira integrates with a variety of continuous integration / automated build servers so that the results of automated builds can be displayed in Spira linked to the associated release or sprint. In addition, the results of automated tests and source code operations can be linked to the build events, providing traceability from a specific build to the bugs that were fixed, tests that were run, and source code files that were modified.
 
 
 === "Instant Messenger"
-    SpiraPlan® comes with a build-in integrated instant messaging capability. This lets users see which users are currently logged-into the system, maintain a list of contacts and where available, send short instant messages to other users. Any messages exchanged can then be posted to relevant artifacts in the system as permanent comments.
+    !!! abstract "Available in SpiraTeam and SpiraPlan only"
+    
+    Spira comes with a build-in integrated instant messaging capability. This lets users see which users are currently logged-into the system, maintain a list of contacts and where available, send short instant messages to other users. Any messages exchanged can then be posted to relevant artifacts in the system as permanent comments.

@@ -1,5 +1,7 @@
 ## Program Planning Board 
-The program planning board is only available in SpiraPlan. If you are using SpiraPlan, to access the program planning board, you must be a member of the program (i.e. a program owner or executive).
+!!! abstract "Available in SpiraPlan only"
+
+To access the program planning board, you must be a member of the program (i.e. a program owner or executive).
 
 The program planning board is designed to let you view the backlog items that need to be planned for all of the products in a specific program as well as view all of the planned items in each of the individual products. It is designed to let you see a product-group wide view of all requirements and associated test cases and tasks. You can access this feature by clicking on the **Planning** menu entry in the program navigation.
 

@@ -959,7 +959,7 @@
     * Product Dashboard
         - [Requirement Completion Gauge Chart](../Spira-User-Manual/Product-Homepage.md/#requirement-completion) [RQ:2765]
         - [Releases: Completion](../Spira-User-Manual/Product-Homepage.md/#releasessprints-completion) [RQ:2766]
-        - [Releases: Relative Size](../Spira-User-Manual/Product-Homepage.md/#releasessprints-relatize-size) [RQ:2767]
+        - [Releases: Relative Size](../Spira-User-Manual/Product-Homepage.md/#releasessprints-relative-size) [RQ:2767]
         - [Product Schedule Gantt Chart](../Spira-User-Manual/Product-Homepage.md/#schedule) [RQ:2768]
 
     * My Page

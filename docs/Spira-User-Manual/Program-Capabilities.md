@@ -1,6 +1,5 @@
 # Program Capabilities
-
-!!! info "These features are only available in SpiraPlan"
+!!! abstract "Available in SpiraPlan only"
 
 Capabilities and [Program Milestones](Program-Milestones.md) give you powerful ways to manage delivery of features and releases across multiple products at once - in other words at a program level. Capabilities let you define cross-product, program-level features (requirements). You can customize capabilities with system-wide [types](../Spira-Administration-Guide/Program-Capabilities.md/#types), [statuses](../Spira-Administration-Guide/Program-Capabilities.md/#statuses), [priorities](../Spira-Administration-Guide/Program-Capabilities.md/#priorities), and fully [customizable fields](../Spira-Administration-Guide/System-Custom-Properties.md). You can link capabilities to product requirements to track their progress at a higher level, and tag them with a program milestone to manage their delivery timetable.
 
@@ -107,7 +106,7 @@ Read more about [how to manage and add associations to this artifact](Applicatio
 ## Capability Board
 !!! info "Capability Board Overview"
     
-    The SpiraPlan capability board is a streamlined and highly customizable "kanban" style board. It lets you visualize, manage, and plan capabilities across a program.
+    The Spira capability board is a streamlined and highly customizable "kanban" style board. It lets you visualize, manage, and plan capabilities across a program.
 
     To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 

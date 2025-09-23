@@ -1,33 +1,35 @@
 # Source Code
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 ## Introduction
-SpiraTeam®'s and SpiraPlan®'s source code integration features let you:
+Spira's source code integration features let you:
 
 - browse the source code associated with a particular product 
 - view all the active branches available in the source code (branches with "/" in them are shown as nested within a folder structure to help view your branch structure more easily)
 - browse all commits made over time
 - see how the source code evolved over time by seeing how individual files changed between two commits
-- link source code commits and files to SpiraPlan artifacts. 
-- view source code files from within SpiraPlan giving you end-to-end traceability from requirements, tasks, incidents, and more.
+- link source code commits and files to Spira artifacts. 
+- view source code files from within Spira giving you end-to-end traceability from requirements, tasks, incidents, and more.
 
-SpiraPlan integrates with many different source code / Software Configuration Management (SCM). You can connect SpiraPlan and your source code using plugins for the different SCM's (including [Git](../Version-Control-Integration/Integrating-with-Git.md) and [Subversion](../Version-Control-Integration/Integrating-with-Subversion.md)).
+Spira integrates with many different source code / Software Configuration Management (SCM). You can connect Spira and your source code using plugins for the different SCM's (including [Git](../Version-Control-Integration/Integrating-with-Git.md) and [Subversion](../Version-Control-Integration/Integrating-with-Subversion.md)).
 
-This section outlines SpiraPlan's source code features, whatever type of source code provider you are using. [The Commit section](Commits.md) outlines viewing and working with commits and the changes made in them.
+This section outlines Spira's source code features, whatever type of source code provider you are using. [The Commit section](Commits.md) outlines viewing and working with commits and the changes made in them.
 
 ## Getting Started With Source Code 
 To use the source code features in SpiraPlan you need to do 3 things:
 
 1. a system administrator has setup the source code provider (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#configuring-git-in-spira))
 2. a system administrator has activated source code for the product and a product or system admin has configured source code for the product (for example, [Git](../Version-Control-Integration/Integrating-with-Git.md/#use-git-for-your-product))
-3. SpiraPlan users have a [role](../Spira-Administration-Guide/System-Users.md/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
+3. Spira users have a [role](../Spira-Administration-Guide/System-Users.md/#view-edit-product-roles) that lets them view source code (and commits) in the application. 
 
-Once these steps are complete, the source code will be viewable within SpiraPlan. The rest of this section assumes these steps have all been taken.
+Once these steps are complete, the source code will be viewable within Spira. The rest of this section assumes these steps have all been taken.
 
 ## Troubleshooting Source Code Integration
 Integration with a source code provider can sometimes not work as you expect:
 
 - When you first view the source code or commits, this starts the process of generating the data to display. It may take several minutes for this data to properly load. You will see a message on the page explaining that the 'cache' is building. Please refresh the page after a few minutes and try again.
-- If SpiraPlan does not correctly load the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the source code provider dll or some of its dependent assemblies are not in the correct folder of the SpiraPlan installation. If you installed these yourself, make sure you are using the correct 32 bit or 64 bit version of the files. Download the correct version from the Inflectra website, and overwrite the files in the VersionControl folder.
-- If SpiraPlan reports that the source code login information is incorrect, double check the source code settings (at the system admin level and for the specific product). Note, product settings over-ride system level settings for source code. Make sure the login information is correct and that the user specified can access all branches of the source code.
+- If Spira does not correctly load the login page, look for an error message (either on the page or in the Application Event Log) that says "Could not load file or assembly". If you get this error, it is probably because the source code provider dll or some of its dependent assemblies are not in the correct folder of the Spira installation. If you installed these yourself, make sure you are using the correct 32 bit or 64 bit version of the files. Download the correct version from the Inflectra website, and overwrite the files in the VersionControl folder.
+- If Spira reports that the source code login information is incorrect, double check the source code settings (at the system admin level and for the specific product). Note, product settings over-ride system level settings for source code. Make sure the login information is correct and that the user specified can access all branches of the source code.
 
 
 ## Source Code File List
@@ -112,7 +114,7 @@ Each commit is displayed with:
 ### Associations
 ![](img/Source_Code_399.png)
 
-This shows all current associations between this file and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).
+This shows all current associations between this file and any artifacts in Spira. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the file. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).
 
 You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations).
 

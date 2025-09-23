@@ -1,6 +1,7 @@
 # Reports Center
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
-This section describes the reporting features of SpiraPlan®, including an overview of each of the report types that are available. When you click on the "Reports" tab on the global navigation bar, you will initially be taken to the reports home page illustrated below:
+This section describes the reporting features of Spira, including an overview of each of the report types that are available. When you click on the "Reports" tab on the global navigation bar, you will initially be taken to the reports home page illustrated below:
 
 ![](img/Reports_Center_335.png)
 
@@ -14,6 +15,7 @@ This page consists of four main areas:
 
     - Requirement Graphs widget: only active releases
     - Task Graphs widgets: only active releases
+        {: .edition-spiraplan .edition-spirateam}
     - All Summary Graphs widgets: all releases
     - All Date-Range Graphs widgets: all releases
     - Custom Graphs that use the token ${ReleaseId}: no data
@@ -27,7 +29,6 @@ Each of the graphs is described in more detail in [Summary Graphs](#summary-grap
 
 
 ## Reports Configuration
-
 The configuration page for each report differs slightly, but the general format is illustrated below (please note all sections are shown in orange text with a line beneath and are shown here in the collapsed state -- click the orange text to expand the section):
 
 ![](img/Reports_Center_337.png)
@@ -80,161 +81,113 @@ Once you have selected the format, elements and filters, clicking the "***Create
 
 Each of the reports is described below:
 
-
 ## Requirement Reports
-
 ### Requirements Summary Report
-
 This report displays all of the requirements defined for the current product in the order they appear in the requirements list. The requirement's details and coverage status are displayed in a summary list form:
 
 ![](img/Reports_Center_344.png)
 
-
 ### Requirements Detailed Report
-
 This printable report displays all of the requirements defined for the current product in the order they appear in the requirements list. For each individual requirement, the name, priority, author, status and coverage status are displayed, along with tables containing the list of covering test cases, these test cases' test runs, linked incidents/requirements, associated tasks, attached documents, and the change history:
 
 ![](img/Reports_Center_345.png)
 
-
 ### Requirements Plan
-
 This report displays a complete work breakdown structure of the product from a requirements perspective, including all requirements and tasks organized by schedule:
 
 ![](img/Reports_Center_346.png)
 
-
 ### Requirements Traceability Matrix
-
 This report displays a matrix of the requirements in the system with their list of covering test cases and **associated, mapped requirements:**
 
 ![](img/Reports_Center_347.png)
 
-
 ## Test Case Reports
-
-
 ### Test Case Summary Report
 
 This report displays all of the test cases defined for the current product in the order they appear in the test case list. The test case's details and execution status are displayed in a summary grid form with the test steps optionally displayed:
 
 ![](img/Reports_Center_348.png)
 
-
 ### Test Case Detailed Report
-
 This report displays all of the test cases defined for the current product in the order they appear in the test case list. The test case's details and execution status are displayed, along with sub-tables containing the list of test steps, test runs, attached documents, the change history, and a list of any associated open incidents:
 
 ![](img/Reports_Center_349.png)
 
-
 ### Test Set Summary Report
-
 This report displays all of the test sets defined for the current product in the order they appear in the test set list. The test set's details and execution status are displayed in a summary list form:
 
 ![](img/Reports_Center_350.png)
 
-
 ### Test Set Detailed Report
-
 This report displays all of the test sets defined for the current product in the order they appear in the test set list. The test set's details and execution status are displayed, along with sub-tables containing the list of test cases, test runs, attached documents, and the change history:
 
 ![](img/Reports_Center_351.png)
 
-
 ### Printable Test Scripts
-
 This printable report is useful when you want to be able to conduct the testing activities offline on paper, or when testers need paper copies of the test script in addition to using the online test execution wizard.
 
 In either case, this report simply displays all of the test cases defined for the current product in the order they appear in the test case list together with their detailed test steps and a list of any attached documents.
 
 ![](img/Reports_Center_352.png)
 
-
 ### Test Run Summary Report
-
 This report displays all of the test runs defined for the current product. The test run's details and execution status are displayed in a summary grid form:
 
 ![](img/Reports_Center_353.png)
 
-
 ### Test Run Detailed Report
-
 This report displays all of the test runs defined for the current product in date order (most recent first). The test run's details and execution status are displayed, along with sub-tables containing the list of test run steps, and a list of any associated open incidents:
 
 ![](img/Reports_Center_354.png)
 
-
 ### Test Case Traceability
-
 This report displays a matrix of the test cases in the system with the list of mapped releases, incidents and test sets:
 
 ![](img/Reports_Center_355.png)
 
-
 ## Incident Reports
-
-
 ### Incident Summary Report
-
 This report displays all of the incidents tracked for the current product. Incident information is displayed in a summary list/table form:
 
 ![](img/Reports_Center_356.png)
 
-
 ### Incident Detailed Report
-
 This printable report displays all of the incidents tracked for the current product sorted by incident number. For each individual incident, the name, type, priority, status, opener, owner and close date are displayed, along with tables containing the detailed description and resolutions as well as a tabular list of attached documents, linked requirements/incidents and the change history:
 
 ![](img/Reports_Center_357.png)
 
-
 ## Task Reports
-
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 ### Task Summary Report
-
 This report displays all of the tasks tracked for the current product. The task's details are displayed in a summary list form:
 
 ![](img/Reports_Center_358.png)
 
-
 ### Task Detailed Report
-
 This report displays all of the tasks tracked for the current product. The task's details are displayed, along with a tabular list of attached documents and the change history:
 
 ![](img/Reports_Center_359.png)
 
-
 ## Release Reports
-
-
 ### Release Summary Report
-
 This report displays all of the releases and sprints defined for the current product in the order they appear in the release/sprint hierarchy. The release's details are displayed in a summary list form:
 
 ![](img/Reports_Center_360.png)
 
-
 ### Release Detailed Report
-
 This report displays all of the releases and sprints defined for the current product in the order they appear in the release/sprint hierarchy. The release's details are displayed, along with sub-tables containing the list of requirements added, mapped test cases, test runs executed, incidents resolved, attached documents, scheduled tasks and the change history:
 
 ![](img/Reports_Center_361.png)
 
-
 ### Release Plan Report
-
 This report displays a complete work breakdown structure of the product from a release perspective, including all releases, sprints, requirements, tasks and incidents organized by schedule:
 
 ![](img/Reports_Center_362.png)
 
-
 ## Summary Graphs
-
-
 ### Requirements Summary Graph
-
 The requirements summary graph shows how many requirements are currently in a product. The number of requirements is displayed according to the criteria that you specify. You can specify the type of data displayed along the x-axis, and the requirement information which is used to group the data. When you first open the graph you will be asked to pick the field that you would like to display on the x-axis and the field that you would like to group the data by. Once you have chosen the appropriate fields the graph will be displayed:
 
 ![](img/Reports_Center_363.png)
@@ -252,18 +205,14 @@ Clicking on the "***Download Data as CSV***" button will export the datagrid int
 
 ![](img/Reports_Center_365.png)
 
-
 ### Test Case Summary Graph
-
 The test case summary graph shows how many test cases are currently in a product. The number of test cases is displayed according to the criteria that you specify. You can specify the type of data displayed along the x-axis, and the test case information which is used to group the data. When you first open the graph you will be asked to pick the field that you would like to display on the x-axis and the field that you would like to group the data by. Once you have chosen the appropriate fields the graph will be displayed:
 
 ![](img/Reports_Center_366.png)
 
 In this version of the report, the x-axis represents the test case execution status, and the individual bars are grouped by test case priority. Each data-value can be viewed by positioning the mouse pointer over the bar, and a "tooltip" will pop-up listing the actual data value. Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
-
 ### Test Run Summary Graph
-
 The test run summary graph shows how many test runs are currently in a product. The number of test runs is displayed according to the criteria that you specify. You can specify the type of data displayed along the x-axis, and the test run information which is used to group the data. When you first open the graph you will be asked to pick the field that you would like to display on the x-axis and the field that you would like to group the data by. Once you have chosen the appropriate fields the graph will be displayed:
 
 ![](img/Reports_Center_367.png)
@@ -272,9 +221,7 @@ In this version of the report, the x-axis represents the test run execution stat
 
 Each data-value can be viewed by positioning the mouse pointer over the bar, and a "tooltip" will pop-up listing the actual data value. Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
-
 ### Incident Summary Graph
-
 The incident summary graph shows how many incidents are currently in a product. The number of incidents is displayed according to the criteria that you specify. You can specify the type of data displayed along the x-axis, and the incident information which is used to group the data. When you first open the graph you will be asked to pick the field that you would like to display on the x-axis and the field that you would like to group the data by. Once you have chosen the appropriate fields the graph will be displayed:
 
 ![](img/Reports_Center_368.png)
@@ -285,7 +232,6 @@ Each data-value can be viewed by positioning the mouse pointer over the bar, and
 
 
 ### Task Summary Graph
-
 The task summary graph shows how many tasks are currently in a product. The number of tasks is displayed according to the criteria that you specify. You can specify the type of data displayed along the x-axis, and the task information which is used to group the data. When you first open the graph you will be asked to pick the field that you would like to display on the x-axis and the field that you would like to group the data by. Once you have chosen the appropriate fields the graph will be displayed:
 
 ![](img/Reports_Center_369.png)
@@ -297,7 +243,6 @@ Each data-value can be viewed by positioning the mouse pointer over the bar, and
 
 
 ### Test Set Summary Graph
-
 The test set summary graph shows how many test set are currently in a product. The number of test sets is displayed according to the criteria that you specify. You can specify the type of data displayed along the x-axis, and the test set information which is used to group the data. When you first open the graph you will be asked to pick the field that you would like to display on the x-axis and the field that you would like to group the data by. Once you have chosen the appropriate fields the graph will be displayed:
 
 ![](img/Reports_Center_370.png)
@@ -308,10 +253,7 @@ Each data-value can be viewed by positioning the mouse pointer over the bar, and
 
 
 ## Snapshot Graphs
-
-
 ### Requirements Coverage Graph
-
 The requirements coverage graph shows how many requirements are currently in a product, according to their test coverage status.
 
 ![](img/Reports_Center_371.png)
@@ -322,7 +264,6 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Requirements Burndown Graph
-
 The Requirements Burndown graph shows the remaining number of story points that needs to be completed for each release/sprint in the product with separate lines for the estimated and ideal burndown. In addition, the graph includes bars for the completed number of story points in each time period on the x-axis:
 
 ![](img/Reports_Center_372.png)
@@ -338,9 +279,7 @@ The x-axis display will change based on the selection of the [dropdown release p
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
-
 ### Requirements Burnup Graph
-
 The Requirements Burnup graph shows the cumulative number of story points outstanding for each release/sprint in the product with separate lines for the estimated and ideal burnup. In addition, the graph includes bars for the number of completed story points in each time period on the x-axis.
 
 ![](img/Reports_Center_373.png)
@@ -356,9 +295,7 @@ The x-axis display will change based on the selection of the [dropdown release p
 
 Clicking on the "***Display Data Grid***" button will display the underlying data that is being used to generate the graph. In addition, clicking on the "***Download Data as CSV***" button will export the datagrid into Comma Separated Values (CSV) format that can be opened in MS-Excel. Some browsers also support the ability to save the graph as an image file (JPEG, PNG and GIF formats).
 
-
 ### Requirements Velocity Graph
-
 The Requirements Velocity graph shows the total number of story points that have been completed (or planned to be completed) in a particular release, sprint or time-period (called the velocity). The actual velocity is displayed along with the overall average velocity (in blue) and the rolling average velocity (in green):
 
 ![](img/Reports_Center_374.png)
@@ -374,7 +311,6 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Incident Aging Graph
-
 The incident aging graph displays the number of days incidents have been left open in the system with the count of incidents on the y-axis and different age intervals on the x-axis. Each bar-chart color represents a different incident priority, giving a product manager a snapshot view of the age of open incidents by priority and detected release. For this chart, "open" is defined as any incident with an empty "Closed On" date. The incident status is not used for this chart.
 
 ![](img/Reports_Center_375.png)
@@ -383,7 +319,6 @@ This report can be filtered by the type of incident, so for example you can see 
 
 
 ### Incident Turnaround Time Graph
-
 The incident turnaround time graph displays the number of days incidents have taken to be closed (from the time they were first raised) in the system with the count of incidents on the y-axis and different turnaround time intervals on the x-axis. Each bar-chart color represents a different incident priority, giving a product manager a snapshot view of the turnaround time of incidents by priority and detected release. For this chart, "closed" is defined as any incident with a "Closed On" date. The incident status is not used for this chart.
 
 ![](img/Reports_Center_376.png)
@@ -392,6 +327,7 @@ This report can be filtered by the type of incident, so for example you can see 
 
 
 ### Task Velocity Chart
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 The Task Velocity graph shows the total estimated and actual effort (in number of hours) delivered in each product release and/or sprint:
 
@@ -408,6 +344,7 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Task Burnup Chart
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 The Task Burnup graph shows the cumulative amount of work outstanding for each release/sprint in the product with separate lines for the estimated and ideal burnup. In addition, the graph includes bars for the remaining and completed effort in each time period on the x-axis.
 
@@ -426,6 +363,8 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Task Burndown Chart
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 The Task Burndown graph shows the effort (in hours) on the y-axis. The x-axis shows releases/sprints - the releases/sprints shown changes as you change the release selector at the top of the page. To be useful tasks in the product have to have their effort fields populated (specifically Estimated Effort and Remaining Effort).
 
 The blue line on the graphs indicates the ideal burndown. The other line shows the estimated actual burndown. The graph also shows bars for the remaining and completed effort for each relevant release/sprint.
@@ -443,9 +382,7 @@ Clicking on the "***Display Data Grid***" button shows the underlying data used 
 
 
 ## Date-Range Graphs
-
 ### Test Run Progress Rate Graph
-
 The Test Run Progress Rate Graph shows how many tests have been executed for the selected release/sprint for a specific date range, and what execution status was recorded. The graph can be displayed for all test case types or for a specific type.
 
 ![](img/Reports_Center_380.png)
@@ -456,7 +393,6 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Test Case Progress Rate Graph
-
 The Test Case Progress Rate Graph displays the number of test case executions for the specified date range, against the specified release/sprint, ignoring the status from any previous days. Any test cases not executed that day will be considered "not run" and will appear in the "not run" category. 
 
 For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 0 failed and 7 not run.
@@ -465,7 +401,6 @@ For example, if you have 10 test cases created on day 1 you will see 10 test cas
 
 
 ### Test Case Cumulative Progress Graph
-
 The Test Case Cumulative Progress Graph displays the number of test case executions cumulatively over the specified date range, against the specified release/sprint. That means it will display for each day, the total number of test cases executed plus the status from any previous days that have not been changed. Any test cases not executed up to that point will be considered "not run" and will appear in the "not run" category.
 
 For example, if you have 10 test cases created on day 1 you will see 10 test cases "not run" on day 1. On day 2, you execute 5 test cases and fail them all, you will now see 5 test cases failed and 5 not run. On day 3, you execute 3 of the previous 5 test cases and pass them. You will now see 3 test cases passed, 2 failed and 5 not run.
@@ -474,7 +409,6 @@ For example, if you have 10 test cases created on day 1 you will see 10 test cas
 
 
 ### Incident Progress Rate Graph
-
 The incident progress rate chart displays the total number of incidents created and closed over a particular date-range, either for all incident types or for a specific incident type:
 
 ![](img/Reports_Center_383.png)
@@ -485,7 +419,6 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Cumulative Incident Count Graph
-
 The cumulative incident count chart displays the cumulative total number of incidents logged in the system for the current product over a particular date-range, either for all incident types or for a specific incident type. The report displays two data series, one illustrating the total count of all incidents, the other the total count of all *open incidents* (i.e. with status not set to fixed or closed):
 
 ![](img/Reports_Center_384.png)
@@ -496,7 +429,6 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Open Incident Count Graph
-
 The open incident count chart displays the net number of open incidents in the system for the current product over a particular date-range categorized by incident priority, either for all incident types or for a specific incident type. For this chart, "open" is defined as any incident with an empty "Closed On" date. The incident status is not used for this chart.
 
 ![](img/Reports_Center_385.png)
@@ -507,7 +439,6 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ### Incident Count by Status Graph
-
 The incident status count chart displays the number of open incidents in the system for the current product over a particular date-range categorized by incident status, either for all incident types or for a specific incident type. For this chart, "open" is defined as any incident with an empty "Closed On" date. The incident status is not used for this chart.
 
 ![](img/Reports_Center_386.png)
@@ -518,8 +449,7 @@ Clicking on the "***Display Data Grid***" button will display the underlying dat
 
 
 ## Custom Graphs
-
-These are the graphs that a SpiraPlan administrator has created in the Administration section of the system and published for use by end users. They rely on specific ESQL data queries, so the data represented will depend on the query created by the administrator.
+These are the graphs that a Spira administrator has created in the Administration section of the system and published for use by end users. They rely on specific ESQL data queries, so the data represented will depend on the query created by the administrator.
 
 To add a custom graph to your reports dashboard, click on the **Add Items** icon and click on the "Custom Graphs" button to show available custom graphs:
 
@@ -543,17 +473,15 @@ Some browsers also support the ability to save the graph as an image file (JPEG,
 
 
 ## Risk Reports
-
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 ### Risk Summary Report
-
 This report displays all of the risks tracked for the current project. The risks are displayed, along with a tabular list of mitigations, tasks, comments, attached documents, and change history:
 
 ![](img/Reports_Center_392.png)
 
 
 ### Risk Detailed Report
-
 This report displays all of the risks tracked for the current project. The risks are displayed in a summary table form:
 
 ![](img/Reports_Center_393.png)

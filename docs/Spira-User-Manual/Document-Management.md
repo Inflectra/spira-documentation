@@ -1,6 +1,7 @@
 # Document Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
-This section outlines the document management features of SpiraPlan® that can be used to upload, manage, edit, and share documents between product members. This module includes support for:
+This section outlines the document management features of Spira that can be used to upload, manage, edit, and share documents between product members. This module includes support for:
 
 - uploading files and URLs
 - creating certain document types (eg text files) from within the app
@@ -13,9 +14,7 @@ This section outlines the document management features of SpiraPlan® that can b
 
 Document management is fully integrated into the rest of the system: you can attach documents to other artifacts (e.g. requirements, test cases, etc.) and any ones you add on an artifact (including screenshots) are automatically connected to the product documentation repository.
 
-
 ## Document List
-
 When you choose the Documents artifact from the global navigation bar, you open the product documents list screen illustrated below:
 
 ![](img/Document_Management_319.png)
@@ -67,7 +66,7 @@ Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't 
     The maximum allowed file size for any attachment in Spira is 2gb. You will not be able to upload or store any file larger than this.
 
 #### Add New Inline Documents
-The `Add New` dropdown has options for creating several files that are not uploaded at all. Instead you choose a file name (and enter description and tag and type information), then when you click "Add" you are taken straight to the blank document, so you can start editing it live inside SpiraPlan itself from the [document details](#edit) page.
+The `Add New` dropdown has options for creating several files that are not uploaded at all. Instead you choose a file name (and enter description and tag and type information), then when you click "Add" you are taken straight to the blank document, so you can start editing it live inside Spira itself from the [document details](#edit) page.
 
 - **Markdown**: for creating a new markdown file
 - **Rich Text**: for creating a new rich text document file
@@ -128,7 +127,6 @@ From the tools button sub menu, if you click the "Add association" button you wi
 **Note**: if you enter an invalid token or a token to an artifact in a different product, or that is not supported, you will see an error message. You can see the full list of supported artifacts in the box called "What can you associate to what?" [here](Application-Wide.md/#associations). In addition, you can associate documents to a specific document - in this case the document will show on the attachments tab of the document(s), not the association tab.
 
 ## Document Details
-
 When you click on an item in the document list described above, you are taken to the document details page illustrated below:
 
 ![](img/Document_Management_324.png)
@@ -147,17 +145,14 @@ The navigation pane consists of a link that will take you back to the product do
 
 
 ### Emailing
-
 Read about [emailing a document to colleagues using Spira](Application-Wide.md#emailing).
 
 
 ### Followers
-
 Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
 
 
 ### Workflows
-
 Read about [using workflows to change the status of your document](Application-Wide.md#workflows).
 
 For documents, you can, depending on how the product administrator has set this up, use workflows to control who can add a new version to a document when. This can be useful for "checking-out" a document, during which time it is locked. When the document is checked back in the workflow can require that the person checking in the document upload a new version (make sure you upload the version before changing the status).
@@ -178,7 +173,6 @@ When viewing diagrams, mindmaps, or orgcharts there is a button above the diagra
 
 
 ### Edit
-
 When you [create a new inline document](#add-new-inline-documents) the document opens to this tab, showing you the blank document. Make your changes by either:
 
 - editing the text (for text documents)
@@ -196,7 +190,7 @@ The Edit tab will show the text, but it is not fully formatted. Go to the [view]
 ![](img/Document_Management_edit-view.png)
 
 #### Editing Diagrams
-SpiraPlan supports three types of diagrams:
+Spira supports three types of diagrams:
 
 - **Diagrams**: the most versatile diagram type that let's you fully customize the diagram. You can add many different shapes, control whether or how each shape is linked to others with connectors, and fully control the layout
 - **Mindmaps**: mindmaps let you add pill-shaped nodes to a core idea, and easily branch off any node to add new ideas. Groups of nodes can be collapsed  (click the plus icon on a node with children) to help you concentrate on only some nodes at a time
@@ -246,7 +240,7 @@ When editing a diagram type you can also select a specific connector and edit it
 - Rounded corners (for angled path connectors)
 
 #### Editing Spreadsheets
-The SpiraPlan spreadsheet is a feature rich spreadsheet application that supports many common spreadsheet features. It is intuitive and easy to use, and should feel immediately familiar. It can work as a full spreadsheet replacement for a wide variety of use cases, with the benefit of all the data and versioning living directly inside Spira. Please note that the spreadsheet is not as powerful as desktop or dedicated web apps and will not be the best solution for handling things like very large data sets, or complex models.
+The Spira spreadsheet is a feature rich spreadsheet application that supports many common spreadsheet features. It is intuitive and easy to use, and should feel immediately familiar. It can work as a full spreadsheet replacement for a wide variety of use cases, with the benefit of all the data and versioning living directly inside Spira. Please note that the spreadsheet is not as powerful as desktop or dedicated web apps and will not be the best solution for handling things like very large data sets, or complex models.
 
 **Spreadsheet features**:
 

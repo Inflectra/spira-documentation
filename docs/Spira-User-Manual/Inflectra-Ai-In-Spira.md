@@ -137,7 +137,9 @@ When generating content for a test case, the following information is provided t
 - The product name of the product the test case is in
 
 ### Task details page
-From the task details page (SpiraTeam and SpiraPlan only) you can generate the following content: 
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+From the task details page you can generate the following content: 
 
 ![](img/Inflectra_ai_task_details.png)
 
@@ -158,7 +160,9 @@ From the task details page (SpiraTeam and SpiraPlan only) you can generate the f
 
 
 ### Risks details page
-From the risk details page (SpiraTeam and SpiraPlan only) you can generate the following content:
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+From the risk details page you can generate the following content:
 
 ![](img/Inflectra_ai_risk_details.png)
 

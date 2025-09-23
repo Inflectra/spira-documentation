@@ -82,7 +82,7 @@ The artifacts will be exported from the current product to the destination produ
 
 !!! info "Notes" 
     - when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
-    - If an artifact's screenshots are not updated this means that the the embedded images are still a part of the source product (while the attachments themselves are exported together with artifact). To resolve thism either:
+    - If an artifact's screenshots are not updated this means that the the embedded images are still a part of the source product (while the attachments themselves are exported together with artifact). To resolve this either:
 
     - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
     - Re-attach the images so these can be copied over to the destination product and become a part of it
@@ -370,15 +370,15 @@ You can add a comment that explains the rationale for the association and choose
 
     | Association Tab Of             | Available artifacts                                                                                             |
     | ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-    | **Documents**                  | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Incidents**                  | Requirements, Test Steps, Tasks, Incidents, Risks                                                               |
+    | **Documents**                  | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
+    | **Incidents**                  | Requirements, Test Steps, Tasks [^STSP], Incidents, Risks [^STSP]                                                              |
     | **Releases**                   | Releases, Requirements                                                                                          |
-    | **Requirements**               | Releases, Requirements, Incidents, Risks                                                                        |
-    | **Risks**                      | Requirements, Incidents, Risks, Test Cases                                                                      |
-    | **Source code commits**        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Source code files**          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks |
-    | **Tasks**                      | Tasks, Incidents                                                                                                |
-    | **Test cases**                 | Tasks [^STSP], Risks [^SP]                                                                                      |
+    | **Requirements**               | Releases, Requirements, Incidents, Risks [^STSP]                                                                       |
+    | **Risks**                      | Requirements, Incidents, Risks [^STSP], Test Cases                                                                      |
+    | **Source code commits**        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
+    | **Source code files**          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
+    | **Tasks**                      | Tasks [^STSP], Incidents                                                                                                |
+    | **Test cases**                 | Tasks [^STSP], Risks [^STSP]                                                                                      |
     | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                      |
     | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                              |
 

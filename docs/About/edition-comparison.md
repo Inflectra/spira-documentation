@@ -33,12 +33,15 @@ Each edition shares the same core design and user experience. They differ by whi
 | Incidents           | Y         | Y         | Y         |
 | Tasks               | N         | Y         | Y         |
 | Risks               | N         | Y         | Y         |
+| Resources           | N         | Y         | Y         |
 
 ## Product Features
 | Feature                    | SpiraTest | SpiraTeam | SpiraPlan |
 | -------------------------- | --------- | --------- | --------- |
-| Requirement mind map       | N         | Y         | Y         |
 | Requirement document view  | N         | Y         | Y         |
+| Requirement mind map       | N         | Y         | Y         |
+| Release Gantt chart        | N         | Y         | Y         |
+| Release mind map           | N         | Y         | Y         |
 | Diagram Tools              | Y         | Y         | Y         |
 | Built-in spreadsheet       | Y         | Y         | Y         |
 | Planning Board             | N         | Y         | Y         |

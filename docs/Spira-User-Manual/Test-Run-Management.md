@@ -1,7 +1,7 @@
 # Test Run Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Test Run List
-
 When you click on the Testing \> Test Runs global navigation link, you will be taken to the test run list screen illustrated below:
 
 ![](img/Test_Case_Management_202.png)
@@ -37,30 +37,24 @@ When you click on any of the individual test runs in the test run list, you are 
 This page consists of three panes:
 
 1.  The left hand navigation pane displays a list of related test runs with a color indicator for their current execution status. The display dropdown will let you choose whether the list contains test runs that are for the same release, test case or test set, or are just a filtered/unfiltered list based on your last search in the main test run list page.
-
 2.  The top right area shows headline information about the test run details of the test run itself
-
 3.  The main pane on the right displays tabs for detailed information about the test run, and its associations. The overview tab is initially loaded and shows the name, description, release, test set, estimated and actual duration, tester name, test run type, automation host fields, along with others, including custom fields. Underneath this is shown the list of test run steps, and any console output from a test automation engine such as Rapise, NUnit, JUnit, QTP, or Selenium.
 
 
 ### Re-running a Test
-
 There is a button on the main test run toolbar called
-'***Re-Test***". If you click this button, SpiraPlan will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers. NOTE: this button will not display if the product does not allow you to execute test cases (instead only letting you execute test sets).
+'***Re-Test***". If you click this button, Spira will launch the test execution wizard for this specific test case, with current release and/or test set already selected for you. This is a handy way of quickly re-running a failed test that has been addressed by the developers. NOTE: this button will not display if the product does not allow you to execute test cases (instead only letting you execute test sets).
 
 
 ### Editing a Test Run
-
 When reviewing the test run, you may find that you need to change the results of the test run (e.g. the user selected the wrong release or custom property value). Many of the fields are editable at a later date, and to make changes, just modify the appropriate fields and click any "***Save***" button.
 
 
 ### Deleting the Test Run
-
 If you need to delete a test run that was erroneously captured, all you need to do is click on the link to access the invalid test run and then click the "***Delete***" button to remove it from the system. This will then force the system to update the status of the test case itself from the other logged test runs.
 
 
 ### Test Run Steps
-
 In the case of a manual test run, this section displays all the steps of the test case *as they appeared during the test run in question.* This means that if the test steps were changed after running the test, the list here will reflect the original information.
 
 ![](img/Test_Case_Management_204.png)
@@ -76,27 +70,20 @@ If you have create permissions for test runs you will be able to click the small
 ![](img/Test_Case_Management_238.png)
 
 ### Console Output
-
 In the case of an automated test run, this tab will display the details of the test run as reported from the test runner application. These details will vary depending on the type of automated tool being used, but typically they include the name of the automated test runner, the number of assertions raised, the name of the corresponding test case in the tool, the status of the test run and a detailed error message, and the stack-trace in the case of a failure. An example test run as reported from the NUnit automated test runner is illustrated below:
 
 ![](img/Test_Case_Management_206.png)
 
-Details on how to use SpiraPlan® in conjunction with an automated testing tool are provided in the *SpiraPlan® Automated Testing Integration Guide,* which can be downloaded from the Inflectra<sup>®</sup>
+Details on how to use Spira in conjunction with an automated testing tool are provided in the *Spira Automated Testing Integration Guide,* which can be downloaded from the Inflectra<sup>®</sup>
 website.
 
-
 ### Attachments
-
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
-
 ### History
-
 Read about [how the history tab works](Application-Wide.md#history)
 
-
 ### Incidents
-
 This tab displays the list of incidents associated with the current test run. The incidents have either been linked during test execution or can be linked to a test run step from the Overview tab of the test run details page.
 
 ![](img/Test_Case_Management_208.png)
@@ -106,11 +93,12 @@ Each incident is listed together with (by default) the type, status, priority, n
 - Customize the fields shown using the **Show/Hide Columns** dropdown
 - **Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time
 - **Remove**: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and any relevant test run steps of the test run. Note: this feature is currently only available if baselining is disabled for the product.
-- **Filter** the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
+- **Filter** the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or click the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 - **Edit**: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.
 
 ### Tasks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-This tab is only visible to users of SpiraPlan or SpiraTeam. It shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.
+This tab shows the list of tasks associated with the current test run. Tasks can only be added to a test run created from an exploratory test case. These tasks will have been logged during the execution of the test.
 
 ![](img/Test_Case_Management_209.png)

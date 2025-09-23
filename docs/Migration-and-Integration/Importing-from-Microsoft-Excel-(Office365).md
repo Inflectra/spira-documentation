@@ -250,7 +250,7 @@ Following is an example of how to add Test Cases and Test Steps to Spira:
 **Remaining Effort**: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
 
 ### Tasks
-!!! abstract "Available in SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This artifact does not have any special factors to take into account.
 
@@ -258,7 +258,7 @@ This artifact does not have any special factors to take into account.
 This artifact does not have any special factors to take into account.
 
 ### Risks
-!!! abstract "Available in SpiraTeam, SpiraPlan"
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This artifact does not have any special factors to take into account.
 
