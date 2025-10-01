@@ -1,4 +1,9 @@
 # Release Notes for Inflectra.ai
+## October 3 2025
+!!! bug "Bug fixes and enhancements"
+    - Make previous chat interactions appear grayed out compared to the current one [RQ:5412]
+    - **SpiraTest ONLY**: Remove 'Create Task' follow-up button for EARS Analysis because Tasks require SpiraTeam or SpiraPlan [IN:11581]
+
 ## September 19 2025
 !!! bug "Bug fixes and enhancements"
     - Prepare Inflectra.ai for upcoming integration with Rapise 8.6

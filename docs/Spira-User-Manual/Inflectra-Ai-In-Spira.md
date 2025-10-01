@@ -42,7 +42,7 @@ Any new artifact created by Inflectra.ai will have the tag "ai-generated" added 
 Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" added to it automatically.
 
 ### Chat history
-Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. Previous messages are greyed out compared to the current interaction.
+Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. Previous messages are grayed out compared to the current interaction.
 
 ### Loading Indicator
 When Inflectra.ai is performing a task, it will show a progress bar for the artifact currently being processed. Above the progress bar is summary information about what actions are being performed, like how many artifacts, of what type, are being created. On list pages, this summary information also shows how many artifacts are being worked on and how many are finished. 
