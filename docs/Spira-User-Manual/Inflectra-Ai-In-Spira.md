@@ -92,7 +92,7 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
 | EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                  |
 | ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                |
 | ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                          |
-| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement<br>Only available in SpiraTeam and SpiraPlan |
+| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement (SpiraTeam and SpiraPlan only)|
 
 #### EARS Analysis
 !!! info "EARS"
