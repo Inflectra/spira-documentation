@@ -111,6 +111,11 @@
   content: "SpiraTeam / SpiraPlan";
 }
 
+/* --- Case 4: SpiraTest ONLY --- */
+.edition-spiratest:not(.edition-spirateam)::after {
+  content: "SpiraTest";
+}
+
 /* --- Inflectra.ai --- */
 .feature-inflectraai::after {
   content: "Inflectra.ai";
