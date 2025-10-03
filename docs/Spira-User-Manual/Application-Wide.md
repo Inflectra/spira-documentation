@@ -68,15 +68,15 @@ Spira provides a shortcut -- called the *context menu* - for accessing some of t
 
 You can export the following artifacts from the current product to any other product that you have access to:
 
-| Artifact     | Export from List Page | Export from Details Page | Updates screenshots |Export Discussions|
-| ------------ | --------------------- | ------------------------ | ------------------- |---------------|
-| Incidents    | Y                     | N                        | Y                   |Y              |
-| Releases     | Y                     | N                        | N                   |N              |
-| Requirements | Y                     | N                        | Y                   |N              |
-| Risks        | Y                     | N                        | Y                   |Y              |
-| Tasks        | Y                     | N                        | Y                   |N              |
-| Test cases   | Y                     | N                        | Y                   |N              |
-| Test sets    | N                     | Y                        | Y                   |Y              |
+| Artifact     | Export from List Page | Export from Details Page | Updates screenshots | Export Discussions |
+| ------------ | --------------------- | ------------------------ | ------------------- | ------------------ |
+| Incidents    | Y                     | N                        | Y                   | Y                  |
+| Releases     | Y                     | N                        | N                   | N                  |
+| Requirements | Y                     | N                        | Y                   | N                  |
+| Risks        | Y                     | N                        | Y                   | Y                  |
+| Tasks        | Y                     | N                        | Y                   | N                  |
+| Test cases   | Y                     | N                        | Y                   | N                  |
+| Test sets    | N                     | Y                        | Y                   | Y                  |
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
