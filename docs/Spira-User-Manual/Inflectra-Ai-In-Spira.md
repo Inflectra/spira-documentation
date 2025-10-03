@@ -42,7 +42,7 @@ Any new artifact created by Inflectra.ai will have the tag "ai-generated" added 
 Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" added to it automatically.
 
 ### Chat history
-Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. 
+Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. Previous messages are grayed out compared to the current interaction.
 
 ### Loading Indicator
 When Inflectra.ai is performing a task, it will show a progress bar for the artifact currently being processed. Above the progress bar is summary information about what actions are being performed, like how many artifacts, of what type, are being created. On list pages, this summary information also shows how many artifacts are being worked on and how many are finished. 
@@ -92,7 +92,7 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
 | EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                  |
 | ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                |
 | ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                          |
-| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement |
+| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement (SpiraTeam and SpiraPlan only)|
 
 #### EARS Analysis
 !!! info "EARS"
