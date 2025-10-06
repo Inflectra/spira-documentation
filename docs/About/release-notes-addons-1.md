@@ -17,6 +17,7 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [IN:11419] Fix a bug that prevents rich text sync when a description is required in Jira
         - [IN:11418] Fix 'Association Already Exists' errors in the Event Log related to the plugin
         - [IN:11411] Adds new Sync Mode createReleasesOnly parameter to prevent Release updates in Jira
+        - [IN:11507] Fixes API calls to Jira after Atlassian removed Issue Search endpoint for Jira Cloud
 
 
 ## July 2025

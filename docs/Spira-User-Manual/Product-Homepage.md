@@ -103,7 +103,14 @@ Clicking the "View All" button at the top of this section will open the "Activit
 ## Shared Searches
 This section lists any filters/searches have been saved from the various artifact list screens throughout the application and marked as **shared filters**. This allows users to store specific combinations of searches that the product team needs to perform on a regular basis (e.g. display all newly logged incidents, display all requirements that are completed but have no test coverage).
 
-The name of the saved search is displayed along with an icon that depicts which artifact it's for and the person who created it. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. If you are the creator of the saved search, clicking the "***Delete***" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of Spira.
+For each shared search all users see:
+
+- The icon for the artifact the search / filter is for
+- The name of the shared search (with a link to open that search on the relevant artifact list page)
+- The owner of the shared search
+- If you are the owner of the shared search or a product admin you will see a "Delete" button, to let you delete the shared search. 
+- If you are a product admin you will see a "Change Owner" button (shown only with an icon). Clicking this button shows a popup to let you change the owner of the shared search. This is particularly helpful if you need to update the search but the original owner is unavailable or has left your organization.
+- An RSS icon that allows you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of Spira.
 
 ## Schedule
 This Gantt chart shows all active releases[^active-release] and sprints in this product. Each bar spans from the item's start date to end date. The darker shaded portion of each bar tells you how complete its requirements are.

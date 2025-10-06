@@ -1,5 +1,29 @@
 # Release Notes for Spira v8
 
+## Version 8.14 (October 2025)
+!!! info "Summary"
+    - Product admins can now reassign a [shared search](../Spira-User-Manual/Product-Homepage.md/#shared-searches) to any product member, to improve how searches can be used and kept up to date.
+    - The system now tracks [additional system admin actions](../Spira-Administration-Guide/System.md/#system-history-changes) to improve auditing: security setting changes, LDAP configuration changes, and email configuration changes.
+
+??? success "New Features"
+    - As a product admin, I can change the ownership of a shared search / shared filter to another user from the [shared search widget on the product home page](../Spira-User-Manual/Product-Homepage.md/#shared-searches), to manage who can update the shared searches [RQ:5433]
+
+??? bug "Bug fixes and enhancements"
+    - Add [history recording](../Spira-Administration-Guide/System.md/#system-history-changes) to all or email, LDAP, security settings pages [IN:10790]
+    - Fix being unable to see requirement's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11376]
+    - Fix being unable to see risk's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11378]
+    - Fix being unable to see task's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11379]
+    - Fix dropdown filter menu for leftmost columns of hierarchical grids being cut off on the requirement and release list pages [IN:11638]
+    - Fix dropdown filter menu for leftmost columns of sorted grids being cut on the associations tab and other similar places [IN:11536]
+    - Fix not being able to see full custom field text of test step during the execution (normal and exploratory) [IN:4245]
+    - Fix the PluginInterfaces distributed code DLL having the wrong copyright year [IN:11541]
+    - Fix updating a test run not creating a history entry when specific standard fields are changed [IN:9194]
+    - Hide products that are not active from specific [program home page widgets](../Spira-User-Manual/Program-Homepage.md) (product details, requirements coverage, test execution status, and incident aging) [IN:9921]
+    - Improve date picker popups so that they do not automatically close when mousing away, instead only when they lose focus (for example, when clicking elsewhere on the page) [IN:11534]
+    - SpiraApps can show [popups with Confirm and Cancel buttons](../Developers/SpiraApps-Manager.md/#notifications) to allow for richer interactive experiences [IN:11288]
+    - [SpiraApp notifications](../Developers/SpiraApps-Manager.md/#notifications) can now include basic text formatting, including line breaks, to improve readability [IN:11204]
+    - Timesheet date selector max date can mix up day and month when the day is single digit (like 4) but the configured culture date format always uses 2 digits (like 04) [IN:11560]
+
 ## Version 8.13 (September 2025)
 ??? success "New Features"
     - Fix [planning board](../Spira-User-Manual/Planning-Board.md) Incident Cards in the same column as Requirement cards not always staying where dragged and dropped [RQ:5403]

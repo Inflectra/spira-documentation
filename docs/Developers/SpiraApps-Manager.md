@@ -215,7 +215,7 @@ The **executeAwsBedrockRuntime** function call makes a REST API call to the AWS 
     ```
 
 ## Notifications
-SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message
+SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message. The text provided can either be plain text or basic HTML. Be careful not to overwhelm users by displaying too much information here.
 
 === "Available Actions"
     ??? note "**displayErrorMessage(message: string)**" 
@@ -224,6 +224,8 @@ SpiraApps can show and hide messages to the user to provide them with informatio
         Shows a success message to the user
     ??? note "**displayWarningMessage(message: string)**" 
         Shows a warning message to the user
+    ??? note "**displayConfirmation(message: string, onConfirm: function)**"
+        Shows a message to the user with options to cancel or confirm. If they confirm the function passed in is executed.
     ??? note "**hideMessage()**" 
         Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. 
 
@@ -235,6 +237,8 @@ SpiraApps can show and hide messages to the user to provide them with informatio
     spiraAppManager.displaySuccessMessage("The operation completed successfully!");
     
     spiraAppManager.displayWarningMessage("The operation completed but please note the following warning: " + warningMessage);
+
+    spiraAppManager.displayConfirmation("Do you want to continue with this operation?", continueOperationFunction);
     
     spiraAppManager.hideMessage();
     ```
