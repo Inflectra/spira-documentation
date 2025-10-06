@@ -9657,7 +9657,7 @@
 </div>
 </div>
 <h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
-<p>SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message</p>
+<p>SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message. The text provided can either be plain text or basic HTML. Be careful not to overwhelm users by displaying too much information here.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="available-actions" name="__tabbed_6" type="radio" /><input id="examples_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="available-actions">Available Actions</label><label for="examples_1">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -9674,6 +9674,10 @@
 <p>Shows a warning message to the user</p>
 </details>
 <details class="note">
+<summary><strong>displayConfirmation(message: string, onConfirm: function)</strong></summary>
+<p>Shows a message to the user with options to cancel or confirm. If they confirm the function passed in is executed.</p>
+</details>
+<details class="note">
 <summary><strong>hideMessage()</strong></summary>
 <p>Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. </p>
 </details>
@@ -9684,6 +9688,8 @@
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displaySuccessMessage</span><span class="p">(</span><span class="s2">&quot;The operation completed successfully!&quot;</span><span class="p">);</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayWarningMessage</span><span class="p">(</span><span class="s2">&quot;The operation completed but please note the following warning: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">warningMessage</span><span class="p">);</span>
+
+<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayConfirmation</span><span class="p">(</span><span class="s2">&quot;Do you want to continue with this operation?&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">continueOperationFunction</span><span class="p">);</span>
 
 <span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">hideMessage</span><span class="p">();</span>
 </code></pre></div>

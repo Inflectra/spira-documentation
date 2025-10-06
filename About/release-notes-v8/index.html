@@ -8618,6 +8618,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-814-october-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.14 (October 2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-813-september-2025" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9170,6 +9181,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#version-814-october-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 8.14 (October 2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-813-september-2025" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9363,6 +9385,39 @@
 
 
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">&para;</a></h1>
+<h2 id="version-814-october-2025">Version 8.14 (October 2025)<a class="headerlink" href="#version-814-october-2025" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>Product admins can now reassign a <a href="../../Spira-User-Manual/Product-Homepage/#shared-searches">shared search</a> to any product member, to improve how searches can be used and kept up to date.</li>
+<li>The system now tracks <a href="../../Spira-Administration-Guide/System/#system-history-changes">additional system admin actions</a> to improve auditing: security setting changes, LDAP configuration changes, and email configuration changes.</li>
+</ul>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>As a product admin, I can change the ownership of a shared search / shared filter to another user from the <a href="../../Spira-User-Manual/Product-Homepage/#shared-searches">shared search widget on the product home page</a>, to manage who can update the shared searches [RQ:5433]</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add <a href="../../Spira-Administration-Guide/System/#system-history-changes">history recording</a> to all or email, LDAP, security settings pages [IN:10790]</li>
+<li>Fix being unable to see requirement's embedded images when <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">exported to another product</a>, if the user is not a member of the source product [IN:11376]</li>
+<li>Fix being unable to see risk's embedded images when <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">exported to another product</a>, if the user is not a member of the source product [IN:11378]</li>
+<li>Fix being unable to see task's embedded images when <a href="../../Spira-User-Manual/Application-Wide/#export-to-another-product">exported to another product</a>, if the user is not a member of the source product [IN:11379]</li>
+<li>Fix dropdown filter menu for leftmost columns of hierarchical grids being cut off on the requirement and release list pages [IN:11638]</li>
+<li>Fix dropdown filter menu for leftmost columns of sorted grids being cut on the associations tab and other similar places [IN:11536]</li>
+<li>Fix not being able to see full custom field text of test step during the execution (normal and exploratory) [IN:4245]</li>
+<li>Fix the PluginInterfaces distributed code DLL having the wrong copyright year [IN:11541]</li>
+<li>Fix updating a test run not creating a history entry when specific standard fields are changed [IN:9194]</li>
+<li>Hide products that are not active from specific <a href="../../Spira-User-Manual/Program-Homepage/">program home page widgets</a> (product details, requirements coverage, test execution status, and incident aging) [IN:9921]</li>
+<li>Improve date picker popups so that they do not automatically close when mousing away, instead only when they lose focus (for example, when clicking elsewhere on the page) [IN:11534]</li>
+<li>SpiraApps can show <a href="../../Developers/SpiraApps-Manager/#notifications">popups with Confirm and Cancel buttons</a> to allow for richer interactive experiences [IN:11288]</li>
+<li><a href="../../Developers/SpiraApps-Manager/#notifications">SpiraApp notifications</a> can now include basic text formatting, including line breaks, to improve readability [IN:11204]</li>
+<li>Timesheet date selector max date can mix up day and month when the day is single digit (like 4) but the configured culture date format always uses 2 digits (like 04) [IN:11560]</li>
+</ul>
+</details>
 <h2 id="version-813-september-2025">Version 8.13 (September 2025)<a class="headerlink" href="#version-813-september-2025" title="Permanent link">&para;</a></h2>
 <details class="success">
 <summary>New Features</summary>
