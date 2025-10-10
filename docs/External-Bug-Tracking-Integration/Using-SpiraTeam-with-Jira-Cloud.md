@@ -602,3 +602,46 @@ You are now able to perform test coverage and incident reporting inside Spira us
 The Jira Cloud Connector is now "[Spira QA Coverage](./Jira-Spira-QA-Coverage.md)".
 
 This app is available for Jira Cloud on the [Jira Marketplace](https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&tab=overview)
+
+
+## Troubleshooting
+
+### Data Synchronization Problems
+
+??? question "Status synchronization issues"
+    **Symptoms**: Status changes don't sync or cause errors
+    
+    **Solutions**:
+    
+    - Verify status mappings between Spira and Jira. If using Auto-Map, make sure the status names match
+    - Ensure Jira workflow allows the status transitions being attempted
+    - Try disabling the product template 'Status Bulk Edit' as explained [here](https://www.inflectra.com/Support/KnowledgeBase/KB886.aspx)
+    - Review field requirements for each status in both systems
+    - Consider simplifying workflows during initial testing
+
+### Troubleshooting Best Practices
+
+!!! tip "General Troubleshooting Steps"
+    
+    1. **Check Spira's Event Log first** - Most issues are logged with detailed error messages
+    2. **Test with minimal configuration** - Start with basic field mappings and add complexity gradually
+    3. **Verify permissions** - Ensure users have appropriate access in both systems
+    4. **Use test data** - Create test incidents/issues to verify sync behavior
+
+!!! warning "When to Contact Support"
+    
+    Contact [Inflectra Support](mailto:support@inflectra.com) if you encounter:
+    
+    - Persistent authentication errors after verifying credentials
+    - Data corruption or loss during synchronization
+    - Performance issues that don't improve with configuration changes
+    - Error messages that aren't covered in this troubleshooting guide
+    
+    **Please include in your support request**:
+
+    - Full error messages from the Event Log
+    - Your sync service details: cloud-hosted or on-premise (Windows service or desktop app)
+    - Your Spira environment: instance URL, hosting type (cloud or on-premise), and version number
+    - Screenshots of your configuration settings
+    - Description of what you were trying to accomplish
+    - Steps to reproduce the issue

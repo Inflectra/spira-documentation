@@ -1,6 +1,12 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features. 
 
+## October 2025
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.2.2.0:
+
+    - Bug Fixes:
+        - [IN:11692] Fix single digit and multi digit statuses potentially getting mismatched during syncing, not correctly following the correct status mapping
+
 ## September 2025
 - [Versioning SpiraApp](../SpiraApps/Versioning.md) released at v1.0
 
