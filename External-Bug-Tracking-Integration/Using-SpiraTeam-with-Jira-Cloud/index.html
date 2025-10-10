@@ -5280,6 +5280,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-synchronization-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Synchronization Problems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6444,6 +6483,45 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-synchronization-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Synchronization Problems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -9741,6 +9819,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-synchronization-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Synchronization Problems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -10396,6 +10513,49 @@ Please note that Jira has limited capabilities for exporting and importing text 
 <h2 id="using-the-jira-cloud-connector">Using the Jira Cloud Connector<a class="headerlink" href="#using-the-jira-cloud-connector" title="Permanent link">&para;</a></h2>
 <p>The Jira Cloud Connector is now "<a href="../Jira-Spira-QA-Coverage/">Spira QA Coverage</a>".</p>
 <p>This app is available for Jira Cloud on the <a href="https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&amp;tab=overview">Jira Marketplace</a></p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="data-synchronization-problems">Data Synchronization Problems<a class="headerlink" href="#data-synchronization-problems" title="Permanent link">&para;</a></h3>
+<details class="question">
+<summary>Status synchronization issues</summary>
+<p><strong>Symptoms</strong>: Status changes don't sync or cause errors</p>
+<p><strong>Solutions</strong>:</p>
+<ul>
+<li>Verify status mappings between Spira and Jira. If using Auto-Map, make sure the status names match</li>
+<li>Ensure Jira workflow allows the status transitions being attempted</li>
+<li>Try disabling the product template 'Status Bulk Edit' as explained <a href="https://www.inflectra.com/Support/KnowledgeBase/KB886.aspx">here</a></li>
+<li>Review field requirements for each status in both systems</li>
+<li>Consider simplifying workflows during initial testing</li>
+</ul>
+</details>
+<h3 id="troubleshooting-best-practices">Troubleshooting Best Practices<a class="headerlink" href="#troubleshooting-best-practices" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">General Troubleshooting Steps</p>
+<ol>
+<li><strong>Check Spira's Event Log first</strong> - Most issues are logged with detailed error messages</li>
+<li><strong>Test with minimal configuration</strong> - Start with basic field mappings and add complexity gradually</li>
+<li><strong>Verify permissions</strong> - Ensure users have appropriate access in both systems</li>
+<li><strong>Use test data</strong> - Create test incidents/issues to verify sync behavior</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">When to Contact Support</p>
+<p>Contact <a href="mailto:support@inflectra.com">Inflectra Support</a> if you encounter:</p>
+<ul>
+<li>Persistent authentication errors after verifying credentials</li>
+<li>Data corruption or loss during synchronization</li>
+<li>Performance issues that don't improve with configuration changes</li>
+<li>Error messages that aren't covered in this troubleshooting guide</li>
+</ul>
+<p><strong>Please include in your support request</strong>:</p>
+<ul>
+<li>Full error messages from the Event Log</li>
+<li>Your sync service details: cloud-hosted or on-premise (Windows service or desktop app)</li>
+<li>Your Spira environment: instance URL, hosting type (cloud or on-premise), and version number</li>
+<li>Screenshots of your configuration settings</li>
+<li>Description of what you were trying to accomplish</li>
+<li>Steps to reproduce the issue</li>
+</ul>
+</div>
 
 
 
