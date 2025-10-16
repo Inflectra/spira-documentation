@@ -1,5 +1,18 @@
 # Release Notes for Spira v8
 
+## Version 8.15 (November 2025)
+!!! info "Summary"
+    - Administrators can set the default views for new users for the My Page and product home pages
+
+??? success "New Features"
+    - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - Development, so that everyone using the default view sees the same layout and widgets [RQ:5456]
+    - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - General, so that everyone using the default view sees the same layout and widgets [RQ:5454]
+    - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - Testing, so that everyone using the default view sees the same layout and widgets [RQ:5455]
+    - As a product admin, [I can edit the default view for the Reporting Home Page](../Spira-User-Manual/Reports-Center.md/#customizing-the-reporting-page-for-all-users), so that everyone using the default view sees the same layout and widgets [RQ:5457]
+    - As a system admin, I can edit the default view for the My Page, so that everyone using the default view sees the same layout and widgets [RQ:5453]
+
+??? bug "Bug fixes and enhancements"
+
 ## Version 8.14 (October 2025)
 !!! info "Summary"
     - Product admins can now reassign a [shared search](../Spira-User-Manual/Product-Homepage.md/#shared-searches) to any product member, to improve how searches can be used and kept up to date.
