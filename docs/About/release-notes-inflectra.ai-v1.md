@@ -1,6 +1,6 @@
 # Release Notes for Inflectra.ai
 
-## October 16 2025
+## October 17 2025
 !!! success "New Features"
     - **[Release analysis](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**
         - As an Inflecta.ai and release user, I can open the Inflectra.ai side panel on the release details page [RQ:5429]
