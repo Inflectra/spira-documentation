@@ -136,6 +136,20 @@ When generating content for a test case, the following information is provided t
 
 - The product name of the product the test case is in
 
+### Releases details page
+
+![](img/Inflectra_ai_release_details.png)
+
+#### Release Analysis
+From the release details page you can analyze the release to bring its different parts together into a text summary.
+This allows you to get a birds-eye view of a release. 
+
+| Analysis Type | Description                                                                     | 
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requirements | Describes the requirements that are associated to this specific release, to give an overview of what is planned, in progress, and delivered. |
+| ... Create Attachment | Create a new document with this analysis and attach it to the release |
+| ... Add comment | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)|
+
 ### Task details page
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

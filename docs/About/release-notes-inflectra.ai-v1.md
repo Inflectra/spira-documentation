@@ -1,4 +1,12 @@
 # Release Notes for Inflectra.ai
+
+## October 16 2025
+!!! success "New Features"
+    - **[Release analysis](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**
+        - As an Inflecta.ai and release user, I can open the Inflectra.ai side panel on the release details page [RQ:5429]
+        - As an Inflectra.ai and release user, I can summarize the requirements in a release, to gain a better understanding of its content and progress [RQ:5428]
+        - As an Inflectra.ai and release user, I can log the analysis of my release's requirements, to gain a better understanding of its content and progress [RQ:5451]
+
 ## October 3 2025
 !!! bug "Bug fixes and enhancements"
     - Make previous chat interactions appear grayed out compared to the current one [RQ:5412]
