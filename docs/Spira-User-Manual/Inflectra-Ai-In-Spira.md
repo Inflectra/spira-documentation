@@ -87,12 +87,12 @@ From the requirement details page you can analyze the requirement to see how wel
 The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.
 
 
-| Analytical framework | Description                                                                                                                                                                        |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                  |
-| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                |
-| ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                          |
-| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement (SpiraTeam and SpiraPlan only)|
+| Analytical framework | Description                                                                                                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                                                   |
+| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                                                 |
+| ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                                                           |
+| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement (SpiraTeam and SpiraPlan only) |
 
 #### EARS Analysis
 !!! info "EARS"
@@ -144,11 +144,11 @@ When generating content for a test case, the following information is provided t
 From the release details page you can analyze the release to bring its different parts together into a text summary.
 This allows you to get a birds-eye view of a release. 
 
-| Analysis Type | Description                                                                     | 
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Requirements | Describes the requirements that are associated to this specific release, to give an overview of what is planned, in progress, and delivered. |
-| ... Create Attachment | Create a new document with this analysis and attach it to the release |
-| ... Add comment | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)|
+| Analysis Type         | Description                                                                                                                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Requirements          | Describes the requirements that are associated to this specific release, to give an overview of what is planned, in progress, and delivered. |
+| ... Create Attachment | Create a new document with this analysis and attach it to the release                                                                        |
+| ... Add comment       | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)                                |
 
 ### Task details page
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
@@ -157,10 +157,10 @@ From the task details page you can generate the following content:
 
 ![](img/Inflectra_ai_task_details.png)
 
-| Generated Content                   | Description                                                                                                                                                                                                                                                                              |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Document (code file)                | Generates a code snippet in the specified programming language, to allow the user to get a head start on development or get pointed in the right direction in terms of applicable APIs                                                                                                   |
-| Document (unit test and code files) | From a given test framework, generates a unit test file and an associated code snippet that can be used to cover that code snippet. Programming language is determined by the testing framework provided, however you can specify that if the testing framework spans multiple languages |
+| Generated Content                   | Description                                                                                                                              |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Document (code file)                | Generates a code snippet in the specified programming language to kickstart development work APIs                                        |
+| Document (unit test and code files) | Generates unit test coverage in the specified framework and code in the language right for that framework (or optionally of your choice) |
 
 !!! tip "Generating code"
     When generating code, you are prompted to pick a programming language or a testing framework.
