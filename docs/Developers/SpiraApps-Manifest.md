@@ -121,7 +121,7 @@ A SpiraApp can also have product level settings. These settings are unique per p
 
 - storing settings used by Product Home Page or Reporting SpiraApp widgets
 - storing settings used on any product artifact page by the SpiraApp
-- storing any secure securely (not currently used)
+- storing any string securely (not currently used)
 
 Only non-secure settings are available to SpiraApps client side.
 
