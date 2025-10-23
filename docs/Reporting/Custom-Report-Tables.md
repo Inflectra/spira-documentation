@@ -762,6 +762,7 @@ Retrieves data about cross product associations
 | END_DATE                    |
 | PERCENT_COMPLETE            |
 | REQUIREMENT_COUNT           |
+| INFLECTRA_AI_ENALBED        |
 | CUST_01...                  |
 | CUST_30                     |
 
