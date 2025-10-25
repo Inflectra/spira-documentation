@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Welcome to the SpiraPlan User Manual
 
 !!! info "How to use this manual"

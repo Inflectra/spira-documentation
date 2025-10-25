@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Requirements
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

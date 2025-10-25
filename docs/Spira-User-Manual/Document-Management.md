@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Document Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

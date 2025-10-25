@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # User/Product Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Pull Requests
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Resource Tracking
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

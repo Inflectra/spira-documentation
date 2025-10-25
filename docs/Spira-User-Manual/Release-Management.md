@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Release Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

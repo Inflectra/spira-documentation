@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 #  Appendix 1: Keyboard Shortcuts
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

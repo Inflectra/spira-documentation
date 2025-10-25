@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # System Custom Properties
 !!! abstract "Available in SpiraPlan only"
 

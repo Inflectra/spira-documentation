@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Automation Host Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

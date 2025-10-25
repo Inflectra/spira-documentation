@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # System: Integration
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

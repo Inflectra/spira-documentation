@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Incidents
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Installing Spira
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

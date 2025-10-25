@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Risks
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

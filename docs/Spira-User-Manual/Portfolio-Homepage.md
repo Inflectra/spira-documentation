@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Portfolio Homepage
 !!! abstract "Available in SpiraPlan only"
 

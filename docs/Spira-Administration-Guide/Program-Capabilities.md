@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Program Capabilities
 !!! abstract "Available in SpiraPlan only"
 
