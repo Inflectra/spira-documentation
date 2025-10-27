@@ -148,11 +148,11 @@ When generating content for a test case, the following information is provided t
 From the release details page you can analyze the release to bring its different parts together into a text summary.
 This allows you to get a birds-eye view of a release. 
 
-| Analysis Type         | Description                                                                                                                                  |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Progress          | Analyzes the progress of requirements that are associated to this specific release, giving a summary of overall status, risks, and requirement content. |
-| ... Create Attachment | Create a new document with this analysis and attach it to the release                                                                        |
-| ... Add comment       | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)                                |
+| Analysis Type         | Description                                                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Progress              | Analyzes the progress of requirements that are associated to this specific release, giving a summary of overall status, risks, and requirement content. |
+| ... Create Attachment | Create a new document with this analysis and attach it to the release                                                                                   |
+| ... Add comment       | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)                                           |
 
 ### Task details page
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
