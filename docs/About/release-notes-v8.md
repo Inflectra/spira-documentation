@@ -4,7 +4,7 @@
 !!! info "Summary"
     Administrators can set the default views for new users for the My Page, product home pages, and the product reporting page.
 
-    Developers can now access new REST API documentation for V7 of our API using the OpenAPI standard. 
+    Developers can now access new REST API documentation for V7 of our API using the OpenAPI standard, to improve using our documentation and making integration with other services easier. 
 
 ??? success "New Features"
     - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - Development, so that everyone using the default view sees the same layout and widgets [RQ:5456]
@@ -14,6 +14,16 @@
     - As a system admin, I can edit the default view for the My Page, so that everyone using the default view sees the same layout and widgets [RQ:5453]
 
 ??? bug "Bug fixes and enhancements"
+    - Add ability to get information about Inflectra.ai feature is active or not for a product in custom report view [R_Projects](../Reporting/Custom-Report-Tables.md/#projects-products) [IN:11559]
+    - Add the ability to view REST API documentation in the OpenAPI v3.0 specification [IN:11676]
+    - Create a system history event when a system admin unlocks a locked out user [IN:11752]
+    - Fix showing a system error when attempting to filter the program list [IN:7569]
+        {: .edition-spiratest .edition-spirateam}
+    - Fix [exporting a test set to another product](../Spira-User-Manual/Test-Set-Management.md/#exporting-a-test-set-to-a-different-product) so that it also exports tags for both the test set and its test cases [IN:11449]
+    - Improve instructions on the [electronic signature popup](../Spira-User-Manual/Application-Wide.md/#electronic-signatures) to make it clear users can input either their password or RSS token [IN:11121
+    - Improve responsiveness for cloud trial users of SpiraTest by ensuring the server app-pool is kept alive [IN:11575]
+    - Make it harder to accidentally delete a datasync plugin and all its mappings by making users interact with a extra confirmation dialog [IN:11760]
+    - Improve how a locked out user is [unlocked by a system admin](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that the user can immediately log back in again after being unlocked [IN:11571]
 
 ## Version 8.14 (October 2025)
 !!! info "Summary"
