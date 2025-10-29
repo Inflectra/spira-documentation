@@ -2,7 +2,9 @@
 
 ## Version 8.15 (November 2025)
 !!! info "Summary"
-    - Administrators can set the default views for new users for the My Page and product home pages
+    Administrators can set the default views for new users for the My Page, product home pages, and the product reporting page.
+
+    Developers can now access new REST API documentation for V7 of our API using the OpenAPI standard. 
 
 ??? success "New Features"
     - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - Development, so that everyone using the default view sees the same layout and widgets [RQ:5456]
