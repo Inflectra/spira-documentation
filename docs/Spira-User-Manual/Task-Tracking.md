@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Task Tracking
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

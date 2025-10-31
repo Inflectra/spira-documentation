@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Home Page
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

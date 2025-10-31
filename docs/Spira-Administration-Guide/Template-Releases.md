@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Releases
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

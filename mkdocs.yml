@@ -47,6 +47,18 @@ markdown_extensions:
 # PLUGINS
 plugins:
   - search
+  - exporter:
+      formats:
+        pdf:
+          concurrency: 8
+          enabled: true
+          explicit: true
+          aggregator:
+            enabled: true
+            output: SpiraDocumentation.pdf
+            covers: none
+          browser:
+            debug: false
 
 # THEME INFORMATION
 theme:
@@ -70,7 +82,7 @@ theme:
   custom_dir: overrides
   
 extra_css:
-  - stylesheets/spira.css
+ - stylesheets/spira.css
 
 extra:
   social:
@@ -85,6 +97,8 @@ extra:
     property: see the custom.html partial 
   version:
     provider: mike
+  author: "Inflectra Corporation"
+  site_name: "Spira User and Admin Documentation"
 
 
 # NAVIGATION MENU

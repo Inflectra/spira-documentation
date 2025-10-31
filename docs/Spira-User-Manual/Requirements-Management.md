@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Requirements Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Common Elements Across the Application
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

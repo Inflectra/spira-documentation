@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Product: Users
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

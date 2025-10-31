@@ -1,7 +1,8 @@
+{% if not config.plugins.exporter %}
 {#- Google Tag Manager (noscript)-#}
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG49V2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {#- End Google Tag Manager (noscript)-#}
-
+{% endif %}
 
 {#-
   The file below is the code for the material theme from https://github.com/squidfunk/mkdocs-material/blob/master/material/partials/header.html - do not edit

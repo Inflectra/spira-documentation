@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Product Homepage
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

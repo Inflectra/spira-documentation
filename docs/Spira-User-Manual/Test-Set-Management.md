@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Test Set Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

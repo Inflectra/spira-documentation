@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Reports Center
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Test Cases
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

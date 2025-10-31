@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # System: Home Page
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

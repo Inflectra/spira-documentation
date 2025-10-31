@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Documents
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # System Administration
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

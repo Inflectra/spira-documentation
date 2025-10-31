@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Product: Changing the Template a Product Uses
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Notifications
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

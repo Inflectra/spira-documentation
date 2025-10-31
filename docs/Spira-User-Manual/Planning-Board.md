@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Planning Board
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

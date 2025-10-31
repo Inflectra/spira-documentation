@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Execution of Test Case(s)
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
