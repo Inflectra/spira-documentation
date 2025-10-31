@@ -1,5 +1,15 @@
 # Release Notes for Inflectra.ai
 
+## October 31 2025
+!!! success "New Features"
+    - **[Release analysis](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**
+        - As an Inflectra.ai and release user, I can analyze the broader status of my release, to gain a better understanding of its content and progress [RQ:5450]
+
+!!! bug "Bug fixes and enhancements"
+    - **[Language support](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#supported-languages)**
+        - Enhance Inflectra.ai to provide results in the same language as the input (for example French) [IN:11698]
+
+
 ## October 17 2025
 !!! success "New Features"
     - **[Release analysis](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**

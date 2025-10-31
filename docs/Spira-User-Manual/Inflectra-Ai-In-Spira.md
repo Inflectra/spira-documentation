@@ -51,6 +51,10 @@ In the following example, the task is for 10 requirements, and 5 requirements ha
 
 ![](img/Inflectra_ai_requirement_list_progress.png)
 
+### Supported Languages
+The Inflectra.ai sidebar labels are localized based on the user's **[culture setting](../Spira-User-Manual/User-Product-Management.md/#regional-settings)** in these languages: English, French, German, Portuguese, Brazilian Portuguese, and Spanish. If the user's culture is not supported, English text will be shown.  
+The responses from the AI are localized based on the Name and Description of the artifact being used. For example, when generating tasks for a requirement written in French, the generated tasks will also be written in French. When the input language cannot be determined or is not recognized, the response will be written in English.  
+
 ### Responsible AI Usage
 Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
 
@@ -144,11 +148,11 @@ When generating content for a test case, the following information is provided t
 From the release details page you can analyze the release to bring its different parts together into a text summary.
 This allows you to get a birds-eye view of a release. 
 
-| Analysis Type         | Description                                                                                                                                  |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Requirements          | Describes the requirements that are associated to this specific release, to give an overview of what is planned, in progress, and delivered. |
-| ... Create Attachment | Create a new document with this analysis and attach it to the release                                                                        |
-| ... Add comment       | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)                                |
+| Analysis Type         | Description                                                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Progress              | Analyzes the progress of requirements that are associated to this specific release, giving a summary of overall status, risks, and requirement content. |
+| ... Create Attachment | Create a new document with this analysis and attach it to the release                                                                                   |
+| ... Add comment       | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)                                           |
 
 ### Task details page
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
