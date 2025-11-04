@@ -1,5 +1,9 @@
 # Release Notes for Inflectra.ai
 
+## November 4 2025
+!!! bug "Bug fixes and enhancements"
+    - Fix inflectra.ai requests failing when the artifact description is empty [IN:11803]
+
 ## October 31 2025
 !!! success "New Features"
     - **[Release analysis](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**
