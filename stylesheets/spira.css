@@ -116,6 +116,11 @@
   content: "SpiraTest";
 }
 
+/* --- Case 5: BOTH SpiraTest and SpiraTeam --- */
+.edition-spiratest.edition-spirateam::after {
+  content: "SpiraTest / SpiraTeam";
+}
+
 /* --- Inflectra.ai --- */
 .feature-inflectraai::after {
   content: "Inflectra.ai";
