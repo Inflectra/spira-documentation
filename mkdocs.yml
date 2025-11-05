@@ -51,7 +51,7 @@ plugins:
       formats:
         pdf:
           concurrency: 8
-          enabled: true
+          enabled: false
           explicit: true
           aggregator:
             enabled: true

@@ -15,12 +15,13 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 ## Q4 2025
 - **Inflectra.ai**
 
-    - Automatic sprint notes. Append analysis of the sprint contents to its description in an easily understandable way.
+    - Refinements to localization with improved language support
+    - Automated product creation with user stories, tests, and risks from a product description 
 
-- Allow admins to customize test case statuses to help them create more flexible workloads.
 - Under the hood performance improvements through internal optimizations of our database communication layers.
 
 ## Q1 2026
+- Allow admins to customize test case statuses to help them create more flexible workloads.
 - Allow admins to customize task statuses to help them create more flexible workloads. This will be followed (likely further out in 2026) with the ability to customize requirement statuses.
 
 ## Longer term thematic ideas
