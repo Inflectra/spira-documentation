@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Test Run Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

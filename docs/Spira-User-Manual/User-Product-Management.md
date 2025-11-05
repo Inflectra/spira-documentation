@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # User/Product Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
@@ -73,6 +77,7 @@ By default the My Page:
 
 Next to some of the widgets is an RSS icon (![](img/UserProduct_Management_39.png)), this allows you to subscribe to the information as a Really Simple Syndication (RSS) newsfeed. This can be useful if you want to be notified about recently assigned items without having to setup email notifications or being logged into Spira continuously. If you don't see an RSS icon next to the widgets on your My Page it means that you have not enabled RSS newsfeeds in your profile. For more details on configuring your RSS preferences, please refer to [My Profile](#my-profile).
 
+### Customizing your page
 Initially the page is loaded in 'view mode' which means that the various 'widgets' on the page are displayed with minimum visual clutter (no toolbars or control icons) that makes it easy to scan the items on the page and see what work has been assigned. To switch the page to 'edit mode', click on the button with the cog icon (![](img/UserProduct_Management_40.png)) on the right:
 ![](img/UserProduct_Management_41.png)
 
@@ -107,6 +112,12 @@ You can add the additional widgets by selecting the appropriate checkbox, choosi
 - My Subscribed Artifacts
 - My News Feeds
 
+### Customizing the default My Page for all users
+System administrators will, by default, view and edit their personal My Page. They can also switch to the "All Users" view of the My Page. This looks and acts the same as the normal page. However, the layout you create on this page will become the new default My Page view for all users. 
+
+This means that any new user, or existing user who has not customized their My Page, will see this new default view.
+
+Once a user customizes their My Page, they will no longer see most updates an admin makes to the My Page default view. The only updates they will get will be to new widgets an admin adds (that were never previously added) added since the user last customized it.
 
 ### Recent Products
 This widgets shows the most recent products you have visited. Each time you visit a page for a different product the list of most recent products is updated. By default, it shows the five most recent products -- this can be edited in the widget edit controls to any number fifty or less.

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Product: General Settings
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

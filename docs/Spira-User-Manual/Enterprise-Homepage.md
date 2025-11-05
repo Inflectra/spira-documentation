@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Enterprise Homepage
 !!! abstract "Available in SpiraPlan only"
 

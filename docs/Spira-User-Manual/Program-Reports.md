@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Program Reports
 !!! abstract "Available in SpiraPlan only"
 

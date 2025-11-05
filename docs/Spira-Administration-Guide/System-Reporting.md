@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # System: Reporting
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

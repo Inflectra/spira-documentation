@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Reports Center
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
@@ -27,6 +31,12 @@ In addition to the graphs displayed by default, you can click on the "***Add Ite
 
 Each of the graphs is described in more detail in [Summary Graphs](#summary-graphs) to [Date-Range Graphs](#date-range-graphs).
 
+### Customizing the reporting page for all users
+Product administrators will, by default, view and edit their personal product reporting page. They can also switch to the "All Users" view of the page. This looks and acts the same as the normal page. However, the layout you create on this page will become the new default view  for all users. 
+
+This means that any new user, or existing user who has not customized the reporting page, will see this new default view.
+
+Once a user customizes the page for themselves, they will no longer see most updates an admin makes to the default view of that page. The only updates they will get will be to new widgets an admin adds (that were never previously added) added since the user last customized their own page.
 
 ## Reports Configuration
 The configuration page for each report differs slightly, but the general format is illustrated below (please note all sections are shown in orange text with a line beneath and are shown here in the collapsed state -- click the orange text to expand the section):

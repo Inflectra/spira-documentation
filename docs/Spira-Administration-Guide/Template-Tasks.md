@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Tasks
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Welcome to the SpiraPlan Administration Guide
 
 !!! info "How to use this guide"

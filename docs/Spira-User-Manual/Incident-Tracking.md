@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Incident Tracking
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

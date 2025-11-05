@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Mobile Access
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

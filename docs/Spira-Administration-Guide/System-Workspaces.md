@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # System: Workspaces
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Inflectra.ai
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan - cloud only"
     It is available to try for free in any cloud trial. 

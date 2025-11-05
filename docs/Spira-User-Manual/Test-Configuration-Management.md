@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Test Configuration Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

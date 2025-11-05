@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Template: Custom Properties
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Test Case Management
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 

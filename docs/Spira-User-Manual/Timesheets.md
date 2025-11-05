@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Timesheets
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

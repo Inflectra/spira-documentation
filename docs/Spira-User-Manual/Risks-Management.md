@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Risks Management
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 

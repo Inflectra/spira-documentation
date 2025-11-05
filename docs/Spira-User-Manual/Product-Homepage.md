@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Product Homepage
 !!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
@@ -18,6 +22,7 @@ Just like the 'My Page', the Product Home dashboard is initially loaded in 'view
 
 To download an image of the entire dashboard click the 'picture' button beneath the currently selected view.
 
+### Customizing your page
 To switch the page to 'edit mode', you should click on the button with the cog icon (![](img/UserProduct_Management_40.png)) below the currently selected Product Home view.
 
 Once in 'edit mode', each of the 'widgets' displayed on the product homepage can be minimized by clicking on the arrow icon (![](img/UserProduct_Management_42.png)) in the top-left of the window, or closed by clicking-on the cross icon (![](img/UserProduct_Management_43.png)) in the top-right of the window. In addition, the widgets allow you change their settings by clicking on the settings icon (![](img/UserProduct_Management_40.png)).This allows you to customize your view of the product to reflect the types of information that are relevant to you. If you have closed a widget that you subsequently decide you want to reopen, you can rectify by clicking the "***Add Items***" button at the top of the page, and locating the closed item from the list of 'Closed Widgets'.
@@ -69,8 +74,18 @@ If you click on the "***+ Add***" items button it will display the list of any a
 
 You can add the additional widgets by selecting the appropriate checkbox, choosing the destination location (left side vs. right side) and then click the "***Add***" button.
 
-Each of the different widgets listed is described in more detail below:
 
+### Customizing the default page for all users
+Product administrators will, by default, view and edit their personal product home pages. They can also switch to the "All Users" view of the page. This looks and acts the same as the normal page. However, the layout you create on this page will become the new default view of this page for all users. 
+
+This means that any new user, or existing user who has not customized that specific home page, will see this new default view when they look at the page.
+
+Once a user customizes the page for themselves, they will no longer see most updates an admin makes to the default view of that page. The only updates they will get will be to new widgets an admin adds (that were never previously added) added since the user last customized their own page.
+
+
+
+
+Each of the different widgets listed is described in more detail below:
 
 ## Product Overview
 This section displays:

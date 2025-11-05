@@ -1,3 +1,7 @@
+---
+pdf: true
+---
+
 # Commits
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
