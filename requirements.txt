@@ -1,6 +1,7 @@
 mkdocs
 Pygments
 pymdown-extensions
+mkdocs-material
 mkdocs-export
 
 # not currently used

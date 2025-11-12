@@ -24,15 +24,8 @@ Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, 
 1. Install python and pip
 2. Run `python get-pip.py` if not used pip before
 3. Run `pip install -r requirements.txt`
-4. We use the Material theme for mkdocs. This has two versions - a public and an Insiders version.
-    
-    - **Public**: run `pip install mkdocs-material` it should also install MKdocs. 
-    - **Insiders** run in PowerShell:
-        - `$env:GH_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"` - replace with your relevant token
-        - `pip install git+https://$env:GH_TOKEN@github.com/squidfunk/mkdocs-material-insiders.git`
-
-5. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
-6. Clone this repo to your local machine
+4. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
+5. Clone this repo to your local machine
 
 
 # Working with the docs and Markdown
