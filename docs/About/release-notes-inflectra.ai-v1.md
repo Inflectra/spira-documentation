@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## November 14 2025
+!!! bug "Bug fixes and enhancements"
+    - Add elapsed days to the data included for release analysis prompt, to reduce risk of AI math errors [IN:11791]
+    - Improve formatting of release analysis output to make it more similar to the EARS analysis feature [IN:11799]
+    - Improve language detection by improving how languages are named and how AI works out what language to use [IN:11769]
+    - Update Inflectra.ai to fall back to using the user's Spira culture setting (if supported) instead of English in cases where the automated language detection can not pick a supported language [IN:11798]
+
 ## November 4 2025
 !!! bug "Bug fixes and enhancements"
     - Fix inflectra.ai requests failing when the artifact description is empty [IN:11803]
