@@ -16,7 +16,7 @@ This SpiraApp helps you create incremental versions for requirements and test ca
 - [x] Add a plain text custom property for Requirements in the product's template.
 - [x] Add a plain text custom property for Test Cases in the product's template.
 
-THese custom properties store the version number created by the SpiraApp. You may want to call them `Version` but you can call them whatever you want.
+These custom properties store the version number created by the SpiraApp. You may want to call them `Version` but you can call them whatever you want.
 
 ### Product Settings
 Once the SpiraApp has been activated system-wide and enabled for a specific product, you can configure its product-level settings. These settings allow you to control:
