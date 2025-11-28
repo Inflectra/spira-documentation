@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## December 12 2025
+
+!!! bug "Bug fixes and enhancements"
+    - Fix the requirement EARS Analysis being grayed out when you perform a follow up action and the follow up action not being grayed out after a page refresh [IN:11669]
+    - Include an error message for Release Analysis if no requirements are in the release instead of letting AI guess [IN:11768]
+    - Fix requirement BDD Scenarios generating with Cucumber keywords in English instead of the language of the requirement content [IN:11838]
+
 ## November 14 2025
 !!! bug "Bug fixes and enhancements"
     - Add elapsed days to the data included for release analysis prompt, to reduce risk of AI math errors [IN:11791]
