@@ -241,6 +241,8 @@ nav:
   - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
   - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
   - Testing:
+    - xUnit (Node.js): Unit-Testing-Integration\Integrating-with-xUnit-NodeJS.md
+    - xUnit (Python): Unit-Testing-Integration\Integrating-with-xUnit-Python.md
     - NUnit: Unit-Testing-Integration\Integrating-with-NUnit.md
     - JUnit: Unit-Testing-Integration\Integrating-with-JUnit.md
     - TestNG: Unit-Testing-Integration\Integrating-with-TestNG.md
@@ -256,7 +258,6 @@ nav:
     - Cypress: Unit-Testing-Integration\Integrating-with-Cypress.md
     - Jasmine: Unit-Testing-Integration\Integrating-with-Jasmine.md
     - Jest: Unit-Testing-Integration\Integrating-with-Jest.md
-    - xUnit (Python): Unit-Testing-Integration\Integrating-with-xUnit-Python.md
     - Test Runner Excel Add-in: Unit-Testing-Integration/Using-Test-Runner-For-Excel.md
   - IDE Integration:
     - Visual Studio Code: IDE-Integration\Visual-Studio-Code.md
