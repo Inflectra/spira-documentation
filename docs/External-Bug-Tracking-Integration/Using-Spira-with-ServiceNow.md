@@ -1,5 +1,7 @@
 # Using Spira with ServiceNow
-ServiceNow tables are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on). This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into SpiraPlan. Attachments will only be synced with creation.
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
+ServiceNow tables are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into Spira. Attachments will only be synced with creation.
 
 !!! danger "Set up data synchronization"     
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
@@ -7,9 +9,9 @@ ServiceNow tables are a highly customizable system that can be synced with Spira
 
 ## Configuring the Integration Service 
 
-This section outlines how to set up the integration service between ServiceNow and SpiraPlan. It assumes that you already have a working installation of SpiraPlan and appropriate ServiceNow tables. To setup the service, you must be logged into SpiraPlan as a user with System-Administrator level privileges.
+This section outlines how to set up the integration service between ServiceNow and Spira. It assumes that you already have a working installation of Spira and appropriate ServiceNow tables. To setup the service, you must be logged into Spira as a user with System-Administrator level privileges.
 
-Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **ServiceNowDataSync**, as shown below:
+Inside Spira, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **ServiceNowDataSync**, as shown below:
 
 ![](img/Using_Spira_with_ServiceNow_223.png)
 
@@ -41,9 +43,9 @@ You need to fill out the following fields for the ServiceNow Data Sync plugin to
 -   **SN Password**: Your ServiceNow password
 -   **Time Offset**: Set this to how many hours *ahead* UTC is, so for EDT (UTC-4), you would put in *positive* 4.
 -   **Auto-Map Users**: Set to yes if you would like the plugin to map users one-to-one by checking first & last names. Set to no if you would like to map users manually.
--   **Incidents Table**: The name of the table you would like to sync with incidents in SpiraPlan. This can be found in the *name* field in the table definition within ServiceNow Studio.
+-   **Incidents Table**: The name of the table you would like to sync with incidents in Spira. This can be found in the *name* field in the table definition within ServiceNow Studio.
 -   **Incidents Project Field**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project an incident is created in. This can be found in ServiceNow Studio under the column name.
--   **Requirements Table**: The name of the table you would like to sync with requirements in SpiraPlan. This can be found in the *name* field in the table definition within ServiceNow Studio. This *cannot* be the same as the "Incident Table".
+-   **Requirements Table**: The name of the table you would like to sync with requirements in Spira. This can be found in the *name* field in the table definition within ServiceNow Studio. This *cannot* be the same as the "Incident Table".
 -   **Requirements Project Field**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project a requirement is created in. This can be found in ServiceNow Studio under the column name.
 
 ![](img/Using_Spira_with_ServiceNow_225.png)
@@ -55,7 +57,7 @@ NOTE: Leave any field called "(Not Used)" blank.
 
 ## Configuring Project Mappings
 
-For this step, please ensure that you are in a SpiraPlan project you would like to sync with ServiceNow. For this example, the project is called "ServiceNowDataSync Test."
+For this step, please ensure that you are in a Spira project you would like to sync with ServiceNow. For this example, the project is called "ServiceNowDataSync Test."
 
 Click on the "View Project Mappings" button for the ServiceNow Data Sync. You need to fill out the following fields to sync correctly:
 
@@ -70,9 +72,9 @@ Type in the 'Label' field of the choice, *not* the 'Value.'
 
 ![](img/Using_Spira_with_ServiceNow_227.png)
 
-A brief note about field syncing in ServiceNow: The sheer configurability of ServiceNow meant some assumptions were made in the designing of this data sync. Specific column names are mapped to their counterparts in SpiraPlan based on the list below. If a field is not present in ServiceNow, it will simply not be synced.
+A brief note about field syncing in ServiceNow: The sheer configurability of ServiceNow meant some assumptions were made in the designing of this data sync. Specific column names are mapped to their counterparts in Spira based on the list below. If a field is not present in ServiceNow, it will simply not be synced.
 
-| SpiraPlan Field       | ServiceNow Column                          | 
+| Spira Field       | ServiceNow Column                          | 
 |-----------------------|--------------------------------------------|
 | Name                  | name / short_description \(both will work) |
 | Description           | description                                |
@@ -86,17 +88,17 @@ A brief note about field syncing in ServiceNow: The sheer configurability of Ser
 
 ### Configuring the Incident/Requirement Status Mappings
 
-Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the ServiceNow Data Sync plug-in knows what the equivalent status is in ServiceNow for an incident status in SpiraPlan. The process is identical for Requirement statuses, so repeat these steps with Requirement \> Status instead if you are also/only syncing requirements.
+Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the ServiceNow Data Sync plug-in knows what the equivalent status is in ServiceNow for an incident status in Spira. The process is identical for Requirement statuses, so repeat these steps with Requirement \> Status instead if you are also/only syncing requirements.
 
 If you don't have a status equivalent in your table, you can ignore this section.
 
 ![](img/Using_Spira_with_ServiceNow_228.png)
 
-You must map every status in SpiraPlan to ServiceNow. Descriptions of the field are below:
+You must map every status in Spira to ServiceNow. Descriptions of the field are below:
 
 -   **External Key**: If state is a dropdown in ServiceNow, it's the
-'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the SpiraPlan status. Please take care to **match it exactly** (case, spaces, etc)
--   **Primary**: You must have exactly one primary key for each ServiceNow status. This is what status the plug-in should set the incident in SpiraPlan to when the status in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.
+'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the Spira status. Please take care to **match it exactly** (case, spaces, etc)
+-   **Primary**: You must have exactly one primary key for each ServiceNow status. This is what status the plug-in should set the incident in Spira to when the status in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.
 
 Here are the corresponding statuses in ServiceNow
 
@@ -105,30 +107,30 @@ Here are the corresponding statuses in ServiceNow
 
 ### Configuring the Incident/Requirement Type Mappings
 
-Click the "Type" button for the relevant artifact to map the Incident or Requirent types between SpiraPlan and ServiceNow together. The process is identical to the mappings described previously, so repeat these steps with Incident and Requirement Types if you are syncing them.
+Click the "Type" button for the relevant artifact to map the Incident or Requirement types between Spira and ServiceNow together. The process is identical to the mappings described previously, so repeat these steps with Incident and Requirement Types if you are syncing them.
 
 ![](img/Using_Spira_with_ServiceNow_242.png)
 
-You must map every type in SpiraPlan to ServiceNow. Descriptions of the field are below:
+You must map every type in Spira to ServiceNow. Descriptions of the field are below:
 
--   **External Key**: If type is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If type is a string in ServiceNow, write in the value of the string to be mapped to the SpiraPlan type. Please take care to **match it exactly** (case, spaces, etc)
--   **Primary**: You must have exactly one primary key for each ServiceNow type. This is what type the plug-in should set the incident and/or requirement in SpiraPlan to when the type in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.
+-   **External Key**: If type is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If type is a string in ServiceNow, write in the value of the string to be mapped to the Spira type. Please take care to **match it exactly** (case, spaces, etc)
+-   **Primary**: You must have exactly one primary key for each ServiceNow type. This is what type the plug-in should set the incident and/or requirement in Spira to when the type in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.
 
 ![](img/Using_Spira_with_ServiceNow_243.png)
 
 
 ### Configuring the Priority/Importance Mapping
 
-Now click the "Priority" button within the "Incident" section to map incident priorities. This will tell the ServiceNow Data Sync plug-in which priorities in ServiceNow map to those in SpiraPlan. The process is identical for Requirement importance, so repeat these steps with Requirement \> Importance instead if you are also/only syncing requirements.
+Now click the "Priority" button within the "Incident" section to map incident priorities. This will tell the ServiceNow Data Sync plug-in which priorities in ServiceNow map to those in Spira. The process is identical for Requirement importance, so repeat these steps with Requirement \> Importance instead if you are also/only syncing requirements.
 
 If you don't have a priority equivalent in your table, you can ignore this section.
 
 ![](img/Using_Spira_with_ServiceNow_230.png)
 
-You must map every priority/importance in SpiraPlan to ServiceNow. Descriptions of the field are below:
+You must map every priority/importance in Spira to ServiceNow. Descriptions of the field are below:
 
--   **External Key**: If state is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the SpiraPlan status. Please take care to **match it exactly** (case, spaces, etc.)
--   **Primary**: You must have exactly one primary key for each ServiceNow priority. This is what priority the plug-in should set the incident in SpiraPlan to when the priority in ServiceNow changes. This is only used if there are more options in SpiraPlan than ServiceNow.
+-   **External Key**: If state is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the Spira status. Please take care to **match it exactly** (case, spaces, etc.)
+-   **Primary**: You must have exactly one primary key for each ServiceNow priority. This is what priority the plug-in should set the incident in Spira to when the priority in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.
 
 Here are the corresponding priorities in ServiceNow:
 
@@ -138,10 +140,10 @@ You can use the same logic to configure Incident Severity mappings.
 
 ### Cloning ServiceNow Fields
 
-Due to some of the assumptions made in the creation of this integration, it is often necessary to create a hidden compatibility layer between the fields you use in your ServiceNow table and those recognized by the SpiraPlan data sync. This section will lay out how to create 'hidden'
-fields that will be kept in sync with those in SpiraPlan.
+Due to some of the assumptions made in the creation of this integration, it is often necessary to create a hidden compatibility layer between the fields you use in your ServiceNow table and those recognized by the Spira data sync. This section will lay out how to create 'hidden'
+fields that will be kept in sync with those in Spira.
 
--  Create the field you would like to clone \[for this example I will keep "Complete Notes" (visible by ServiceNow users) in sync with "Description" (for syncing with SpiraPlan)\]
+-  Create the field you would like to clone \[for this example I will keep "Complete Notes" (visible by ServiceNow users) in sync with "Description" (for syncing with Spira)\]
 -  A brief discussion about the requirements for this to work
 
     - Both fields must be of the same type in ServiceNow
@@ -192,7 +194,7 @@ fields that will be kept in sync with those in SpiraPlan.
 
 ### Configuring Custom Properties
 
-This section assumes the custom properties in SpiraPlan and ServiceNow are of the same type (integer -\> integer, SingleSelect -\> SingleSelect, etc.) Custom property syncing **will not** work otherwise. This applies to both requirement and incident custom properties.
+This section assumes the custom properties in Spira and ServiceNow are of the same type (integer -\> integer, SingleSelect -\> SingleSelect, etc.) Custom property syncing **will not** work otherwise. This applies to both requirement and incident custom properties.
 
 Click on a custom property mapping for a property you would like to sync. For the "External Key" right below the "Name" field put the column name (*not* the column label), so for the Operating System field in ServiceNow, you would put in "operating\_system" No extra work is required for user (sys\_user references in ServiceNow), text, integer, or date fields.
 
@@ -204,7 +206,7 @@ If your custom property is a single-select list (choice in ServiceNow), for each
 
 ![](img/Using_Spira_with_ServiceNow_238.png)
 
-If you have a multi-select in SpiraPlan (List in ServiceNow), repeat the same steps as for a single-select, except instead putting "Label" in the external key, put "Value" instead. You should have something like this:
+If you have a multi-select in Spira (List in ServiceNow), repeat the same steps as for a single-select, except instead putting "Label" in the external key, put "Value" instead. You should have something like this:
 
 ![](img/Using_Spira_with_ServiceNow_239.png)
 
@@ -221,11 +223,11 @@ To configure the mapping of users in the two systems, you need to go to Administ
 
 ![](img/Using_Spira_with_ServiceNow_241.png)
 
-Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "ServiceNow Data Sync ID," you need to enter the first and last name of the user in ServiceNow. This will allow the data-synchronization plug-in to know which user in SpiraPlan matches with an equivalent user in ServiceNow. Click \[Save\] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.
+Click on the 'Data Mapping' tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "ServiceNow Data Sync ID," you need to enter the first and last name of the user in ServiceNow. This will allow the data-synchronization plug-in to know which user in Spira matches with an equivalent user in ServiceNow. Click \[Save\] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.
 
 
 ## Using the Data Synchronization
 
-Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in ServiceNow appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
+Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in ServiceNow appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 
-Congratulations, you have just integrated your SpiraPlan instance with ServiceNow!
+Congratulations, you have just integrated your Spira instance with ServiceNow!

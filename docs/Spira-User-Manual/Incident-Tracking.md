@@ -1,12 +1,16 @@
+---
+pdf: true
+---
+
 # Incident Tracking
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
-This section outlines how the incident/defect tracking features of SpiraPlan® can be used to manage key product artifacts during the software development lifecycle. In addition to managing the defects raised during the execution of test cases in the test management module, the Incident Tracker is also a powerful risk/issue/bug tracking system in its own right. When coupled with the [product dashboard](User-Product-Management.md/#product-home) it is a powerful tool for representing all the key risks and issues associated with a product in a single, graphical format.
+This section outlines how the incident/defect tracking features of Spira can be used to manage key product artifacts during the software development lifecycle. In addition to managing the defects raised during the execution of test cases in the test management module, the Incident Tracker is also a powerful risk/issue/bug tracking system in its own right. When coupled with the [product dashboard](User-Product-Management.md/#product-home) it is a powerful tool for representing all the key risks and issues associated with a product in a single, graphical format.
 
-Unlike a standalone bug/issue tracking tool however, you can trace the incidents/defects back to the test case and the underlying requirement that generated them, giving the product manager unprecedented power in analyzing the "in-process" quality of a system during its lifecycle. This power is clearly illustrated in the "Requirement Incident Count" pane in the Product Home dashboard (see [User/Product Management > Requirements Coverage](User-Product-Management.md/#requirements-coverage)).
+Unlike a standalone bug/issue tracking tool however, you can trace the incidents/defects back to the test case and the underlying requirement that generated them, giving the product manager unprecedented power in analyzing the "in-process" quality of a system during its lifecycle. This power is clearly illustrated in the [Requirement Incident Count](./Product-Homepage.md/#requirement-incident-count) widget on the Product Homepage.
 
 
 ## Incident List
-
 When you click on the Tracking \> Incidents global navigation link, you will initially be taken to the incidents list screen illustrated below:
 
 ![](img/Incident_Tracking_238.png)
@@ -44,9 +48,7 @@ Clicking on the "***Refresh***" button simply reloads the list of incidents; thi
 ### Show / Hide Columns
 This drop-down list allows you to change the fields that are displayed in the incident list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-
 ### Edit
-
 Each incident in the list has an "***Edit***" button display in its right-most column. When you click this button or just
 *double-click* on any of the cells in the row, you change the item from "View" mode to "Edit" mode. The various columns are made editable, and "***Save***" buttons are displayed in the last column:
 
@@ -57,7 +59,6 @@ If you click "***Edit***" on more than one row, the "***Save***" buttons are onl
 If you want to edit lots of items, first select their checkboxes and then click the "***Edit***" button on the same row as the Filters and it will switch all the selected items into edit mode.
 
 When you have made your updates, you can either click "***Save***" to commit the changes, or "***Cancel***" to revert back to the original information. Alternatively, pressing the <ENTER\> key will commit the changes and pressing the <ESCAPE\> key will cancel the changes.
-
 
 ### Cloning Incidents
 To create a clone of an existing incident or set of incidents, simply select the check-boxes of the incidents you want to copy and then click "***Clone***" under the Edit menu (or click "***Clone***" from the "New" dropdown menu from the  Incident's details page). This will make a copy of the current incident with its name prefixed 'Copy of ....' to distinguish itself from the original. Any file attachments will also be copied along with the incident itself.
@@ -74,7 +75,6 @@ When cloning Incidents please note that:
 ### Exporting Incidents
 Read about [how to export artifacts from one product to another](Application-Wide.md#export-to-another-product).
 
-
 ### Creating Requirement from Incidents
 Sometimes you may have enhancements logged that now need to be converted into formal requirements. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create new requirements from selected incidents (1 or more); and it automatically creates an association between each new requirement and the corresponding incident.[^rq-in]
 
@@ -83,13 +83,11 @@ To use this feature:
 - select the checkboxes of the incidents you want to convert
 - click Tools \> Convert Into Requirements
  
-
 ### Printing Items
 To quickly print a single incident or list of incidents you can select the items' checkboxes and then click Tools \> Print Items. This will display a popup window containing a printable version of the selected items. You can also save the report in a variety of common formats from the same Tools menu.
 
 
 ## Incident Details
-
 When you click on an incident item in the incident list, or click the "***New Incident***" button (as described in [Incident List](#incident-list)), you are taken to the incident details page illustrated below:
 
 ![](img/Incident_Tracking_242.png)
@@ -111,24 +109,20 @@ The navigation pane consists of a link that will take you back to the incidents 
 
 In addition to the left hand navigation, you can enter a specific incident number in the text-box in the toolbar and click the "***Find***" button. In the same toolbar, there is also a shortcut for creating a copy of the current by clicking the "***Clone***" button.
 
-
 ### Editing an Existing Incident
 When editing an existing incident, the fields that are available and the fields that are required will depend on your stage in the incident workflow. Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows), and how [electronic signatures](Application-Wide.md#electronic-signatures) can further control how you progress an incident through the workflow.
 
 You can print the current incident by clicking Tools \> Print, which will display a printable version of the page in a separate window. Alternatively, you can export the incident to a number of formats by selecting the appropriate option from the Tools menu.
 
-
 ### Inserting a New Incident
-If you are creating a new incident, the fields that are available and the fields that are required will depend on how your product has been for configured. For example, some products may require that all incidents be started with Status=New and Type=Incident, others may allow you to specify the incident type. The types of change allowed will depend on how your product administrator has setup the system for you. Administrators should refer to the *SpiraPlan Administration Guide* for details on configuring the incident workflows to meet their needs.
+If you are creating a new incident, the fields that are available and the fields that are required will depend on how your product has been for configured. For example, some products may require that all incidents be started with Status=New and Type=Incident, others may allow you to specify the incident type. The types of change allowed will depend on how your product administrator has setup the system for you. Administrators should refer to the *Spira Administration Guide* for details on configuring the incident workflows to meet their needs.
 
 Once you've filled out the appropriate incident fields, you can either click "***Save***" or one of the options from the "***Save***" dropdown list to commit the changes or click on "***Back to Incident List***" to discard the insertion and return back to the incident list.
 
 ### Overview - Comments
 Read about [how the comments works](Application-Wide.md#comments)
 
-
 ### Overview -- Dates and Times
-
 This section displays the general schedule and completion status of the specific incident. You can enter/edit:
 
 - the start-date (this gets set automatically when you add the incident to a release/sprint from the planning board)
@@ -176,26 +170,22 @@ Any custom date fields set up by the system administrator or product owner will 
 
 
 ### Attachments
-
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 
 ### Associations
+From this tab you can associate an incident to other relevant artifacts. 
 
-You can associate other incidents, requirements, test steps, tasks, and risks to an incident from this tab. 
-
-The incidents and tasks in this list are ones that a user has decided are relevant to the current one and has created a direct link between them. In the case of requirements and test cases, the association can be either due to the creator of an incident directly linking the incident to the requirement or test step, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.
+Associated requirements and test cases can be present either due to directly linking the incident to that requirement or test case, or it can be the result of a tester executing a test-run and creating an incident during the test run. In this latter case, the check-box to the left of the association will be unavailable as the link is not editable.
 
 Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 
 ### History
-
 Read about [how the history tab works](Application-Wide.md#history)
 
 
 ### Creating a Requirement from an Incident
-
 Sometimes you may have an enhancement logged that now needs to be converted into a formal requirement. This may be useful for sprint planning or so test cases and tasks can be made from it. There is a shortcut to create a new requirement from the current incident; and it automatically creates an association between the new requirement and the incident.[^rq-in]
 
 To use this feature:
@@ -206,19 +196,19 @@ To use this feature:
 
 
 ### Emailing
-
 Read about [emailing an incident to colleagues](Application-Wide.md#emailing).
 
 
 ### Incident Followers
-
 Read about [how to add and manage followers to an artifact](Application-Wide.md#followers)
 
 
 ## Incident Board
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 !!! info "Incident Board Overview"
     
-    The SpiraPlan incident board is a streamlined and highly customizable "kanban" style board. It lets you visualize incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the incident board is a great tool for planning and managing incidents.
+    The Spira incident board is a streamlined and highly customizable "kanban" style board. It lets you visualize incidents in a single place across a product. Based on the principles of **agile methodologies** such as Scrum and Kanban, the incident board is a great tool for planning and managing incidents.
 
     To learn more about how boards in Spira are structured and their general features refer to our [board overview](Application-Wide.md/#boards). Here you can learn about:
 

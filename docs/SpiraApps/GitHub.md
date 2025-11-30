@@ -1,14 +1,15 @@
 # GitHub SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp lets you integrate SpiraPlan and GitHub so users can launch Actions from Spira and see their results in Spira as builds.
 
 !!! info "About this SpiraApp"
-    - [x] system settings
-    - [x] product settings 
-    - [x] product template setup required
-    - [x] toolbar button on release details page
-    - [x] additional integration required to record results in Spira
-    - [x] configuration in GitHub (for recording results in Spira)
+    - system settings
+    - product settings 
+    - product template setup required
+    - toolbar button on release details page
+    - additional integration required to record results in Spira
+    - configuration in GitHub (for recording results in Spira)
 
 ## Setup
 This SpiraApp has two independent parts (you do not need one for the other to work):

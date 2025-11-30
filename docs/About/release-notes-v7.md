@@ -3,7 +3,8 @@
 ## Version 7.13 (April 2024)
 !!! info "Summary"
     - Easily focus on what is important, with a new default view that declutters the [My Page](../Spira-User-Manual/User-Product-Management.md/#my-page) by hiding all empty widgets. Less really is more.
-    - This release introduces a brand new program level [capability board](../Spira-User-Manual/Program-Capabilities.md/#capability-board) to track and manage capabilities in powerful new ways, including tracking them against program milestones <span class="pill">SpiraPlan</span>.
+    - This release introduces a brand new program level [capability board](../Spira-User-Manual/Program-Capabilities.md/#capability-board) to track and manage capabilities in powerful new ways, including tracking them against program milestones.
+        {: .edition-spiraplan}
     - As part of our efforts to enhance the auditability and traceability of administrator activities, every change to product membership (adding a user, removing them, changing roles) is now tracked in both product history and system history.
     - Tags are now available for test runs, test cases, test sets, and risks, giving you even more flexibility. Additionally, tag changes can be reverted, and you can build out custom reports with tags.
     - Due to popular demand, we are expanding our GenAI integrations, with a new [Azure OpenAI SpiraApp](../SpiraApps/Azure-OpenAI.md) to auto-generate test cases, scenarios, or tasks from a requirement
@@ -62,7 +63,7 @@
 
     * **Other Enhancements**
 
-        - Add a banner on the [legacy Planning Board](../Spira-User-Manual/Planning-Board.md/#legacy-planning-board) to notify users that it will be deprecated and removed in 8.1 [IN:9215]
+        - Add a banner on the legacy Planning Board to notify users that it will be deprecated and removed in 8.1 [IN:9215]
         - Add a new API call to let users update their saved filters [IN:9197]
         - Add an API call that will allow Spira to track when a data sync starts running or changes status from Not Run to In Progress [IN:8629]
         - Add department and any other user profile fields to the user object retrieved when getting users via the API, to make those API calls more useful [IN:9285]
@@ -80,15 +81,18 @@
 
 ## Version 7.12 (February 2024)
 !!! info "Summary"
-    This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    This release completes our upgrade of product level boards, with new, powerful, and easy to use requirement and incident boards. All upgraded boards get a number of usability improvements, including a number of fixes. The legacy Planning Board currently remains available. 
+        {: .edition-spiraplan .edition-spirateam}
  
 
 !!! success "New Features"
-    * **Requirement Views** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **Requirement Views** 
+        {: .edition-spiraplan .edition-spirateam}
 
         - As a requirement user, I can manage requirements on a [dedicated requirements board](../Spira-User-Manual/Requirements-Management.md/#requirements-agile-board) that matches the style of the Planning Board [RQ:4755]
     
-    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board)** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **As an incident user, I can view and manage incidents on a [dedicated incident board](../Spira-User-Manual/Incident-Tracking.md/#incident-board)** 
+        {: .edition-spiraplan .edition-spirateam}
 
         - As an incident user, I can organize the incident board easily, so I can effectively manage incidents [RQ:4699]
         - As an incident user, I can tailor what information I see on incident board cards, to help me quickly manage incidents [RQ:4700]
@@ -99,7 +103,8 @@
         - Let template admins sort [incident statuses](../Spira-Administration-Guide/Template-Incidents.md/#edit-statuses) with a new position field, to show statuses in this custom order on the incident board and when managing workflows [RQ:3700]
 
 ??? bug "Bug fixes and enhancements"
-    - **Board improvements** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - **Board improvements** 
+        {: .edition-spiraplan .edition-spirateam}
 
         - Add option to the planning board to show or hide progress and efforts information in row and column headers (off by default) [IN:8963]
         - Add option to the task board to show or hide progress and efforts information in row and column headers (off by default) [IN:9100]
@@ -117,8 +122,10 @@
     
     - **Other fixes and enhancements**
 
-        - Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-        - Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029] <span class="pill">SpiraPlan</span>
+        - Fix API calls that retrieve source code revisions / commits not sending the commit message [IN:9117] 
+            {: .edition-spiraplan .edition-spirateam}
+        - Fix capability "Create Child" API endpoint not populating default values correctly (StatusId, TypeId, CreatorId) [IN:9029]
+            {: .edition-spiraplan}
         - Fix changes to custom properties not being saved when editing documents of type URL [IN:7710]
         - Fix product level custom reports containing PROJECT_GROUP_ID and ${ProjectId} in a single query not being able to be generated [IN:9099]
         - Fix the API to retrieve an associated test run [IN:9126]
@@ -152,8 +159,10 @@
 
 !!! info "Summary"
 
-    - Brings new widgets to the [program home page](../Spira-User-Manual/Program-Homepage.md), letting you see meaningful information about capabilities and program milestones <span class="pill">SpiraPlan</span>
-    - Improves [program level reporting](../Spira-User-Manual/Program-Reports.md) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page <span class="pill">SpiraPlan</span>
+    - Brings new widgets to the [program home page](../Spira-User-Manual/Program-Homepage.md), letting you see meaningful information about capabilities and program milestones 
+        {: .edition-spiraplan}
+    - Improves [program level reporting](../Spira-User-Manual/Program-Reports.md) with the ability to filter and sort standard reports, and show program-specific custom graphs on the program reporting page 
+        {: .edition-spiraplan}
     - Adds [tagging](../Spira-User-Manual/Application-Wide.md/#tags) support to a range of artifacts, including improvements to how you can see and work with tags on the document details page (tags are now supported on documents, requirements, releases, tasks, and incidents - more to come next year)
     - Let users leverage the power of [ChatGPT](../SpiraApps/ChatGPT.md) in Spira with a new SpiraApp that auto-generates test cases, requirement steps, or tasks from a requirement
 
@@ -296,7 +305,7 @@
     
     * **As a program manager, I can monitor the progress of work in the program using [offline reporting](../Spira-User-Manual/Program-Reports.md), so I can analyze current performance**
 
-        - As a report admin, I can create custom reports of [system level history changes](../Reporting/Custom-Report-Tables.md/#global--system-history-change-sets), to provide my org with any reports required in this area [RQ:4432]
+        - As a report admin, I can create custom reports of [system level history changes](../Reporting/Custom-Report-Tables.md/#global-system-history-change-sets), to provide my org with any reports required in this area [RQ:4432]
         - As a report admin, I can create saved [custom reports](../Spira-Administration-Guide/System-Reporting.md) of program milestones and capabilities, that will help users' reporting needs [RQ:4626]
         - As a program report user of SpiraPlan, I can access [program level reports for my program](../Spira-User-Manual/Program-Reports.md/#reporting-home-page), so that I can create useful reports [RQ:4503]
         - As a program report user, I can generate a [capability summary report](../Spira-User-Manual/Program-Reports.md/#capability-summary-report), to help me track their progress [RQ:4644]
@@ -453,7 +462,7 @@
 
 !!! info "Summary"
 
-    - SpiraPlan and SpiraTeam users can now try out the [new beta task board](../Spira-User-Manual/Task-Tracking.md/#beta-task-board). More flexible and powerful than ever before, you can organize your board into columns, swimlanes, and groups to help you focus on the most important tasks at any time.
+    - SpiraPlan and SpiraTeam users can now try out the [new beta task board](../Spira-User-Manual/Task-Tracking.md/#task-board). More flexible and powerful than ever before, you can organize your board into columns, swimlanes, and groups to help you focus on the most important tasks at any time.
     - Template admins can now fully customize exactly what [requirement statuses](../Spira-Administration-Guide/Template-Requirements.md/#statuses) show on the beta planning board, and in what order. This helps you tailor the beta planning board even further to your needs.
     - A new SpiraApp for SpiraTeam and SpiraPlan lets you conduct [multiple parallel approvals of a requirement](../SpiraApps/Requirement-Multi-Approvers.md), with a one click creation of tasks that can be pre-named, and pre-assigned to relevant reviewers
 
@@ -474,7 +483,7 @@
         - As a manager using the planning board, when columns are set to status, I can see only the requirement statuses I need and in the correct order for my product, so I can better track and manage work [RQ:4420]
         - As a product template admin, I can [set what statuses should show on the beta planning board](../Spira-Administration-Guide/Template-Requirements.md/#statuses) and in what order, so product teams can use the boards more efficiently [RQ:4419]
     
-    * **As a manager, I can use the [new beta task board](../Spira-User-Manual/Task-Tracking.md/#beta-task-board), so I can better oversee and track the work of my teams**
+    * **As a manager, I can use the [new beta task board](../Spira-User-Manual/Task-Tracking.md/#task-board), so I can better oversee and track the work of my teams**
 
         - As a manager, I can filter the task board by any currently active release or sprint, so I can focus on the most relevant work at any time [RQ:4408]
         - As a manager, I can set the group by, rows, and columns, so I can quickly and intuitively arrange the board to help me see and manage relevant tasks [RQ:4409]
@@ -485,7 +494,8 @@
         - As a task board user, I can change the way a task card looks, so I can see the most meaningful information at that moment [RQ:4411]
         - As a task board user, I can view more information about a task and, if I have permissions, edit the task right from the task board, so I can work more efficiently [RQ:4412]
 
-    * **Administration <span class="pill">SpiraPlan</span>**
+    * **Administration**
+        {: .edition-spiraplan}
 
         - As an administrator, I want to see a [list of changes made in the system](../Spira-Administration-Guide/System.md/#system-history-changes), to be able to audit and review products and schedules more easily. [RQ:4477]
         - As an administrator, I want to see details of a change made in the system, to allow for a more granular inspection of product or enterprise-level changes. [RQ:4478]
@@ -555,23 +565,23 @@
 
 ??? Success "New Features"
 
-    * **[Beta Planning Board](../Spira-User-Manual/Planning-Board.md/#beta-planning-board)**
+    * **[Beta Planning Board](../Spira-User-Manual/Planning-Board.md)**
 
         - The new beta planning board has powerful functionality with a new layout and overhauled design to let you plan work effortlessly [RQ:4286]
-        * **There are useful [main display modes](../Spira-User-Manual/Planning-Board.md/#view-controls---planning) that dictate how you use the boards**
+        * **There are useful [main display modes](../Spira-User-Manual/Planning-Board.md/#board-configuration) that dictate how you use the boards**
 
             - The Product backlog lets managers prioritize ("groom") unplanned work items that do not have a scheduled release [RQ:4368]
             - The Release backlog lets managers review planned or in progress work items [RQ:4369]
             - The sprint backlog lets managers review work in a release and its sprint, or for a single sprint [RQ:4370]
-            - When working on the release or sprint backlog there is a [release dropdown](../Spira-User-Manual/Planning-Board.md/#view-controls---releases) [RQ:4381]
+            - When working on the release or sprint backlog there is a release dropdown [RQ:4381]
 
         * **The planning board makes it easy to customize how the board is organized to help you focus on the right information **
 
-            - [Users can group the board](../Spira-User-Manual/Planning-Board.md/#grouping) by certain fields (based on the view) to show one board per member of the group [RQ:4372]
-            - Within a board users can choose what field to [organize data by as columns](../Spira-User-Manual/Planning-Board.md/#columns) (the x-axis) [RQ:4373]
-            - Within a board users can choose what field to [organize data by as rows](../Spira-User-Manual/Planning-Board.md/#rows) (the y-axis) [RQ:4374]
+            - Users can group the board by certain fields (based on the view) to show one board per member of the group [RQ:4372]
+            - Within a board users can choose what field to organize data by as columns (the x-axis) [RQ:4373]
+            - Within a board users can choose what field to organize data by as rows (the y-axis) [RQ:4374]
         
-        * **[Planning board cards design updated with greater customization](../Spira-User-Manual/Planning-Board.md/#customizing-the-cards)**
+        * **[Planning board cards design updated with greater customization](../Spira-User-Manual/Planning-Board.md/#customizing-cards)**
 
             - Planning board cards always show a standard set of information that is useful and meaningful [RQ:4382]
             - Planning board cards can optionally show the artifact's description, type, status, and position [RQ:4375]
@@ -582,12 +592,14 @@
 
             - When organizing the planning board by priority, incident priority names are matched to requirement importance names [RQ:4379]
             - Incident cards can be displayed alongside requirement cards in certain views of the planning board [RQ:4380]
-            - Teams/Tracks Support in Boards <span class="pill">SpiraPlan</span> [RQ:2316]
+            - Teams/Tracks Support in Boards [RQ:2316]
+                {: .edition-spiraplan}
 
     * **System Administration**
 
         - System admins [can enable or disable](../Spira-Administration-Guide/System.md/#general-settings) beta functionality across the application for their users [RQ:4317]
-        - System admins can create and manage [a list of team names](../Spira-Administration-Guide/System-Users.md/#view--edit-teams) <span class="pill">SpiraPlan</span> [RQ:3689]
+        - System admins can create and manage [a list of team names](../Spira-Administration-Guide/System-Users.md/#view-edit-teams) [RQ:3689]
+            {: .edition-spiraplan}
         - Product admins can [associate product users to specific teams](../Spira-Administration-Guide/Product-Users.md/#team-membership) [RQ:3690]
 
 
@@ -628,7 +640,8 @@
 ## Version 7.2 (October 2022)
 
 !!! info "Summary"
-    Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more. <span class="pill">SpiraPlan</span>
+    Manage products in a whole new way. New system level custom properties and custom lists let program users see and manage your products with custom data and through new dedicated pages and custom report options. You can use these new features for improved Project Portfolio Management, to implement product charts, and much more.
+        {: .edition-spiraplan}
 
     Along with existing support for creating and editing dynamic documents inside Spira (including diagrams and documents), the new spreadsheet editor lets you create simple spreadsheets to better organize your teams and track work. You can have multiple sheets, apply formatting to cells, use a wide number of functions, and even import from and export to Excel spreadsheets.
 
@@ -657,7 +670,7 @@
     - Improve explanatory text in two places in administration for the flag that [disables rollup calculations](../Spira-Administration-Guide/Product-Planning.md/#testing-settings), and also the 2 pop-up messages [IN:7338]
     - Improve the error pages throughout the app, with a more consistent design in more places, and showing stack trace information to system admins only [IN:6293]
     - Reduce css file sizes by removing Internet Explorer 11 specific rules and values [IN:7412]
-    - Show more of the test case names on the [test case grid](../Spira-User-Manual/Test-Set-Management.md/#overview---test-cases) of the test set details page (up to 150 characters) [IN:7299]
+    - Show more of the test case names on the [test case grid](../Spira-User-Manual/Test-Set-Management.md/#overview-test-cases) of the test set details page (up to 150 characters) [IN:7299]
     - Show the program artifact dropdown when a user goes to a program page before ever going to a product [IN:7474]
     - Update the minimum SQL Server required version under which SpiraPlan can be installed to 2016 [IN:7424]
     - Set the minimum required version of .NET that the application will work under to 4.8 [RQ:3085]
@@ -667,13 +680,13 @@
 ## Version 7.1 (August 2022)
 
 !!! info "Summary"
-    Cloud customers can now [more easily and flexibly set up source code integration](../Spira-Administration-Guide/System.md/#taravault-for-source-code) inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
+    Cloud customers can now more easily and flexibly set up source code integration inside SpiraTeam and SpiraPlan. TaraVault is the default provider for Git or Subversion. Along with other quality of enhancements you can now, for each product, either user TaraVault or any other cloud based source code provider. This lets you pick the best provider for each product.
 
     Our latest [SpiraApp integrates SpiraPlan and OctoPerf](../SpiraApps/OctoPerf.md) seamlessly. Kick off load testing in OctoPerf directly from SpiraPlan and the results of the test get logged against each relevant test case.
 
 ??? Success "New Features"
 
-    - Ability to switch (at a product level) cloud Spira between [TaraVault and external Git/Subversion](../Spira-Administration-Guide/System.md/#taravault-for-source-code) [RQ:4287]
+    - Ability to switch (at a product level) cloud Spira between TaraVault and external Git/Subversion [RQ:4287]
     - A new [SpiraApp integrates SpiraPlan with Octoperf](../SpiraApps/OctoPerf.md) to allow users to launch tests directly from Spira and see relevant results as test runs [RQ:4121]
 
 ??? bug "Bug fixes and enhancements"

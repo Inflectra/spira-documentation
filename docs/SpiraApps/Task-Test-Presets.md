@@ -1,15 +1,17 @@
 # Task and Test Presets SpiraApp
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
+This SpiraApp lets users quickly create presets for a specific requirement or release:
+- Tasks
+    {: .edition-spiraplan .edition-spirateam}
+- Tests cases
 
-This SpiraApp lets users quickly create preset tasks or tests cases for a specific requirement or release. In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.
+In this way, users can with a single click create, for example, 8 preset development tasks against a requirement, or generate a handful of approval tasks for another requirement. Note that Tasks are not available in SpiraTest.
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] toolbar button on requirement details page
-    - [x] toolbar button on release details page
+    - product settings 
+    - toolbar button on requirement details page
+    - toolbar button on release details page
 
 ## Setup
 ### Product Settings
@@ -55,7 +57,9 @@ A message will show at the top of the page stating how many tasks or test cases 
 - The artifacts in a preset will not be created in the exact order they are listed in a preset. In other words, the order of artifacts names in a preset is not meaningful
 - The artifacts are added at the root folder for that artifact
 - **Requirement Task Presets**: the tasks get Owner, Priority, and Release information from the requirement
+    {: .edition-spiraplan .edition-spirateam}
 - **Requirement Test Case Presets**: the requirement's release (if set) is added to the test cases' release coverage
 - **Release Task Presets**: the tasks release is set to that of the release
+    {: .edition-spiraplan .edition-spirateam}
 - **Release Test Case Presets**: the release is added to the test cases' release coverage
 - **Test case steps**: are not added to test cases created using this SpiraApp, even in cases where the testing setting for the product states new test cases should have a default test step added

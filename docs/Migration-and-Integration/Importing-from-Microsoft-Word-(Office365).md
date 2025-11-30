@@ -1,5 +1,7 @@
 # Importing from Microsoft Word (Office 2019+, iOS, Web)
-This add-in lets you import a list of requirements or test cases (with folders and test steps) into any product in your SpiraTest, SpiraTeam, or Spira application. It lets you specify how your document is organized using its styles and headings so the data added to Spira will be hierarchically structured in the same way. It supports importing rich text, tables, lists, and images.
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
+This add-in lets you import a list of requirements or test cases (with folders and test steps) into any product in your Spira application. It lets you specify how your document is organized using its styles and headings so the data added to Spira will be hierarchically structured in the same way. It supports importing rich text, tables, lists, and images.
 
 This add-in requires:
 
@@ -10,10 +12,9 @@ This add-in requires:
     - Word in the cloud (via a web browser)
     - Word on iPad
 
-- SpiraTest®, SpiraTeam®, or SpiraPlan® application (called Spira from here on) version 6.3.0.1+
+- Spira version 6.3.0.1+
 
 ## Installation
-
 To install the add-in:
 
 - Go to the **Insert** tab in Word
@@ -26,14 +27,13 @@ To install the add-in:
 The add-in works with modern Word (docx) documents. The add-in has a number of settings to work flexibly with your existing Word files so that they can be imported into Spira without any changes. Please note that some preparation of the document may be required in some circumstances if the [styles configuration](#configure-the-styles) does not fully meet your needs.
 
 ## Connect to Spira
-
-You can use this add-in with SpiraTest®, SpiraTeam®, or Spira®. If you are using Word in the browser, make sure Spira is accessible over the internet.
+If you are using Word in the browser, make sure Spira is accessible over the internet.
 
 When you first open the add-in you will see the connection screen. Fill in the details and click "Log In" to connect the add-in to your Spira.
 
 ![Spira add-in login screen](img/word365-log-in-screen.png)
 
-* **Spira URL:** The web address that you use to access Spira® in your browser. This is usually of the form 'http://**company**.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
+* **Spira URL:** The web address that you use to access Spira in your browser. This is usually of the form 'http://**company**.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
 * **Username:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
 * **RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new RSS token.*
 
@@ -42,7 +42,6 @@ When you first open the add-in you will see the connection screen. Fill in the d
 After you have logged in click **Log-out** to close your connection with Spira and return to the add-in's login page.
 
 ## Select a Product
-
 After logging in, first you need to choose the product to import into. The dropdown shows all products you are a member of.
 
 ![Spira product selection screen](img/word365-product-select.png)
@@ -52,7 +51,6 @@ Once you have selected a product, you need to select to either import Requiremen
 ![Spira Artifact selection screen](img/word365-artifact-select.png)
 
 ## Configure the styles
-
 Select the styles used in the document which represent either the hierarchy of requirements, or the test case folder names, test case names, and table configuration for test steps. These styles must be selected to match those used in the current document. Your style selections are saved as metadata within the document itself, so next time you open the document, the styles will be pre-populated for you. 
 
 ### Requirements
@@ -136,9 +134,6 @@ Documents are often, rich, complex, very long, and have been used for a number o
             - cut the image and paste it again in the document
             - press Ctrl OR click on the pop-up with a clipboard on it in the bottom right corner of your image
             - press "U" OR select the "Picture" option in the menu that appears. 
-            
-            
-
 
 ## Functionality Differences to the Microsoft Word Classic plugin
 

@@ -81,3 +81,52 @@
   padding: 0.125rem 0.5rem;
   vertical-align: middle;
 }
+
+[class^='edition-']::after,
+[class^='feature-']::after {
+  content: "";
+  background-color: var(--yolk);
+  border-radius: 0.25rem;
+  font-size: 66%;
+  font-weight: bold;
+  padding: 0.125rem 0.5rem;
+  vertical-align: middle;
+  color: var(--md-default-fg-color--inverted);
+  margin-left: 0.5em;
+  display: inline-block;
+}
+
+/* --- Case 2: SpiraPlan ONLY --- */
+.edition-spiraplan:not(.edition-spirateam)::after {
+  content: "SpiraPlan";
+}
+
+/* --- Case 2: SpiraTeam ONLY --- */
+.edition-spirateam:not(.edition-spiraplan)::after {
+  content: "SpiraTeam";
+}
+
+/* --- Case 3: BOTH SpiraPlan and SpiraTeam --- */
+.edition-spiraplan.edition-spirateam::after {
+  content: "SpiraTeam / SpiraPlan";
+}
+
+/* --- Case 4: SpiraTest ONLY --- */
+.edition-spiratest:not(.edition-spirateam)::after {
+  content: "SpiraTest";
+}
+
+/* --- Case 5: BOTH SpiraTest and SpiraTeam --- */
+.edition-spiratest.edition-spirateam::after {
+  content: "SpiraTest / SpiraTeam";
+}
+
+/* --- Inflectra.ai --- */
+.feature-inflectraai::after {
+  content: "Inflectra.ai";
+}
+
+/* reduce spacing from the abstract admonition and the h1 - used for saying what editions the page supports */
+h1 + .admonition.abstract {
+  margin-top: -1.5rem;
+}

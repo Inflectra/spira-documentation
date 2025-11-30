@@ -1,12 +1,13 @@
 # Integrating with Jasmine
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests.
 
 Some key features of Jasmine are:
 
-* Fast- Low overhead, jasmine-core has no external dependencies.
-* Batteries Included - Comes out of the box with everything you need to test your code.
-* NodeJS and Browser - Run your browser tests and Node.js tests with the same framework.
+- Fast - Low overhead, jasmine-core has no external dependencies.
+- Batteries Included - Comes out of the box with everything you need to test your code.
+- NodeJS and Browser - Run your browser tests and Node.js tests with the same framework.
 
 The [Spira Reporter for Jasmine](https://www.npmjs.com/package/jasmine-spiratest) will integrate JasmineJS with Spira. It will create a test run in Spira for each test spec executed in Jasmine.
 
@@ -16,7 +17,7 @@ Install the integration by running `npm i jasmine-spiratest` in the root directo
 
 ```
 {
-    "url": "https://doctor/SpiraPlan",
+    "url": "https://doctor/Spira",
     "username": "fredbloggs",
     "token": "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}",
     "projectId": 1,
@@ -32,29 +33,29 @@ Install the integration by running `npm i jasmine-spiratest` in the root directo
 
 Fields are required unless otherwise noted.
 
-| Field       | Description |
-|-------------|-------------|
-| url         | The root URL of your SpiraTest instance without a '/' at the end |
-| username    | The username you use to sign into SpiraTest |
-| token       | Your RSS Token. Found in your profile page as the RSS Token field. You must have RSS Feeds enabled for this to work |
-| projectId   | The ID of the product you would like the Test Runs to be filed under |
-| releaseId   | OPTIONAL - Use if you would like to associate created test runs with a release |
-| testSetId   | OPTIONAL - Use if you would like to associated created test runs with a test set |
-| testCases   | Must contain the default field within it and, optionally, specific test cases for a given test spec name |
-| default     | Inside the testCases field, this is the ID of the default test case mapped to a created test run |
-| <spec_name> |	OPTIONAL - Use as many times as you would like to map a the created test run for a spec to a particular test case in SpiraTest. Note that capitalization, special characters and spaces are ignored both in testCases and the spec itself |
+| Field       | Description                                                                                                                                                                                                                           |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| url         | The root URL of your Spira instance without a '/' at the end                                                                                                                                                                          |
+| username    | The username you use to sign into Spira                                                                                                                                                                                               |
+| token       | Your RSS Token. Found in your profile page as the RSS Token field. You must have RSS Feeds enabled for this to work                                                                                                                   |
+| projectId   | The ID of the product you would like the Test Runs to be filed under                                                                                                                                                                  |
+| releaseId   | OPTIONAL - Use if you would like to associate created test runs with a release                                                                                                                                                        |
+| testSetId   | OPTIONAL - Use if you would like to associated created test runs with a test set                                                                                                                                                      |
+| testCases   | Must contain the default field within it and, optionally, specific test cases for a given test spec name                                                                                                                              |
+| default     | Inside the testCases field, this is the ID of the default test case mapped to a created test run                                                                                                                                      |
+| <spec_name> | OPTIONAL - Use as many times as you would like to map a the created test run for a spec to a particular test case in Spira. Note that capitalization, special characters and spaces are ignored both in testCases and the spec itself |
 Once you have added the SpiraReporter to the jasmine environment in each file as described above, you are all set!
 
-## Using the SpiraTest Reporter
+## Using the Spira Reporter
 Run `npm test` or however you ran jasmine before and you should see test runs created in the product you specified.
 
-## Sample Test Spec with SpiraTest Integration
+## Sample Test Spec with Spira Integration
 ```
 describe("Test having two specs", () => {
     var SpiraReporter = require('jasmine-spiratest');
  
     jasmine.getEnv().addReporter(new SpiraReporter({
-        "url": "https://doctor/SpiraPlan",
+        "url": "https://doctor/Spira",
         "username": "fredbloggs",
         "token": "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}",
         "projectId": 1,
@@ -83,8 +84,10 @@ describe("Test having two specs", () => {
 
 ## Have Questions or Need Assistance?
 If you are an Inflectra customer, please contact our customer support at:
+
 - Email: support@inflectra.com
 - Help Desk: https://www.inflectra.com/Support/
 
 Otherwise, please feel free to post a question on our public forums:
+
 - [Test Case Integration Forum](https://www.inflectra.com/Support/Forum/integrations/unit-testing/List.aspx)

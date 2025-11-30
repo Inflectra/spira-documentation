@@ -1,4 +1,6 @@
 # Using Spira with GitHub
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 Teams can work seamlessly using both Spira and GitHub, using Inflectra's GitHub data sync engine to keep key information in sync between both applications.
 
@@ -35,9 +37,9 @@ Note that code and commits can also sync to Spira (read only). This is handled b
 
 ## Configuring the Integration Service 
 
-This section outlines how to set up the integration service between GitHub and SpiraPlan. It assumes that you already have a working installation of SpiraPlan and a GitHub repository with an issue tracker. To setup the service, you must be logged into SpiraPlan as a user with System-Administrator level privileges.
+This section outlines how to set up the integration service between GitHub and Spira. It assumes that you already have a working installation of Spira and a GitHub repository with an issue tracker. To setup the service, you must be logged into Spira as a user with System-Administrator level privileges.
 
-Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **GitHubDataSync**, as shown below:
+Inside Spira, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **GitHubDataSync**, as shown below:
 
 ![](img/Using_Spira_with_GitHub_211.png)
 
@@ -75,17 +77,17 @@ NOTE: Leave any field called "(Not Used)" blank.
 
 ## Manually Setting Up User Mappings
 
-If the display names of users on GitHub do not match the format of their names in SpiraPlan, then the auto-mapping feature will not work, and user mappings will need to be configured manually. If there is not a user mapping for a given GitHub account, the SpiraPlan account used by the data sync will be assigned as the creator of pull requests and the owner field will be left blank where relevant.
+If the display names of users on GitHub do not match the format of their names in Spira, then the auto-mapping feature will not work, and user mappings will need to be configured manually. If there is not a user mapping for a given GitHub account, the Spira account used by the data sync will be assigned as the creator of pull requests and the owner field will be left blank where relevant.
 
 To configure the mapping of users in the two systems, go to Administration > Users > View / Edit Users to see the list of users in the Spira. Click the "Edit" button for a particular user that has an equivalent user in GitHub:
 
 ![](img/Using_Spira_with_GitHub_218.png)
 
-Click on the "Data mapping" tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "GitHub ID", enter the GitHub username of the user. Click "Save" and the user in SpiraPlan will be mapped to that GitHub user. Repeat this for each user who will be active or used in both systems.
+Click on the "Data mapping" tab to list all the configured data-synchronization plug-ins for this user. In the text box labeled "GitHub ID", enter the GitHub username of the user. Click "Save" and the user in Spira will be mapped to that GitHub user. Repeat this for each user who will be active or used in both systems.
 
 ## Configuring Product Mappings
 
-For this step, please ensure that you are in the SpiraPlan product you would like to sync with GitHub. For this example, the product is called "Library Information System".
+For this step, please ensure that you are in the Spira product you would like to sync with GitHub. For this example, the product is called "Library Information System".
 
 ### Configuring Repository Mappings
 
@@ -93,34 +95,34 @@ For this step, please ensure that you are in the SpiraPlan product you would lik
 
 Click on the "View product Mappings" button for GitHub Data Sync. You need to fill out the following fields to sync correctly:
 
--   **External Key** -- The name of your GitHub repository. In the example above, where the URL in GitLab was <https://github.com/octocat/Hello-World>, you would simply enter "Hello-World" for this setting.
+-   **External Key**: The name of your GitHub repository. In the example above, where the URL in GitLab was <https://github.com/octocat/Hello-World>, you would simply enter "Hello-World" for this setting.
 
--   **Active** -- Set this to yes so that the Data Sync plug-in knows to synchronize with this product.
+-   **Active**: Set this to yes so that the Data Sync plug-in knows to synchronize with this product.
 
 ### Configuring Issue Mappings
 
 ![](img/Using_Spira_with_GitHub_214.png)
 
-Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the GitHub Data Sync plug-in knows what the equivalent status is in GitHub for an incident status in SpiraPlan.
+Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the GitHub Data Sync plug-in knows what the equivalent status is in GitHub for an incident status in Spira.
 
 ![](img/Using_Spira_with_GitHub_215.png)
 
 You must map every status in the system. Descriptions of the field are below:
 
--   **External Key** -- Either **open** or **closed**, which are the only two statuses in GitHub
+-   **External Key**: Either **open** or **closed**, which are the only two statuses in GitHub
 
--   **Primary** -- You must have exactly one primary key for **open** and one for **closed**. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitHub changes.
+-   **Primary**: You must have exactly one primary key for **open** and one for **closed**. This is what status the plug-in should set the incident in Spira to when the status in GitHub changes.
 
-Click "Save" and assuming everything was done correctly, the plug-in should work. Start your Data Sync service and verify that issues in GitHub appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
+Click "Save" and assuming everything was done correctly, the plug-in should work. Start your Data Sync service and verify that issues in GitHub appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 
 Congratulations, you have just integrated Spira with GitHub's integrated issue tracker!
 
 
 ## Syncing Pull Requests
 !!! danger "Set Up GitHub As A Source Code Provider"
-    **If you do not [set up GitHub as a source code provider](../Version-Control-Integration/Integrating-with-Git.md) pull request syncing will not work. Once the source code integration is set up, pull request syncing will work after the cache in SpiraPlan has been.**
+    **If you do not [set up GitHub as a source code provider](../Version-Control-Integration/Integrating-with-Git.md) pull request syncing will not work. Once the source code integration is set up, pull request syncing will work after the cache in Spira has been.**
 
-To sync pull requests, the GitHub repository that is being synced must be connected to the same product both as an issue tracker (as outlined in this guide) and as a source code provider. Pull requests are synced from GitHub into SpiraPlan only. 
+To sync pull requests, the GitHub repository that is being synced must be connected to the same product both as an issue tracker (as outlined in this guide) and as a source code provider. Pull requests are synced from GitHub into Spira only. 
 
 ### Additional Product and Template Configuration
 Syncing pull requests has additional requirements in terms of product mappings and product template configuration for this feature to work. If you are not syncing Pull requests, you do not need to do this additional setup.
@@ -143,5 +145,5 @@ These external keys mean the following:
 ![](img/Using_Spira_with_GitHub_217.png)
 
 ### General Pull Request Notes
-- Pull requests that reference branches that do not exist in your SpiraPlan source code cache will not sync to SpiraPlan. 
-- The "Owner" field in SpiraPlan is set to the first user in the "Assignee" field on GitHub. This is not the same as the "Reviewer" field.
+- Pull requests that reference branches that do not exist in your Spira source code cache will not sync to Spira. 
+- The "Owner" field in Spira is set to the first user in the "Assignee" field on GitHub. This is not the same as the "Reviewer" field.

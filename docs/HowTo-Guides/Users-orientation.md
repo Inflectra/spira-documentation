@@ -34,7 +34,7 @@ Every page in Spira has a link to the exact right place in our online documentat
 
 ## What are artifacts and how to pick one {: .section-break}
 1. Artifacts are the building blocks of a product or program and contain all of their data. 
-2. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They both work differently, and are not interchangable.
+2. Each artifact holds different data and is used in different ways. For instance, requirements are one artifact, and releases are another. They both work differently, and are not interchangeable.
 3. Spira has specific artifacts designed to help you do things like test, plan, track bugs and tasks, and more.
 4. By using the artifact selector on the global navigation bar you can see all the artifacts available to you for the current workspace. 
 5. To learn more about each artifact, hover over the artifact name in the artifact selector to see its tooltip

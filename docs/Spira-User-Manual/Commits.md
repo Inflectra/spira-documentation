@@ -1,14 +1,20 @@
+---
+pdf: true
+---
+
 # Commits
-Go [here](Source-Code.md/#getting-started-with-source-code) to read about how to connect your source code to your SpiraPlan product.
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+Go [here](Source-Code.md/#getting-started-with-source-code) to read about how to connect your source code to your Spira product.
 
 ## Linking To Artifacts In Commit Messages
-When developers are working on source code, it is often to fix a bug, create a feature described in a user story, or deal with a task. SpiraPlan lets you trace what commits (and therefore file changes) contributed to a bug fix. To do this SpiraPlan reads commit messages for special tokens that it turns into links between the commit and those artifacts. If SpiraPlan finds any links in the commit message it automatically creates the association between the commit and the artifact(s). You can view these associations from the [commit details](#commit-details) page, or from the associations tab of any artifact.
+When developers are working on source code, it is often to fix a bug, create a feature described in a user story, or deal with a task. Spira lets you trace what commits (and therefore file changes) contributed to a bug fix. To do this Spira reads commit messages for special tokens that it turns into links between the commit and those artifacts. If Spira finds any links in the commit message it automatically creates the association between the commit and the artifact(s). You can view these associations from the [commit details](#commit-details) page, or from the associations tab of any artifact.
 
 How does this work? The commit message has to contain one or more artifact token. For example [TK:123], or [IN:456], or [RQ:789]. These tokens are short and do not get in the way of the rest of the commit message. Artifact tokens are in the following format: `[{artifact identifier}:{artifact id}]`
 
-The first half of the token is a two-letter code, used throughout SpiraPlan and visible on almost every page in the application. For example, a requirement's identifier is "**RQ**". Incidents are "**IN**", and test cases are "**TC**". The artifact ID is the number of the artifact. If you go to the details page for an artifact, you will always see this artifact token near the top of the page. Clicking on it copies it to your clipboard. Then you can paste it into your commit message.
+The first half of the token is a two-letter code, used throughout Spira and visible on almost every page in the application. For example, a requirement's identifier is "**RQ**". Incidents are "**IN**", and test cases are "**TC**". The artifact ID is the number of the artifact. If you go to the details page for an artifact, you will always see this artifact token near the top of the page. Clicking on it copies it to your clipboard. Then you can paste it into your commit message.
 
-**Note:** If you forget to add the association during the commit, go to the [details page](#commit-details) for that commit in SpiraPlan, and click 'Add Association' to add the association at any time.
+**Note:** If you forget to add the association during the commit, go to the [details page](#commit-details) for that commit in Spira, and click 'Add Association' to add the association at any time.
 
 
 ## Commit List
@@ -79,7 +85,7 @@ A commit exists in any branch that was made from the branch the commit was origi
 ### Associations
 ![](img/Source_Code_404.png)
 
-This shows all current associations between this commit and any artifacts in SpiraPlan. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the commit. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).
+This shows all current associations between this commit and any artifacts in Spira. This lets you to see which requirements, test cases, incidents, tasks, etc. are linked to the commit. Clicking on the artifact name will take you to the appropriate artifact page (assuming your user has permissions to access that information).
 
 You can also add artifact associations to many other artifacts in the system from this panel. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations).
 
@@ -87,7 +93,7 @@ You can also add artifact associations to many other artifacts in the system fro
 ## Commit File Details
 Files are changed as source code develops. Each commit adds or changes or removes files. This pages allows you to see exactly how a file was changed between one commit and the next. For example, you could see that one function was added, and that another line of code was deleted. Or you can see how an image file looked before and after the commit.
 
-SpiraPlan supports showing before and after previews of all file types that it can show previews for elsewhere in the application (for example, text files and images). For text files (things like code, markdown, and plain text), SpiraPlan will also show a line by line comparison of both file versions. 
+Spira supports showing before and after previews of all file types that it can show previews for elsewhere in the application (for example, text files and images). For text files (things like code, markdown, and plain text), Spira will also show a line by line comparison of both file versions. 
 
 ![commit file details page](img/Source_Code_407.png)
 

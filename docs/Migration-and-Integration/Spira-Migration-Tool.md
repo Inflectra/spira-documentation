@@ -1,4 +1,5 @@
 #  Spira Template Backup and Migration Tool
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This application lets you save a copy of a Spira product template to a .templ file on your local computer. It also lets you migrate everything about the template to any Spira instance. 
 
@@ -16,7 +17,7 @@ The application runs on either Windows or Mac OS and is available to [download](
 ## What data is saved
 The application creates a backup file that contains the following product template and related data:
 
-- **Requirement** importances, statuses[^statuses], types, custom properties, workflow steps, and workflow transitions    
+- **Requirement** importance, statuses[^statuses], types, custom properties, workflow steps, and workflow transitions    
 - **Release** statuses, custom properties, workflow steps, and workflow transitions     
 - **Document** statuses, types, custom properties, workflow steps, and workflow transitions
 - **Test Case** priorities, types, custom properties, workflow steps, and workflow transitions

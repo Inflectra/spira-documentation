@@ -1,15 +1,19 @@
-# Template: Incidents
+---
+pdf: true
+---
 
-In addition to being able to create custom properties and values for incidents (same as for all artifacts in SpiraPlan®), you can also change the values populated in many of the standard fields used in the incident tracker -- types, statuses, priorities and severities. The process for changing each of these is described below:
+# Template: Incidents
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
+In addition to being able to create custom properties and values for incidents (same as for all artifacts in Spira), you can also change the values populated in many of the standard fields used in the incident tracker -- types, statuses, priorities and severities. The process for changing each of these is described below:
 
 
 ## Edit Types
-
 The following screen is displayed when you choose the "Types" link from the Incidents section of the administration menu:
 
 ![](img/Template_Incidents_144.png)
 
-The screen displays a list of all the defined incident types for the current template. By default the screen will be populated with the standard SpiraPlan® incident types. To edit an existing incident type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".
+The screen displays a list of all the defined incident types for the current template. By default the screen will be populated with the standard Spira incident types. To edit an existing incident type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".
 
 You can't delete an existing incident type, but to prevent it appearing in any drop-down-lists, all you need to do is change its active flag to "No" and click "Save". To add a new incident type, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -39,37 +43,31 @@ Above the list of statuses is a Displaying dropdown that lets you choose which s
 - **Position**: controls the order that the statuses are displayed on the [workflow](#edit-workflow-details) page and on the [incident planning board](../Spira-User-Manual/Incident-Tracking.md/#incident-board). The position for each status can be empty or a unique number (not in use by another status). Statuses are ordered in ascending order of their position. Statuses with no position are sorted alphabetically by their names and will show before those with a position.
 - **Active**: sets if the status is active or not. Only active statuses are available in workflows and in the application.
 
-
-
 ## Priorities
-
 The following screen is displayed when you choose the "Priorities" link from the Incidents section of the administration menu:
 
 ![](img/Template_Incidents_146.png)
 
-The screen displays a list of all the defined incident priorities for the current template. By default, the screen will be populated with the standard SpiraPlan® incident priorities. To edit an existing incident priority, change the name, color and/or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
+The screen displays a list of all the defined incident priorities for the current template. By default, the screen will be populated with the standard Spira incident priorities. To edit an existing incident priority, change the name, color and/or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
 
 You can't delete an existing incident priority, but to prevent it appearing in any drop-down-lists, all you need to do is change its active flag to "No" and click "Save". To add a new incident priority, click the "Add" button and a new row will be added to the list which you can now edit.
 
-
 ## Severities
-
 The following screen is displayed when you choose the "Severities" link from the Incidents section of the administration menu:
 
 ![](img/Template_Incidents_147.png)
 
-The screen displays a list of all the defined incident severities for the current template. By default, the screen will be populated with the standard SpiraPlan® incident severities. To edit an existing incident severity, change the name, color and/or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
+The screen displays a list of all the defined incident severities for the current template. By default, the screen will be populated with the standard Spira incident severities. To edit an existing incident severity, change the name, color and/or change the active flag then click "Save". Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
 
 You can't delete an existing incident severity, but to prevent it appearing in any drop-down-lists, all you need to do is change its active flag to "No" and click "Save". To add a new incident severity, click the "Add" button and a new row will be added to the list which you can now edit.
 
 
 ## Incident Workflows
-
 Clicking on the "Workflows" link in the Administration menu brings up the list of defined incident workflows for the current template. A workflow is a predefined sequence of incident statuses linked together by "workflow transitions" to enable a newly created incident to be reviewed, prioritized, assigned, resolved and closed, as well as to handle exception cases such as the case of a duplicate or non-reproducible incident. The workflow list screen for a sample template is illustrated below:
 
 ![](img/Template_Incidents_148.png)
 
-To modify the name, default status, notify and/or active flags, change the values in the appropriate text-box, radio-button, check-box or drop-down list and click the "Save" button. To add a new workflow, click the "Add" button and a new workflow will be created with the standard SpiraPlan® steps and transitions.
+To modify the name, default status, notify and/or active flags, change the values in the appropriate text-box, radio-button, check-box or drop-down list and click the "Save" button. To add a new workflow, click the "Add" button and a new workflow will be created with the standard Spira steps and transitions.
 
 You can have as many workflows as you like in a template, but only one can be marked as the default. Each incident type is assigned to a workflow; this allows you to have different incident types follow different paths from creation of closure. However when a new incident type is created, it will be initially associated with the template's default workflow. The steps and transitions that make up the default workflow are illustrated in the diagram below:
 
@@ -102,13 +100,12 @@ flowchart LR
   style Resolved fill:#f9f
 ```
 
-The notify flag is used to tell SpiraPlan® whether that particular workflow should have email notifications turned on or off. You define what transitions and which recipients should receive the emails in the workflow transition editor (see below), but you can globally turn on/off notifications here as well. This is useful if you find that the notifications are becoming an annoyance, or if the email server is unavailable for a period of time.
+The notify flag is used to tell Spira whether that particular workflow should have email notifications turned on or off. You define what transitions and which recipients should receive the emails in the workflow transition editor (see below), but you can globally turn on/off notifications here as well. This is useful if you find that the notifications are becoming an annoyance, or if the email server is unavailable for a period of time.
 
 Note: You can only assign an active workflow to an incident type, and similarly you cannot make a workflow inactive that is currently linked to an incident type. This is important as all incident types need to be linked to an active workflow at all times.
 
 
 ### Edit Workflow Details
-
 Clicking on the "Steps" button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 
 ![](img/Template_Incidents_150.png)
@@ -119,7 +116,6 @@ Clicking on the name of a step or transition takes you to the appropriate detail
 
 
 ### Edit Workflow Transition
-
 When you click on the transition name link from the previous screen, you are taken to the workflow transition details screen:
 
 ![](img/Template_Incidents_151.png)
@@ -152,14 +148,13 @@ A user with a specified role can be allowed to execute the transition, and/or be
 
 
 ### Edit Workflow Step
-
 When you click on the incident status name link from either of the previous screens, you are taken to the workflow step details screen:
 
 ![](img/Template_Incidents_155.png)
 
 The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current incident status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.
 
-This page allows you to define the behavior of the various incident fields (i.e. those that are a standard part of SpiraPlan® such as Priority):
+This page allows you to define the behavior of the various incident fields (i.e. those that are a standard part of Spira such as Priority):
 
 ![](img/Template_Incidents_156.png)
 

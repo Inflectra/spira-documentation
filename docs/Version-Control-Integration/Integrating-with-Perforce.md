@@ -1,15 +1,16 @@
 # Integrating with Perforce
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
 ## Installing the Perforce Plug-In  
-To install the Perforce Version Control plug-in, copy the following files to the folder named "VersionControl" in the SpiraTeam installation folder:
+To install the Perforce Version Control plug-in, copy the following files to the folder named "VersionControl" in the Spira installation folder:
     
-    -   Inflectra.Global.dll
-    -   P4API.dll
-    -   P4DN.dll
-    -   PerforceProvider.dll
+-   Inflectra.Global.dll
+-   P4API.dll
+-   P4DN.dll
+-   PerforceProvider.dll
 
-## Configuring Perforce in SpiraPlan
-Before you can start using Perforce in SpiraPlan you need to setup, at a system level, how Perforce and SpiraPlan should work together: 
+## Configuring Perforce in Spira
+Before you can start using Perforce in Spira you need to setup, at a system level, how Perforce and Spira should work together: 
 
 - Log in as a system admin, and go to System Admininstration > Integration > Source Code
 - If there is not already an entry for "PerforceProvider" click "Add" to go to the Plug-in details page
@@ -46,11 +47,10 @@ Once Perforce has been configured at the system level, you are ready to use it f
 
 ![](img/Integrating_with_Perforce_54.png)
 
-
-## Using Perforce with SpiraTeam
+## Using Perforce with Spira
 Source code setup for your product is complete. Click on the "Source Code" or "Commits" menu items under the Developing tab to navigate and browse the source code repository.
 
-You can read more about working with source code in SpiraPlan at the links below:
+You can read more about working with source code in Spira at the links below:
 
 - [Source code files](../Spira-User-Manual/Source-Code.md/#source-code-file-list)
 - [Commits](../Spira-User-Manual/Commits.md/#commit-list)

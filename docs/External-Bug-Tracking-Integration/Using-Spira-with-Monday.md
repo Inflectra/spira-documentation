@@ -1,7 +1,9 @@
 # Using Spira with *monday.com*
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 The *monday.com* products are cloud-based platforms that allows users to create their own applications and work management software with more than 50 integrations with other applications.
 
-This page outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (called Spira from here on) with *monday.com* products. This data sync engine lets you add new *monday.com* items to Spira as Tasks and Incidents (and vice versa). The data sync also lets you update artifacts and items in both systems/directions.
+This page outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (called Spira from here on) with *monday.com* products. This data sync engine lets you add new *monday.com* items to Spira as Tasks (not available in SpiraTest) and Incidents (and vice versa). The data sync also lets you update artifacts and items in both systems/directions.
 
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
@@ -44,7 +46,7 @@ plugin to offset timestamps.
     - "incidents_only"
     - "both"
 
-- **Sync subitems?**: Ignore this setting if you are using the *spira_to_monday* sync mode. Otherwise, if you want the *monday.com* subitems to be synced to Spira, please enter *yes* to this field. If you want the datasync to skip *monday.com* subitems, enter *no*. You can learn more about this [below](#monday-sub-items).
+- **Sync subitems?**: Ignore this setting if you are using the *spira_to_monday* sync mode. Otherwise, if you want the *monday.com* subitems to be synced to Spira, please enter *yes* to this field. If you want the datasync to skip *monday.com* subitems, enter *no*. You can learn more about this [below](#mondaycom-sub-items).
 
 Once all those fields have been filled out, click the "Save" button to save your changes.
 
@@ -75,7 +77,7 @@ Now click the "Status" button within the "Incident" section to map the incident 
 You must map every status in the system. Descriptions of the field are below:
 
 - **External Key**: Status is a dropdown in *monday.com*, so please match the Status names with the Spira statuses. Please make sure to type the exact name you see in *monday.com*. Also, make sure to use a single option dropdown menu for this option in *monday.com*, as Spira does not support having multiple Incident Status.
-- **Primary**: You must have exactly one primary key for each *monday.com* status. This is what status the plug-in should set the incident in SpiraPlan to when the status in *monday.com* changes. This is only used if there are more options in SpiraPlan than *monday.com*.
+- **Primary**: You must have exactly one primary key for each *monday.com* status. This is what status the plug-in should set the incident in Spira to when the status in *monday.com* changes. This is only used if there are more options in Spira than *monday.com*.
 
 
 ### Incident Priority Mapping
@@ -86,7 +88,7 @@ Select the "Priority" button within the "Incident" section to map the incident p
 You must map every priority in the system. Descriptions of the field are below:
 
 - **External Key**: Priority is a dropdown in *monday.com*, so please match the Priority names with the Spira priorities. Please make sure to type the exact name you see in *monday.com*. Also, make sure to use a single option dropdown menu for this option in *monday.com*, as Spira does not support having multiple Incident Priority.
-- **Primary**: You must have exactly one primary key for each *monday.com* priority. This is what status the plug-in should set the incident in SpiraPlan to when the priority in *monday.com* changes. This is only used if there are more options in SpiraPlan than *monday.com*.
+- **Primary**: You must have exactly one primary key for each *monday.com* priority. This is what status the plug-in should set the incident in Spira to when the priority in *monday.com* changes. This is only used if there are more options in Spira than *monday.com*.
 
 
 ### Incident Type Mapping
@@ -98,7 +100,7 @@ Data Sync plug-in knows what the equivalent type is in *monday.com* for an incid
 You must map every Type in the system. Descriptions of the field are below:
 
 - **External Key**: Type is a dropdown in *monday.com*, so please match the Type names with the Spira types. Please make sure to enter the exact name you see in *monday.com*. Also, make sure to use a single option dropdown menu for this option in *monday.com*, as Spira does not support having multiple Incident types.
-- **Primary**: You must have exactly one primary key for each *monday.com* Type. This is what status the plug-in should set the incident in SpiraPlan to when the Type in *monday.com* changes. This is only used if there are more options in SpiraPlan than *monday.com*.
+- **Primary**: You must have exactly one primary key for each *monday.com* Type. This is what status the plug-in should set the incident in Spira to when the Type in *monday.com* changes. This is only used if there are more options in Spira than *monday.com*.
 
 
 ### Incident Severity Mapping
@@ -130,7 +132,7 @@ Click on the 'Data Mapping' tab to list all the configured data-synchronization 
 
 
 ### *monday.com* fields
-The flexibility  of *monday.com* means some assumptions were made in the design of this data sync. Specific column names are mapped to their counterparts in SpiraPlan based on the list below. If a field is not present in *monday.com*, it will not be synced.
+The flexibility  of *monday.com* means some assumptions were made in the design of this data sync. Specific column names are mapped to their counterparts in Spira based on the list below. If a field is not present in *monday.com*, it will not be synced.
 
 | Spira Field          | *monday.com* Field Name | *monday.com* Field Type  |
 | -------------------- | ----------------------- | ------------------------ |

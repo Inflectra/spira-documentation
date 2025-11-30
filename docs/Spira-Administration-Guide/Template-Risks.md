@@ -1,10 +1,14 @@
+---
+pdf: true
+---
+
 # Template: Risks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This section contains administrative options that are specific to the risk functionality in the system.
 
 
 ## Edit Types
-
 The following screen is displayed when you choose the "Types" link from the Incidents section of the administration menu:
 
 ![](img/Template_Risks_167.png)
@@ -19,7 +23,6 @@ The default radio button allows you to specify which type should be the default 
 
 
 ## Edit Statuses
-
 The following screen is displayed when you choose the "Statuses" link from the Risks section of the administration menu:
 
 ![](img/Template_Risks_168.png)
@@ -32,7 +35,6 @@ The open check-box allow you to specify if the risk status should be considered 
 
 
 ## Impact
-
 The following screen is displayed when you choose the "Impact" link from the Risks section of the administration menu. The impact of a risk specifies how serious it will be if the risk happens.
 
 ![](img/Template_Risks_169.png)
@@ -43,7 +45,6 @@ You can't delete an existing impact, but to prevent it appearing in any drop-dow
 
 
 ## Probability
-
 The following screen is displayed when you choose the "Probability" link from the Risks section of the administration menu:
 
 ![](img/Template_Risks_170.png)
@@ -55,7 +56,6 @@ You can't delete an existing risk probability, but to prevent it appearing in an
 
 
 ## Risk Workflows
-
 Clicking on the "Workflows" link in the Administration menu brings up the list of defined risk workflows for the current template. A workflow is a predefined sequence of risk statuses linked together by "workflow transitions" to enable a newly created risk to be reviewed, prioritized, assigned, resolved and closed. The workflow list screen for a sample template is illustrated below:
 
 ![](img/Template_Risks_171.png)
@@ -69,7 +69,6 @@ Note: You can only assign an active workflow to a risk type, and similarly you c
 
 
 ### Edit Workflow Details
-
 Clicking on the "Steps" button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 
 ![](img/Template_Risks_172.png)
@@ -80,7 +79,6 @@ Clicking on the name of a step or transition takes you to the appropriate detail
 
 
 ### Edit Workflow Transition
-
 When you click on the transition name link from the previous screen, you are taken to the workflow transition details screen:
 
 ![](img/Template_Risks_173.png)
@@ -93,7 +91,6 @@ Each transition has a series of conditions which need to be satisfied for a user
 
 
 ### Edit Workflow Step
-
 When you click on the incident status name link from either of the previous screens, you are taken to the workflow step details screen:
 
 ![](img/Template_Risks_174.png)

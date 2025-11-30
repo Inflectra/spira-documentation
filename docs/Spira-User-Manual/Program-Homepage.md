@@ -1,4 +1,10 @@
+---
+pdf: true
+---
+
 # Program Homepage
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 When you navigate to a Program from the global navigation bar or from any link to it in the application, you will be taken to the homepage of that program:
 
@@ -6,7 +12,8 @@ When you navigate to a Program from the global navigation bar or from any link t
 
 This page summarizes all of the information about the program in a "one-stop-shop". The Program Homepage has 3 versions you can quickly switch between. While each of these can be customized as you want, by default they are designed to help different types of user: general users, those using capabilities, and QA.
 
-<span class="pill">SpiraPlan</span> You can choose to filter relevant widgets by any open program milestone, or to view widgets by the whole program, by using the "Displaying" dropdown at the top of the page to choose either "All Program Milestones" or a specific open program milestone.
+You can choose to filter relevant widgets by any open program milestone, or to view widgets by the whole program, by using the "Displaying" dropdown at the top of the page to choose either "All Program Milestones" or a specific open program milestone.
+    {: .edition-spiraplan}
 
 You will see a small "i" in a circle at the top right of each widget. Hovering or clicking on this will show you information about that chart.
 
@@ -28,35 +35,36 @@ Together, these editing options let you change the page to suit your needs. If y
 
 By default, the program home page shows the "General" view. The following table shows which widgets are displayed on the different views of the 'Program Home':
 
-| Widget Name                           | General | Capabilities | Quality |
-| ------------------------------------- | ------- | ------------ | ------- |
-| Capability Open Count                 |         | Y            |         |
-| Capability Summary                    |         | Y            |         |
-| Incident Aging                        |         | Y            | Y       |
-| Product List                          | Y       | Y            | Y       |
-| Products: Completion                  | Y       |              |         |
-| Products: Relative Size               | Y       |              |         |
-| Products: Test Summary                |         |              | Y       |
-| Program Overview                      | Y       | Y            | Y       |
-| Program Milestone Capability Progress |         | Y            |         |
-| Program Milestone Completion          |         | Y            |         |
-| Requirement Completion                | Y       |              | Y       |
-| Requirements Coverage                 | Y       |              | Y       |
-| Recent Builds                         |         |              | Y       |
-| Schedule                              | Y       |              |         |
-| Task Progress                         |         | Y            |         |
-| Test Execution Status                 |         | Y            | Y       |
-| Top Open Issues                       | Y       | Y            |         |
-| Top Open Risks                        | Y       |              |         |
+| Widget Name                                 | General | Capabilities | Quality |
+| ------------------------------------------- | ------- | ------------ | ------- |
+| Capability Open Count [^SP]                 |         | Y            |         |
+| Capability Summary [^SP]                    |         | Y            |         |
+| Incident Aging                              |         | Y            | Y       |
+| Product List                                | Y       | Y            | Y       |
+| Products: Completion                        | Y       |              |         |
+| Products: Relative Size                     | Y       |              |         |
+| Products: Test Summary                      |         |              | Y       |
+| Program Overview                            | Y       | Y            | Y       |
+| Program Milestone Capability Progress [^SP] |         | Y            |         |
+| Program Milestone Completion [^SP]          |         | Y            |         |
+| Requirement Completion                      | Y       |              | Y       |
+| Requirements Coverage                       | Y       |              | Y       |
+| Recent Builds                               |         |              | Y       |
+| Schedule                                    | Y       |              |         |
+| Task Progress [^STSP]                       |         | Y            |         |
+| Test Execution Status                       |         | Y            | Y       |
+| Top Open Issues                             | Y       | Y            |         |
+| Top Open Risks [^STSP]                      | Y       |              |         |
 
+[^SP]: Available in SpiraPlan
+
+[^STSP]: Available in SpiraTeam & SpiraPlan
 
 ## Program Overview
-
 This section displays the name of the program, together with a brief description, the web-site that points to any additional information about the program, and the names of the owners of the program. In SpiraPlan, if the program is part of a portfolio, the portfolio name is also shown.
 
 
 ## Product List
-
 This section lists all the active products that make up the program, together with the name, description, program and date of creation. To view the description of the product, simply position the mouse pointer over the link, and a tooltip window will popup containing the description.
 
 ## Products: Completion
@@ -93,7 +101,6 @@ This Gantt chart shows all active releases and sprints in this program. Each bar
 This chart shows the proportion of all active requirements that have been completed across all active products in this program. When 100% of the requirements are completed, the color changes so that it is easy to tell what is in progress vs completed.
 
 ## Requirements Coverage
-
 This section consists of a bar graph that displays the aggregated count of requirements test coverage for the entire program. The Passed, Failed, Blocked, Caution and Not-Run bars indicate the total count of requirements that have tests covering them, allocated across the execution status of the covering tests
 
 Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the specific requirements coverage distribution for that product. That way you can see both the aggregate coverage and also the relative coverage for the products. *You can choose to show the aggregate bar graph, and/or the product-specific requirements coverage from the widget settings.*
@@ -102,6 +109,7 @@ By default, this widget shows data for **active releases only** in each product 
 
 
 ## Task Progress
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This section consists of a bar graph that displays the aggregated count of tasks by progress category for the entire program. The 'On Schedule',
 'Late Finish', 'Late Start' and 'Not Started' bars indicate the total count of tasks that are in that category for all the products in the program.
@@ -111,7 +119,6 @@ Under the main bar graph is displayed a table containing each product in the pro
 By default, this widget shows data for **active releases only** in each product in the program. *You can choose to show data for all releases in all products of the program from the widget settings.*
 
 ## Test Execution Status
-
 This section consists of a bar graph that displays the aggregated count of test cases by execution status for the entire program. The Passed, Failed, Blocked, Caution and Not-Run bars indicate the total count of test cases that are in that category for all the products in the program.
 
 Under the main bar graph is displayed a table showing each product in the program with the following information:
@@ -131,16 +138,13 @@ In the widget settings you can choose to:
 - show/hide the bar graph (tip: don't hide both this AND the product table - if you do your widget will be totally empty)
 
 
-
 ## Incident Aging
-
 This section displays the number of days incidents have been left open in the system. The chart is organized as a histogram, with the count of incidents on the y-axis (for all products in the program) and different age intervals on the x-axis.
 
 Under the main bar graph is displayed a table containing each product in the program and a colored bar illustrating the distribution of open incidents by priority for that product. That way you can see both the aggregate aging for the program and also the relative priority of open incidents for each product. *You can configure in the widget settings whether you want to see the aggregate aging histogram, and/or the product-specific incident count by priority.*
 
 
 ## Top Open Issues
-
 This section displays a breakdown of the top issues logged against any of the products in the program, in order of decreasing priority. Note that items not given a priority are listed at the top, since critical issues could be lurking in that list, and the product manager will want to immediately review these to assign priorities. Clicking on the issue item hyperlink will take you to the incident details page for the issue in question (see [Incident Tracking > Incident Details](Incident-Tracking.md/#incident-details)). *You can configure in the settings whether to use Priority or Severity for the display, and also how many rows of data to display.*
 
 
@@ -171,17 +175,25 @@ This table shows an information-dense, but easy to understand assessment of each
 - the number of open incidents and the priority distribution of them
 
 ## Capability Open Count 
-<span class="pill">SpiraPlan</span> This chart shows the proportion of capabilities which are open, as well as the breakdown of all open capabilities in the program by priority. The bar chart's bars are colored to match the configured color of each priority. (Works with the program milestone filter at the top of the page).
+!!! abstract "Available in SpiraPlan only"
+
+This chart shows the proportion of capabilities which are open, as well as the breakdown of all open capabilities in the program by priority. The bar chart's bars are colored to match the configured color of each priority. (Works with the program milestone filter at the top of the page).
 
 
 ## Capability Summary
-<span class="pill">SpiraPlan</span> This widget shows a table of capabilities split by their status (on the y axis) and their priority (on the x axis). It provides a count of capabilities with each status/priority combination (for instance, how many capabilities are high priority with a status of to do). Clicking on any of the counts for a given status/priority will open the capability list page filtered to that combination of status and priority. (Works with the program milestone filter at the top of the page).
+!!! abstract "Available in SpiraPlan only"
+
+This widget shows a table of capabilities split by their status (on the y axis) and their priority (on the x axis). It provides a count of capabilities with each status/priority combination (for instance, how many capabilities are high priority with a status of to do). Clicking on any of the counts for a given status/priority will open the capability list page filtered to that combination of status and priority. (Works with the program milestone filter at the top of the page).
 
 ## Program Milestone Capability Progress
-<span class="pill">SpiraPlan</span> This widget shows a list of all open program milestones. For each program milestone it shows the name (click to see more), number of associated capabilities (click to see more), and its overall progress. (Works with the program milestone filter at the top of the page).
+!!! abstract "Available in SpiraPlan only"
+
+This widget shows a list of all open program milestones. For each program milestone it shows the name (click to see more), number of associated capabilities (click to see more), and its overall progress. (Works with the program milestone filter at the top of the page).
 
 ## Program Milestone Completion
-<span class="pill">SpiraPlan</span> This chart shows the proportion of planned days remaining as well as the proportion of all active capabilities that have been completed across currently open milestones in this program. It highlights the data in different colors depending on the proportion of capabilities and days remaining, to give an idea of how well program milestones are sticking to their planned timeframes. (Works with the program milestone filter at the top of the page).
+!!! abstract "Available in SpiraPlan only"
+
+This chart shows the proportion of planned days remaining as well as the proportion of all active capabilities that have been completed across currently open milestones in this program. It highlights the data in different colors depending on the proportion of capabilities and days remaining, to give an idea of how well program milestones are sticking to their planned timeframes. (Works with the program milestone filter at the top of the page).
 
 Chart color definitions:
 

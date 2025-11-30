@@ -1,6 +1,9 @@
-# Program Capabilities
+---
+pdf: true
+---
 
-!!! info "These features are only available in SpiraPlan"
+# Program Capabilities
+!!! abstract "Available in SpiraPlan only"
 
 ## Statuses
 The following screen is displayed when you choose the "Statuses" link from the Capabilities section of the system administration menu:

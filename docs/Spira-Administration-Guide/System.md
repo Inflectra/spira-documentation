@@ -1,37 +1,42 @@
-# System
+---
+pdf: true
+---
 
+# System
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## General Settings
 
-The general settings page allows you to configure SpiraPlan® to better match your environment and setup. In the current version, you can specify the default language, or configure the folder used to store document attachments:
+The general settings page allows you to configure Spira to better match your environment and setup. In the current version, you can specify the default language, or configure the folder used to store document attachments:
 
 ![](img/System_57.png)
 
 The available settings include:
 
-- **Default Culture**: SpiraPlan can display information in a variety of different languages (assuming that the appropriate language packs have been installed) and number formats. By default, SpiraPlan will use the regional settings (language and number formats) of the operating system it has been installed on. However, you can override this default by choosing the appropriate culture from the list of options displayed in the drop-down list. *Note: The list of culture options does not reflect the available language packs, so in some cases, the setting will only change the number formats.*
-- **Default Timezone**: SpiraPlan stores all dates and times internally in Universal Coordinated Time (UTC) and can therefore display dates/times adjusted for different timezones. By default, SpiraPlan will display dates in the timezone specified in the operating system it has been installed on. However, you can override this default by choosing the appropriate display timezone from the list of options displayed in the drop-down list.
+- **Default Culture**: Spira can display information in a variety of different languages (assuming that the appropriate language packs have been installed) and number formats. By default, Spira will use the regional settings (language and number formats) of the operating system it has been installed on. However, you can override this default by choosing the appropriate culture from the list of options displayed in the drop-down list. *Note: The list of culture options does not reflect the available language packs, so in some cases, the setting will only change the number formats.*
+- **Default Timezone**: Spira stores all dates and times internally in Universal Coordinated Time (UTC) and can therefore display dates/times adjusted for different timezones. By default, Spira will display dates in the timezone specified in the operating system it has been installed on. However, you can override this default by choosing the appropriate display timezone from the list of options displayed in the drop-down list.
 - **Web Server URL**: This is the URL that your users use to access the system. Do not put the /Login.aspx or any other page here, as this URL is used to generate links to pages in the application.
-- **Attachments Folder**: By default when SpiraPlan® is installed, the document attachments uploaded in the system get stored inside
-    the `C:\Program Files\SpiraPlan\Attachments` folder located inside the main SpiraPlan® installation root. However you may want to have the documents stored on a remotely mounted drive or on a different hard disk partition. In which case you can simply change the folder pointed to in the text-box illustrated above and then click \[Update\] to commit the change.
-- **Cache Folder**: By default when SpiraPlan needs to store temporary data (generated reports, the version control cache, etc.) it will store them in the C:\\ProgramData\\Inflectra\\Spira folder. Sometimes this folder is not appropriate (e.g. you want them on a different drive that has more space). You can enter in a different folder for temporary storage and SpiraPlan will use that instead.
+- **Attachments Folder**: By default when Spira® is installed, the document attachments uploaded in the system get stored inside the `C:\Program Files\SpiraPlan\Attachments` folder located inside the main Spira installation root. However you may want to have the documents stored on a remotely mounted drive or on a different hard disk partition. In which case you can simply change the folder pointed to in the text-box illustrated above and then click \[Update\] to commit the change.
+- **Cache Folder**: By default when Spira needs to store temporary data (generated reports, the version control cache, etc.) it will store them in the C:\\ProgramData\\Inflectra\\Spira folder. Sometimes this folder is not appropriate (e.g. you want them on a different drive that has more space). You can enter in a different folder for temporary storage and Spira will use that instead.
 - **Cache Refresh**: you can adjust the default number of minutes after which the source code cache should be refreshed.
 - **Login Notice**: this can be used system wide to set a message to permanently display at the bottom of the login screen for all users (for example, a company disclaimer).
 - **Administration Message**: this can be used by the administrator to display a temporary notice displayed on the login screen for all users. For example it could be used to remind all users that the server will be down for upgrading over the weekend. The administrator should delete the message once it is no longer needed.
-- **Instant Messenger**: SpiraPlan and SpiraTeam come with a built-in instant messenger that allows users to communicate with each other in real-time. This can result in higher levels of network traffic and some system administrators may wish to disable this feature. This option lets you disable the integrated instant messenger. In addition, you can specify how long (in days) instant messages are retained in the system.
-- **Event Log Retention**: As described in  [Event Log](#event-log), SpiraPlan comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.
-- **Enable Free Text Indexes**: This tells SpiraPlan to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause SpiraPlan to display error messages when users try and use the global search.
+- **Instant Messenger**: Spira comes with a built-in instant messenger that allows users to communicate with each other in real-time. This can result in higher levels of network traffic and some system administrators may wish to disable this feature. This option lets you disable the integrated instant messenger. In addition, you can specify how long (in days) instant messages are retained in the system.
+- **Event Log Retention**: As described in  [Event Log](#event-log), Spira comes with a built-in diagnostic event log. By default the system will only retain the last 30-days of events to avoid wasting storage space. You can adjust the retention period in this section to match your organization's policies.
+- **Enable Free Text Indexes**: This tells Spira to use SQL Server Free Text Indexing to speed up keyword searches in the Global Search box. You should only have this set to "Yes" if you have the Free Text Indexing featured enabled in SQL Server, otherwise you will cause Spira to display error messages when users try and use the global search.
 - **Disable Rollup Calculations**: (default = no) Setting this to Yes will prevent the system from calculating 'rollup' metrics when data is entered for any product in the system. This should not be done unless you have been told by the Inflectra Support team to do so. To disable rollup calculations for a specific product instead use the product admin level [equivalent setting](Product-Planning.md/#testing-settings). 
 - **Enable Beta Features**: (default = yes) Enabling this will allow all users to preview any currently live beta features in the product. If you wish to try out the latest features please enable this setting. Any administration changes that are part of the current betas will be marked as such on the administration menu.
 - **Enable Developer Mode**: (default = no) Enabling this will allow system administrators to update locally developed SpiraApps from the SpiraApps admin page. This should only be turned on for internal development purposes.
-- **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. <span class="pill">SpiraPlan</span>
-- **Enable Timesheet 'Remaining Effort'**: (default = no) Enabling this will allow users on their [My Timesheet page](../Spira-User-Manual/Timesheets.md#remaining-effort) to not only adjust the actual effort by reporting the time worked on each artifact, but also to adjust the remaining effort as they learn more about the problems they are solving. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the [product level](./System-Workspaces.md/#edit-a-product)). This is only available for cloud instances. <span class="pill" title="Inflectra.ai settings are only available in the cloud, after purchasing the add-on">Inflectra.ai</span>
+- **Enable Timesheet Approvals**: (default = no) Enabling this will allow users to submit timesheets for Timesheet Managers who can approve or reject them. 
+    {: .edition-spiraplan}
+- **Enable Timesheet 'Remaining Effort'**: (default = no) Enabling this will allow users on their [My Timesheet page](../Spira-User-Manual/Timesheets.md#remaining-effort) to not only adjust the actual effort by reporting the time worked on each artifact, but also to adjust the remaining effort as they learn more about the problems they are solving.
+    {: .edition-spiraplan .edition-spirateam}
+- **Inflectra.ai**: (default = no) Enabling this will allow users to access Inflectra.ai to supercharge their productivity with purpose-built AI tooling (access to the service may require additional settings to be enabled - for example at the [product level](./System-Workspaces.md/#edit-a-product)). This is only available for cloud instances.
+    {: .feature-inflectraai}
 
 
 ## File Type Icons
-
-The "File Types List" administration page allows you to view all the different filetypes that are recognized by SpiraPlan and add or edit the associated icon, name, description and MIME type:
+The "File Types List" administration page allows you to view all the different filetypes that are recognized by Spira and add or edit the associated icon, name, description and MIME type:
 
 ![](img/System_59.png)
 
@@ -44,47 +49,43 @@ On this page you can enter/edit the file extension that's used to recognize the 
 
 ## License Details
 !!! info 
-    This page is accessible under the System subsection of the sytem admin menu. It is only visible if you have Spira installed on premise.
+    This page is accessible under the System subsection of the system admin menu. It is only visible if you have Spira installed on premise.
 
     ![license details admin menu](img/System_LicenseDetailsMenu.png)
 
-The license details page displays the information about the installed license for the particular instance of SpiraPlan® being used. This will display less information for hosted customers. The information displayed for self-hosted customers includes: the product name (e.g. SpiraPlan), the license version (e.g. v6.0.0.0), type of license in effect (x-user fixed, x-user concurrent, demonstration, enterprise, etc.), the expiration date (if any) of the license, the organization that the license belongs to, and the number of users concurrently logged-in right now. This last piece of information is useful as it helps administrators track down how many licenses are currently in use.
+The license details page displays the information about the installed license for the particular instance of Spira being used. This will display less information for hosted customers. The information displayed for self-hosted customers includes: the product name (e.g. SpiraPlan), the license version (e.g. v6.0.0.0), type of license in effect (x-user fixed, x-user concurrent, demonstration, enterprise, etc.), the expiration date (if any) of the license, the organization that the license belongs to, and the number of users concurrently logged-in right now. This last piece of information is useful as it helps administrators track down how many licenses are currently in use.
 
 A sample page is illustrated below:
 
 ![](img/System_61.png)
 
 To change the license key used by the system (for example, if to upgrade from Trial edition to Standard edition), you do **not**
-need to reinstall SpiraPlan®. All you need to do is change the
-**organization** and **license key** text-boxes to match the license key and organization name found in the customer area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button.
+need to reinstall Spira. All you need to do is change the **organization** and **license key** text-boxes to match the license key and organization name found in the customer area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button.
 
 If there is an issue with the license key (e.g. a trial version that is passed its expiration date, or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
 
 
 ## LDAP Configuration
-
-As described previously, you can configure SpiraPlan® to use an external LDAP server for importing new user profiles into the system, and for authenticating users -- instead of having to store separate passwords inside SpiraPlan®. However, you need to first configure the LDAP server settings. To do this, click on the "LDAP Configuration" link the Administration navigation:
+As described previously, you can configure Spira to use an external LDAP server for importing new user profiles into the system, and for authenticating users -- instead of having to store separate passwords inside Spira. However, you need to first configure the LDAP server settings. To do this, click on the "LDAP Configuration" link the Administration navigation:
 
 ![](img/System_62.png)
 
 You need to fill out the various configuration settings for your LDAP server, each of which is explained in more detail below:
 
-- **LDAP Host**: This should contain the name of the LDAP server that you want SpiraPlan to connect to together with the port number if it's not the default of 389.
+- **LDAP Host**: This should contain the name of the LDAP server that you want Spira to connect to together with the port number if it's not the default of 389.
 - **Use Secure Sockets Layer (SSL)**: You should select this check-box if your LDAP server requires use of the LDAPS secure protocol. Leave unchecked for unencrypted LDAP communication.
 - **Base DN**: This should be the distinguished name of the object inside your LDAP server that contains the list of user accounts. This varies by the type of LDAP server, please consult your LDAP server documentation for more details.
-- **Bind DN**: This should be the distinguished name of the user inside your LDAP server that will be used to authenticate against when importing users. If not provided, SpiraPlan® will try and authenticate with the LDAP server anonymously.
+- **Bind DN**: This should be the distinguished name of the user inside your LDAP server that will be used to authenticate against when importing users. If not provided, Spira will try and authenticate with the LDAP server anonymously.
 - **Bind Password**: The is the password of the user specified in the Bind DN field above.
-- **Login Attribute**: When SpiraPlan® imports users from the LDAP server it needs to know the user attribute inside the LDAP server that it should use to generate the SpiraPlan® user-name. For most LDAP servers the appropriate attribute would be "uid". However for Windows ActiveDirectory, the attribute "sAMAccountName" should be used instead.
-- **First Name Attribute**: Providing this optional attribute will allow SpiraPlan® to automatically populate the first name field of the imported user instead of simply using the username as a placeholder.
-- **Last Name Attribute**: Providing this optional attribute will allow SpiraPlan® to automatically populate the last name field of the imported user instead of simply using the username as a placeholder.
-- **Middle Initial Attribute**: Providing this optional attribute will allow SpiraPlan® to automatically populate the middle initial field of the imported user instead of simply leaving it blank.
-- **Email Address Attribute**: Providing this optional attribute will allow SpiraPlan® to automatically populate the email address field of the imported user instead of simply using the username@spiratest.com as a placeholder.
+- **Login Attribute**: When Spira imports users from the LDAP server it needs to know the user attribute inside the LDAP server that it should use to generate the Spira user-name. For most LDAP servers the appropriate attribute would be "uid". However for Windows ActiveDirectory, the attribute "sAMAccountName" should be used instead.
+- **First Name Attribute**: Providing this optional attribute will allow Spira to automatically populate the first name field of the imported user instead of simply using the username as a placeholder.
+- **Last Name Attribute**: Providing this optional attribute will allow Spira to automatically populate the last name field of the imported user instead of simply using the username as a placeholder.
+- **Middle Initial Attribute**: Providing this optional attribute will allow Spira to automatically populate the middle initial field of the imported user instead of simply leaving it blank.
+- **Email Address Attribute**: Providing this optional attribute will allow Spira to automatically populate the email address field of the imported user instead of simply using the username@spiratest.com as a placeholder.
 - **Sample User**: You can optionally enter a sample user and password to test that the user is correctly authenticated against the server. You can update the LDAP configuration without setting this, but if you do provide a sample user/password, it will not save the configuration unless the authentication succeeds. If you choose to enter it, the user's name should be the fully-distinguished name of the user (e.g. CN=Sample User, CN=Users, OU=Headquarters, DC=MyCompany, DC=Com).
 
-
 ## Security Settings
-
-The "Security Settings" administration page lets you specify the various security settings within SpiraPlan to match your organization's policies and processes:
+The "Security Settings" administration page lets you specify the various security settings within Spira to match your organization's policies and processes:
 
 ![](img/System_63.png)
 
@@ -92,7 +93,7 @@ The "Security Settings" administration page lets you specify the various securit
 
 The following settings can be changed within the system, once you are satisfied, click the "Save" button to commit the changes:
 
-- **Allow User Registration**: Set this to "Yes" if you want to allow users to self-register for SpiraPlan accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.
+- **Allow User Registration**: Set this to "Yes" if you want to allow users to self-register for Spira accounts (that you can subsequently approve). If you set this to "No", a system administrator will need to create all user accounts. Also set this to "No" if you plan on using LDAP-based authentication.
 - **HTTPS Only**: Set this to Yes if the application will only be running on HTTPS. This enables tighter security that is only available on HTTPS.
 - **Minimum Required Password Length**: Set this to the minimum length of passwords in the system. Choosing a longer password will make it harder for an unauthorized user to crack a password and gain entry into the system.
 - **Minimum Required Special Characters** - Set this to the minimum number of non-alphanumeric characters that will be required for passwords in the system. Choosing more required special characters will make it harder for an unauthorized user to crack a password and gain entry into the system.
@@ -102,7 +103,7 @@ The following settings can be changed within the system, once you are satisfied,
 - **Password Change Interval**: If set to a value, it will require all password to be changed after the specified number of days.
 - **Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
 - **Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.
-- **Enable [2-Step](#enable-2-step-authentication) Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use SpiraPlan's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../Spira-User-Manual/User-Product-Management.md/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](System-Users.md/#edit-an-existing-user) page. 
+- **Enable [2-Step](#enable-2-step-authentication) Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use Spira's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../Spira-User-Manual/User-Product-Management.md/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](System-Users.md/#edit-an-existing-user) page. 
 {: #enable-2-step-authentication}
 
 !!! hint "2-Step Authentication tips"   
@@ -140,7 +141,6 @@ The following settings can be changed within the system, once you are satisfied,
 
 
 ## Event Log
-
 The "System Event Log" administration page lets you view all of the errors, warning and other diagnostic messages that have been logged in the system:
 
 ![](img/System_70.png)
@@ -164,7 +164,6 @@ The Spira event log has five different event types. Each message must be one of 
 
 
 ## Email Configuration
-
 The Email Configuration page is split into two sections. The first section covers email notification details, and the second section configures how email from the application is sent.
 
 ![](img/System_73.png)
@@ -259,13 +258,18 @@ This page displays a list of relevant changes made to system level artifacts or 
 
 !!! info "What changes are tracked in system history?"
     - Capabilities
+        {: .edition-spiraplan}
     - Product template custom properties
     - Product membership
     - Program Milestones
+        {: .edition-spiraplan}
     - Product Roles
     - SpiraApps
     - User profiles
     - System admin General Settings
+    - System admin Security Settings
+    - LDAP Configuration
+    - Email Configuration
 
 The system history list page shows system administrators all the currently recorded changes made at the system level. By default, items are shown in chronological order with the most recent at the top. The list can be filtered. Each history entry shows:
 

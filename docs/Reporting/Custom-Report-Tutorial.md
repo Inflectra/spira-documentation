@@ -1,8 +1,8 @@
 # Custom Reports Tutorial and Introduction
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Introduction 
-
-One of the maxims I always tell developers is that regardless of what you build, customers will never be satisfied with the reports you offer or the integration that you provide. In fact the two most underestimated tasks in software development are data feeds and reporting. A great feature of SpiraPlan (and SpiraTest and SpiraTeam) is the ability to do custom reporting, so that you are not limited to only the reports that ship with the system. This guide explains how to use these powerful custom reporting features.
+Standard reports will never meet the needs of all users. That is why Spira has custom reporting, so that you are not limited to only the reports that ship with the system. This guide explains how to use these powerful custom reporting features.
 
 !!! info "How to get more info and gotchas"
 

@@ -1,9 +1,12 @@
+---
+pdf: true
+---
+
 # Product: Planning
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Planning Options
-
 The Planning Options page lets you configure the schedule and calendar options for the various product estimation and planning modules. The settings are specific to each product. The page is divided into a number of collapsible sections. 
-
 
 ### General
 ![](img/Product_Planning_General.png)
@@ -24,8 +27,10 @@ The Planning Options page lets you configure the schedule and calendar options f
 ![](img/Product_Planning_112.png)
 
 - **Auto-Create Tasks**: When you change the status of a Requirement in the system to "In-Progress" the system will automatically add a default Task to that requirement if no tasks already exist. This is a useful shortcut that makes planning with requirements easier in the case when the requirements are of a size where they don't need to be formally decomposed into multiple developer tasks. However if you don't want the system to automatically create tasks in, you can deselect the option for the current product and it will turn off the feature.
+    {: .edition-spiraplan .edition-spirateam}
 - **Auto-Planned**: When this option is enabled, if you assign a release/sprint to a requirement, and the requirement is not already in the 'Planned' status, the system will automatically switch the status of the requirement to 'Planned'. Once a requirement is then in 'Planned' status, transitioning to a different status may blank out the release field. This happens when you transition to any of the following statuses (as they are considered to be earlier in the requirement process): 'Requested', 'Accepted', or 'Under Review'. 
 - **Use Task Status**: When this option is enabled, if you add any tasks to a requirement, the status of the requirement will be automatically governed by the aggregate status of the associated tasks. On adding a new task to a new requirement, the requirement will move to "Planned." Once a requirement has reached the "Planned" status, if any of its tasks are started and incomplete, the requirement status moves to "In Progress". Once all of a requirement's tasks have been completed, its status will move to "Developed" or a "later" status in the requirement workflow.
+    {: .edition-spiraplan .edition-spirateam}
 - **Use Test Status** - When this option is enabled, if you associate any test cases to a requirement, the status of the requirement will be automatically switched from "Developed" to "Tested" when all the associated test cases are passed.
 
 ### Task & Incidents
@@ -34,11 +39,13 @@ The Planning Options page lets you configure the schedule and calendar options f
 - **Default Effort**: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.
 
 ### Kanban Work In Progress Limits
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 ![](img/Product_Planning_WIP.png)
 
 Work In Progress (WIP) limits set the maximum number of requirements that the product team can efficiently manage at each stage of their Kanban process. Using WIP limits can be a useful way for teams to manage their work, allowing them to get through their work faster. This is done by focusing only tasks that can be done now (in other words, the work that can in-progress at any one time).
 
-This feature, not available in SpiraTest, is an optional way of using the Planning Board. To not use the feature at all, leave the fields in each of the columns in the table blank.
+This feature, is an optional way of using the Planning Board. To not use the feature at all, leave the fields in each of the columns in the table blank.
 
 To make use of WIP limits you need to:
 
@@ -58,7 +65,6 @@ The multipliers and percentages for releases and sprints are independent of one 
 
 
 ## Testing Settings
-
 Clicking on the "Testing Settings" link brings up a list of options that the administrator can configure regarding testing. Select from the options displayed (as illustrated below) and click "Save" to commit the changes.
 
 ![](img/Product_Planning_testing_settings.png)
@@ -66,7 +72,7 @@ Clicking on the "Testing Settings" link brings up a list of options that the adm
 You can enable or disable the following settings:
 
 * **Test Case Execution**: the following settings affect the test execution rules / experience of all testers in the products
-    - **Display Build During Test Execution**: (default = yes) during test execution the system can display a drop-down list of builds associated with the selected release. If you are using SpiraPlan in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".
+    - **Display Build During Test Execution**: (default = yes) during test execution the system can display a drop-down list of builds associated with the selected release. If you are using Spira in conjunction with a build server such as Jenkins/Hudson, you should choose "Yes", otherwise we recommend hiding the list of builds (to avoid confusing your testers) by choosing "No".
     - **Disable users from PASSING ALL test steps at once**: (default = no) normally in testing on the first step testers have the options of selecting "Pass All" to mark every step at once as passed. This can be a useful shortcut. If you don't want testers to use this shortcut turn this setting on.
     - **Disable users from marking a test step as BLOCKED**: (default = no) testing in Spira has five different execution statuses: Pass, Fail, Blocked, Caution, and N/A. Pass or Fail cannot be disabled. To disable "Blocked" turn this setting on. Testers will no longer see a "Blocked" button during testing.
     - **Disable users from marking a test step as CAUTION**: (default = no) to disable "Caution" turn this setting on. Testers will no longer see a "Caution" button during testing.
@@ -88,16 +94,15 @@ You can enable or disable the following settings:
 
 
 ## Edit Components
-
-SpiraPlan lets you define a list of Components for each product. These components represent the main functional areas of the system and artifacts can be associated with each of the defined components.
+Spira lets you define a list of Components for each product. These components represent the main functional areas of the system and artifacts can be associated with each of the defined components.
 
 ![](img/Product_Planning_109.png)
 
 This page lets you display the list of components based on three predefined filters:
 
--   **All Active** -- This displays only the components that are listed as Active = Yes. Only active components will be displayed inside the main application.
--   **All But Deleted** -- This displays all the components (active and inactive) except those that have been deleted.
--   **All** -- This displays all the components (active, inactive, and deleted).
+-   **All Active**: This displays only the components that are listed as Active = Yes. Only active components will be displayed inside the main application.
+-   **All But Deleted**: This displays all the components (active and inactive) except those that have been deleted.
+-   **All**: This displays all the components (active, inactive, and deleted).
 
 From this page you can click on the 'Add Component' option to add a new component in the list:
 

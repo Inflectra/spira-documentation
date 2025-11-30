@@ -1,4 +1,6 @@
 # Spira QA Coverage Jira app
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 !!! info "Install the Spira QA Coverage App"
     This app is available for Jira Cloud on the [Jira Marketplace](https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&tab=overview)
 

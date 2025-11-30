@@ -1,6 +1,5 @@
 # Azure OpenAI SpiraApp
-
-!!! warning "Some of this SpiraApp's functionality is not compatible with SpiraTest"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 !!! info "Upgrade to Inflectra.ai"
 	Inflectra.ai is available for all cloud Spira customers. It is easy to set up and manage, and is deeply integrated into Spira. Inflectra.ai provides more powerful features than is possible with this SpiraApp.
@@ -17,13 +16,14 @@ It can provide an easy and effective way for users to create a foundational set 
 By using this SpiraApp users will, by necessity, share information with Azure OpenAI. For that reason, system admins must configure this SpiraApp to an existing Azure OpenAI subscription for your organization.
 
 !!! info "About this SpiraApp"
-    - [x] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] toolbar button on requirement details page
-    - [x] toolbar button on test case details page
-    - [x] toolbar button on risk details page
-    - [x] toolbar button on task details page
+    - system settings
+    - product settings 
+    - toolbar button on requirement details page
+    - toolbar button on test case details page
+    - toolbar button on risk details page
+        {: .edition-spiraplan .edition-spirateam}
+    - toolbar button on task details page
+        {: .edition-spiraplan .edition-spirateam}
 
 ## Setup
 ### System Settings
@@ -37,6 +37,7 @@ By using this SpiraApp users will, by necessity, share information with Azure Op
 Once the SpiraApp has been activated system wide, and enabled for a product you can edit its product settings. **All of these settings are optional**. You can use the SpiraApp without editing any of the product settings. The settings are here to help you customize the results from the SpiraApp, including if using languages other than English.
 
 #### Code Generation
+!!! abstract "Compatible with SpiraTeam and SpiraPlan only"
 
 This is where you can customize the list of programming languages available:
 
@@ -110,6 +111,7 @@ When a user goes to the testc ase details page, they will see an extra button in
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
 
 ### Task Details Page
+!!! abstract "Compatible with SpiraTeam and SpiraPlan only"
 
 When a user goes to the task details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 
@@ -128,6 +130,7 @@ Once you choose the appropriate code generation option, a dialog box will be dis
 A message will show at the top of the page informing the user when information is sent or if there was a problem.
 
 ### Risk Details Page
+!!! abstract "Compatible with SpiraTeam and SpiraPlan only"
 
 When a user goes to the risk details page, they will see an extra button in the toolbar. To generate relevant data they should follow these steps:
 

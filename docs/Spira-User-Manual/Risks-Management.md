@@ -1,9 +1,13 @@
-# Risks Management
+---
+pdf: true
+---
 
-This section outlines the risk management features of SpiraPlan and SpiraTeam (not available in SpiraTest) and how they can be used to help understand, track, and mitigate risks across your products. The expected principle ways of managing risks is through assigning values to each risk's probability and impact. These two fields, multiplied together, represent the potential (negative) exposure from the risk: a highly likely risk that would have a large impact has a higher exposure (and should be managed with a higher priority) than an unlikely risk which will not have much real world impact.
+# Risks Management
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+This section outlines the risk management features of Spira and how they can be used to help understand, track, and mitigate risks across your products. The expected principle ways of managing risks is through assigning values to each risk's probability and impact. These two fields, multiplied together, represent the potential (negative) exposure from the risk: a highly likely risk that would have a large impact has a higher exposure (and should be managed with a higher priority) than an unlikely risk which will not have much real world impact.
 
 ## Risks List
-
 When you click on the Tracking \> Risks global navigation link, you will initially be taken to the risks list screen illustrated below:
 
 ![](img/Risks_Management_456.png)
@@ -46,7 +50,7 @@ If you want to edit lots of items, first select their checkboxes and then click 
 When you have made your updates, you can either click "***Save***" to commit the changes, or "***Cancel***" to revert back to the original information. Alternatively, pressing the <ENTER\> key will commit the changes and pressing the <ESCAPE\> key will cancel the changes.
 
 ### Cloning Risks
-To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit then "**Clone**". You can also clone a rsiks from its detailed view (using the dropdown next to the "New" button). Cloning a risk makes a copy of the selected risk with '... - Copy' added at the end of its name. When cloning risks note that:
+To create a clone of an existing risk or set of risks, select the check-boxes of the risks you want to copy and then click Edit then "**Clone**". You can also clone a risks from its detailed view (using the dropdown next to the "New" button). Cloning a risk makes a copy of the selected risk with '... - Copy' added at the end of its name. When cloning risks note that:
 
 - all standard and custom properties are cloned
 - description (with formatting) is cloned
@@ -66,9 +70,8 @@ To quickly print a single risk or list of risks you can select the items' checkb
 
 
 ## Risk Details
-
 !!! tip "Inflectra.ai"
-    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#risk-details-page), available to all cloud customers with an active Inflectra.ai subscription.
+    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#risks-details-page), available to all cloud customers with an active Inflectra.ai subscription.
 
 When you click on a risk item in the [risks list](#risks-list), you are taken to the risk details page illustrated below:
 
@@ -96,39 +99,27 @@ The bottom part of the right pane can be switched between four views:
 
 
 ### Emailing
-
 Read about [emailing a document to colleagues using Spira](Application-Wide.md#emailing).
 
-
 ### Followers
-
 Read about [how to add and manage followers to an artifact](Application-Wide.md#followers).
 
-
 ### Workflows
-
 Read about [using workflows to change the status of your artifact](Application-Wide.md#workflows).
 
-
 ### Overview - Details
-
 The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. It displays the description, fields and comments associated with the risk.
 
 The top part of this tab displays the various standard fields and custom properties associated with the risk. Fields (both standard and custom) are grouped under the collapsible headings (marked by orange text and underline) in the screenshot below. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
 
 ![](img/Risks_Management_464.png)
 
-
-
 ### Overview -- Detailed Information
-
 The Detailed Information section contains the long, formatted description of the risk, as well as any rich text custom fields. You can enter rich text or paste in from a word processing program or web page into these fields. Clicking on the shaded areas of one of these detailed fields will display the rich text toolbar.
 
 ![](img/Risks_Management_465.png)
 
-
 ### Overview -- Mitigations
-
 The mitigations section is where you can enter information about any plans or ideas about how the risk in question can be mitigated, in other words how its impact or probability can and/or will be lowered. The list of mitigations displays the position number, and the description, and date fields.
 
 ![](img/Risks_Management_466.png)
@@ -146,7 +137,6 @@ Read about [how the comments works](Application-Wide.md#comments)
 
 
 ### Tasks
-
 This tab shows the list of product tasks that need to be completed for the risk to be properly managed/mitigated:
 
 ![](img/Risks_Management_469.png)
@@ -169,11 +159,9 @@ You can perform the following actions on a task from this screen:
 Note that if you create a new task on the risks page, the component, release/sprint, and owner are automatically copied from the parent risk. You can change these suggested values before clicking "***Save***"
 
 ### Attachments
-
 Read about [how the attachments tab works](Application-Wide.md#attachments)
 
 ### Associations
-
 You can associate other risks, incidents, test cases, and requirements to a risk from this tab. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
 - **Risks associated with requirements**: document and track all the risks associated with a specific feature or requirement in Spira. For example, a new authentication module might have security risks associated with it, or a new reporting feature might have technical risks associated with it. This is one of the most important associations you can create in Spira, since it lets you document the risks associated with changes you plan on making.
@@ -182,5 +170,4 @@ You can associate other risks, incidents, test cases, and requirements to a risk
 - **Risks associated with other risks**: this can be used for cases where one risk is dependent on another (if this happens, then that could also happen) or if they are just connected (this technical risk is similar to this other technical risk).
 
 ### History
-
 Read about [how the history tab works](Application-Wide.md#history)

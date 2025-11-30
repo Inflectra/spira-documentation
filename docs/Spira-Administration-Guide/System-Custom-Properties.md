@@ -1,6 +1,9 @@
-# System Custom Properties
+---
+pdf: true
+---
 
-!!! info "These features are only available in SpiraPlan"
+# System Custom Properties
+!!! abstract "Available in SpiraPlan only"
 
 Spira allows you to customize different workspaces or program-level artifacts. For each type (e.g. products, program capabilities, or program milestones) you can create up to 30 system custom properties. System custom properties are shared across every relevant workspace or program-level artifact in the system. For example, all products will share the same set of available custom properties; and all capabilities will share a different set of available custom properties. These system custom properties are visible in the following places:
 
@@ -77,9 +80,9 @@ After changing the name of the list, and specifying whether the values will be o
 
 This is the set of values that the user will select from the drop-down list when the custom property is displayed. You can change the display to include:
 
--   **All Active** -- displays only custom list values that are active
--   **All But Deleted** -- displays all custom list values that are active or inactive but have not been deleted
--   **All** -- displays all custom list values, including those that have been deleted
+-   **All Active**: displays only custom list values that are active
+-   **All But Deleted**: displays all custom list values that are active or inactive but have not been deleted
+-   **All**: displays all custom list values, including those that have been deleted
 
 To add a new custom list value, click the "Add Value" button and a new row will be added to the list which you can now edit. To edit an existing custom list value, change the name in the textbox and click "Save". To delete a custom list value, click on the "Delete" hyperlink. If you want to remove an item from the list temporarily, you can set its Active dropdown list to 'No', if you want to remove an item permanently, just click the 'Delete' button.
 

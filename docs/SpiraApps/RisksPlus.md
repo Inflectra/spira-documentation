@@ -1,8 +1,7 @@
 # Risks+ SpiraApp
+!!! abstract "Compatible with SpiraTeam and SpiraPlan"
 
-!!! warning "This SpiraApp is not compatible with SpiraTest"
-
-!!! warning "Some of this SpiraApp's functionality requires Spira 8.3"
+!!! warning "Some of this SpiraApp's functionality requires Spira v8.3+"
 
 This SpiraApp extends the built-in risk functionality by:
 
@@ -10,11 +9,9 @@ This SpiraApp extends the built-in risk functionality by:
 - adding optional validation for the Risk Review Date field
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] runs automatically on the risk details page
-    - [x] adds a menu button to the risk details page
+    - product settings 
+    - runs automatically on the risk details page
+    - adds a menu button to the risk details page
 
 ## Setup
 ### Product Settings

@@ -1,6 +1,11 @@
-# System: Reporting
-SpiraPlan has a powerful set of reports and charts available out of the box that cover most needs. However, there is often a need to be able to generate custom reports and graphs that are specific to your organization. In this section, you can create custom graphs and reports for your users to use.
+---
+pdf: true
+---
 
+# System: Reporting
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
+Spira has a powerful set of reports and charts available out of the box that cover most needs. However, there is often a need to be able to generate custom reports and graphs that are specific to your organization. In this section, you can create custom graphs and reports for your users to use.
 
 ## Edit Reports
 The "Edit Reports" administration page lets you create custom reports in the system that your users can run in relevant workspaces they have access to. 
@@ -9,19 +14,20 @@ Custom reports you create are available in all relevant workspaces. For example:
 
 - any report with a "requirements" category can be run from any product 
 - any report with a "capabilities" category can be run from any program (but will not be available at the product level)
+  {: .edition-spiraplan}
 
 The available report categories are:
 
-| Category                  | Workspace Type |
-| ------------------------- | -------------- |
-| Requirement Reports       | product        |
-| Test Case Reports         | product        |
-| Incident Reports          | product        |
-| Task Reports              | product        |
-| Release Reports           | product        |
-| Risk Reports              | product        |
-| Capability Reports        | program        |
-| Program Milestone Reports | program        |
+| Category                  | Workspace Type | SpiraTest | SpiraTeam | SpiraPlan |
+| ------------------------- | -------------- | --------- | --------- | --------- |
+| Requirement Reports       | product        | Y         | Y         | Y         |
+| Test Case Reports         | product        | Y         | Y         | Y         |
+| Incident Reports          | product        | Y         | Y         | Y         |
+| Task Reports              | product        | N         | Y         | Y         |
+| Release Reports           | product        | Y         | Y         | Y         |
+| Risk Reports              | product        | N         | Y         | Y         |
+| Capability Reports        | program        | N         | N         | Y         |
+| Program Milestone Reports | program        | N         | N         | Y         |
 
 ![](img/System_Reporting_82.png)
 
@@ -33,7 +39,7 @@ To edit an existing non-default report, click on the "Edit" button. To add a new
 
 The top-half of this screen (illustrated above) lets you specify the name of the report, the long description (displayed in tooltips but not in the report itself) and a rich-text footer and header. The header and footer will be displayed at the top and bottom of the generated report.
 
-In addition, you can specify whether the report is active (and therefore can be used in the SpiraPlan reports center) and which report category heading the report will appear in. This is used to determine which workspaces the report will be available in and which roles can run the report (e.g. a user that has permissions to view requirements will be able to run all reports listed under the "Requirement Reports" category).
+In addition, you can specify whether the report is active (and therefore can be used in the Spira reports center) and which report category heading the report will appear in. This is used to determine which workspaces the report will be available in and which roles can run the report (e.g. a user that has permissions to view requirements will be able to run all reports listed under the "Requirement Reports" category).
 
 The lower-half of the screen displays the list of formats, standard sections and custom sections that make up the report:
 
@@ -60,7 +66,7 @@ When you either click on "Add New Standard Section" or the "Customize" link next
 When you first create a new standard report section, we recommend using the option to "Create Default Template". This will then allow you to run the report in the main reports center and have all the available data fields displayed in the standard format. If you would like to customize the content of the section, you have several options:
 
 -   **Customize Header/Footer**: if you want to keep the data and layout as-is, you can simply add a custom header and footer to add organization specific information into the report.
--   **Customize the Data/Layout**: if you want to customize how the data is displayed and formatted, you will need to edit the XSLT Template. You can learn more about XSLT at [W3Schools](https://www.w3schools.com/xml/xsl_intro.asp). However, the recommended approach is to first run the "Raw XML" format report from the main SpiraPlan reports center. An example XML report is partially shown below:
+-   **Customize the Data/Layout**: if you want to customize how the data is displayed and formatted, you will need to edit the XSLT Template. You can learn more about XSLT at [W3Schools](https://www.w3schools.com/xml/xsl_intro.asp). However, the recommended approach is to first run the "Raw XML" format report from the main Spira reports center. An example XML report is partially shown below:
 
 ```xml
 “?xml version="1.0" encoding="UTF-8" standalone="yes"?”
@@ -241,7 +247,6 @@ So using a combination of XSLT and the Raw XML report format, you can generate a
 Sometimes, however you want to be able to create a completely custom report that includes customized data as well as a custom format. In which case you need to use a **custom report section** instead.
 
 ### Custom Section
-
 Back on the main report details page, if you click on "Add New Custom Section", the following dialog box will be displayed:
 
 ![](img/System_Reporting_86.png)
@@ -262,7 +267,7 @@ On this page you need to first choose the appropriate **reportable entity** from
 
 select value R from SpiraTestEntities.R_Requirements as R where R.PROJECT_ID = ${ProjectId}
 
-This query tells SpiraPlan to select all of the rows in the R_Requirements collection that are in the current product and include all of the columns in the final report. This generally will result in more columns than is desirable, so you should click on the "Preview Results" option to view a list of the various columns and the sample data. That will help you decide which columns are important for your report. You can then adjust the query to only include those columns:
+This query tells Spira to select all of the rows in the R_Requirements collection that are in the current product and include all of the columns in the final report. This generally will result in more columns than is desirable, so you should click on the "Preview Results" option to view a list of the various columns and the sample data. That will help you decide which columns are important for your report. You can then adjust the query to only include those columns:
 
 `select R.REQUIREMENT_ID, R.NAME from SpiraTestEntities.R_Requirements as R where R.PROJECT_ID = ${ProjectId}`
 
@@ -270,7 +275,7 @@ In this modified query, we have replaced the keyword **value** with the specific
 
 ![](img/System_Reporting_88.png)
 
-Once you have verified that the data being returned matches your requirements, click on the "Create Default Template" option and SpiraPlan will automatically generate a new XSLT template that displays just these columns in a nice table format:
+Once you have verified that the data being returned matches your requirements, click on the "Create Default Template" option and Spira will automatically generate a new XSLT template that displays just these columns in a nice table format:
 
 ![](img/System_Reporting_89.png)
 
@@ -325,7 +330,7 @@ We recommend that you first choose the appropriate **reportable entity** from th
 
 This will automatically populate the following query in the **Query** editor: `select value R from SpiraTestEntities.R_TestRuns as R where R.PROJECT_ID = ${ProjectId}`
 
-This query tells SpiraPlan to select all of the rows in the R_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking **Display Data Grid** to see all of the columns that you can use in the graph:
+This query tells Spira to select all of the rows in the R_TestRuns collection that are in the current product and include all of the columns in the final report. You cannot graph non-numeric columns, so usually we'd recommend clicking **Display Data Grid** to see all of the columns that you can use in the graph:
 
 ![](img/System_Reporting_94.png)
 
@@ -338,7 +343,7 @@ where R.PROJECT_ID = ${ProjectId}
 group by R.EXECUTION_STATUS_NAME
 ```
 
-In this modified query, we have replaced the keyword **value** with the specific column names. We have also added an aggregation function called **COUNT** to count the number of test runs and group by the execution status name column. SpiraPlan uses a modified SQL language called Entity SQL. For more information on creating custom graph queries, please refer to the knowledge base articles on the Inflectra customer support website: <http://www.inflectra.com/Support>.
+In this modified query, we have replaced the keyword **value** with the specific column names. We have also added an aggregation function called **COUNT** to count the number of test runs and group by the execution status name column. Spira uses a modified SQL language called Entity SQL. For more information on creating custom graph queries, please refer to the knowledge base articles on the Inflectra customer support website: <http://www.inflectra.com/Support>.
 
 When you click **Display Data Grid**, you will now see:
 

@@ -1,0 +1,9 @@
+mkdocs
+Pygments
+pymdown-extensions
+mkdocs-material
+mkdocs-exporter
+
+# not currently used
+mkdocs-redirects
+mike

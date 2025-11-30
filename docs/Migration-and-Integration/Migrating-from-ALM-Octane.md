@@ -1,4 +1,6 @@
 #  Migrating from ALM Octane
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 This page outlines how to use the ALM Octane Migration Tool to import projects from OpenText ALM Octane into Spira.
 
 Note that this should not be confused with "traditional" **OpenText ALM**, which has its own, [separate migration tool](./Migrating-from-HP-ALM.md).
@@ -63,16 +65,16 @@ Once the import has finished, you will receive a message to that effect and the 
 
 The migration tool will import the following ALM Octane items:
 
-    - Users (but not their roles and permissions)
-    - Releases
-    - Sprints
-    - Requirements
-    - Backlog items
-    - Defects
-    - Tasks
-    - Tests
-    - Test steps
-    - Test suites
+- Users (but not their roles and permissions)
+- Releases
+- Sprints
+- Requirements
+- Backlog items
+- Defects
+- Tasks
+- Tests
+- Test steps
+- Test suites
 
 The following sections provide some additional notes on how artifacts are migrated.
 

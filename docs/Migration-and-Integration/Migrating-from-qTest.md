@@ -1,8 +1,10 @@
 # Migrating from qTest
-This section outlines how to use the free Migration Tool for importing Users, Test Cases, Test Sets, Test Runs, Defects, Releases, Requirements and Attachments from qTest into SpiraTest (or SpiraTeam, or SpiraPlan).
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
+This section outlines how to use the free Migration Tool for importing Users, Test Cases, Test Sets, Test Runs, Defects, Releases, Requirements and Attachments from qTest into Spira.
 
 ## Installing the qTest Migration Tool
-For the migration tool to work you need a working installation of SpiraTest/SpiraTeam/SpiraPlan v5.0 or later and a live instance of qTest to migrate from. You will also need a Windows machine to install the migration tool onto, that can access both SpiraPlan and qTest.
+For the migration tool to work you need a working installation of Spira v5.0 or later and a live instance of qTest to migrate from. You will also need a Windows machine to install the migration tool onto, that can access both SpiraPlan and qTest.
 
 First, download the Windows [installation package](https://www.inflectra.com/Downloads/qTestImporter.msi) from the "Add-Ons & Downloads" section of the Inflectra website. Double-click the msi file to start the installation wizard. The first screen of this wizard will look like this:
 
@@ -13,7 +15,6 @@ Click the `Next` button to choose the folder to install the migration tool to:
 ![](img/qTest_02.png)
 
 Choose the folder to install to and then click `Next`. It will confirm if you want to proceed, click `Next` then wait for it to finish.
-
 
 ## Using the qTest Migration Tool
 Now that you have installed the migration tool, you can launch it at any time by going to Start > Programs > Inflectra > SpiraTest > Tools > qTest Importer. This will launch the migration tool application itself:
@@ -28,17 +29,17 @@ First, enter the qTest information below and click `Authenticate` to verify your
 
 Next, select the qTest project that you want to **import from**. Now choose which artifacts you want to import from qTest (e.g. Defects, Requirements). *NOTE: to import test cases, test sets, or test runs, the wizard needs to also import releases.* 
 
-Click `Next` to move to the Connect to SpiraTest part of the import wizard:
+Click `Next` to move to the Connect to Spira part of the import wizard:
 
 ![](img/qTest_04.png)
 
-On the Connect to SpiraTest page you have to enter your SpiraTest login information and click `Login`:
+On the Connect to Spira page you have to enter your Spira login information and click `Login`:
 
 - URL (for hosted customers this is of the form https://xxxx.spiraservice.net)
-- SpiraTest username
-- SpiraTest password
+- Spira username
+- Spira password
 
-Once the wizard has verified its connection with SpiraTest and you are logged in, click the now enabled `Start Import` button. This begins the import process from qTest into SpiraPlan. The importer will automatically create a new product in SpiraPlan with the same name as that used in qTest. **Note**: if you run the importer on the same qTest project multiple times, it will create a new product in SpiraTest each time.
+Once the wizard has verified its connection with Spira and you are logged in, click the now enabled `Start Import` button. This begins the import process from qTest into SpiraPlan. The importer will automatically create a new product in SpiraPlan with the same name as that used in qTest. **Note**: if you run the importer on the same qTest project multiple times, it will create a new product in Spira each time.
 
 ![](img/qTest_05.png)
 
@@ -62,7 +63,3 @@ The migration tool can import the following artifacts from qTest:
 
 !!! bug "If the import fails"
     If the import fails for any reason, you will find a log file on the Desktop of the computer where the migration tool is installed. The filename will normally be "Spira_qTest_Import.log". Please send this file to our support team if help is needed.
-
-
-
-

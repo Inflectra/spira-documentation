@@ -1,5 +1,11 @@
+---
+pdf: true
+---
+
 # Program Incidents
-The program incident list is only available in SpiraPlan. If you are using SpiraPlan, to access the program incident list, you must be a member of the program (i.e. a program owner or executive).
+!!! abstract "Available in SpiraPlan only"
+
+To access the program incident list, you must be a member of the program (i.e. a program owner or executive).
 
 The program incident list lets you see all of the incidents (bugs, enhancements, issues, risks, etc.) in the current program, displayed in an integrated table view showing incidents':
 

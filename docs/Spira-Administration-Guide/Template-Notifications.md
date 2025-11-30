@@ -1,11 +1,15 @@
+---
+pdf: true
+---
+
 # Template: Notifications
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 Each template has a separate notification system. This lets admins control what events trigger a notification being sent (via email), with what subject line, and who it should go to. You can create as many event triggers as you want, to give you fine grained control over when notifications are created. Each template has a single notification template (email body with tokens) per artifact. You can have, for example, 20 different requirement event triggers for a product template, each with their own rules and subjects; but they will all send the same email body, because they will all use the same requirement notification template.
 
 To configure emails across the entire system see [Email Configuration](System.md/#email-configuration).
 
 ## Notification Templates
-
 Notification templates are used by notification events, and are defined for each supported artifact type[^supported-artifacts] in the template.
 
 ![](img/Template_Notifications_183.png)
@@ -27,7 +31,6 @@ When finished, click the update button to save your new template. The new templa
 
 
 ## Notification Events
-
 The Notification Events section is where template administrators can set up when and to whom notifications are sent out to users of the system. Clicking on the Notification Events link will present you with a list of all events defined for the current template:
 
 ![](img/Template_Notifications_186.png)

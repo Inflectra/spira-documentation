@@ -1,31 +1,36 @@
-# Installing SpiraPlan®
+---
+pdf: true
+---
+
+# Installing Spira
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 This section outlines how to:
 
-- prepare your system for installation of Spira (the same instructions are valid for SpiraTest<sup>®</sup>, SpiraTeam<sup>®</sup>, and SpiraPlan<sup>®</sup>)
+- prepare your system for installation of Spira
 - install the software
 - ensure that your web-server is correctly configured to ensure secure operation
 
 ## Hardware and Software Requirements
 The minimum hardware and software requirements for running the Spira system are:
 
-| **Server Requirements** |                                                   |
-|-------------------------|---------------------------------------------------|
-| **Requirement**         | **Minimum Specification**                         |
-| **Processor:**          | Intel® or AMD® x86 or x64 compatible processor    |
-| **Memory:**             | 4 GB, 8 GB recommended                            |
+| **Server Requirements** |                                                                                                 |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| **Requirement**         | **Minimum Specification**                                                                       |
+| **Processor:**          | Intel® or AMD® x86 or x64 compatible processor                                                  |
+| **Memory:**             | 4 GB, 8 GB recommended                                                                          |
 | **Operating System:**   | Windows Server 2016+ (recommended) <br>Windows Server 2012 R1 & R2 <br>Windows 10 (for demoing) |
-| **Database:**           | Microsoft SQL Server 2016+<br> Microsoft SQL Server 2016+ Express Edition* |
-| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher |
+| **Database:**           | Microsoft SQL Server 2016+<br> Microsoft SQL Server 2016+ Express Edition*                      |
+| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher   |
 
 **Note**:
 Please consider there are some limitations for FREE SQL Express [That may significantly affect performance thus we don't recommend it to be used on production/handling large amounts of data).
 ---
 
-| **Client Requirements** |                                                   |
-|-------------------------|---------------------------------------------------| 
-| **Web Browser:**        | Microsoft Edge <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera                                             |
-| **Other Components:**   | Microsoft Excel 2010+ (optional) <br> Microsoft Word 2010+ (optional) <br> Microsoft Project 2010+ (optional)                |
+| **Client Requirements** |                                                                                                                             |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Web Browser:**        | Microsoft Edge <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera |
+| **Other Components:**   | Microsoft Excel 2010+ (optional) <br> Microsoft Word 2010+ (optional) <br> Microsoft Project 2010+ (optional)               |
 
 \*Note that Spira can be loaded onto either Windows Server or workstation editions, provided that the IIS web-server is installed and that SQL Server is available as a database engine. However, Windows workstation editions can only support a maximum of 5 concurrent user web sessions. In general, unless there are only going to be a couple of client machines hitting the server, we recommend using Windows Server.
 
@@ -223,7 +228,7 @@ Once all of the prerequisites are correctly installed, you are now ready to inst
 
 ![](img/Installing_SpiraPlan_18_2.png)
 
-To start the installation, double-click on the Spira installation package (it will have a filename in the form of SpiraPlan-vX.X.X.exe). The Installer will display the following dialog box:
+To start the installation, double-click on the Spira installation package (it will have a filename in the form of Spira-vX.X.X.exe). The Installer will display the following dialog box:
 
 ![](img/Installing_SpiraPlan_19.png)
 
@@ -331,9 +336,9 @@ Congratulations! You have successfully installed Spira onto your system. If you 
 
 ### Upgrading
 
-You can upgrade any SpiraPlan version that is 5.4.0.4 or newer using the latest installer (for instance you can upgrade from 5.4 to 7.7, or from 6.9.0.1 to 7.7 using the exact same installer exe). To upgrade from versions older than 5.4.0.4 you first need to upgrade to 5.4.0.4 and then upgrade to the latest version. 
+You can upgrade any Spira version that is 5.4.0.4 or newer using the latest installer (for instance you can upgrade from 5.4 to 7.7, or from 6.9.0.1 to 7.7 using the exact same installer exe). To upgrade from versions older than 5.4.0.4 you first need to upgrade to 5.4.0.4 and then upgrade to the latest version. 
 
-For example, to upgrade from SpiraTest v2.3.1 to v5.4, you would first upgrade from SpiraTest v2.3.1 > v3.2, then upgrade from SpiraTest v3.2 > v4.2, next step is to upgrade from v4.2 > 5.4
+For example, to upgrade from Spira v2.3.1 to v5.4, you would first upgrade from Spira v2.3.1 > v3.2, then upgrade from Spira v3.2 > v4.2, next step is to upgrade from v4.2 > 5.4
 
 To upgrade an existing installation:
 
@@ -408,11 +413,11 @@ The 'sa' account is a built-in SQL account ('system admin'), and the password is
 Leave 'Database Settings' section unchanged, as filled by default (make sure the Database name is the actual database you'd like to upgrade).
 
 ### Adding An Application Server
-Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#Installing-the-Software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
+Use this option when you already have another application server and database server configured and operational. Installation is very similar to a [standard installation](#installing-the-software) normally. However, when the page about the SQL Server and Database is displayed, it requires you to point to the existing SQL Server and Database. 
 
 ![](img/Installing_SpiraPlan_db-options.png)
 
-All other actions during this install matches those in a [standard installation](#Installing-the-Software).
+All other actions during this install matches those in a [standard installation](#installing-the-software).
 
 ### Upgrading an existing Database
 Use this option in two rare cases:
@@ -420,7 +425,7 @@ Use this option in two rare cases:
 - where an application was upgraded but the installer did not upgrade the database
 - if so instructed by the Inflectra support team
 
-These steps in this option are the same as if you were [upgrading the application normally](#Upgrading). You will be asked for the SQL Server and Database information for your database.
+These steps in this option are the same as if you were [upgrading the application normally](#upgrading). You will be asked for the SQL Server and Database information for your database.
 
 ![](img/Installing_SpiraPlan_db-options.png)
 

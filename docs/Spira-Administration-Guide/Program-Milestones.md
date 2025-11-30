@@ -1,6 +1,9 @@
-# Program Milestones
+---
+pdf: true
+---
 
-!!! info "These features are only available in SpiraPlan"
+# Program Milestones
+!!! abstract "Available in SpiraPlan only"
 
 ## Statuses
 The following screen is displayed when you choose the "Statuses" link from the Program Milestones section of the system administration menu:

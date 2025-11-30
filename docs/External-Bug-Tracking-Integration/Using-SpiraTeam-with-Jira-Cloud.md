@@ -1,4 +1,6 @@
 # Using Spira with Jira Cloud
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Overview
 Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jira Cloud data sync engine to keep key information in sync between both applications.
 
@@ -46,7 +48,7 @@ Notes about syncing:
 ## Checklist
 For the data sync to work correctly make sure you meet **all** of the steps below:
 
-- [x] Use Spira v6.3.0.1+
+- [x] Use Spira v8.10+
 - [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](./Using-SpiraTeam-with-JIRA-5+.md))
 - [x] [Setup a datasync  service](Setting-up-Data-Synchronization.md) - either in Inflectra's cloud or on your own servers
 - [x] [Download the Jira configuration helper application](#jira-configuration-helper)
@@ -131,7 +133,7 @@ You need to fill in the following fields for the plugin to operate correctly:
 
 - **Types to Skip**: This optional field can be used to ignore some Jira issue types during the sync. To do this, enter a comma-separated list of IDs of any Jira issue types that you want to exclude from synchronization. If you leave this blank, all Jira issue types will be considered for synchronization, sync mode permitting.
 - **Skip Comments**: Set this field to *Yes* if you want the dataSync to ignore comments in both directions. Please note old comments already synced won't be deleted.
-- **Auto-Map Properties**: Set this field to *Yes* if you want the dataSync to try to automatically map the standard and custom properties based on name matching. When enabled, the system will automatically map properties with matching names between Spira and Jira, significantly reducing the need for manual mapping. Even if this option is enabled, you can still manually map properties as explained in this documentation. The system will try to auto-map only the blank mappings. Learn more [here](#using-auto-map-properties-feature).
+- **Auto-Map Properties**: Set this field to *Yes* if you want the dataSync to try to automatically map the standard and custom properties based on name matching. When enabled, the system will automatically map properties with matching names between Spira and Jira, significantly reducing the need for manual mapping. Even if this option is enabled, you can still manually map properties as explained in this documentation. The system will try to auto-map only the blank mappings. Learn more [here](#using-the-auto-map-properties-feature).
 
 !!! info "Configuration Tip"
     If you are using the Auto-Map Properties option, please remember you still need to activate the sync for your project and provide an External Key as explained [below](#activate-the-datasync). The auto-mapping will occur when the datasync runs for the first time after activation, but you won't see the values on the mapping pages, so you can still provide different values for manual mapping.
@@ -529,7 +531,7 @@ To start, go to the data mapping home page for the selected product you were on 
 
         - Settings > Projects
         - In the left menu, Issues (Work Items) > Screens
-        - Then, for each Isse (Work Item) type you sync to Spira:
+        - Then, for each Issue (Work Item) type you sync to Spira:
             - Click on the pencil (edit)
             - Then, for each Screen, click on its name
             - Then, at the bottom of the page, select 'Time Tracking'
@@ -600,3 +602,46 @@ You are now able to perform test coverage and incident reporting inside Spira us
 The Jira Cloud Connector is now "[Spira QA Coverage](./Jira-Spira-QA-Coverage.md)".
 
 This app is available for Jira Cloud on the [Jira Marketplace](https://marketplace.atlassian.com/apps/1235208/spira-qa-coverage?hosting=cloud&tab=overview)
+
+
+## Troubleshooting
+
+### Data Synchronization Problems
+
+??? question "Status synchronization issues"
+    **Symptoms**: Status changes don't sync or cause errors
+    
+    **Solutions**:
+    
+    - Verify status mappings between Spira and Jira. If using Auto-Map, make sure the status names match
+    - Ensure Jira workflow allows the status transitions being attempted
+    - Try disabling the product template 'Status Bulk Edit' as explained [here](https://www.inflectra.com/Support/KnowledgeBase/KB886.aspx)
+    - Review field requirements for each status in both systems
+    - Consider simplifying workflows during initial testing
+
+### Troubleshooting Best Practices
+
+!!! tip "General Troubleshooting Steps"
+    
+    1. **Check Spira's Event Log first** - Most issues are logged with detailed error messages
+    2. **Test with minimal configuration** - Start with basic field mappings and add complexity gradually
+    3. **Verify permissions** - Ensure users have appropriate access in both systems
+    4. **Use test data** - Create test incidents/issues to verify sync behavior
+
+!!! warning "When to Contact Support"
+    
+    Contact [Inflectra Support](mailto:support@inflectra.com) if you encounter:
+    
+    - Persistent authentication errors after verifying credentials
+    - Data corruption or loss during synchronization
+    - Performance issues that don't improve with configuration changes
+    - Error messages that aren't covered in this troubleshooting guide
+    
+    **Please include in your support request**:
+
+    - Full error messages from the Event Log
+    - Your sync service details: cloud-hosted or on-premise (Windows service or desktop app)
+    - Your Spira environment: instance URL, hosting type (cloud or on-premise), and version number
+    - Screenshots of your configuration settings
+    - Description of what you were trying to accomplish
+    - Steps to reproduce the issue

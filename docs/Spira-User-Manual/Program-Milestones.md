@@ -1,6 +1,9 @@
-# Program Milestones
+---
+pdf: true
+---
 
-!!! info "These features are only available in SpiraPlan"
+# Program Milestones
+!!! abstract "Available in SpiraPlan only"
 
 Program Milestones and [Capabilities](Program-Capabilities.md) give you powerful ways to manage delivery of features and releases across multiple products at once - in other words at a program level. Program milestones let you define cross-product, program-level date goals / milestones (like releases or sprints). You can customize program milestones with system-wide [types](../Spira-Administration-Guide/Program-Milestones.md/#types), [statuses](../Spira-Administration-Guide/Program-Milestones.md/#statuses), and fully [customizable fields](../Spira-Administration-Guide/System-Custom-Properties.md). You can link program milestones to product releases to track their scheduling at a higher level. Program milestones also let you track capabilities' delivery.
 

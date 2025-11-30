@@ -21,8 +21,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink
@@ -47,6 +47,18 @@ markdown_extensions:
 # PLUGINS
 plugins:
   - search
+  - exporter:
+      formats:
+        pdf:
+          concurrency: 8
+          enabled: false
+          explicit: true
+          aggregator:
+            enabled: true
+            output: SpiraDocumentation.pdf
+            covers: none
+          browser:
+            debug: false
 
 # THEME INFORMATION
 theme:
@@ -70,7 +82,7 @@ theme:
   custom_dir: overrides
   
 extra_css:
-  - stylesheets/spira.css
+ - stylesheets/spira.css
 
 extra:
   social:
@@ -85,6 +97,8 @@ extra:
     property: see the custom.html partial 
   version:
     provider: mike
+  author: "Inflectra Corporation"
+  site_name: "Spira User and Admin Documentation"
 
 
 # NAVIGATION MENU
@@ -203,6 +217,7 @@ nav:
   - Risks+: SpiraApps\RisksPlus.md
   - Task and Test Presets: SpiraApps\Task-Test-Presets.md
   - Test Configurations+: SpiraApps\Test-Configuration-Plus.md
+  - Versioning: SpiraApps\Versioning.md
   - Worx: SpiraApps\WorX.md
 - Reporting:
   - Introduction: Reporting\index.md
@@ -366,6 +381,7 @@ nav:
   - Addons and Integrations: About/release-notes-addons-1.md
 - About:
   - Introduction to Spira: About/introduction-to-spira.md
+  - Compare Spira Editions: About/edition-comparison.md
   - Legal Notices: About/legal-notices.md
 
 # validation customization

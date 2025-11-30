@@ -1,15 +1,19 @@
+---
+pdf: true
+---
+
 # Template: Test Cases
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 This section contains administrative options that are specific to the testing functionality in the system.
 
 
 ## Priority
-
 The following screen is displayed when you choose the "Priority" link from the Test Cases section of the administration menu:
 
 ![](img/Template_Test_Cases_136.png)
 
-The screen displays a list of all the defined test case priorities for the current template. By default, the screen will be populated with the standard SpiraPlan® test case priorities. To edit an existing test case priority, change the name, color, score (this is used for ranking the different items -- the item with the lowest score will appear at the top of dropdown lists in the application), and/or change the active flag then click "Save".
+The screen displays a list of all the defined test case priorities for the current template. By default, the screen will be populated with the standard Spira test case priorities. To edit an existing test case priority, change the name, color, score (this is used for ranking the different items -- the item with the lowest score will appear at the top of dropdown lists in the application), and/or change the active flag then click "Save".
 
 Note that you can either enter the hexadecimal RRGGBB code for the color or use the pop-up color picker.
 
@@ -17,12 +21,11 @@ You can't delete an existing test case priority, but to prevent it appearing in 
 
 
 ## Types
-
 The following screen is displayed when you choose the "Types" link from the Test Cases section of the administration menu:
 
 ![](img/Template_Test_Cases_137.png)
 
-The screen displays a list of all the defined test case types for the current template. By default, the screen will be populated with the standard SpiraPlan® test case types. To edit an existing test case type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".
+The screen displays a list of all the defined test case types for the current template. By default, the screen will be populated with the standard Spira test case types. To edit an existing test case type, change the name, associated workflow, issue check-box, risk check-box, set a default type and/or change the active flag then click "Save".
 
 You can't delete an existing test case type, but to prevent it appearing in any drop-down-lists, change its active flag to "No" and click "Save". To add a new test case type, click the "Add" button and a new row will be added to the list which you can now edit.
 
@@ -34,12 +37,11 @@ The default radio button allows you to specify which test case type should be th
 
 
 ## Test Case Workflows
-
 Clicking on the "Workflows" link under the Test Cases section, brings up the list of defined test case workflows for the current template. A workflow is a predefined sequence of test cases statuses linked together by "workflow transitions" to enable a newly created test case to be reviewed, prioritized, assigned, and tested, as well as to handle exception cases such as the case of a rejected or obsolete test case. The workflow list screen for the sample template is illustrated below:
 
 ![](img/Template_Test_Cases_138.png)
 
-You can have as many workflows as you like in a template, but only one can be marked as the default. Each test case type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard SpiraPlan® steps and transitions. The steps and transitions that make up the default workflow are illustrated in the diagram below:
+You can have as many workflows as you like in a template, but only one can be marked as the default. Each test case type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard Spira steps and transitions. The steps and transitions that make up the default workflow are illustrated in the diagram below:
 
 ``` mermaid
 flowchart LR
@@ -55,7 +57,6 @@ Note: You can only assign an active workflow to a test case type, and similarly 
 
 
 ### Edit Workflow Details
-
 Clicking on the 'Steps' button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 
 ![](img/Template_Test_Cases_139.png)
@@ -66,7 +67,6 @@ Clicking on the name of a step or transition takes you to the appropriate detail
 
 
 ### Edit Workflow Transition
-
 When you click on the transition name link from the previous screen, you are taken to the workflow transition details screen:
 
 ![](img/Template_Test_Cases_140.png)
@@ -91,14 +91,13 @@ A user with a specified role can be allowed to execute the transition regardless
 
 
 ### Edit Workflow Step
-
 When you click on the test case status name link from either of the previous screens, you are taken to the workflow step details screen:
 
 ![](img/Template_Test_Cases_141.png)
 
 The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current test case status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.
 
-This page allows you to define the behavior of the various test case fields (i.e. those that are a standard part of SpiraPlan® such as Priority):
+This page allows you to define the behavior of the various test case fields (i.e. those that are a standard part of Spira such as Priority):
 
 ![](img/Template_Test_Cases_142.png)
 
@@ -121,7 +120,6 @@ Note that two test case fields have special meanings:
 
 -   **Test Steps?** - when this field is marked as Disabled = True, you will not be able to edit the test steps
 -   **Execution Status** - when this field is marked as Disabled = True, you will not be able to execute the test case in this status.
-
 
 ## Example Workflow
 Below is a diagram that shows an example workflow (the one used by the sample product "Library Information System") for test cases.

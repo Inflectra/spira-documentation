@@ -1,5 +1,80 @@
 # Release Notes for Spira v8
 
+## Version 8.15 (November 2025)
+!!! info "Summary"
+    Administrators can set the default views for new users for the My Page, product home pages, and the product reporting page.
+
+    Developers can now access new REST API documentation for V7 of our API using the OpenAPI standard, to improve using our documentation and making integration with other services easier. 
+
+??? success "New Features"
+    - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - Development, so that everyone using the default view sees the same layout and widgets [RQ:5456]
+    - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - General, so that everyone using the default view sees the same layout and widgets [RQ:5454]
+    - As a product admin, [I can edit the default view](../Spira-User-Manual/Product-Homepage.md/#customizing-the-default-page-for-all-users) for the Product Home Page - Testing, so that everyone using the default view sees the same layout and widgets [RQ:5455]
+    - As a product admin, [I can edit the default view for the Reporting Home Page](../Spira-User-Manual/Reports-Center.md/#customizing-the-reporting-page-for-all-users), so that everyone using the default view sees the same layout and widgets [RQ:5457]
+    - As a system admin, I can edit the default view for the My Page, so that everyone using the default view sees the same layout and widgets [RQ:5453]
+
+??? bug "Bug fixes and enhancements"
+    - Add ability to get information about Inflectra.ai feature is active or not for a product in custom report view [R_Projects](../Reporting/Custom-Report-Tables.md/#projects-products) [IN:11559]
+    - Add the ability to view REST API documentation in the OpenAPI v3.0 specification [IN:11676]
+    - Create a system history event when a system admin unlocks a locked out user [IN:11752]
+    - Fix showing a system error when attempting to filter the program list [IN:7569]
+        {: .edition-spiratest .edition-spirateam}
+    - Fix [exporting a test set to another product](../Spira-User-Manual/Test-Set-Management.md/#exporting-a-test-set-to-a-different-product) so that it also exports tags for both the test set and its test cases [IN:11449]
+    - Improve instructions on the [electronic signature popup](../Spira-User-Manual/Application-Wide.md/#electronic-signatures) to make it clear users can input either their password or RSS token [IN:11121
+    - Improve responsiveness for cloud trial users of SpiraTest by ensuring the server app-pool is kept alive [IN:11575]
+    - Make it harder to accidentally delete a datasync plugin and all its mappings by making users interact with a extra confirmation dialog [IN:11760]
+    - Improve how a locked out user is [unlocked by a system admin](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that the user can immediately log back in again after being unlocked [IN:11571]
+
+## Version 8.14 (October 2025)
+!!! info "Summary"
+    - Product admins can now reassign a [shared search](../Spira-User-Manual/Product-Homepage.md/#shared-searches) to any product member, to improve how searches can be used and kept up to date.
+    - The system now tracks [additional system admin actions](../Spira-Administration-Guide/System.md/#system-history-changes) to improve auditing: security setting changes, LDAP configuration changes, and email configuration changes.
+
+??? success "New Features"
+    - As a product admin, I can change the ownership of a shared search / shared filter to another user from the [shared search widget on the product home page](../Spira-User-Manual/Product-Homepage.md/#shared-searches), to manage who can update the shared searches [RQ:5433]
+
+??? bug "Bug fixes and enhancements"
+    - Add [history recording](../Spira-Administration-Guide/System.md/#system-history-changes) to all or email, LDAP, security settings pages [IN:10790]
+    - Fix being unable to see requirement's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11376]
+    - Fix being unable to see risk's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11378]
+    - Fix being unable to see task's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11379]
+    - Fix dropdown filter menu for leftmost columns of hierarchical grids being cut off on the requirement and release list pages [IN:11638]
+    - Fix dropdown filter menu for leftmost columns of sorted grids being cut on the associations tab and other similar places [IN:11536]
+    - Fix not being able to see full custom field text of test step during the execution (normal and exploratory) [IN:4245]
+    - Fix the PluginInterfaces distributed code DLL having the wrong copyright year [IN:11541]
+    - Fix updating a test run not creating a history entry when specific standard fields are changed [IN:9194]
+    - Hide products that are not active from specific [program home page widgets](../Spira-User-Manual/Program-Homepage.md) (product details, requirements coverage, test execution status, and incident aging) [IN:9921]
+    - Improve date picker popups so that they do not automatically close when mousing away, instead only when they lose focus (for example, when clicking elsewhere on the page) [IN:11534]
+    - SpiraApps can show [popups with Confirm and Cancel buttons](../Developers/SpiraApps-Manager.md/#notifications) to allow for richer interactive experiences [IN:11288]
+    - [SpiraApp notifications](../Developers/SpiraApps-Manager.md/#notifications) can now include basic text formatting, including line breaks, to improve readability [IN:11204]
+    - Timesheet date selector max date can mix up day and month when the day is single digit (like 4) but the configured culture date format always uses 2 digits (like 04) [IN:11560]
+
+## Version 8.13 (September 2025)
+??? success "New Features"
+    - Fix [planning board](../Spira-User-Manual/Planning-Board.md) Incident Cards in the same column as Requirement cards not always staying where dragged and dropped [RQ:5403]
+
+??? bug "Bug fixes and enhancements"
+    - Add ability for SpiraAppManager to automatically save the current artifact directly using a new [SpiraAppManager.saveForm()](../Developers/SpiraApps-Manager.md/#page-actions) function [IN:11077]
+    - Add an API endpoint for updating a Release Type, so that only the selected workflow can be changed [IN:11432]
+    - Fine tune the new horizontal scroll bar beneath grids on list pages to improve usability with long lists [IN:11477]
+    - Fix being unable to see a test case's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11377]
+    - Fix being unable to see an incident's embedded images when [exported to another product](../Spira-User-Manual/Application-Wide.md/#export-to-another-product), if the user is not a member of the source product [IN:11375]
+    - Fix dragging cards in the Unassigned Items column on [product boards](../Spira-User-Manual/Application-Wide.md/#boards) not placing the cards in the correct place, but instead always putting them at the bottom [IN:11416]
+    - Fix not being able to see full custom field text of test step during the execution (normal and exploratory) [IN:4245]
+    - Fix onboarding link for 8.12 for export to test set feature [IN:11448]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) not being able to export a test set that contains test cases from other products without error, by not exporting such test cases [IN:11478]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) so that so exported Test Set Test Cases with Parameters have their values properly set for test execution [IN:11458]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) so that Test Case Automation files are kept in place [IN:11459]
+    - Fix [Test Set Export](../Spira-User-Manual/Application-Wide.md/#export-to-another-product) when Test Set has same Test Case in the Test Set multiple times [IN:11453]
+    - Fix the artifact details page save button not being enabled after SpiraAppManager updates a form value [IN:11431]
+    - Fix the save button not enabling on details pages when a date only field is emptied [IN:11482]
+    - Fix the save button so it does not activate when loading an artifact with incorrectly formatted HTML/rich text [IN:11483]
+    - Impose a strict limit on the maximum number of cards that can be retrieved for any column in total (including across rows) on all [product boards](../Spira-User-Manual/Application-Wide.md/#boards) to 500, to improve performance [IN:11410]
+    - Improve the usability of time formats shown and edited on list and details pages from hours as a decimal to hours:minutes, to make it easier for users to work with time fields [IN:9884]
+    - Remove the Test Set Notification Event field "Last Executed" from the list of possible fields [IN:7235]
+    - Stop text wrapping on list page grids when Inflectra.ai is enabled [IN:11468]
+
+
 ## Version 8.12 (August 2025)
 !!! info "Summary"
     - Users can now export test sets to another product, including all test cases, steps, parameters, and attachments.
@@ -44,7 +119,7 @@
     - Fix the v7 API for updating a user to properly update the user's information [IN:11282]
     - Improve horizontal scrolling on pages with tables or boards that can extend beyond the edge of the screen, by having the table or board scroll and not the whole page [IN:11285]
     - Improve performance of the [test run list page](../Spira-User-Manual/Test-Run-Management.md/#test-run-list) by improving the way the data is retrieved to use fewer resources [IN:11164]
-    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > [planning options page](../Spira-Administration-Guide/Product-Planning.md/#task--incidents)) [IN:11017]
+    - Remove time tracking "Enabled for Tasks/Incidents" settings as they are no longer required (on the product admin > [planning options page](../Spira-Administration-Guide/Product-Planning.md/#task-incidents)) [IN:11017]
 
 
 ## Version 8.11 (June 2025)
@@ -54,7 +129,7 @@
         - As a timesheet user, I can optionally adjust [remaining effort](../Spira-User-Manual/Timesheets.md/#remaining-effort) for an artifact directly on my Timesheet, to streamline my workflow [RQ:5310]
     
 ??? bug "Bug fixes and enhancements"
-    - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#team-project-users) [IN:10729]
+    - Create custom report views that provide information about [teams](../Reporting/Custom-Report-Tables.md/#teams) and [team project users](../Reporting/Custom-Report-Tables.md/#project-teams-users) [IN:10729]
     - Create a new API endpoint to retrieve dataSync system extended custom properties [IN:10659]
     - Fix not being able to clone a product or update the data sync mappings if two external keys are the same for 2 different fields [IN:11099]
     - **[Inflectra.ai enhancements](./release-notes-inflectra.ai-v1.md/#may-30-2025)**
@@ -75,7 +150,7 @@
 
 ## Version 8.10 (May 2025)
 !!! info "Summary"
-    Cloud users can now benefit from Infectra.ai services in Spira to leverage AI to improve productivity and reduce risks.
+    Cloud users can now benefit from Inflectra.ai services in Spira to leverage AI to improve productivity and reduce risks.
 
     For cloud customers, source code integrations with third party services like GitLab and GitHub is now simpler and clearer (SpiraTeam and SpiraPlan).
 
@@ -124,7 +199,7 @@
         - As an incident user, I can see associated incidents on [test runs](../Spira-User-Manual/Test-Run-Management.md/#incidents) which are from other products [RQ:5123]
         - As an Incident user, I can see associated incidents on [test cases](../Spira-User-Manual/Test-Case-Management.md/#incidents) which are from other products [RQ:5126]
         - As an Incident user, I can see associated incidents on [test sets](../Spira-User-Manual/Test-Set-Management.md/#incidents) which are from other products [RQ:5127]
-        - As an Incident user, I can see associated incidents on [test steps](../Spira-User-Manual/Test-Case-Management.md/#incidents-1) which are from other products [RQ:5124]
+        - As an Incident user, I can see associated incidents on [test steps](../Spira-User-Manual/Test-Case-Management.md/#incidents_1) which are from other products [RQ:5124]
         - As a tester, [I can associate incidents to a test run step](../Spira-User-Manual/Test-Execution.md/#incidents) which are from a different product [RQ:5125]
 
     * **[Product Home Page](../Spira-User-Manual/Product-Homepage.md/#custom-graphs)**
@@ -139,13 +214,13 @@
     - Allow [data syncs](../Spira-Administration-Guide/System-Integration.md#data-synchronization) to potentially use more than the existing system level 5 custom setting fields, by adding 20 more [IN:10619]
     - Correct the explanatory text on the [template custom list page](../Spira-Administration-Guide/Template-Custom-Properties.md/#edit-custom-lists) to not reference "products" - but instead the template [IN:7555]
     - Fix reports sometimes failing to generate by ensuring that any incompatible characters (such as those considered out of range) are stripped out [IN:10358]
-    - Fix tags dropdowns not being a valid recipient of [SpiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) to enhance SpiraApp capabilities [IN:10675]
+    - Fix tags dropdowns not being a valid recipient of [SpiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#events-handlers) to enhance SpiraApp capabilities [IN:10675]
     - Fix the incident list page tools buttons to "Export to Excel/Word/Acrobat" not correctly generating the requested report (introduced in 8.7.0.0) [IN:10671]
     - Fix the My Page so that when widgets in the "Top" or "Bottom" sections can be more easily closed or configured in dark mode, by making the editing buttons visible [IN:6979]
     - Fix the possibility of getting an error on the Planning Board if the release selected in the release dropdown has been deleted [IN:10192]
     - Fix the [Product Test Summary widget](../Spira-User-Manual/Program-Homepage.md/#product-test-summary) on the program home page so that it does not show inactive products or any information about them [IN:10508]
     - Fix the REST API for creating a timesheet entry closing the connection instead of throwing an error if the entry object has errors (such as missing fields or the time is over 23:59 hours) [IN:10607]
-    - Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the [spiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#event-handlers) function [IN:10573]
+    - Fix user and hierarchy dropdowns not being a valid recipient for SpiraApps when calling the [spiraAppManager.registerEvent_dropdownChanged](../Developers/SpiraApps-Manager.md/#events-handlers) function [IN:10573]
     - Improve the incident association panel(s) when adding an incident, to only allow users to see incidents to add if the user has view incident permissions in the selected product [IN:10630]
     - Remove "SpiraApp" from the list of available artifacts on the product admin [Product Associations page](../Spira-Administration-Guide/Product-General-Settings.md/#product-associations), to avoid confusion [IN:9654]
     - Upgrade databases to record product history change areas in a more robust and future proof way [IN:9314]
@@ -160,9 +235,16 @@
 
 ## Version 8.7 (February 2025)
 !!! info "Summary"
-    On the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page users can resubmit rejected timesheets, see the status of a timesheet <span class="pill">SpiraPlan</span>, and easily view all their timesheets in a list.
+    On the [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page users can:
+    
+    - resubmit rejected timesheets 
+        {: .edition-spiraplan}
+    - see the status of a timesheet 
+        {: .edition-spiraplan}
+    - easily view all their timesheets in a list
 
-    [Timesheet managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals) can view all submitted timesheets, and approve or reject any timesheet. This full approvals workflow lets managers ensure all approved timesheets are correct and valid <span class="pill">SpiraPlan</span>.
+    [Timesheet managers](../Spira-User-Manual/Timesheets.md/#timesheets-approvals) can view all submitted timesheets, and approve or reject any timesheet. This full approvals workflow lets managers ensure all approved timesheets are correct and valid. 
+        {: .edition-spiraplan}
 
     The [history view](../Spira-User-Manual/Application-Wide.md/#history) now shows detailed tracked changes for any text change, to see what was added, changed, or deleted.
 
@@ -281,31 +363,37 @@
 
 ## Version 8.6 (December 2024)
 !!! info "Summary"
-    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSV files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025). <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    Users can now create [timesheets](../Spira-User-Manual/Timesheets.md/#my-timesheet) in the past, delete timesheets, or download them as CSV files for offline analysis or records. With approvals enabled, users can also submit timesheets for approval (full feature set coming in early 2025).
+        {: .edition-spiraplan .edition-spirateam}
 
-    Ahead of full timesheet approval workflows, system admins can enable or disable [system-wide approvals](../Spira-Administration-Guide/System.md/#general-settings), and flag specific users as [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), to help them prepare for future functionality. <span class="pill">SpiraPlan</span>
+    Ahead of full timesheet approval workflows, system admins can enable or disable [system-wide approvals](../Spira-Administration-Guide/System.md/#general-settings), and flag specific users as [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), to help them prepare for future functionality.
+        {: .edition-spiraplan}
 
 ??? success "New Features"
-    * **My Timesheet** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **My Timesheet**
+        {: .edition-spiraplan .edition-spirateam}
 
         - As a developer, I can [download](../Spira-User-Manual/Timesheets.md/#downloading) the data in a timesheet to a CSV file, to help me track and analyze my time [RQ:4942]
         - As a developer, I can [create a timesheet for any past date range](../Spira-User-Manual/Timesheets.md/#my-timesheet), so I can record my historical work correctly [RQ:4944]
         - As a developer, I can easily [delete an artifact row](../Spira-User-Manual/Timesheets.md/#deleting) from a timesheet, so I can easily correct data entered by mistake [RQ:4947]
         - As a developer, I can [delete a whole timesheet](../Spira-User-Manual/Timesheets.md/#deleting), so I can easily correct data entered by mistake [RQ:4948]
     
-    * **As a developer, I can submit and manage my timesheets to get them approved by a manager, to officially record my time** <span class="pill">SpiraPlan</span>
+    * **As a developer, I can submit and manage my timesheets to get them approved by a manager, to officially record my time** 
+        {: .edition-spiraplan}
 
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can see the status of any timesheet, to help me manage my timesheets [RQ:4963]
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I can submit any draft timesheet for approval, to get my timesheet reviewed by a manager [RQ:4969]
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot edit a timesheet that has been submitted for approval, to ensure the manager works from the correct data [RQ:4972]
         - As a developer with [timesheet approvals enabled](../Spira-User-Manual/Timesheets.md/#my-timesheet-approvals), I cannot delete a timesheet that has been submitted, to ensure the integrity of data a manager has reviewed [RQ:4973]
 
-    * **Timesheet administration** <span class="pill">SpiraPlan</span>
+    * **Timesheet administration** 
+        {: .edition-spiraplan}
 
         - As a system admin of SpiraPlan, I can [enable timesheet approvals](../Spira-Administration-Guide/System.md/#general-settings), so people can make use of that feature or not [RQ:4961]
         - As a system admin of SpiraPlan, I can make people [timesheet managers](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that they can approve timesheets as needed [RQ:4962]
 
-    * **Timesheet API functions** <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    * **Timesheet API functions**
+        {: .edition-spiraplan .edition-spirateam}
 
         - As an API user, I can create timesheets using the Spira APIs, to help me automate timesheet work [RQ:5029]
         - As an API user, I can retrieve a single timesheet using the Spira APIs, to help me automate timesheet work [RQ:5035]
@@ -331,10 +419,14 @@
 
 ## Version 8.5 (November 2024)
 !!! info "Summary"
-    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page, this release lets users edit or reset existing timesheet entries. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    - Following the introduction of the new [My Timesheet](../Spira-User-Manual/Timesheets.md/#my-timesheet) page, this release lets users edit or reset existing timesheet entries. 
+        {: .edition-spiraplan .edition-spirateam}
+    - Timesheet [custom report views](../Reporting/Custom-Report-Tables.md) are now available to help you analyze timesheets across your entire organization. 
+        {: .edition-spiraplan .edition-spirateam}
+    - [Product cloning](../Spira-Administration-Guide/System-Workspaces.md/#product-cloning) now copies over all saved filters against a product to improve the user experience. 
+        {: .edition-spiraplan .edition-spirateam}
+    - We continue to enhance what is possible with SpiraApps and improve the [developer experience](../Developers/SpiraApps-Overview.md), based on feedback. This includes SpiraApps being able to run from the product admin settings page. 
+        {: .edition-spiraplan .edition-spirateam}
 
 ??? success "New Features"
     * **My Timesheet**
@@ -378,11 +470,13 @@
 
 ## Version 8.4 (October 2024)
 !!! info "Summary"
-    My Timecard has been replaced with a completely new My Timesheet page. Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features. <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+    My Timecard has been replaced with a completely new My Timesheet page. Record your work against tasks and incidents day by day to accurately track your time. This is the first in a range of upcoming time management features. 
+        {: .edition-spiraplan .edition-spirateam}
 
     On every artifact list page there is a button that lets you download the current view of the grid (with its filters and columns) as a CSV file.
 
-    Teams functionality is now out of beta, and available for all users. <span class="pill">SpiraPlan</span>
+    Teams functionality is now out of beta, and available for all users. 
+        {: .edition-spiraplan}
     
 
 ??? success "New Features"
@@ -500,8 +594,8 @@
         - Update the FMEA SpiraApp to the latest version to ensure users have access to additional features [IN:9816]
         
     - **SpiraApp developer tooling**
-        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely sanitize HMTL](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9629]
-        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely convert HMTL to plain text](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9630]
+        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely sanitize HTML](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9629]
+        - Add new functionality to the SpiraApps manager to expose a function to developers to [safely convert HTML to plain text](../Developers/SpiraApps-Manager.md/#format-helpers) [IN:9630]
         - Add support for a boolean [setting type](../Developers/SpiraApps-Reference.md/#setting-types) for [SpiraApp product settings](../Developers/SpiraApps-Manifest.md/#product-admin-settings) [IN:9628]
         - Add support for a boolean [setting type](../Developers/SpiraApps-Reference.md/#setting-types) for [SpiraApp system settings](../Developers/SpiraApps-Manifest.md/#system-admin-settings) [IN:9767]
         - Fix artifact status single select [product setting type](../Developers/SpiraApps-Reference.md/#setting-types) not working for SpiraApps [IN:9668]

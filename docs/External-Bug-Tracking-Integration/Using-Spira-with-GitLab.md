@@ -1,7 +1,9 @@
 # Using Spira with GitLab
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 GitLab's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. 
 
-You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (SpiraPlan from here on).
+You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on).
 
 !!! danger "Set up data synchronization"     
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
@@ -9,9 +11,9 @@ You can use this integration to sync new incidents, new comments, statuses, and 
 
 ## Configuring the Integration Service 
 
-This section outlines how to set up the integration service between GitLab and SpiraPlan. It assumes that you already have a working installation of SpiraPlan and a GitLab repository with an issue tracker. To setup the service, you must be logged into SpiraPlan as a user with System-Administrator level privileges.
+This section outlines how to set up the integration service between GitLab and Spira. It assumes that you already have a working installation of Spira and a GitLab repository with an issue tracker. To setup the service, you must be logged into Spira as a user with System-Administrator level privileges.
 
-Inside SpiraPlan, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **GitLabDataSync** as shown below:
+Inside Spira, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **GitLabDataSync** as shown below:
 
 ![](img/Using_Spira_with_GitLab_216.png)
 
@@ -49,28 +51,28 @@ NOTE: Leave any field called "(Not Used)" blank.
 
 ## Configuring Project Mappings
 
-For this step, please ensure that you are in the SpiraPlan project you would like to sync with GitLab. For this example, the project is called "GitLab Data Sync."
+For this step, please ensure that you are in the Spira project you would like to sync with GitLab. For this example, the project is called "GitLab Data Sync."
 
 Click on the "View Project Mappings" button for GitLab Data Sync. You need to fill out the following fields to sync correctly:
 
--   **External Key** -- The name of your GitLab repository. In the example above, where the URL in GitLab was <https://gitlab.com/gitlab-examples/velociraptor>, you would simply enter "velociraptor" for this setting.
+-   **External Key**: The name of your GitLab repository. In the example above, where the URL in GitLab was <https://gitlab.com/gitlab-examples/velociraptor>, you would simply enter "velociraptor" for this setting.
 
--   **Active** -- Set this to yes so that the Data Sync plug-in knows to synchronize with this project.
+-   **Active**: Set this to yes so that the Data Sync plug-in knows to synchronize with this project.
 
 ![](img/Using_Spira_with_GitLab_219.png)
 
 
 ### Configuring the Incident Status Mapping
 
-Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the GitLab Data Sync plug-in knows what the equivalent status is in GitLab for an incident status in SpiraPlan.
+Now click the "Status" button within the "Incident" section to map the Incident statuses together. The purpose of this is so that the GitLab Data Sync plug-in knows what the equivalent status is in GitLab for an incident status in Spira.
 
 ![](img/Using_Spira_with_GitLab_220.png)
 
 You must map every status in the system. Descriptions of the field are below:
 
--   **External Key** -- Either **opened** or **closed**, which are the only two statuses in GitLab
+-   **External Key**: Either **opened** or **closed**, which are the only two statuses in GitLab
 
--   **Primary** -- You must have exactly one primary key for **opened** and one for **closed**. This is what status the plug-in should set the incident in SpiraPlan to when the status in GitLab changes.
+-   **Primary**: You must have exactly one primary key for **opened** and one for **closed**. This is what status the plug-in should set the incident in Spira to when the status in GitLab changes.
 
 
 ### Configuring the User Mapping
@@ -87,7 +89,7 @@ Click on the 'Data Mapping' tab to list all the configured data-synchronization 
 
 ### Configuring the Release Mapping
 
-When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding "Milesone" in GitLab. Similarly, if it comes across a new Milestone in GitLab that it has not seen before, it will create a new Release in SpiraTeam. Therefore, when using both systems together, it is recommended that you only enter new Releases/Milestones in one system and let the data-synchronization service add them to the other system.
+When the data-synchronization service runs, when it comes across a release/iteration in SpiraTeam that it has not seen before, it will create a corresponding "Milestone" in GitLab. Similarly, if it comes across a new Milestone in GitLab that it has not seen before, it will create a new Release in SpiraTeam. Therefore, when using both systems together, it is recommended that you only enter new Releases/Milestones in one system and let the data-synchronization service add them to the other system.
 
 However, you may start out with the situation where you already have pre-existing Releases / Milestones in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore, for any Releases/Iterations that already exist in BOTH systems please navigate to Planning \> Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:
 
@@ -98,7 +100,7 @@ In addition to the standard fields and custom properties, you will see an additi
 
 ## Using the Data Synchronization
 
-Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside SpiraPlan. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
+Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 
 Congratulations, you have just integrated your Spira instance with GitLab's integrated issue tracker!
 

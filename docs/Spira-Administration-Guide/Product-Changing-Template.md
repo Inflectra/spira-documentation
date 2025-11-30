@@ -1,4 +1,9 @@
+---
+pdf: true
+---
+
 # Product: Changing the Template a Product Uses
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Introduction
 Each product in Spira has a template that controls the bulk of how that product is configured and will work for end users. Each product is controlled by one template, though each template can control many products at once. A template affects a product’s fields, custom properties, workflows, and more.
@@ -47,7 +52,7 @@ It’s like trying to change out the engine in a car by replacing it with parts 
 
 
 ## What happens to standard fields
-As mentioned above, only those standard fields controlled by templates can change when changing templates for a product. Let’s call these fields “dynamic fields” No other standard fields (i.e. non custom fields) in the product will change in any way. The dynamic fields in SpiraPlan are below (not all of these are available in SpiraTeam or SpiraTest):
+As mentioned above, only those standard fields controlled by templates can change when changing templates for a product. Let’s call these fields “dynamic fields” No other standard fields (i.e. non custom fields) in the product will change in any way. The dynamic fields in Spira are below (not all of these are available in SpiraTeam or SpiraTest):
 
   - Requirement Importance
   - Requirement Type
@@ -60,11 +65,17 @@ As mentioned above, only those standard fields controlled by templates can chang
   - Incident Status
   - Incident Type
   - Task Priority
+    {: .edition-spiraplan .edition-spirateam}
   - Task Type
+    {: .edition-spiraplan .edition-spirateam}
   - Risk Impact
+    {: .edition-spiraplan .edition-spirateam}
   - Risk Probability
+    {: .edition-spiraplan .edition-spirateam}
   - Risk Status
+    {: .edition-spiraplan .edition-spirateam}
   - Risk Type
+    {: .edition-spiraplan .edition-spirateam}
 
 For each of the dynamic fields above the system will:
 
@@ -76,22 +87,22 @@ For each of the dynamic fields above the system will:
 
 ### Example of a non required field - eg incident priority
 
-| # | Old template values | New template values | Value after changing template |
-|---|---------------------|---------------------|-------------------------------|
-| A | high   | high   | high   |
-| B | middle | medium | [null] |
-| C | low    | low    | low    |
-| D | v low  | -      | [null] |
+| #   | Old template values | New template values | Value after changing template |
+| --- | ------------------- | ------------------- | ----------------------------- |
+| A   | high                | high                | high                          |
+| B   | middle              | medium              | [null]                        |
+| C   | low                 | low                 | low                           |
+| D   | v low               | -                   | [null]                        |
 
 
 ### Example of a required field - eg incident type
 
-| # | Old template values | New template values | Default in new template | Value after changing template |
-|---|---------------------|---------------------|-------------------------|------------------|
-| E | bug         | bug         | Y | bug         |
-| F | incident    | issue       |   | bug         |
-| G | enhancement | enhancement |   | enhancement |
-| H | limitation  | limit       |   | bug         |
+| #   | Old template values | New template values | Default in new template | Value after changing template |
+| --- | ------------------- | ------------------- | ----------------------- | ----------------------------- |
+| E   | bug                 | bug                 | Y                       | bug                           |
+| F   | incident            | issue               |                         | bug                           |
+| G   | enhancement         | enhancement         |                         | enhancement                   |
+| H   | limitation          | limit               |                         | bug                           |
 
 
 ## What happens to custom fields

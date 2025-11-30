@@ -1,34 +1,34 @@
 # Spira Test Runner add-in for Excel 365
-This add-in lets you retrieve your assigned Test Cases and Test Sets for a specific product in SpiraTest®, SpiraTeam®, or SpiraPlan® application (hereafter referred to as SpiraPlan). You can run your tests straight away or [later](#multi-session-testing). When you are ready you can send your test executions back to SpiraPlan. This addin works with Microsoft Excel 2016+, Excel in the cloud (via a web browser), and Excel on iPad OS.
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
+This add-in lets you retrieve your assigned Test Cases and Test Sets for a specific product in Spira. You can run your tests straight away or [later](#multi-session-testing). When you are ready you can send your test executions back to Spira. This addin works with Microsoft Excel 2016+, Excel in the cloud (via a web browser), and Excel on iPad OS.
 
 ## Installation 
 To install the add-in:
 
 - Go to the **insert** tab in Excel
 - Click on **"Get Add-Ins"** and in the window that opens navigate to the **store** tab
-- Search for **"Spira** or **SpiraPlan**. 
+- Search for **"Spira** or **Spira**. 
 - When you see the correct add-in **"Test Runner"** developed by Inflectra, click on the "Add" button associated with it.
-- You should now see the SpiraPlan icon labeled "SpiraPlan Test Runner" in your home tab. Click on it to begin.
+- You should now see the Spira icon labeled "Spira Test Runner" in your home tab. Click on it to begin.
 
+## Connecting to Spira
+Open the add-in from the ribbon and fill in the login form panel on the right of your Excel screen. If you are using Excel in the browser, make sure your Spira is accessible over the internet.
 
-## Connecting to SpiraPlan
-Open the add-in from the ribbon and fill in the login form panel on the right of your Excel screen. If you are using Excel in the browser, make sure your SpiraPlan is accessible over the internet.
+![Spira add-in login screen](img/test-runner-log-in-screen.png)
 
-![SpiraPlan add-in login screen](img/test-runner-log-in-screen.png)
+- **Spira URL:** The web address that you use to access Spira in your browser. Use the web address you use to access Spira in your browser. This is usually of the form 'http://company.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
+- **User Name:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
+- **RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new RSS token.*
 
-- **Spira URL:** The web address that you use to access SpiraPlan in your browser. Use the web address you use to access SpiraPlan in your browser. This is usually of the form 'http://company.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
-- **User Name:** This is the exact same username you use to log in to SpiraPlan. (Not Case Sensitive)
-- **RSS token:** You can find or generate this from your user profile page inside SpiraPlan - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new RSS token.*
+If there is a problem connecting to Spira you will be notified with an error message.
 
-If there is a problem connecting to SpiraPlan you will be notified with an error message.
+After you have logged in, click **Logout** to close your connection with Spira and take you back to the add-in's login page.
 
-After you have logged in, click **Logout** to close your connection with SpiraPlan and take you back to the add-in's login page.
+## Retrieving Tests from Spira
+After successfully logging in to the application, you need  to get the most up to date list of Test Cases and/or Test Sets assigned to you from Spira. Select a product to retrieve all your assigned tests cases and sets from and click on '**Get from Spira**'.
 
-## Retrieving Tests from SpiraPlan
-After successfully logging in to the application, you need  to get the most up to date list of Test Cases and/or Test Sets assigned to you from SpiraPlan. Select a product to retrieve all your assigned tests cases and sets from and click on '**Get from Spira**'.
-
-![SpiraPlan add-in main screen](img/test-runner-main-screen.png)
+![Spira add-in main screen](img/test-runner-main-screen.png)
 
 When you click the **Get from Spira** button you will see the Test Cases and their Test Steps be added the current sheet of the spreadsheet. The following tests are retrieved:
 
@@ -36,30 +36,30 @@ When you click the **Get from Spira** button you will see the Test Cases and the
 - Test Sets of type "manual" assigned to you from the product selected
 
 !!! info "Resuming Testing"
-    The add-in only communicates to SpiraPlan when you first get data from SpiraPlan and then at the end when you send the new data into SpiraPlan. You can therefore carry out your testing described below completely offline if you wish. You can also work on tests over multiple sessions.
+    The add-in only communicates to Spira when you first get data from Spira and then at the end when you send the new data into Spira. You can therefore carry out your testing described below completely offline if you wish. You can also work on tests over multiple sessions.
 
-    When you return to the spreadsheet with your Test Cases after the first session you need to resume your testing. To do this you can use the spreadsheet without opening the add-in. You only need to login to the add-in when you want to [send the Test Runs to SpiraPlan](#sending-test-runs-to-spiraplan). That is what the "**Use Current Sheet** button directly below the **Get from Spira** button is for.
+    When you return to the spreadsheet with your Test Cases after the first session you need to resume your testing. To do this you can use the spreadsheet without opening the add-in. You only need to login to the add-in when you want to [send the Test Runs to Spira](#sending-test-runs-to-spira). That is what the "**Use Current Sheet** button directly below the **Get from Spira** button is for.
 
 ## Running Tests
-On retrieving your assigned tests from SpiraPlan the add-in populates the sheet with the information in a format to make it clear how to run your tests.
+On retrieving your assigned tests from Spira the add-in populates the sheet with the information in a format to make it clear how to run your tests.
 
 ### Spreadsheet Structure
 The spreadsheet is generating using the following columns:
 
-![SpiraPlan add-in spreadsheet data](img/test-runner-spreadsheet.png)
+![Spira add-in spreadsheet data](img/test-runner-spreadsheet.png)
 
-- **'Send to Spira' Log**: Here, you can see warning, error, and success messages after you finish your testing and record the test runs back into SpiraPlan. Remember to always check this column at the end to make sure the operation was successful. If it wasn't the log information here will help you make the necessary corrections.
-- **Test Case ID**: the unique ID of the Test Case from SpiraPlan - this is only populated for test case rows. You can't edit this field.
+- **'Send to Spira' Log**: Here, you can see warning, error, and success messages after you finish your testing and record the test runs back into Spira. Remember to always check this column at the end to make sure the operation was successful. If it wasn't the log information here will help you make the necessary corrections.
+- **Test Case ID**: the unique ID of the Test Case from Spira - this is only populated for test case rows. You can't edit this field.
 - **Test Set ID**: if the Test Case came from a Test Step assigned to you, you should see its ID in this field. Otherwise, it will remain blank. This is only populated for test case rows. You can't edit this field.
-- **Test Step ID**: the unique ID of each Test Step from SpiraPlan - this is only populated for test step rows. You can't edit this field.
-- **Test Case Name**: The name of the Test Case in SpiraPlan.
-- **Release**: The release associated with the Test Case in SpiraPlan.
+- **Test Step ID**: the unique ID of each Test Step from Spira - this is only populated for test step rows. You can't edit this field.
+- **Test Case Name**: The name of the Test Case in Spira.
+- **Release**: The release associated with the Test Case in Spira.
 - **Set Case Unique ID**: This is a unique cross-reference ID for the Test Case within the Test Set. It is blank if the Test Case is not part of a Test Set and is only populated in Test Case rows. You can't edit this field.
-- **Test Step Description**: the full text of the description field for each Test Step in SpiraPlan (only populated in Test Step rows).
-- **Test Step Expected Result**: the full text of the expected result field for each Test Step in SpiraPlan (only populated in Test Step rows).
-- **Test Step Sample Data**: the full text of the sample data field for each Test Step in SpiraPlan (only populated in Test Step rows).
+- **Test Step Description**: the full text of the description field for each Test Step in Spira (only populated in Test Step rows).
+- **Test Step Expected Result**: the full text of the expected result field for each Test Step in Spira (only populated in Test Step rows).
+- **Test Step Sample Data**: the full text of the sample data field for each Test Step in Spira (only populated in Test Step rows).
 - **Execution Status**: the execution status of that test step, chosen from the dropdown list.
-- **Actual Result**: the description of the actual result experienced during testing. Plain text only can be sent to SpiraPlan from Excel, so do not add images to these cells. To apply formatting please use HTML tags such as `<b>` for bold.
+- **Actual Result**: the description of the actual result experienced during testing. Plain text only can be sent to Spira from Excel, so do not add images to these cells. To apply formatting please use HTML tags such as `<b>` for bold.
 - **Incident Name** : if you want to log an incident associated with the test failure, enter the name of the incident here. The description of the incident will be automatically populated from the Test Step Description, Expected Result, and Actual Result.
 
 ### Background Colors
@@ -94,29 +94,29 @@ To execute the Test Cases on the spreadsheet:
 
 1. give each test step an **Execution Status** from the dropdown list
 2. add any details about the **Actual Result** of each test step
-3. optionally, add an **Incident Name** for test steps where you want to create an incident in SpiraPlan
+3. optionally, add an **Incident Name** for test steps where you want to create an incident in Spira
 4. If necessary (for example, if they contain errors), update the test steps' **Description**, **Expected Results**, or **Sample Data** fields
 5. Review your work
-6. When you are ready you can send your tests as Test Runs in SpiraPlan (discussed below).
+6. When you are ready you can send your tests as Test Runs in Spira (discussed below).
 
 ??? hint "If you don't want to run all your tests"
-    Let's say you have 5 Test Cases assigned to you but you plan to only execute 2 of them. How can you execute just these 2 and not the remaining 3? Delete all the rows for the 3 Test Cases you are not testing today. Make sure to delete the rows for the Test Case and all of each Test Case's Test Steps. If this is not done correctly you will not be able to log anything to SpiraPlan.
+    Let's say you have 5 Test Cases assigned to you but you plan to only execute 2 of them. How can you execute just these 2 and not the remaining 3? Delete all the rows for the 3 Test Cases you are not testing today. Make sure to delete the rows for the Test Case and all of each Test Case's Test Steps. If this is not done correctly you will not be able to log anything to Spira.
 
-## Sending Test Runs to SpiraPlan
+## Sending Test Runs to Spira
 Once you have finished executing all the tests and recorded the results of your test runs on the spreadsheet, it is time to send the data to Spira to get properly recorded. There are two ways of doing this, depending on how you executed your tests:
 
 - retrieving and executing your assigned tests in a single session
 - executing your assigned tests over multiple sessions using the same spreadsheet
 
-![Sending Test Runs to SpiraPlan add-in pane](img/test-runner-send-data.jpg)
+![Sending Test Runs to Spira add-in pane](img/test-runner-send-data.jpg)
 
 ### Single Session Testing
-If you got your data from SpiraPlan using the add-in, and straight away executed your tests in a single seession, you can easily send the data back to SpiraPlan.
+If you got your data from Spira using the add-in, and straight away executed your tests in a single seession, you can easily send the data back to Spira.
 
 To do so click the button "**Send to Spira**" on the add-in and wait for the operation to complete. 
 
 ### Multi Session Testing
-If you have first got your data from SpiraPlan and then executed your assigned tests over multiple sessions, you now need to send the data back to SpiraPlan, without wiping out your work. If you have been testing over multiple sessions in this way follow the steps below:
+If you have first got your data from Spira and then executed your assigned tests over multiple sessions, you now need to send the data back to Spira, without wiping out your work. If you have been testing over multiple sessions in this way follow the steps below:
 
 1. Open the saved and completed spreadsheet
 2. Open and log in to the add-in
@@ -125,9 +125,9 @@ If you have first got your data from SpiraPlan and then executed your assigned t
 5. Click "**Send to Spira**" to send your results.
 
 ### Check the Send to Spira Log
-Once everything has been sent to SpiraPlan, results are recorded in the "'Send to Spira' Log" column of the spreadsheet. In this column you will see:
+Once everything has been sent to Spira, results are recorded in the "'Send to Spira' Log" column of the spreadsheet. In this column you will see:
 
-- The Test Run ID in the Test Case row of every Test Case that was successfully recorded in SpiraPlan
+- The Test Run ID in the Test Case row of every Test Case that was successfully recorded in Spira
 - Any Incident IDs in the relevant Test Step rows where you optionally added an Incident Name
 - Error messages if the add-in encountered a problem. For each row that has an error message at least once cell will be given a background color of red. The error message itself will usually tell you how to fix the problem. You can also review FAQs below.
 
@@ -135,11 +135,11 @@ Once everything has been sent to SpiraPlan, results are recorded in the "'Send t
 ## Frequently Asked Questions
 Below are common questions and answers related to common errors you may face when using the add-in.
 
-!!! fail "1. After entering my SpiraPlan credentials and clicking 'Log in', I see the error message..."
+!!! fail "1. After entering my Spira credentials and clicking 'Log in', I see the error message..."
 
     `Error: Request has been terminated Possible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.`
 
-    **How to solve this issue**: first, make sure your credentials are correct. You can re-generate your RSS / API Key by going to your user page in SpiraPlan. Always remember to click 'Save' after re-generating your RSS key. If the problem persists, ask your SpiraPlan administrator to check the SpiraPlan API CORS configuration (in SpiraPlan: Admin menu > System > Security Settings > Allowed Domains) to see if it is accepting connections from the add-in domain.
+    **How to solve this issue**: first, make sure your credentials are correct. You can re-generate your RSS / API Key by going to your user page in Spira. Always remember to click 'Save' after re-generating your RSS key. If the problem persists, ask your Spira administrator to check the Spira API CORS configuration (in Spira: Admin menu > System > Security Settings > Allowed Domains) to see if it is accepting connections from the add-in domain.
 
 
 !!! fail "2. When importing data from a spreadsheet on my computer, I get error messages. How do I solve it?"
@@ -167,7 +167,7 @@ Below are common questions and answers related to common errors you may face whe
 
     `Invalid Execution Statuses: This TestCase contains an invalid execution statuses combination.`
 
-    **How to solve this issue:** only valid Test Runs can be recorded in SpiraPlan. A valid Test Run is one that meets the conditions below. Check to make sure your test case meets all of these. In particular, review any Test Steps that have an execution status of Not Run still.
+    **How to solve this issue:** only valid Test Runs can be recorded in Spira. A valid Test Run is one that meets the conditions below. Check to make sure your test case meets all of these. In particular, review any Test Steps that have an execution status of Not Run still.
 
     - If at least one Test Step has an Execution Status of Failed, Blocked, or Caution then all other Test Steps can be left as Not Run
     - Otherwise, every Test Step must have an Execution Status other than Not Run (in other words Passed or N/A)
@@ -186,8 +186,10 @@ Below are common questions and answers related to common errors you may face whe
 
 ## Have Questions or Need Assistance?
 If you are an Inflectra customer, please contact our customer support at:
+
 - Email: support@inflectra.com
 - Help Desk: https://www.inflectra.com/Support/
 
 Otherwise, please feel free to post a question on our public forums:
+
 - [Spira Data Importers Forum](https://www.inflectra.com/Support/Forum/integrations/importers/List.aspx)

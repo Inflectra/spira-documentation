@@ -1,20 +1,23 @@
+---
+pdf: true
+---
+
 # System Administration
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 ## Introduction
-Now that you have successfully installed SpiraPlan®, this section of the guide outlines how to perform the typical administrative tasks necessary for setting up products and programs in the system, managing users and verifying the license information.
+This section of the guide outlines how to perform the typical administrative tasks necessary for setting up products and programs in the system, managing users and verifying the license information.
 
 ## Types of administrator
 To perform these tasks, you need to login to the system with a user that has some level of "administration" permissions within the system. There are four different sections to administration, and each has its own permission. These sections and their permissions are:
 
-1.  **System Administration**: tasks like approving new users, creating new products, changing security settings, or viewing the logs all happen at the system-wide level of administration. There is a special "System Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any system administrator task. *Please note that a special "administrator" user is created by the installer. You should initially login to SpiraPlan® with the username `administrator`, and the password `PleaseChange`. Change this password as soon as possible to something that is secure yet memorable by clicking on the "User Profile" link.*
-
+1.  **System Administration**: tasks like approving new users, creating new products, changing security settings, or viewing the logs all happen at the system-wide level of administration. There is a special "System Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any system administrator task. *Please note that a special "administrator" user is created by the installer. You should initially login to Spira with the username `administrator`, and the password `PleaseChange`. Change this password as soon as possible to something that is secure yet memorable by clicking on the "User Profile" link.*
 2.  **Product Administration:** a product admin can make changes specific to that product and that product only. For instance, they can add or remove users from a product. Once a user is made a product admin, they can perform all the actions in the product administration section. *Each individual product has a defined set of users who are members of that product. Each member is assigned a specific role (many users can share the same role), and a role can be set to be a product admin.* *Please note, that when a system admin creates a product, they are automatically added as "Product Owner*".
-
 3.  **Program Administration:** just like with products, some aspects of a program are managed in the program section of administration. Anyone who is assigned the role of "Program Owner" on a program can perform these administrative functions.
-
 4.  **Template Administration:** end users of the application will work with products and sometimes programs. However, behind the scenes of every product is a template. This template controls the bulk of how that product is configured and will work for the end users. Each product is controlled by one template, though each template can control many products at once. Making a change to a template in template administration will immediately affect all products controlled by that template. Such changes to a template include changing the name of incident types, changing the colors used to indicate requirement priorities, or changing custom properties.
-*Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work [here](System-Users.md/#view-edit-roles).*
-
 5.  **Report Administration:** a report admin can administer custom reports and graphs (create, edit, delete). They can also access custom report data in 3rd party tools via OData and the API. These functions are also available to system admins under System Administration. However report admins can **only** access the reporting functions and pages - they have no access to any other admin functions. There is a special "Report Administrator" flag that can be assigned to any user (by an existing system admin only). Any user that has this flag can perform any report administrator task.
+
+*Please note that template admin permissions are managed by the same roles that manage product admin permissions and that apply to members of each product. You can read more about how template admin permissions work [here](System-Users.md/#view-edit-product-roles).*
 
 ## Administration Menu
 Once you have logged in as an administrator, you can click the "Administration" link which can be found on the right-hand side of the global navigation at the top of any page:
@@ -26,9 +29,7 @@ This will display the context aware administration menu popup. This menu will sh
 In the screenshot below you can see that administration links are being shown for three different sections:
 
 1.  Library Information System -- which is a product
-
 2.  The template called Sample Template: Agile (this is the template the controls the above product)
-
 3.  System wide administration
 
 This menu only shows the links to one product, one template, or one program at a time (and System Admin all the time to system administrators). Because this user is currently viewing a page in the product 'Library Information System', admin items for that product and its template are visible.
@@ -54,7 +55,6 @@ In the screenshot above at the top there is a "System Administration" workspace.
 The Administration home page, like all admin pages, is divided into two areas:
 
 1.  the skinny left-hand bar. Clicking this will show the context-aware administration menu discussed above
-
 2.  the main pane that displays the available options for the selected page.
 
 This home page shows a number of useful widgets with information about the system. You can edit these widgets, their position, and what is shown, using the two buttons in the top right (the cog and the plus).
@@ -94,7 +94,8 @@ Permissions for programs are more simple and managed on a per program basis:
 
 Each user profile has two special flags about permissions, which affect the entire system, but only for one user at a time (they are completely separate to product and program permissions):
 
-- <span class="pill">SpiraPlan</span> **Users can be granted portfolio viewer access**: The first special flag on the user profile is Portfolio Viewer access. This allows a user access to all portfolio pages and enterprise pages in the application. In other words, you do not control which portfolio a user can see, but only if they can access all portfolios or none of them. Only a system administrator can set this on a user.
+- **Users can be granted portfolio viewer access**: The first special flag on the user profile is Portfolio Viewer access. This allows a user access to all portfolio pages and enterprise pages in the application. In other words, you do not control which portfolio a user can see, but only if they can access all portfolios or none of them. Only a system administrator can set this on a user.
+    {: .edition-spiraplan}
 - **Users can be granted system administrator status**: this is the second special flag on a user profile and makes the user a system administrator. Only a system administrator can set this on a user.
 
 !!! info "System administrators and product roles"

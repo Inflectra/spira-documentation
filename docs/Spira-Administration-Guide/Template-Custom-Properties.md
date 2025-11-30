@@ -1,10 +1,16 @@
-# Template: Custom Properties
+---
+pdf: true
+---
 
-SpiraPlan allows you to customize many of its artifacts[^custom-artifacts] by adding user-defined custom properties in addition to the built-in fields. Custom properties show in the application in the following places.
+# Template: Custom Properties
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
+Spira allows you to customize many of its artifacts[^custom-artifacts] by adding user-defined custom properties in addition to the built-in fields. Custom properties show in the application in the following places.
 
 - **Artifact list pages**: you can choose to show or hide them the same as standard fields
 - **Artifact details pages**: the visibility is controlled with the workflow as with standard fields. Each custom property is shown in the section on the page with other fields of that type - all rich text fields are shown together, all date fields together etc. In each section, custom properties are shown after standard fields. By default, custom properties are ordered based off of their number (the row number they are at on the custom property admin page), but you can change this by setting the properties' display positions (see below). Custom properties with position numbers are shown after those that do not. All custom properties with position numbers are shown in the order of their position numbers.
 - **Planning board** pages when viewing / adding an artifact (visible as per workflow)
+    {: .edition-spiraplan .edition-spirateam}
 - **Test execution pages**
 - **Reports** (standard and custom)
 - **API**
@@ -18,7 +24,7 @@ In the example below we are looking at the requirements custom property page, wh
 
 ![requirements custom property page](img/Template_Custom_Properties_180.png)
 
-Artifacts in SpiraPlan can have up to 99 different custom properties per artifact-type, per template. 
+Artifacts in Spira can have up to 99 different custom properties per artifact-type, per template. 
 
 [^custom-artifacts]: the following artifacts support custom properties: requirements, releases, documents, test cases, test steps, test sets, test runs, automation hosts, incidents, tasks, risks. 
 
@@ -72,7 +78,6 @@ When finished, click the `Save` button.
 
 
 ## Edit Custom Lists
-
 If you are planning on having any list based custom properties in your template, then you first need to create and populate the custom template lists that the user will be able to select from. These lists are stored separately from the individual artifact types so that you can have one set of values (e.g. list of operating systems under test) be reused by multiple artifact types.
 
 The following screen is displayed when you choose the "Custom Lists" link from the Administration menu:
@@ -89,9 +94,9 @@ After changing the name of the list, and specifying whether the values will be o
 
 This is the set of values that the user will select from the drop-down list when the custom property is displayed. You can change the display to include:
 
--   **All Active** -- displays only custom list values that are active
--   **All But Deleted** -- displays all custom list values that are active or inactive but have not been deleted
--   **All** -- displays all custom list values, including those that have been deleted
+-   **All Active**: displays only custom list values that are active
+-   **All But Deleted**: displays all custom list values that are active or inactive but have not been deleted
+-   **All**: displays all custom list values, including those that have been deleted
 
 To add a new custom list value, click the "Add Value" button and a new row will be added to the list which you can now edit. To edit an existing custom list value, change the name in the textbox and click "Save". To delete a custom list value, click on the "Delete" hyperlink. If you want to remove an item from the list temporarily, you can set its Active dropdown list to 'No', if you want to remove an item permanently, just click the 'Delete' button.
 

@@ -1,5 +1,9 @@
-# Product: Users
+---
+pdf: true
+---
 
+# Product: Users
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Product Membership
 The following page is displayed when you choose the "Product Membership" link from the Administration menu. If you have teams features enabled then the page will be called "Team / Product Membership"
@@ -13,7 +17,8 @@ This page displays a row for each member of the current product, with the follow
 - Department
 - Organization
 - Product Role
-- Team (if enabled) <span class="pill">SpiraPlan</span>
+- Team (if enabled)
+    {: .edition-spiraplan}
 - Email (not shown by default)
 - Active (not shown by default)
 
@@ -31,7 +36,7 @@ Below the header row is the **Query Builder**. You can either type or paste in a
 To edit the product or team of users, check the checkbox for all relevant rows (to select all rows in the current filter, check the checkbox in the header row). Then click the Edit button. The selected rows will change to edit mode, with dropdowns for the Product Role and Team fields. Select the correct values for each row. To update all rows being edited to the same value, right click on the cell with the correct new value, and click the menu entry in the context menu called "Paste cell value to rows being edited". Once you are finished editing, click the Save button, or the Cancel button to cancel.
 
 ### Removing Users
-To remove user from the product, check the relevant checkboxes and click the "Delete" button from the toolbar at the far right. Note that this only removes them from the product, not the entire system. See the [product roles documentation](System-Users.md#view-edit-roles) for more information.
+To remove user from the product, check the relevant checkboxes and click the "Delete" button from the toolbar at the far right. Note that this only removes them from the product, not the entire system. See the [product roles documentation](System-Users.md/#view-edit-product-roles) for more information.
 
 ### Add users to a product
 To add users to the product, so that they can access its information, click the Plus button. You will now see a list of all active users in the system that are not a member of the current product.
@@ -43,7 +48,9 @@ Filter the rows as required then select the rows for users you want to add to th
 Note that you cannot add a user with just a team, to be added to the product the user must be given a product role.
 
 ## Team Membership
-SpiraPlan lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
+!!! abstract "Available in SpiraPlan only"
+
+Spira lets product admins take teams that have been created at the system level, and assign product members to any active team on a product by product basis. You can use these teams in different ways in different products, but the most common way is to group people together based on your organizational or functional structure.
 
 Team membership is managed by the combined Team and Product Membership page described above.
 

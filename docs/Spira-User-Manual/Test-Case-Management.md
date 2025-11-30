@@ -1,4 +1,10 @@
+---
+pdf: true
+---
+
 # Test Case Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 | Artifact icon and name                                                 | Token | Description                                                                                |
 | ---------------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------ |
 | ![](img/artifact-ts.png) &nbsp; Test Step                              | TS    | A single scenario or step to validate during a test                                        |
@@ -24,7 +30,8 @@ Use properties on test cases themselves like their type and component, and test 
 === "Key Artifact Links"
     - **Releases**: each test case can be added to many releases - every release that the test case should be used to provide test coverage / validate
     - **Requirements**: each test case be added to many requirements, in cases where a test case helps validate multiple pieces of functionality 
-    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level <span class="pill">SpiraPlan</span>
+    - **Program Milestones**: group releases across products together into program milestones to track delivery at the program level
+        {: .edition-spiraplan}
 
 === "Association Chart"
     ``` mermaid
@@ -175,7 +182,7 @@ To quickly print a single test case, test folder or list of test cases you can s
 
 ### Right-Click Context Menu
 
-SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test case list and the following menu will be displayed:
+Spira provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the test case list and the following menu will be displayed:
 
 ![](img/Test_Case_Management_135.png)
 
@@ -248,7 +255,7 @@ The Detailed Information section contains the long, formatted description of the
 
 The **Suspect** flag is automatically set on an approved test case, when one of the requirements linking to it changes[^rq-suspect]. This lets you quickly find all the test cases impacted by a specific requirement change. For this to happen the requirement needs to be in an Accepted or later status (i.e. not Rejected, Rejected, Under Review, Obsolete) and the test case needs to be an approved status (i.e. not Draft, Obsolete, Rejected).
 
-[^rq-suspect]: only certain changes to a requirement will trigger the suspect flag. These are any change to standard field only. Changes to comments, assocations, attachments, use case steps, and custom properties will not trigger the suspect flag.
+[^rq-suspect]: only certain changes to a requirement will trigger the suspect flag. These are any change to standard field only. Changes to comments, associations, attachments, use case steps, and custom properties will not trigger the suspect flag.
 
 ### Overview - Test Steps
 This view displays the name of the test case together with all the defined test steps that a tester would need to perform to verify that the functionality works as expected. The list of test steps displays the position number, the description, the expected result, some suggested sample data and the most recent execution status of the individual test step:
@@ -276,7 +283,7 @@ Clicking on the "***Insert Link***" button brings up the following dialog box th
 
 When linking an existing test case, first select its parent folder from the dropdown. Then select the name of the test case you want to insert as a link from the list. If the test case has declared [parameters](#parameters) you will see a list of parameters to fill out.
 
-If it makes sense for your tests you can fill out the parameter values and then click "***Add***". The system will insert the test case as a link. These paramter values are passed down to the linked test at execution. These values override any default parameter values set on the test case. If a test step was already selected the link is inserted above that test step, otherwise the link is added at the end of the test step list.
+If it makes sense for your tests you can fill out the parameter values and then click "***Add***". The system will insert the test case as a link. These parameter values are passed down to the linked test at execution. These values override any default parameter values set on the test case. If a test step was already selected the link is inserted above that test step, otherwise the link is added at the end of the test step list.
 
 If you want to create a test step with specific parameters and parameter values, you can do so by clicking the "***Create New Test Case***". This will change the dialog to one where you can assign a folder, name, and parameters to a new test case. On clicking the "***Add***" button: the new test case is created; a test step is created within that new test case; the parameters specified in the dialog are assigned to that test step, with the values set as the defaults for the step; and the new test case is added as a linked test case in the list of test steps.
 
@@ -371,24 +378,24 @@ The Automation section displays the automated test script associated with the te
 
 There are three types of automated test:
 
-- **Attached**: this is when SpiraPlan physically stores the test script as an attachment in the system. This is only available for test automation tools that store their test scripts as plain text files. Examples of such tools are Selenium-RC and Squish.
-- **Linked**: this is when SpiraPlan stores the location of the test script stored on the automation host itself or on an external network drive.
-- **Repository**: This is a special option only available when using Rapise™, the test automation system from Inflectra. This allows you to store an entire folder of automated test script files in SpiraPlan and have them linked to the test case.
+- **Attached**: this is when Spira physically stores the test script as an attachment in the system. This is only available for test automation tools that store their test scripts as plain text files. Examples of such tools are Selenium-RC and Squish.
+- **Linked**: this is when Spira stores the location of the test script stored on the automation host itself or on an external network drive.
+- **Repository**: This is a special option only available when using Rapise™, the test automation system from Inflectra. This allows you to store an entire folder of automated test script files in Spira and have them linked to the test case.
 
 The screenshot below illustrates a sample Rapise automated test script attached to a test case:
 
 ![](img/Test_Case_Management_148.png)
 
-The automation screen includes the following fields that you should populate when using SpiraPlan® to store an automated test script:
+The automation screen includes the following fields that you should populate when using Spira to store an automated test script:
 
 - **Automation Engine (required)**: this should be the name of the test automation engine that the test script should be executed with, as set up in [system administration](../Spira-Administration-Guide/System-Integration.md/#test-automation).
-- **Script Type**: This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in SpiraPlan. If you choose linked, the test script is stored externally and SpiraPlan just stores a reference to it. The "repository" option is never selectable within SpiraPlan and will be automatically set by Rapise when it attaches a test script to the test case.
-- **Filename**: If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please search for the automation engine name on this website. For non-Rapise scripts, beneathe filename is a link to open the test script attachment's dedicated document page
+- **Script Type**: This should be set to either "attached" or "linked". If you choose to attach the test script, the large text box at the bottom will be enabled, allowing you enter/edit the test script directly in Spira. If you choose linked, the test script is stored externally and Spira just stores a reference to it. The "repository" option is never selectable within Spira and will be automatically set by Rapise when it attaches a test script to the test case.
+- **Filename**: If you are attaching the test script to the test case then this field just needs to contain the filename of the test script (no folders or path needed), whereas if you are choosing to link the test script, you need to follow the exact format that will be expected by the test automation engine. For details, please search for the automation engine name on this website. For non-Rapise scripts, beneath the filename is a link to open the test script attachment's dedicated document page
 - **Document Type**: This should be set to the document type that you want the test script associated with.
 - **Document Folder**: This should be set to the document folder that you want the test script to be stored in. Note that if the script type is repository then the folder is set automatically and cannot be edited by the user.
 - **Version**: This should contain the version number of the test script.
 - **Test Script**: If you are attaching a test script, this should contain the actual program code for executing the test script. The language and syntax will be dependent on the test automation engine being used. If you are linking the test script, this section will be disabled.
-- **Parameters**: You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that SpiraPlan integrates with will support the passing of parameter values from SpiraPlan to the automation tool.
+- **Parameters**: You can enter the various test case parameters by clicking on this hyperlink. Most of the automation tools that Spira integrates with will support the passing of parameter values from Spira to the automation tool.
 
 
 
@@ -442,13 +449,13 @@ Each incident is listed together with (by default) the type, status, priority, n
 - Customize the fields shown using the **Show/Hide Columns** dropdown
 - **Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time
 - **Remove**: if you can modify the current test case you can remove any selected incidents by clicking the "Remove" toolbar button. This will remove all links between the incident and all relevant test run steps and test steps. Note: this feature is currently only available if baselining is disabled for the product.
-- **Filter** the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or clicke the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
+- **Filter** the results by choosing items from the filter options displayed in the sub-header row. You can use the filter dropdown to remove the filter, or click the "Clear Filters" button. You can also sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 - **Edit**: if you can bulk edit incidents you can edit the incidents. Click the "Edit" button to the right of an incident, or select incidents using the checkbox and click the edit button at the top of the table to edit incident(s) inline.
 
 
 ### Attachments
 
-In this tab, the main pane displays the list of documents that have been "attached" to the test case. The documents can be in any format, though SpiraPlan® will only display an icon for certain known types.
+In this tab, the main pane displays the list of documents that have been "attached" to the test case. The documents can be in any format, though Spira will only display an icon for certain known types.
 
 ![](img/Test_Case_Management_155.png)
 
@@ -471,11 +478,16 @@ To attach a screenshot to the artifact, you need to choose "Screenshot" as the t
 
 Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't put file extensions on filenames (e.g. .xls for an Excel sheet) automatically, then you will need to manually add the file extension to the filename before uploading if you want it to be displayed with the correct icon in the attachment list.
 
-You can also associate an existing document (that's already stored in SpiraTeam) with the test case. To do that, click on the "***Add Existing***" button to bring up the add file association dialog box:
+You can also associate an existing document (that's already stored in Spira) with the test case. To do that, click on the "***Add Existing***" button to bring up the add file association dialog box:
 
 ![g4197](img/Test_Case_Management_156.png)
 
-You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
+You can then choose to either associate a document:
+- stored in the SpiraPlan Documents repository or
+- from the linked source code repository
+    {: .edition-spiraplan .edition-spirateam}
+
+In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
 
 
 ### History
@@ -499,9 +511,11 @@ You can also filter the results by choosing items from the filter options displa
 
 
 ### Associations
-| Association Tab Of | Available artifacts                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------- |
-| **Test cases**     | Tasks and Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> |
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+| Association Tab Of | Available artifacts  |
+| ------------------ | -------------------- |
+| **Test cases**     | Tasks and Risks      |
 
 Any tasks created during exploratory test execution will automatically be be shown here. Read more about [how to manage and add associations to this artifact](Application-Wide.md#associations)
 
@@ -535,11 +549,11 @@ In this mode, the main pane displays a list of any incidents that are associated
 
 Each incident is listed together with the type, status, priority, name, owner, detector, detection date and a link to the actual incident details. You can customize the fields that are displayed using the "Show/Hide Columns" option. In addition, you can perform the following operations:
 
-**Refresh** -- updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
+**Refresh**: updates the list of incidents from the server, useful if other people are adding incidents to this release at the same time.
 
 You can also **filter** the results by choosing items from the filter options displayed in the sub-header row of each field and clicking the "***Filter***" button. In addition, you can quickly sort the list by clicking on one of the directional arrow icons displayed in the header row of the appropriate field.
 
-**Edit** -- Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
+**Edit**: Clicking the "***Edit***" button to the right of the incident allows you to edit the incident inline directly on this screen.
 
 To create a new association between this test step and an existing incident, click the "***Link Incident***" button which will display the following panel:
 
@@ -589,21 +603,21 @@ One you have found the desired requirement(s), simply select their check boxes a
 
 ## [Execute Test Case(s)](Test-Execution.md)
 
-## [Test Run List](Test-Run-Management.md#test-run-list)
+## [Test Run List](Test-Run-Management.md/#test-run-list)
 
-## [Test Run Details](Test-Run-Management.md#test-run-details)
+## [Test Run Details](Test-Run-Management.md/#test-run-details)
 
-## [Test Set List](Test-Set-Management.md#test-set-list)
+## [Test Set List](Test-Set-Management.md/#test-set-list)
 
-## [Test Set Details](Test-Set-Management.md#test-set-details)
+## [Test Set Details](Test-Set-Management.md/#test-set-details)
 
-## [Automation Host List](Automation-Host-Management.md#automation-host-list)
+## [Automation Host List](Automation-Host-Management.md/#automation-host-list)
 
-## [Automation Host List](Automation-Host-Management.md#automation-host-details)
+## [Automation Host List](Automation-Host-Management.md/#automation-host-details)
 
-## [Test Configuration List](Test-Configuration-Management.md#test-configuration-list)
+## [Test Configuration List](Test-Configuration-Management.md/#test-configurations-list)
 
-## [Test Configuration Details](Test-Configuration-Management.md#test-configuration-details)
+## [Test Configuration Details](Test-Configuration-Management.md/#test-configuration-details)
 
 
 

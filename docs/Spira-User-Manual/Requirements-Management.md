@@ -1,4 +1,10 @@
+---
+pdf: true
+---
+
 # Requirements Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
 | Artifact icon and name                                               | Token | Description                                                                |
 | -------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------- |
 | ![](img/artifact-rq.png) &nbsp; Requirement                          | RQ    | Tracks large pieces of work or product features                            |
@@ -22,8 +28,10 @@ Also known as features or user stories, requirements are used for tracking large
 === "Key Artifact Links"
     - **Releases**: link a requirement directly to the release it was first delivered in. You can add associate it to other releases as well, as needed
     - **Test cases**: called "Requirement Test Coverage" this lets you track testing all aspects of a feature and see if all test cases have passed or not
-    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-    - **Capabilities**: oversee requirements at the program level by linking them to program capabilities <span class="pill">SpiraPlan</span>
+    - **Tasks**: break down the work in a requirement into smaller chunks to help divide up and track everything
+        {: .edition-spiraplan .edition-spirateam}
+    - **Capabilities**: oversee requirements at the program level by linking them to program capabilities 
+        {: .edition-spiraplan}
 
 === "Association Chart"
     ``` mermaid
@@ -230,7 +238,7 @@ To quickly print a single requirement or list of requirements you can select the
 Sometimes you will see a list of filtered requirements displayed and you would like to view all of the items that in the same branch of the requirements tree, even those that don't match the current filter. To view the branch, select the checkbox of the branch and then click Tools \> ***Focus on***, and the system will clear the current filters and then expand just the selected branch.
 
 ### Right-Click Context Menu
-SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the requirements list and the following menu will be displayed:
+Spira provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the requirements list and the following menu will be displayed:
 
 ![](img/Requirements_Management_90.png)
 
@@ -249,7 +257,9 @@ Note: Any requirements shared from other products will be read-only and won't di
 
 
 ## Requirements Additional List Views
-In SpiraTeam and SpiraPlan, there are four additional requirement list views. They are designed to better serve the needs of the Business Analyst community who often need different views of requirements than the project teams and project managers. These views are:
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+These four additional requirement list views are designed to better serve the needs of the Business Analyst community who often need different views of requirements than the project teams and project managers. These views are:
 
 1. Sorted List
 2. Agile Board
@@ -263,6 +273,8 @@ You can pick between each of these views using the view selection button group a
 Note: you can only view requirements from the current product in these four additional views, whether or not you are sharing requirements from other products with this product.
 
 ## Requirements Sorted List
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 ![](img/requirements-sorted-list.png)
 
 This view lets you view the requirements in a flat, sortable list that does not show the requirements hierarchy. You can still see the hierarchy of an item by hovering the mouse over its name to display the tooltip.
@@ -290,7 +302,7 @@ When cloning the requirements note that:
 - associated incidents, requirements and risks are *not* cloned
 - followers, comments, and history are *not* cloned
 
-- **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](#create-a-test-cases-from-requirements) or [create test sets](#create-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
+- **Tools**: this dropdown allows to [export requirements](#exporting-requirements), [create test cases](#creating-test-cases-from-requirements) or [create test sets](#creating-a-test-set-from-requirements) from requirements, or to [print items](#printing-items).
 
 
 ### Right-Click Context Menu
@@ -303,11 +315,14 @@ You can now choose any of these options as an alternative to using the icons in 
 
 
 ## Requirements Agile Board
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This view is similar to the existing [Planning Board](Planning-Board.md) but only displays requirements, whereas the primary planning board will also include incidents / defects. This gives the requirements page consistency with the tasks and incidents pages that already have a Grid / Board view selector option.
 
 
 ## Requirements Document View
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 This view shows the hierarchical organization of the requirements in a product. Instead of being displayed in a grid form, they are displayed in a document format that is designed to be readable from top to bottom, like a traditional requirements document. You can edit the name and description fields inline to update your document as you read through it, as well as change what fields are visible, to tailor the document to your needs.
 
 ![main requirement documents view](img/requirements-documents-view.png)
@@ -334,7 +349,7 @@ The following fields are displayed by default (but can be hidden) in a header ba
 The following fields are always displayed, and below the header bar:
 
 - Description
-- [Use case diagram](#use-case-diagram) (if the requirement has steps)
+- [Use case diagram](#use-case-diagrams) (if the requirement has steps)
 
 Additionally you can choose to show the following fields in the header bar:
 
@@ -373,6 +388,7 @@ To save your changes, click the save icon. To discard your changes, click the X 
 [^max-epics]: limited to the first 5000 requirements
 
 ## Requirements Mindmap
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This mindmap displays the first 5,000 requirements in a product as a connected tree view / mindmap. The root node shows the name of the product on the left hand side. The top most level nodes are connected to the left of this, with their successive children shown from left to right. 
 
@@ -550,6 +566,7 @@ One you have found the desired test case(s), select their check boxes and click 
 Finally, as a shortcut you can click the "***Create Test Case from This Requirement***" button to create a new test case in the list of covered test cases that will be automatically linked to this requirement. This is useful when you have created a new requirement and want to generate an initial covering test to be fleshed-out later.
 
 ### Tasks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This tab shows the list of product tasks that need to be completed for the requirement to be satisfied:
 
@@ -562,7 +579,7 @@ You can perform the following actions on a task from this screen:
 
 - **New Task**: inserts a new task in the task list with a default set of values. The task will be associated with the current requirement.
 - **Remove**: removes the task from this requirement without actually deleting the task
-- **Delete**: click the arrow next to the Remove button to show the option of completetly deleting the task 
+- **Delete**: click the arrow next to the Remove button to show the option of completely deleting the task 
 - **Refresh**: updates the list of tasks from the server, useful if other people are adding tasks to this requirement at the same time.
 - **Filter / Apply Filter**: Applies the entries in the filter boxes to the list of tasks
 - **Clear Filters**: Clears the current filter, so that all tasks associated with the current requirement are shown.
@@ -596,7 +613,9 @@ Read more about [how to manage and add associations to this artifact](Applicatio
 
 
 ### Use Case Diagrams
-<span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+Requirements with a list of defined steps displays an extra tab called "Diagram". This display the list of steps as a process flow diagram rather than as a simple list.
 
 ![](img/requirements-use-case-diagram.png)
 

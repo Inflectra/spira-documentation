@@ -87,7 +87,7 @@ To change if a blank value is allowed or not for a custom property:
 1. Find the template that your product is using
 2. As a template administrator go to Template Administration, find the artifact section you need, and click its "Custom Properties" link
 4. Find the custom property you want to change
-5. Click `Edit Defintion`
+5. Click `Edit Definition`
 6. Go to the `Options` tab in the popup
 7. Set the "Allow Empty" dropdown to Yes or No as desired
 8. Hit `Save`
@@ -128,7 +128,7 @@ To troubleshoot the issue you need to be a template administrator. The summary s
 
 **Note**: the following does NOT apply to releases.
 
-When you are looking at a specific artifact on its full details page, the fields you see or not and which transitions are available are determined by the workflow. However, you can have more than one actie workflow for each artifact. How can this be? 
+When you are looking at a specific artifact on its full details page, the fields you see or not and which transitions are available are determined by the workflow. However, you can have more than one active workflow for each artifact. How can this be? 
 
 Because you can match a workflow to a specific type. This means that one type (say incidents of type bug) will use one workflow, but a different type (say incidents of type enhancement) will use a second workflow.
 

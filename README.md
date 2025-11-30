@@ -19,21 +19,13 @@ We can fully change the theme used and its features using a basic templating lan
 
 
 # Getting the build environment set up
-1. Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs
-2. We use the Material theme for mkdocs. This has two versions - a public and an Insiders version.
-    
-    - **Public**: run `pip install mkdocs-material` it should also install MKdocs. 
-    - **Insiders** run in PowerShell:
-        - `$env:GH_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"` - replace with your relevant token
-        - `pip install git+https://$env:GH_TOKEN@github.com/squidfunk/mkdocs-material-insiders.git`
+Refer to [MkDocs](https://www.mkdocs.org/#installation) to install Python, pip, then MkDocs as needed
 
-3. Run `pip install Pygments` from the command line - this library is used to provide nicer syntax highlighting for code
-4. Run `pip install pymdown-extensions` to allow extra markdown formatting options to the rendering
-5. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
-6. Run `pip install mkdocs-redirects` to enable proper redirect handling of old pages or links that we no longer need
-7. Run `pip install mike` if we are using versions to provide support for multiple document versions
-8. Clone this repo to your local machine
-
+1. Install python and pip
+2. Run `python get-pip.py` if not used pip before
+3. Run `pip install -r requirements.txt`
+4. Run `npm install broken-link-checker -g` (need node and npm for this) - used for checking for broken links before deployment. For more info see [here](https://matthewsetter.com/writing-tools/npm-broken-link-checker/)
+5. Clone this repo to your local machine
 
 
 # Working with the docs and Markdown
@@ -60,7 +52,6 @@ We can fully change the theme used and its features using a basic templating lan
 
 
 # Maintenance Operations
-
 Can run `mkdocs build --clean`. After some time, files may be removed from the documentation but they will still reside in the site directory. Run this command to remove those stale files.
 
 ## Delete Unused Pictures
@@ -89,8 +80,16 @@ From the tools directory, run the command `python .\unusedimgs.py`. This will ge
 
 
 # Conversion processes
+## Markdown to PDF using mkdocs-exporter
+This uses a dedicated plugin https://adrienbrignon.github.io/mkdocs-exporter/getting-started/
 
-## MD to PDF
+- In the mkdocs.yml file make sure plugins > exporter > pdf > enabled is set to true
+- Run `mkdocs build`. This produces errors in the output "Failed to load resource: net::ERR_FILE_NOT_FOUND" but the pdf is still created.
+- Get the "\site\SpiraDocumentation.pdf" file!
+
+## MD to PDF - OLD WAY
+This method was created for when we first moved from docs to markdown but does not seem to work as of 2025
+
 1. Install [MiTeX](https://miktex.org/howto/install-miktex)
 2. Install pyyaml with `pip install pyyaml`
 3. Review the `convert` array in `createpdf.py`, which will automatically convert toplevel items in the `nav` in `mkdocs.yml` to a PDF. Each toplevel entry will get its own PDF. 
@@ -116,7 +115,7 @@ From the tools directory, run the command `python .\unusedimgs.py`. This will ge
 ### Conversion Problems
 - Table formatting is generally a huge pain and needs to be done manually
 - Code usually isn't formatted and generally has excessive escape characters (I just pasted the code directly from word as it was easier)
-- The script will spit out an uneccesary `Introduction` or `Legal` file if it was present or put a legal notice in the `.md` file who's corresponding section in the word file was at the bottom of the word file.
+- The script will spit out an unnecessary `Introduction` or `Legal` file if it was present or put a legal notice in the `.md` file who's corresponding section in the word file was at the bottom of the word file.
 - Unnecessary escape characters: Just do a find and replace in your editor of choice in the `docs\` directory with the criteria below:
     - \\< to <
     - \\> to > **IFF THE OCCURANCE IS IN A CODE BLOCK, OTHERWISE NECESSARY** 

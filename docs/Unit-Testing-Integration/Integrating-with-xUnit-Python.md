@@ -1,4 +1,6 @@
 # Spira xUnit Integration (Python)
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
+
 When you run automated tests using a framework such as PlayWright or JUnit, the test results are often generated in a standard XML format. This is known as the [xUnit](https://en.wikipedia.org/wiki/XUnit) format. This XML file contains a list of the test cases that were executed, the results for each test case, and potentially a list of associated screenshots or other attachments.
 
 This library reads xUnit format XML files and import the test results in them into Spira. Once installed, it will be able to read the configuration file for your testing framework, which it uses to report to Spira as test cases and test sets (optional), against a particular release.
@@ -14,7 +16,6 @@ Prerequisites:
 - Spira v6+
 - Python 3+
 - pip
-
 
 Install the library with this command: `pip install spira-addons-xunit request`
 

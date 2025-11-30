@@ -1,15 +1,19 @@
-# User/Product Management
+---
+pdf: true
+---
 
-This section outlines how you can log into SpiraPlan®, view your personalized home-page that lists the key tasks that you need to focus on, and drill-down into each of your assigned products in a single dashboard view. In addition to your personal homepage, each of your products has its own dashboard that depicts the overall product health and status in a single comprehensive view.
+# User/Product Management
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
+
+This section outlines how you can log into Spira, view your personalized home-page that lists the key tasks that you need to focus on, and drill-down into each of your assigned products in a single dashboard view. In addition to your personal homepage, each of your products has its own dashboard that depicts the overall product health and status in a single comprehensive view.
 
 
 ## Login Screen
-
 Upon entering the Spira URL provided by your system administrator into your browser, you will see the following login screen:
 
 ![](img/UserProduct_Management_33.png)
 
-You need to enter your given user-name and password into the system in the appropriate boxes then click the ***Log In*** button to gain access to the application. Normally you only remain logged in to the application whilst in active use, and you will be asked to log-in again after either closing the browser or 20 minutes of inactivity. To prevent this, and to stay logged-in to SpiraPlan® regardless of browser window closing or inactivity, select the "Keep me logged in" check-box before clicking the ***Log In*** button. Note that this setting is specific to each individual computer you are logging-in from, and that it will be reset when you explicitly log-out with the [log-out link](#global-navigation).
+You need to enter your given user-name and password into the system in the appropriate boxes then click the ***Log In*** button to gain access to the application. Normally you only remain logged in to the application whilst in active use, and you will be asked to log-in again after either closing the browser or 20 minutes of inactivity. To prevent this, and to stay logged-in to Spira regardless of browser window closing or inactivity, select the "Keep me logged in" check-box before clicking the ***Log In*** button. Note that this setting is specific to each individual computer you are logging-in from, and that it will be reset when you explicitly log-out with the [log-out link](#global-navigation).
 
 If you have enabled [2-step authentication](#2-step-authentication) once you have entered your username and password correctly you will need to enter a valid one-time password.
 
@@ -20,7 +24,7 @@ If for any reason you are unable to login with the provided username/password co
 ![](img/UserProduct_Management_34.png)
 
 ### Register for an account
-If you don't have a SpiraPlan® account setup, clicking on the "Register for an account?" link will take you to a form that you need to fill-in, which will be forwarded to the system administrator, who will need to approve your account before it is active in the system. This screen is illustrated below:
+If you don't have a Spira account setup, clicking on the "Register for an account?" link will take you to a form that you need to fill-in, which will be forwarded to the system administrator, who will need to approve your account before it is active in the system. This screen is illustrated below:
 
 ![](img/UserProduct_Management_35.png)
 
@@ -31,7 +35,7 @@ In addition, the system will prevent you logging on to the system with the same 
 
 You have two choices: you can either click the "Log Out" link and try logging in as a different user, or if you want to log-off any other active sessions (e.g. you closed the browser and the session is still listed as active), simply click the "Sign Off The Other Locations" link, and you will be logged in to the application.
 
-Since SpiraPlan® is licensed to organizations for a specific number of concurrent users -- unless they have purchased an unlimited Enterprise license -- only a fixed number of users may be active at the same time. So, for example if an organization has a five (5) concurrent user license and a sixth user tries to log-in, they will be presented with the following screen:
+Since Spira is licensed to organizations for a specific number of concurrent users -- unless they have purchased an unlimited Enterprise license -- only a fixed number of users may be active at the same time. So, for example if an organization has a five (5) concurrent user license and a sixth user tries to log-in, they will be presented with the following screen:
 
 ![](img/UserProduct_Management_37.png)
 
@@ -46,7 +50,7 @@ To login using your account with this provider:
 
 1. Click on the provider button
 2. Follow the instructions from the provider (eg log in to or select your account, and provide authorization)
-4. When you get back to the Spira login screen, you can set up a new SpiraPlan account with that external provider account. Click the link and follow the on screen instructions to complete the registration. Once successful, your system admin will be alerted to the new user request. Once they have approved you, you can login.
+4. When you get back to the Spira login screen, you can set up a new Spira account with that external provider account. Click the link and follow the on screen instructions to complete the registration. Once successful, your system admin will be alerted to the new user request. Once they have approved you, you can login.
 3. Alternatively, you can, if allowed by your organization, connect that provider account to an existing Spira user. Follow the on screen instructions to enter the username and password of your Spira user and click `Login`. You are now connected to this provider. 
 
 ![options to connect to an external provider](img/UserProduct_Management_oauth-login-connect-account.png)
@@ -71,8 +75,9 @@ By default the My Page:
 - Shows information from all products you are a member of. You can choose to only see data for the current product, to get a more focused list using the "All Products" / "Current Product" toggle buttons at the top right of the page
 - Automatically hides empty widgets to make the page cleaner and easier to use. You can choose to always show all configured widgets by unchecking the checkbox next to "Automatically hide empty widgets" in the top right.
 
-Next to some of the widgets is an RSS icon (![](img/UserProduct_Management_39.png)), this allows you to subscribe to the information as a Really Simple Syndication (RSS) newsfeed. This can be useful if you want to be notified about recently assigned items without having to setup email notifications or being logged into SpiraPlan continuously. If you don't see an RSS icon next to the widgets on your My Page it means that you have not enabled RSS newsfeeds in your profile. For more details on configuring your RSS preferences, please refer to [My Profile](#my-profile).
+Next to some of the widgets is an RSS icon (![](img/UserProduct_Management_39.png)), this allows you to subscribe to the information as a Really Simple Syndication (RSS) newsfeed. This can be useful if you want to be notified about recently assigned items without having to setup email notifications or being logged into Spira continuously. If you don't see an RSS icon next to the widgets on your My Page it means that you have not enabled RSS newsfeeds in your profile. For more details on configuring your RSS preferences, please refer to [My Profile](#my-profile).
 
+### Customizing your page
 Initially the page is loaded in 'view mode' which means that the various 'widgets' on the page are displayed with minimum visual clutter (no toolbars or control icons) that makes it easy to scan the items on the page and see what work has been assigned. To switch the page to 'edit mode', click on the button with the cog icon (![](img/UserProduct_Management_40.png)) on the right:
 ![](img/UserProduct_Management_41.png)
 
@@ -93,6 +98,7 @@ When you load your 'My Page' for the first time it will consists of the followin
 - My Assigned Incidents
 - My Detected Incidents
 - My Assigned Tasks
+    {: .edition-spiraplan .edition-spirateam}
 - Quick Launch
 - My Contacts
 
@@ -106,6 +112,12 @@ You can add the additional widgets by selecting the appropriate checkbox, choosi
 - My Subscribed Artifacts
 - My News Feeds
 
+### Customizing the default My Page for all users
+System administrators will, by default, view and edit their personal My Page. They can also switch to the "All Users" view of the My Page. This looks and acts the same as the normal page. However, the layout you create on this page will become the new default My Page view for all users. 
+
+This means that any new user, or existing user who has not customized their My Page, will see this new default view.
+
+Once a user customizes their My Page, they will no longer see most updates an admin makes to the My Page default view. The only updates they will get will be to new widgets an admin adds (that were never previously added) added since the user last customized it.
 
 ### Recent Products
 This widgets shows the most recent products you have visited. Each time you visit a page for a different product the list of most recent products is updated. By default, it shows the five most recent products -- this can be edited in the widget edit controls to any number fifty or less.
@@ -114,7 +126,8 @@ For each recent product visited, the widget shows name for:
 
 - the product itself
 - the product's program
-- the product's portfolio <span class="pill">SpiraPlan</span>
+- the product's portfolio
+    {: .edition-spiraplan}
 
 Each product name is a link to that product's home page. The program and portfolio names are links to the relevant home pages if you have access to view those home pages.  
 
@@ -135,19 +148,16 @@ If "Current Product" is selected at the top of the My Page, the list shows only 
 
 
 ### My Saved Searches
-
 This section lists any filters/searches you have saved from the various artifact list screens throughout the application. This allows you to store specific combinations of searches that you need to perform on a regular basis (e.g. display all newly logged incidents, display all requirements that are completed but have no test coverage).
 
-The name of the saved search is displayed along with an icon that depicts which artifact it's for and the product it refers to. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. Clicking the "Delete" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of SpiraPlan.
+The name of the saved search is displayed along with an icon that depicts which artifact it's for and the product it refers to. Clicking on the name of the saved search will take you to the appropriate screen in the product and set the search parameters accordingly. Clicking the "Delete" button next to the saved search will delete it. Clicking on the RSS icon will allow you to subscribe to the specific search so that it will be displayed in your RSS newsreader. This allows you to setup customized lists of information that can be displayed outside of Spira.
 
 
 ### My Assigned Requirements
-
 This section lists all the requirements you have been made owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for either developing the supporting test cases or decomposing the requirement into its detailed work breakdown structure of product tasks. The requirement name is displayed, along with its status (requested, accepted, in-progress, etc.) and its importance. Requirements are included based on their importance: the list is ordered by importance (highest at top) and requirements with the same importance are ordered by their IDs.
 
 
 ### My Assigned Test Cases
-
 This section lists all the test cases you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing these test scripts. Test cases are included based on their last execution status and date: the list is ordered by execution status (failed at the top), test cases with the same execution status are ordered by last execution date, and if those match, then by their IDs. For each test case in the list you can see:
 
 - its name (this is a link to the to the [details page for this test-case](Test-Case-Management.md/#test-case-details))
@@ -160,7 +170,6 @@ This section lists all the test cases you are the owner of, across *all products
 If you edit the widget you can: change the number of rows to show; show or hide the last executed date; and show or hide and the workflow status.
 
 ### My Assigned Test Sets
-
 This section lists all the test sets (groups of test cases) you are the owner of, across *all products* you are a member of. This typically means that the product or test manager has assigned you to be responsible for executing the test cases contained within the test set against a specified release of the system under test. Test sets are included based on their planned date: this list is ordered by planned date (oldest at top) and test sets with the same planned are ordered by their IDs. For each test set in the list you can see:
 
 - its name (this is a link to the to the [details page for this test-set](Test-Set-Management.md/#test-set-details)) - in a badge at the end of the name is a mini badge showing the number of remaining test cases to be executed
@@ -171,28 +180,24 @@ This section lists all the test sets (groups of test cases) you are the owner of
 
 
 ### My Pending Test Runs
-
 This section lists any test runs that you started executing in the test case module but haven't yet completed. Until a test case or test set is fully executed, a pending test run entry is stored in the system so that you can continue execution at a later date.
 
 Any pending test run can be either deleted or resumed by clicking on the appropriate button. In addition, there is the option to reassign the test run to another user that is a member of the product.
 
 
 ### My Assigned Tasks
-
 This section lists all the product tasks that you have been made the owner of across *all the different products* you are a member of. This typically means that the manager of the product in question has assigned development tasks to you that need to be completed so that a release can be completed and/or a requirement can be fulfilled. The tasks are listed by priority: tasks with no priority at the top, and after that the highest priority tasks. In addition, each task is displayed with a progress indicator that graphically illustrates its completion against schedule. See [Task Tracking](Task-Tracking.md) -- task management for details of the different progress indicators.
 
 Clicking on the task name hyperlink will take you to the task details page. This page will describe the task in more detail, illustrate which requirement and release it is associated with, and also allow you to view the change log of actions that have been performed on it.
 
 
 ### My Assigned Incidents
-
 This section lists all the open incidents you are the owner of, across *all the different products* you are a member of. This typically means that the product manager has assigned you to be responsible for resolving the incident. In the case of a bug, this can mean actually fixing the problem, whereas for other incident types (e.g. training item) it may mean simply documenting a workaround. In either event, this section highlights the open incidents you need to manage, ranked by priority (incidents with no priority are at the top) and categorized by type, with the open date displayed to give you a sense of the age of the incident.
 
 Clicking on the incident name hyperlink takes you to the [incident details page](Incident-Tracking.md/#incident-details)) that describes the incident in more detail, and allows you to add new information or change its status to indicate actions taken. In addition, if you position the mouse pointer over the name of the incident, a more detailed description is displayed as a "tooltip".
 
 
 ### My Detected Incidents
-
 This section lists all the open incidents that you have detected, across
 *all the different products* you are a member of. These incidents are not necessarily ones that you need to take an active role in resolving, but since you were the originator -- either by executing a test case or just logging a standalone incident -- you can watch them to make sure that they are resolved in a timely manner. The incidents shown are ranked by last updated date (most recent at the top).
 
@@ -200,45 +205,42 @@ Clicking on the incident name hyperlink takes you to the [incident details page]
 
 
 ### Quick Launch
-
 This widget allows users to quickly record a new incident in any of the products that they belong to. It's a shortcut that avoids having to first select a product, go to Tracking \> Incidents and then click "New Incident". Instead you simply choose the product from the dropdown list and click the arrow icon to bring up the new incident creation screen.
 
 
 ### My Contacts
-
 This widget displays a list of any other users in the system that you have listed as a personal contact:
 
-Each user is displayed along with their graphical avatar, department and a colored indicator that lets you know if they are online or not. If they are online you can then send them an instant message (which will be described later in [Global Navigation](#global-navigation). To remove an existing contact, just click on the 'Remove' button. To add a new user, simply locate them in the Tracking \> Resources page and then use the <Add As Contact\>
-button.
+Each user is displayed along with their graphical avatar, department and a colored indicator that lets you know if they are online or not. To remove an existing contact, just click on the 'Remove' button. To add a new user, simply locate them in the Tracking \> Resources page and then use the <Add As Contact\> button.
+
+If a contact is online you can send them an [instant message](#instant-messenger).
+    {: .edition-spiraplan .edition-spirateam}
 
 
 ### My Saved Reports
-
 This section lists any reports you have saved from the reports center. This allows you to store specific combinations of report elements, format, filters and sorts (see the section on Reporting for more details on how to configure a report) for reports that you need to run on a regular basis.
 
 
 ### My Subscribed Artifacts
-
 This widget displays a list of all the artifacts in the system that you have subscribed to (by clicking on the Subscribe icon on the item). You can display the item by simply clicking on the hyperlink. In addition, if changes are made to any of the artifacts an email notification will be sent to you. You can click on the "Unsubscribe" button to remove the item from this list.
 
 
 ### My News Feeds
-
-This widget allows you to subscribe to an external newsfeed and have the results be displayed inside SpiraPlan. By default it will be set to the newsfeed from the Inflectra website that displays a list of recent company and product announcements. You can add multiple instances of the widget to the dashboard, allowing you to read multiple news sources at once. Typical uses for this widget are to add news from product management and testing news sites/blogs or to add information from other tools in your organization that can display their data in RSS format.
+This widget allows you to subscribe to an external newsfeed and have the results be displayed inside Spira. By default it will be set to the newsfeed from the Inflectra website that displays a list of recent company and product announcements. You can add multiple instances of the widget to the dashboard, allowing you to read multiple news sources at once. Typical uses for this widget are to add news from product management and testing news sites/blogs or to add information from other tools in your organization that can display their data in RSS format.
 
 
 ### My Assigned Risks
-<span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span> This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
+This section lists all the risks you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the risk details page. This page will describe the risk in more detail. Risks are shown ranked by their exposure (the highest exposure at the top), risks with the same exposure are ordered by their IDs.
 
 
 ### My Assigned Documents
-
 This section lists all the documents you are the owner of across *all the different products* you are a member of. Clicking on the risk name hyperlink will take you to the documents details page. This page will describe the documents in more detail. The list is ranked by last updated date.
 
 
 ## Global Navigation
-
-Regardless of the page you are on, SpiraPlan® will always display the global navigation bar, consisting of a number of different sections, depending on the user and where they are in the system.
+Regardless of the page you are on, Spira will always display the global navigation bar, consisting of a number of different sections, depending on the user and where they are in the system.
 
 ![](img/UserProduct_Management_45.png)
 
@@ -248,39 +250,55 @@ Under some of the icons and headings are secondary menu options that display whe
 - **Workspace Icon**: this shows you the type of workspace you are on, for example a [program](#program-home) or a [product](#product-home). Clicking it will take you to that workspace's homepage
 - **Workspace Selector**: this shows the name of the current workspace. Clicking it will show all your available workspaces and clicking any of these will change you to that workspace. At the top of this dropdown is a filter box where you can type to filter the workspaces to only those that match your search
 - **Artifacts Selector**: when visible, this shows the name of the current artifact for the current workspace. Clicking it will show all your available artifacts and clicking any of these will change you to that artifacts main page. For product workspaces these artifacts are grouped as follows:
+    
     - Planning
+    
         - [Requirements](Requirements-Management.md)
         - [Planning Board](Planning-Board.md)
         - [Releases](Release-Management.md)
         - [Documents](Document-Management.md)
+    
     - Testing
+    
         - [Test Cases](Test-Case-Management.md)
         - [Test Sets](Test-Case-Management.md/#test-set-list)
         - [Test Runs](Test-Case-Management.md/#test-run-list)
         - [Automation Hosts](Test-Case-Management.md/#automation-host-list)
+    
+    - Developing
+        - [Source Code](Source-Code.md)
+            {: .edition-spiraplan .edition-spirateam}
+        - [Commits](Source-Code.md/#source-code-revision-list)
+            {: .edition-spiraplan .edition-spirateam}
+        - [Pull Requests](./Pull-Requests.md)
+            {: .edition-spiraplan .edition-spirateam}
+
     - Tracking
+        
         - [Incidents](Incident-Tracking.md)
         - [Tasks](Task-Tracking.md)
+            {: .edition-spiraplan .edition-spirateam}
         - [Risks](Risks-Management.md)
+            {: .edition-spiraplan .edition-spirateam}
         - [Resources](Resource-Tracking.md)
-        - [Source Code](Source-Code.md)
+            {: .edition-spiraplan .edition-spirateam}
 
 - [**Reporting**](Reports-Center.md)
 - **User Profile Icon**
 
     - [My Profile](#my-profile)
     - [My Timesheet](./Timesheets.md/#my-timesheet)
+        {: .edition-spiraplan .edition-spirateam}
     - [Documentation](#documentation)
     - [Show on boarding tours](#show-onboarding-tours)
     - [Keyboard shortcuts](Appendix-1-Keyboard-Shortcuts.md)
     - [Log Out](#log-out)
 
-- **Administration Icon**: This is visible if you are a system administrator, or if you are an owner/administrator of the current workspace or its template. Clicking the icon will display the relevant administration menu. This is described in the separate *SpiraPlan Administration Guide*.
+- **Administration Icon**: This is visible if you are a system administrator, or if you are an owner/administrator of the current workspace or its template. Clicking the icon will display the relevant administration menu. This is described in the separate *Spira Administration Guide*.
 
 
 ## Global Search
-
-SpiraPlan includes a global search that can be used to search across product and artifact type for items that include the entered keywords in either the name or description field. Clicking on the search icon in the global navigation will let you type in your search term. You will also see a popup below the search box that gives you quick access to recent artifacts you have looked at, and also to your most recent searches. After you search for something you see all matching results:
+Spira includes a global search that can be used to search across product and artifact type for items that include the entered keywords in either the name or description field. Clicking on the search icon in the global navigation will let you type in your search term. You will also see a popup below the search box that gives you quick access to recent artifacts you have looked at, and also to your most recent searches. After you search for something you see all matching results:
 
 ![](img/UserProduct_Management_46.png)
 
@@ -304,18 +322,16 @@ In addition, you can filter the results by artifact type and/or product to narro
 
 ![](img/UserProduct_Management_50.png)
 
-For example, if you filter by requirement, the list of results will be narrowed accordingy:
+For example, if you filter by requirement, the list of results will be narrowed accordingly:
 
 ![](img/UserProduct_Management_51.png)
 
 
 ## Log Out
-
 Clicking on the "Log Out" link will immediately log you out of your current session and return you to the [login page](#login-screen). If you had set the "Keep Me Logged In" option during your previous login, that setting will be reset; so if you want to avoid having to keep logging-in, you'll need to re-check that box during your next log-in.
 
 
 ## Documentation
-
 Clicking on this link on any page will bring up the online version of this manual shown below:
 
 ![](img/UserProduct_Management_52.png)
@@ -328,11 +344,9 @@ If you want to share a specific help page with a colleague in your organization,
 
 
 ## Choosing a Workspace
-
-Workspaces in SpiraPlan set out the scope for the data you want to view and interact with. The most common workspace type is a product:
+Workspaces in Spira set out the scope for the data you want to view and interact with. The most common workspace type is a product:
 
 -   A product contains all the requirements, sprints, defects, and tests associated to it.
-
 -   Programs are groups of products, where you can look across all the products in that program at once
 
 Choosing, for example, a Product or Program from the list of your assigned workspaces in the drop-down-menu allows you to quickly and easily jump between workspace regardless of the page you happen to be on. When you choose a new workspace, you will be taken to the same page in the selected workspace (assuming that you have permissions to view that page). Any workspace with a little cog at the end is a workspace that you are an owner/admin of.
@@ -343,8 +357,7 @@ You can use CTRL+click to open the new product in a separate browser tab:
 
 
 ## Show Onboarding Tours
-
-When you first login to SpiraTeam, the system will show you a welcome page, together with a tour that walks you through the key features of the application. If you would like to see that again, you need to click on the "Show Onboarding Tours" option, under the user profile menu. SpiraPlan will then display the **onboarding tour** main dialog again:
+When you first login to Spira, the system will show you a welcome page, together with a tour that walks you through the key features of the application. If you would like to see that again, you need to click on the "Show Onboarding Tours" option, under the user profile menu. Spira will then display the **onboarding tour** main dialog again:
 
 ![](img/UserProduct_Management_54.png)
 
@@ -352,8 +365,9 @@ You can click 'No Thanks to dismiss it, or 'Yes Please' to start the tour.
 
 
 ## Instant Messenger
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-The Spira instant messenger is available in both SpiraTeam® and SpiraPlan® and allows you to send short messages instantaneously to other users in the system. You can see the status of other users by looking for the small green circle next to the list of users in the 'My Contacts' widget as well as the various user fields in the system:
+The Spira instant messenger allows you to send short messages instantaneously to other users in the system. You can see the status of other users by looking for the small green circle next to the list of users in the 'My Contacts' widget as well as the various user fields in the system:
 
 ![](img/UserProduct_Management_55.png)
 
@@ -367,13 +381,12 @@ You can then enter in a message to the other user, which will then cause a conve
 
 To make it easier to see what's new, all unread messages are displayed in a message box with a darker shade. In addition, the user's avatar image is displayed at the start of each message group.
 
-If the message window appears on a SpiraPlan® window that contains a specific artifact (e.g. a requirement, test case, task, etc.) there will be the option to 'Post as Comments'. If you click this option, any messages selected with a checkbox will be automatically posted to the current artifact as comments. This is useful if you have a conversation related to a specific item and you want to have the outcome permanently recorded as part of the audit trail. Otherwise, instant messages will be automatically purged from the system after 90 days.
+If the message window appears on a Spira window that contains a specific artifact (e.g. a requirement, test case, task, etc.) there will be the option to 'Post as Comments'. If you click this option, any messages selected with a checkbox will be automatically posted to the current artifact as comments. This is useful if you have a conversation related to a specific item and you want to have the outcome permanently recorded as part of the audit trail. Otherwise, instant messages will be automatically purged from the system after 90 days.
 
 ![](img/UserProduct_Management_58.png)
 
 
 ## My Profile
-
 When you click on the "***My Profile***" button (the top item in the user dropdown) in the global navigation, you will be taken to the page in the system that allows you to view and edit your personal profile:
 
 ![](img/UserProduct_Management_77.png)
@@ -384,8 +397,8 @@ If you want to be able to subscribe to RSS feeds of the information assigned to 
 
 You can change your start page to be any of the following:
 
--   **My Page** -- When you first log-in, you will be taken to your "My Page" dashboard
--   **Last Opened Product** -- When you first login-in, you will be taken to the home page for the product you last had open
+-   **My Page**: When you first log-in, you will be taken to your "My Page" dashboard
+-   **Last Opened Product**: When you first login-in, you will be taken to the home page for the product you last had open
 -   **Last Opened Program** - When you first login-in, you will be taken to the home page for the program you last had open
 
 
@@ -396,7 +409,7 @@ In addition to being able to update your user information, you can also change y
 
 You can also change the current password retrieval question and answer by entering in your current password (for security reasons) as well as the new password question and answer.
 
-Note: If your SpiraPlan user profile is linked to an account stored in an external LDAP server, the change password option is disabled. This is because the system uses the password held in the external server. To change the password in this case, please contact your system administrator who will be able to help you change the password in your LDAP environment.
+Note: If your Spira user profile is linked to an account stored in an external LDAP server, the change password option is disabled. This is because the system uses the password held in the external server. To change the password in this case, please contact your system administrator who will be able to help you change the password in your LDAP environment.
 
 ### 2-Step Authentication
 2-Step Authentication lets you make sure on logging you have to enter your password and also a one-time password for added security. The 2-Step Authentication box on the Account Security tab:
@@ -421,7 +434,7 @@ If your account authenticates using an external provider (like Google or Okta), 
 
 ![Account Security tab when using a login provider](img/UserProduct_Management_oauth-myprofile-page.png)
 
-Click the `Unlink Account` button to stop using the external provider. The popup will make you enter new security information. You will use this, along with your username, to login to SpiraPlan, once the unlinking process is complete
+Click the `Unlink Account` button to stop using the external provider. The popup will make you enter new security information. You will use this, along with your username, to login to Spira, once the unlinking process is complete
 
 ![Unlink from a login provider](img/UserProduct_Management_oauth-myprofile-unlink.png)
 
@@ -436,7 +449,6 @@ If the Enable Notifications cannot be changed, it means that the system is eithe
 
 
 ### Regional Settings
-
 This tab will display the current culture and timezone associated with your profile:
 
 ![](img/UserProduct_Management_80.png)
@@ -447,7 +459,6 @@ Note: The system will only be installed with a certain number of language packs,
 
 
 ### Actions
-
 This tab displays the list of recent actions that you have performed in the system (across all products):
 
 ![](img/UserProduct_Management_81.png)

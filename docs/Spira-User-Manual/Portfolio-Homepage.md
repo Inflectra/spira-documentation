@@ -1,9 +1,13 @@
+---
+pdf: true
+---
+
 # Portfolio Homepage
+!!! abstract "Available in SpiraPlan only"
 
 ## Overview
-
 !!! info "Who Can Access the Portfolio Homepage?"
-    To access the portfolio homepage first, you need to be using SpiraPlan. Second, your user must be a Portfolio Viewer. System Administrators can control this setting on a user by user basis. If you are a Portfolio Viewer you will also be able to access the Enterprise Homepage.
+    To access the portfolio homepage first, you need to be using Spira. Second, your user must be a Portfolio Viewer. System Administrators can control this setting on a user by user basis. If you are a Portfolio Viewer you will also be able to access the Enterprise Homepage.
 
     If you are NOT a portfolio viewer, you can still see how your organization structures its portfolios, programs, and products from the workspace dropdown.
 

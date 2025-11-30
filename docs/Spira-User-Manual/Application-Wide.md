@@ -1,15 +1,18 @@
+---
+pdf: true
+---
+
 # Common Elements Across the Application
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 There are lots of different artifacts in the application (described [here](Functionality-Overview.md)). This means each artifact has its own settings, uses, and logical links to other artifacts, and reporting. Each artifact is different but they also share many similarities. These are explained below. 
 
 ## Artifact List Pages
-
 When you first visit an artifact section in the app (by clicking on the relevant link in the global navigation bar), you will be taken to the artifact list page. This may look something like below (this image is of the requirements list page) with a grid of data - each row representing a single artifact, and often a sidebar on the left with charts or links:
 
 ![](img/Requirements_Management_83.png)
 
 ### Filtering
-
 You can easily filter artifact lists as you can see in the screen-shot below. Here, we are filtering Requirements by the status "Requested":
 
 ![](img/Requirements_Management_86.png)
@@ -53,17 +56,14 @@ For Requirements, Test Cases, Incidents, Risks, and Tasks the quick filter panel
 For Requirements and Test Runs the quick filter panel additionally shows a dropdown for **Releases**. Picking a release will filter the list to only show items that are set for that particular release.
 
 #### Sorting
-
 Many artifact lists let you sort by a specific column (either ascending or descending). To change the column being sorted, click on the up or down arrow icon next to the title of that column. Click the other icon will reverse the sort order. The currently sorted column is indicated by the darker arrow. When you save a filter it will always save the selected sort.
 
 
 ### Show / Hide Columns
-
 This drop-down list allows you to change the fields that are displayed in the artifact list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
 ### Right-Click Context Menu
-
-SpiraPlan® provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the artifacts list and the following menu will be displayed (the one below is specific to requirements - different artifacts have different options in the *context menu*):
+Spira provides a shortcut -- called the *context menu* - for accessing some of the most commonly used functions, so that you don't need to move your mouse up to the toolbar each time. To access the context menu, right-click on any of the rows in the artifacts list and the following menu will be displayed (the one below is specific to requirements - different artifacts have different options in the *context menu*):
 
 ![](img/Requirements_Management_90.png)
 
@@ -72,32 +72,31 @@ SpiraPlan® provides a shortcut -- called the *context menu* - for accessing som
 
 You can export the following artifacts from the current product to any other product that you have access to:
 
-- incidents
-- releases
-- requirements
-- risks
-- tasks
-- test cases
-- test sets
+| Artifact      | Export from List Page | Export from Details Page | Updates screenshots | Export Discussions |
+| ------------- | --------------------- | ------------------------ | ------------------- | ------------------ |
+| Incidents     | Y                     | N                        | Y                   | Y                  |
+| Releases      | Y                     | N                        | N                   | N                  |
+| Requirements  | Y                     | N                        | Y                   | N                  |
+| Risks [^STSP] | Y                     | N                        | Y                   | Y                  |
+| Tasks [^STSP] | Y                     | N                        | Y                   | N                  |
+| Test cases    | Y                     | N                        | Y                   | N                  |
+| Test sets     | N                     | Y                        | Y                   | Y                  |
 
 The artifacts will be exported from the current product to the destination product. Any file attachments will also be copied to the destination product. If the destination product uses the same product template then standard and custom fields will be copied over in full - but this will not necessarily be possible if the destination product uses a different product template (the system will try and match up fields as best it can).
 
-**Note**: 
+!!! info "Notes" 
+    - when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
+    - If an artifact's screenshots are not updated this means that the the embedded images are still a part of the source product (while the attachments themselves are exported together with artifact). To resolve this either:
 
-- when exporting a requirement that has children, the requirement itself and all of its children are exported to the destination product.
-- The artifact's embedded images are part of the source product. When the artifact (except for test sets) is being moved to another product, the embedded images are still a part of the source product (while
-attachments being exported together with artifact). There are two solutions:
-
-   - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
-   - Re-attach the images so these can be copied over to the destination product and become a part of it
+    - Give the user access to source product, artifact has been moved from (even read-only to documents artifact)
+    - Re-attach the images so these can be copied over to the destination product and become a part of it
 
 To export one or more of a particular artifact:
 
-1. go to the list page for that artifact in the right product. 
-2. check the check-boxes of the artifact(s) you want to export
-3. click `Tools` > `Export to Product` from the toolbar
-4. this will then bring up a list of possible destination products (below is an example for exporting incidents)
-5. select the destination product and click `Export`
+1. go to the list or details page for that artifact (if on the list page, check the check-boxes of the artifact(s) you want to export)
+2. click `Tools` > `Export to Product` from the toolbar
+3. this will then bring up a list of possible destination products (below is an example for exporting incidents)
+4. select the destination product and click `Export`
 
 ![](img/Incident_Tracking_241.png)
 
@@ -160,7 +159,9 @@ Workflows are managed by the product's template. Read more about workflow admini
 - [Test Cases](../Spira-Administration-Guide/Template-Test-Cases.md/#test-case-workflows)
 - [Incidents](../Spira-Administration-Guide/Template-Incidents.md/#incident-workflows)
 - [Tasks](../Spira-Administration-Guide/Template-Tasks.md/#task-workflows)
+    {: .edition-spiraplan .edition-spirateam}
 - [Risks](../Spira-Administration-Guide/Template-Risks.md/#risk-workflows)
+    {: .edition-spiraplan .edition-spirateam}
 
 
 ### Electronic Signatures
@@ -242,8 +243,7 @@ Users can delete comments that were made in error or that are no longer relevant
 Note that certain system created comments "permanent" and cannot be deleted, even by system administrators. For example, comments are added when you create a test case from a use case and are marked as "permanent" behind the scenes.
 
 ### Attachments
-
-The attachment tab displays the list of documents, screenshots or web-links (URLs) that have been "attached" to the artifact. The documents can be in any format, though SpiraPlan® will only display icons for certain known types.
+The attachment tab displays the list of documents, screenshots or web-links (URLs) that have been "attached" to the artifact. The documents can be in any format, though Spira will only display icons for certain known types.
 
 ![](img/Requirements_Management_113.png)
 
@@ -251,12 +251,12 @@ The attachment list includes the filename/URL that was originally uploaded toget
 
 To actually view the document, click on the filename hyperlink and a new web browser window will open. Depending on the type of file, this window will either display the document / web-page or prompt you for a place to save it on your local computer. To remove an existing attachment from an artifact, click the "***Remove***" button and the attachment will be removed from the list. Using the standard filter/sort options you can also sort and filter the list of attachments to make it more manageable.
 
-If you are using SpiraPlan or SpiraTeam (but not SpiraTest) you can also choose to include file attachments stored in a linked version control system (e.g. Git, Subversion, CVS, Perforce, etc.) by selecting the "Include Source Code Documents" option.
+You can also choose to include file attachments stored in a linked version control system (e.g. Git, Subversion, CVS, Perforce, etc.) by selecting the "Include Source Code Documents" option.
+    {: .edition-spiraplan .edition-spirateam}
 
 To attach a new document to the artifact, you need to first click the "***Add New***" button to display the new attachment dialog box:
 
 ![g4169](img/Requirements_Management_114.png)
-
 
 There are three different types of item that can be attached to an artifact:
 
@@ -269,20 +269,25 @@ To attach a screenshot to the artifact, you need to choose "Screenshot" as the t
 
 Note: If you are using a non-Windows® computer (e.g. Macintosh®) that doesn't put file extensions on filenames (e.g. .xls for an Excel sheet) automatically, then you will need to manually add the file extension to the filename before uploading if you want it to be displayed with the correct icon in the attachment list.
 
-You can also associate an existing document (that's already stored in SpiraPlan) with the artifact. To do that, click on the "***Add Existing***" button to bring up the add file association dialog box:
+You can also associate an existing document (that's already stored in Spira) with the artifact. To do that, click on the "***Add Existing***" button to bring up the add file association dialog box:
 
 ![](img/Requirements_Management_115.png)
 
 
 ![](img/Requirements_Management_116.png)
 
-You can then choose to either associate a document stored in the SpiraPlan Documents repository or (in the case of SpiraPlan/SpiraTeam but not SpiraTest) from the linked source code repository. In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
+You can then choose to either:
+
+- associate a document stored in the Spira Documents repository or 
+- from the linked source code repository
+    {: .edition-spiraplan .edition-spirateam}
+
+In either case you first select the appropriate folder, and then pick the document(s) from the file list on the right. In the case of a source code file association you can also add a comment.
 
 !!! info "Maximum file size"
     The maximum allowed file size for any attachment in Spira is 2gb. You will not be able to upload or store any file larger than this.
 
 ### History
-
 This tab displays the list of changes that have been performed on the artifact since its creation. An example change history for a requirement is shown below:
 
 ![](img/Requirements_Management_117.png)
@@ -293,22 +298,27 @@ Changes made to text fields are shown with their differences highlighted. Rich t
 
 ![history diff view](img/history-diff.png)
 
-
 ### Associations
-
 You can associate artifacts to one another. For instance, you can associate (or link) one requirement to another requirement, or a test case to a risk. The following artifacts have association tabs:
 
 - Documents
 - Incidents
 - Releases
 - Requirements
-- Risks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
+- Risks 
+    {: .edition-spiraplan .edition-spirateam}
 - Source code commits
+    {: .edition-spiraplan .edition-spirateam}
 - Source code files
-- Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Test cases <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>
-- Program Capabilities <span class="pill">SpiraPlan</span>
-- Program Milestones <span class="pill">SpiraPlan</span>
+    {: .edition-spiraplan .edition-spirateam}
+- Tasks 
+    {: .edition-spiraplan .edition-spirateam}
+- Test cases 
+    {: .edition-spiraplan .edition-spirateam}
+- Program Capabilities 
+    {: .edition-spiraplan}
+- Program Milestones 
+    {: .edition-spiraplan}
 
 From the associations tab you can see and manage the list of artifacts associated with the specific artifact you are looking at. You can even make links between artifacts across different products (if the admin has set this up). The image below shows the association tab for a requirement.
 
@@ -324,7 +334,8 @@ Each association is for product level associations displayed with the:
 - name of the person who created the association
 - a comment that describes why the association was made. In the case of an indirect association (eg when a link to an incident is added to a requirement during a test run), the comment will contain the name of the specific artifact that created that indirect association.
 
-In addition, when using SpiraPlan or SpiraTeam, the system automatically scans the source code repository for any commits, across all branches, that are linked to this artifact.
+In addition, the system automatically scans the source code repository for any commits, across all branches, that are linked to this artifact.
+    {: .edition-spiraplan .edition-spirateam}
 
 You can perform the following actions on the list of associations:
 
@@ -363,27 +374,29 @@ You can add a comment that explains the rationale for the association and choose
 
 !!! info "What can you associate to what?"
 
-    | Association Tab Of                                           | Available artifacts                                                                                                      |
-    | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-    | **Documents**                                                | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
-    | **Incidents**                                                | Requirements, Test Steps, Tasks, Incidents, Risks                                                                        |
-    | **Releases**                                                 | Releases, Requirements                                                                                                   |
-    | **Requirements**                                             | Releases, Requirements, Incidents, Risks                                                                                 |
-    | **Risks**                                                    | Requirements, Incidents, Risks, Test Cases                                                                               |
-    | **Source code commits**                                      | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
-    | **Source code files**                                        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks, Incidents, Risks          |
-    | **Tasks**                                                    | Tasks, Incidents                                                                                                         |
-    | **Test cases**                                               | Tasks <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>, Risks <span class="pill">SpiraPlan</span> |
-    | **Program Capabilities** <span class="pill">SpiraPlan</span> | Requirements (the tab is called requirements, comments and association type not supported)                               |
-    | **Program Milestones** <span class="pill">SpiraPlan</span>   | Releases (the tab is called releases, comments and association type not supported)                                       |
+    | Association Tab Of             | Available artifacts                                                                                                             |
+    | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+    | **Documents**                  | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
+    | **Incidents**                  | Requirements, Test Steps, Tasks [^STSP], Incidents, Risks [^STSP]                                                               |
+    | **Releases**                   | Releases, Requirements                                                                                                          |
+    | **Requirements**               | Releases, Requirements, Incidents, Risks [^STSP]                                                                                |
+    | **Risks**                      | Requirements, Incidents, Risks [^STSP], Test Cases                                                                              |
+    | **Source code commits**        | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
+    | **Source code files**          | Requirements, Releases, Test Cases, Test Sets, Test Runs, Test Steps, Automation Hosts, Tasks [^STSP], Incidents, Risks [^STSP] |
+    | **Tasks**                      | Tasks [^STSP], Incidents                                                                                                        |
+    | **Test cases**                 | Tasks [^STSP], Risks [^STSP]                                                                                                    |
+    | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                                      |
+    | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                                              |
 
+[^STSP]: Available in SpiraTeam & SpiraPlan
+[^SP]: Available in SpiraPlan
 
 ### Rich Text Editor
-There are two ways to enter and edit text in SpiraPlan: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated [rich text documents in the Documents Repository](Document-Management.md/#add-new-inline-documents). Rich text fields can be as long as you need, and can replace traditional documents entirely.
+There are two ways to enter and edit text in Spira: plain text or rich text. Plain text is used for short and simple text - like artifact names, instant messages, or short notes in custom properties. When users need to enter more text and style it in a particular way, they use the built-in rich text editor. This is used for artifact descriptions and comments, as well dedicated [rich text documents in the Documents Repository](Document-Management.md/#add-new-inline-documents). Rich text fields can be as long as you need, and can replace traditional documents entirely.
 
 ![](img/Application-Wide_editor.png)
 
-SpiraPlan's rich text editor is responsive, fully featured, and intuitive to use. As such, it does not require special instruction. For information, below is a list of supported features in the rich text editor.
+Spira's rich text editor is responsive, fully featured, and intuitive to use. As such, it does not require special instruction. For information, below is a list of supported features in the rich text editor.
 
 **Formatting options**:
 
@@ -412,7 +425,7 @@ SpiraPlan's rich text editor is responsive, fully featured, and intuitive to use
     
     - paste them straight into the editor
     - click the button to upload an image
-    - click the image button's down arrow to add an image via a url (for security, only image on the same domain as SpiraPlan will display)
+    - click the image button's down arrow to add an image via a url (for security, only image on the same domain as Spira will display)
     - format an inserted image by: adding or hiding a caption; align the image left, center, or right; have text only above and below the image or make text wrap on its left or right
     - set alternate text on the image
     - attach a url link to the image
@@ -457,12 +470,16 @@ The artifact that support tags are:
 - releases
 - requirements
 - risks
+    {: .edition-spiraplan .edition-spirateam}
 - tasks
+    {: .edition-spiraplan .edition-spirateam}
 - test cases
 - test runs
 - test sets
 
 ## Boards
+!!! abstract "Available in SpiraPlan only"
+
 Boards allow users to see artifacts visually in columns and/or rows, and move cards around to progress them along their workflow. This is like moving sticky notes around on a white board. It is a very visual way of working with your artifacts.
 
 !!! info "What boards where"
@@ -472,7 +489,7 @@ Boards allow users to see artifacts visually in columns and/or rows, and move ca
     | Page           | Board format |
     | -------------- | ------------ |
     | Requirements   | New          |
-    | Planning Board | New, Legacy  |
+    | Planning Board | New          |
     | Incident Board | New          |
     | Task Board     | New          |
     | Program Board  | Legacy       |
@@ -589,6 +606,8 @@ What cards show on the board depends on how the board is configured (what displa
 | Priority "High"        | Component "Admin"       | Items with a priority of "High" and component of "Admin" |
 | Priority "High"        | Component unassigned    | Items with a priority of "High" and no component set     |
 | Priority is unassigned | Component is unassigned | Items with no priority and no component set              |
+
+Note that only the first 500 cards in any column will show. If rows or groups are shown then this number applies to the total cards in a column across all its rows (and groups).
 
 #### Moving and ordering cards
 Cards can be moved between any cell of the board. Moving a card updates all relevant fields about that item. For instance, moving a card to a different row and column will change the values for both of those fields for the card at once.

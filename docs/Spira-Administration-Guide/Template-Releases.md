@@ -1,21 +1,23 @@
-# Template: Releases
+---
+pdf: true
+---
 
+# Template: Releases
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Release Workflows
-
 Clicking on the "Release Workflows" link under the Planning heading, brings up the list of defined release workflows for the current template. A workflow is a predefined sequence of release statuses linked together by "workflow transitions" to enable a newly created release to be reviewed, prioritized, assigned, developed and tested, as well as to handle exception cases such as the case of a cancelled or deferred release. The workflow list screen for the sample template is illustrated below:
 
 ![](img/Template_Releases_121.png)
 
 The screen displays a list of all the standard release types in the system. The associated workflow drop-down list allows you to specify which workflow the release type will follow. This is a very powerful feature since it allows you to configure different workflows for different release types; i.e. a Major release may follow a different process than an iteration.
 
-You can have as many workflows as you like in a template, but only one can be marked as the default. Each release type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard SpiraPlan® steps and transitions.
+You can have as many workflows as you like in a template, but only one can be marked as the default. Each release type must be assigned to a workflow. To modify the name, default flag, and/or active flag of an existing workflow, change the values in the appropriate text-box, radio-button, or drop-down list and click the "Save" button. To add a new workflow, click the 'Add Workflow' link and a new workflow will be created with the standard Spira steps and transitions.
 
 Note: You can only assign an active workflow to a release type, and similarly you cannot make a workflow inactive that is currently linked to a release type. This is important as all release types need to be linked to an active workflow at all times.
 
 
 ### Edit Workflow Details
-
 Clicking on the 'Steps' hyperlink of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 
 ![](img/Template_Releases_122.png)
@@ -26,7 +28,6 @@ Clicking on the name of a step or transition takes you to the appropriate detail
 
 
 ### Edit Workflow Transition
-
 When you click on the transition name link from the previous screen, you are taken to the workflow transition details screen:
 
 ![](img/Template_Releases_123.png)
@@ -51,14 +52,13 @@ A user with a specified role can be allowed to execute the transition regardless
 
 
 ### Edit Workflow Step
-
 When you click on the release status name link from either of the previous screens, you are taken to the workflow step details screen:
 
 ![](img/Template_Releases_125.png)
 
 The top part of the screen is the "workflow browser" which illustrates how the step relates to the workflow as a whole. It displays the current release status in the middle, with the possible originating and destination transitions listed to either side. Clicking on either workflow transition name will take you to the appropriate workflow transition details page. This allows you to click through the whole workflow from start to finish without having to return to the workflow details page.
 
-This page allows you to define the behavior of the various release fields (i.e. those that are a standard part of SpiraPlan® such as Priority):
+This page allows you to define the behavior of the various release fields (i.e. those that are a standard part of Spira such as Priority):
 
 ![](img/Template_Releases_126.png)
 

@@ -2,7 +2,7 @@
 **[Discover SpiraApps here*](https://www.inflectra.com/Products/SpiraApps/)**
 
 !!! question "What are SpiraApps?"
-    SpiraApps let you tailor SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps extend what is possible, each addressing a specific use case.
+    SpiraApps let you tailor Spira to your needs. Dedicated SpiraApps extend what is possible, each addressing a specific use case.
 
     One of the key attributes of the Spira platform is that it is a complete, integrated turnkey solution for companies that need to develop, test and manage their software applications. However there are specific features that are needed by different industries and methodologies that are better served by a more extensible set of ‘add-on’ features to the core system. For example, working in healthcare you have to comply with 21 CFR Part 11, whereas in automotive you need to support ISO 26262. SpiraApps allow Inflectra and its customers and partners to easily, safely, and seamlessly provide niche features for different industries and needs.
 

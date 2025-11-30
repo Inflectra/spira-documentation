@@ -1,26 +1,26 @@
 # BDD
-
-!!! warning "This SpiraApp works with v8.3+ and some of its functionality is not compatible with SpiraTest"
+!!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 This SpiraApp:
 
 - automatically highlights Gherkin syntax within Requirement Steps and Test Case Steps
-- automatically highlights Gherkin syntax for Risk Mitigations <span class="pill">SpiraTeam</span> <span class="pill">SpiraPlan</span>. 
+- automatically highlights Gherkin syntax for Risk Mitigations
+    {: .edition-spiraplan .edition-spirateam}
 - adds a toolbar button to relevant details pages to export the artifact steps as an attached .feature file. 
 - adds a toolbar button to the document details page, to convert any open .feature file into an artifact with BDD items
 
 !!! info "About this SpiraApp"
-    - [ ] system settings
-    - [x] product settings 
-    - [ ] product template setup required
-    - [x] runs automatically on the requirement details page
-    - [x] runs automatically on the test case details page
-    - [x] runs automatically on the risk details page
-    - [x] toolbar button on requirement details page
-    - [x] toolbar button on document details page
-    - [x] toolbar button on test case details page
-    - [x] toolbar button on risk details page
-    - [x] officially supports Gherkin syntax in English, German, French, Portuguese, Spanish, and other languages.
+    - product settings 
+    - runs automatically on the requirement details page
+    - runs automatically on the test case details page
+    - runs automatically on the risk details page
+    - toolbar button on requirement details page
+    - toolbar button on document details page
+    - toolbar button on test case details page
+        {: .edition-spiraplan .edition-spirateam}
+    - toolbar button on risk details page
+        {: .edition-spiraplan .edition-spirateam}
+    - officially supports Gherkin syntax in English, German, French, Portuguese, Spanish, and other languages.
 
 ## Setup
 ### Product Settings

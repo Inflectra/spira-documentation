@@ -1,4 +1,9 @@
+---
+pdf: true
+---
+
 # Execution of Test Case(s)
+!!! abstract "Available in SpiraTest, SpiraTeam, SpiraPlan"
 
 ## Introduction
 !!! info "Customizing Test Execution"
@@ -6,7 +11,7 @@
 
 This section describes how a tester can follow the steps defined for a series of test cases and record what actually happened in the process. In addition, recorded failures of test cases can be used to automatically generate new incidents that will be added to the [incident tracking module](Incident-Tracking.md) and, optionally, to [tasks](Task-Tracking.md).
 
-You start test case execution in SpiraPlan by either:
+You start test case execution in Spira by either:
 
 1.  selecting test cases or test sets on their respective page(s) and clicking the "***Execute***" button;
 2.  clicking the "***Execute***" button on the test cases / test sets listed on your personalized home page under "My Test Cases" or "My Test Sets".
@@ -197,10 +202,11 @@ If you need to attach documents to the test run (in addition to any screenshots)
 
 
 ### Tasks
+!!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 By default you will not see a Task tab during test execution. But a "Tasks" tab will be visible if:
 
 - this feature has been enabled for a product on the [testing settings](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) page
-- you are using SpiraTeam or SpiraPlan
 - you have permissions to view and create tasks
 
 The task tab allows the tester to quickly create tasks based on the current test step. These tasks are attached to the test run as a whole, so any previously entered tasks will be visible even when changing steps. Creating a task is a light touch way of communicating with others about your findings and alerting them that some work is likely required to fix or clarify a feature. It is quicker to enter and manage than an incident.
@@ -277,7 +283,12 @@ Just like with normal test execution, you can navigate between steps using the l
 
 -  **move an existing step**: to move an editable step click and drag it to the desired location in the test step list.
 
-Below the main detailed section there are two or three tabs. SpiraTest users will only see two tabs -- incidents and attachements. SpiraPlan users may see the additional  tasks tab (if enabled by the product admin). 
+Below the main detailed section there a number of tabs
+
+- incidents
+- attachments
+- tasks (if enabled by the product admin)
+    {: .edition-spiraplan .edition-spirateam}
 
 The toolbar at the top right of the page has a number of buttons:
 
