@@ -2,7 +2,7 @@
 
 ## December 12 2025
 !!! success "New Features"
-    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)** TODO: FIX THIS HERE TO NEW LINK
+    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#my-page)**
         - As a system admin, I can create a new product with requirements from the My Page using Inflectra.ai [RQ:5561]
         - As a system admin, I can create a new product with a name and description from the My Page using Inflectra.ai [RQ:5560]
         - As a system admin, I can open the Inflectra.ai sidebar from the My Page [RQ:5558]
