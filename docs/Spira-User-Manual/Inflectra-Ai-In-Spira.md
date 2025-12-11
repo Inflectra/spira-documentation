@@ -230,3 +230,9 @@ When generating content for a requirement on the list page, the following inform
 - Component
 - Any existing requirement steps
 - The product name of the product the requirement is in
+
+## My Page
+
+!!! warning "This functionality is available for System Administrators"
+
+

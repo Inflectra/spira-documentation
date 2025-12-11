@@ -1,6 +1,9 @@
 # Release Notes for Inflectra.ai
 
 ## December 12 2025
+!!! success "New Features"
+    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**
+        - As an Inflectra.ai and release user, I can analyze the broader status of my release, to gain a better understanding of its content and progress [RQ:5450]
 
 !!! bug "Bug fixes and enhancements"
     - Fix the requirement EARS Analysis being grayed out when you perform a follow up action and the follow up action not being grayed out after a page refresh [IN:11669]
