@@ -233,6 +233,10 @@ When generating content for a requirement on the list page, the following inform
 
 ## My Page
 
-!!! warning "This functionality is available for System Administrators"
+!!! warning "This functionality is only available for System Administrators"
 
+From the My Page, system administrators can create a new product & have a base set of requirements generated based on the product name & description. 
 
+| Generated Content  | Description                                                                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Product & Root level Requirements | Creates a product using a provided name and description, then generates root level requirements based on those values to help you get started on a new project |

@@ -2,8 +2,10 @@
 
 ## December 12 2025
 !!! success "New Features"
-    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)**
-        - As an Inflectra.ai and release user, I can analyze the broader status of my release, to gain a better understanding of its content and progress [RQ:5450]
+    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#release-analysis)** TODO: FIX THIS HERE TO NEW LINK
+        - As a system admin, I can create a new product with requirements from the My Page using Inflectra.ai [RQ:5561]
+        - As a system admin, I can create a new product with a name and description from the My Page using Inflectra.ai [RQ:5560]
+        - As a system admin, I can open the Inflectra.ai sidebar from the My Page [RQ:5558]
 
 !!! bug "Bug fixes and enhancements"
     - Fix the requirement EARS Analysis being grayed out when you perform a follow up action and the follow up action not being grayed out after a page refresh [IN:11669]
