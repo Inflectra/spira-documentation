@@ -24,11 +24,13 @@ To configure this SpiraApp that lets users manually kick off a new Pipeline, you
 ### System settings
 - [x] Enter the **GitLab account name** - for example, if your URL is `https://gitlab.com/my-company/my-project` you should enter `my-company`
 - [x] Enter the [Personal Access Token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-tokens) - make sure the PAT has read and write API permissions
+- [x] If your instance of GitLab is self-hosted, you will need to enter in the base URL (without the `https://`). If you are using `gitlab.com` then you can leave this field blank.
 
 ![system settings page](img/gitlab-system-settings.png)
 
 ### Product Settings
 - [x] Enter the URL friendly name of the **GitLab project** - for example, if your URL is `https://gitlab.com/my-company/my-project` you should enter `my-project`
+- [x] If you want to have a different personal access token for this project, you can enter in the project-specific `Username` and `Personal Access Token` on this screen. If you leave this blank, the values from system settings are used instead. 
 
 ![product settings page](img/gitlab-product-settings.png)
 
