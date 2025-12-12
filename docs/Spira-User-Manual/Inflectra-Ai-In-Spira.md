@@ -230,3 +230,15 @@ When generating content for a requirement on the list page, the following inform
 - Component
 - Any existing requirement steps
 - The product name of the product the requirement is in
+
+## My Page
+
+!!! warning "This functionality is only available for System Administrators"
+
+From the My Page, system administrators can create a new product & have a base set of requirements generated based on the product name & description. 
+
+![](img/Inflectra_ai_my_page.webp) 
+
+| Generated Content  | Description                                                                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Product & Root level Requirements | Creates a product using a provided name and description, then generates root level requirements based on those values to help you get started on a new project |
