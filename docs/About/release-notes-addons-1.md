@@ -1,6 +1,18 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## December 2025
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.4:
+
+    - Bug Fixes and Enhancements:
+        - [IN:11813] Release field Version# is preserved when edited in Spira
+        - [IN:11887] Plugin now handles the Jira API Rate Limits
+
+- [Jira Server/Data Center Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md) v7.2.0:
+
+    - Bug Fixes and Enhancements:
+        - [IN:11903] Creator fields were not synced for RQ, TK, IN artifacts on updates from Jira to Spira
+
 ## November 2025
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.3:
 
