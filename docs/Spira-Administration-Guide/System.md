@@ -135,6 +135,7 @@ The following settings can be changed within the system, once you are satisfied,
     - Make sure you have at least one login provider configured, active, and working correctly
     - If you have existing users, check if any of them are logging in with LDAP or a standard username and password. If you want them to login with a provider, migrate them before enabling this setting (as they will not be able to do with the setting enabled)
 
+- **Concurrency Control**: If enabled, users will not be able to login with the same user in multiple browsers at once (by default this is off to give users more flexibility). This setting is only visible for enterprise licenses or concurrent user licenses with 50 or more users.
 - **Authentication Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.
 - **Keep Me Logged-In Expiration**: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.
 - **Allowed Domains**: This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. https://www.domain1.com, http://www.domain2.com) or an asterisk (\*) to denote all domains are allowed (not recommended).
