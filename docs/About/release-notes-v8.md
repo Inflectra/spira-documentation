@@ -4,7 +4,7 @@
 !!! info "Summary
     Administrators can now accelerate Inflectra.ai roll-out across many products by automating product enablement.
 
-    A variety of UI and API fixes and updates are also included, making a number quality of life improvements to Spira. 
+    This release also includes a variety of UI and API fixes and updates, making a number quality of life improvements to Spira. 
 
 ??? success "New Features"
     - Add Ability to turn on Inflectra.ai for a product via API [IN:11900]
