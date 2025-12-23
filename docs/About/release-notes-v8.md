@@ -18,7 +18,7 @@
     - Add meaningful descriptions to all sample data portfolios, programs, products, program level artifacts, and product level artifacts [IN:9027] [IN:9430] [IN:11877]
     - Fix [exploratory test execution page](../Spira-User-Manual/Test-Execution.md/#exploratory-test-execution) hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]
     - Fix [Requirement tree grid](../Spira-User-Manual/Requirements-Management.md/#requirements-list) failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]
-    - Fix save button not being enabled when artifact selector controls change their values, such as the [Test Run "Test Set"](../Spira-User-Manual/Test-Run-Management.md/#test-run-details) field & [Task "Requirement"](../Spira-User-Manual/Task-Tracking.md/#task-details) field [IN:11797]
+    - Fix save button not being enabled when artifact selector controls change their values, such as the [Test Run "Test Set"](../Spira-User-Manual/Test-Run-Management.md/#test-run-details) field and [Task "Requirement"](../Spira-User-Manual/Task-Tracking.md/#task-details) field [IN:11797]
     - Fix [rich text overview widgets](../Spira-User-Manual/Product-Homepage.md/#product-overview) displaying raw HTML tags [IN:11835]
     - Fix the [R_Projects](../Reporting/Custom-Report-Tables.md/#projects-products) custom report view to use a dynamic check for Inflectra.ai being enabled or not and never show blank [IN:11841]
 
