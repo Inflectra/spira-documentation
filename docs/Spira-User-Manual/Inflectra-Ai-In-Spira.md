@@ -40,6 +40,9 @@ Inflectra.ai is available in the following places:
     - Requirement list page (hierarchical)
     - Requirement list page (sortable)
 
+- **Dashboards**: Inflectra.ai can generate content from user input on the My Page, and it is only accessible to users with the System Admin permission. This content can be used to create new artifacts.
+    - My Page (for System Administrators only)
+
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
 
@@ -235,10 +238,14 @@ When generating content for a requirement on the list page, the following inform
 
 !!! warning "This functionality is only available for System Administrators"
 
-From the My Page, system administrators can create a new product & have a base set of requirements generated based on the product name & description. 
+From the My Page, system administrators can create a new product & have a base set of requirements generated based on the product name & description. They can follow that up with creating child requirements, test coverage, tasks, and identifying risks. This way users can build out an entire POC in minutes! Users must create child requirements before choosing the other options if they want them to be covered.
 
 ![](img/Inflectra_ai_my_page.webp) 
 
 | Generated Content  | Description                                                                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Product & Root level Requirements | Creates a product using a provided name and description, then generates root level requirements based on those values to help you get started on a new project |
+| ... Child requirements | Generates child requirements for each root level requirement, to split them up into distinct user stories                                                   |
+| ... Test Cases       | Creates a set of test cases with steps to cover each requirement, including any new child requirements, to get a head start on test planning                                           |
+| ... Tasks       | Creates a set of work tasks needed to deliver the functionality in each requirement, including any new child requirements. (SpiraTeam and SpiraPlan only)                                           |
+| ... Risks       | Identifies any risks that may impact the deployment or development of each requirement's functionality, including any new child requirements. (SpiraTeam and SpiraPlan only)                                           |

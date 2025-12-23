@@ -15,7 +15,7 @@
 !!! bug "Bug fixes and enhancements"
     - Improve artifact generation (test cases most of all) to be less likely to fail due to JSON parsing problems (bad JSON or JSON that is cutoff before the end) [IN:11863]
     - Mention the character limit in the prompt for entering the product name during AI product creation [IN:11957]
-    - Restrict Inflectra.ai sidebar to only show on product-specific pages when AI is enabled for that product [IN:11961]
+    - Restrict Inflectra.ai sidebar to only show on product-specific pages when AI is enabled for that product [IN:11961] (This functionality was moved out of Spira into Inflectra.ai, it is not a bug fix) 
     - Fix sidebar refusing to do release analysis if the release's requirements have parents not associated with the release [IN:11966]
 
 ## December 12 2025
