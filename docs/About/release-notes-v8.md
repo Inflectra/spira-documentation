@@ -2,10 +2,13 @@
 
 ## Version 8.16 (January 2026)
 !!! info "Summary
-    TODO: What does this release give users?
+    Administrators can now accelerate Inflectra.ai roll-out across many products by automating product enablement.
+
+    A variety of UI and API fixes and updates are also included, making a number quality of life improvements to Spira. 
 
 ??? success "New Features"
-    TODO: New features here
+    - Add Ability to turn on Inflectra.ai for a product via API [IN:11900]
+    - Add a Session Concurrency Control option for sites allowing multiple logins per user to enforcement single session use [IN:11754]
 
 ??? bug "Bug fixes and enhancements"
     - Update automated test run record-multiple API endpoint to skip execution status refreshes to improve performance of large test run recording volumes [IN:11518]
@@ -14,12 +17,10 @@
     - Fix the Email Addresses field description when listing multiple recipients to use comma and semicolon [IN:10577]
     - Add meaningful descriptions to all sample data portfolios, programs, products, program level artifacts, and product level artifacts [IN:9027] [IN:9430] [IN:11877]
     - Fix exploratory test execution page hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]
-    - Add a Session Concurrency Control option for sites allowing multiple logins per user to enforcement single session use [IN:11754]
     - Fix some grids failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]
     - Fix save button not being enabled when artifact selector controls change their values, such as the Test Run "Test Set" field & Task "Requirement" field [IN:11797]
     - Fix rich text overview widgets displaying raw HTML tags [IN:11835]
     - Fix the R_Projects view to use a dynamic check for Inflectra.ai being enabled or not and never show blank [IN:11841]
-    - Add Ability to turn on Inflectra.ai for a product via API [IN:11900]
 
 ## Version 8.15 (November 2025)
 !!! info "Summary"
