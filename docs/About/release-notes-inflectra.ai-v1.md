@@ -1,5 +1,23 @@
 # Release Notes for Inflectra.ai
 
+## December 24 2025
+
+!!! success "New features"
+    - **Sidebar design and user experience**
+        - As an Inflectra.ai user, when I start an AI action, the actions and groups disappear, so I can focus on the chat with the AI [RQ:5418]
+        - As an Inflectra.ai user, when I finish an AI action, I always see a follow-up that lets me do another action straight away [RQ:5419]
+    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#my-page)**
+        - As a system admin, I can have flexibility on creating artifacts for new products via Inflectra.ai [RQ:5584]
+        - As a system admin, I can create a new product with requirements and children from the My Page [RQ:5562]
+        - As a system admin, I can create a new product with requirements and risks from the My Page [RQ:5565]
+        - As a system admin, I can create a new product with requirements and tasks from the My Page [RQ:5564]
+
+!!! bug "Bug fixes and enhancements"
+    - Improve artifact generation (test cases most of all) to be less likely to fail due to JSON parsing problems (bad JSON or JSON that is cutoff before the end) [IN:11863]
+    - Mention the character limit in the prompt for entering the product name during AI product creation [IN:11957]
+    - Restrict Inflectra.ai sidebar to only show on product-specific pages when AI is enabled for that product [IN:11961]
+    - Fix sidebar refusing to do release analysis if the release's requirements have parents not associated with the release [IN:11966]
+
 ## December 12 2025
 !!! success "New Features"
     - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#my-page)**
