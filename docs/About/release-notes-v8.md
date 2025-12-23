@@ -1,26 +1,26 @@
 # Release Notes for Spira v8
 
 ## Version 8.16 (January 2026)
-!!! info "Summary
+!!! info "Summary"
     Administrators can now accelerate Inflectra.ai roll-out across many products by automating product enablement.
 
     This release also includes a variety of UI and API fixes and updates, making a number quality of life improvements to Spira. 
 
 ??? success "New Features"
     - Add Ability to turn on Inflectra.ai for a product via API [IN:11900]
-    - Add a Session Concurrency Control option for sites allowing multiple logins per user to enforcement single session use [IN:11754]
+    - Add a [Session Concurrency Control option](../Spira-Administration-Guide/System/#security-settings) for sites allowing multiple logins per user to enforcement single session use [IN:11754]
 
 ??? bug "Bug fixes and enhancements"
     - Update automated test run record-multiple API endpoint to skip execution status refreshes to improve performance of large test run recording volumes [IN:11518]
-    - Make the tooltips for test execution buttons for leaving and finishing the test more informative [IN:11492]
-    - Improve scrolling of the left hand sidebar of list pages, to let the user scroll the sidebar directly, separately from the page [IN:11635]
-    - Fix the Email Addresses field description when listing multiple recipients to use comma and semicolon [IN:10577]
+    - Make the tooltips for [test execution buttons for leaving and finishing the test](../Spira-User-Manual/Test-Execution/#leaving-the-test-execution-page) more informative [IN:11492]
+    - Improve scrolling of the left hand sidebar of [list pages] (../Spira-User-Manual/Application-Wide/#artifact-list-pages), to let the user scroll the sidebar directly, separately from the page [IN:11635]
+    - Fix the [Email Addresses](../Spira-User-Manual/Application-Wide/#emailing) field description when listing multiple recipients to use comma and semicolon [IN:10577]
     - Add meaningful descriptions to all sample data portfolios, programs, products, program level artifacts, and product level artifacts [IN:9027] [IN:9430] [IN:11877]
-    - Fix exploratory test execution page hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]
-    - Fix some grids failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]
-    - Fix save button not being enabled when artifact selector controls change their values, such as the Test Run "Test Set" field & Task "Requirement" field [IN:11797]
-    - Fix rich text overview widgets displaying raw HTML tags [IN:11835]
-    - Fix the R_Projects view to use a dynamic check for Inflectra.ai being enabled or not and never show blank [IN:11841]
+    - Fix [exploratory test execution page](../Spira-User-Manual/Test-Execution/#exploratory-test-execution) hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]
+    - Fix [Requirement tree grid](../Spira-User-Manual/Requirements-Management/#requirements-list) failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]
+    - Fix save button not being enabled when artifact selector controls change their values, such as the [Test Run "Test Set"](../Spira-User-Manual/Test-Run-Management/#test-run-details) field & Task "Requirement" field [IN:11797]
+    - Fix [rich text overview widgets](../Spira-User-Manual/Product-Homepage/#product-overview) displaying raw HTML tags [IN:11835]
+    - Fix the [R_Projects](../Reporting/Custom-Report-Tables.md/#projects-products) custom report view to use a dynamic check for Inflectra.ai being enabled or not and never show blank [IN:11841]
 
 ## Version 8.15 (November 2025)
 !!! info "Summary"
