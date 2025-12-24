@@ -185,7 +185,7 @@ Using the "***Email***" button on the toolbar, you can send an email containing 
 
 ![](img/Requirements_Management_97.png)
 
-You can specify the subject line for the email, and either a list of email addresses, separated by commas, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../Spira-Administration-Guide/Template-Notifications.md/#notification-templates). [Notification events](../Spira-Administration-Guide/Template-Notifications.md/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes). After you send an email the form will automatically reset.
+You can specify the subject line for the email, and either a list of email addresses, separated by commas or semicolons, or an existing product user. The content of the email is specified in the product template's [Notification Templates](../Spira-Administration-Guide/Template-Notifications.md/#notification-templates). [Notification events](../Spira-Administration-Guide/Template-Notifications.md/#notification-events) can also be set up to automatically email users meeting specific conditions whenever a certain event happens (eg a particular field changes). After you send an email the form will automatically reset.
 
 
 ### Followers
