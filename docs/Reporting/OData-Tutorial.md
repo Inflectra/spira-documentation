@@ -76,7 +76,7 @@ To see all the data you have two options:
 
 We will finish this first tutorial by clicking "Load". Your new sheet with Incident data in should look something like this...
 
-**Note**: No data is downloaded until you click "Load". The first screen is a limited preview of live data. This preview is updated when you apple any filters. The full data set is retrieved when you click "Load". For example: If you only request the columns NAME and INCIDENT_ID & filter by INCIDENT_ID = 1234, only the name & ID of [IN:1234] will be sent over the internet. 
+**Note**: No data is downloaded until you click "Load". The first screen is a limited preview of live data. This preview is updated when you apple any filters. The full data set is retrieved when you click "Load". For example: If you only request the columns NAME and INCIDENT_ID and filter by INCIDENT_ID = 1234, only the name and ID of [IN:1234] will be sent over the internet. 
 
 ![Incident data from Spira in Excel](img/odata-6.png)
 

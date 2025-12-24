@@ -1,8 +1,31 @@
 # Release Notes for Inflectra.ai
 
+## December 24 2025
+
+!!! success "New features"
+    - **Sidebar design and user experience**
+
+        - As an Inflectra.ai user, when I start an AI action, the actions and groups disappear, so I can focus on the chat with the AI [RQ:5418]
+        - As an Inflectra.ai user, when I finish an AI action, I always see a follow-up that lets me do another action straight away [RQ:5419]
+
+    - **[Automated product generation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#my-page)**
+
+        - As a system admin, I can choose which artifacts to create when making a new product using Inflectra.ai [RQ:5584]
+        - As a system admin, I can choose to add child requirements when I create a new product from the My Page using Inflectra.ai [RQ:5562]
+        - As a system admin, I can choose to add test cases when I create a new product from the My Page using Inflectra.ai [RQ:5563]
+        - As a system admin, I can choose to add risks when I create a new product from the My Page using Inflectra.ai [RQ:5565]
+        - As a system admin, I can choose to add tasks requirements when I create a new product from the My Page using Inflectra.ai [RQ:5564]
+
+!!! bug "Bug fixes and enhancements"
+    - Improve Inflectra.ai artifact generation (especially test cases and test steps) to be less likely to fail due to JSON parsing problems [IN:11863]
+    - Mention the character limit in the prompt for entering the product name during AI product creation [IN:11957]
+    - Improve how the Inflectra.ai sidebar is only shown on product-specific pages when AI is enabled for that product [IN:11961]
+    - Fix the Inflectra.ai sidebar refusing to do release analysis if the release's requirements have parents not associated with the release [IN:11966]
+
 ## December 12 2025
 !!! success "New Features"
-    - **[Product Creation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#my-page)**
+    - **[Automated product generation](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#my-page)**
+
         - As a system admin, I can create a new product with requirements from the My Page using Inflectra.ai [RQ:5561]
         - As a system admin, I can create a new product with a name and description from the My Page using Inflectra.ai [RQ:5560]
         - As a system admin, I can open the Inflectra.ai sidebar from the My Page [RQ:5558]

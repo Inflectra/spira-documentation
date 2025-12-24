@@ -28,7 +28,7 @@ In addition to the features described below, the toolbar also lets you:
 
 - [download the list to a CSV file](Application-Wide.md/#download-as-csv)
 
-### Filtering & Sorting
+### Filtering and Sorting
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 Incidents can be filtered in special ways when filtering by incident status or incident type:

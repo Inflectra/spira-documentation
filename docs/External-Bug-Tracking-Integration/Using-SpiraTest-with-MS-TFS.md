@@ -73,7 +73,7 @@ time-zones here.
 
     You can give it a logical name (e.g. "Spira") and give it permissions to:
 
-    * **Work Items**   * Read, write & manage * **Releases**   * Read, write, execute & manage * **Identity**   * Read & manage * (or just grant Full Access)
+    * **Work Items**   * Read, write and manage * **Releases**   * Read, write, execute and manage * **Identity**   * Read and manage * (or just grant Full Access)
 
     Azure Devops will then create a personal access token that you should copy to the clipboard and store somewhere secure (e.g. a password manager):
 

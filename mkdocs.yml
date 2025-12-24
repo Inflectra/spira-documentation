@@ -104,270 +104,270 @@ extra:
 # NAVIGATION MENU
 nav:
 - User Manual:
-  - How to use this manual: Spira-User-Manual\index.md
-  - Application Overview and Tips: Spira-User-Manual\Functionality-Overview.md
-  - Common Elements Across the Application: Spira-User-Manual\Application-Wide.md
-  - User Management: Spira-User-Manual\User-Product-Management.md
-  - Inflectra.ai: Spira-User-Manual\Inflectra-Ai-In-Spira.md
+  - How to use this manual: Spira-User-Manual/index.md
+  - Application Overview and Tips: Spira-User-Manual/Functionality-Overview.md
+  - Common Elements Across the Application: Spira-User-Manual/Application-Wide.md
+  - User Management: Spira-User-Manual/User-Product-Management.md
+  - Inflectra.ai: Spira-User-Manual/Inflectra-Ai-In-Spira.md
   - Products:
-    - Homepage: Spira-User-Manual\Product-Homepage.md
+    - Homepage: Spira-User-Manual/Product-Homepage.md
     - Planning:
-      - Requirements Management: Spira-User-Manual\Requirements-Management.md
-      - Release Management: Spira-User-Manual\Release-Management.md
-      - Document Management: Spira-User-Manual\Document-Management.md
-      - Planning Board: Spira-User-Manual\Planning-Board.md
+      - Requirements Management: Spira-User-Manual/Requirements-Management.md
+      - Release Management: Spira-User-Manual/Release-Management.md
+      - Document Management: Spira-User-Manual/Document-Management.md
+      - Planning Board: Spira-User-Manual/Planning-Board.md
     - Testing:
-      - Test Case Management: Spira-User-Manual\Test-Case-Management.md
-      - Test Execution: Spira-User-Manual\Test-Execution.md
-      - Test Set Management: Spira-User-Manual\Test-Set-Management.md
-      - Test Run Management: Spira-User-Manual\Test-Run-Management.md
-      - Automation Host Management: Spira-User-Manual\Automation-Host-Management.md
-      - Test Configuration Management: Spira-User-Manual\Test-Configuration-Management.md
+      - Test Case Management: Spira-User-Manual/Test-Case-Management.md
+      - Test Execution: Spira-User-Manual/Test-Execution.md
+      - Test Set Management: Spira-User-Manual/Test-Set-Management.md
+      - Test Run Management: Spira-User-Manual/Test-Run-Management.md
+      - Automation Host Management: Spira-User-Manual/Automation-Host-Management.md
+      - Test Configuration Management: Spira-User-Manual/Test-Configuration-Management.md
     - Developing:
-      - Source Code: Spira-User-Manual\Source-Code.md
-      - Commits: Spira-User-Manual\Commits.md
-      - Pull Requests: Spira-User-Manual\Pull-Requests.md
+      - Source Code: Spira-User-Manual/Source-Code.md
+      - Commits: Spira-User-Manual/Commits.md
+      - Pull Requests: Spira-User-Manual/Pull-Requests.md
     - Tracking:
-      - Incident Tracking: Spira-User-Manual\Incident-Tracking.md
-      - Risk Management: Spira-User-Manual\Risks-Management.md
-      - Task Tracking: Spira-User-Manual\Task-Tracking.md
-      - Resource Tracking: Spira-User-Manual\Resource-Tracking.md
-    - Reporting: Spira-User-Manual\Reports-Center.md
+      - Incident Tracking: Spira-User-Manual/Incident-Tracking.md
+      - Risk Management: Spira-User-Manual/Risks-Management.md
+      - Task Tracking: Spira-User-Manual/Task-Tracking.md
+      - Resource Tracking: Spira-User-Manual/Resource-Tracking.md
+    - Reporting: Spira-User-Manual/Reports-Center.md
   - Programs: 
-    - Homepage: Spira-User-Manual\Program-Homepage.md
-    - Products: Spira-User-Manual\Program-Products.md
-    - Capabilities: Spira-User-Manual\Program-Capabilities.md
-    - Program Milestones: Spira-User-Manual\Program-Milestones.md
-    - Releases: Spira-User-Manual\Program-Releases.md
-    - Planning Board: Spira-User-Manual\Program-Planning-Board.md
-    - Incidents: Spira-User-Manual\Program-Incidents.md
-    - Reporting: Spira-User-Manual\Program-Reports.md
-  - Portfolio Homepage: Spira-User-Manual\Portfolio-Homepage.md
-  - Enterprise Homepage: Spira-User-Manual\Enterprise-Homepage.md
-  - Timesheets: Spira-User-Manual\Timesheets.md
-  - Mobile Access: Spira-User-Manual\Mobile-Access.md
-  - Keyboard Shortcuts: Spira-User-Manual\Appendix-1-Keyboard-Shortcuts.md
+    - Homepage: Spira-User-Manual/Program-Homepage.md
+    - Products: Spira-User-Manual/Program-Products.md
+    - Capabilities: Spira-User-Manual/Program-Capabilities.md
+    - Program Milestones: Spira-User-Manual/Program-Milestones.md
+    - Releases: Spira-User-Manual/Program-Releases.md
+    - Planning Board: Spira-User-Manual/Program-Planning-Board.md
+    - Incidents: Spira-User-Manual/Program-Incidents.md
+    - Reporting: Spira-User-Manual/Program-Reports.md
+  - Portfolio Homepage: Spira-User-Manual/Portfolio-Homepage.md
+  - Enterprise Homepage: Spira-User-Manual/Enterprise-Homepage.md
+  - Timesheets: Spira-User-Manual/Timesheets.md
+  - Mobile Access: Spira-User-Manual/Mobile-Access.md
+  - Keyboard Shortcuts: Spira-User-Manual/Appendix-1-Keyboard-Shortcuts.md
 - Tips and Tricks:
-  - Moving Around the Application: HowTo-Guides\Users-orientation.md
-  - Managing Your User Profile: HowTo-Guides\Users-profile-management.md
-  - Getting to Know Administration: HowTo-Guides\Admins-orientation.md
-  - Template Administration: HowTo-Guides\Admins-templates.md
-  - Permissions & Workflows: HowTo-Guides\Permissions-Workflows.md
-  - Requirements: HowTo-Guides\Requirements.md
-  - Testing: HowTo-Guides\Testing.md
-  - Login Providers (Oauth): HowTo-Guides\Login-providers.md
-  - Troubleshooting Integrations: HowTo-Guides\Integrations-Troubleshoot.md
-  - Security: HowTo-Guides\Security.md
+  - Moving Around the Application: HowTo-Guides/Users-orientation.md
+  - Managing Your User Profile: HowTo-Guides/Users-profile-management.md
+  - Getting to Know Administration: HowTo-Guides/Admins-orientation.md
+  - Template Administration: HowTo-Guides/Admins-templates.md
+  - Permissions and Workflows: HowTo-Guides/Permissions-Workflows.md
+  - Requirements: HowTo-Guides/Requirements.md
+  - Testing: HowTo-Guides/Testing.md
+  - Login Providers (Oauth): HowTo-Guides/Login-providers.md
+  - Troubleshooting Integrations: HowTo-Guides/Integrations-Troubleshoot.md
+  - Security: HowTo-Guides/Security.md
 - Quick Start Guide:
-  - Introduction: SpiraPlan-Quick-Start-Guide\index.md
-  - Plan: SpiraPlan-Quick-Start-Guide\plan.md
-  - Do the Work: SpiraPlan-Quick-Start-Guide\do-the-work.md
-  - Testing: SpiraPlan-Quick-Start-Guide\test.md
-  - Final Review: SpiraPlan-Quick-Start-Guide\review.md
+  - Introduction: SpiraPlan-Quick-Start-Guide/index.md
+  - Plan: SpiraPlan-Quick-Start-Guide/plan.md
+  - Do the Work: SpiraPlan-Quick-Start-Guide/do-the-work.md
+  - Testing: SpiraPlan-Quick-Start-Guide/test.md
+  - Final Review: SpiraPlan-Quick-Start-Guide/review.md
 - Admin Guide:
-  - How to use this guide: Spira-Administration-Guide\index.md
-  - Installing Spira: Spira-Administration-Guide\Installing-SpiraPlan.md
-  - System Administration: Spira-Administration-Guide\System-Administration.md
+  - How to use this guide: Spira-Administration-Guide/index.md
+  - Installing Spira: Spira-Administration-Guide/Installing-SpiraPlan.md
+  - System Administration: Spira-Administration-Guide/System-Administration.md
   - System:
-    - Workspaces: Spira-Administration-Guide\System-Workspaces.md
-    - System Home page: Spira-Administration-Guide\System-Home.md
-    - Users: Spira-Administration-Guide\System-Users.md
-    - System: Spira-Administration-Guide\System.md
-    - Integration: Spira-Administration-Guide\System-Integration.md
-    - Reporting: Spira-Administration-Guide\System-Reporting.md
-    - Custom Properties: Spira-Administration-Guide\System-Custom-Properties.md
+    - Workspaces: Spira-Administration-Guide/System-Workspaces.md
+    - System Home page: Spira-Administration-Guide/System-Home.md
+    - Users: Spira-Administration-Guide/System-Users.md
+    - System: Spira-Administration-Guide/System.md
+    - Integration: Spira-Administration-Guide/System-Integration.md
+    - Reporting: Spira-Administration-Guide/System-Reporting.md
+    - Custom Properties: Spira-Administration-Guide/System-Custom-Properties.md
   - Product: 
-    - Home page: Spira-Administration-Guide\Product-Home.md
-    - General Settings: Spira-Administration-Guide\Product-General-Settings.md
-    - Users: Spira-Administration-Guide\Product-Users.md
-    - Planning: Spira-Administration-Guide\Product-Planning.md
-    - Changing Templates: Spira-Administration-Guide\Product-Changing-Template.md
+    - Home page: Spira-Administration-Guide/Product-Home.md
+    - General Settings: Spira-Administration-Guide/Product-General-Settings.md
+    - Users: Spira-Administration-Guide/Product-Users.md
+    - Planning: Spira-Administration-Guide/Product-Planning.md
+    - Changing Templates: Spira-Administration-Guide/Product-Changing-Template.md
   - Template:
-    - Home page: Spira-Administration-Guide\Template-Home.md
-    - Requirements: Spira-Administration-Guide\Template-Requirements.md
-    - Releases: Spira-Administration-Guide\Template-Releases.md
-    - Documents: Spira-Administration-Guide\Template-Documents.md
-    - Test Cases: Spira-Administration-Guide\Template-Test-Cases.md
-    - Incidents: Spira-Administration-Guide\Template-Incidents.md
-    - Tasks: Spira-Administration-Guide\Template-Tasks.md
-    - Risks: Spira-Administration-Guide\Template-Risks.md
-    - Custom Properties: Spira-Administration-Guide\Template-Custom-Properties.md
-    - Notifications: Spira-Administration-Guide\Template-Notifications.md
+    - Home page: Spira-Administration-Guide/Template-Home.md
+    - Requirements: Spira-Administration-Guide/Template-Requirements.md
+    - Releases: Spira-Administration-Guide/Template-Releases.md
+    - Documents: Spira-Administration-Guide/Template-Documents.md
+    - Test Cases: Spira-Administration-Guide/Template-Test-Cases.md
+    - Incidents: Spira-Administration-Guide/Template-Incidents.md
+    - Tasks: Spira-Administration-Guide/Template-Tasks.md
+    - Risks: Spira-Administration-Guide/Template-Risks.md
+    - Custom Properties: Spira-Administration-Guide/Template-Custom-Properties.md
+    - Notifications: Spira-Administration-Guide/Template-Notifications.md
   - Program:
-    - Capabilities: Spira-Administration-Guide\Program-Capabilities.md
-    - Program Milestones: Spira-Administration-Guide\Program-Milestones.md
+    - Capabilities: Spira-Administration-Guide/Program-Capabilities.md
+    - Program Milestones: Spira-Administration-Guide/Program-Milestones.md
 - SpiraApps: 
-  - Introduction to SpiraApps: SpiraApps\index.md
-  - AWS Bedrock: SpiraApps\AWS-Bedrock.md
-  - Auto-Sprints: SpiraApps\Auto-Sprints.md 
-  - Azure OpenAI: SpiraApps\Azure-OpenAI.md
-  - BDD:  SpiraApps\BDD.md
-  - ChatGPT: SpiraApps\ChatGPT.md
-  - CircleCI: SpiraApps\CircleCI.md
-  - Conditional Lists: SpiraApps\ConditionalLists.md
-  - Confluence: SpiraApps\Confluence.md
-  - Default Descriptions: SpiraApps\Default-Descriptions.md
-  - FMEA: SpiraApps\FMEA.md
-  - GitLab: SpiraApps\GitLab.md
-  - GitHub: SpiraApps\GitHub.md
-  - My Assigned Work: SpiraApps\My-Assigned-Work.md
-  - OctoPerf: SpiraApps\OctoPerf.md
-  - Quick Tasks: SpiraApps\QuickTasks.md
-  - Requirement Multi Approvers: SpiraApps\Requirement-Multi-Approvers.md
-  - Risks+: SpiraApps\RisksPlus.md
-  - Task and Test Presets: SpiraApps\Task-Test-Presets.md
-  - Test Configurations+: SpiraApps\Test-Configuration-Plus.md
-  - Versioning: SpiraApps\Versioning.md
-  - Worx: SpiraApps\WorX.md
+  - Introduction to SpiraApps: SpiraApps/index.md
+  - AWS Bedrock: SpiraApps/AWS-Bedrock.md
+  - Auto-Sprints: SpiraApps/Auto-Sprints.md 
+  - Azure OpenAI: SpiraApps/Azure-OpenAI.md
+  - BDD:  SpiraApps/BDD.md
+  - ChatGPT: SpiraApps/ChatGPT.md
+  - CircleCI: SpiraApps/CircleCI.md
+  - Conditional Lists: SpiraApps/ConditionalLists.md
+  - Confluence: SpiraApps/Confluence.md
+  - Default Descriptions: SpiraApps/Default-Descriptions.md
+  - FMEA: SpiraApps/FMEA.md
+  - GitLab: SpiraApps/GitLab.md
+  - GitHub: SpiraApps/GitHub.md
+  - My Assigned Work: SpiraApps/My-Assigned-Work.md
+  - OctoPerf: SpiraApps/OctoPerf.md
+  - Quick Tasks: SpiraApps/QuickTasks.md
+  - Requirement Multi Approvers: SpiraApps/Requirement-Multi-Approvers.md
+  - Risks+: SpiraApps/RisksPlus.md
+  - Task and Test Presets: SpiraApps/Task-Test-Presets.md
+  - Test Configurations+: SpiraApps/Test-Configuration-Plus.md
+  - Versioning: SpiraApps/Versioning.md
+  - Worx: SpiraApps/WorX.md
 - Reporting:
-  - Introduction: Reporting\index.md
-  - Custom Reports Tutorial: Reporting\Custom-Report-Tutorial.md
-  - Custom Graph Tutorial: Reporting\Custom-Graph-Tutorial.md
-  - OData Tutorial: Reporting\OData-Tutorial.md
-  - Understanding Entity SQL: Reporting\Understanding-Entity-SQL.md
-  - Custom Report Tokens: Reporting\Custom-Reporting-Tokens.md
-  - Available Report Tables: Reporting\Custom-Report-Tables.md
+  - Introduction: Reporting/index.md
+  - Custom Reports Tutorial: Reporting/Custom-Report-Tutorial.md
+  - Custom Graph Tutorial: Reporting/Custom-Graph-Tutorial.md
+  - OData Tutorial: Reporting/OData-Tutorial.md
+  - Understanding Entity SQL: Reporting/Understanding-Entity-SQL.md
+  - Custom Report Tokens: Reporting/Custom-Reporting-Tokens.md
+  - Available Report Tables: Reporting/Custom-Report-Tables.md
 - Optional Features:
   - RemoteLaunch:
-    - Guide: RemoteLaunch-User-Guide\RemoteLaunch-Guide.md
-    - UFT/QTP: RemoteLaunch-User-Guide\HP-UFT--QTP.md
-    - TestComplete: RemoteLaunch-User-Guide\TestComplete.md
-    - Selenium: RemoteLaunch-User-Guide\Selenium.md
-    - Squish: RemoteLaunch-User-Guide\Squish.md
-    - Command-Line: RemoteLaunch-User-Guide\Command-Line.md
-    - Eggplant: RemoteLaunch-User-Guide\Eggplant.md
-    - LoadRunner: RemoteLaunch-User-Guide\LoadRunner.md
-    - SoapUI: RemoteLaunch-User-Guide\SoapUI.md
-    - FitNesse: RemoteLaunch-User-Guide\FitNesse.md
-    - NeoLoad: RemoteLaunch-User-Guide\NeoLoad.md
-    - Tosca: RemoteLaunch-User-Guide\Tosca.md
-    - JMeter: RemoteLaunch-User-Guide\JMeter.md
-    - Ranorex: RemoteLaunch-User-Guide\Ranorex.md
-    - Rational Functional Tester: RemoteLaunch-User-Guide\Rational-Functional-Tester.md
-    - WebLOAD: RemoteLaunch-User-Guide\WebLOAD.md
-    - Worksoft Certify: RemoteLaunch-User-Guide\Worksoft-Certify.md
-    - ZAPTEST: RemoteLaunch-User-Guide\ZAPTEST.md
-    - TestPartner: RemoteLaunch-User-Guide\TestPartner.md
-    - BadBoy: RemoteLaunch-User-Guide\BadBoy.md
-    - TestingAnywhere: RemoteLaunch-User-Guide\TestingAnywhere.md
-    - SmarteScript: RemoteLaunch-User-Guide\SmarteScript.md
-  - SpiraCapture: SpiraCapture\User-Guide.md
+    - Guide: RemoteLaunch-User-Guide/RemoteLaunch-Guide.md
+    - UFT/QTP: RemoteLaunch-User-Guide/HP-UFT--QTP.md
+    - TestComplete: RemoteLaunch-User-Guide/TestComplete.md
+    - Selenium: RemoteLaunch-User-Guide/Selenium.md
+    - Squish: RemoteLaunch-User-Guide/Squish.md
+    - Command-Line: RemoteLaunch-User-Guide/Command-Line.md
+    - Eggplant: RemoteLaunch-User-Guide/Eggplant.md
+    - LoadRunner: RemoteLaunch-User-Guide/LoadRunner.md
+    - SoapUI: RemoteLaunch-User-Guide/SoapUI.md
+    - FitNesse: RemoteLaunch-User-Guide/FitNesse.md
+    - NeoLoad: RemoteLaunch-User-Guide/NeoLoad.md
+    - Tosca: RemoteLaunch-User-Guide/Tosca.md
+    - JMeter: RemoteLaunch-User-Guide/JMeter.md
+    - Ranorex: RemoteLaunch-User-Guide/Ranorex.md
+    - Rational Functional Tester: RemoteLaunch-User-Guide/Rational-Functional-Tester.md
+    - WebLOAD: RemoteLaunch-User-Guide/WebLOAD.md
+    - Worksoft Certify: RemoteLaunch-User-Guide/Worksoft-Certify.md
+    - ZAPTEST: RemoteLaunch-User-Guide/ZAPTEST.md
+    - TestPartner: RemoteLaunch-User-Guide/TestPartner.md
+    - BadBoy: RemoteLaunch-User-Guide/BadBoy.md
+    - TestingAnywhere: RemoteLaunch-User-Guide/TestingAnywhere.md
+    - SmarteScript: RemoteLaunch-User-Guide/SmarteScript.md
+  - SpiraCapture: SpiraCapture/User-Guide.md
 - Integrations:
-  - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
-  - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
+  - Jira Cloud: External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md
+  - Jira Server: External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md
   - Testing:
-    - xUnit (Node.js): Unit-Testing-Integration\Integrating-with-xUnit-NodeJS.md
-    - xUnit (Python): Unit-Testing-Integration\Integrating-with-xUnit-Python.md
-    - NUnit: Unit-Testing-Integration\Integrating-with-NUnit.md
-    - JUnit: Unit-Testing-Integration\Integrating-with-JUnit.md
-    - TestNG: Unit-Testing-Integration\Integrating-with-TestNG.md
-    - Selenium: Unit-Testing-Integration\Integrating-with-Selenium.md
-    - PyUnit: Unit-Testing-Integration\Integrating-with-PyUnit.md
-    - PyTest: Unit-Testing-Integration\Integrating-with-PyTest.md
-    - MS-Test: Unit-Testing-Integration\Integrating-with-MS-Test.md
-    - 'Ruby Test::Unit': Unit-Testing-Integration\Integrating-with-Ruby-TestUnit.md
-    - Robot Framework: Unit-Testing-Integration\Integrating-with-Robot-Framework.md
-    - Perl TAP: Unit-Testing-Integration\Integrating-with-Perl-TAP.md
-    - PHPUnit: Unit-Testing-Integration\Integrating-with-PHPUnit.md
-    - UnitJS & NodeJS: Unit-Testing-Integration\Integrating-UnitJS-&-NodeJS.md
-    - Cypress: Unit-Testing-Integration\Integrating-with-Cypress.md
-    - Jasmine: Unit-Testing-Integration\Integrating-with-Jasmine.md
-    - Jest: Unit-Testing-Integration\Integrating-with-Jest.md
+    - xUnit (Node.js): Unit-Testing-Integration/Integrating-with-xUnit-NodeJS.md
+    - xUnit (Python): Unit-Testing-Integration/Integrating-with-xUnit-Python.md
+    - NUnit: Unit-Testing-Integration/Integrating-with-NUnit.md
+    - JUnit: Unit-Testing-Integration/Integrating-with-JUnit.md
+    - TestNG: Unit-Testing-Integration/Integrating-with-TestNG.md
+    - Selenium: Unit-Testing-Integration/Integrating-with-Selenium.md
+    - PyUnit: Unit-Testing-Integration/Integrating-with-PyUnit.md
+    - PyTest: Unit-Testing-Integration/Integrating-with-PyTest.md
+    - MS-Test: Unit-Testing-Integration/Integrating-with-MS-Test.md
+    - 'Ruby Test::Unit': Unit-Testing-Integration/Integrating-with-Ruby-TestUnit.md
+    - Robot Framework: Unit-Testing-Integration/Integrating-with-Robot-Framework.md
+    - Perl TAP: Unit-Testing-Integration/Integrating-with-Perl-TAP.md
+    - PHPUnit: Unit-Testing-Integration/Integrating-with-PHPUnit.md
+    - UnitJS and NodeJS: Unit-Testing-Integration/Integrating-UnitJS-&-NodeJS.md
+    - Cypress: Unit-Testing-Integration/Integrating-with-Cypress.md
+    - Jasmine: Unit-Testing-Integration/Integrating-with-Jasmine.md
+    - Jest: Unit-Testing-Integration/Integrating-with-Jest.md
     - Test Runner Excel Add-in: Unit-Testing-Integration/Using-Test-Runner-For-Excel.md
   - IDE Integration:
-    - Visual Studio Code: IDE-Integration\Visual-Studio-Code.md
-    - Visual Studio: IDE-Integration\Visual-Studio.md
-    - Jetbrains: IDE-Integration\Jetbrains-IDEs.md
-    - Eclipse: IDE-Integration\Eclipse--Mylyn.md
-    - Visual Studio 2010: IDE-Integration\Visual-Studio-2010.md
-    - Visual Studio 2005-2008: IDE-Integration\Visual-Studio-2005---2008.md
+    - Visual Studio Code: IDE-Integration/Visual-Studio-Code.md
+    - Visual Studio: IDE-Integration/Visual-Studio.md
+    - Jetbrains: IDE-Integration/Jetbrains-IDEs.md
+    - Eclipse: IDE-Integration/Eclipse--Mylyn.md
+    - Visual Studio 2010: IDE-Integration/Visual-Studio-2010.md
+    - Visual Studio 2005-2008: IDE-Integration/Visual-Studio-2005---2008.md
   - Bug Tracking/DataSync:
-    - Setup: External-Bug-Tracking-Integration\Setting-up-Data-Synchronization.md
-    - Jira Cloud: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Jira-Cloud.md
-    - Jira Server: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-5+.md
-    - Jira Spira QA Coverage: External-Bug-Tracking-Integration\Jira-Spira-QA-Coverage.md
-    - Azure DevOps: External-Bug-Tracking-Integration\Using-SpiraTest-with-MS-TFS.md
-    - Asana: External-Bug-Tracking-Integration\Using-Spira-with-Asana.md
-    - Axosoft: External-Bug-Tracking-Integration\Using-Spira-with-Axosoft-14+.md
-    - ClickUp: External-Bug-Tracking-Integration\Using-Spira-with-ClickUp.md
-    - GitHub: External-Bug-Tracking-Integration\Using-Spira-with-GitHub.md
-    - GitLab: External-Bug-Tracking-Integration\Using-Spira-with-GitLab.md
-    - monday.com: External-Bug-Tracking-Integration\Using-Spira-with-Monday.md
-    - Salesforce.com: External-Bug-Tracking-Integration\Using-Spira-with-Salesforce.com.md
-    - ServiceNow: External-Bug-Tracking-Integration\Using-Spira-with-ServiceNow.md
-    - VersionOne: External-Bug-Tracking-Integration\Using-Spira-with-VersionOne.md
-    - YouTrack: External-Bug-Tracking-Integration\Using-Spira-with-YouTrack.md
-    - Bugzilla: External-Bug-Tracking-Integration\Using-SpiraTest-with-Bugzilla.md
-    - ClearQuest: External-Bug-Tracking-Integration\Using-SpiraTeam-with-ClearQuest.md
-    - FogBugz: External-Bug-Tracking-Integration\Using-SpiraTest-with-FogBugz.md
-    - JIRA 3, 4: External-Bug-Tracking-Integration\Using-SpiraTeam-with-JIRA-3--4.md
-    - Mantis: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Mantis.md
-    - OnTime: External-Bug-Tracking-Integration\Using-Spira-with-OnTime-11.md
-    - Redmine: External-Bug-Tracking-Integration\Using-SpiraTeam-with-Redmine.md
-    - RTC: External-Bug-Tracking-Integration\Using-SpiraTeam-with-IBM-RTC.md
+    - Setup: External-Bug-Tracking-Integration/Setting-up-Data-Synchronization.md
+    - Jira Cloud: External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md
+    - Jira Server: External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md
+    - Jira Spira QA Coverage: External-Bug-Tracking-Integration/Jira-Spira-QA-Coverage.md
+    - Azure DevOps: External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md
+    - Asana: External-Bug-Tracking-Integration/Using-Spira-with-Asana.md
+    - Axosoft: External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+.md
+    - ClickUp: External-Bug-Tracking-Integration/Using-Spira-with-ClickUp.md
+    - GitHub: External-Bug-Tracking-Integration/Using-Spira-with-GitHub.md
+    - GitLab: External-Bug-Tracking-Integration/Using-Spira-with-GitLab.md
+    - monday.com: External-Bug-Tracking-Integration/Using-Spira-with-Monday.md
+    - Salesforce.com: External-Bug-Tracking-Integration/Using-Spira-with-Salesforce.com.md
+    - ServiceNow: External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow.md
+    - VersionOne: External-Bug-Tracking-Integration/Using-Spira-with-VersionOne.md
+    - YouTrack: External-Bug-Tracking-Integration/Using-Spira-with-YouTrack.md
+    - Bugzilla: External-Bug-Tracking-Integration/Using-SpiraTest-with-Bugzilla.md
+    - ClearQuest: External-Bug-Tracking-Integration/Using-SpiraTeam-with-ClearQuest.md
+    - FogBugz: External-Bug-Tracking-Integration/Using-SpiraTest-with-FogBugz.md
+    - JIRA 3, 4: External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-3--4.md
+    - Mantis: External-Bug-Tracking-Integration/Using-SpiraTeam-with-Mantis.md
+    - OnTime: External-Bug-Tracking-Integration/Using-Spira-with-OnTime-11.md
+    - Redmine: External-Bug-Tracking-Integration/Using-SpiraTeam-with-Redmine.md
+    - RTC: External-Bug-Tracking-Integration/Using-SpiraTeam-with-IBM-RTC.md
     
   - Source Code: 
-    - Git: Version-Control-Integration\Integrating-with-Git.md
-    - Subversion: Version-Control-Integration\Integrating-with-Subversion.md
-    - Mercurial: Version-Control-Integration\Integrating-with-Mercurial.md
-    - Perforce: Version-Control-Integration\Integrating-with-Perforce.md
-    - TFS: Version-Control-Integration\Integrating-with-TFS.md
-    - CVS: Version-Control-Integration\Integrating-with-CVS.md
-    - VSS: Version-Control-Integration\Integrating-with-VSS.md
-    - Tortoise: Version-Control-Integration\Integrating-with-Tortoise.md
+    - Git: Version-Control-Integration/Integrating-with-Git.md
+    - Subversion: Version-Control-Integration/Integrating-with-Subversion.md
+    - Mercurial: Version-Control-Integration/Integrating-with-Mercurial.md
+    - Perforce: Version-Control-Integration/Integrating-with-Perforce.md
+    - TFS: Version-Control-Integration/Integrating-with-TFS.md
+    - CVS: Version-Control-Integration/Integrating-with-CVS.md
+    - VSS: Version-Control-Integration/Integrating-with-VSS.md
+    - Tortoise: Version-Control-Integration/Integrating-with-Tortoise.md
   - Email:
-    - Installing: Email-Integration\Installing-the-Email-Integration-Service.md
-    - Configuring: Email-Integration\Configuring-the-Email-Integration-Service.md
-    - Using: Email-Integration\Using-the-Email-Integration-Service-with-SpiraTeam.md
+    - Installing: Email-Integration/Installing-the-Email-Integration-Service.md
+    - Configuring: Email-Integration/Configuring-the-Email-Integration-Service.md
+    - Using: Email-Integration/Using-the-Email-Integration-Service-with-SpiraTeam.md
   - Help Desk:
-    - KronoDesk: Help-Desk-Integration\KronoDesk.md
-    - Zendesk: Help-Desk-Integration\Zendesk.md
+    - KronoDesk: Help-Desk-Integration/KronoDesk.md
+    - Zendesk: Help-Desk-Integration/Zendesk.md
   - Migration: 
-    - Excel (Office 365): Migration-and-Integration\Importing-from-Microsoft-Excel-(Office365).md
-    - Google Sheets: Migration-and-Integration\Importing-from-Google-Sheets.md
-    - Word (Office 365): Migration-and-Integration\Importing-from-Microsoft-Word-(Office365).md
-    - OpenText ALM: Migration-and-Integration\Migrating-from-HP-ALM.md
-    - OpenText ALM Octane: Migration-and-Integration\Migrating-from-ALM-Octane.md
-    - Jira: Migration-and-Integration\Migrating-from-Jira.md
-    - MS Azure DevOps: Migration-and-Integration\Migrating-from-MS-Azure-DevOps.md
-    - Jama: Migration-and-Integration\Migrating-from-Jama.md
-    - qTest: Migration-and-Integration\Migrating-from-qTest.md
-    - PractiTest: Migration-and-Integration\Migrating-from-PractiTest.md
-    - TestLink: Migration-and-Integration\Migrating-from-TestLink.md
-    - TestRail: Migration-and-Integration\Migrating-from-TestRail.md
-    - QAComplete: Migration-and-Integration\Migrating-from-QAComplete.md
-    - IBM Rational Quality Manager: Migration-and-Integration\Migrating-from-IBM-Rational-Quality-Manager.md
-    - Spira Migration Tool: Migration-and-Integration\Spira-Migration-Tool.md
-    - Project Backup and Migration: Migration-and-Integration\Project-Backup-and-Migration.md
-    - Excel (Legacy): Migration-and-Integration\Importing-from-Microsoft-Excel.md
-    - Microsoft Word (Legacy): Migration-and-Integration\Importing-from-Microsoft-Word.md
-    - Microsoft Project: Migration-and-Integration\Importing-from-Microsoft-Project.md
-    - MS Test Manager (Legacy): Migration-and-Integration\Migrating-from-MS-Test-Manager.md
-    - HP QualityCenter (Legacy): Migration-and-Integration\Migrating-from-HP-QualityCenter.md
+    - Excel (Office 365): Migration-and-Integration/Importing-from-Microsoft-Excel-(Office365).md
+    - Google Sheets: Migration-and-Integration/Importing-from-Google-Sheets.md
+    - Word (Office 365): Migration-and-Integration/Importing-from-Microsoft-Word-(Office365).md
+    - OpenText ALM: Migration-and-Integration/Migrating-from-HP-ALM.md
+    - OpenText ALM Octane: Migration-and-Integration/Migrating-from-ALM-Octane.md
+    - Jira: Migration-and-Integration/Migrating-from-Jira.md
+    - MS Azure DevOps: Migration-and-Integration/Migrating-from-MS-Azure-DevOps.md
+    - Jama: Migration-and-Integration/Migrating-from-Jama.md
+    - qTest: Migration-and-Integration/Migrating-from-qTest.md
+    - PractiTest: Migration-and-Integration/Migrating-from-PractiTest.md
+    - TestLink: Migration-and-Integration/Migrating-from-TestLink.md
+    - TestRail: Migration-and-Integration/Migrating-from-TestRail.md
+    - QAComplete: Migration-and-Integration/Migrating-from-QAComplete.md
+    - IBM Rational Quality Manager: Migration-and-Integration/Migrating-from-IBM-Rational-Quality-Manager.md
+    - Spira Migration Tool: Migration-and-Integration/Spira-Migration-Tool.md
+    - Project Backup and Migration: Migration-and-Integration/Project-Backup-and-Migration.md
+    - Excel (Legacy): Migration-and-Integration/Importing-from-Microsoft-Excel.md
+    - Microsoft Word (Legacy): Migration-and-Integration/Importing-from-Microsoft-Word.md
+    - Microsoft Project: Migration-and-Integration/Importing-from-Microsoft-Project.md
+    - MS Test Manager (Legacy): Migration-and-Integration/Migrating-from-MS-Test-Manager.md
+    - HP QualityCenter (Legacy): Migration-and-Integration/Migrating-from-HP-QualityCenter.md
   - Build Servers:
-    - GitHub Actions: Build-Server-Integration\GitHub-Actions.md
-    - GitLab Pipelines: Build-Server-Integration\GitLab-Pipelines.md
-    - Azure DevOps Pipelines: Build-Server-Integration\Microsoft-Azure-DevOps-Pipelines.md
-    - AWS CodeBuild: Build-Server-Integration\AWS-CodeBuild.md
-    - Jenkins/Hudson: Build-Server-Integration\Jenkins--Hudson.md
-    - JetBrains TeamCity: Build-Server-Integration\JetBrains-TeamCity.md
-    - CircleCI Pipelines: Build-Server-Integration\CircleCI-Pipelines.md
-    - Atlassian Bamboo: Build-Server-Integration\Atlassian-Bamboo.md
+    - GitHub Actions: Build-Server-Integration/GitHub-Actions.md
+    - GitLab Pipelines: Build-Server-Integration/GitLab-Pipelines.md
+    - Azure DevOps Pipelines: Build-Server-Integration/Microsoft-Azure-DevOps-Pipelines.md
+    - AWS CodeBuild: Build-Server-Integration/AWS-CodeBuild.md
+    - Jenkins/Hudson: Build-Server-Integration/Jenkins--Hudson.md
+    - JetBrains TeamCity: Build-Server-Integration/JetBrains-TeamCity.md
+    - CircleCI Pipelines: Build-Server-Integration/CircleCI-Pipelines.md
+    - Atlassian Bamboo: Build-Server-Integration/Atlassian-Bamboo.md
   - Requirements:
-    - DOORS: Requirements-Management-Integration\Importing-From-DOORS.md
-    - EnterpriseArchitect: Requirements-Management-Integration\Importing-From-EnterpriseArchitect.md
-    - ReqIF Files: Requirements-Management-Integration\Importing-From-ReqIF-Files.md
-    - Jama Contour: Requirements-Management-Integration\Importing-From-Jama-Contour.md
-    - RequisitePro: Requirements-Management-Integration\Importing-From-RequisitePro.md
-    - VersionOne: Requirements-Management-Integration\Importing-From-VersionOne.md
+    - DOORS: Requirements-Management-Integration/Importing-From-DOORS.md
+    - EnterpriseArchitect: Requirements-Management-Integration/Importing-From-EnterpriseArchitect.md
+    - ReqIF Files: Requirements-Management-Integration/Importing-From-ReqIF-Files.md
+    - Jama Contour: Requirements-Management-Integration/Importing-From-Jama-Contour.md
+    - RequisitePro: Requirements-Management-Integration/Importing-From-RequisitePro.md
+    - VersionOne: Requirements-Management-Integration/Importing-From-VersionOne.md
 - Developers:
-    - API Overview: Developers\API-Overview.md
+    - API Overview: Developers/API-Overview.md
     - SpiraApp Development:
-      - Tutorial: Developers\SpiraApps-Tutorial.md
-      - Overview: Developers\SpiraApps-Overview.md
-      - Manifest File: Developers\SpiraApps-Manifest.md
-      - Reference: Developers\SpiraApps-Reference.md
-      - SpiraAppManager: Developers\SpiraApps-Manager.md
+      - Tutorial: Developers/SpiraApps-Tutorial.md
+      - Overview: Developers/SpiraApps-Overview.md
+      - Manifest File: Developers/SpiraApps-Manifest.md
+      - Reference: Developers/SpiraApps-Reference.md
+      - SpiraAppManager: Developers/SpiraApps-Manager.md
 - Release Notes:
   - Product Roadmap: About/roadmap.md
   - Inflectra.ai: About/release-notes-inflectra.ai-v1.md

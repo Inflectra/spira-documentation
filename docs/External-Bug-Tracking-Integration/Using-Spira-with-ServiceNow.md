@@ -42,7 +42,7 @@ You need to fill out the following fields for the ServiceNow Data Sync plugin to
 -   **SN Login**: Your ServiceNow username
 -   **SN Password**: Your ServiceNow password
 -   **Time Offset**: Set this to how many hours *ahead* UTC is, so for EDT (UTC-4), you would put in *positive* 4.
--   **Auto-Map Users**: Set to yes if you would like the plugin to map users one-to-one by checking first & last names. Set to no if you would like to map users manually.
+-   **Auto-Map Users**: Set to yes if you would like the plugin to map users one-to-one by checking first and last names. Set to no if you would like to map users manually.
 -   **Incidents Table**: The name of the table you would like to sync with incidents in Spira. This can be found in the *name* field in the table definition within ServiceNow Studio.
 -   **Incidents Project Field**: The name of the table column in ServiceNow (make sure it is a Choice field) which will decide which project an incident is created in. This can be found in ServiceNow Studio under the column name.
 -   **Requirements Table**: The name of the table you would like to sync with requirements in Spira. This can be found in the *name* field in the table definition within ServiceNow Studio. This *cannot* be the same as the "Incident Table".

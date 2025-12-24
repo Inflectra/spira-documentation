@@ -45,10 +45,10 @@ There are 3 sections to the EMail setup:
 1. Server host and login information
 1. Importing options
 
-### Email Address & Server Type
-Enter in the email address that this server will import from. This may not be the same as the username that is logged into the server. Then, select the type of email server that you will be connecting to from either POP & IMAP, GMail, or Exchange Web Services.
+### Email Address and Server Type
+Enter in the email address that this server will import from. This may not be the same as the username that is logged into the server. Then, select the type of email server that you will be connecting to from either POP and IMAP, GMail, or Exchange Web Services.
 
-#### POP3 & IMAP
+#### POP3 and IMAP
 For POP3 and IMAP servers, enter in all of the following information:
 
 1. The IP or DNS name of the server.

@@ -1,4 +1,4 @@
-# Integrating UnitJS & NodeJS
+# Integrating UnitJS and NodeJS
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 UnitJS is an assertion library for JavaScript, running on Node.js or a web browser. It works with various test runner and unit testing frameworks, including Mocha, Karma, Protractor, and QUnit.

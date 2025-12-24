@@ -82,7 +82,7 @@ When you have made your updates, you can either click "***Save***" to commit the
 ### Show / Hide Columns
 This drop-down list allows you to change the fields that are displayed in the test set list as columns for the current product. To show a column that is not already displayed, simply select that column from the list of "Show..." column names and to hide an existing column, simply select that column from the list of "Hide..." column names. This is stored on a per-product basis, so you can have different display settings for each product that you are a member of. The fields can be any of the built-in fields or any of the custom properties set up by the product owner.
 
-### Filtering & Sorting
+### Filtering and Sorting
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 ### Viewing the Test Status for a Release

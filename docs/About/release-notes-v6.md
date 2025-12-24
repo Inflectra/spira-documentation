@@ -255,7 +255,7 @@
         - **Aerospace** portfolio: Aviation and Space Platforms programs (2) and products (4)
         - **Financial Services** portfolio: Back Office and Customer Experience programs (2) and products (4)
         - **Life Sciences** portfolio: Clinical Trials and Medical Systems programs (2) and products (4)
-        - **Core Services** portfolio: Corporate Systems and Sales & Marketing programs (2) and products (4)
+        - **Core Services** portfolio: Corporate Systems and Sales and Marketing programs (2) and products (4)
 
 ??? bug "Bug fixes and enhancements"
 
@@ -1030,7 +1030,7 @@
     - Fix My Page widget "Assigned Requirements" sorting by Importance ID instead of Importance Score [IN:5362]
     - Fix program release list: filtering on some columns causes problems [IN:5336]
     - Fix release "plan effort" calculation counting Saturdays but not Mondays [IN:3979]
-    - Fix releases, Export to Project & Project Clone will hide releases until you click "show all levels" [IN:4812]
+    - Fix releases, Export to Project and Project Clone will hide releases until you click "show all levels" [IN:4812]
     - Fix Rest API documentation not explaining URL parameters for GET transitions for requirements, tasks, or test cases [IN:5361]
     - Fix saved filters not saving filters for integer or decimal fields [IN:5332]
     - Fix some test cases not opening in exploratory testing mode [IN:5412]
@@ -1040,7 +1040,7 @@
     - Improve performance by removing the last usage of a Dictionary<> used in multi-threading [IN:5450]
     - Installer: Add key in web.config for anonymous UniqueID. [IN:5546]
     - Installer: refactor tst_addl_objects.sql generatin to reduce chances of corruption and upgrade problems [IN:5473]
-    - Installer: Refine master Upgrade code for minDB & maxDB Version [IN:5119]
+    - Installer: Refine master Upgrade code for minDB and maxDB Version [IN:5119]
     - Make sure that requirement export to product function includes any use case steps [IN:5370]
     - Order links to pages in the administration menu logically not alphabetically [IN:5566]
     - Remove event log entries for non configured Oauth providers after the app pool restarts [IN:5521]
@@ -1161,7 +1161,7 @@
     - Improvements to Convert Incident to Requirement feature [RQ:2600]
     - Breadcrumbs on artifact details page are clickable so you can navigate up hierarchy for an artifact [RQ:2651]
     - Allow for urls that link to folders on a list page [RQ:2640]
-    - Can save a filter & column arrangement combination as a "view" [RQ:2642]
+    - Can save a filter and column arrangement combination as a "view" [RQ:2642]
     - The ability to update a saved filter [RQ:2652]
     - Spira 6.3 Installer Tasks [RQ:2671]
 
@@ -1172,7 +1172,7 @@
     - Admin: User Edit page could potentially show TaraVault DataGrid on Self-Hosted  [IN:5133]
     - Test set and test run custom fields using lists do not sync up correctly if multiple fields use the same list [IN:5156]
     - TaraVault product config page "Edit Users" button broken [IN:5195]
-    - Program Incidents & Releases sometimes displays object reference issue [IN:5264]
+    - Program Incidents and Releases sometimes displays object reference issue [IN:5264]
     - Null Reference thrown if Security Settings nulled out in Admin Page [IN:5268]
     - Improve performance of requirement test and task coverage calculations [IN:5294]
     - Product admins can delete shared filters from the product homepage Shared Searches widget [IN:5303]

@@ -455,7 +455,7 @@ You can determine how much time has been scheduled in the first sprint and how m
 ***
 
 
-## Assigning the Requirements & Tasks
+## Assigning the Requirements and Tasks
 
 Now that we have planned which requirements (user stories) and tasks are planned for each sprint, we can assign tasks to the appropriate developer(s). The process you follow will depend on your methodology (e.g. in Scrum the developers pick the tasks, but in Extreme Programming the product manager usually assigns tasks).
 

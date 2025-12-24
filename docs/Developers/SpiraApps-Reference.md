@@ -434,7 +434,7 @@ Setting this value will likely break user saving and SpiraApps which do so will 
 
 ### Artifact Statuses
 
-The following artifact statuses are not customizable, and as such, these lookups can be used to develop against these artifact's & their statuses. The property names are the object keys for the relevant spiraAppManager properties. 
+The following artifact statuses are not customizable, and as such, these lookups can be used to develop against these artifact's and their statuses. The property names are the object keys for the relevant spiraAppManager properties. 
 
 === "Requirement Statuses"
     Available on spiraAppManager.requirementStatuses

@@ -272,7 +272,7 @@
         - As a timesheet manager with approvals enabled, I can navigate to the enterprise level timesheets list page, so I can access the page as needed [RQ:5044]
         - As a timesheet manager with approvals enabled, I can access an enterprise level timesheet list page, so I can view all timesheets submitted for approval [RQ:5045]
         - As a timesheet manager with approvals enabled, I can view a list of all timesheets submitted for approval, so I can review relevant timesheets [RQ:5046]
-        - As a timesheet manager with approvals enabled, I can filter the list of timesheets by owner & dates using "advanced filters", to help me quickly find the data I need [RQ:5094]
+        - As a timesheet manager with approvals enabled, I can filter the list of timesheets by owner and dates using "advanced filters", to help me quickly find the data I need [RQ:5094]
         - As a timesheet manager with approvals enabled, I can sort the list of timesheets by relevant columns, to help me quickly find the data I need [RQ:5047]
         - As a timesheet manager with approvals enabled, I can export the current list of timesheets as a CSV file, to help me do more detailed analysis outside of Spira [RQ:5048]
         - As a timesheet manager with approvals enabled, I can view all details about a timesheet submitted for approval, so I can inspect each relevant timesheet [RQ:5049]
@@ -530,7 +530,7 @@
         - Add Support for Calling [AWS Bedrock](../Developers/SpiraApps-Manager.md/#aws-bedrock-api-calls) APIs from SpiraAppManager [IN:10034]
         - Fix the boolean setting for SpiraApp settings causing a database violation error for some users who upgraded to 8.3 [IN:10145]
         - Fix the SpiraAppManager.myPageIsFilterByProject [property](../Developers/SpiraApps-Manager.md/#properties) not always returning the correct value on the My Page [IN:9765]
-        - Update SpiraAppManager function(s) getDataItemField and updateFormField to handle blank data properties, to allow developers to more easily access & update the values of fields on details pages [IN:9820]
+        - Update SpiraAppManager function(s) getDataItemField and updateFormField to handle blank data properties, to allow developers to more easily access and update the values of fields on details pages [IN:9820]
     
     * **Enhancements**:
         
@@ -637,7 +637,7 @@
 
         - As a product admin, I can easily view a list of active users who are not members of a product [RQ:4810]
         - As a product admin, I can easily add, remove, or modify team and product memberships [RQ:4811]
-        - As a product admin, I can easily view, filter & sort the members of a product [RQ:4784]
+        - As a product admin, I can easily view, filter and sort the members of a product [RQ:4784]
 
 
     * **As a test set manager, I can [include test cases from other products in a test set](../Spira-User-Manual/Test-Set-Management.md/#cross-product-test-cases), and ensure my team can execute and report against those test sets accurately**
@@ -726,7 +726,7 @@
     - Add an API call that will allow Spira to track when a data sync starts running or changes status from Not Run to In Progress [IN:8629]
     - Add more value to SpiraTeam by including full support for product [risks](../Spira-User-Manual/Risks-Management.md) [IN:9421]
     - Fix the test case folder count not updating correctly when one of its subfolder is deleted [IN:7165]
-    - Fix v6 & v7 APIs to return the user's full name when getting project users (introduced in 7.13) [IN:9440]
+    - Fix v6 and v7 APIs to return the user's full name when getting project users (introduced in 7.13) [IN:9440]
     - Help admins get help or more information about a SpiraApp by showing the link of the SpiraApp on [their settings pages](../Spira-Administration-Guide/System.md/#spiraapp-settings) [IN:9416]
     - Improve SpiraApps for developers by requiring [API calls to third parties](../Developers/SpiraApps-Manager.md/#external-rest-calls) be made with reference to the guid and not the name of the SpiraApp [IN:9427]
     - Improve the SpiraApp developer experience with css nesting and [localStorage](../Developers/SpiraApps-Manager.md/#local-storage) support [IN:9417]

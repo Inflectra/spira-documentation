@@ -131,7 +131,7 @@
         - Fix the API to retrieve an associated test run [IN:9126]
         - Improve ease of understanding of a button toggled into an active state, especially while in dark mode [IN:8928]
         - Improve showing errors on user profile page, especially when trying to change a password [IN:9038]
-        - Migrating a product between templates removes history IDs for system wide lookup fields such as requirement & release statuses [IN:9112]
+        - Migrating a product between templates removes history IDs for system wide lookup fields such as requirement and release statuses [IN:9112]
         - Remove unnecessary debugging information when the installer runs for on premise customers [IN:9132]
 
 
@@ -187,7 +187,7 @@
         - As a program manager, I can view [program reporting page](../Spira-User-Manual/Program-Reports.md) widgets by the whole program or by a specific program milestone, so I can better analyze relevant data [RQ:4679]
         - As a program manager, I can view my [program home page](../Spira-User-Manual/Program-Homepage.md) by the whole program or by a specific program milestone, so I can better analyze my program [RQ:4449]
         - As a report admin, I can specify the workspace a [custom graph](../Spira-Administration-Guide/System-Reporting.md/#edit-graphs) should appear on the reporting page of, so users can see relevant graphs at the right time [RQ:4664]
-        - As a program report user, I can filter & sort custom program level reports by relevant fields, to better show me the data I need [RQ:4659]
+        - As a program report user, I can filter and sort custom program level reports by relevant fields, to better show me the data I need [RQ:4659]
         - As a program report user, I can filter the capability summary report, to help me tailor the report to my needs [RQ:4660]
         - As a program report user, I can filter the capability details report, to help me tailor the report to my needs [RQ:4661]
         - As a program report user, I can filter and sort the program milestone summary report, to help me tailor the report to my needs [RQ:4662]
@@ -705,7 +705,7 @@
 !!! info "Summary"
     [SpiraApps](../SpiraApps/index.md) bring a brand new of tailoring SpiraTest, SpiraTeam, and SpiraPlan to your needs. Dedicated SpiraApps will extend what is possible, each addressing a specific use case. This release introduces the first 7 SpiraApps and expect more to follow:
 
-    - The FMEA SpiraApp adds full support for Failure Mode & Effects Analysis (FMEA) in the Risk Management module in SpiraPlan (only - not available in SpiraTeam or SpiraTest)
+    - The FMEA SpiraApp adds full support for Failure Mode and Effects Analysis (FMEA) in the Risk Management module in SpiraPlan (only - not available in SpiraTeam or SpiraTest)
     - New SpiraApps deepen the integration with Github Actions, GitLab Pipelines, and CircleCI Pipelines. Start a new Pipeline or Action directly from SpiraPlan.
     - Two new SpiraApps let you work faster than ever. Create rich descriptions that are automatically added when you create a new artifact. And quickly create a preset list of new tasks or test cases on a requirement or a release to manage workloads better than ever.
 

@@ -388,7 +388,7 @@ You can add a comment that explains the rationale for the association and choose
     | **Program Capabilities** [^SP] | Requirements (the tab is called requirements, comments and association type not supported)                                      |
     | **Program Milestones** [^SP]   | Releases (the tab is called releases, comments and association type not supported)                                              |
 
-[^STSP]: Available in SpiraTeam & SpiraPlan
+[^STSP]: Available in SpiraTeam and SpiraPlan
 [^SP]: Available in SpiraPlan
 
 ### Rich Text Editor

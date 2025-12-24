@@ -41,9 +41,9 @@ The following properties are available from the spiraAppManager. They are useful
     - **currentTheme**: returns the current visual theme of the user. Possible values: 'light' or 'dark'.
     - **productType**: returns the product type installed (string). The value will be one of "SpiraTest", "SpiraTeam", or "SpiraPlan".
     - **gridIds**: returns an object with keys for names of each relevant grid, and values for their matching ID (object). This is useful if the SpiraApp needs to interact with a grid (for instance to refresh its data). Available grid values are shown [here](./SpiraApps-Reference.md/#available-grid-ids)
-    - **artifactNames**: an object with artifact names localized to the end user's settings. Keys are Artifact type IDs & values are the localized names. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#artifact-types)
-    - **artifactTypes**: An object with the artifact names in english as keys & the artifact type IDs as the value. This is essentially the reverse of artifactNames. 
-    - **requirementStatuses**: An object with the requirement statuses lookups - keys are the names of the statuses in english & the value is the Status ID. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#requirement-statuses) 
+    - **artifactNames**: an object with artifact names localized to the end user's settings. Keys are Artifact type IDs and values are the localized names. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#artifact-types)
+    - **artifactTypes**: An object with the artifact names in english as keys and the artifact type IDs as the value. This is essentially the reverse of artifactNames. 
+    - **requirementStatuses**: An object with the requirement statuses lookups - keys are the names of the statuses in english and the value is the Status ID. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#requirement-statuses) 
     - **releaseStatuses**: An object with release status lookups - keys are the names of the release statuses in english in camelcase. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#release-statuses)
     - **testCaseStatuses**: An object with test case status lookups - keys are the names of the test cases statuses in english in camelcase. Relevant mappings can be seen [here](./SpiraApps-Reference.md/#test-case-statuses)
 
@@ -268,7 +268,7 @@ Use the `registerEvent_menuEntryClick` function on the spiraAppManager to regist
     ```
 
 ## Events handlers
-There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page. Most have no return value & do not use any returned values from the callback, unless otherwise specified. Function signatures are meant to match TypeScript type syntax.
+There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page. Most have no return value and do not use any returned values from the callback, unless otherwise specified. Function signatures are meant to match TypeScript type syntax.
 
 === "Details Pages"
 
@@ -289,7 +289,7 @@ There are a number of events that a SpiraApp can register against. This allows S
         Registers an event handler on the details page form manager for when data is not saved correctly. 
 
         - **handler**:
-            - **PluginRestException**: Object containing an exceptionType & message property
+            - **PluginRestException**: Object containing an exceptionType and message property
     
     ??? note "registerEvent_operationReverted(handler: (statusId: number, isOpen: boolean) => void)" 
         Registers an event handler on the details page form manager for when a status change is reverted back. 
@@ -615,7 +615,7 @@ The SpiraAppManager provides a number of functions to let SpiraApps better under
     ??? note "formatCustomFieldName(propertyNumber: number)" 
         Returns the custom property field name in the form `Custom_01` for a passed in property number
 
-        - **propertyNumber**: Field # of the custom property we want the field name of (for [getDataItemField & updateFormField functions](./SpiraApps-Manager.md/#page-actions))
+        - **propertyNumber**: Field # of the custom property we want the field name of (for [getDataItemField and updateFormField functions](./SpiraApps-Manager.md/#page-actions))
     ??? note "convertHtmlToPlainText(htmlTemplate: string)" 
         Returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)
     
@@ -942,7 +942,7 @@ Do not use this for storing secure information.
 === "Best Practices"
     Always use your APP_GUID as a prefix / suffix of the local storage keys your SpiraApp uses to avoid conflicts with other SpiraApps. Define these keys as constants at the top of the JS file. 
     
-    Your SpiraApp will likely not be distributed by Inflectra if you fail to follow this rule, since it could put localStorage based functionality of Spira & other SpiraApps at risk.
+    Your SpiraApp will likely not be distributed by Inflectra if you fail to follow this rule, since it could put localStorage based functionality of Spira and other SpiraApps at risk.
 
 === "Examples"
 

@@ -41,7 +41,7 @@ You need to fill out the following fields for the GitLab Data Sync plugin to wor
 - **GitLab Login**: Your GitLab username
 - **GitLab PAT**: A GitLab personal access token with the "api" permission. You can create a new one at <https://gitlab.com/profile/personal_access_tokens>
 - **Time Offset**: This should be set to 0, but if you find that changes are not being synced, try increasing the value to tell the plugin to offset timestamps
-- **Auto-Map Users**: Set to Yes to map users one-to-one by checking first & last names. Set to no if you would like to map users manually. Please note that duplicate names in the external system will be ignored.
+- **Auto-Map Users**: Set to Yes to map users one-to-one by checking first and last names. Set to no if you would like to map users manually. Please note that duplicate names in the external system will be ignored.
 - **On-Premise URL**: For on-premise GitLab installations only, please enter the name of your server (e.g. <http://myserver>), if left blank, the data synchronization will assume you are using the cloud URL for GitLab (<https://www.gitlab.com>)
 
 Click the "Save" button.
