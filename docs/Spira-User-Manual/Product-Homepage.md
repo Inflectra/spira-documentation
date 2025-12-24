@@ -64,7 +64,7 @@ By default, the product home page shows the "General" view. The following table 
 | Task Graphs [^STSP]              | Y       | Y           |         |
 | Source Code Commits              |         | Y           |         |
 
-[^STSP]: Available in SpiraTeam & SpiraPlan
+[^STSP]: Available in SpiraTeam and SpiraPlan
 
 Please note that different widgets are shown by default for the "Developer" and for the "Tester" views.
 

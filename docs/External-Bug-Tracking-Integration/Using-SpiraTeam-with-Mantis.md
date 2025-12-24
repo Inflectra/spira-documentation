@@ -134,7 +134,7 @@ The Mantis values are in the highlighted text field. Type these into the Externa
 
 You can map multiple Spira fields to the same Mantis fields, just like the Incident Type above.
 
-c) Incident Priority & Severity
+c) Incident Priority and Severity
 
 The Incident Priority and Severity are optional fields that are linked to Mantis fields by the same name.
 

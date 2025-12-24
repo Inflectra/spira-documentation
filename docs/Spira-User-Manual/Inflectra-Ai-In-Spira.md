@@ -79,9 +79,9 @@ From the requirement details page you can generate the following content:
 | Generated Content | Description                                                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Test Cases        | Creates a set of test cases with steps to cover this requirement, to get a head start on test planning                                           |
-| Task              | Creates a set of work tasks needed to deliver the functionality in this requirement (SpiraTeam and SpiraPlan only)                               |
+| Task [^STSP]      | Creates a set of work tasks needed to deliver the functionality in this requirement                                                              |
 | Scenarios         | Generates BDD scenarios for this requirement, to represent the requirement as defined behaviors (available if the requirement type allows steps) |
-| Risks             | Identifies any risks that may impact the deployment or development of this functionality (SpiraTeam and SpiraPlan only)                          |
+| Risks [^STSP]     | Identifies any risks that may impact the deployment or development of this functionality                                                         |
 
 When generating content for a requirement, the following information is provided to Inflectra.ai:
 
@@ -98,12 +98,12 @@ From the requirement details page you can analyze the requirement to see how wel
 The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.
 
 
-| Analytical framework | Description                                                                                                                                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                                                   |
-| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                                                 |
-| ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                                                           |
-| ... Task             | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement (SpiraTeam and SpiraPlan only) |
+| Analytical framework | Description                                                                                                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| EARS                 | Provides an analysis of the requirement based on the EARS ruleset                                                                                                                    |
+| ... Improve          | Use the current analysis to improve the requirement's description (for scores between 2 and 4 only)                                                                                  |
+| ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                            |
+| ... Task [^STSP]     | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement |
 
 #### EARS Analysis
 !!! info "EARS"
@@ -221,9 +221,9 @@ From the requirements list page (both the hierarchical and sortable pages) you c
 | Generated Content  | Description                                                                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Test Cases         | Creates a set of test cases with steps to cover each requirement, to get a head start on test planning                                                 |
-| Task               | Creates a set of work tasks needed to deliver the functionality in each requirement (SpiraTeam and SpiraPlan only)                                     |
+| Task [^STSP]       | Creates a set of work tasks needed to deliver the functionality in each requirement                                                                    |
 | Scenarios          | Generates BDD scenarios for each requirement, to represent the requirements as defined behaviors (available if the requirement type allows steps)      |
-| Risks              | Identifies any risks that may impact the deployment or development of each requirement's functionality (SpiraTeam and SpiraPlan only)                  |
+| Risks [^STSP]      | Identifies any risks that may impact the deployment or development of each requirement's functionality                                                 |
 | Child requirements | Generates child requirements for each selected requirement, to split them up into distinct user stories (available on the hierarchical list page only) |
 
 When generating content for a requirement on the list page, the following information is provided to Inflectra.ai:
@@ -235,17 +235,27 @@ When generating content for a requirement on the list page, the following inform
 - The product name of the product the requirement is in
 
 ## My Page
-
 !!! warning "This functionality is only available for System Administrators"
 
-From the My Page, system administrators can create a new product & have a base set of requirements generated based on the product name & description. They can follow that up with creating child requirements, test coverage, tasks, and identifying risks. This way users can build out an entire POC in minutes! Users must create child requirements before choosing the other options if they want them to be covered.
+From the My Page, system administrators can quickly generate a new product with a rich set of artifacts, by providing a name and description. The product is created with its own template, along with a high level set of requirements. You can then optionally use AI to generate more artifacts to fill out the product and speed up delivery. This way users can build out an entire product skeleton in a few minutes.
+
+Optional artifacts are below and can be created in any order:
+
+- Child requirements, to give more detail and depth (create these first if you want the other artifacts to be generated for these requirements too)
+- Test cases, to provide test coverage to the requirements
+- Risk, connected to each requirement
+- Tasks, to carry out the work of each requirement
 
 ![](img/Inflectra_ai_my_page.webp) 
 
-| Generated Content  | Description                                                                                                                                            |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Product & Root level Requirements | Creates a product using a provided name and description, then generates root level requirements based on those values to help you get started on a new project |
-| ... Child requirements | Generates child requirements for each root level requirement, to split them up into distinct user stories                                                   |
-| ... Test Cases       | Creates a set of test cases with steps to cover each requirement, including any new child requirements, to get a head start on test planning                                           |
-| ... Tasks       | Creates a set of work tasks needed to deliver the functionality in each requirement, including any new child requirements. (SpiraTeam and SpiraPlan only)                                           |
-| ... Risks       | Identifies any risks that may impact the deployment or development of each requirement's functionality, including any new child requirements. (SpiraTeam and SpiraPlan only)                                           |
+| Generated Content                   | Description                                                                                                                                  |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Product and Root level Requirements | Creates a product using a provided name and description, then generates root level requirements to help you get started                      |
+| ... Child requirements              | Generates child requirements for each root level requirement, to split them up into distinct user stories                                    |
+| ... Test Cases                      | Creates a set of test cases with steps to cover each requirement, including any new child requirements, to get a head start on test planning |
+| ... Risks [^STSP]                   | Identifies risks that may impact the deployment or development of each requirement, including any new child requirements                     |
+| ... Tasks [^STSP]                   | Creates a set of work tasks needed to deliver the functionality in each requirement, including any new child requirements                    |
+
+
+[^STSP]: Available in SpiraTeam and SpiraPlan
+[^SP]: Available in SpiraPlan

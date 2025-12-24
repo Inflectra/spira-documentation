@@ -15,7 +15,7 @@
     - Sorting of test run sections in reports incorrect [IN:4638]
     - Edit button appears on some association tabs where it should not. [IN:4640]
     - Allow Source Code Sidebar to be Expandable [IN:4649]
-    - Parameters Pop-up Window Can;t be Dragged & Dropped [IN:4650]
+    - Parameters Pop-up Window Can't be Dragged and Dropped [IN:4650]
     - Test execution page jitters and shakes at specific screen and page height combinations [IN:4651]
     - Ability to require users to change password at certain intervals [RQ:35]
     - Improvements to TaraVault [RQ:2170]
@@ -25,7 +25,7 @@
 !!! info "Summary"
     [New Agile Task and Incident Boards](https://www.inflectra.com/Ideas/Entry/spotlight-on-spirateam-54--new-agile-task-and-inci-569.aspx)
 
-    [Program View of Releases & Incidents (SpiraPlan)](https://www.inflectra.com/Ideas/Entry/spotlight-on-spiraplan-54--program-view-of-release-571.aspx)
+    [Program View of Releases and Incidents (SpiraPlan)](https://www.inflectra.com/Ideas/Entry/spotlight-on-spiraplan-54--program-view-of-release-571.aspx)
 
     [Graphing Enhancements and Custom Graphs](https://www.inflectra.com/Ideas/Entry/spotlight-on-spirateam-54--graphing-enhancements-a-568.aspx) 
 

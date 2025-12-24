@@ -31,7 +31,7 @@ Complete the form on this page as below:
 -   **Active**: If checked, the plug-in is active and able to be used for any project.
 -   **Connection Info**: This field holds the root of the repository for any project accessing the plug-in, unless overridden in the Project Settings. Start the connection string with **svn://**, **http://**, or **https://**.
 -   **Login / Password**: The user id and the password of the user to use while accessing and retrieving information from the Subversion server.
--   **Domain & Custom 05:** are not used by the plug-in and will be ignored.
+-   **Domain and Custom 05:** are not used by the plug-in and will be ignored.
 -   **Custom 01**: This field is used for debugging. Please leave it blank unless specified by support.
 -   **Custom 02-04:** These three fields are used to specify the **standard Subversion** layout, where there are specific folders for the Trunk, Branches and Tags. If you want to use the Branches feature in Spira, you need to populate all three fields.
 

@@ -22,7 +22,7 @@ When creating an app registration you should:
 6. Once the app registration has been completed you will be taken to the App Registration Overview screen for this app. 
 7. You will need to enter the "Application (Client) ID" into Spira as your Client ID
 8. By default, the permissions of the app include Microsoft Graph > User.Read. This is the only required permission by Spira
-9. To generate the secret key for Spira go to "Certificates & Secrets" and create a "New Client Secret"
+9. To generate the secret key for Spira go to "Certificates and Secrets" and create a "New Client Secret"
     - Give it a name
     - Set an expiry
     - Make sure to copy and safely store the generated secret as once it is created you will not be able to retrieve it again

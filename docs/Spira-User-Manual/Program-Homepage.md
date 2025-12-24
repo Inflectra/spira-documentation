@@ -58,7 +58,7 @@ By default, the program home page shows the "General" view. The following table 
 
 [^SP]: Available in SpiraPlan
 
-[^STSP]: Available in SpiraTeam & SpiraPlan
+[^STSP]: Available in SpiraTeam and SpiraPlan
 
 ## Program Overview
 This section displays the name of the program, together with a brief description, the web-site that points to any additional information about the program, and the names of the owners of the program. In SpiraPlan, if the program is part of a portfolio, the portfolio name is also shown.

@@ -364,7 +364,7 @@ The lower part of the right pane has a number of tabs, described separately belo
 
 - Overview
 - Incidents
-- Reqs & Tasks
+- Reqs and Tasks
 - Test Cases
 - Test Runs
 - Attachments
@@ -441,7 +441,7 @@ You can **filter** the results by choosing items from the filter options display
 **Show/Hide Columns**: Allows you to choose which incident columns are visible
 
 
-### Reqs & Tasks
+### Reqs and Tasks
 
 This tab displays the list of requirements (excluding parent requirements - in other words it displays 'user stories') and their associated child tasks that need to be completed for the release/sprint to be completed:
 

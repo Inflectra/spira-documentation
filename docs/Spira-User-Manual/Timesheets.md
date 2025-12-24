@@ -21,7 +21,7 @@ When you load the My Timesheet page, the page will have the following parts:
 - **Navigation buttons**: these let you navigate backward or forward to see previously saved timesheets. Each button is disabled if there are no earlier/later timesheets to navigate to.
 - **Artifact dropdown**: this lists all the incidents and tasks you own across all active products you are a member of.
 - **Timesheet data range**: a heading showing the start and end date of the current timesheet. Click on it to bring up a datepicker. Selecting a date will navigate you to the timesheet for that relevant period. If there is no timesheet for that date then a new timesheet is automatically created.
-- **Timesheet status & submit**: when [timesheet approvals](#my-timesheet-approvals) is enabled, you can see the status of the current timesheet.
+- **Timesheet status and submit**: when [timesheet approvals](#my-timesheet-approvals) is enabled, you can see the status of the current timesheet.
     {: .edition-spiraplan}
 - **Timesheet grid**: a table for viewing and recording timesheet entries for each day of the timesheet. Each time you load the page it will start by showing the current week's timesheet.
 

@@ -121,7 +121,7 @@ This drop-down list allows you to change the fields that are displayed in the te
 Note: If you hide the 'execution status' column, the test case folders will no longer show the count of test cases contained within the folder.
 
 
-### Filtering & Sorting
+### Filtering and Sorting
 Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 
 

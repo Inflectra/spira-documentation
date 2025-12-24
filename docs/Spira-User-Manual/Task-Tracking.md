@@ -88,7 +88,7 @@ To move a task / tasks between folders, click and drag the relevant task/tasks f
 [^folder-url]: when navigating to folders (for all artifacts that support them), the URL in your browser's address bar will change. Each folder has a unique, sharable URL that you can give to someone to display the list of artifacts with the appropriate folder selected. You can also open up multiple folders in different browser tabs and easily toggle between them from the same browser.
 
 ### Actions
-- **Filtering & Sorting**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
+- **Filtering and Sorting**: Read about [how to create and manage filters, and how to sort the artifact list](Application-Wide.md#filtering).
 {: #filtering-sorting}
 - **New Task**: Clicking on the "***New Task***" button creates a new task in the grid with an initial set of information. You can click on the name of the task to edit its information.
 {: #new-task}

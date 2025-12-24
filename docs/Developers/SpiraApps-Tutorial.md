@@ -147,7 +147,7 @@ Now that you have installed your SpiraApp:
 
 As soon as the page loads, the SpiraApp code will run and you should see a popup message with the name and description (as raw HTML) of the requirement. It should look something like this:
 
-![Popup on requirement details page with the requirement name and description](img\tutorial-requirement-popup.png)
+![Popup on requirement details page with the requirement name and description](img/tutorial-requirement-popup.png)
 
 ## Add more functionality
 ## Details Page Automation
@@ -447,7 +447,7 @@ Install the latest version of the SpiraApp so we can then go through each part o
 
 - **Test the requirement list page column**. You should see an extra column on the right side that has the title "Number". Each entry should contain the current project id and the requirement id for each requirement in the list. 
 
-![Number column between ID and Edit with several requirement rows](img\tutorial_column_test.png)
+![Number column between ID and Edit with several requirement rows](img/tutorial_column_test.png)
 
 - **Test opening a requirement** 
 
@@ -462,7 +462,7 @@ Install the latest version of the SpiraApp so we can then go through each part o
     - Now click "Follow Link" 
     - The page you listed in your product settings should now open. 
 
-![Top menu of requirements page including Tools, Email, Subscribe, and then Quick Links](img\tutorial-requirement-button.png)
+![Top menu of requirements page including Tools, Email, Subscribe, and then Quick Links](img/tutorial-requirement-button.png)
 
 - **Test text replacement**
 
@@ -479,9 +479,9 @@ Install the latest version of the SpiraApp so we can then go through each part o
     - You should see the latest incident listed in the widget
     - Click the name of the incident to open it's details page
 
-![Add/Remove items screen with three highlighted items: "SpiraApp Widgets (1)" and then "Latest Incident" checkbox, and then "Add" button](img\tutorial-addwidget.png)
+![Add/Remove items screen with three highlighted items: "SpiraApp Widgets (1)" and then "Latest Incident" checkbox, and then "Add" button](img/tutorial-addwidget.png)
 
-![Widget with title "Latest Incident" containing a grid with Headers: "Name", "Type", "Created By", and "Date Created". The grid contains a single row with data: (incident icon) "Add a widget to tutorial app", "Enhancement", blank field, and "6/26/2024"](img\tutorial-widget-incident.png)
+![Widget with title "Latest Incident" containing a grid with Headers: "Name", "Type", "Created By", and "Date Created". The grid contains a single row with data: (incident icon) "Add a widget to tutorial app", "Enhancement", blank field, and "6/26/2024"](img/tutorial-widget-incident.png)
 
 !!! success "Congratulations"
     Congratulations on completing this SpiraApp tutorial. We hope you found it useful and that you are now confident and excited to create your own SpiraApp. 

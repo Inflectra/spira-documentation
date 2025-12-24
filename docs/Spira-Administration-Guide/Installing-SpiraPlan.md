@@ -19,7 +19,7 @@ The minimum hardware and software requirements for running the Spira system are:
 | **Requirement**         | **Minimum Specification**                                                                       |
 | **Processor:**          | Intel® or AMD® x86 or x64 compatible processor                                                  |
 | **Memory:**             | 4 GB, 8 GB recommended                                                                          |
-| **Operating System:**   | Windows Server 2016+ (recommended) <br>Windows Server 2012 R1 & R2 <br>Windows 10 (for demoing) |
+| **Operating System:**   | Windows Server 2016+ (recommended) <br>Windows Server 2012 R1 and R2 <br>Windows 10 (for demoing) |
 | **Database:**           | Microsoft SQL Server 2016+<br> Microsoft SQL Server 2016+ Express Edition*                      |
 | **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher   |
 

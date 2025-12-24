@@ -28,7 +28,7 @@ You will need TeamCity administrator privileges to access this configuration pag
 
 Once it has connected successfully, your connection settings will be saved. In case of error, follow the instructions on-screen and try again.
 
-After setting the global configurations appropriately, you will need to enable the notifications in TeamCity. To do this, go to *My Settings & Tools,* that can be accessed through clicking your TeamCity username (top right). Once there, click on the *Notification Rules* section, find the *Spira Notifier for TeamCity* section, and click its hyperlink:
+After setting the global configurations appropriately, you will need to enable the notifications in TeamCity. To do this, go to *My Settings and Tools,* that can be accessed through clicking your TeamCity username (top right). Once there, click on the *Notification Rules* section, find the *Spira Notifier for TeamCity* section, and click its hyperlink:
 
 ![Figure09](img/JetBrains_TeamCity_23.jpeg)
 

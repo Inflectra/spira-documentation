@@ -43,7 +43,7 @@ There are two options related to the instant messenger beneath the user's avatar
 
 Tabs along the bottom will show assigned requirements and tasks, incidents, test cases, test sets and recent actions. The views for each item are a subset of available columns, to show progress and completion information for all items listed. Clicking on an artifact's name will take you to the artifact details page. The data in all of these tabs can be filtered by all releases, by a release and its children, or by a specific sprint.
 
-### Reqs & Tasks
+### Reqs and Tasks
 This tab displays the list of requirements and child tasks that are assigned to the current resource:
 
 ![](img/Resource_Tracking_314.png)

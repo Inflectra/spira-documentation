@@ -35,7 +35,7 @@ Fill out this configuration page as follows:
 - **Connection Info**: The base URL of your YouTrack application. It is usually like *https://companyName.myjetbrains.com/*
 - **Login**: the *username* of the YouTrack user you will be using for the data sync.
 - **Password**: YouTrack uses tokens to authenticate remote connections, so you can leave this field blank.
-- **Auto-Map Users**: Set to Yes to map users one-to-one by checking first & last names, since YouTrack does not support manual mapping. Please note that duplicate names in the external system will be ignored.
+- **Auto-Map Users**: Set to Yes to map users one-to-one by checking first and last names, since YouTrack does not support manual mapping. Please note that duplicate names in the external system will be ignored.
 - **Custom 01**: The YouTrack userToken you got following the instructions of the session "Configuring YouTrack" above.
 - **Custom 02**: Optional. If you want to separate the YouTrack *issues* between *incidents* and *tasks* in Spira, you need to populate this field with the YouTrack issue types that will be synced as tasks, comma-separated. For example:
 "Task,Epic" (see image below). Left this field blank to export all the YouTrack *issues* as *incidents* in Spira.

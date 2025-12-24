@@ -33,7 +33,7 @@ The Planning Options page lets you configure the schedule and calendar options f
     {: .edition-spiraplan .edition-spirateam}
 - **Use Test Status** - When this option is enabled, if you associate any test cases to a requirement, the status of the requirement will be automatically switched from "Developed" to "Tested" when all the associated test cases are passed.
 
-### Task & Incidents
+### Task and Incidents
 ![](img/Product_Planning_TasksIncidents.png)
 
 - **Default Effort**: Normally when you create a new Task in the system it will be given an empty initial estimated effort. However if many tasks are typically a standard size, then as a time-saver, the system will let you specify a default estimated effort that will be used when a new task is created.
