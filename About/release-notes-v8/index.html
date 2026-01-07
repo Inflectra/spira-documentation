@@ -3815,6 +3815,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#version-816-january-2026">
+<span class="md-ellipsis">
+      
+        Version 8.16 (January 2026)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-815-november-2025">
 <span class="md-ellipsis">
       
@@ -4143,6 +4152,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#version-816-january-2026">
+<span class="md-ellipsis">
+      
+        Version 8.16 (January 2026)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-815-november-2025">
 <span class="md-ellipsis">
       
@@ -4312,6 +4330,35 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">¶</a></h1>
+<h2 id="version-816-january-2026">Version 8.16 (January 2026)<a class="headerlink" href="#version-816-january-2026" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>Previously enabling Inflectra.ai for a product had to be done manually. Now, this can be automated using a dedicated API endpoint.</p>
+<p>Large instances allow multi-session-login for each user, however this was not always desirable, so now system administrators can turn it off. </p>
+<p>Numerous bug fixes, including to improve accessibility.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>Add Ability to turn on <a href="../../Spira-User-Manual/Inflectra-Ai-In-Spira/">Inflectra.ai</a> for a product via API [IN:11900]</li>
+<li>Add a <a href="../../Spira-Administration-Guide/System/#security-settings">Session Concurrency Control option</a> for sites allowing multiple logins per user to enforcement single session use [IN:11754]</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add meaningful descriptions to all sample data portfolios, programs, products, program level artifacts, and product level artifacts [IN:9027] [IN:9430] [IN:11877]</li>
+<li>Fix <a href="../../Spira-User-Manual/Test-Execution/#exploratory-test-execution">exploratory test execution page</a> hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]</li>
+<li>Fix <a href="../../Spira-User-Manual/Requirements-Management/#requirements-list">Requirement tree grid</a> failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]</li>
+<li>Fix <a href="../../Spira-User-Manual/Product-Homepage/#product-overview">rich text overview widgets</a> displaying raw HTML tags [IN:11835]</li>
+<li>Fix save button not being enabled when artifact selector controls change their values, such as the <a href="../../Spira-User-Manual/Test-Run-Management/#test-run-details">Test Run "Test Set"</a> field and <a href="../../Spira-User-Manual/Task-Tracking/#task-details">Task "Requirement"</a> field [IN:11797]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Application-Wide/#emailing">Email Addresses</a> field description when listing multiple recipients to use comma and semicolon [IN:10577]</li>
+<li>Fix the <a href="../../Reporting/Custom-Report-Tables/#projects-products">Products</a> custom report view to use a dynamic check for Inflectra.ai being enabled or not and never showing blank [IN:11841]</li>
+<li>Improve scrolling of the left hand sidebar of <a href="../../Spira-User-Manual/Application-Wide/#artifact-list-pages">list pages</a>, to let the user scroll the sidebar directly, separately from the page [IN:11635]</li>
+<li>Make the tooltips for <a href="../../Spira-User-Manual/Test-Execution/#leaving-the-test-execution-page">test execution buttons for leaving and finishing the test</a> more informative [IN:11492]</li>
+<li>Update automated test run record-multiple API endpoint to skip execution status refreshes to improve performance of large test run recording volumes [IN:11518]</li>
+</ul>
+</details>
 <h2 id="version-815-november-2025">Version 8.15 (November 2025)<a class="headerlink" href="#version-815-november-2025" title="Permanent link">¶</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
@@ -4336,7 +4383,7 @@
 <li>Create a system history event when a system admin unlocks a locked out user [IN:11752]</li>
 <li class="edition-spiratest edition-spirateam">Fix showing a system error when attempting to filter the program list [IN:7569]</li>
 <li>Fix <a href="../../Spira-User-Manual/Test-Set-Management/#exporting-a-test-set-to-a-different-product">exporting a test set to another product</a> so that it also exports tags for both the test set and its test cases [IN:11449]</li>
-<li>Improve instructions on the <a href="../../Spira-User-Manual/Application-Wide/#electronic-signatures">electronic signature popup</a> to make it clear users can input either their password or RSS token [IN:11121</li>
+<li>Improve instructions on the <a href="../../Spira-User-Manual/Application-Wide/#electronic-signatures">electronic signature popup</a> to make it clear users can input either their password or RSS token [IN:11121]</li>
 <li>Improve responsiveness for cloud trial users of SpiraTest by ensuring the server app-pool is kept alive [IN:11575]</li>
 <li>Make it harder to accidentally delete a datasync plugin and all its mappings by making users interact with a extra confirmation dialog [IN:11760]</li>
 <li>Improve how a locked out user is <a href="../../Spira-Administration-Guide/System-Users/#edit-an-existing-user">unlocked by a system admin</a>, so that the user can immediately log back in again after being unlocked [IN:11571]</li>

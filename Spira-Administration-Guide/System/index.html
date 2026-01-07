@@ -4333,6 +4333,7 @@ need to reinstall Spira. All you need to do is change the <strong>organization</
 </ul>
 </div>
 <ul>
+<li><strong>Concurrency Control</strong>: If enabled, users will not be able to login with the same user in multiple browsers at once (by default this is off to give users more flexibility). This setting is only visible for enterprise licenses or concurrent user licenses with 50 or more users.</li>
 <li><strong>Authentication Expiration</strong>: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity when they login without choosing the 'Keep Me Logged-In' option.</li>
 <li><strong>Keep Me Logged-In Expiration</strong>: This specifies the amount of time (in minutes - minimum of 2) after which a user will be logged out due to inactivity if they have chosen to login with the 'Keep Me Logged-In' option. This should normally be longer than the previous setting.</li>
 <li><strong>Allowed Domains</strong>: This should contain the list of other web domains that are allowed to make CORS (cross-origin) REST API calls to this instance. You can specify a comma separated list of base URLs (e.g. <a href="https://www.domain1.com">https://www.domain1.com</a>, <a href="http://www.domain2.com">http://www.domain2.com</a>) or an asterisk (*) to denote all domains are allowed (not recommended).</li>
