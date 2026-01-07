@@ -1,5 +1,29 @@
 # Release Notes for Spira v8
 
+## Version 8.16 (January 2026)
+!!! info "Summary"
+    Previously enabling Inflectra.ai for a product had to be done manually. Now, this can be automated using a dedicated API endpoint.
+
+    Large instances allow multi-session-login for each user, however this was not always desirable, so now system administrators can turn it off. 
+
+    Numerous bug fixes, including to improve accessibility.
+
+??? success "New Features"
+    - Add Ability to turn on [Inflectra.ai](../Spira-User-Manual/Inflectra-Ai-In-Spira.md) for a product via API [IN:11900]
+    - Add a [Session Concurrency Control option](../Spira-Administration-Guide/System.md/#security-settings) for sites allowing multiple logins per user to enforcement single session use [IN:11754]
+
+??? bug "Bug fixes and enhancements"
+    - Add meaningful descriptions to all sample data portfolios, programs, products, program level artifacts, and product level artifacts [IN:9027] [IN:9430] [IN:11877]
+    - Fix [exploratory test execution page](../Spira-User-Manual/Test-Execution.md/#exploratory-test-execution) hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]
+    - Fix [Requirement tree grid](../Spira-User-Manual/Requirements-Management.md/#requirements-list) failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]
+    - Fix [rich text overview widgets](../Spira-User-Manual/Product-Homepage.md/#product-overview) displaying raw HTML tags [IN:11835]
+    - Fix save button not being enabled when artifact selector controls change their values, such as the [Test Run "Test Set"](../Spira-User-Manual/Test-Run-Management.md/#test-run-details) field and [Task "Requirement"](../Spira-User-Manual/Task-Tracking.md/#task-details) field [IN:11797]
+    - Fix the [Email Addresses](../Spira-User-Manual/Application-Wide.md/#emailing) field description when listing multiple recipients to use comma and semicolon [IN:10577]
+    - Fix the [Products](../Reporting/Custom-Report-Tables.md/#projects-products) custom report view to use a dynamic check for Inflectra.ai being enabled or not and never showing blank [IN:11841]
+    - Improve scrolling of the left hand sidebar of [list pages](../Spira-User-Manual/Application-Wide.md/#artifact-list-pages), to let the user scroll the sidebar directly, separately from the page [IN:11635]
+    - Make the tooltips for [test execution buttons for leaving and finishing the test](../Spira-User-Manual/Test-Execution.md/#leaving-the-test-execution-page) more informative [IN:11492]
+    - Update automated test run record-multiple API endpoint to skip execution status refreshes to improve performance of large test run recording volumes [IN:11518]
+
 ## Version 8.15 (November 2025)
 !!! info "Summary"
     Administrators can set the default views for new users for the My Page, product home pages, and the product reporting page.
@@ -20,7 +44,7 @@
     - Fix showing a system error when attempting to filter the program list [IN:7569]
         {: .edition-spiratest .edition-spirateam}
     - Fix [exporting a test set to another product](../Spira-User-Manual/Test-Set-Management.md/#exporting-a-test-set-to-a-different-product) so that it also exports tags for both the test set and its test cases [IN:11449]
-    - Improve instructions on the [electronic signature popup](../Spira-User-Manual/Application-Wide.md/#electronic-signatures) to make it clear users can input either their password or RSS token [IN:11121
+    - Improve instructions on the [electronic signature popup](../Spira-User-Manual/Application-Wide.md/#electronic-signatures) to make it clear users can input either their password or RSS token [IN:11121]
     - Improve responsiveness for cloud trial users of SpiraTest by ensuring the server app-pool is kept alive [IN:11575]
     - Make it harder to accidentally delete a datasync plugin and all its mappings by making users interact with a extra confirmation dialog [IN:11760]
     - Improve how a locked out user is [unlocked by a system admin](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that the user can immediately log back in again after being unlocked [IN:11571]
