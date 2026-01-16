@@ -59,6 +59,10 @@ Once you have a Spira user that authenticates with the provider, to log in to Sp
 
 
 ## My Page
+
+!!! tip "Inflectra.ai"
+    This page has [AI functionality](./Inflectra-Ai-In-Spira.md/#requirement-details-page), available to all cloud customers with an active Inflectra.ai subscription.
+
 When you log in, you will go to your personalized "My Page". The very first time you log in you will also be asked if you want to take a quick orientation tour of the application (which will look similar to the screenshot below).
 
 ![](img/UserProduct_Management_38.png)

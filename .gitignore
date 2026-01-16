@@ -3,5 +3,5 @@ site/
 *.pyc
 lib/
 Scripts/
-venv/
+.venv/
 .DS_STORE
