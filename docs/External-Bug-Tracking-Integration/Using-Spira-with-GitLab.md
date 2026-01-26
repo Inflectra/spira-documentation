@@ -1,9 +1,36 @@
 # Using Spira with GitLab
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-GitLab's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. 
+## Overview
+Teams can work seamlessly using both Spira and GitLab, using Inflectra's GitLab data sync engine to keep key information in sync between both applications.
 
-You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on).
+!!! example "Real world example"
+    - The QA team uses Spira for requirements and test management.
+    - When the QA team finds bugs during testing incidents are created in Spira, and then sync to GitLab
+    - The Dev team manages issues and merge requests in GitLab, with changes reflected back in Spira
+    
+**This datasync can sync the follow information**:
+
+| GitLab artifact | Spira artifact |
+| --------------- | -------------- |
+| Project         | Product        |
+| Users           | Users          |
+| Milestones      | Releases       |
+| Issues          | Incidents      |
+| Notes           | Comments       |
+
+**The table below shows a summary of how data is synced from/to Spira and GitLab**:
+
+| Artifact           | Type of Change | What syncs                                              |
+| ------------------ | -------------- | ------------------------------------------------------- |
+| **releases**       | new            | GitLab :fontawesome-solid-arrow-right-arrow-left: Spira |
+| **incidents**      | new            | GitLab :fontawesome-solid-arrow-right-arrow-left: Spira |
+|                    | updates        | GitLab :fontawesome-solid-arrow-right-arrow-left: Spira |
+| **merge requests** | new            | GitLab :fontawesome-solid-arrow-right: Spira            |
+|                    | updates        | GitLab :fontawesome-solid-arrow-right: Spira            |
+
+
+Note that code and commits can also sync to Spira (read only). This is handled by our [Git](../Version-Control-Integration/Integrating-with-Git.md) integration.
 
 !!! danger "Set up data synchronization"     
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
@@ -43,6 +70,7 @@ You need to fill out the following fields for the GitLab Data Sync plugin to wor
 - **Time Offset**: This should be set to 0, but if you find that changes are not being synced, try increasing the value to tell the plugin to offset timestamps
 - **Auto-Map Users**: Set to Yes to map users one-to-one by checking first and last names. Set to no if you would like to map users manually. Please note that duplicate names in the external system will be ignored.
 - **On-Premise URL**: For on-premise GitLab installations only, please enter the name of your server (e.g. <http://myserver>), if left blank, the data synchronization will assume you are using the cloud URL for GitLab (<https://www.gitlab.com>)
+- **Artifact Selection**: Enter the names of artifacts you wish to sync to and from GitLab as a comma separated list. The options are `issues`, `mergerequests`, and `milestones` (Typed as shown here). If this is left blank, issues and milestones are synced. Milestones cannot be synced alone - they must be paired with issues and/or merge requests. 
 
 Click the "Save" button.
 
@@ -103,4 +131,35 @@ In addition to the standard fields and custom properties, you will see an additi
 Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.
 
 Congratulations, you have just integrated your Spira instance with GitLab's integrated issue tracker!
+
+
+## Syncing Merge Requests
+!!! danger "Set Up GitLab As A Source Code Provider"
+    **If you do not [set up GitLab as a source code provider](../Version-Control-Integration/Integrating-with-Git.md) merge request syncing will not work. Once the source code integration is set up, merge request syncing will work after the cache in Spira has been initialized.**
+
+To sync merge requests, the GitLab repository that is being synced must be connected to the same product both as an issue tracker (as outlined in this guide) and as a source code provider. Merge requests are synced from GitLab into Spira only. 
+
+### Additional Product and Template Configuration
+Syncing merge requests has additional requirements in terms of product mappings and product template configuration for this feature to work. If you are not syncing merge requests, you do not need to do this additional setup.
+
+### Task Types
+To properly sync merge requests, there must be at least one task type with "Pull Request?" set to Yes in the template for the product(s) you are syncing. If there are multiple, the type which is the nearest to the top of the list will be selected by the data sync. 
+
+![](img/gitlab_merge_request_1.png)
+
+### Task Status Mappings
+In task status mappings, there are 4 possible statuses from GitLab that need to be accounted for. The possible statuses are "open", "locked", "closed", and "merged". These are case sensitive. 
+
+These external keys mean the following:
+
+- open: The merge request is either open or a draft in GitLab, but nobody has commented on it
+- locked: The merge request is temporarily locked while the merge is actually happening
+- closed: the merge request was rejected and closed
+- merged: the merge request was merged and closed
+
+![](img/gitlab_merge_request_2.png)
+
+### General Pull Request Notes
+- Merge requests that reference branches that do not exist in your Spira source code cache will not sync to Spira. 
+- The "Owner" field in Spira is set to the first user in the "Assignee" field on GitLab This is not the same as the "Reviewer" field.
 
