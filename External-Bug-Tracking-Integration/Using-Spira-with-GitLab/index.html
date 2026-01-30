@@ -2738,6 +2738,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-the-integration-service">
 <span class="md-ellipsis">
       
@@ -2794,6 +2803,55 @@
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syncing-merge-requests">
+<span class="md-ellipsis">
+      
+        Syncing Merge Requests
+      
+    </span>
+</a>
+<nav aria-label="Syncing Merge Requests" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additional-product-and-template-configuration">
+<span class="md-ellipsis">
+      
+        Additional Product and Template Configuration
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-types">
+<span class="md-ellipsis">
+      
+        Task Types
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-status-mappings">
+<span class="md-ellipsis">
+      
+        Task Status Mappings
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-pull-request-notes">
+<span class="md-ellipsis">
+      
+        General Pull Request Notes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4039,6 +4097,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-the-integration-service">
 <span class="md-ellipsis">
       
@@ -4096,6 +4163,55 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syncing-merge-requests">
+<span class="md-ellipsis">
+      
+        Syncing Merge Requests
+      
+    </span>
+</a>
+<nav aria-label="Syncing Merge Requests" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additional-product-and-template-configuration">
+<span class="md-ellipsis">
+      
+        Additional Product and Template Configuration
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-types">
+<span class="md-ellipsis">
+      
+        Task Types
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-status-mappings">
+<span class="md-ellipsis">
+      
+        Task Status Mappings
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-pull-request-notes">
+<span class="md-ellipsis">
+      
+        General Pull Request Notes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -4107,8 +4223,85 @@
 <div class="admonition abstract">
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
-<p>GitLab's issue tracker is a simple and lightweight tool used to track problems with an associated git repository. </p>
-<p>You can use this integration to sync new incidents, new comments, statuses, and releases (milestones) bidirectionally with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on).</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
+<p>Teams can work seamlessly using both Spira and GitLab, using Inflectra's GitLab data sync engine to keep key information in sync between both applications.</p>
+<div class="admonition example">
+<p class="admonition-title">Real world example</p>
+<ul>
+<li>The QA team uses Spira for requirements and test management.</li>
+<li>When the QA team finds bugs during testing incidents are created in Spira, and then sync to GitLab</li>
+<li>The Dev team manages issues and merge requests in GitLab, with changes reflected back in Spira</li>
+</ul>
+</div>
+<p><strong>This datasync can sync the follow information</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>GitLab artifact</th>
+<th>Spira artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project</td>
+<td>Product</td>
+</tr>
+<tr>
+<td>Users</td>
+<td>Users</td>
+</tr>
+<tr>
+<td>Milestones</td>
+<td>Releases</td>
+</tr>
+<tr>
+<td>Issues</td>
+<td>Incidents</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Comments</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The table below shows a summary of how data is synced from/to Spira and GitLab</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Type of Change</th>
+<th>What syncs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>releases</strong></td>
+<td>new</td>
+<td>GitLab <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m502.6 150.6-96 96c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l41.4-41.3H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h370.7l-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l96 96c12.5 12.5 12.5 32.8 0 45.3m-397.3 352-96-96c-12.5-12.5-12.5-32.8 0-45.3l96-96c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L109.3 352H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H109.3l41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"></path></svg></span> Spira</td>
+</tr>
+<tr>
+<td><strong>incidents</strong></td>
+<td>new</td>
+<td>GitLab <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m502.6 150.6-96 96c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l41.4-41.3H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h370.7l-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l96 96c12.5 12.5 12.5 32.8 0 45.3m-397.3 352-96-96c-12.5-12.5-12.5-32.8 0-45.3l96-96c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L109.3 352H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H109.3l41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"></path></svg></span> Spira</td>
+</tr>
+<tr>
+<td></td>
+<td>updates</td>
+<td>GitLab <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m502.6 150.6-96 96c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l41.4-41.3H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h370.7l-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l96 96c12.5 12.5 12.5 32.8 0 45.3m-397.3 352-96-96c-12.5-12.5-12.5-32.8 0-45.3l96-96c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L109.3 352H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H109.3l41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0z"></path></svg></span> Spira</td>
+</tr>
+<tr>
+<td><strong>merge requests</strong></td>
+<td>new</td>
+<td>GitLab <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h370.7L297.3 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span> Spira</td>
+</tr>
+<tr>
+<td></td>
+<td>updates</td>
+<td>GitLab <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h370.7L297.3 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span> Spira</td>
+</tr>
+</tbody>
+</table>
+<p>Note that code and commits can also sync to Spira (read only). This is handled by our <a href="../../Version-Control-Integration/Integrating-with-Git/">Git</a> integration.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
@@ -4141,6 +4334,7 @@
 <li><strong>Time Offset</strong>: This should be set to 0, but if you find that changes are not being synced, try increasing the value to tell the plugin to offset timestamps</li>
 <li><strong>Auto-Map Users</strong>: Set to Yes to map users one-to-one by checking first and last names. Set to no if you would like to map users manually. Please note that duplicate names in the external system will be ignored.</li>
 <li><strong>On-Premise URL</strong>: For on-premise GitLab installations only, please enter the name of your server (e.g. <a href="http://myserver">http://myserver</a>), if left blank, the data synchronization will assume you are using the cloud URL for GitLab (<a href="https://www.gitlab.com">https://www.gitlab.com</a>)</li>
+<li><strong>Artifact Selection</strong>: Enter the names of artifacts you wish to sync to and from GitLab as a comma separated list. The options are <code>issues</code>, <code>mergerequests</code>, and <code>milestones</code> (Typed as shown here). If this is left blank, issues and milestones are synced. Milestones cannot be synced alone - they must be paired with issues and/or merge requests. </li>
 </ul>
 <p>Click the "Save" button.</p>
 <p>NOTE: Leave any field called "(Not Used)" blank. </p>
@@ -4182,6 +4376,32 @@
 <h2 id="using-the-data-synchronization">Using the Data Synchronization<a class="headerlink" href="#using-the-data-synchronization" title="Permanent link">¶</a></h2>
 <p>Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.</p>
 <p>Congratulations, you have just integrated your Spira instance with GitLab's integrated issue tracker!</p>
+<h2 id="syncing-merge-requests">Syncing Merge Requests<a class="headerlink" href="#syncing-merge-requests" title="Permanent link">¶</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Set Up GitLab As A Source Code Provider</p>
+<p><strong>If you do not <a href="../../Version-Control-Integration/Integrating-with-Git/">set up GitLab as a source code provider</a> merge request syncing will not work. Once the source code integration is set up, merge request syncing will work after the cache in Spira has been initialized.</strong></p>
+</div>
+<p>To sync merge requests, the GitLab repository that is being synced must be connected to the same product both as an issue tracker (as outlined in this guide) and as a source code provider. Merge requests are synced from GitLab into Spira only. </p>
+<h3 id="additional-product-and-template-configuration">Additional Product and Template Configuration<a class="headerlink" href="#additional-product-and-template-configuration" title="Permanent link">¶</a></h3>
+<p>Syncing merge requests has additional requirements in terms of product mappings and product template configuration for this feature to work. If you are not syncing merge requests, you do not need to do this additional setup.</p>
+<h3 id="task-types">Task Types<a class="headerlink" href="#task-types" title="Permanent link">¶</a></h3>
+<p>To properly sync merge requests, there must be at least one task type with "Pull Request?" set to Yes in the template for the product(s) you are syncing. If there are multiple, the type which is the nearest to the top of the list will be selected by the data sync. </p>
+<p><img alt="" src="../img/gitlab_merge_request_1.png"/></p>
+<h3 id="task-status-mappings">Task Status Mappings<a class="headerlink" href="#task-status-mappings" title="Permanent link">¶</a></h3>
+<p>In task status mappings, there are 4 possible statuses from GitLab that need to be accounted for. The possible statuses are "open", "locked", "closed", and "merged". These are case sensitive. </p>
+<p>These external keys mean the following:</p>
+<ul>
+<li>open: The merge request is either open or a draft in GitLab, but nobody has commented on it</li>
+<li>locked: The merge request is temporarily locked while the merge is actually happening</li>
+<li>closed: the merge request was rejected and closed</li>
+<li>merged: the merge request was merged and closed</li>
+</ul>
+<p><img alt="" src="../img/gitlab_merge_request_2.png"/></p>
+<h3 id="general-pull-request-notes">General Pull Request Notes<a class="headerlink" href="#general-pull-request-notes" title="Permanent link">¶</a></h3>
+<ul>
+<li>Merge requests that reference branches that do not exist in your Spira source code cache will not sync to Spira. </li>
+<li>The "Owner" field in Spira is set to the first user in the "Assignee" field on GitLab This is not the same as the "Reviewer" field.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
