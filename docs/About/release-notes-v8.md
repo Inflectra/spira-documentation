@@ -1,6 +1,6 @@
 # Release Notes for Spira v8
 
-## Version 8.18 (February 2026)
+## Version 8.17 (February 2026)
 !!! info "Summary"
     System administrators can now enforce single session use per user through a new Session Concurrency Control option, improving security for large instances.
 
