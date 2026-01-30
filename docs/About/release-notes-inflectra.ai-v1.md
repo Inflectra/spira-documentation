@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## January 30 2026
+
+!!! bug "Bug fixes and enhancements"
+    - Resolved an issue where the Inflectra.ai icon was missing from the MyPage for some trial customers [IN:12138]
+    - Clicking a link within Inflectra.ai no longer interrupts work execution [IN:12062]
+    - Enhanced general accessibility features for Inflectra.ai [IN:12092] [IN:12049]
+
 ## December 24 2025
 
 !!! success "New features"
