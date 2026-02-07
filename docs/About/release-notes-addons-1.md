@@ -1,6 +1,15 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## February 2026
+- [PyTest Integration](../Unit-Testing-Integration/Integrating-with-PyTest.md) v2.0:
+
+    - Bug Fixes and Enhancements [IN:12204]:
+        - Credentials can be stored securely in environment variables
+        - Can link a Python test to a Spira test case using pytest markers
+        - Can map to classes, or markers, as well as functions
+        - CLI and configuration options for verbose mode, dry-run mode, disabling Spira reporting, or batch reporting
+
 ## December 2025
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.4:
 
