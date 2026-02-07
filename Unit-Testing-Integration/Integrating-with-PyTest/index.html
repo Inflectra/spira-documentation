@@ -2390,6 +2390,238 @@
       
     </span>
 </a>
+<nav aria-label="Configuring the pytest plugin" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-options">
+<span class="md-ellipsis">
+      
+        Configuration Options
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-1-using-environment-variables-recommended">
+<span class="md-ellipsis">
+      
+        Option 1: Using Environment Variables (Recommended)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-2-using-configuration-file">
+<span class="md-ellipsis">
+      
+        Option 2: Using Configuration File
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-3-combining-both-recommended">
+<span class="md-ellipsis">
+      
+        Option 3: Combining Both (Recommended)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-parameters">
+<span class="md-ellipsis">
+      
+        Configuration Parameters
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mapping-tests-to-spira-test-cases">
+<span class="md-ellipsis">
+      
+        Mapping Tests to Spira Test Cases
+      
+    </span>
+</a>
+<nav aria-label="Mapping Tests to Spira Test Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-1-using-pytestmarkspira_id-marker">
+<span class="md-ellipsis">
+      
+        Method 1: Using @pytest.mark.spira_id() Marker
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-2-using-existing-pytest-markers">
+<span class="md-ellipsis">
+      
+        Method 2: Using Existing Pytest Markers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-3-function-level-mapping">
+<span class="md-ellipsis">
+      
+        Method 3: Function-Level Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-4-class-level-mapping">
+<span class="md-ellipsis">
+      
+        Method 4: Class-Level Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-5-default-mapping">
+<span class="md-ellipsis">
+      
+        Method 5: Default Mapping
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#complete-example">
+<span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-tests">
+<span class="md-ellipsis">
+      
+        Running Tests
+      
+    </span>
+</a>
+<nav aria-label="Running Tests" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-options">
+<span class="md-ellipsis">
+      
+        Command-Line Options
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#batch-mode-for-performance">
+<span class="md-ellipsis">
+      
+        Batch Mode for Performance
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dry-run-mode">
+<span class="md-ellipsis">
+      
+        Dry Run Mode
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-specific-test-categories">
+<span class="md-ellipsis">
+      
+        Running Specific Test Categories
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#priority-resolution-examples">
+<span class="md-ellipsis">
+      
+        Priority Resolution Examples
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#migration-from-earlier-versions">
+<span class="md-ellipsis">
+      
+        Migration from Earlier Versions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verbose-mode-and-logging">
+<span class="md-ellipsis">
+      
+        Verbose Mode and Logging
+      
+    </span>
+</a>
+<nav aria-label="Verbose Mode and Logging" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enabling-verbose-mode">
+<span class="md-ellipsis">
+      
+        Enabling Verbose Mode
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-verbose-mode-shows">
+<span class="md-ellipsis">
+      
+        What Verbose Mode Shows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-messages">
+<span class="md-ellipsis">
+      
+        Error Messages
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#have-questions-or-need-assistance">
@@ -4024,6 +4256,238 @@
       
     </span>
 </a>
+<nav aria-label="Configuring the pytest plugin" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-options">
+<span class="md-ellipsis">
+      
+        Configuration Options
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-1-using-environment-variables-recommended">
+<span class="md-ellipsis">
+      
+        Option 1: Using Environment Variables (Recommended)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-2-using-configuration-file">
+<span class="md-ellipsis">
+      
+        Option 2: Using Configuration File
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#option-3-combining-both-recommended">
+<span class="md-ellipsis">
+      
+        Option 3: Combining Both (Recommended)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-parameters">
+<span class="md-ellipsis">
+      
+        Configuration Parameters
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mapping-tests-to-spira-test-cases">
+<span class="md-ellipsis">
+      
+        Mapping Tests to Spira Test Cases
+      
+    </span>
+</a>
+<nav aria-label="Mapping Tests to Spira Test Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-1-using-pytestmarkspira_id-marker">
+<span class="md-ellipsis">
+      
+        Method 1: Using @pytest.mark.spira_id() Marker
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-2-using-existing-pytest-markers">
+<span class="md-ellipsis">
+      
+        Method 2: Using Existing Pytest Markers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-3-function-level-mapping">
+<span class="md-ellipsis">
+      
+        Method 3: Function-Level Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-4-class-level-mapping">
+<span class="md-ellipsis">
+      
+        Method 4: Class-Level Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-5-default-mapping">
+<span class="md-ellipsis">
+      
+        Method 5: Default Mapping
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#complete-example">
+<span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-tests">
+<span class="md-ellipsis">
+      
+        Running Tests
+      
+    </span>
+</a>
+<nav aria-label="Running Tests" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-options">
+<span class="md-ellipsis">
+      
+        Command-Line Options
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#batch-mode-for-performance">
+<span class="md-ellipsis">
+      
+        Batch Mode for Performance
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dry-run-mode">
+<span class="md-ellipsis">
+      
+        Dry Run Mode
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-specific-test-categories">
+<span class="md-ellipsis">
+      
+        Running Specific Test Categories
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#priority-resolution-examples">
+<span class="md-ellipsis">
+      
+        Priority Resolution Examples
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#migration-from-earlier-versions">
+<span class="md-ellipsis">
+      
+        Migration from Earlier Versions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verbose-mode-and-logging">
+<span class="md-ellipsis">
+      
+        Verbose Mode and Logging
+      
+    </span>
+</a>
+<nav aria-label="Verbose Mode and Logging" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enabling-verbose-mode">
+<span class="md-ellipsis">
+      
+        Enabling Verbose Mode
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-verbose-mode-shows">
+<span class="md-ellipsis">
+      
+        What Verbose Mode Shows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-messages">
+<span class="md-ellipsis">
+      
+        Error Messages
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#have-questions-or-need-assistance">
@@ -4046,36 +4510,46 @@
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
 <p>This section describes how to use Spira in conjunction with python's pytest unit testing framework. The Spira pytest plugin enables the automated sending of unit test results from pytest to Spira with a specified Test Case, and (optionally), a release and/or test set as well.</p>
+<p>The plugin supports multiple ways to map tests to Spira test cases:</p>
+<ul>
+<li><strong>Environment variables</strong> for secure credential management</li>
+<li><strong>Pytest markers</strong> for flexible test organization</li>
+<li><strong>Class-level mapping</strong> for test suites</li>
+<li><strong>Function-level mapping</strong> for individual tests</li>
+</ul>
 <h2 id="installing-the-pytest-plugin">Installing the pytest plugin<a class="headerlink" href="#installing-the-pytest-plugin" title="Permanent link">¶</a></h2>
 <p>This section outlines how to install the Spira plugin for pytest. It assumes that you already have a working installation of Spira v6.0 or later. If you have an earlier version of Spira you will need to upgrade to at least v6.0 before trying to use this plugin. You will also need to have Python (with pip) and pytest version 3.0 or later.</p>
 <p>To obtain the latest version of the Spira plugin, simply run the following command: <code>pip install pytest-spiratest</code></p>
 <p>This command will install the latest version of the plugin straight from the <a href="https://pypi.org/project/pytest-spiratest/">Python Package Index</a> (PyPI). Once the Spira plugin is successfully installed, all you need to do is configure the extension, then you can begin testing!</p>
 <h2 id="configuring-the-pytest-plugin">Configuring the pytest plugin<a class="headerlink" href="#configuring-the-pytest-plugin" title="Permanent link">¶</a></h2>
 <p>This section outlines how to configure the Spira plugin for pytest. It assumes that you are familiar with pytest, and already have some working tests configured.</p>
-<p>Here is a sample test file:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<h3 id="configuration-options">Configuration Options<a class="headerlink" href="#configuration-options" title="Permanent link">¶</a></h3>
+<p>The plugin supports two configuration methods:</p>
+<ol>
+<li><strong>Environment variables</strong> (recommended for credentials) - using a <code>.env.spira</code> file</li>
+<li><strong>Configuration file</strong> - using a <code>spira.cfg</code> file</li>
+</ol>
+<p>You can use both methods together. Environment variables take priority over configuration file settings.</p>
+<h3 id="option-1-using-environment-variables-recommended">Option 1: Using Environment Variables (Recommended)<a class="headerlink" href="#option-1-using-environment-variables-recommended" title="Permanent link">¶</a></h3>
+<p>Create a <code>.env.spira</code> file in your test root folder:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Required settings</span>
+<span class="na">SPIRA_URL</span><span class="o">=</span><span class="s">http://localhost/Spira</span>
+<span class="na">SPIRA_USERNAME</span><span class="o">=</span><span class="s">fredbloggs</span>
+<span class="na">SPIRA_TOKEN</span><span class="o">=</span><span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
+<span class="na">SPIRA_PROJECT_ID</span><span class="o">=</span><span class="s">1</span>
 
-<span class="c1"># Function we are testing</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
-  <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
-
-<span class="c1"># Successful test</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_add_1</span><span class="p">():</span>
-  <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-
-<span class="c1"># Failed test</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_add_2</span><span class="p">():</span>
-  <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-
-<span class="c1"># Failed test</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_add_3</span><span class="p">():</span>
-  <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+<span class="c1"># Optional settings</span>
+<span class="na">SPIRA_RELEASE_ID</span><span class="o">=</span><span class="s">5</span>
+<span class="na">SPIRA_TEST_SET_ID</span><span class="o">=</span><span class="s">1</span>
 </code></pre></div>
-<p>Note how test_add_2 is used in the configuration file discussed below.</p>
-<p>In your test root folder (the folder you run the pytest command from), create a file named "spira.cfg" with the following:</p>
+<div class="admonition tip">
+<p class="admonition-title">Security Best Practice</p>
+<p>Add <code>.env.spira</code> to your <code>.gitignore</code> file to keep credentials out of version control. Share a <code>.env.spira.example</code> file (without real credentials) with your team instead.</p>
+</div>
+<h3 id="option-2-using-configuration-file">Option 2: Using Configuration File<a class="headerlink" href="#option-2-using-configuration-file" title="Permanent link">¶</a></h3>
+<p>Create a <code>spira.cfg</code> file in your test root folder:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[credentials]</span>
 <span class="c1"># Following are required</span>
-
 <span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost/Spira</span>
 <span class="na">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">fredbloggs</span>
 <span class="na">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
@@ -4086,12 +4560,88 @@
 <span class="na">test_set_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
 
 <span class="k">[test_cases]</span>
-<span class="c1"># Assigned to the rest</span>
+<span class="c1"># Default test case ID for unmapped tests</span>
 <span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
-<span class="c1"># Test case for a specific function</span>
+
+<span class="c1"># Function-level mapping</span>
 <span class="na">test_add_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">22</span>
+
+<span class="c1"># Class-level mapping (all tests in class use this ID)</span>
+<span class="na">testcalculator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">25</span>
+
+<span class="k">[markers]</span>
+<span class="c1"># Map pytest markers to test cases</span>
+<span class="na">smoke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">30</span>
+<span class="na">regression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">31</span>
+<span class="na">integration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">32</span>
+
+<span class="k">[settings]</span>
+<span class="c1"># Optional: Enable verbose logging</span>
+<span class="na">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">false</span>
 </code></pre></div>
-<p>For the plugin to work, you must have both settings groups (credentials and test_cases) with the following in the credentials group:</p>
+<h3 id="option-3-combining-both-recommended">Option 3: Combining Both (Recommended)<a class="headerlink" href="#option-3-combining-both-recommended" title="Permanent link">¶</a></h3>
+<p>For best security and flexibility, use <code>.env.spira</code> for credentials and <code>spira.cfg</code> for test mappings:</p>
+<p><strong>.env.spira</strong> (keep this out of version control):
+</p><div class="highlight"><pre><span></span><code><span class="c1"># Credentials - DO NOT commit to git</span>
+<span class="na">SPIRA_URL</span><span class="o">=</span><span class="s">http://localhost/Spira</span>
+<span class="na">SPIRA_USERNAME</span><span class="o">=</span><span class="s">fredbloggs</span>
+<span class="na">SPIRA_TOKEN</span><span class="o">=</span><span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
+<span class="na">SPIRA_PROJECT_ID</span><span class="o">=</span><span class="s">1</span>
+<span class="na">SPIRA_RELEASE_ID</span><span class="o">=</span><span class="s">5</span>
+<span class="na">SPIRA_TEST_SET_ID</span><span class="o">=</span><span class="s">1</span>
+</code></pre></div>
+<p><strong>spira.cfg</strong> (safe to commit to version control):
+</p><div class="highlight"><pre><span></span><code><span class="c1"># No [credentials] section needed when using .env.spira!</span>
+
+<span class="k">[test_cases]</span>
+<span class="c1"># Default test case ID for unmapped tests</span>
+<span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
+
+<span class="c1"># Function-level mapping</span>
+<span class="na">test_add_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">22</span>
+
+<span class="c1"># Class-level mapping (all tests in class use this ID)</span>
+<span class="na">testcalculator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">25</span>
+
+<span class="k">[markers]</span>
+<span class="c1"># Map pytest markers to test cases</span>
+<span class="na">smoke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">30</span>
+<span class="na">regression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">31</span>
+<span class="na">integration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">32</span>
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Best Practice</p>
+<p>This approach keeps sensitive credentials out of version control while allowing test mappings to be shared with the team. You only need <code>.env.spira</code> for credentials - the <code>[credentials]</code> section in <code>spira.cfg</code> is optional when using environment variables.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Priority</p>
+<p>When both files exist, environment variables from <code>.env.spira</code> take priority over settings in <code>spira.cfg</code>. This allows you to override configuration per environment (dev, staging, production) without changing the config file.</p>
+</div>
+<p><strong>Example: Different Environments</strong></p>
+<p>You can have different <code>.env.spira</code> files for different environments while keeping the same <code>spira.cfg</code>:</p>
+<p><strong>.env.spira.dev</strong>:
+</p><div class="highlight"><pre><span></span><code><span class="na">SPIRA_URL</span><span class="o">=</span><span class="s">http://dev-spira.company.com/Spira</span>
+<span class="na">SPIRA_USERNAME</span><span class="o">=</span><span class="s">dev-user</span>
+<span class="na">SPIRA_TOKEN</span><span class="o">=</span><span class="s">{DEV-TOKEN}</span>
+<span class="na">SPIRA_PROJECT_ID</span><span class="o">=</span><span class="s">1</span>
+</code></pre></div>
+<p><strong>.env.spira.prod</strong>:
+</p><div class="highlight"><pre><span></span><code><span class="na">SPIRA_URL</span><span class="o">=</span><span class="s">http://spira.company.com/Spira</span>
+<span class="na">SPIRA_USERNAME</span><span class="o">=</span><span class="s">prod-user</span>
+<span class="na">SPIRA_TOKEN</span><span class="o">=</span><span class="s">{PROD-TOKEN}</span>
+<span class="na">SPIRA_PROJECT_ID</span><span class="o">=</span><span class="s">5</span>
+</code></pre></div>
+<p>Then copy the appropriate file before running tests:
+</p><div class="highlight"><pre><span></span><code><span class="c1"># For development</span>
+cp<span class="w"> </span>.env.spira.dev<span class="w"> </span>.env.spira
+pytest
+
+<span class="c1"># For production</span>
+cp<span class="w"> </span>.env.spira.prod<span class="w"> </span>.env.spira
+pytest
+</code></pre></div>
+<h3 id="configuration-parameters">Configuration Parameters<a class="headerlink" href="#configuration-parameters" title="Permanent link">¶</a></h3>
+<p><strong>Credentials Section:</strong></p>
 <ul>
 <li><strong>url</strong>: The base url to your Spira installation, without a '/' at the end.</li>
 <li><strong>username</strong>: The username you use to sign into Spira.</li>
@@ -4100,15 +4650,391 @@
 <li><strong>release_id</strong>: OPTIONAL -- Use if you would like to associate the test run with a release.</li>
 <li><strong>test_set_id</strong>: OPTIONAL -- Use if you would like to associate the test run with a test set.</li>
 </ul>
-<p>Under the test_cases group, put the following:</p>
+<p><strong>Test Cases Section:</strong></p>
 <ul>
 <li><strong>default</strong>: The default test case ID for functions without an assigned test case</li>
-<li><strong>\<function name=""></function></strong> - Used to override the default setting for a function's test case ID in Spira. Only include the function name, without the parentheses. </li>
+<li><strong>\<function name=""></function></strong>: Maps a specific test function to a test case ID (e.g., <code>test_add_2 = 22</code>)</li>
+<li><strong>\<class name=""></class></strong>: Maps all tests in a class to a test case ID (e.g., <code>testcalculator = 25</code>)</li>
 </ul>
-<p><strong>NOTE</strong>: If your functions are in a class then add the class before the function name - for example <code>MyClass.myFunction</code>. The plugin is case insensitive.</p>
-<p>Once you have filled out all of the configurations, you are all set to go!</p>
+<p><strong>Markers Section (Optional):</strong></p>
+<ul>
+<li><strong>\<marker name=""></marker></strong>: Maps all tests with a specific pytest marker to a test case ID (e.g., <code>smoke = 30</code>)</li>
+</ul>
+<p><strong>Settings Section (Optional):</strong></p>
+<ul>
+<li><strong>verbose</strong>: Enable detailed logging showing test case mappings and API calls (values: <code>true</code>, <code>false</code>, <code>yes</code>, <code>no</code>, <code>1</code>, <code>0</code>, <code>on</code>, <code>off</code>)</li>
+<li><strong>enabled</strong>: Enable or disable Spira integration (values: <code>true</code>, <code>false</code>, <code>yes</code>, <code>no</code>, <code>1</code>, <code>0</code>, <code>on</code>, <code>off</code>). Can be overridden by <code>--spira-enabled</code> or <code>--spira-disabled</code> CLI flags</li>
+<li><strong>batch_mode</strong>: Enable batch mode to post all results at once for better performance (values: <code>true</code>, <code>false</code>, <code>yes</code>, <code>no</code>, <code>1</code>, <code>0</code>, <code>on</code>, <code>off</code>). Can be overridden by <code>--spira-batch</code> or <code>--spira-no-batch</code> CLI flags</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Case Insensitivity</p>
+<p>Function names, class names, and marker names in the configuration file are case-insensitive.</p>
+</div>
+<h2 id="mapping-tests-to-spira-test-cases">Mapping Tests to Spira Test Cases<a class="headerlink" href="#mapping-tests-to-spira-test-cases" title="Permanent link">¶</a></h2>
+<p>The plugin provides multiple ways to map your pytest tests to Spira test cases. The mapping priority (from highest to lowest) is:</p>
+<ol>
+<li><strong>@pytest.mark.spira_id() marker</strong> - Explicit test case ID in code</li>
+<li><strong>Other pytest markers</strong> - Existing markers mapped in configuration</li>
+<li><strong>Function name</strong> - Specific function mapping in configuration</li>
+<li><strong>Class name</strong> - All tests in a class mapped in configuration</li>
+<li><strong>Default</strong> - Fallback test case ID</li>
+</ol>
+<h3 id="method-1-using-pytestmarkspira_id-marker">Method 1: Using @pytest.mark.spira_id() Marker<a class="headerlink" href="#method-1-using-pytestmarkspira_id-marker" title="Permanent link">¶</a></h3>
+<p>Apply the <code>@pytest.mark.spira_id()</code> marker directly to test functions or classes for explicit control:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+
+<span class="c1"># Map a single test function</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">spira_id</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="c1"># Map all tests in a class</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">spira_id</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestAuthentication</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 200</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_logout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 200</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+    <span class="c1"># Override class-level mapping</span>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">spira_id</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_password_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 300</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">When to Use</p>
+<p>Use this method when you want the mapping visible in your test code, or when different tests in the same class need different mappings.</p>
+</div>
+<h3 id="method-2-using-existing-pytest-markers">Method 2: Using Existing Pytest Markers<a class="headerlink" href="#method-2-using-existing-pytest-markers" title="Permanent link">¶</a></h3>
+<p>Map your existing pytest markers (like <code>@pytest.mark.smoke</code>, <code>@pytest.mark.regression</code>) to Spira test cases:</p>
+<p><strong>Configuration (spira.cfg):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">[markers]</span>
+<span class="na">smoke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100</span>
+<span class="na">regression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">101</span>
+<span class="na">integration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">102</span>
+<span class="na">critical</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">103</span>
+</code></pre></div>
+<p><strong>Test Code:</strong>
+</p><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">smoke</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_critical_login</span><span class="p">():</span>
+    <span class="c1"># Maps to test case 100</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">regression</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestCheckout</span><span class="p">:</span>
+    <span class="c1"># All tests in class map to test case 101</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_add_to_cart</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_payment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">When to Use</p>
+<p>Use this method when you already organize tests with pytest markers. Works seamlessly with <code>pytest -m</code> filtering.</p>
+</div>
+<h3 id="method-3-function-level-mapping">Method 3: Function-Level Mapping<a class="headerlink" href="#method-3-function-level-mapping" title="Permanent link">¶</a></h3>
+<p>Map specific test functions in the configuration file:</p>
+<p><strong>Configuration (spira.cfg):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">[test_cases]</span>
+<span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
+<span class="na">test_add_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">22</span>
+<span class="na">test_login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">25</span>
+</code></pre></div>
+<p><strong>Test Code:</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_add_1</span><span class="p">():</span>
+    <span class="c1"># Uses default: 20</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_add_2</span><span class="p">():</span>
+    <span class="c1"># Maps to test case 22</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">():</span>
+    <span class="c1"># Maps to test case 25</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<h3 id="method-4-class-level-mapping">Method 4: Class-Level Mapping<a class="headerlink" href="#method-4-class-level-mapping" title="Permanent link">¶</a></h3>
+<p>Map entire test classes to a single test case:</p>
+<p><strong>Configuration (spira.cfg):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">[test_cases]</span>
+<span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
+<span class="na">testcalculator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">25</span>
+<span class="na">testauthentication</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">30</span>
+</code></pre></div>
+<p><strong>Test Code:</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TestCalculator</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_add</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 25</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_subtract</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 25</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TestAuthentication</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 30</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_logout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 30</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">When to Use</p>
+<p>Use this method to reduce configuration verbosity when all tests in a class should map to the same test case.</p>
+</div>
+<h3 id="method-5-default-mapping">Method 5: Default Mapping<a class="headerlink" href="#method-5-default-mapping" title="Permanent link">¶</a></h3>
+<p>Any test without a specific mapping uses the default test case ID:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[test_cases]</span>
+<span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
+</code></pre></div>
+<h2 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">¶</a></h2>
+<p>Here is a complete example showing all mapping methods:</p>
+<p><strong>Configuration (.env.spira):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="na">SPIRA_URL</span><span class="o">=</span><span class="s">http://localhost/Spira</span>
+<span class="na">SPIRA_USERNAME</span><span class="o">=</span><span class="s">fredbloggs</span>
+<span class="na">SPIRA_TOKEN</span><span class="o">=</span><span class="s">{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX}</span>
+<span class="na">SPIRA_PROJECT_ID</span><span class="o">=</span><span class="s">1</span>
+</code></pre></div>
+<p><strong>Configuration (spira.cfg):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">[test_cases]</span>
+<span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
+<span class="na">test_add_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">22</span>
+<span class="na">testcalculator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">25</span>
+
+<span class="k">[markers]</span>
+<span class="na">smoke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">30</span>
+<span class="na">regression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">31</span>
+</code></pre></div>
+<p><strong>Test File:</strong>
+</p><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+
+<span class="c1"># Function we are testing</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+
+<span class="c1"># Uses default mapping (20)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_add_1</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+
+<span class="c1"># Uses function mapping (22)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_add_2</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+<span class="c1"># Uses marker mapping (30)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">smoke</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_add_smoke</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+
+<span class="c1"># Uses explicit spira_id marker (100)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">spira_id</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_add_special</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span>
+
+<span class="c1"># All tests use class mapping (25)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestCalculator</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_add</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_subtract</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span>
+
+    <span class="c1"># Override with explicit marker (200)</span>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">spira_id</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_multiply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">6</span>
+
+<span class="c1"># All tests use regression marker (31)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">regression</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestRegression</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_feature_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_feature_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<h2 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">¶</a></h2>
 <p>Running the pytest (or py.test) command will run your unit tests, send the data to Spira, and show the results to you. Here is an example of the test_add_3 function inside Spira:</p>
 <p><img alt="" src="../img/Integrating_with_PyTest_16.png"/></p>
+<h3 id="command-line-options">Command-Line Options<a class="headerlink" href="#command-line-options" title="Permanent link">¶</a></h3>
+<p>The plugin provides several CLI options to control behavior:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Disable Spira integration for this run</span>
+pytest<span class="w"> </span>--spira-disabled
+
+<span class="c1"># Enable Spira integration (overrides config)</span>
+pytest<span class="w"> </span>--spira-enabled
+
+<span class="c1"># Dry run - show what would be posted without posting</span>
+pytest<span class="w"> </span>--spira-dry-run
+
+<span class="c1"># Enable batch mode - post all results at once (faster for large suites)</span>
+pytest<span class="w"> </span>--spira-batch
+
+<span class="c1"># Disable batch mode - post results individually</span>
+pytest<span class="w"> </span>--spira-no-batch
+</code></pre></div>
+<h3 id="batch-mode-for-performance">Batch Mode for Performance<a class="headerlink" href="#batch-mode-for-performance" title="Permanent link">¶</a></h3>
+<p>For large test suites (100+ tests), batch mode provides significant performance improvements by posting all results in a single API call:</p>
+<p><strong>Enable batch mode:</strong>
+</p><div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>--spira-batch
+</code></pre></div>
+<p>Or in configuration:
+</p><div class="highlight"><pre><span></span><code><span class="k">[settings]</span>
+<span class="na">batch_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span>
+</code></pre></div>
+<p><strong>Performance comparison:</strong>
+- Individual mode: 100 tests = 100 API calls (~10s overhead)
+- Batch mode: 100 tests = 1 API call (~1s overhead)
+- <strong>Result: 50-70% faster for large test suites</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">When to Use Batch Mode</p>
+<ul>
+<li>✅ CI/CD pipelines for faster builds</li>
+<li>✅ Large test suites (100+ tests)</li>
+<li>✅ Network-constrained environments</li>
+<li>❌ Real-time monitoring (results appear all at once)</li>
+<li>❌ Debugging individual tests</li>
+</ul>
+</div>
+<h3 id="dry-run-mode">Dry Run Mode<a class="headerlink" href="#dry-run-mode" title="Permanent link">¶</a></h3>
+<p>Preview what would be posted to Spira without actually posting:</p>
+<div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>--spira-dry-run
+</code></pre></div>
+<p><strong>Example output:</strong>
+</p><div class="highlight"><pre><span></span><code>[pytest-spiratest INFO] [DRY RUN] Would post test result for: test_login
+[pytest-spiratest INFO]   Test case ID: 100
+[pytest-spiratest INFO]   Status: 2 (PASSED)
+[pytest-spiratest INFO]   Duration: 0.45s
+</code></pre></div>
+<p>Use dry run to:
+- Verify test case mappings
+- Debug configuration issues
+- Test new configurations safely</p>
+<h3 id="running-specific-test-categories">Running Specific Test Categories<a class="headerlink" href="#running-specific-test-categories" title="Permanent link">¶</a></h3>
+<p>When using marker mapping, you can run specific test categories and have results automatically sent to the correct Spira test case:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run only smoke tests - results go to smoke test case</span>
+pytest<span class="w"> </span>-m<span class="w"> </span>smoke
+
+<span class="c1"># Run only regression tests - results go to regression test case</span>
+pytest<span class="w"> </span>-m<span class="w"> </span>regression
+
+<span class="c1"># Run critical tests</span>
+pytest<span class="w"> </span>-m<span class="w"> </span>critical
+</code></pre></div>
+<h2 id="priority-resolution-examples">Priority Resolution Examples<a class="headerlink" href="#priority-resolution-examples" title="Permanent link">¶</a></h2>
+<p>Understanding how the plugin resolves test case mappings:</p>
+<p><strong>Example 1: spira_id marker overrides everything</strong>
+</p><div class="highlight"><pre><span></span><code><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">spira_id</span><span class="p">(</span><span class="mi">999</span><span class="p">)</span>  <span class="c1"># This wins</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">smoke</span>          <span class="c1"># Ignored</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">():</span>
+    <span class="c1"># Maps to 999</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<p><strong>Example 2: Marker beats function name</strong>
+</p><div class="highlight"><pre><span></span><code><span class="c1"># Config has: test_login = 100, smoke = 200</span>
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">smoke</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">():</span>
+    <span class="c1"># Maps to 200 (marker beats function)</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<p><strong>Example 3: Function name beats class name</strong>
+</p><div class="highlight"><pre><span></span><code><span class="c1"># Config has: test_login = 100, testauth = 200</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TestAuth</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to 100 (function beats class)</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<p><strong>Example 4: Class name beats default</strong>
+</p><div class="highlight"><pre><span></span><code><span class="c1"># Config has: testauth = 200, default = 20</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TestAuth</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_logout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to 200 (class beats default)</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<h2 id="migration-from-earlier-versions">Migration from Earlier Versions<a class="headerlink" href="#migration-from-earlier-versions" title="Permanent link">¶</a></h2>
+<p>If you're upgrading from an earlier version of the plugin, your existing configuration will continue to work without changes. The old format of mapping class methods (<code>MyClass.myFunction = 22</code>) is still supported.</p>
+<p>To take advantage of new features:</p>
+<ol>
+<li><strong>Move credentials to .env.spira</strong> for better security</li>
+<li><strong>Use class-level mapping</strong> to simplify configuration (instead of mapping each method individually)</li>
+<li><strong>Use marker mapping</strong> if you already organize tests with pytest markers</li>
+<li><strong>Use @pytest.mark.spira_id()</strong> for explicit control when needed</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
+<p><strong>Tests not appearing in Spira?</strong></p>
+<ul>
+<li>Verify credentials in <code>.env.spira</code> or <code>spira.cfg</code></li>
+<li>Check that project_id exists in Spira</li>
+<li>Ensure test case IDs are valid</li>
+<li>Enable verbose mode to see detailed logging</li>
+</ul>
+<p><strong>Wrong test case mapping?</strong></p>
+<ul>
+<li>Check the priority order: spira_id marker &gt; other markers &gt; function name &gt; class name &gt; default</li>
+<li>Verify spelling of function/class/marker names in configuration</li>
+<li>Remember that names are case-insensitive in the config file</li>
+<li>Enable verbose mode to see which test case ID is being used</li>
+</ul>
+<p><strong>Environment variables not working?</strong></p>
+<ul>
+<li>Ensure <code>.env.spira</code> is in the same directory where you run pytest</li>
+<li>Check variable names: <code>SPIRA_URL</code>, <code>SPIRA_USERNAME</code>, <code>SPIRA_TOKEN</code>, etc.</li>
+<li>Environment variables override <code>spira.cfg</code> settings</li>
+</ul>
+<h2 id="verbose-mode-and-logging">Verbose Mode and Logging<a class="headerlink" href="#verbose-mode-and-logging" title="Permanent link">¶</a></h2>
+<p>The plugin provides detailed logging to help debug issues.</p>
+<h3 id="enabling-verbose-mode">Enabling Verbose Mode<a class="headerlink" href="#enabling-verbose-mode" title="Permanent link">¶</a></h3>
+<p><strong>Option 1: Configuration file (spira.cfg)</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">[settings]</span>
+<span class="na">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span>
+</code></pre></div>
+<p><strong>Option 2: Environment variable (.env.spira)</strong>
+</p><div class="highlight"><pre><span></span><code><span class="na">SPIRA_VERBOSE</span><span class="o">=</span><span class="s">true</span>
+</code></pre></div>
+<h3 id="what-verbose-mode-shows">What Verbose Mode Shows<a class="headerlink" href="#what-verbose-mode-shows" title="Permanent link">¶</a></h3>
+<p>When enabled, you'll see:</p>
+<ul>
+<li>Configuration summary at startup</li>
+<li>Test case ID mapping for each test</li>
+<li>API call details and responses</li>
+<li>Success/failure status for each post</li>
+</ul>
+<p><strong>Example output:</strong>
+</p><div class="highlight"><pre><span></span><code>[pytest-spiratest INFO] Spira integration initialized
+[pytest-spiratest DEBUG]   URL: http://localhost/spira
+[pytest-spiratest DEBUG]   Project ID: 1
+[pytest-spiratest DEBUG]   Default test case: 22
+[pytest-spiratest DEBUG] Test 'test_login' mapped to Spira test case ID: 100
+[pytest-spiratest DEBUG] Posting test result to Spira: http://localhost/spira/...
+[pytest-spiratest DEBUG] Successfully posted test result for: test_login
+</code></pre></div>
+<h3 id="error-messages">Error Messages<a class="headerlink" href="#error-messages" title="Permanent link">¶</a></h3>
+<p>Errors are always shown, even without verbose mode:</p>
+<div class="highlight"><pre><span></span><code>[pytest-spiratest ERROR] HTTP error 401 posting test result to Spira for test: test_login
+[pytest-spiratest ERROR]   URL: http://localhost/spira/Services/v6_0/RestService.svc/projects/1/test-runs/record
+[pytest-spiratest ERROR]   Test case ID: 100
+[pytest-spiratest ERROR]   Response: {"Message":"Invalid credentials"}
+</code></pre></div>
+<p>This helps you quickly identify:
+- Connection issues
+- Authentication problems
+- Invalid test case IDs
+- API errors</p>
+<div class="admonition tip">
+<p class="admonition-title">Debugging Tip</p>
+<p>Enable verbose mode when setting up the integration or troubleshooting issues. Disable it in CI/CD for cleaner logs.</p>
+</div>
 <h2 id="have-questions-or-need-assistance">Have Questions or Need Assistance?<a class="headerlink" href="#have-questions-or-need-assistance" title="Permanent link">¶</a></h2>
 <p>If you are an Inflectra customer, please contact our customer support at:</p>
 <ul>
