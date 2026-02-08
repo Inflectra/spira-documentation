@@ -2441,6 +2441,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#choosing-the-right-mapping-method">
+<span class="md-ellipsis">
+      
+        Choosing the Right Mapping Method
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#mapping-tests-to-spira-test-cases">
 <span class="md-ellipsis">
       
@@ -2487,10 +2496,19 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#method-5-default-mapping">
+<a class="md-nav__link" href="#method-5-module-level-mapping">
 <span class="md-ellipsis">
       
-        Method 5: Default Mapping
+        Method 5: Module-Level Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-6-default-mapping">
+<span class="md-ellipsis">
+      
+        Method 6: Default Mapping
       
     </span>
 </a>
@@ -4307,6 +4325,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#choosing-the-right-mapping-method">
+<span class="md-ellipsis">
+      
+        Choosing the Right Mapping Method
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#mapping-tests-to-spira-test-cases">
 <span class="md-ellipsis">
       
@@ -4353,10 +4380,19 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#method-5-default-mapping">
+<a class="md-nav__link" href="#method-5-module-level-mapping">
 <span class="md-ellipsis">
       
-        Method 5: Default Mapping
+        Method 5: Module-Level Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#method-6-default-mapping">
+<span class="md-ellipsis">
+      
+        Method 6: Default Mapping
       
     </span>
 </a>
@@ -4514,6 +4550,7 @@
 <ul>
 <li><strong>Environment variables</strong> for secure credential management</li>
 <li><strong>Pytest markers</strong> for flexible test organization</li>
+<li><strong>Module-level mapping</strong> for entire test files</li>
 <li><strong>Class-level mapping</strong> for test suites</li>
 <li><strong>Function-level mapping</strong> for individual tests</li>
 </ul>
@@ -4560,7 +4597,7 @@
 <span class="na">test_set_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
 
 <span class="k">[test_cases]</span>
-<span class="c1"># Default test case ID for unmapped tests</span>
+<span class="c1"># Default test case ID for unmapped tests (optional)</span>
 <span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
 
 <span class="c1"># Function-level mapping</span>
@@ -4574,6 +4611,12 @@
 <span class="na">smoke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">30</span>
 <span class="na">regression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">31</span>
 <span class="na">integration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">32</span>
+
+<span class="k">[modules]</span>
+<span class="c1"># Map entire test files (modules) to test cases</span>
+<span class="c1"># IMPORTANT: Use the full dotted module path as pytest sees it</span>
+<span class="na">tests.features.authentication.test_login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">40</span>
+<span class="na">tests.features.payment.test_checkout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">41</span>
 
 <span class="k">[settings]</span>
 <span class="c1"># Optional: Enable verbose logging</span>
@@ -4594,7 +4637,7 @@
 </p><div class="highlight"><pre><span></span><code><span class="c1"># No [credentials] section needed when using .env.spira!</span>
 
 <span class="k">[test_cases]</span>
-<span class="c1"># Default test case ID for unmapped tests</span>
+<span class="c1"># Default test case ID for unmapped tests (optional)</span>
 <span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
 
 <span class="c1"># Function-level mapping</span>
@@ -4652,7 +4695,7 @@ pytest
 </ul>
 <p><strong>Test Cases Section:</strong></p>
 <ul>
-<li><strong>default</strong>: The default test case ID for functions without an assigned test case</li>
+<li><strong>default</strong>: OPTIONAL -- The default test case ID for tests without an assigned test case. If not specified, unmapped tests will not be logged to Spira.</li>
 <li><strong>\<function name=""></function></strong>: Maps a specific test function to a test case ID (e.g., <code>test_add_2 = 22</code>)</li>
 <li><strong>\<class name=""></class></strong>: Maps all tests in a class to a test case ID (e.g., <code>testcalculator = 25</code>)</li>
 </ul>
@@ -4660,6 +4703,19 @@ pytest
 <ul>
 <li><strong>\<marker name=""></marker></strong>: Maps all tests with a specific pytest marker to a test case ID (e.g., <code>smoke = 30</code>)</li>
 </ul>
+<p><strong>Modules Section (Optional):</strong></p>
+<ul>
+<li><strong>\<module name=""></module></strong>: Maps all tests in a module (test file) to a test case ID</li>
+<li><strong>Must use the full dotted module path</strong> as pytest sees it (e.g., <code>tests.features.mywork.test_myincidents = 40</code>)</li>
+<li>To find the correct module name, run with verbose mode and check the debug output</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Finding Module Names</p>
+<p>Run <code>pytest path/to/test_file.py -v</code> and look for:
+</p><div class="highlight"><pre><span></span><code>[pytest-spiratest DEBUG] Checking module mapping for module: 'actual.module.name'
+</code></pre></div>
+Use that exact string in your <code>[modules]</code> configuration.
+</div>
 <p><strong>Settings Section (Optional):</strong></p>
 <ul>
 <li><strong>verbose</strong>: Enable detailed logging showing test case mappings and API calls (values: <code>true</code>, <code>false</code>, <code>yes</code>, <code>no</code>, <code>1</code>, <code>0</code>, <code>on</code>, <code>off</code>)</li>
@@ -4668,8 +4724,67 @@ pytest
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Case Insensitivity</p>
-<p>Function names, class names, and marker names in the configuration file are case-insensitive.</p>
+<p>Function names, class names, marker names, and module names in the configuration file are case-insensitive.</p>
 </div>
+<h2 id="choosing-the-right-mapping-method">Choosing the Right Mapping Method<a class="headerlink" href="#choosing-the-right-mapping-method" title="Permanent link">¶</a></h2>
+<p>Different mapping methods suit different use cases:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Best For</th>
+<th>Granularity</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>@spira_id marker</strong></td>
+<td>Individual test control, overrides</td>
+<td>Per test</td>
+<td>In code</td>
+</tr>
+<tr>
+<td><strong>Marker mapping</strong></td>
+<td>Test categories (smoke, regression)</td>
+<td>Per marker</td>
+<td>Config file</td>
+</tr>
+<tr>
+<td><strong>Function mapping</strong></td>
+<td>Specific important tests</td>
+<td>Per function</td>
+<td>Config file</td>
+</tr>
+<tr>
+<td><strong>Class mapping</strong></td>
+<td>Test suites, related tests</td>
+<td>Per class</td>
+<td>Config file</td>
+</tr>
+<tr>
+<td><strong>Module mapping</strong></td>
+<td>Feature/component tracking</td>
+<td>Per file</td>
+<td>Config file</td>
+</tr>
+<tr>
+<td><strong>Default</strong></td>
+<td>Catch-all for unmapped tests (optional)</td>
+<td>All unmapped</td>
+<td>Config file</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quick Decision Guide:</strong></p>
+<ul>
+<li>📁 <strong>Tracking entire features?</strong> → Use module mapping (<code>test_authentication = 40</code>)</li>
+<li>📦 <strong>Grouping related tests?</strong> → Use class mapping (<code>TestAuth = 30</code>)</li>
+<li>🏷️ <strong>Already using pytest markers?</strong> → Use marker mapping (<code>smoke = 20</code>)</li>
+<li>🎯 <strong>Need precise control?</strong> → Use function mapping or <code>@spira_id</code> marker</li>
+<li>🔄 <strong>Want minimal config?</strong> → Use module or class mapping for broader coverage</li>
+<li>🎚️ <strong>Only track specific tests?</strong> → Omit <code>default</code> and only map what you need</li>
+</ul>
 <h2 id="mapping-tests-to-spira-test-cases">Mapping Tests to Spira Test Cases<a class="headerlink" href="#mapping-tests-to-spira-test-cases" title="Permanent link">¶</a></h2>
 <p>The plugin provides multiple ways to map your pytest tests to Spira test cases. The mapping priority (from highest to lowest) is:</p>
 <ol>
@@ -4677,6 +4792,7 @@ pytest
 <li><strong>Other pytest markers</strong> - Existing markers mapped in configuration</li>
 <li><strong>Function name</strong> - Specific function mapping in configuration</li>
 <li><strong>Class name</strong> - All tests in a class mapped in configuration</li>
+<li><strong>Module name</strong> - All tests in a file mapped in configuration</li>
 <li><strong>Default</strong> - Fallback test case ID</li>
 </ol>
 <h3 id="method-1-using-pytestmarkspira_id-marker">Method 1: Using @pytest.mark.spira_id() Marker<a class="headerlink" href="#method-1-using-pytestmarkspira_id-marker" title="Permanent link">¶</a></h3>
@@ -4791,11 +4907,78 @@ pytest
 <p class="admonition-title">When to Use</p>
 <p>Use this method to reduce configuration verbosity when all tests in a class should map to the same test case.</p>
 </div>
-<h3 id="method-5-default-mapping">Method 5: Default Mapping<a class="headerlink" href="#method-5-default-mapping" title="Permanent link">¶</a></h3>
-<p>Any test without a specific mapping uses the default test case ID:</p>
+<h3 id="method-5-module-level-mapping">Method 5: Module-Level Mapping<a class="headerlink" href="#method-5-module-level-mapping" title="Permanent link">¶</a></h3>
+<p>Map entire test files (modules) to a single test case. All tests in the file are aggregated into one test run result:</p>
+<p><strong>Configuration (spira.cfg):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">[modules]</span>
+<span class="c1"># Use the full dotted module path (recommended)</span>
+<span class="na">tests.features.authentication.test_login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">40</span>
+<span class="na">tests.features.payment.test_checkout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">41</span>
+
+<span class="c1"># For packages, always use the full dotted path</span>
+<span class="na">tests.integration.test_api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">50</span>
+<span class="na">tests.unit.test_models</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">51</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Module Path Requirements</p>
+<p><strong>Always use the full dotted module path</strong> as pytest sees it. The module name must match exactly what pytest imports.</p>
+<p><strong>How to find the correct module name:</strong></p>
+<ol>
+<li>Run with verbose mode: <code>pytest path/to/test_file.py -v</code></li>
+<li>Look for the debug output: <code>Checking module mapping for module: 'actual.module.name'</code></li>
+<li>Use that exact string in your config</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>✅ Correct: <code>tests.features.mywork.test_myincidents = 4870</code></li>
+<li>❌ Wrong: <code>test_myincidents = 4870</code> (missing path)</li>
+<li>❌ Wrong: <code>test.features.mywork.test_myincidents = 4870</code> (typo: "test" vs "tests")</li>
+</ul>
+</div>
+<p><strong>Test File (tests/features/authentication/test_login.py):</strong>
+</p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_login</span><span class="p">():</span>
+    <span class="c1"># Maps to test case 40</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_logout</span><span class="p">():</span>
+    <span class="c1"># Maps to test case 40</span>
+    <span class="k">assert</span> <span class="kc">True</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TestSecurity</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_2fa</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Maps to test case 40</span>
+        <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<p><strong>Aggregated Result in Spira:</strong>
+</p><div class="highlight"><pre><span></span><code>Module: tests.features.authentication.test_login
+Total: 3 tests - Passed: 3, Failed: 0, Skipped: 0
+
+[PASSED] test_login
+[PASSED] test_logout
+[PASSED] TestSecurity.test_2fa
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">When to Use</p>
+<p>Use this method for high-level traceability when you want to track entire test files as a single test case. Perfect for feature-based or component-based test organization. Reduces API calls by ~90% for module-mapped tests.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Aggregation Behavior</p>
+<ul>
+<li>All tests in the module are aggregated into a single test run</li>
+<li>Overall status: Failed if any test fails, Passed if all pass</li>
+<li>Individual test results are shown in the aggregated message</li>
+<li>Stack traces from failed tests are included</li>
+</ul>
+</div>
+<h3 id="method-6-default-mapping">Method 6: Default Mapping<a class="headerlink" href="#method-6-default-mapping" title="Permanent link">¶</a></h3>
+<p>Any test without a specific mapping uses the default test case ID (if configured):</p>
 <div class="highlight"><pre><span></span><code><span class="k">[test_cases]</span>
 <span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Optional Default</p>
+<p>The <code>default</code> setting is optional. If not specified, tests without explicit mappings will not be logged to Spira. This gives you precise control over which tests are tracked.</p>
+</div>
 <h2 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">¶</a></h2>
 <p>Here is a complete example showing all mapping methods:</p>
 <p><strong>Configuration (.env.spira):</strong>
@@ -4813,6 +4996,10 @@ pytest
 <span class="k">[markers]</span>
 <span class="na">smoke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">30</span>
 <span class="na">regression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">31</span>
+
+<span class="k">[modules]</span>
+<span class="c1"># Use the full dotted module path</span>
+<span class="na">tests.features.calculator.test_calculator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">35</span>
 </code></pre></div>
 <p><strong>Test File:</strong>
 </p><div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
@@ -4954,19 +5141,29 @@ pytest<span class="w"> </span>-m<span class="w"> </span>critical
         <span class="c1"># Maps to 100 (function beats class)</span>
         <span class="k">assert</span> <span class="kc">True</span>
 </code></pre></div>
-<p><strong>Example 4: Class name beats default</strong>
-</p><div class="highlight"><pre><span></span><code><span class="c1"># Config has: testauth = 200, default = 20</span>
+<p><strong>Example 4: Class name beats module name</strong>
+</p><div class="highlight"><pre><span></span><code><span class="c1"># Config has: testauth = 200, test_auth = 150</span>
 
+<span class="c1"># In file: test_auth.py</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">TestAuth</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">test_logout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Maps to 200 (class beats default)</span>
+        <span class="c1"># Maps to 200 (class beats module)</span>
         <span class="k">assert</span> <span class="kc">True</span>
+</code></pre></div>
+<p><strong>Example 5: Module name beats default</strong>
+</p><div class="highlight"><pre><span></span><code><span class="c1"># Config has: test_auth = 150, default = 20</span>
+
+<span class="c1"># In file: test_auth.py</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_logout</span><span class="p">():</span>
+    <span class="c1"># Maps to 150 (module beats default)</span>
+    <span class="k">assert</span> <span class="kc">True</span>
 </code></pre></div>
 <h2 id="migration-from-earlier-versions">Migration from Earlier Versions<a class="headerlink" href="#migration-from-earlier-versions" title="Permanent link">¶</a></h2>
 <p>If you're upgrading from an earlier version of the plugin, your existing configuration will continue to work without changes. The old format of mapping class methods (<code>MyClass.myFunction = 22</code>) is still supported.</p>
 <p>To take advantage of new features:</p>
 <ol>
 <li><strong>Move credentials to .env.spira</strong> for better security</li>
+<li><strong>Use module-level mapping</strong> for high-level traceability of entire test files</li>
 <li><strong>Use class-level mapping</strong> to simplify configuration (instead of mapping each method individually)</li>
 <li><strong>Use marker mapping</strong> if you already organize tests with pytest markers</li>
 <li><strong>Use @pytest.mark.spira_id()</strong> for explicit control when needed</li>
@@ -4977,13 +5174,19 @@ pytest<span class="w"> </span>-m<span class="w"> </span>critical
 <li>Verify credentials in <code>.env.spira</code> or <code>spira.cfg</code></li>
 <li>Check that project_id exists in Spira</li>
 <li>Ensure test case IDs are valid</li>
+<li>Check if test has a mapping (function, class, module, marker, or default)</li>
+<li>If no <code>default</code> is configured, only explicitly mapped tests will be logged</li>
 <li>Enable verbose mode to see detailed logging</li>
 </ul>
 <p><strong>Wrong test case mapping?</strong></p>
 <ul>
-<li>Check the priority order: spira_id marker &gt; other markers &gt; function name &gt; class name &gt; default</li>
-<li>Verify spelling of function/class/marker names in configuration</li>
+<li>Check the priority order: spira_id marker &gt; other markers &gt; function name &gt; class name &gt; module name &gt; default</li>
+<li>Verify spelling of function/class/marker/module names in configuration</li>
 <li>Remember that names are case-insensitive in the config file</li>
+<li><strong>For module mapping:</strong> Use the full dotted path as pytest sees it</li>
+<li>Run <code>pytest path/to/test.py -v</code> to see: <code>Checking module mapping for module: 'actual.module.name'</code></li>
+<li>Use that exact string in your config (e.g., <code>tests.features.mywork.test_myincidents = 4870</code>)</li>
+<li>Common mistake: Using <code>test_myincidents</code> instead of <code>tests.features.mywork.test_myincidents</code></li>
 <li>Enable verbose mode to see which test case ID is being used</li>
 </ul>
 <p><strong>Environment variables not working?</strong></p>
