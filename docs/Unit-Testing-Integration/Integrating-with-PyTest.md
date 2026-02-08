@@ -7,6 +7,7 @@ The plugin supports multiple ways to map tests to Spira test cases:
 
 - **Environment variables** for secure credential management
 - **Pytest markers** for flexible test organization
+- **Module-level mapping** for entire test files
 - **Class-level mapping** for test suites
 - **Function-level mapping** for individual tests
 
@@ -65,7 +66,7 @@ release_id = 5
 test_set_id = 1
 
 [test_cases]
-# Default test case ID for unmapped tests
+# Default test case ID for unmapped tests (optional)
 default = 20
 
 # Function-level mapping
@@ -79,6 +80,12 @@ testcalculator = 25
 smoke = 30
 regression = 31
 integration = 32
+
+[modules]
+# Map entire test files (modules) to test cases
+# IMPORTANT: Use the full dotted module path as pytest sees it
+tests.features.authentication.test_login = 40
+tests.features.payment.test_checkout = 41
 
 [settings]
 # Optional: Enable verbose logging
@@ -105,7 +112,7 @@ SPIRA_TEST_SET_ID=1
 # No [credentials] section needed when using .env.spira!
 
 [test_cases]
-# Default test case ID for unmapped tests
+# Default test case ID for unmapped tests (optional)
 default = 20
 
 # Function-level mapping
@@ -171,13 +178,26 @@ pytest
 
 **Test Cases Section:**
 
-- **default**: The default test case ID for functions without an assigned test case
+- **default**: OPTIONAL -- The default test case ID for tests without an assigned test case. If not specified, unmapped tests will not be logged to Spira.
 - **\<function name>**: Maps a specific test function to a test case ID (e.g., `test_add_2 = 22`)
 - **\<class name>**: Maps all tests in a class to a test case ID (e.g., `testcalculator = 25`)
 
 **Markers Section (Optional):**
 
 - **\<marker name>**: Maps all tests with a specific pytest marker to a test case ID (e.g., `smoke = 30`)
+
+**Modules Section (Optional):**
+
+- **\<module name>**: Maps all tests in a module (test file) to a test case ID
+- **Must use the full dotted module path** as pytest sees it (e.g., `tests.features.mywork.test_myincidents = 40`)
+- To find the correct module name, run with verbose mode and check the debug output
+
+!!! tip "Finding Module Names"
+    Run `pytest path/to/test_file.py -v` and look for:
+    ```
+    [pytest-spiratest DEBUG] Checking module mapping for module: 'actual.module.name'
+    ```
+    Use that exact string in your `[modules]` configuration.
 
 **Settings Section (Optional):**
 
@@ -186,7 +206,29 @@ pytest
 - **batch_mode**: Enable batch mode to post all results at once for better performance (values: `true`, `false`, `yes`, `no`, `1`, `0`, `on`, `off`). Can be overridden by `--spira-batch` or `--spira-no-batch` CLI flags
 
 !!! note "Case Insensitivity"
-    Function names, class names, and marker names in the configuration file are case-insensitive.
+    Function names, class names, marker names, and module names in the configuration file are case-insensitive.
+
+## Choosing the Right Mapping Method
+
+Different mapping methods suit different use cases:
+
+| Method               | Best For                                | Granularity  | Configuration |
+| -------------------- | --------------------------------------- | ------------ | ------------- |
+| **@spira_id marker** | Individual test control, overrides      | Per test     | In code       |
+| **Marker mapping**   | Test categories (smoke, regression)     | Per marker   | Config file   |
+| **Function mapping** | Specific important tests                | Per function | Config file   |
+| **Class mapping**    | Test suites, related tests              | Per class    | Config file   |
+| **Module mapping**   | Feature/component tracking              | Per file     | Config file   |
+| **Default**          | Catch-all for unmapped tests (optional) | All unmapped | Config file   |
+
+**Quick Decision Guide:**
+
+- 📁 **Tracking entire features?** → Use module mapping (`test_authentication = 40`)
+- 📦 **Grouping related tests?** → Use class mapping (`TestAuth = 30`)
+- 🏷️ **Already using pytest markers?** → Use marker mapping (`smoke = 20`)
+- 🎯 **Need precise control?** → Use function mapping or `@spira_id` marker
+- 🔄 **Want minimal config?** → Use module or class mapping for broader coverage
+- 🎚️ **Only track specific tests?** → Omit `default` and only map what you need
 
 ## Mapping Tests to Spira Test Cases
 
@@ -196,7 +238,8 @@ The plugin provides multiple ways to map your pytest tests to Spira test cases. 
 2. **Other pytest markers** - Existing markers mapped in configuration
 3. **Function name** - Specific function mapping in configuration
 4. **Class name** - All tests in a class mapped in configuration
-5. **Default** - Fallback test case ID
+5. **Module name** - All tests in a file mapped in configuration
+6. **Default** - Fallback test case ID
 
 ### Method 1: Using @pytest.mark.spira_id() Marker
 
@@ -329,14 +372,83 @@ class TestAuthentication:
 !!! tip "When to Use"
     Use this method to reduce configuration verbosity when all tests in a class should map to the same test case.
 
-### Method 5: Default Mapping
+### Method 5: Module-Level Mapping
 
-Any test without a specific mapping uses the default test case ID:
+Map entire test files (modules) to a single test case. All tests in the file are aggregated into one test run result:
+
+**Configuration (spira.cfg):**
+```cfg
+[modules]
+# Use the full dotted module path (recommended)
+tests.features.authentication.test_login = 40
+tests.features.payment.test_checkout = 41
+
+# For packages, always use the full dotted path
+tests.integration.test_api = 50
+tests.unit.test_models = 51
+```
+
+!!! warning "Module Path Requirements"
+    **Always use the full dotted module path** as pytest sees it. The module name must match exactly what pytest imports.
+    
+    **How to find the correct module name:**
+    
+    1. Run with verbose mode: `pytest path/to/test_file.py -v`
+    2. Look for the debug output: `Checking module mapping for module: 'actual.module.name'`
+    3. Use that exact string in your config
+    
+    **Example:**
+    
+    - ✅ Correct: `tests.features.mywork.test_myincidents = 4870`
+    - ❌ Wrong: `test_myincidents = 4870` (missing path)
+    - ❌ Wrong: `test.features.mywork.test_myincidents = 4870` (typo: "test" vs "tests")
+
+**Test File (tests/features/authentication/test_login.py):**
+```python
+def test_login():
+    # Maps to test case 40
+    assert True
+
+def test_logout():
+    # Maps to test case 40
+    assert True
+
+class TestSecurity:
+    def test_2fa(self):
+        # Maps to test case 40
+        assert True
+```
+
+**Aggregated Result in Spira:**
+```
+Module: tests.features.authentication.test_login
+Total: 3 tests - Passed: 3, Failed: 0, Skipped: 0
+
+[PASSED] test_login
+[PASSED] test_logout
+[PASSED] TestSecurity.test_2fa
+```
+
+!!! tip "When to Use"
+    Use this method for high-level traceability when you want to track entire test files as a single test case. Perfect for feature-based or component-based test organization. Reduces API calls by ~90% for module-mapped tests.
+
+!!! note "Aggregation Behavior"
+    - All tests in the module are aggregated into a single test run
+    - Overall status: Failed if any test fails, Passed if all pass
+    - Individual test results are shown in the aggregated message
+    - Stack traces from failed tests are included
+
+### Method 6: Default Mapping
+
+Any test without a specific mapping uses the default test case ID (if configured):
 
 ```cfg
 [test_cases]
 default = 20
 ```
+
+!!! note "Optional Default"
+    The `default` setting is optional. If not specified, tests without explicit mappings will not be logged to Spira. This gives you precise control over which tests are tracked.
 
 ## Complete Example
 
@@ -360,6 +472,10 @@ testcalculator = 25
 [markers]
 smoke = 30
 regression = 31
+
+[modules]
+# Use the full dotted module path
+tests.features.calculator.test_calculator = 35
 ```
 
 **Test File:**
@@ -534,14 +650,25 @@ class TestAuth:
         assert True
 ```
 
-**Example 4: Class name beats default**
+**Example 4: Class name beats module name**
 ```python
-# Config has: testauth = 200, default = 20
+# Config has: testauth = 200, test_auth = 150
 
+# In file: test_auth.py
 class TestAuth:
     def test_logout(self):
-        # Maps to 200 (class beats default)
+        # Maps to 200 (class beats module)
         assert True
+```
+
+**Example 5: Module name beats default**
+```python
+# Config has: test_auth = 150, default = 20
+
+# In file: test_auth.py
+def test_logout():
+    # Maps to 150 (module beats default)
+    assert True
 ```
 
 ## Migration from Earlier Versions
@@ -551,9 +678,10 @@ If you're upgrading from an earlier version of the plugin, your existing configu
 To take advantage of new features:
 
 1. **Move credentials to .env.spira** for better security
-2. **Use class-level mapping** to simplify configuration (instead of mapping each method individually)
-3. **Use marker mapping** if you already organize tests with pytest markers
-4. **Use @pytest.mark.spira_id()** for explicit control when needed
+2. **Use module-level mapping** for high-level traceability of entire test files
+3. **Use class-level mapping** to simplify configuration (instead of mapping each method individually)
+4. **Use marker mapping** if you already organize tests with pytest markers
+5. **Use @pytest.mark.spira_id()** for explicit control when needed
 
 ## Troubleshooting
 
@@ -562,13 +690,19 @@ To take advantage of new features:
 - Verify credentials in `.env.spira` or `spira.cfg`
 - Check that project_id exists in Spira
 - Ensure test case IDs are valid
+- Check if test has a mapping (function, class, module, marker, or default)
+- If no `default` is configured, only explicitly mapped tests will be logged
 - Enable verbose mode to see detailed logging
 
 **Wrong test case mapping?**
 
-- Check the priority order: spira_id marker > other markers > function name > class name > default
-- Verify spelling of function/class/marker names in configuration
+- Check the priority order: spira_id marker > other markers > function name > class name > module name > default
+- Verify spelling of function/class/marker/module names in configuration
 - Remember that names are case-insensitive in the config file
+- **For module mapping:** Use the full dotted path as pytest sees it
+  - Run `pytest path/to/test.py -v` to see: `Checking module mapping for module: 'actual.module.name'`
+  - Use that exact string in your config (e.g., `tests.features.mywork.test_myincidents = 4870`)
+  - Common mistake: Using `test_myincidents` instead of `tests.features.mywork.test_myincidents`
 - Enable verbose mode to see which test case ID is being used
 
 **Environment variables not working?**
