@@ -2,6 +2,13 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
 ## February 2026
+- [PyTest Integration](../Unit-Testing-Integration/Integrating-with-PyTest.md) v2.1:
+
+- Bug Fixes and Enhancements [IN:12204]:
+    - Can additionally now map to modules to allow for more high level test reporting
+    - Makes the default test case optional to provide greater control about what is reported or not
+    - Performance improvements
+
 - [PyTest Integration](../Unit-Testing-Integration/Integrating-with-PyTest.md) v2.0:
 
     - Bug Fixes and Enhancements [IN:12204]:
