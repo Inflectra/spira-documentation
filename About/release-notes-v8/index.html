@@ -3815,6 +3815,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#version-817-february-2026">
+<span class="md-ellipsis">
+      
+        Version 8.17 (February 2026)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-816-january-2026">
 <span class="md-ellipsis">
       
@@ -4152,6 +4161,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#version-817-february-2026">
+<span class="md-ellipsis">
+      
+        Version 8.17 (February 2026)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#version-816-january-2026">
 <span class="md-ellipsis">
       
@@ -4330,6 +4348,39 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="release-notes-for-spira-v8">Release Notes for Spira v8<a class="headerlink" href="#release-notes-for-spira-v8" title="Permanent link">¶</a></h1>
+<h2 id="version-817-february-2026">Version 8.17 (February 2026)<a class="headerlink" href="#version-817-february-2026" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Summary</p>
+<p>System administrators can now enforce single session use per user through a new Session Concurrency Control option, improving security for large instances.</p>
+<p>Sample data across portfolios, programs, and products now includes meaningful descriptions to help new users better understand the application.</p>
+<p>Numerous bug fixes and enhancements improve the user experience, including better scrolling on list pages, improved rich text display, and enhanced test execution workflows.</p>
+</div>
+<details class="success">
+<summary>New Features</summary>
+<ul>
+<li>Spira meets all WCAG 2.1 AA standards across all parts of the application, so that the application is more accessible and usable for all customers [RQ:5592]</li>
+</ul>
+</details>
+<details class="bug">
+<summary>Bug fixes and enhancements</summary>
+<ul>
+<li>Add a <a href="../../Spira-Administration-Guide/System/#security-settings">Session Concurrency Control option</a> for sites allowing multiple logins per user to enforce single session use [IN:11754]</li>
+<li>Add ability to turn on <a href="../../Spira-User-Manual/Inflectra-Ai-In-Spira/">Inflectra.ai</a> for a product via API [IN:11900]</li>
+<li>Add meaningful descriptions to all sample data portfolios [IN:9027]</li>
+<li>Add meaningful descriptions to all sample data in products and product level artifacts [IN:9430]</li>
+<li>Add meaningful descriptions to all sample data programs and program level artifacts [IN:11877]</li>
+<li>Fix the <a href="../../Spira-User-Manual/Application-Wide/#emailing">Email Addresses</a> field description when listing multiple recipients to use comma and semicolon [IN:10577]</li>
+<li>Fix the tooltips for <a href="../../Spira-User-Manual/Test-Execution/#leaving-the-test-execution-page">test execution buttons for leaving and finishing the test</a> to be more informative [IN:11492]</li>
+<li>Fix the automated test run record-multiple API endpoint to skip execution status refreshes to improve performance of large test run recording volumes [IN:11518]</li>
+<li>Improve scrolling of the left hand sidebar of <a href="../../Spira-User-Manual/Application-Wide/#artifact-list-pages">list pages</a>, to let the user scroll the sidebar directly, separately from the page [IN:11635]</li>
+<li>Fix <a href="../../Spira-User-Manual/Test-Execution/#exploratory-test-execution">exploratory test execution page</a> hiding the inner content vertical scroll bar under the external one, making users unable to scroll with their mouse pointer [IN:11748]</li>
+<li>Fix some grids failing to load if one of the leftmost two columns is a hierarchical dropdown [IN:11781]</li>
+<li>Fix save button not being enabled when artifact selector controls change their values, such as the <a href="../../Spira-User-Manual/Test-Run-Management/#test-run-details">Test Run "Test Set"</a> field and <a href="../../Spira-User-Manual/Task-Tracking/#task-details">Task "Requirement"</a> field [IN:11797]</li>
+<li>Fix <a href="../../Spira-User-Manual/Product-Homepage/#product-overview">rich text overview widgets</a> displaying raw HTML tags [IN:11835]</li>
+<li>Fix the <a href="../../Reporting/Custom-Report-Tables/#projects-products">Products</a> custom report view to use a dynamic check for Inflectra.ai being enabled or not and never show blank [IN:11841]</li>
+<li>Fix being unable to resize the side bar on an artifact's detail page [IN:11901]</li>
+</ul>
+</details>
 <h2 id="version-816-january-2026">Version 8.16 (January 2026)<a class="headerlink" href="#version-816-january-2026" title="Permanent link">¶</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Summary</p>
