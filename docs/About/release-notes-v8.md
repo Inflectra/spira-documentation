@@ -9,10 +9,11 @@
     Numerous bug fixes and enhancements improve the user experience, including better scrolling on list pages, improved rich text display, and enhanced test execution workflows.
 
 ??? success "New Features"
-    - Add a [Session Concurrency Control option](../Spira-Administration-Guide/System.md/#security-settings) for sites allowing multiple logins per user to enforce single session use [IN:11754]
-    - Add ability to turn on [Inflectra.ai](../Spira-User-Manual/Inflectra-Ai-In-Spira.md) for a product via API [IN:11900]
+    - Spira meets all WCAG 2.1 AA standards across all parts of the application, so that the application is more accessible and usable for all customers [RQ:5592]
 
 ??? bug "Bug fixes and enhancements"
+    - Add a [Session Concurrency Control option](../Spira-Administration-Guide/System.md/#security-settings) for sites allowing multiple logins per user to enforce single session use [IN:11754]
+    - Add ability to turn on [Inflectra.ai](../Spira-User-Manual/Inflectra-Ai-In-Spira.md) for a product via API [IN:11900]
     - Add meaningful descriptions to all sample data portfolios [IN:9027]
     - Add meaningful descriptions to all sample data in products and product level artifacts [IN:9430]
     - Add meaningful descriptions to all sample data programs and program level artifacts [IN:11877]

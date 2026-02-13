@@ -12,24 +12,18 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q4 2025
-- **Inflectra.ai**
-
-    - Refinements to localization with improved language support
-    - Automated product creation with user stories, tests, and risks from a product description 
-
-- Under the hood performance improvements through internal optimizations of our database communication layers.
-
 ## Q1 2026
-- Allow admins to customize test case statuses to help them create more flexible workloads.
-- Allow admins to customize task statuses to help them create more flexible workloads. This will be followed (likely further out in 2026) with the ability to customize requirement statuses.
+- Improve performance application-wide with architectural upgrades to the interface between the application and database layers
+
+## Q2 2026
+- Enhanced security with the ability to enforce users to have MFA authentication configured
+- Natural language custom report creation for administrators, using Inflectra.ai agents
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
 
 - **Inflectra.ai**
 
-    - Natural language custom report creation
     - Improved artifact creation tools, by using more context about the original artifact and its relationships to other artifacts
     - Allow users to specify example artifacts to use to customize artifact creation to align with their specific needs
     - Targeted risk analysis of artifacts in different dimensions (such as governance, security, and compliance)
