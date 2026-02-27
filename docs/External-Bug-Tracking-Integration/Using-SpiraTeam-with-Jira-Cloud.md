@@ -9,7 +9,7 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
     - When the QA team finds bugs during testing incidents are created in Spira, and then sync to Jira
     - The Dev team manages the bug in Jira, with changes reflected back in Spira
 
-**This data syncs can sync the follow information** (what exactly syncs and is user configurable and discussed more below) 
+**This data sync plugin can sync the following information** (what exactly syncs and is user configurable are discussed more below).
 
 | Jira artifact | Spira artifact             |
 | ------------- | -------------------------- |
@@ -148,7 +148,59 @@ You need to fill in the following fields for the plugin to operate correctly:
 !!! info "Rich Text vs Plain Text"
     If you normally don't add text formatting, embedded images, or files to your descriptions and need updated text to be visible in both systems, use **Plain Text**.
     However, if you need embedded images, colors, tables, etc., in your descriptions, use **Rich Text**. 
-    Please note that Jira has limited capabilities for exporting and importing text formatting. Consequently, while the plugin will do its best to sync the text, some differences in formatting may occur. Also, due to these limitations, when using **Rich Text** sync, changes to description fields are only synchronized **one-way** - from the source artifact (older) to the target (newer) and never in the reverse direction. The plugin will add a warning message to the affected description fields.
+    Please note that Jira has limited capabilities for exporting and importing text formatting. Consequently, while the plugin will do its best to sync the text, some differences in formatting may occur. Also, due to these limitations, when using **Rich Text** sync, changes to description fields are only synchronized **one-way** - from the source artifact (older) to the target (newer) and never in the reverse direction. By default, the plugin will add a warning message to the affected description fields to remind you of this limitation. Alternatively, you can skip adding these warnings and use a custom property to indicate that instead. See the 'Skip Rich Text Warnings' field below.
+
+- **Skip Rich Text Warnings**: Set this field to *Yes* to prevent the plugin from adding warning messages to description fields when using **Rich Text** sync. By default, when Rich Text sync is enabled, the plugin adds a warning message to description fields that cannot be updated bidirectionally. Enabling this option removes those warnings, giving you cleaner descriptions. However, you should only enable this if you understand that description changes will only sync one-way (from older to newer artifacts). You can use custom properties in Spira and Jira to indicate which is the oldest counterpart if you choose to skip the warnings. Learn more below.
+
+!!! note "Setting Up the IsOlder Property (Recommended when Skip Rich Text Warnings is enabled)"
+    When you enable **Skip Rich Text Warnings**, you need to configure the "isOlder" property so users can identify which system contains the original version of each artifact. This property indicates whether an artifact was created first in Spira or Jira, helping users know where they can safely edit descriptions.
+
+    **Why you need this property:**
+    
+    When Rich Text Warnings are disabled, users won't see warning messages in description fields. The isOlder property becomes essential because it tells users which system is authoritative for each artifact's description. Users should only edit descriptions in the system where isOlder = true to ensure their changes sync properly.
+
+    **Setup Steps:**
+
+    1. **In Spira** - Create a custom property:
+        - Go to Administration > [Artifact Type]* > Custom Properties
+        - Create a new custom property:
+            - Set the **Type** to **Boolean**
+            - Give it any name that makes sense to your team, e.g.: "Is Older", "Original System", "Descriptions are Updated?", etc.
+
+    2. **In Spira** - Map the property:
+        - Go to the product's [Jira datasync mapping page](#custom-property-mapping)
+        - Click on the custom property you just created
+        - Set the **External Key** to exactly **isOlder**
+        - Click "Save"
+    
+    *Repeat steps 1 and 2 for Incidents, Requirements, and/or Tasks, depending on what you need to sync.
+
+    ![](img/JiraCloud-Plugin-Config-isOlder.png)
+
+    3. **In Jira** - Create a matching custom field:
+        - Go to Jira Settings > Issues > Custom fields
+        - Create a new custom field of type **Radio Buttons**
+        - Add exactly two options*: **Yes** and **No** (Jira doesn't support boolean fields natively)
+        - **Important**: Name this field with the exact same name you used in Spira (e.g., "Original System")
+        - Associate it with the appropriate issue types (Bug, Story, Task, etc.)
+        - Add it to the relevant screens so users can see it
+    
+    *Or, alternatively, Oui/Non (French), Sí/No (Spanish), Sim/Não (Portuguese), or Ja/Nein (German)
+
+    **How it works:**
+    
+    - When an artifact is created in Spira and synced to Jira: isOlder = true in Spira, false in Jira
+    - When an artifact is created in Jira and synced to Spira: isOlder = false in Spira, true in Jira
+    - Users should only edit descriptions where isOlder = true to ensure changes sync properly
+    - The plugin automatically maintains these values during synchronization
+
+    **Example scenario:**
+
+    - A bug is reported in Spira (isOlder = true in Spira, false in Jira)
+    - The bug syncs to Jira
+    - If you update the description in Spira, it will sync to Jira
+    - If you update the description in Jira, it will NOT sync back to Spira
+    - This prevents conflicts and ensures the source system remains authoritative for descriptions
 
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
@@ -573,6 +625,30 @@ When the "Auto-Map Properties" option is enabled in the plugin configuration, th
         The system ignores special characters, capitalization, spaces, and leading numbers when comparing names for auto-mapping. For example, "1-Medium-Priority", "Medium Priority", and "mediumPriority" would all be considered similar enough to match.
 
 Even with auto-mapping enabled, you may still need to manually map some properties, especially if they have different names in the two systems or if you need specific mapping configurations.
+
+!!! info "What Fields Does Auto-Mapping Cover?"
+    Auto-mapping works for the following field types:
+
+    **Standard Fields** (for Incidents, Requirements, and Tasks):
+    
+    - Type
+    - Status  
+    - Priority (Incidents and Tasks) / Importance (Requirements)
+    - Component
+
+    **Custom Properties:**
+    
+    - All custom property types including Text, Integer, Decimal, Boolean, Date, User, Release, List, and Multi-List
+    - Both scalar properties (simple values) and list properties (with their values)
+
+    **What Auto-Mapping Does NOT Cover:**
+    
+    - Release mappings (must be configured manually or created automatically during sync)
+    - Special fields like Issue Key, and Time Tracking (must be configured manually)
+    - User mappings (handled separately through user mapping configuration)
+    - The External Key for product activation (must be entered manually)
+
+    Auto-mapping saves significant time on standard field and custom property configuration, but you'll still need to manually configure special fields and activate the product with an External Key.
 
 ## Using Spira with Jira
 Now that all the mappings are done, you are now ready to use the integration.
