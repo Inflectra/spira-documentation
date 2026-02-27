@@ -168,7 +168,7 @@ You need to fill in the following fields for the plugin to operate correctly:
             - Give it any name that makes sense to your team, e.g.: "Is Older", "Original System", "Descriptions are Updated?", etc.
 
     2. **In Spira** - Map the property:
-        - Go to the product's [Jira datasync mapping page](#custom-property-mapping)
+        - Go to the product's Jira datasync mapping page
         - Click on the custom property you just created
         - Set the **External Key** to exactly **isOlder**
         - Click "Save"
