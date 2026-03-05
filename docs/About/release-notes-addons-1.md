@@ -1,6 +1,19 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## March 2026
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.5:
+
+    - Bug Fixes and Enhancements:
+        - [IN:11657] Adds a new option to skip rich text warnings in descriptions and support for a new custom property to indicate sync direction (isOlder)
+        - [IN:12002] Fixes a bug when syncing hierarchy in more restricted Jira environments
+        - [IN:12097] Significantly increases performance when using the createReleasesOnly mode
+        - [IN:11965] Fixes a problem related to syncing unmapped Requirement types in projects when they were customized
+        - [IN:11977] Fixes a bug related to Sync Mode parameters
+        - [IN:11272] Fixes a bug related to deleted releases sync
+        - [IN:12060] Improves Event Log messages related to product misconfigurations in Jira
+        - [IN:11979] Improves the description of the Auto-Mapping feature in documentation
+
 ## February 2026
 - [PyTest Integration](../Unit-Testing-Integration/Integrating-with-PyTest.md) v2.1:
 
