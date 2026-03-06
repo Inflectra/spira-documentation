@@ -9,7 +9,7 @@ Teams can work seamlessly using both Spira and Jira Server or Jira DataCenter (h
     - When the QA team finds bugs during testing incidents are created in Spira, and then sync to Jira
     - The Dev team manages the bug in Jira, with changes reflected back in Spira
 
-**This data syncs can sync the follow information** (what exactly syncs and is user configurable and discussed more below) 
+**This data sync plugin can sync the following information** (what exactly syncs and is user configurable are discussed more below).
 
 | Jira artifact | Spira artifact             |
 | ------------- | -------------------------- |

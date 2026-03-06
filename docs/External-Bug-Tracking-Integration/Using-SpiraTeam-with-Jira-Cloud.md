@@ -9,7 +9,7 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
     - When the QA team finds bugs during testing incidents are created in Spira, and then sync to Jira
     - The Dev team manages the bug in Jira, with changes reflected back in Spira
 
-**This data syncs can sync the follow information** (what exactly syncs and is user configurable and discussed more below) 
+**This data sync plugin can sync the following information** (what exactly syncs and is user configurable are discussed more below).
 
 | Jira artifact | Spira artifact             |
 | ------------- | -------------------------- |
@@ -21,7 +21,7 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 | Comments      | Comments                   |
 | Attachments   | Documents                  |
 
-**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you a range different syncing modes, depending on your workflows and needs.
+**The table below shows a summary of how data is synced from/to Spira and Jira Cloud**. The Jira datasync gives you a range of different syncing modes, depending on your workflows and needs.
 
 | Sync Mode      | Releases       | Requirements   | Incidents                                     | Tasks                                         |
 | -------------- | -------------- | -------------- | --------------------------------------------- | --------------------------------------------- |
@@ -33,15 +33,15 @@ Teams can work seamlessly using both Spira and Jira Cloud, using Inflectra's Jir
 
 Notes about syncing:
 
-- The **Default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
-- The **Bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+- The **Default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be seen in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
+- The **Bidirectional** sync mode is similar to default, except that incidents fully sync both ways - for new incidents/issues, and their updates. 
 - The **Complete** sync mode allows fully bidirectional sync upon creation and update of all the supported artifacts (Releases, Requirements, Incidents, and Tasks).
 - The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
 - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).
 - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
 - Comments are synced bidirectionally by default between Spira and Jira Cloud. You can disable comments syncing using the option on the configuration page.
 - Spira artifact tags sync as Jira labels and vice-versa, in the way supported by the sync mode
-- Attachments are created in the other system when new artifacts/issues are created or existing ones are updated. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
+- Attachments are created in the other system when new artifacts/issues are created or existing ones are updated. Optionally, you can turn off the sync of attachments between the systems by adding an extra parameter to the field Sync Mode.
 - If you are syncing Requirements, you can optionally sync the Epic/Story hierarchy from Jira to Spira Requirements and vice-versa. 
 - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
@@ -50,7 +50,7 @@ For the data sync to work correctly make sure you meet **all** of the steps belo
 
 - [x] Use Spira v8.10+
 - [x] Use Jira Cloud (we have a [separate data sync for Jira Server / DataCenter](./Using-SpiraTeam-with-JIRA-5+.md))
-- [x] [Setup a datasync  service](Setting-up-Data-Synchronization.md) - either in Inflectra's cloud or on your own servers
+- [x] [Setup a datasync service](Setting-up-Data-Synchronization.md) - either in Inflectra's cloud or on your own servers
 - [x] [Download the Jira configuration helper application](#jira-configuration-helper)
 - [x] [Configure the plugin in Spira](#configure-the-plugin)
 - [x] [Configure system wide user mapping](#user-mapping)
@@ -73,13 +73,13 @@ Then, for each product you want to sync:
 
 - Find the plugin called **JiraDataSync** and click the "Edit" button to open the settings page
 
-??? question "What do if the plugin is not there"
-    If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.
+??? question "What to do if the plugin is not there"
+    If you don't see the plug-in in the list, click the "Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend adding just enough information now to create the plug-in. Then edit the plug-in after it's made to complete the process.
 
     To start, fill in the following fields:
 
     - Name: enter "JiraDataSync" exactly
-    - Connection Info: enter the the full URL to the Jira instance (see "Jira URL" below)
+    - Connection Info: enter the full URL to the Jira instance (see "Jira URL" below)
     - Login: enter your Atlassian cloud login
 
     Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.
@@ -97,7 +97,7 @@ You need to fill in the following fields for the plugin to operate correctly:
 
 ![](img/JiraCloud-Plugin-Config2.png)
 
-- **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Jira are not being updated in Spira (especially if comments are not syncing), try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also Jira is on a server set to a different time-zone, you should add in the number of hours difference between the servers time-zones here.
+- **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Jira are not being updated in Spira (especially if comments are not syncing), try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also, if Jira is on a server set to a different time-zone, you should add in the number of hours difference between the servers' time-zones here.
 - **Auto-Map Users**: This changes the way that the plugin maps users between Spira and Jira. Set to yes to auto-map users, or no to manually map users. See [below]
 
 !!! info "Configuration Tip"
@@ -148,7 +148,59 @@ You need to fill in the following fields for the plugin to operate correctly:
 !!! info "Rich Text vs Plain Text"
     If you normally don't add text formatting, embedded images, or files to your descriptions and need updated text to be visible in both systems, use **Plain Text**.
     However, if you need embedded images, colors, tables, etc., in your descriptions, use **Rich Text**. 
-    Please note that Jira has limited capabilities for exporting and importing text formatting. Consequently, while the plugin will do its best to sync the text, some differences in formatting may occur. Also, due to these limitations, when using **Rich Text** sync, changes to description fields are only synchronized **one-way** - from the source artifact (older) to the target (newer) and never in the reverse direction. The plugin will add a warning message to the affected description fields.
+    Please note that Jira has limited capabilities for exporting and importing text formatting. Consequently, while the plugin will do its best to sync the text, some differences in formatting may occur. Also, due to these limitations, when using **Rich Text** sync, changes to description fields are only synchronized **one-way** - from the source artifact (older) to the target (newer) and never in the reverse direction. By default, the plugin will add a warning message to the affected description fields to remind you of this limitation. Alternatively, you can skip adding these warnings and use a custom property to indicate that instead. See the 'Skip Rich Text Warnings' field below.
+
+- **Skip Rich Text Warnings**: Set this field to *Yes* to prevent the plugin from adding warning messages to description fields when using **Rich Text** sync. By default, when Rich Text sync is enabled, the plugin adds a warning message to description fields that cannot be updated bidirectionally. Enabling this option removes those warnings, giving you cleaner descriptions. However, you should only enable this if you understand that description changes will only sync one-way (from older to newer artifacts). You can use custom properties in Spira and Jira to indicate which is the oldest counterpart if you choose to skip the warnings. Learn more below.
+
+!!! note "Setting Up the IsOlder Property (Recommended when Skip Rich Text Warnings is enabled)"
+    When you enable **Skip Rich Text Warnings**, you need to configure the "isOlder" property so users can identify which system contains the original version of each artifact. This property indicates whether an artifact was created first in Spira or Jira, helping users know where they can safely edit descriptions.
+
+    **Why you need this property:**
+    
+    When Rich Text Warnings are disabled, users won't see warning messages in description fields. The isOlder property becomes essential because it tells users which system is authoritative for each artifact's description. Users should only edit descriptions in the system where isOlder = true to ensure their changes sync properly.
+
+    **Setup Steps:**
+
+    1. **In Spira** - Create a custom property:
+        - Go to Administration > [Artifact Type]* > Custom Properties
+        - Create a new custom property:
+            - Set the **Type** to **Boolean**
+            - Give it any name that makes sense to your team, e.g.: "Is Older", "Original System", "Descriptions are Updated?", etc.
+
+    2. **In Spira** - Map the property:
+        - Go to the product's Jira datasync mapping page
+        - Click on the custom property you just created
+        - Set the **External Key** to exactly **isOlder**
+        - Click "Save"
+    
+    *Repeat steps 1 and 2 for Incidents, Requirements, and/or Tasks, depending on what you need to sync.
+
+    ![](img/JiraCloud-Plugin-Config-isOlder.png)
+
+    3. **In Jira** - Create a matching custom field:
+        - Go to Jira Settings > Issues > Custom fields
+        - Create a new custom field of type **Radio Buttons**
+        - Add exactly two options*: **Yes** and **No** (Jira doesn't support boolean fields natively)
+        - **Important**: Name this field with the exact same name you used in Spira (e.g., "Original System")
+        - Associate it with the appropriate issue types (Bug, Story, Task, etc.)
+        - Add it to the relevant screens so users can see it
+    
+    *Or, alternatively, Oui/Non (French), Sí/No (Spanish), Sim/Não (Portuguese), or Ja/Nein (German)
+
+    **How it works:**
+    
+    - When an artifact is created in Spira and synced to Jira: isOlder = true in Spira, false in Jira
+    - When an artifact is created in Jira and synced to Spira: isOlder = false in Spira, true in Jira
+    - Users should only edit descriptions where isOlder = true to ensure changes sync properly
+    - The plugin automatically maintains these values during synchronization
+
+    **Example scenario:**
+
+    - A bug is reported in Spira (isOlder = true in Spira, false in Jira)
+    - The bug syncs to Jira
+    - If you update the description in Spira, it will sync to Jira
+    - If you update the description in Jira, it will NOT sync back to Spira
+    - This prevents conflicts and ensures the source system remains authoritative for descriptions
 
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
@@ -314,9 +366,9 @@ For many of the fields, you can **map multiple Spira field values** to the same 
     Click on the "Severity" hyperlink under Incident Standard Fields to bring up the Incident severity mapping configuration screen. Unlike the other incident standard fields, Jira doesn't have a built-in severity field. If you want to see Spira incident severities in Jira, create a Jira custom list field to store the different severity values. If you don't want to synchronize severity values with Jira, you can skip the rest of this section.
 
     Once you have created a severity custom list field in Jira, you need to:
-    - populate the field mappings **with the name** (Not the ID) of the severity custom property values in Jira
+    - populate the field mappings **with the name** (not the ID) of the severity custom property values in Jira
     - go to the [Plugin configuration](#configure-the-plugin) screen
-    - Enter the ID of the custom field you're using to store severities in Jira in the "Jira Custom Fields" field. You can fin the ID on the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
+    - Enter the ID of the custom field you're using to store severities in Jira in the "Jira Custom Fields" field. You can find the ID on the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_38.png)
 
@@ -330,7 +382,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
     Click on the "Status" hyperlink under Requirement Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the requirement statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
     
-    **This mapping optionally supports more than one Jira status per row, just enter a comma-separated list of jira statuses. Please make sure to not mark duplicated fields as Primary.**
+    **This mapping optionally supports more than one Jira status per row; just enter a comma-separated list of Jira statuses. Please make sure to not mark duplicated fields as Primary.**
 
     The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -394,7 +446,7 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
     Click on the "Status" hyperlink under Task Standard Fields to bring up the Requirement status mapping configuration screen. The table lists each of the task statuses available in Spira and provides you with the ability to enter the matching Jira issue status ID for each one.
 
-    **This mapping optionally supports more than one Jira status per row, just enter a comma-separated list of jira statuses. Please make sure to not mark duplicated fields as Primary.**
+    **This mapping optionally supports more than one Jira status per row; just enter a comma-separated list of Jira statuses. Please make sure to not mark duplicated fields as Primary.**
 
     The Jira ID can be found by using the "Issue Statuses" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -443,7 +495,7 @@ To start, go to the data mapping home page for the selected product you were on 
 === "Scalar properties"
     ![](img/Using_SpiraTeam_with_JIRA_5+_43.png)
 
-    This refers to custom properties of all types **except** List and Multi-List. This properties with types like Text, Date, User, Release, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
+    This refers to custom properties of all types **except** List and Multi-List. These properties have types like Text, Date, User, Release, Boolean, Decimal, Integer, and so on - as they have simple, user-entered values. For scalar custom properties, there will be no values listed in the lower half of the screen.
 
     Fill in the "External Key" field with the Jira ID of the custom field and click "Save". The ID can be found by using the "Custom Fields" tab of the [Jira configuration helper](#jira-configuration-helper).
 
@@ -504,10 +556,10 @@ To start, go to the data mapping home page for the selected product you were on 
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_security.png)
 
-    The external ID can be found by looking at the URL inside Jira which choosing to View/Edit the security level name/description.
+    The external ID can be found by looking at the URL inside Jira when choosing to View/Edit the security level name/description.
 
 === "Issue Key Field"
-    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is be named after the plugin name
+    Spira automatically stores the unique id of each Jira issue against the relevant Spira artifact. This field is visible on the artifact details page, in the "Properties" section. The field in Spira is named after the plugin name
 
     ![](img/Using_SpiraTeam_with_JIRA_5+_48.png)
 
@@ -573,6 +625,30 @@ When the "Auto-Map Properties" option is enabled in the plugin configuration, th
         The system ignores special characters, capitalization, spaces, and leading numbers when comparing names for auto-mapping. For example, "1-Medium-Priority", "Medium Priority", and "mediumPriority" would all be considered similar enough to match.
 
 Even with auto-mapping enabled, you may still need to manually map some properties, especially if they have different names in the two systems or if you need specific mapping configurations.
+
+!!! info "What Fields Does Auto-Mapping Cover?"
+    Auto-mapping works for the following field types:
+
+    **Standard Fields** (for Incidents, Requirements, and Tasks):
+    
+    - Type
+    - Status  
+    - Priority (Incidents and Tasks) / Importance (Requirements)
+    - Component
+
+    **Custom Properties:**
+    
+    - All custom property types including Text, Integer, Decimal, Boolean, Date, User, Release, List, and Multi-List
+    - Both scalar properties (simple values) and list properties (with their values)
+
+    **What Auto-Mapping Does NOT Cover:**
+    
+    - Release mappings (must be configured manually or created automatically during sync)
+    - Special fields like Issue Key, and Time Tracking (must be configured manually)
+    - User mappings (handled separately through user mapping configuration)
+    - The External Key for product activation (must be entered manually)
+
+    Auto-mapping saves significant time on standard field and custom property configuration, but you'll still need to manually configure special fields and activate the product with an External Key.
 
 ## Using Spira with Jira
 Now that all the mappings are done, you are now ready to use the integration.
