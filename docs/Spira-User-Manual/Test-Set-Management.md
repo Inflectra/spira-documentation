@@ -250,6 +250,21 @@ This section displays the list of test cases currently contained within the test
 
 ![](img/Test_Case_Management_222.png)
 
+**Note**: Adding test cases to a test set or changing a test set's release does not add the test cases to the release. However, execution of the test set will so to get this you should:
+- execute the test set with its test cases
+- check the release's test case tab again - test cases now show
+
+To ensure test cases are assigned to correct release you will have to do two things:
+* add the test cases to the release first
+* then add the test cases to the test set
+
+The test case can be added to the release in a number of ways:
+- From Test Cases Tab of the release's details page
+- From requirement details page Test Coverage Tab (if the requirement already has a release set)
+- Test Case list page (Add to Release)
+- Test Case details page, Release tab
+
+
 To move the test cases, click the test case icon and drag it to the appropriate position in the list.
 
 To modify an existing Test Case click the "***Edit***" button in the right-most column, or *double-click* on the cells in the row. That will switch the selected row into Edit mode. The Owner and Planned Date fields (if visible) can then be set at the test case level. Setting the owner field here is useful if you want the different test cases in the set to be executed by different testers (e.g. in integrated, scenario tests).
