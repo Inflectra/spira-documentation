@@ -134,7 +134,7 @@ Select the checkbox of any users you want to import and click "Import" to comple
 ## Login Providers
 You can connect your organization's identity provider for Single Sign On (SSO) authentication with Spira. This works for both on premise and cloud versions of the application. We currently support integration with:
 
-- [Azure AD](../HowTo-Guides/Login-providers.md/#azure-ad)
+- [EntraID (former Azure AD)](../HowTo-Guides/Login-providers.md/#azure-ad)
 - [Github](../HowTo-Guides/Login-providers.md/#github)
 - [Gitlab](../HowTo-Guides/Login-providers.md/#gitlab)
 - [Google](../HowTo-Guides/Login-providers.md/#google)
@@ -155,7 +155,7 @@ Note that you can only deactivate a provider that does not have any users linked
 
 Once you have setup a login provider, users will see a button for that provider on the Spira login page:
 
-![user administration login provider details page for AzureAD](img/System_Users_oauth-admin-provider-AzureAD.png)
+![user administration login provider details page for EntraID (former Azure AD)](img/System_Users_oauth-admin-provider-EntraID (former Azure AD).png)
 
 ### How to set up a provider to integrate with Spira
 Below is a general set of instructions about how to set up the provider and Spira to work together. However, the providers may have changed their process or documentation, so please consult the provider about configuring their system.
@@ -168,7 +168,7 @@ Below is a general set of instructions about how to set up the provider and Spir
     - Use the "Return URL" from above in the field called something like return URL, callback URL, redirect URL
     - A guide to set up each provider, and the specific permissions they each need are available here: 
 
-        - [Azure AD](../HowTo-Guides/Login-providers.md/#azure-ad)
+        - [EntraID (former Azure AD)](../HowTo-Guides/Login-providers.md/#azure-ad)
         - [Github](../HowTo-Guides/Login-providers.md/#github)
         - [Gitlab](../HowTo-Guides/Login-providers.md/#gitlab)
         - [Google](../HowTo-Guides/Login-providers.md/#google)

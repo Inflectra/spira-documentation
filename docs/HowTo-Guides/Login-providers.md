@@ -6,25 +6,25 @@ For more information about using login providers see the [admin guide](../Spira-
 
     The "Client Secret" field is very sensitive so do not share it. Once you enter it in Spira you will not be able to access it again. Store it somewhere safely, like a password manager, if required.
 
-## Azure AD
-To set up an Azure AD provider app with Spira you will need an Azure account with Azure AD set up with users as needed. For the steps below we have assumed Azure AD is set up in relatively standard way.
+## EntraID (former Azure AD)
+To set up an EntraID provider app with Spira you will need an EntraID (formerly Azure AD) account with EntraID set up with users as needed. For the steps below we have assumed EntraID is set up in relatively standard way.
 
 **First, you need to set up the app registration**, this app will give your users a specific connection to Spira.
 When creating an app registration you should:
 
-1. Go to Azure AD
+1. Go to EntraID
 2. Click "App Registrations" from the sidebar on the left, then "New Registration" from the top of the page
 3. Enter a meaningful name
-4. Select which type of accounts to support. There are 3 options (as of March 2020). Pick the one that makes sense for your organization. 
+4. Select which type of accounts to support. There are 4 options (as of March 2026). Pick the one that makes sense for your organization. 
 5. **Enter a Redirect URI of type Web**:
-    - this should be the full URL as shown at the bottom of the Azure AD provider page in Spira and **must** be HTTPS. 
-    - Note: Azure AD lets you add many redirect URIs but in our testing only the one we entered the very first time seemed to work - hopefully you will have better luck than us
+    - this should be the full URL as shown at the bottom of the EntraID provider page (https://MYINSTANCEURL.spiraservice.net/oauth) in Spira and **must** be HTTPS. 
+    - Note: EntraID lets you add many redirect URIs but in our testing only the one we entered the very first time seemed to work - hopefully you will have better luck than us
 6. Once the app registration has been completed you will be taken to the App Registration Overview screen for this app. 
 7. You will need to enter the "Application (Client) ID" into Spira as your Client ID
 8. By default, the permissions of the app include Microsoft Graph > User.Read. This is the only required permission by Spira
 9. To generate the secret key for Spira go to "Certificates and Secrets" and create a "New Client Secret"
     - Give it a name
-    - Set an expiry
+    - Set an expiry period
     - Make sure to copy and safely store the generated secret as once it is created you will not be able to retrieve it again
 10. To enter the provider information into Spira you will need 3 URLs. Go to the app registration overview page and click "Endpoints" to see all the possible URLs. 
     1. Authorization URL = "OAuth 2.0 authorization endpoint (v2)" url
