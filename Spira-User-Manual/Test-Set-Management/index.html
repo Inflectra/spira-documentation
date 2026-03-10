@@ -4687,6 +4687,17 @@ TG(Configuration) --&gt; TX;</code></pre>
 <h3 id="overview-test-cases">Overview - Test Cases<a class="headerlink" href="#overview-test-cases" title="Permanent link">¶</a></h3>
 <p>This section displays the list of test cases currently contained within the test set. You can add, remove, reposition and remove test cases from the list. The execution status displayed next to each test case is the most recent execution status of the test case <em>when run in the context of the current test set and, if specified, the release we are displaying data for</em>.</p>
 <p><img alt="" src="../img/Test_Case_Management_222.png"/></p>
+<p><strong>Note</strong>: Adding test cases to a test set or changing a test set's release does not add the test cases to the release. However, execution of the test set will so to get this you should:
+- execute the test set with its test cases
+- check the release's test case tab again - test cases now show</p>
+<p>To ensure test cases are assigned to correct release you will have to do two things:
+* add the test cases to the release first
+* then add the test cases to the test set</p>
+<p>The test case can be added to the release in a number of ways:
+- From Test Cases Tab of the release's details page
+- From requirement details page Test Coverage Tab (if the requirement already has a release set)
+- Test Case list page (Add to Release)
+- Test Case details page, Release tab</p>
 <p>To move the test cases, click the test case icon and drag it to the appropriate position in the list.</p>
 <p>To modify an existing Test Case click the "<strong><em>Edit</em></strong>" button in the right-most column, or <em>double-click</em> on the cells in the row. That will switch the selected row into Edit mode. The Owner and Planned Date fields (if visible) can then be set at the test case level. Setting the owner field here is useful if you want the different test cases in the set to be executed by different testers (e.g. in integrated, scenario tests).</p>
 <p><img alt="" src="../img/Test_Case_Management_223.png"/></p>
