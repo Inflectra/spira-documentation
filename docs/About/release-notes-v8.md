@@ -1,5 +1,11 @@
 # Release Notes for Spira v8
 
+## Version 8.17.1 (March 2026)
+??? bug "Bug fixes and enhancements"
+    - Fix color contrast issues in grid properties when using dark mode [IN:12262]
+    - Fix grid cell label width issues [IN:12241]
+    - Fix copying text to the clipboard when clicking artifact tokens or API keys in Spira [IN:12236]
+
 ## Version 8.17 (February 2026)
 !!! info "Summary"
     Numerous bug fixes and enhancements to improve the user experience and accessibility, including better scrolling on list pages, keyboard navigation, and better screen reader support.
