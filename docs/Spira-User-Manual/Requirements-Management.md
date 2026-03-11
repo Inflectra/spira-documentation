@@ -198,6 +198,17 @@ When you have made your updates, you can either click "***Save***" to commit the
 Choosing an indent level from the 'Show Level' drop down box allows you to quickly and easily view the entire requirements list at a specific indent level. For example you may want to see all requirements drilled-down to the *third* level of detail. To do this you would simply choose 'Level 3' from the list, and the requirements will be expanded / collapsed accordingly.
 
 ### Filtering
+
+Filtering items on list pages depends which view you have currently selected: Tree or List.
+If the **Tree** view is selected, which refers to the hierarchycal view, then the result of the filtering will be items which do not have any children, but can be a child of other (parent) requirement. After that the parents getting populated and results structured as a tree view. 
+
+![](img/Requirements_Management_TreeView.png)
+
+In case there is no even one requirement without children that meets current filtering criteria, then the list of results will be empty.  
+If you choose **List** so to have just a list of requirements regardless of their position in the hierarchy, then the result of the filtering will be items with no hierarchycal identifiers.
+
+![](img/Requirements_Management_ListView.png)
+
 Read about [how to create and manage filters](Application-Wide.md#filtering).
 
 ### Show / Hide Columns
