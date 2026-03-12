@@ -24,7 +24,7 @@ The next step is to configure the plug-in within Spira so that the system knows 
 
     - Name: enter "MsTfsDataSync" exactly
     - Connection Info: enter the base URL for connecting to ADO (see "ADO URL" below)
-    - Login: enter your Atlassian cloud login
+    - Login: enter your Azure DevOps cloud login
 
     Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.
 
