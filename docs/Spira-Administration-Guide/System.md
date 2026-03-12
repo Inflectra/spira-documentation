@@ -104,6 +104,8 @@ The following settings can be changed within the system, once you are satisfied,
 - **Require Password Change on First Login**: Enabling this requires all new users to change their password on first login.
 - **Disallow Names in Passwords**: If enabled, passwords cannot contain the user's real name and/or username.
 - **Enable [2-Step](#enable-2-step-authentication) Authentication**: If enabled (the default), users can add a one-time password to their profile in addition to their primary password for added security. This feature is available to users who authenticate using the application's username and password system, or with LDAP. Users who authenticate with an external provider can not use Spira's 2-step authentication. Users can manage their one-time passwords on their [User Profile](../Spira-User-Manual/User-Product-Management.md/#2-step-authentication). Administrators can remove a one-time password for a user from [Edit User](System-Users.md/#edit-an-existing-user) page. 
+- **Enforce 2-Step Authentication**: If enabled (not the default), all users (except OAuth users) must configure 2-step authentication before they can log in. Users with existing MFA will continue to use it normally. This applies to LDAP users too.
+
 {: #enable-2-step-authentication}
 
 !!! hint "2-Step Authentication tips"   

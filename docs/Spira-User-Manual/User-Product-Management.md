@@ -57,6 +57,12 @@ To login using your account with this provider:
 
 Once you have a Spira user that authenticates with the provider, to log in to Spira click the provider button on the login page.
 
+## Setting up 2-Step Authentication on Login
+When you login you will be required to setup 2-Step Authentication if you do not already have it setup, and if your organization enforces it for logging in.
+
+To add your one-time password, either scan the QR code into a suitable 2-step authentication app, or copy the code displayed beneath the QR code. Once scanned, enter in the six digit code in your authenticator app within its thirty second window onto the page and click "Submit." 
+
+![Setting up 2-Step Authentication on Login](img/UserProduct_Management_mfa_on_login.png)
 
 ## My Page
 
