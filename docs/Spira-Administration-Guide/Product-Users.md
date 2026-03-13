@@ -22,8 +22,7 @@ This page displays a row for each member of the current product, with the follow
 - Email (not shown by default)
 - Active (not shown by default)
 
-**Note:**
-For users to be able to access the product make sure their product role is active. If the role is or becomes inactive, the user will not be able to access the product or any of its artifacts
+**Note:** For users to be able to access the product make sure their product role is active. If the role is or becomes inactive, the user will not be able to access the product or any of its artifacts
 
 ### Organizing and filtering
 By interacting with the header row of the grid you can:
