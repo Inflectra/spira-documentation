@@ -167,7 +167,8 @@ Some Spira GET API operations can return a huge amount of data, which can lead t
 
 
 - **start_row** : The record starting number. This parameter starts at 1.
-- **number_of_rows** : The maximum number of records to return. The bigger the number, the more time it takes for the request to be processed. If you are seeing timeout errors, reduce this value and make more requests to retrieve the data. Note, that currently there is a limiteation so the maximum allowed number of rows per single API call is 500.
+- **number_of_rows** : The maximum number of records to return. The bigger the number, the more time it takes for the request to be processed. If you are seeing timeout errors, reduce this value and make more requests to retrieve the data.
+ Note, that currently there is a limitation so the maximum allowed number of rows per single API call is 500.
 
     !!! example "Example: Retrieving all new tasks added in the product #1 since 01/01/2021"
         *Remember to replace the instance URL, project ID (1), and include the parameters username and api-key*
@@ -200,11 +201,18 @@ Some Spira GET API operations can return a huge amount of data, which can lead t
         []
         ```
 
+<<<<<<< Updated upstream
 !!! info Limitation 
     Currently, there is a limitation for the allowed number of rows that can be retrieved per single API GET query at a time. That is a design limit to protect the system from a performance perspective, typical for web applications. The maximum number of rows you can get by a single GET request is 500, for general API endpoints.
     Considering this, make multiple GET requests (use pagination options) so the number of rows does not exceed that limit.
 
 
+=======
+!!! info "Limitation"
+Currently, there is a limitation for the allowed number of rows that can be retrieved per single API query at a time. That is a design limit to protect the system from a performance perspective, typical for web applications. The maximum number of rows you can get by a single GET request is 500, for general API endpoints.
+    Considering this, make multiple GET requests (use pagination options) so the number of rows does not exceed that limit.
+
+>>>>>>> Stashed changes
 ## User Roles and Security
 
 In order to retrieve, create, edit, or delete data in Spira through the API, the user must have authorization to perform the requested operation. Spira checks this against:
