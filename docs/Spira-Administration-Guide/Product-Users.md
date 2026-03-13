@@ -23,9 +23,7 @@ This page displays a row for each member of the current product, with the follow
 - Active (not shown by default)
 
 **Note:**
-For users, to be able to access the Product and its artifacts, they should be assigned to the role that is currently active.
-In case the user has been assigned to the product with a specific role, and that role later changed to Inactive, then the user will not be able to access that Product or any artifacts in it. The user will be returned to the My Page with an authorization error message when attemptting to do so.
-
+For users to be able to access the product make sure their product role is active. If the role is or becomes inactive, the user will not be able to access the product or any of its artifacts
 
 ### Organizing and filtering
 By interacting with the header row of the grid you can:
