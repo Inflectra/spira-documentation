@@ -199,6 +199,7 @@ Choosing an indent level from the 'Show Level' drop down box allows you to quick
 
 ### Filtering
 Filtering items on requirement list pages depends which view you have currently selected: Tree or List.
+
 If the **Tree** view is selected, which refers to the hierarchical view, filtering will show all requirements matching the filter, as well as all parents of any matching requirements. This will show, for each matching requirement, its hierarchy.
 
 ![](img/Requirements_Management_TreeView.png)
