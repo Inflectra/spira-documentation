@@ -44,3 +44,4 @@ The list below are features that we are focused on delivering but not in the abo
 - **Improved report templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Enhanced Support for BDD**: Improve handling of BDD scenarios, and add the ability to convert BDD scenarios into executable automation scripts.
+- **Accessibility**: Spira is currently WCAG 2.1 AA compliant. We intend to achieve WCAG 2.2 AA compliance.
