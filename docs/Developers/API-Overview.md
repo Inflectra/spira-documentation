@@ -201,18 +201,10 @@ Some Spira GET API operations can return a huge amount of data, which can lead t
         []
         ```
 
-<<<<<<< Updated upstream
-!!! info Limitation 
-    Currently, there is a limitation for the allowed number of rows that can be retrieved per single API GET query at a time. That is a design limit to protect the system from a performance perspective, typical for web applications. The maximum number of rows you can get by a single GET request is 500, for general API endpoints.
-    Considering this, make multiple GET requests (use pagination options) so the number of rows does not exceed that limit.
-
-
-=======
 !!! info "Limitation"
 Currently, there is a limitation for the allowed number of rows that can be retrieved per single API query at a time. That is a design limit to protect the system from a performance perspective, typical for web applications. The maximum number of rows you can get by a single GET request is 500, for general API endpoints.
     Considering this, make multiple GET requests (use pagination options) so the number of rows does not exceed that limit.
 
->>>>>>> Stashed changes
 ## User Roles and Security
 
 In order to retrieve, create, edit, or delete data in Spira through the API, the user must have authorization to perform the requested operation. Spira checks this against:
