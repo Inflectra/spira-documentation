@@ -69,6 +69,7 @@ The migration tool will import the following artifacts:
 - Bug work items as incidents
 - Task work items as tasks
 - Any attachments associated with the requirements, test cases, test sets or design steps.
+- All linkages between artifacts (such as those connecting requirements to test cases) are fully preserved
 
 ## Checking the Import
 Once the import has completed, please open up the the import log file `Spira_ADOTFSImport.log` that will be saved to the Windows Desktop of the user running the import. In this log file you will see what was imported, with any items that failed to import also listed.
