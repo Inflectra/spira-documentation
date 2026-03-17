@@ -55,13 +55,14 @@ If a user emails the dedicated email account with a fresh email (one that is not
 
 Email creation is strictly limited to Incidents.
 
-**How it works**:
-**Incident Details**: The email's Subject becomes the Incident Name, and the email Body becomes the Incident Description. Any attachments on the email will be added to the new Incident.
-**Project Routing**: The new Incident will be created in the default Project specified in your Email Importer configuration settings for that email account. 
+**How it works**
+
+- **Incident Details**: The email's Subject becomes the Incident Name, and the email Body becomes the Incident Description. Any attachments on the email will be added to the new Incident.
+- **Project Routing**: The new Incident will be created in the default Project specified in your Email Importer configuration settings for that email account. 
 Note: Currently, any project tokens or project names included in the subject line or body of an email are being ignored.
-**Permissions Check**: The sender's email address will be queried to make sure the user has access to create Incidents in the default project. If the user does not have appropriate permissions, the email will not be imported. It will remain in the inbox and get processed as soon as the user is granted permission for that Product.
-**Subscription**: The user will not be automatically subscribed to the Incident unless they fall under normal Workflow Notification or Event Notification settings.
-**Notification**: If the user has permission and the Incident is created, they will receive an automated email from the system letting them know, which may look like this:
+- **Permissions Check**: The sender's email address will be queried to make sure the user has access to create Incidents in the default project. If the user does not have appropriate permissions, the email will not be imported. It will remain in the inbox and get processed as soon as the user is granted permission for that Product.
+- **Subscription**: The user will not be automatically subscribed to the Incident unless they fall under normal Workflow Notification or Event Notification settings.
+- **Notification**: If the user has permission and the Incident is created, they will receive an automated email from the system letting them know, which may look like this:
 
 ```> SpiraTeam
         > Incident "Need New Security Settings updated in
