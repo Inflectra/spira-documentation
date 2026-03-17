@@ -69,8 +69,8 @@ Note: Currently, any project tokens or project names included in the subject lin
         >
         > Please log into SpiraTeam to view this Incident's details.
         > 
-        > <https://localhost/spirateam/6/Incident/2196.aspx>```
-
+        > <https://localhost/spirateam/6/Incident/2196.aspx>
+```
 
 !!! attention "Important Notes"
     - ***IMPORTANT:*** If upgrading from v1 or v2 to v3 - the latest - you will need to edit the configuration for any Spira applications and change the password to the account's API key. Until this is done, email will not be imported.
