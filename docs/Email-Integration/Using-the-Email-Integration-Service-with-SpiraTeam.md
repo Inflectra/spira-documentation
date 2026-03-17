@@ -71,6 +71,7 @@ Note: Currently, any project tokens or project names included in the subject lin
         > 
         > <https://localhost/spirateam/6/Incident/2196.aspx>```
 
+
 !!! attention "Important Notes"
     - ***IMPORTANT:*** If upgrading from v1 or v2 to v3 - the latest - you will need to edit the configuration for any Spira applications and change the password to the account's API key. Until this is done, email will not be imported.
     - An email will be imported into a comment if the Subject line contains an artifact token (`[XX:####]`), only for artifact types Requirements, Test Cases, Incidents, Releases, Tasks, and Test Sets. All other artifact tokens will be ignored, and the email will be imported as a new incident.
