@@ -7,10 +7,10 @@
     System administrators can now opt to enforce that all users logging in with a username and password (including with LDAP) also log in using a 2-Step Authentication token.
 
 ??? success "New Features"
+    - Upgrade core data access infrastructure to improve performance, stability, and maintainability [RQ:5594] [RQ:5595] [RQ:5596]
     - As a system admin, I can force users to only be able to login to the application if they have MFA setup, to meet our organization's security and compliance needs [RQ:5608]
 
 ??? bug "Bug fixes and enhancements"
-    - Upgrade core data access infrastructure to improve performance, stability, and maintainability [RQ:5594] [RQ:5595] [RQ:5596]
     - Fix a bug with custom properties in graphs [IN:12318]
     - Documentation improvements [IN:7186] [IN:11730] [IN:12192] [IN:12252] [IN:12291] [IN:12327] [IN:12343] [IN:12371] [IN:12697] [IN:12398]
     - Fix a bug related to the Anti XSRF token error in Chrome under specific conditions [IN:11832]
