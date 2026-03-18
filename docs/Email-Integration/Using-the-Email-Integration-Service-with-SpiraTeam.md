@@ -3,7 +3,6 @@
 
 This section explains how to use the Spira Email Integration Service (also known as the Email Importer) to process incoming and outgoing emails.
 
-
 !!! Info "Clearing the Event Viewer"
     Once you have the email integration service initially configured, we recommend clearing the Windows Application Log on the host machine. This will allow you to quickly spot any errors that occur due to misconfiguration. The event viewer can be found in Control Panel > Administrative Tools > Event Viewer.
 
@@ -14,9 +13,10 @@ In Spira, email functionality is split into two distinct systems that work toget
 -  **Outbound Email (Spira Application)**: Handled directly within the Spira web application. This system sends out notifications when items are created, assigned, or updated. You configure this in Spira under System Administration > System > Email Configuration (../Spira-Administration-Guide/System.md/#email-configuration).
 - **Inbound Email (Email Integration Service)**: A separate background service that monitors a specific email inbox. It reads incoming emails and translates them into actions within Spira. 
 
-**Important**: For the inbound Email Integration Service to function correctly when users reply to notifications, specific settings must be configured in Spira's [Outbound Email Configuration](../Spira-Administration-Guide/System.md/#email-configuration) first.
+**Important**: Please keep the following requirements in mind before setting up this service:
 
-**Note**: Emails are NOT automatically handled by Spira for on premise installations, it is being maintained with a mail server for cloud instances only. 
+- Hosting Differences: Emails are NOT automatically handled by Spira for on premise installations, it is being maintained with a mail server for cloud instances only. 
+- Outbound Prerequisites: For the inbound service to correctly process user replies to notifications, specific settings must be applied in Spira's [Outbound Email Configuration](../Spira-Administration-Guide/System.md/#email-configuration) first.
 
 ## Prerequisites: Spira Email Configuration
 
@@ -64,14 +64,14 @@ Note: Currently, any project tokens or project names included in the subject lin
 - **Subscription**: The user will not be automatically subscribed to the Incident unless they fall under normal Workflow Notification or Event Notification settings.
 - **Notification**: If the user has permission and the Incident is created, they will receive an automated email from the system letting them know, which may look like this:
 
-```> SpiraTeam
-        > Incident "Need New Security Settings updated in
-        > Documentation" in project "Project1" has been changed.
-        >
-        > Please log into SpiraTeam to view this Incident's details.
-        > 
-        > <https://localhost/spirateam/6/Incident/2196.aspx>
-
+'''> SpiraTeam
+    > Incident "Need New Security Settings updated in
+    > Documentation" in project "Project1" has been changed.
+    >
+    > Please log into SpiraTeam to view this Incident's details.
+    > 
+    > <https://localhost/spirateam/6/Incident/2196.aspx>
+```
 
 !!! attention "Important Notes"
     - ***IMPORTANT:*** If upgrading from v1 or v2 to v3 - the latest - you will need to edit the configuration for any Spira applications and change the password to the account's API key. Until this is done, email will not be imported.
