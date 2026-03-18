@@ -27,7 +27,7 @@ Before users can successfully reply to system notifications (e.g. have their com
 - Ensure the following settings are applied:
 
     - **Reply-To E-mail Address**: This must be set to the exact email address that the Email Integration Service is monitoring (e.g., incident.logger@mycompany.com). If this is left blank or set to a "no-reply" address, user replies will never reach the inbound service.
-    - **Send Email Importer Separator?**: This setting is off by default and must be enabled. This matters because this option makes possible to replying to emails. At the same time, if enabled Spira adds a specific separator line to the bottom of each email. The Email Importer uses this line to cut off the previous email chain, ensuring that only the new reply text is added as a comment.
+    - **Send Email Importer Separator?**: This makes possible to reply to emails by making Spira add a separator line at the bottom of each email. It is then used to ensure only new reply is added. The setting is off by default and must be enabled.
 
 ## Feature 1: Adding Comments & Attachments via Email Reply
 
@@ -35,14 +35,14 @@ When a user receives a Spira email notification, they can reply directly to that
 
 Supported Artifacts: The following artifacts support replying to a notification to add a comment:
     
-   - Requirements
-   - Test Cases
-   - Incidents
-   - Releases
-   - Tasks
-   - Test Sets
+- Requirements
+- Test Cases
+- Incidents
+- Releases
+- Tasks
+- Test Sets
 
-How it works:
+How it works
 
 - **Token Matching**: The service identifies the artifact using the token in the Subject Line of the email. It supports various formats, such as [TK:12], TK:12, [TK-12], TK-12, [TK 12], or TK 12.
 - **Important Constraint**: The artifact token must be in the Subject Line. Tokens placed only in the body of the email are ignored by the service.
@@ -55,7 +55,7 @@ If a user emails the dedicated email account with a fresh email (one that is not
 
 Email creation is strictly limited to Incidents.
 
-**How it works**
+How it works
 
 - **Incident Details**: The email's Subject becomes the Incident Name, and the email Body becomes the Incident Description. Any attachments on the email will be added to the new Incident.
 - **Project Routing**: The new Incident will be created in the default Project specified in your Email Importer configuration settings for that email account. 
@@ -64,13 +64,14 @@ Note: Currently, any project tokens or project names included in the subject lin
 - **Subscription**: The user will not be automatically subscribed to the Incident unless they fall under normal Workflow Notification or Event Notification settings.
 - **Notification**: If the user has permission and the Incident is created, they will receive an automated email from the system letting them know, which may look like this:
 
-'''> SpiraTeam
-    > Incident "Need New Security Settings updated in
-    > Documentation" in project "Project1" has been changed.
-    >
-    > Please log into SpiraTeam to view this Incident's details.
-    > 
-    > <https://localhost/spirateam/6/Incident/2196.aspx>
+``` 
+    > SpiraTeam
+> Incident "Need New Security Settings updated in
+> Documentation" in project "Project1" has been changed.
+>
+> Please log into SpiraTeam to view this Incident's details.
+> 
+> <https://localhost/spirateam/6/Incident/2196.aspx>
 ```
 
 !!! attention "Important Notes"
