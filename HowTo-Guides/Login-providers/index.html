@@ -913,10 +913,10 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#azure-ad">
+<a class="md-nav__link" href="#entraid-formerly-azure-ad">
 <span class="md-ellipsis">
       
-        Azure AD
+        EntraID (formerly Azure AD)
       
     </span>
 </a>
@@ -4053,10 +4053,10 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#azure-ad">
+<a class="md-nav__link" href="#entraid-formerly-azure-ad">
 <span class="md-ellipsis">
       
-        Azure AD
+        EntraID (formerly Azure AD)
       
     </span>
 </a>
@@ -4138,18 +4138,18 @@
 <p>We have tried to give up to date and accurate information, but many providers do not themselves have correct information on their site. Hopefully they do not change things too much, but if they do and you cannot figure out what to do please contact our support team.</p>
 <p>The "Client Secret" field is very sensitive so do not share it. Once you enter it in Spira you will not be able to access it again. Store it somewhere safely, like a password manager, if required.</p>
 </div>
-<h2 id="azure-ad">Azure AD<a class="headerlink" href="#azure-ad" title="Permanent link">¶</a></h2>
-<p>To set up an Azure AD provider app with Spira you will need an Azure account with Azure AD set up with users as needed. For the steps below we have assumed Azure AD is set up in relatively standard way.</p>
+<h2 id="entraid-formerly-azure-ad">EntraID (formerly Azure AD)<a class="headerlink" href="#entraid-formerly-azure-ad" title="Permanent link">¶</a></h2>
+<p>To set up an EntraID provider app with Spira you will need an EntraID (formerly Azure AD) account with EntraID set up with users as needed. For the steps below we have assumed EntraID is set up in relatively standard way.</p>
 <p><strong>First, you need to set up the app registration</strong>, this app will give your users a specific connection to Spira.
 When creating an app registration you should:</p>
 <ol>
-<li>Go to Azure AD</li>
+<li>Go to EntraID</li>
 <li>Click "App Registrations" from the sidebar on the left, then "New Registration" from the top of the page</li>
 <li>Enter a meaningful name</li>
-<li>Select which type of accounts to support. There are 3 options (as of March 2020). Pick the one that makes sense for your organization. </li>
+<li>Select which type of accounts to support. There are 4 options (as of March 2026). Pick the one that makes sense for your organization. </li>
 <li><strong>Enter a Redirect URI of type Web</strong>:<ul>
-<li>this should be the full URL as shown at the bottom of the Azure AD provider page in Spira and <strong>must</strong> be HTTPS. </li>
-<li>Note: Azure AD lets you add many redirect URIs but in our testing only the one we entered the very first time seemed to work - hopefully you will have better luck than us</li>
+<li>this should be the full URL as shown at the bottom of the EntraID provider page (<a href="https://MYINSTANCEURL.spiraservice.net/oauth">https://MYINSTANCEURL.spiraservice.net/oauth</a>) in Spira and <strong>must</strong> be HTTPS. </li>
+<li>Note: EntraID lets you add many redirect URIs but in our testing only the one we entered the very first time seemed to work - hopefully you will have better luck than us</li>
 </ul>
 </li>
 <li>Once the app registration has been completed you will be taken to the App Registration Overview screen for this app. </li>
@@ -4157,7 +4157,7 @@ When creating an app registration you should:</p>
 <li>By default, the permissions of the app include Microsoft Graph &gt; User.Read. This is the only required permission by Spira</li>
 <li>To generate the secret key for Spira go to "Certificates and Secrets" and create a "New Client Secret"<ul>
 <li>Give it a name</li>
-<li>Set an expiry</li>
+<li>Set an expiry period</li>
 <li>Make sure to copy and safely store the generated secret as once it is created you will not be able to retrieve it again</li>
 </ul>
 </li>
