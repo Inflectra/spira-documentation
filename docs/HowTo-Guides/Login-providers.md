@@ -6,7 +6,7 @@ For more information about using login providers see the [admin guide](../Spira-
 
     The "Client Secret" field is very sensitive so do not share it. Once you enter it in Spira you will not be able to access it again. Store it somewhere safely, like a password manager, if required.
 
-## EntraID (former Azure AD)
+## EntraID (formerly Azure AD)
 To set up an EntraID provider app with Spira you will need an EntraID (formerly Azure AD) account with EntraID set up with users as needed. For the steps below we have assumed EntraID is set up in relatively standard way.
 
 **First, you need to set up the app registration**, this app will give your users a specific connection to Spira.
