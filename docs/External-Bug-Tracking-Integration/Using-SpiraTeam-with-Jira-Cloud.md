@@ -281,7 +281,15 @@ To activate this product for the datasync, update the following fields:
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_23.png)
 
-**Note**: One Spira product can only be mapped to one Jira project, in other words it is a one-to-one mapping.
+**Note**: One Spira product can only be mapped to one Jira project, in other words it is a one-to-one mapping only.
+
+!!! info "Pausing Data Synchronization"
+
+    If you need to pause the synchronization for any reason, existing Jira ID field values in Spira are preserved. To ensure that the mapped Jira IDs remain visible and correctly linked within the Spira artifacts (such as Requirements):
+
+     - Do not delete the JiraDataSync plugin from the Data Synchronization list pages.
+     - To pause synchronization, simply set the DataSync to *inactive* for the specific product (as explained in a section above).
+     - Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.
 
 ### Release Mapping
 The datasync uses a special mapping field to identify what a Spira artifact should sync with in Jira. It uses this field to map a Spira releases to a Jira version so that users can create releases/versions in one application and see them in either application. The summary of how it works is:
