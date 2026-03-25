@@ -227,8 +227,10 @@ Item 1
 ### Test Cases and Test Steps
 
 !!! danger "Don't get confused between test cases and test steps"
-    Test steps are an integral part of test cases so we let you view and add test cases and their steps together in the same table. This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps.
 
+    Test steps are an integral part of test cases, so we let you view and add test cases and their steps together in the same spreadsheet. This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both.
+    
+    When you look at the generated sheet, notice the specific formatting:
     - **Test case fields** are columns with a darker background color
     - **Test steps fields** are columns with a lighter background color
     - **Required fields** are those with black text: darker orange ones are needed for a test case, lighter orange ones for a test step
@@ -237,14 +239,32 @@ Item 1
     
     **Make sure**: each row only fills in either the required test case or test step columns. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.
 
-* A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case.
-* There is no need to number the test steps -- SpiraPlan adds this information automatically
-* If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
+**Creating New Test Cases and Steps**
+ - If you want to upload brand new test cases and steps to the system, you will use the **Send Data to Spira** button
+ - Click Prepare Sheet to create the correctly formatted template for your chosen product and artifact
+ - Do not alter the worksheet structure of the generated sheet (do not add, remove, or rearrange columns)
+ - Enter the test case data in the test case columns for your first row
+ - On the very next row, enter the test step data only (this is very important). A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case
+ - Add more test steps as needed in subsequent rows. To add a second test case, start a new row and fill in the test case fields again
+ - Once your data is ready, click Send to upload the data to Spira
+
+ **Important Notes for New Items:**
+
+ - There is no need to number the test steps manually — Spira adds this information automatically
+ - You can currently only send a maximum 200 test cases at a time, their steps don't count for this limit
+ - If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
 
 Following is an example of how to add Test Cases and Test Steps to Spira:
 
 
 ![Spreadsheet add test cases](img/excel365-test-cases.png)
+
+**Updating Existing Test Cases**
+
+If you would like to update test cases that are already in the system, you must use the **Get Data from Spira** button to pull them into Excel first.
+
+!!! warning "Important Limitation on Updating Steps"
+While you can modify the data for existing test cases and existing test steps, **you cannot add new steps to existing test cases via the Excel** Add-in. You can only modify the steps that have already been pulled down. To add completely new steps to an existing test case, please do so directly within the Spira web interface.
 
 ### Incidents
 **Remaining Effort**: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'
