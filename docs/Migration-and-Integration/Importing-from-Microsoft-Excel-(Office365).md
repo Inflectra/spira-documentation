@@ -242,19 +242,19 @@ Item 1
     **Make sure**: each row only fills in either the required test case or test step columns. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.
 
 ## Creating New Test Cases and Steps
- - If you want to upload brand new test cases and steps to the system, you will use the **Send Data to Spira** button
- - Click Prepare Sheet to create the correctly formatted template for your chosen product and artifact
- - Do not alter the worksheet structure of the generated sheet (do not add, remove, or rearrange columns)
- - Enter the test case data in the test case columns for your first row
- - On the very next row, enter the test step data only (this is very important). A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case
- - Add more test steps as needed in subsequent rows. To add a second test case, start a new row and fill in the test case fields again
- - Once your data is ready, click Send to upload the data to Spira
+ - If you want to upload brand new test cases and steps to the system, you will use the **Send Data to Spira** button;
+ - Click Prepare Sheet to create the correctly formatted template for your chosen product and artifact;
+ - Do not alter the worksheet structure of the generated sheet (do not add, remove, or rearrange columns);
+ - Enter the test case data in the test case columns for your first row;
+ - On the very next row, enter the test step data only (this is very important). A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case;
+ - Add more test steps as needed in subsequent rows. To add a second test case, start a new row and fill in the test case fields again;
+ - Once your data is ready, click Send to upload the data to Spira;
 
  **Important Notes for New Items:**
 
- - There is no need to number the test steps manually — Spira adds this information automatically
- - You can currently only send a maximum 200 test cases at a time, their steps don't count for this limit
- - If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error
+ - There is no need to number the test steps manually — Spira adds this information automatically;
+ - You can currently only send a maximum 200 test cases at a time, their steps don't count for this limit;
+ - If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error;
 
 Following is an example of how to add Test Cases and Test Steps to Spira:
 
