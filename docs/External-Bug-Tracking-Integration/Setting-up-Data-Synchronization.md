@@ -30,7 +30,7 @@ To function correctly, this Spira user must meet the following criteria:
 
 - Active Status: The account must be active and have login access to Spira.
 - Dedicated Exclusivity: Do not use the personal credentials of a human team member. A dedicated service account ensures that changes made by the integration are clearly marked in the audit logs (e.g., "Updated by DataSync"), preventing confusion and making troubleshooting much easier.
-- Product Membership: The user must be explicitly added as a member of every Spira product you intend to synchronize.
+- Product Roles: The user must be explicitly added as a member of every Spira product you intend to synchronize.
 - Proper Project Roles: The user must be assigned a Project Role with sufficient permissions to view, create, and modify all artifacts involved in the sync. For example, if you are syncing bugs, the user needs "Create" and "Modify" permissions for Incidents. If they lack these permissions, the sync will fail when trying to write data.
 
 ## Choosing Your Synchronization Method
@@ -97,8 +97,8 @@ Now that the cloud configuration is done, you need to complete the datasync setu
 !!! info "Checklist"
 
     - [x] Spira is on premise OR you have installed the standalone service
-    - [x] [Download the plugin](https://www.inflectra.com/Downloads/SpiraDataSync_StandaloneService_v8.9.0.0_x64.zip) for the application you will sync with
-    - [x] [Configure the service](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/#configure-the-service)
+    - [x] [Download the plugin](https://www.inflectra.com/Products/SpiraPlan/Downloads.aspx#BugTrackers\#:~:text=Standalone%20Data-Synchronization%20Windows%20Service) for the application you will sync with
+    - [x] [Configure the service](#configure-the-service)
     - [x] Start the Datasync service
 
 Use this option if your Spira instance is hosted on-premises, OR if you are using Cloud Spira but need to connect to an on-premisess external application located securely behind your company firewall.
@@ -120,14 +120,11 @@ The core service acts as the engine, but it requires a specific plugin to unders
 
 The Windows Service is configured using an XML based text file. This tells the service, once running, where to look and what to do.
     
-1. Open your `DataSync installation folder of where Spira is installed}\DataSync` and 
-2. locate the file named DataSyncService.exe.config.
-3. Open this file in a text editor (you may need to run Notepad as an Administrator to save changes).
+- Open your `DataSync installation folder of where Spira is installed}\DataSync` and 
+- locate the file named DataSyncService.exe.config.
+- Open this file in a text editor (you may need to run Notepad as an Administrator to save changes).
 
-XML:
-
-```python
-XML
+``` XML
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <configSections>
@@ -159,7 +156,7 @@ XML
  </applicationSettings>
 </configuration>
 ```
-3.	Update the following <value> tags to match your environment:
+- Update the following <value> tags to match your environment:
 
 o **PollingInterval:** The frequency (in milliseconds) the service checks for new data. We recommend 300000 (5 minutes). Setting this too low (e.g., under 1 minute) can cause heavy unnecessary load on your server and network.
 o **WebServiceUrl:** The base URL to your Spira instance. This is the exact URL you use to access the Spira login screen in your web browser (e.g., http://yourserver/SpiraPlan).
@@ -192,6 +189,8 @@ The "Desktop DataSync" is a standalone Windows application with a visual UI. It 
 2. Download the Windows Installer (MSI) package for the Desktop DataSync. (Use the standard 64-bit version unless you are syncing with legacy on-premises TFS).
 3. Run the installer on the Windows machine that will host the synchronization.
 
+![Desktop Datasync](img/Setting_up_Data_Synchronization_11.png)
+
 #### Step 2: Download the Required Plugins
 
 1. Download the specific plugin .zip file for your external application from the Inflectra website.
@@ -199,17 +198,21 @@ The "Desktop DataSync" is a standalone Windows application with a visual UI. It 
 3. Move the .dll files into the root folder where you installed the Desktop DataSync (e.g., C:\Program Files (x86)\Inflectra\Spira Desktop DataSync).
 4. Make sure files are not blocked by Windows due to security
 
+![DataSync Folder](img/DesktopDataSync.png)
+
 #### Step 3: Configure and Run via the UI
 
-1. Go to Start > Programs > Inflectra > Desktop Datasync to launch the application interface.
-2. Fill out the configuration options:
+- Go to Start > Programs > Inflectra > Desktop Datasync to launch the application interface.
+- Fill out the configuration options:
 
-- Spira URL: The base URL to your Spira instance (e.g., https://mycompany.spiraservice.net).
-- Username & Password: The credentials for your dedicated Spira service account. Click Test to validate the connection.
-- Polling Interval: Recommended 2-5 minutes.
-- Enable Trace Logging: Leave unchecked for normal use. Enabling this creates highly detailed logs of every data transaction, which is excellent for troubleshooting but will quickly fill up your Windows Event Viewer logs.
-- Continue After Errors: Check this if you want the sync to push past individual item errors (e.g., one specific bug failing to sync) rather than halting the entire synchronization process.
+    - Spira URL: The base URL to your Spira instance (e.g., https://mycompany.spiraservice.net).
+    - Username & Password: The credentials for your dedicated Spira service account. Click Test to validate the connection.
+    - Polling Interval: Recommended 2-5 minutes.
+    - Enable Trace Logging: Leave unchecked for normal use. Enabling this creates highly detailed logs of every data transaction, which is excellent for troubleshooting but will quickly fill up your Windows Event Viewer logs.
+    - Continue After Errors: Check this if you want the sync to push past individual item errors (e.g., one specific bug failing to sync) rather than halting the entire synchronization process.
 
-3. Click Update to save your settings without starting or Start to save and begin syncing immediately.
+![Desktop Datasync](img/Setting_up_Data_Synchronization_13.png)
+
+- Click Update to save your settings without starting first. Start to save and begin syncing immediately.
 
 **Note:** If you close the application window, it will minimize and continue running in the background. It can be accessed via the Windows system tray. You can use the right-click context menu from the system tray to start/stop the synchronization, view the current status, or exit the application altogether. Any synchronization errors generated by the Desktop DataSync will be logged to the standard Windows Application Event Log, which you can use to diagnose mapping issues.
