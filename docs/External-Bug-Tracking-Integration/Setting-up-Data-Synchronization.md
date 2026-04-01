@@ -98,10 +98,10 @@ Now that the cloud configuration is done, you need to complete the datasync setu
 !!! info "Checklist"
 
     - [x] Spira is on premise OR you have installed the standalone service
-    - [x] [Install the Desktop Datasync](#install-the-desktop-datasync) on a Microsoft Windows device
-    - [x] [Download the plugin(s)](#download-plugins-for-the-desktop-datasync) for the applications Spira will sync with
-    - [x] [Configure the desktop datasync](#configure-the-desktop-datasync)
-
+    - [x] [Download the plugin(s)](#step-1-download-the-required-plugins) for the applications Spira will sync with
+    - [x] [Configure the service](#step-2-configure-the-service_1)
+    - [x] [Start the Datasync service](#step-3-start-the-windows-service)
+ 
 Use this option if your Spira instance is hosted on-premises, OR if you are using Cloud Spira but need to connect to an on-premisess external application located securely behind your company firewall.
 
 When you install Spira on-premises, a built-in background Windows Service is included. If you are using Cloud Spira but need to run the service locally, download the "Standalone Data-Synchronization Windows Service" from the Inflectra website, unzip it, and run the InstallService.bat script as an Administrator.
@@ -183,6 +183,12 @@ By default, the Windows Service is set to "Manual" startup to conserve resources
 ### Option C: Setup the Desktop DataSync
 
 The "Desktop DataSync" is a standalone Windows application with a visual UI. It works independently of Spira and is especially useful if you want to monitor the sync manually, or if your Spira is in the cloud but the external application is hosted on a local, firewall-protected network.
+
+!!! info "Checklist"
+
+    - [x] [Install the Desktop Datasync on a Microsoft Windows device](#step-1-install-the-desktop-datasync-application)
+    - [x] [Download the plugin(s) for the applications Spira will sync with](#step-2-download-the-required-plugins)
+    - [x] [Configure the desktop datasync](#step-3-configure-and-run-via-the-ui)
 
 #### Step 1: Install the Desktop DataSync Application
 
