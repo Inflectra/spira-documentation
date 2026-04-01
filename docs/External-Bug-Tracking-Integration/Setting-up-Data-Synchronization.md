@@ -31,7 +31,7 @@ To function correctly, this Spira user must meet the following criteria:
 - Active Status: The account must be active and have login access to Spira.
 - Dedicated Exclusivity: Do not use the personal credentials of a human team member. A dedicated service account ensures that changes made by the integration are clearly marked in the audit logs (e.g., "Updated by DataSync"), preventing confusion and making troubleshooting much easier.
 - Product Roles: The user must be explicitly added as a member of every Spira product you intend to synchronize.
-- Proper Project Roles: The user must be assigned a Project Role with sufficient permissions to view, create, and modify all artifacts involved in the sync. For example, if you are syncing bugs, the user needs "Create" and "Modify" permissions for Incidents. If they lack these permissions, the sync will fail when trying to write data.
+- Proper Product Roles: The user must be assigned a Project Role with sufficient permissions to view, create, and modify all artifacts involved in the sync. For example, if you are syncing bugs, the user needs "Create" and "Modify" permissions for Incidents. If they lack these permissions, the sync will fail when trying to write data.
 
 ## Choosing Your Synchronization Method
 
@@ -47,9 +47,10 @@ The table below explains the different options available, as well the option we 
 ### Option A: Setup Cloud Spira DataSync
 
 !!! info "Checklist"
+
     - [x] Spira and the application it syncs with are both in the cloud
-    - [x] Add the cloud Spira Datasync service to your hosted Spira site
-    - [x] Configure the Spira Datasync
+    - [x] [Add the cloud Spira Datasync service](#add-spira-datasync-to-your-hosted-site) to your hosted Spira site
+    - [x] [Configure the Spira Datasync](#configure-the-spira-datasync)
 
 Use this option if both your Spira instance and external application are cloud-hosted.
 
@@ -97,9 +98,9 @@ Now that the cloud configuration is done, you need to complete the datasync setu
 !!! info "Checklist"
 
     - [x] Spira is on premise OR you have installed the standalone service
-    - [x] [Download the plugin](https://www.inflectra.com/Products/SpiraPlan/Downloads.aspx#BugTrackers\#:~:text=Standalone%20Data-Synchronization%20Windows%20Service) for the application you will sync with
-    - [x] [Configure the service](#configure-the-service)
-    - [x] Start the Datasync service
+    - [x] [Install the Desktop Datasync](#install-the-desktop-datasync) on a Microsoft Windows device
+    - [x] [Download the plugin(s)](#download-plugins-for-the-desktop-datasync) for the applications Spira will sync with
+    - [x] [Configure the desktop datasync](#configure-the-desktop-datasync)
 
 Use this option if your Spira instance is hosted on-premises, OR if you are using Cloud Spira but need to connect to an on-premisess external application located securely behind your company firewall.
 
@@ -158,9 +159,9 @@ The Windows Service is configured using an XML based text file. This tells the s
 ```
 - Update the following <value> tags to match your environment:
 
-o **PollingInterval:** The frequency (in milliseconds) the service checks for new data. We recommend 300000 (5 minutes). Setting this too low (e.g., under 1 minute) can cause heavy unnecessary load on your server and network.
-o **WebServiceUrl:** The base URL to your Spira instance. This is the exact URL you use to access the Spira login screen in your web browser (e.g., http://yourserver/SpiraPlan).
-o **Login & Password:** The credentials for your dedicated Spira service account.
+- **PollingInterval:** The frequency (in milliseconds) the service waits before initiating a new synchronization cycle. The standard configuration is 300000 (5 minutes). However, if you need changes to reflect more quickly in the external system, you can safely lower this to 60000 (1 minute). Setting this value to anything less than 60000 milliseconds will not make the sync run any faster, so 1 minute is the functional minimum. Note that this interval indicates the wait time before the engine fires a new cycle, not the exact amount of time it will take for a change to appear (as data processing time must also be factored in). The system only starts this timer after the previous cycle has completely finished.
+- **WebServiceUrl:** The base URL to your Spira instance. This is the exact URL you use to access the Spira login screen in your web browser (e.g., http://yourserver/SpiraPlan).
+- **Login & Password:** The credentials for your dedicated Spira service account.
 
 ??? info "Using On-premises TFS:" 
 
@@ -185,7 +186,7 @@ The "Desktop DataSync" is a standalone Windows application with a visual UI. It 
 
 #### Step 1: Install the Desktop DataSync Application
 
-1. Navigate to the Downloads page on the Inflectra website.
+1. Navigate to the [Downloads page on the Inflectra website](https://www.inflectra.com/SpiraPlan/Downloads.aspx).
 2. Download the Windows Installer (MSI) package for the Desktop DataSync. (Use the standard 64-bit version unless you are syncing with legacy on-premises TFS).
 3. Run the installer on the Windows machine that will host the synchronization.
 
