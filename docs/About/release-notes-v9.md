@@ -32,7 +32,4 @@
     - Rename Azure AD to Microsoft Entra ID throughout the application and documentation  [IN:12260] [IN:12259]
     - Improve the performance of custom filters on hierarchical Requirement lists [IN:12435]
     - Fix a bug related to retrieving capabilities using the v7 APIs for Spira [IN:12486]
-    - Fix a bug in Inflectra.ai when generating stories in non-English languages [IN:12280]
-    - Fix a bug in Inflectra.ai for scenarios creation under certain circumstances [IN:11789]
-    - Improve the quality of the analysis for releases in early stages of development [IN:11870]
 
