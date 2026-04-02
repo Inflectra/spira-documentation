@@ -27,8 +27,13 @@ The list below are features that we are focused on delivering but not in the abo
     - Improved artifact creation tools, by using more context about the original artifact and its relationships to other artifacts
     - Allow users to specify example artifacts to use to customize artifact creation to align with their specific needs
     - Targeted risk analysis of artifacts in different dimensions (such as governance, security, and compliance)
-    - Application-wide help chatbot
     - Deeper contextual searching and analysis of artifact data and associations to provide new insights and faster workflows
+    - MCP server to provide an AI-friendly interface to Spira data, enabling tighter integration with AI-powered development tools and allowing Inflectra.ai to autonomously retrieve and act on data on behalf of users
+    - Requirement coverage analysis that evaluates the test coverage of a requirement and suggests edits, additions, or removals of associated test cases and test steps
+    - Application-wide helper chatbot that lets users ask questions about how to use Spira
+    - Natural language report creation, allowing users to create custom graphs and reports using natural language
+    - Intelligent Document Processing (IDP) to read and summarize documents stored in Spira
+    - Chat with specialist agents across many parts of the application, allowing users to ask for specific information related to their data, request specific actions to be performed, and ask follow-up questions
 
 - **Enhance traceability** with a new requirement view with integrated test case analysis and potentially other artifacts.
 - Evolve **program level functionality** with comment and attachment functionality, and enhanced associations to product level artifacts.
@@ -44,3 +49,4 @@ The list below are features that we are focused on delivering but not in the abo
 - **Improved report templating**: The ability to create a specific report using a preset document template, so that the report format can more closely resemble your company style.
 - **More control and visibility of notifications**: Notifications can be triggered by changes to releases, and by changes to an artifact’s custom properties. Notifications can be flagged to a user and viewed by them from inside the application.
 - **Enhanced Support for BDD**: Improve handling of BDD scenarios, and add the ability to convert BDD scenarios into executable automation scripts.
+- **Accessibility**: Spira is currently WCAG 2.1 AA compliant. We intend to achieve WCAG 2.2 AA compliance.
