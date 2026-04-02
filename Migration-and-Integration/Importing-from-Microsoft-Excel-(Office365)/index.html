@@ -3366,6 +3366,28 @@
       
     </span>
 </a>
+<nav aria-label="Test Cases and Test Steps" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-new-test-cases-and-steps">
+<span class="md-ellipsis">
+      
+        Creating New Test Cases and Steps
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-existing-test-cases">
+<span class="md-ellipsis">
+      
+        Updating Existing Test Cases
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#incidents">
@@ -4476,6 +4498,28 @@
       
     </span>
 </a>
+<nav aria-label="Test Cases and Test Steps" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-new-test-cases-and-steps">
+<span class="md-ellipsis">
+      
+        Creating New Test Cases and Steps
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating-existing-test-cases">
+<span class="md-ellipsis">
+      
+        Updating Existing Test Cases
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#incidents">
@@ -4754,22 +4798,42 @@ Item 1
 <h3 id="test-cases-and-test-steps">Test Cases and Test Steps<a class="headerlink" href="#test-cases-and-test-steps" title="Permanent link">¶</a></h3>
 <div class="admonition danger">
 <p class="admonition-title">Don't get confused between test cases and test steps</p>
-<p>Test steps are an integral part of test cases so we let you view and add test cases and their steps together in the same table. This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both -- some are only for test cases, others are only for tests steps.</p>
+<p>Test steps are an integral part of test cases, so we let you view and add test cases and their steps together in the same spreadsheet. </p>
+<p>This combination of two different artifacts can be confusing because they have different fields and requirements. Because each row can either be a case or a step, there are columns for both.</p>
+<p>When you look at the generated sheet, notice the specific formatting:</p>
 <ul>
-<li><strong>Test case fields</strong> are columns with a darker background color</li>
-<li><strong>Test steps fields</strong> are columns with a lighter background color</li>
-<li><strong>Required fields</strong> are those with black text: darker orange ones are needed for a test case, lighter orange ones for a test step</li>
+<li><strong>Test case fields</strong> are columns with a darker orange background color</li>
+<li><strong>Test steps fields</strong> are columns with a lighter orange background color</li>
+<li><strong>Required fields</strong> are those with text in bold</li>
 </ul>
 <p>To create a test case with a step, fill in the test case fields in the first row. Then fill in the test step fields for the second row. Add more steps as needed in new rows. To add a second test case, start a new row and fill in the test case fields again. </p>
 <p><strong>Make sure</strong>: each row only fills in either the required test case or test step columns. If the system cannot tell whether an entry is a test case or step it is skipped over when sending to Spira.</p>
 </div>
+<h4 id="creating-new-test-cases-and-steps">Creating New Test Cases and Steps<a class="headerlink" href="#creating-new-test-cases-and-steps" title="Permanent link">¶</a></h4>
 <ul>
-<li>A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case.</li>
-<li>There is no need to number the test steps -- SpiraPlan adds this information automatically</li>
-<li>If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error</li>
+<li>If you want to upload brand new test cases and steps to the system, you will use the <strong>Send Data to Spira</strong> button;</li>
+<li>Click Prepare Sheet to create the correctly formatted template for your chosen product and artifact;</li>
+<li>Do not alter the worksheet structure of the generated sheet (do not add, remove, or rearrange columns);</li>
+<li>Enter the test case data in the test case columns for your first row;</li>
+<li>On the very next row, enter the test step data only (this is very important). A test step must have a test case parent to be linked to and all test steps below a test case will become the steps for that test case;</li>
+<li>Add more test steps as needed in subsequent rows. To add a second test case, start a new row and fill in the test case fields again;</li>
+<li>Once your data is ready, click Send to upload the data to Spira;</li>
+</ul>
+<p><strong>Important Notes for New Items:</strong></p>
+<ul>
+<li>There is no need to number the test steps manually — Spira adds this information automatically;</li>
+<li>You can currently only send a maximum 200 test cases at a time, their steps don't count for this limit;</li>
+<li>If a row has a mix of required fields in for both test cases and test steps, the addon won't know if it is a test case or a test step, so it will flag this an error;</li>
 </ul>
 <p>Following is an example of how to add Test Cases and Test Steps to Spira:</p>
 <p><img alt="Spreadsheet add test cases" src="../img/excel365-test-cases.png"/></p>
+<h4 id="updating-existing-test-cases">Updating Existing Test Cases<a class="headerlink" href="#updating-existing-test-cases" title="Permanent link">¶</a></h4>
+<p>If you would like to update test cases that are already in the system, you must use the <strong>Get Data from Spira</strong> button to pull them into Excel first.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important Limitation on Updating Steps</p>
+<p>While you can modify the data for existing test cases and existing test steps, <strong>you cannot add new steps to existing test cases via the Excel</strong> Add-in. You can only modify the steps that have already been pulled down. </p>
+<p>To add new steps to an existing test case, please do so directly within the Spira web interface..</p>
+</div>
 <h3 id="incidents">Incidents<a class="headerlink" href="#incidents" title="Permanent link">¶</a></h3>
 <p><strong>Remaining Effort</strong>: the add-in populates 'Remaining Effort' in Spira equally to the spreadsheet's entry for 'Estimated Effort'</p>
 <h3 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">¶</a></h3>
