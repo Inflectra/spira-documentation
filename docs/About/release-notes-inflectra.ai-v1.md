@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## April 3 2026
+
+!!! bug "Bug fixes and enhancements"
+    - Fix a bug when generating stories in non-English languages [IN:12280]
+    - Fix a bug for scenarios creation under certain circumstances [IN:11789]
+    - Improve the quality of the analysis for releases in early stages of development [IN:11870]
+
 ## January 30 2026
 
 !!! bug "Bug fixes and enhancements"
