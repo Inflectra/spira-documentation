@@ -12,7 +12,7 @@
 
 ??? bug "Bug fixes and enhancements"
     - Fix a bug with custom properties in graphs [IN:12318]
-    - Documentation improvements [IN:7186] [IN:11730] [IN:12192] [IN:12252] [IN:12291] [IN:12327] [IN:12343] [IN:12371] [IN:12697] [IN:12398]
+    - Documentation improvements [IN:7186] [IN:11730] [IN:12192] [IN:12252] [IN:12291] [IN:12327] [IN:12343] [IN:12371] [IN:12697] [IN:12398] [IN:12423]
     - Fix a bug related to the Anti XSRF token error in Chrome under specific conditions [IN:11832]
     - Fix being unable to change the graph type view in some scenarios [IN:12300]
     - Fix being unable to filter requirements by "text field" in certain cases [IN:12359]
@@ -30,3 +30,9 @@
     - Fix the instant messenger occasionally showing messages in the wrong order [IN:12305]
     - Fix a bug in the My Subscribed Artifacts widget related to user permissions [IN:12006]
     - Rename Azure AD to Microsoft Entra ID throughout the application and documentation  [IN:12260] [IN:12259]
+    - Improve the performance of custom filters on hierarchical Requirement lists [IN:12435]
+    - Fix a bug related to retrieving capabilities using the v7 APIs for Spira [IN:12486]
+    - Fix a bug in Inflectra.ai when generating stories in non-English languages [IN:12280]
+    - Fix a bug in Inflectra.ai for scenarios creation under certain circumstances [IN:11789]
+    - Improve the quality of the analysis for releases in early stages of development [IN:11870]
+
