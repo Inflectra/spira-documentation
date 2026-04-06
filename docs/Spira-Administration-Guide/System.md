@@ -75,10 +75,6 @@ A sample page is illustrated below:
 
 To change the license key used by the system (for example, if to upgrade from Trial edition to Standard edition), you do **not** need to reinstall Spira:
 
-![license details admin menu](img/System_LicenseDetailsMenu2.png)
-
-All you need to do is to:
-
 - Log into [Customer Area](https://www.inflectra.com/CustomerArea)
 - Scroll down to the My Licenses section
 - Click on Copy icon next to the active license key
@@ -98,6 +94,8 @@ You can check the status of the current license by:
 ### What happens on expiration
 
 Once the expiration date passes, standard users will immediately lose the ability to use or access the application. System Administrators will need to log in to access the License Details page and apply a valid key.
+
+![license details admin menu](img/System_LicenseDetailsMenu2.png)
 
 - Admin Access Only: System Administrators can still log in to the system, but specifically for the purpose of applying a new license key on the License Details page.
 - User Lockout: For all other users, once a license expires, they will be completely unable to log into the Spira UI.
