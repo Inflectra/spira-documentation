@@ -58,8 +58,8 @@ Keeping your Inflectra software license up to date is critical to ensuring unint
 
 The license details page displays the information about the installed license for the particular instance of Spira being used. This will display less information for hosted customers. 
 
-The information displayed for self-hosted customers includes: 
 The License Details page displays information about the installed license for your specific instance of Spira. This information includes:
+
 - **Product Name** (e.g., SpiraPlan)
 - **License Version** (e.g., v8.0.0.0)
 - **License Type** (e.g., x-user fixed, x-user concurrent, demonstration, enterprise)
