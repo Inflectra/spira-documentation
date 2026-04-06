@@ -48,22 +48,65 @@ On this page you can enter/edit the file extension that's used to recognize the 
 
 
 ## License Details
+
+Keeping your Inflectra software license up to date is critical to ensuring uninterrupted access to your projects and data. This section covers how to view and update your system's license information, as well as what to expect and how to manage your access when a license expires.
+
 !!! info 
-    This page is accessible under the System subsection of the system admin menu. It is only visible if you have Spira installed on premise.
+    The License page is visible under the System subsection of the system admin menu. For On-Premise installations, this page is always visible. For Cloud-Hosted customers, this menu item remains hidden during normal operation, however when the license expires, system administrators will need to manually manage the license key.
 
     ![license details admin menu](img/System_LicenseDetailsMenu.png)
 
-The license details page displays the information about the installed license for the particular instance of Spira being used. This will display less information for hosted customers. The information displayed for self-hosted customers includes: the product name (e.g. SpiraPlan), the license version (e.g. v6.0.0.0), type of license in effect (x-user fixed, x-user concurrent, demonstration, enterprise, etc.), the expiration date (if any) of the license, the organization that the license belongs to, and the number of users concurrently logged-in right now. This last piece of information is useful as it helps administrators track down how many licenses are currently in use.
+The license details page displays the information about the installed license for the particular instance of Spira being used. This will display less information for hosted customers. 
+
+The information displayed for self-hosted customers includes: 
+The License Details page displays information about the installed license for your specific instance of Spira. This information includes:
+- **Product Name** (e.g., SpiraPlan)
+- **License Version** (e.g., v8.0.0.0)
+- **License Type** (e.g., x-user fixed, x-user concurrent, demonstration, enterprise)
+- **Expiration Date** (if applicable)
+- **Organization Name**
+- **Active Users**: The number of users concurrently logged in right now. (This is especially useful for administrators tracking down how many concurrent licenses are currently in use).
 
 A sample page is illustrated below:
 
 ![](img/System_61.png)
 
-To change the license key used by the system (for example, if to upgrade from Trial edition to Standard edition), you do **not**
-need to reinstall Spira. All you need to do is change the **organization** and **license key** text-boxes to match the license key and organization name found in the customer area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button.
+### How to Update Your License Key
+
+To change the license key used by the system (for example, if to upgrade from Trial edition to Standard edition), you do **not** need to reinstall Spira:
+
+![license details admin menu](img/System_LicenseDetailsMenu2.png)
+
+All you need to do is to:
+
+- Log into [Customer Area](https://www.inflectra.com/CustomerArea)
+- Scroll down to the My Licenses section
+- Click on Copy icon next to the active license key
+- Obtain your new **license key** and exact **organization name**
+- On the Spira License Details page, update the **Organization** and **License Key** text boxes to match exactly
+- Click the "Save" button.
 
 If there is an issue with the license key (e.g. a trial version that is passed its expiration date, or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
 
+### How to Check Your License Status
+
+You can check the status of the current license by:
+
+- **Customer Portal**: Log in to your secure [Customer Area](https://www.inflectra.com/CustomerArea) to view all active licenses and check expiration dates. Note that your license will expire and block access unless the "Perpetual License?" flag is set to YES in your Customer Area.
+- **Contacting Sales**: If you have questions about your renewal, you can reach out directly to our Sales Team at <sales@inflectra.com>.
+
+### What happens on expiration
+
+Once the expiration date passes, standard users will immediately lose the ability to use or access the application. System Administrators will need to log in to access the License Details page and apply a valid key.
+
+- Admin Access Only: System Administrators can still log in to the system, but specifically for the purpose of applying a new license key on the License Details page.
+- User Lockout: For all other users, once a license expires, they will be completely unable to log into the Spira UI.
+- No Read-Only Mode: There is no "read-only" state available. No changes can be made to existing items, and no new information can be created or viewed.
+- Data Safety: In case of on-premise instances, your data remains perfectly safe and intact within your own database. It simply will not be accessible through the user interface for standard use until that new license key is applied. For cloud hosted instances see [Hosting Terms of Service](https://www.inflectra.com/Purchase/HostingTOS.htm)
+
+### Staging and Test Environments
+
+You are generally permitted to use your production license key on a single non-production (staging/test) instance. This is strictly for the purposes of testing version upgrades, validating configuration changes, or safe development testing provided that this secondary instance is never used for active production work.
 
 ## LDAP Configuration
 As described previously, you can configure Spira to use an external LDAP server for importing new user profiles into the system, and for authenticating users -- instead of having to store separate passwords inside Spira. However, you need to first configure the LDAP server settings. To do this, click on the "LDAP Configuration" link the Administration navigation:
