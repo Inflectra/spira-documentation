@@ -61,7 +61,7 @@ The License Details page displays information about the installed license for yo
 - **Product Name** (e.g., SpiraPlan)
 - **License Version** (e.g., v9.0)
 - **License Type** (e.g., x-user fixed, x-user concurrent, demonstration, enterprise)
-- **Expiration Date** (if applicable)
+- **Expiration Date**
 - **Organization Name**
 - **Active Users**: The number of users concurrently logged in right now. (This is especially useful for administrators tracking down how many concurrent licenses are currently in use).
 
@@ -75,18 +75,20 @@ To change the license key used by the system (for example, if to upgrade from Tr
 
 - Log into [Customer Area](https://www.inflectra.com/CustomerArea)
 - Scroll down to the My Licenses section
-- Click on Copy icon next to the active license key
-- Obtain your new **license key** and exact **organization name**
-- On the Spira License Details page, update the **Organization** and **License Key** text boxes to match exactly
+- Locate your new **license key** and copy (we recommend using the copy icon next to it to avoid accidentally copying blank spaces)
+- Do the same to copy your exact **organization name**
+- Navigate to your Spira License Details administration page 
+- Paste **Organization** and **License Key** into their respective text boxes, ensuring they match exactly
 - Click the "Save" button.
 
-If there is an issue with the license key (e.g. a trial version that is passed its expiration date, or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
+If there is an issue with the license key (e.g. when upgrading from a trial to a product edition, or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
 
 ### How to Check Your License Status
 
 You can check the status of the current license by:
 
 - **Customer Portal**: Log in to your secure [Customer Area](https://www.inflectra.com/CustomerArea) to view all active licenses and check expiration dates. Note that your license will expire and block access unless the "Perpetual License?" flag is set to YES in your Customer Area.
+- **License Expiration Date**: You can view your exact expiration date directly on the License Details page within your on-premise Spira instance.
 - **Contacting Sales**: If you have questions about your renewal, you can reach out directly to our Sales Team at <sales@inflectra.com>.
 
 ### What happens on expiration
@@ -95,6 +97,7 @@ Once the expiration date passes, standard users will immediately lose the abilit
 
 ![license details admin menu](img/System_LicenseDetailsMenu2.png)
 
+- The login screen will show a warning to ALL users as the expiration date for the license key draws near.
 - Admin Access Only: System Administrators can still log in to the system, but specifically for the purpose of applying a new license key on the License Details page.
 - User Lockout: For all other users, once a license expires, they will be completely unable to log into the Spira UI.
 - No Read-Only Mode: There is no "read-only" state available. No changes can be made to existing items, and no new information can be created or viewed.
