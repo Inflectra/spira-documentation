@@ -49,17 +49,17 @@ On this page you can enter/edit the file extension that's used to recognize the 
 
 ## License Details
 
-Keeping your Inflectra software license up to date is critical to ensuring uninterrupted access to your projects and data. This section covers how to view and update your system's license information, as well as what to expect and how to manage your access when a license expires.
+Keeping your Inflectra software license up to date is critical to ensuring uninterrupted access to your products and data. This section covers how to view and update your system's license information, as well as what to expect and how to manage your access when a license expires.
 
 !!! info 
-    The License page is visible under the System subsection of the system admin menu for On-Premise installations only. For Cloud-Hosted customers, this menu item remains hidden during normal operation, however when the license expires, system administrators will be able to manually manage the license key.
+    This page is accessible under the System subsection of the system admin menu. It is only visible if you have Spira installed On-Premise:
 
     ![license details admin menu](img/System_LicenseDetailsMenu.png)
 
 The License Details page displays information about the installed license for your specific instance of Spira. This information includes:
 
 - **Product Name** (e.g., SpiraPlan)
-- **License Version** (e.g., v8.0.0.0)
+- **License Version** (e.g., v9.0)
 - **License Type** (e.g., x-user fixed, x-user concurrent, demonstration, enterprise)
 - **Expiration Date** (if applicable)
 - **Organization Name**
