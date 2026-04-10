@@ -155,7 +155,7 @@ Note that you can only deactivate a provider that does not have any users linked
 
 Once you have setup a login provider, users will see a button for that provider on the Spira login page:
 
-![user administration login provider details page for EntraID (former Azure AD)](img/System_Users_oauth-admin-provider-EntraID (former Azure AD).png)
+![user administration login provider details page for EntraID (former Azure AD)](img/System_Users_oauth-admin-provider-EntraID.png)
 
 ### How to set up a provider to integrate with Spira
 Below is a general set of instructions about how to set up the provider and Spira to work together. However, the providers may have changed their process or documentation, so please consult the provider about configuring their system.

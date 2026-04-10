@@ -51,12 +51,18 @@ To login using your account with this provider:
 1. Click on the provider button
 2. Follow the instructions from the provider (eg log in to or select your account, and provide authorization)
 4. When you get back to the Spira login screen, you can set up a new Spira account with that external provider account. Click the link and follow the on screen instructions to complete the registration. Once successful, your system admin will be alerted to the new user request. Once they have approved you, you can login.
-3. Alternatively, you can, if allowed by your organization, connect that provider account to an existing Spira user. Follow the on screen instructions to enter the username and password of your Spira user and click `Login`. You are now connected to this provider. 
+3. Alternatively, you can, if allowed by your organization, connect that provider account to an existing Spira user. Follow the on screen instructions to enter the username and password of your Spira user and click `Login`. If you have 2-Step Authentication setup, enter the code and then click `Submit`. You are now connected to this provider. 
 
 ![options to connect to an external provider](img/UserProduct_Management_oauth-login-connect-account.png)
 
 Once you have a Spira user that authenticates with the provider, to log in to Spira click the provider button on the login page.
 
+## Setting up 2-Step Authentication on Login
+When you login you will be required to setup 2-Step Authentication if you do not already have it setup, and if your organization enforces it for logging in.
+
+To add your one-time password, either scan the QR code into a suitable 2-step authentication app, or copy the code displayed beneath the QR code. Once scanned, enter in the six digit code in your authenticator app within its thirty second window onto the page and click "Submit." 
+
+![Setting up 2-Step Authentication on Login](img/UserProduct_Management_mfa_on_login.png)
 
 ## My Page
 

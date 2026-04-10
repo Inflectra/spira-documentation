@@ -42,6 +42,7 @@
     - Improve scrolling of the left hand sidebar of [list pages](../Spira-User-Manual/Application-Wide.md/#artifact-list-pages), to let the user scroll the sidebar directly, separately from the page [IN:11635]
     - Make the tooltips for [test execution buttons for leaving and finishing the test](../Spira-User-Manual/Test-Execution.md/#leaving-the-test-execution-page) more informative [IN:11492]
     - Update automated test run record-multiple API endpoint to skip execution status refreshes to improve performance of large test run recording volumes [IN:11518]
+    - Update the filter logic on the requirement and release list pages for the name column, so that it is consistent with how it works for other artifacts [IN:12512]
 
 ## Version 8.15 (November 2025)
 !!! info "Summary"
