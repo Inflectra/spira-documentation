@@ -249,26 +249,66 @@ For other custom property types, instead of the `StringValue` field, please use 
     ```
 
 ## Filtering
-Some API operations allow you to filter the data before requesting it. This is useful when working with large data sets. Look for POST methods that have the `sort_field` property on their URL. To configure the filter, send the pair of filtering properties for the field name and field value.
+Some API operations let you filter results before retrieval. Look for POST methods with `sort_field` in their URL. Send an array of filter objects in the request body. Each object targets one field, and multiple filters are **ANDed** together.
 
-!!! example "Example: Retrieve Test Runs of Release 82 in Spira"
-    *Remember to replace the instance URL, project ID (1), and include the parameters username and api-key. Also, replace 82 by the target release.*
+Each filter needs a `PropertyName` and exactly **one** value field. If multiple are set, only the first is used in this priority: `IntValue` → `StringValue` → `MultiValue` → `DateRangeValue`.
 
-    ```json
-        ###Search Test-Run
-        POST https://my-company.spiraservice.net/Services/v7_0/RestService.svc/projects/1/test-runs/search?starting_row=1&number_of_rows=200
-        content-type: application/json
-        Accept: application/json
+### Lookup / Integer Fields
+Lookup fields are fields like `IncidentStatusId`, `PriorityId`, `SeverityId`, `OwnerId`, `ReleaseId`, `IncidentTypeId`, and similar `…Id` fields. They hold a single integer ID referencing a value in a lookup list.
 
-        [
-            {
-            "PropertyName": "ReleaseId",
-            "IntegerValue": "82"
-            }
-        ]
-    ```
+#### IntValue — match a single value
+```json
+[{ "PropertyName": "ReleaseId", "IntValue": 82 }]
+```
 
-Make sure you pick the correct field type. Available options are: `StringValue`, `IntValue`, `MultiValue`, or `DateRangeValue`. For MultiValue, enter an array of integers as its value. Learn more about filtering by Date Ranges [here](https://www.inflectra.com/Support/KnowledgeBase/KB327.aspx).
+Use `-999` to filter for NULL (no value set): `{ "PropertyName": "OwnerId", "IntValue": -999 }`
+
+#### MultiValue — match any of several values (OR)
+Use this to filter a lookup field on more than one value at once. This is the only way to get OR logic — it applies within a single field. Set `IsNone` to `true` to filter for NULL instead (the `Values` array is ignored when `IsNone` is `true`).
+
+```json
+[{ "PropertyName": "IncidentStatusId", "MultiValue": { "Values": [1, 2, 5], "IsNone": false } }]
+```
+
+Both `IntValue` and `MultiValue` work on the same lookup fields. Use `IntValue` when you need exactly one value, `MultiValue` when you need several.
+
+### StringValue — text search
+Substring match (case-insensitive). For boolean fields use `"Y"` or `"N"`.
+
+```json
+[{ "PropertyName": "Name", "StringValue": "login error" }]
+```
+
+??? note "Special behavior for the Name field"
+    The `Name` field splits the string into keywords and searches both Name and Description. Wrap a phrase in escaped quotes to match it as one term: `"\"login error\""`.
+
+### DateRangeValue — date range
+Inclusive range on date fields. Either bound can be `null` for open-ended ranges. Send dates in UTC (ISO 8601). `ConsiderTimes` defaults to `false`, which strips the time component and compares calendar dates only.
+
+```json
+[{
+  "PropertyName": "CreationDate",
+  "DateRangeValue": {
+    "StartDate": "2024-01-01T00:00:00.000Z",
+    "EndDate": "2024-12-31T23:59:59.000Z",
+    "ConsiderTimes": false
+  }
+}]
+```
+
+!!! warning
+    `StartDate` must be ≤ `EndDate` when both are provided.
+
+??? info "Custom Properties"
+    Use the format `Custom_NN` (zero-padded, e.g. `Custom_01`). The value field depends on the type:
+
+    | Type                                           | Value Field                 | Notes                                                             |
+    | ---------------------------------------------- | --------------------------- | ----------------------------------------------------------------- |
+    | Text                                           | `StringValue`               | Substring match                                                   |
+    | Boolean                                        | `StringValue`               | `"Y"` / `"N"`. Use `IntValue: -999` for NULL                      |
+    | Integer, Decimal                               | `IntValue` or `StringValue` | Single value or pipe-separated range: `"10|50"`, `"10|"`, `"|50"` |
+    | Date / DateTime                                | `DateRangeValue`            | Same as standard date fields                                      |
+    | List, MultiList, User, Release, AutomationHost | `MultiValue` or `IntValue`  | Same as lookup fields above                                       |
 
 
 ## Common Error Messages
