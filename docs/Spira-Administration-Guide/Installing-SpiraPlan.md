@@ -14,25 +14,24 @@ This section outlines how to:
 ## Hardware and Software Requirements
 The minimum hardware and software requirements for running the Spira system are:
 
-| **Server Requirements** |                                                                                                 |
-| ----------------------- | ----------------------------------------------------------------------------------------------- |
-| **Requirement**         | **Minimum Specification**                                                                       |
-| **Processor:**          | Intel® or AMD® x86 or x64 compatible processor                                                  |
-| **Memory:**             | 4 GB, 8 GB recommended                                                                          |
-| **Operating System:**   | Windows Server 2016+ (recommended) <br>Windows Server 2012 R1 and R2 <br>Windows 10 (for demoing) |
-| **Database:**           | Microsoft SQL Server 2016+<br> Microsoft SQL Server 2016+ Express Edition*                      |
-| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher   |
+| **Server Requirements** |                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------- |
+| **Requirement**         | **Minimum Specification**                                                                     |
+| **Processor:**          | Intel® or AMD® x86 or x64 compatible processor                                                |
+| **Memory:**             | 4 GB, 8 GB recommended                                                                        |
+| **Operating System:**   | Windows Server 2016+ <br>Windows 2019, 2022, 2025                                             |
+| **Database:**           | Microsoft SQL Server 2016+<br>SQL Server 2019, 2022, 2025                                     |
+| **Web Server:**         | Internet Information Services (IIS) 7.0 or higher <br> ASP.NET Web Extensions 4.7.2 or higher |
 
-**Note**:
-Please consider there are some limitations for FREE SQL Express [That may significantly affect performance thus we don't recommend it to be used on production/handling large amounts of data).
----
+**Note**: Please consider there are some limitations for FREE SQL Express [That may significantly affect performance thus we don't recommend it to be used on production/handling large amounts of data).
+
 
 | **Client Requirements** |                                                                                                                             |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | **Web Browser:**        | Microsoft Edge <br> Mozilla Firefox <br> Google Chrome (Desktop and Android) <br> Apple Safari (Desktop and iOS) <br> Opera |
-| **Other Components:**   | Microsoft Excel 2010+ (optional) <br> Microsoft Word 2010+ (optional) <br> Microsoft Project 2010+ (optional)               |
+| **Other Components:**   | Microsoft Excel 2010+ (optional) <br> Microsoft Word 2010+ (optional)                                                       |
 
-\*Note that Spira can be loaded onto either Windows Server or workstation editions, provided that the IIS web-server is installed and that SQL Server is available as a database engine. However, Windows workstation editions can only support a maximum of 5 concurrent user web sessions. In general, unless there are only going to be a couple of client machines hitting the server, we recommend using Windows Server.
+**Note**: Spira can be loaded onto either Windows Server or workstation editions, provided that the IIS web-server is installed and that SQL Server is available as a database engine. However, Windows workstation editions can only support a maximum of 5 concurrent user web sessions. In general, unless there are only going to be a couple of client machines hitting the server, we recommend using Windows Server.
 
 
 ## System Prerequisites
