@@ -75,8 +75,7 @@ To change the license key used by the system (for example, if to upgrade from Tr
 
 - Log into [Customer Area](https://www.inflectra.com/CustomerArea)
 - Scroll down to the My Licenses section
-- Locate your new **license key** and copy (we recommend using the copy icon next to it to avoid accidentally copying blank spaces)
-- Do the same to copy your exact **organization name**
+- Locate your new **license key** and **organization name**, copy each field in turn (we recommend using the copy icon next to it to avoid accidentally copying blank spaces)
 - Navigate to your Spira License Details administration page 
 - Paste **Organization** and **License Key** into their respective text boxes, ensuring they match exactly
 - Click the "Save" button.
