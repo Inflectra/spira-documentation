@@ -305,9 +305,9 @@ For many of the fields, you can **map multiple Spira field values** to the same 
 
     If you need to pause the synchronization for any reason, existing Jira ID field values in Spira are preserved. To ensure that the mapped Jira IDs remain visible and correctly linked within the Spira artifacts (such as Requirements):
     
-- Do not delete the JiraDataSync plugin from the Data Synchronization list pages.
-- To pause synchronization, simply set the DataSync to *inactive* for the specific product (as explained in a section above).
-- Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.
+    - Do not delete the JiraDataSync plugin from the Data Synchronization list pages.
+    - To pause synchronization, simply set the DataSync to *inactive* for the specific product (as explained in a section above).
+    - Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.
 
 === "Priority"
     !!! info "This field mapping is required"
