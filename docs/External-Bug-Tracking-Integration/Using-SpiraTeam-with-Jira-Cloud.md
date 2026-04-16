@@ -306,7 +306,7 @@ To activate this product for the datasync, update the following fields:
     | Releases              | ✅ Supported            | Versions / Releases             | 
     | Risks                 | ❌ Not Supported        | N/A                             | 
 
-*Note: If using SpiraTest, you do not need to setup the mappings for Tasks as Tasks are not available in SpiraTest.*
+*Note: If using SpiraTest, you do not need to setup the mappings for Tasks, as Tasks are not available in SpiraTest.*
 
 ### Release Mapping
 The datasync uses a special mapping field to identify what a Spira artifact should sync with in Jira. It uses this field to map a Spira releases to a Jira version so that users can create releases/versions in one application and see them in either application. The summary of how it works is:
