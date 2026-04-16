@@ -302,7 +302,7 @@ To activate this product for the datasync, update the following fields:
     | Requirements          | ✅ Supported            | Epics, Stories                  |
     | Incidents             | ✅ Supported            | Bugs                            | 
     | Tasks                 | ✅ Supported            | Tasks, Subtasks                 | 
-    | Test Cases            | ❌ Not Supported        | Test Cases                      | 
+    | Test Cases            | ❌ Not Supported        | N/A                             | 
     | Releases              | ✅ Supported            | Versions / Releases             | 
     | Risks                 | ❌ Not Supported        | N/A                             | 
 
