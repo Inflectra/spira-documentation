@@ -63,7 +63,7 @@ The License Details page displays information about the installed license for yo
 - **License Type** (e.g., x-user fixed, x-user concurrent, demonstration, enterprise)
 - **Expiration Date**
 - **Organization Name**
-- **Active Users**: The number of users concurrently logged in right now. (This is especially useful for administrators tracking down how many concurrent licenses are currently in use).
+- **# Concurrent Users**: The number of users logged in right now.
 
 A sample page is illustrated below:
 
