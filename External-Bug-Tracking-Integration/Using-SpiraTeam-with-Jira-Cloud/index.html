@@ -2307,6 +2307,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#supported-artifacts">
+<span class="md-ellipsis">
+      
+        Supported Artifacts
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#release-mapping">
 <span class="md-ellipsis">
       
@@ -2939,6 +2948,15 @@
 <span class="md-ellipsis">
       
         Activate the datasync
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-artifacts">
+<span class="md-ellipsis">
+      
+        Supported Artifacts
       
     </span>
 </a>
@@ -4513,6 +4531,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#supported-artifacts">
+<span class="md-ellipsis">
+      
+        Supported Artifacts
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#release-mapping">
 <span class="md-ellipsis">
       
@@ -5035,11 +5062,58 @@ Please note that Jira has limited capabilities for exporting and importing text 
 <p class="admonition-title">Pausing Data Synchronization</p>
 <p>If you need to pause the synchronization for any reason, existing Jira ID field values in Spira are preserved. To ensure that the mapped Jira IDs remain visible and correctly linked within the Spira artifacts (such as Requirements):</p>
 <ul>
-<li>Do not delete the JiraDataSync plugin from the Data Synchronization list pages.</li>
+<li>Do not delete the JiraDataSync Plugin from the Data Synchronization list pages.</li>
 <li>To pause synchronization, simply set the DataSync to <em>inactive</em> for the specific product (as explained in a section above).</li>
 <li>Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.</li>
 </ul>
 </div>
+<h3 id="supported-artifacts">Supported Artifacts<a class="headerlink" href="#supported-artifacts" title="Permanent link">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Supported Artifacts for Jira Synchronization</p>
+<p>Because Spira's Artifact Field Mapping page displays all possible fields universally, please use the matrix below to understand which artifacts are actively supported by the Jira integration.</p>
+<table>
+<thead>
+<tr>
+<th>Spira Artifact</th>
+<th>Jira Support Status</th>
+<th>Jira Equivalent Item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requirements</td>
+<td>✅ Supported</td>
+<td>Epics, Stories</td>
+</tr>
+<tr>
+<td>Incidents</td>
+<td>✅ Supported</td>
+<td>Bugs</td>
+</tr>
+<tr>
+<td>Tasks</td>
+<td>✅ Supported</td>
+<td>Tasks, Subtasks</td>
+</tr>
+<tr>
+<td>Test Cases</td>
+<td>❌ Not Supported</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Releases</td>
+<td>✅ Supported</td>
+<td>Versions / Releases</td>
+</tr>
+<tr>
+<td>Risks</td>
+<td>❌ Not Supported</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Note: If using SpiraTest, you do not need to setup the mappings for Tasks, as Tasks are not available in SpiraTest.</em></p>
 <h3 id="release-mapping">Release Mapping<a class="headerlink" href="#release-mapping" title="Permanent link">¶</a></h3>
 <p>The datasync uses a special mapping field to identify what a Spira artifact should sync with in Jira. It uses this field to map a Spira releases to a Jira version so that users can create releases/versions in one application and see them in either application. The summary of how it works is:</p>
 <ul>
