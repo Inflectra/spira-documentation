@@ -1,5 +1,18 @@
 # Release Notes for Spira v9
 
+## Version 9.0.0.1 (April 2026)
+??? bug "Bug fixes and enhancements"
+    - Fix program level planning board concurrency errors [IN:12557]
+    - Fix problems related to user password reset [IN:12573]
+    - Fix problems related to Event Log details for errors [IN:12574]
+    - Fix incompatible dashboard customizations for Spira 9.0 [IN:12575]
+    - Fix notification going out with 'No Subject' as the artifact's name [IN:12576]
+    - Fix not truncating a release version number that is too long on the Release List Page [IN:12577]
+    - Fix auto-truncation of fields not working as expected [IN:12586]
+    - Fix test case history retrieval timing out for most test cases [IN:12587]
+    - Fix user collection retrieval performance issue [IN:12589]
+    - Fix notifications for incident workflow transitions recipients [IN:12593]
+
 ## Version 9.0 (April 2026)
 !!! info "Summary"
     With version 9 of Spira, we have upgraded much of the behind-the-scenes plumbing to improve stability and performance across the application. It also provides a solid foundation for future innovation.
