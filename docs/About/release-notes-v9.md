@@ -1,5 +1,9 @@
 # Release Notes for Spira v9
 
+## Version 9.1 (May 2026)
+??? bug "Bug fixes and enhancements"
+    - Fix decimal custom properties not saving the precision digit value [IN:12160]
+
 ## Version 9.0.0.1 (April 2026)
 ??? bug "Bug fixes and enhancements"
     - Fix auto-truncation of fields not working as expected [IN:12586]
