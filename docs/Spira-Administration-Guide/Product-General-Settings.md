@@ -155,6 +155,14 @@ In the above example, only TFS is active for this particular product. Clicking o
 
 ![](img/Product_Data_Synchronization_Detail.png)
 
+!!! success "Static Field Mapping View"
+    
+    The Artifact Field Mapping page provides a universal, static interface designed to accommodate all data synchronization plugins supported by Spira.
+
+    The fields displayed on this page do not dynamically filter or restrict themselves based on your currently active plugin. You will see mapping options for artifacts that your specific external tool may not support.
+
+    Before configuring your mappings, please refer to your specific plugin's documentation to verify exactly which Spira artifacts and fields are supported for this synchronization in particular.
+
 ## Product Data Tools
 
 This page contains several different data management tools that can be used to identify certain data issues in the system and correct them. There are two main sections to this page -- Data Caching and Indentation Hierarchy:

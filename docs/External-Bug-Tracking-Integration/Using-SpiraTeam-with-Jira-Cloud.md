@@ -287,9 +287,26 @@ To activate this product for the datasync, update the following fields:
 
     If you need to pause the synchronization for any reason, existing Jira ID field values in Spira are preserved. To ensure that the mapped Jira IDs remain visible and correctly linked within the Spira artifacts (such as Requirements):
 
-     - Do not delete the JiraDataSync plugin from the Data Synchronization list pages.
-     - To pause synchronization, simply set the DataSync to *inactive* for the specific product (as explained in a section above).
-     - Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.
+    - Do not delete the JiraDataSync Plugin from the Data Synchronization list pages.
+    - To pause synchronization, simply set the DataSync to *inactive* for the specific product (as explained in a section above).
+    - Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.
+
+### Supported Artifacts
+
+!!! info "Supported Artifacts for Jira Synchronization"
+
+    Because Spira's Artifact Field Mapping page displays all possible fields universally, please use the matrix below to understand which artifacts are actively supported by the Jira integration.
+
+    | Spira Artifact        | Jira Support Status      | Jira Equivalent Item            |
+    | --------------------- | ------------------------ | ------------------------------- |
+    | Requirements          | ✅ Supported            | Epics, Stories                  |
+    | Incidents             | ✅ Supported            | Bugs                            | 
+    | Tasks                 | ✅ Supported            | Tasks, Subtasks                 | 
+    | Test Cases            | ❌ Not Supported        | N/A                             | 
+    | Releases              | ✅ Supported            | Versions / Releases             | 
+    | Risks                 | ❌ Not Supported        | N/A                             | 
+
+*Note: If using SpiraTest, you do not need to setup the mappings for Tasks, as Tasks are not available in SpiraTest.*
 
 ### Release Mapping
 The datasync uses a special mapping field to identify what a Spira artifact should sync with in Jira. It uses this field to map a Spira releases to a Jira version so that users can create releases/versions in one application and see them in either application. The summary of how it works is:

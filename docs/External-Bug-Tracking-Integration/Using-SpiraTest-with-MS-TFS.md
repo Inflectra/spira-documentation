@@ -88,17 +88,28 @@ time-zones here.
 Next, you need to configure the data mapping between Spira and TFS. This allows the various projects, users, releases, incident types, statuses, priorities and custom property values used in the two applications to be related to each other. This is important, as without a correct mapping, there is no way for the integration service to know that a "Not Reproducible" incident in Spira is the same as a "Closed
 + Cannot Reproduce" bug work item in TFS (for example).
 
-The following mapping information needs to be setup in Spira:
+!!! info "Supported Artifacts for ADO Synchronization"
 
-- The mapping of the project identifiers for the projects that need to be synchronized
-- The mapping of *users* in the system
-- The mapping of *releases* (equivalent to TFS iterations) in the system
-- The mapping of the various standard *incident* fields in the system
-- The mapping of the various custom *incident* properties in the system
-- The mapping of the various standard *requirement* fields in the system (if synching requirements)
-- The mapping of the various custom *requirement* properties in the system (if synching requirements)
-- The mapping of the various standard *task* fields in the system (if synching tasks)
-- The mapping of the various custom *task* properties in the system (if synching tasks)
+    Because Spira's Artifact Field Mapping page displays all possible fields universally, please use the matrix below to understand which artifacts are actively supported by the Azure DevOps integration. Attempting to map unsupported artifacts (such as Risks) will not result in a successful sync.
+
+    | Spira Artifact        | ADO/TFS Support Status   | ADO Equivalent Item            |
+    | --------------------- | ------------------------ | ------------------------------ |
+    | Requirements          | ✅ Supported            | Epics, Features, User Stories  |
+    | Incidents             | ✅ Supported            | Bugs, Issues                   | 
+    | Tasks                 | ✅ Supported            | Tasks                          | 
+    | Test Cases            | ❌ Not Supported        | Test Cases                     | 
+    | Releases              | ✅ Supported            | Iterations / Sprints           | 
+    | Risks                 | ❌ Not Supported        | N/A                            | 
+
+Based on the supported capabilities above, the following mapping information needs to be set up in Spira to establish the connection. (Note: Because the mapping screen is static, simply ignore the sections for unsupported artifacts).
+
+- The mapping of project identifiers for the projects that need to be synchronized.
+- The mapping of users in the system.
+- The mapping of releases (equivalent to ADO Iterations).
+- The mapping of various standard and custom incident properties in the system.
+- The mapping of various standard and custom requirement properties (if syncing requirements).
+- The mapping of various standard and custom task properties (if syncing tasks).
+- The mapping of various standard and custom test case properties (if syncing test cases).
 
 *Note: If using SpiraTest, you do not need to setup the last two sets of mappings as Tasks are not available in SpiraTest.*
 
