@@ -1,5 +1,10 @@
 # Release Notes for Inflectra.ai
 
+## April 20 2026
+
+!!! bug "Bug fixes and enhancements"
+    - Upgrade all Inflectra.ai calls that use Claude 3.7 Sonnet to use Amazon Nova Pro or Claude Sonnet 4.5 [IN:12451]
+
 ## April 3 2026
 
 !!! bug "Bug fixes and enhancements"
