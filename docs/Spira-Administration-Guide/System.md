@@ -80,7 +80,7 @@ To change the license key used by the system (for example, when upgrading from a
 - Paste **Organization** and **License Key** into their respective text boxes, ensuring they match exactly
 - Click the "Save" button.
 
-If there is an issue with the license key (e.g. when upgrading from a trial to a product edition, or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
+If there is an issue with the license key (e.g. when upgrading from a trial to a product edition or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
 
 ### How to Check Your License Status
 
