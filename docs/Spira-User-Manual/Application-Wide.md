@@ -23,7 +23,7 @@ To filter the list:
 - use the dropdowns or free-text search fields immediately beneath the column names
 - click the `Filter` icon or press the `ENTER` key to apply the filters
 
-Note that the NAME field is searched using a "like" comparison, so that searching for "database" would match "Database is ready", "There is a database", "The data in the database is correct", and so on. All other freetext fields need to be exact matches (e.g. dates or numbers).
+Note that the NAME field is searched using a "like" comparison, so that searching for "database" would match "Database is ready", "There is a database", "The data in the database is correct", and so on. All other freetext fields need to be exact matches (e.g. dates or numbers). When the NAME filter contains multiple words, Spira searches for each keyword in the filter separately, except for Requirements and Releases, where it searches for the entire phrase as a whole. This helps for locating Requirements and Releases that follow specific naming conventions, (e.g. RQ-FUNC-001: XYZ).
 
 To **clear the current filter** (whether it is saved or not), either click the `Clear Filters` button above the table (as you can see in the screenshot above), or go to `Filter` > `Clear Filter` from the operations toolbar.
 
