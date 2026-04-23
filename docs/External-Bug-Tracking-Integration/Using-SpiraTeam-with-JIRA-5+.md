@@ -109,7 +109,17 @@ If you are using a Jira Personal Access Token (PAT) or API Key to authenticate:
 
 ![](img/JiraCloud-Plugin-Config2.png)
 
-- **Time Offset**: normally this should be set to zero, but if you find that issues being changed in Jira are not being updated in Spira (especially if comments are not syncing), try increasing the value as this will tell the data-synchronization plug-in to add on the time offset (in hours) when comparing date-time stamps. Also Jira is on a server set to a different time-zone, you should add in the number of hours difference between the servers time-zones here.
+- **Time Offset**: is used to synchronize the clocks between Spira and Jira. The data-synchronization plug-in relies on exact date-time stamps to detect when issues or comments have been updated. If the timezones of the two servers do not match, the synchronization may fail to pick up recent changes. To configure this correctly, you must use the Spira's time zone as your baseline reference. 
+
+!!! info "How to calculate the Time Offset value"
+
+    Calculate the difference in hours between Jira and Spira, and enter it using the following rules:
+
+    - If Jira timezone is BEHIND Spira: Enter a positive number (Example: If Jira's server time is 2 hours behind Spira, enter 2)
+    - If Jira timezone is AHEAD OF Spira: Enter a negative number (Example: If Jira's server time is 2 hours ahead of Spira, enter -2)
+    - If both servers are in the same timezone: Leave this set to 0.
+
+    *Note*: You do not need to guess or randomly increase this value. Simply determine the exact timezone hour difference between your Jira instance and your Spira instance.
 - **Auto-Map Users**: This changes the way that the plugin maps users between Spira and Jira. Set to yes to auto-map users, or no to manually map users. See [below]
 
 !!! info "In normal use, keep the fields below blank"
