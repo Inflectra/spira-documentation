@@ -119,7 +119,7 @@ If you are using a Jira Personal Access Token (PAT) or API Key to authenticate:
     - If Jira timezone is AHEAD OF Spira: Enter a negative number (Example: If Jira's server time is 2 hours ahead of Spira, enter -2)
     - If both servers are in the same timezone: Leave this set to 0.
 
-    *Note*: You do not need to guess or randomly increase this value. Simply determine the exact timezone hour difference between your Jira instance and your Spira instance.
+    *Note*: Please check your Spira and Jira server configurations to determine the exact time difference in hours, ensuring you enter accurate information into this field.
 - **Auto-Map Users**: This changes the way that the plugin maps users between Spira and Jira. Set to yes to auto-map users, or no to manually map users. See [below]
 
 !!! info "In normal use, keep the fields below blank"
