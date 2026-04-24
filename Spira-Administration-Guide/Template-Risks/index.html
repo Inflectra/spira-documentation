@@ -4205,6 +4205,11 @@ change the name, color, score (which is used, together with a risks impact to ca
 <p>You can have as many workflows as you like in a template, but only one can be marked as the default. Each risk type is assigned to a workflow;
 this allows you to have different risk types follow different paths from creation of closure. However, when a new risk type is created, it will be initially associated with the template's default workflow.</p>
 <p>Note: You can only assign an active workflow to a risk type, and similarly you cannot make a workflow inactive that is currently linked to a risk type. This is important as all risk types need to be linked to an active workflow at all times.</p>
+<div class="admonition tip">
+<p class="admonition-title">Apply own workflow to specific type of artifact</p>
+<p>Each type of risk artifact in Spira can follow its own distinct workflow or simply share the default one. For example, if your internal regulations dictate that a "Financial" type of risk needs a stricter approval process than a standard "Technical", you can assign a custom workflow specifically to that type. </p>
+<p>To learn how to <strong><a href="#edit-types">map a workflow to a specific artifact type</a></strong>, check out the guide: <strong><a href="../../HowTo-Guides/Permissions-Workflows/#what-workflow-controls-a-specific-artifact">What workflow controls a specific artifact?</a></strong></p>
+</div>
 <h3 id="edit-workflow-details">Edit Workflow Details<a class="headerlink" href="#edit-workflow-details" title="Permanent link">¶</a></h3>
 <p>Clicking on the "Steps" button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:</p>
 <p><img alt="" src="../img/Template_Risks_172.png"/></p>
