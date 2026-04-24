@@ -22,6 +22,7 @@ The associated workflow drop-down list allows you to specify which workflow the 
 The default radio button allows you to specify which type should be the default for newly created risks. This is the type that a new risk will be set to unless changed by the creator of the risk. Note that you must have at least one active risk type, and you cannot set an inactive type as the default.
 
 
+
 ## Edit Statuses
 The following screen is displayed when you choose the "Statuses" link from the Risks section of the administration menu:
 
@@ -67,6 +68,11 @@ this allows you to have different risk types follow different paths from creatio
 
 Note: You can only assign an active workflow to a risk type, and similarly you cannot make a workflow inactive that is currently linked to a risk type. This is important as all risk types need to be linked to an active workflow at all times.
 
+!!! tip "Apply own workflow to specific type of artifact"
+
+    Each type of risk artifact in Spira can follow its own distinct workflow or simply share the default one. For example, if your internal regulations dictate that a "Financial" type of risk needs a stricter approval process than a standard "Technical", you can assign a custom workflow specifically to that type. 
+    
+    To learn how to **[map a workflow to a specific artifact type](#edit-types)**, check out the guide: **[What workflow controls a specific artifact?](../HowTo-Guides/Permissions-Workflows.md/#what-workflow-controls-a-specific-artifact)**
 
 ### Edit Workflow Details
 Clicking on the "Steps" button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
