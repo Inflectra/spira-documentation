@@ -54,6 +54,7 @@ The default radio button allows you to specify which requirement type should be 
 
 
 ## Workflows
+
 Clicking on the "Workflow" link under the Requirements heading, brings up the list of defined requirement workflows for the current template. A workflow is a predefined sequence of requirement statuses linked together by "workflow transitions" to enable a newly created requirement to be reviewed, prioritized, assigned, developed and tested, as well as to handle exception cases such as the case of a rejected or obsolete requirement. The workflow list screen for the sample template is illustrated below:
 
 ![](img/Template_Requirements_115.png)
@@ -62,7 +63,13 @@ You can have as many workflows as you like in a template, but only one can be ma
 
 Note: You cannot make a workflow inactive that is currently linked to a requirement type. This is important as all requirement types need to be linked to an active workflow at all times.
 
+!!! tip "Apply own workflow to specific type of artifact"
 
+    Each type of requirement artifact in Spira can follow its own distinct workflow or simply share the default one. For example, if your internal regulations dictate that a "Feature" requirement needs a stricter approval process than a standard "User Story", you can assign a custom workflow specifically to that type. 
+    
+    To learn how to **[map a workflow to a specific artifact type](#types)**, check out the guide: **[What workflow controls a specific artifact?](../HowTo-Guides/Permissions-Workflows.md/#what-workflow-controls-a-specific-artifact)**
+
+  
 ### Edit Workflow Details
 Clicking on the 'Steps' button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
 

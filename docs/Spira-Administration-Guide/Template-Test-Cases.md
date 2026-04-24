@@ -55,6 +55,11 @@ flowchart LR
 
 Note: You can only assign an active workflow to a test case type, and similarly you cannot make a workflow inactive that is currently linked to a test case type. This is important as all test case types need to be linked to an active workflow at all times.
 
+!!! tip "Apply own workflow to specific type of artifact"
+
+    Each type of Test Case in Spira can follow its own distinct workflow or simply share the default one. For example, if your internal regulations dictate that a "Functional" test case needs a stricter approval process than a standard "Regression", you can assign a custom workflow specifically to that type. 
+    
+    To learn how to **[map a workflow to a specific artifact type](#types)**, check out the guide: **[What workflow controls a specific artifact?](../HowTo-Guides/Permissions-Workflows.md/#what-workflow-controls-a-specific-artifact)**
 
 ### Edit Workflow Details
 Clicking on the 'Steps' button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:

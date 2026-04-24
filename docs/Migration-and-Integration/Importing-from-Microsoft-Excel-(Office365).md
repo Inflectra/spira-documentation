@@ -39,7 +39,7 @@ To install the add-in:
     
     Due to technical limitations, sometimes Excel keeps old files cached, leading you to think the add-in was updated when it was actually not. Please follow the instructions in [this article](https://www.inflectra.com/Support/KnowledgeBase/KB830.aspx) to make sure you force it to run the most recent version.
     
-    Learn more about our Addons and Integrations new releases and updates [here](https://spiradoc.inflectra.com/About/release-notes-addons-1/).
+    Learn more about our Addons and Integrations new releases and updates [here](../About/release-notes-addons-1.md).
 
 
 ## 1. Connect to your Spira app
