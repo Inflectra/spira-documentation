@@ -69,7 +69,12 @@ A sample page is illustrated below:
 
 ![](img/System_61.png)
 
+<<<<<<< Updated upstream
 ### How to Update Your License Key
+=======
+To change the system's license key (for example, when upgrading from a Trial edition to a Standard edition), you do **not**
+need to reinstall Spira. Simply update the **organization** and **license key** fields to match the exact information found in Inflectra Customer Area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button.
+>>>>>>> Stashed changes
 
 To change the license key used by the system (for example, when upgrading from a trial to a product edition), you do **not** need to reinstall Spira:
 
