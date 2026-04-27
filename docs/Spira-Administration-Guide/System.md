@@ -71,8 +71,7 @@ A sample page is illustrated below:
 
 ### How to Update Your License Key
 
-To change the system's license key (for example, when upgrading from a trial to a production edition), you do **not**
-need to reinstall Spira. Simply update the **organization** and **license key** fields to match the exact information found in Inflectra Customer Area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button:
+To change the system's license key (for example, when upgrading from a trial to a production edition), you do **not** need to reinstall Spira. Simply update the **organization** and **license key** fields to match the exact information found in Inflectra Customer Area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button:
 
 - Log into [Customer Area](https://www.inflectra.com/CustomerArea)
 - Scroll down to the My Licenses section
