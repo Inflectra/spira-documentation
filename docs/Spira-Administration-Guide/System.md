@@ -69,14 +69,10 @@ A sample page is illustrated below:
 
 ![](img/System_61.png)
 
-<<<<<<< Updated upstream
 ### How to Update Your License Key
-=======
-To change the system's license key (for example, when upgrading from a Trial edition to a Standard edition), you do **not**
-need to reinstall Spira. Simply update the **organization** and **license key** fields to match the exact information found in Inflectra Customer Area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button.
->>>>>>> Stashed changes
 
-To change the license key used by the system (for example, when upgrading from a trial to a product edition), you do **not** need to reinstall Spira:
+To change the system's license key (for example, when upgrading from a trial to a production edition), you do **not**
+need to reinstall Spira. Simply update the **organization** and **license key** fields to match the exact information found in Inflectra Customer Area of our website (<http://www.inflectra.com/CustomerArea>) and click the "Save" button:
 
 - Log into [Customer Area](https://www.inflectra.com/CustomerArea)
 - Scroll down to the My Licenses section
@@ -85,7 +81,7 @@ To change the license key used by the system (for example, when upgrading from a
 - Paste **Organization** and **License Key** into their respective text boxes, ensuring they match exactly
 - Click the "Save" button.
 
-If there is an issue with the license key (e.g. when upgrading from a trial to a product edition or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
+If there is an issue with the license key (e.g. when upgrading from a trial to a production edition or where the license key doesn't match the organization name) an error will be displayed describing the specific issue with the information you entered. If you are unable to get the system to work with the license key information, please contact Inflectra<sup>®</sup> customer support at: <support@inflectra.com>.
 
 ### How to Check Your License Status
 
