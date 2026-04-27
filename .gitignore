@@ -5,3 +5,4 @@ lib/
 Scripts/
 .venv/
 .DS_STORE
+.vscode/settings.json
