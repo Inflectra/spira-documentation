@@ -1,5 +1,9 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
+## April 2026
+- [Azure DevOps Data Synchronization](.../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md)
+
+    - [IN:12625] TFS/ADO dataSync plugin to support unidirectional incident sync modes
 
 ## March 2026
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.5:
