@@ -92,6 +92,12 @@ When generating content for a requirement, the following information is provided
 - Names of the parent, grandparent, and so on, of the requirement (its hierarchy)
 - The product name of the product the requirement is in
 
+#### Requirement Test Coverage
+
+From the requirement details page you can evaluate how well the requirement is covered by its test cases. This feature considers the requirement's description, its steps, and some broader context including any sibling requirements, its parent hierarchy, and the product name. Using Agentic AI tooling, we compare this information against the test cases linked to the requirement. This includes each test case's name, type, description, and all test steps. 
+
+To maximize the quality of the response, we suggest limiting the number of sibling requirements and keeping the total number of test steps on the requirement's test cases below 500. If the evaluation can't be done for any reason, we respond with a helpful error message explaining why.
+
 #### Requirement Analysis
 From the requirement details page you can analyze the requirement to see how well it is written and organized, based off specific frameworks. This provides valuable insights into the quality of the text and how effectively it may communicate its meaning to others.
 
