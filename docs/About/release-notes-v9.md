@@ -2,7 +2,28 @@
 
 ## Version 9.1 (May 2026)
 ??? bug "Bug fixes and enhancements"
-    - Fix decimal custom properties not saving the precision digit value [IN:12160]
+    
+    - Improve Name and Description search behavior for Requirements and Releases, allowing users to search for exact phrases containing special characters or spaces [IN:12520]
+    - Update Jira Data Sync "Time Offset" UI label for timezone clarity [IN:12493]
+    - Update Enable 2-Step Authentication setup instructions [IN:12427]
+    - Add a lightweight banner to the login page to show users important Inflectra news or updates [IN:12621]
+    - Upgrade Inflectra.ai to use newer AI models [IN:12451]
+    - Documentation and Knowledge Base article updates and enhancements [IN:12479] [IN:12560] [IN:12464] [IN:12506] [IN:12558]
+    - Inflectra-Spira MCP Server improvements and fixes [IN:12610] [IN:12638] [IN:12639] [IN:12640] [IN:12641] [IN:12648] [IN:12481] [IN:12484]
+    - Fix a bug where false notifications could be sent when reordering cards on planning boards [IN:12480]
+    - Fix a bug where custom list API edits did not persist correctly [IN:12595]
+    - Fix a bug where test set execution status was not updated correctly after assigning a test run [IN:12601]
+    - Fix a bug where moving cards on the Planning Board could incorrectly update timestamps [IN:12622]
+    - Fix a bug causing excessive warning entries in the notification log [IN:12634]
+    - Fix a bug with ADO Sync custom field metadata [IN:12650]
+    - Fix a bug where cloning a product could fail under certain conditions [IN:12662]
+    - Fix a bug where the site could become temporarily inaccessible after an app pool restart [IN:12671]
+    - Fix a bug causing excessive log entries to be generated for test cases [IN:12609]
+    - Fix a performance issue with workflow queries [IN:12594]
+    - Improve resilience of Data Tools jobs to transient database connection failures [IN:12620]
+    - Fix a bug where the left panel could not be resized in certain views [IN:12556]
+    - Fix a display issue in the Test Case Workflow condition section [IN:12297]
+    - Fix a bug where decimal custom properties did not save the precision value correctly [IN:12160]
 
 ## Version 9.0.0.1 (April 2026)
 ??? bug "Bug fixes and enhancements"
