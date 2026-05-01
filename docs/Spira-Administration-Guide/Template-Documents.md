@@ -45,6 +45,11 @@ You can have as many document workflows as you like in a template, but only one 
 
 Note: You can only assign an active workflow to a document type, and similarly you cannot make a workflow inactive that is currently linked to a document type. This is important as all document types need to be linked to an active workflow at all times.
 
+!!! tip "Apply own workflow to specific type of artifact"
+
+    Each type of document artifact in Spira can follow its own distinct workflow or simply share the default one. For example, if your internal regulations dictate that a document type "Functional Specification" needs a stricter approval process than a standard "Default", you can assign a custom workflow specifically to that type. 
+    
+    To learn how to **[map a workflow to a specific artifact type](#document-types)**, check out the guide: **[What workflow controls a specific artifact?](../HowTo-Guides/Permissions-Workflows.md/#what-workflow-controls-a-specific-artifact)**
 
 ### Workflow Details
 Clicking on the "Steps" button of a workflow brings up the following screen that lists all the workflow steps and workflow transitions that comprise the workflow:
