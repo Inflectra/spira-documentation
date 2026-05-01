@@ -18,6 +18,7 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 ## Q2 2026
 - Enhanced security with the ability to enforce users to have MFA authentication configured
 - Natural language custom report creation for administrators, using Inflectra.ai agents
+- Inflectra.ai MCP Server providing an AI-friendly interface to Spira data, enabling tighter integration with AI-powered development tools like Kiro
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
@@ -28,7 +29,6 @@ The list below are features that we are focused on delivering but not in the abo
     - Allow users to specify example artifacts to use to customize artifact creation to align with their specific needs
     - Targeted risk analysis of artifacts in different dimensions (such as governance, security, and compliance)
     - Deeper contextual searching and analysis of artifact data and associations to provide new insights and faster workflows
-    - MCP server to provide an AI-friendly interface to Spira data, enabling tighter integration with AI-powered development tools and allowing Inflectra.ai to autonomously retrieve and act on data on behalf of users
     - Requirement coverage analysis that evaluates the test coverage of a requirement and suggests edits, additions, or removals of associated test cases and test steps
     - Application-wide helper chatbot that lets users ask questions about how to use Spira
     - Natural language report creation, allowing users to create custom graphs and reports using natural language
