@@ -329,7 +329,7 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
     - datasync sees a Jira version for the first time: creates a new release in Spira (mapped to the Jira version)
     - datasync sees a Spira release for the first time: creates a new version in Jira (with the Jira version then mapped to the Spira release)
 
-??? tip "Release manual mapping"
+???+ tip "Manual release mapping"
      
      To ensure your existing releases in Spira and Jira synchronize correctly, you should manually map them together before running the DataSync for the first time. As an extra benefit, performing this initial mapping prevents the integration from accidentally creating duplicate releases. 
      
@@ -345,17 +345,17 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
      
      ![](img/Using_SpiraTeam_with_JIRA_5+_25.png)
 
-When you have a blank Spira product, the datasync will create all needed releases in Spira, mapped to the corresponding Jira version.
-
 ??? info "How to find the Jira version ID"
     
      The Jira ID for a version can be found using the [Jira Configuration Helper](#jira-configuration-helper) on the **Versions** tab.
      
      ![](img/Using_SpiraTeam_with_JIRA_5+_26.png)
 
+*Note:* When you have a blank Spira product, the datasync will create all needed releases in Spira, mapped to the corresponding Jira version.
+
 ??? info "Release synchronization behavior specific for datasync version"
 
-     Spira releases/sprints and Jira versions/sprints are functionally different items by design :material-information-outline:{ title="Spira treats Releases as primary, independent artifacts with their own workflows, deep hierarchies, and testing relationships." }. Furthermore, the way the integration handles their synchronization depends on your DataSync plugin version, upon newer capabilities being introduced:
+     Spira releases/sprints and Jira versions/sprints are functionally different items by design (Spira treats Releases as primary, independent artifacts with their own workflows, deep hierarchies, and testing relationships). Furthermore, the way the integration handles their synchronization depends on your DataSync plugin version, upon newer capabilities being introduced:
      
      **For DataSync v8.0 and Later:** Releases synchronize bidirectionally and automatically. There is no need to manually associate a release with a specific artifact for the sync to trigger.
      **For DataSync Pre-v8.0:** Releases will only synchronize if they are actively assigned to an item. The field mappings behave as follows:
