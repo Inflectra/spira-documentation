@@ -1,5 +1,20 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
+## May 2026
+- [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
+
+    - Enhancements and New Features:
+    
+        - Add Kiro Power support to make it easier to use the server within Kiro, including to build specs [RQ:5624]
+        - Migrate to a JSON-first data to LLMs to allow for richer analysis by the LLM [RQ:5605] [RQ:5606]
+        - Retrieve information about artifact sub-artifacts (test steps, requirement scenarios, and risk mitigations) [RQ:5622] [RQ:5644]
+        - Retrieve information about assigned work from a unified "my work" tool [RQ:5619] [RQ:5634]
+        - Retrieve information about specific artifacts' types, statuses, priorities, and custom properties [RQ:5643]
+        - Retrieve product level artifacts in bulk or individually [RQ:5620] [RQ:5639]
+        - Retrieve program level artifacts in bulk or individually [RQ:5621] [RQ:5640]
+        - Retrieve workspace information in bulk or individually [RQ:5623] [RQ:5641]
+        - Unified artifact search tool that reduces the number of tools and token usage for LLMs [RQ:5631]
+
 ## April 2026
 - [Azure DevOps Data Synchronization](.../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md)
 
