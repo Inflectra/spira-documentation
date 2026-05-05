@@ -282,7 +282,7 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
 
 ??? info "Release synchronization behavior specific for datasync version"
 
-     Spira releases/sprints and Jira versions/sprints are functionally different items by design (Spira treats Releases as primary, independent artifacts with their own workflows, deep hierarchies, and testing relationships). Furthermore, the way the integration handles their synchronization depends on your DataSync plugin version, upon newer capabilities being introduced:
+     Spira releases/sprints and Jira versions/sprints are functionally different items by design [^Spira releases/sprints and Jira versions/sprints are functionally different items by design]. Furthermore, the way the integration handles their synchronization depends on your DataSync plugin version, upon newer capabilities being introduced:
      
      **For DataSync v8.0 and Later:** Releases synchronize bidirectionally and automatically. There is no need to manually associate a release with a specific artifact for the sync to trigger.
      **For DataSync Pre-v8.0:** Releases will only synchronize if they are actively assigned to an item. The field mappings behave as follows:
@@ -305,6 +305,7 @@ This process starts on data mapping home page for the selected product you were 
 
 For many of the fields, you can **map multiple Spira field values** to the same Jira field value (e.g. Bug and Incident in Spira may both map to Bug in Jira). If you map the same Jira ID for different Spira field values, make sure to set "Primary" to Yes on one of the field values. This will be the value used when syncing from Jira to Spira.
 
+[^Spira releases/sprints and Jira versions/sprints are functionally different items by design]: Spira treats Releases as primary, independent artifacts with their own workflows, deep hierarchies, and testing relationships.
 
 #### Incidents
 === "Type"
