@@ -4702,7 +4702,7 @@
 <li>use the dropdowns or free-text search fields immediately beneath the column names</li>
 <li>click the <code>Filter</code> icon or press the <code>ENTER</code> key to apply the filters</li>
 </ul>
-<p>Note that the NAME field is searched using a "like" comparison, so that searching for "database" would match "Database is ready", "There is a database", "The data in the database is correct", and so on. All other freetext fields need to be exact matches (e.g. dates or numbers).</p>
+<p>Note that the NAME field is searched using a "like" comparison, so that searching for "database" would match "Database is ready", "There is a database", "The data in the database is correct", and so on. All other freetext fields need to be exact matches (e.g. dates or numbers). When the NAME filter contains multiple words, Spira searches for each keyword in the filter separately, except for Requirements and Releases, where it searches for the entire phrase as a whole. This helps for locating Requirements and Releases that follow specific naming conventions, (e.g. RQ-FUNC-001: XYZ).</p>
 <p>To <strong>clear the current filter</strong> (whether it is saved or not), either click the <code>Clear Filters</code> button above the table (as you can see in the screenshot above), or go to <code>Filter</code> &gt; <code>Clear Filter</code> from the operations toolbar.</p>
 <h4 id="managing-filters">Managing Filters<a class="headerlink" href="#managing-filters" title="Permanent link">¶</a></h4>
 <p>You can do a number of things with filters. First let's talk about using the <code>Filters</code> button on the operations toolbar (at the top of the page just below the main navigation bar).</p>
