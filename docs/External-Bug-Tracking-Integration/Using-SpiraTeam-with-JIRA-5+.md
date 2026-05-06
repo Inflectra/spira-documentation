@@ -284,8 +284,7 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
 
      Spira releases/sprints and Jira versions/sprints are functionally different items by design [^Spira-releases]. Furthermore, the way the integration handles their synchronization depends on your DataSync plugin version, upon newer capabilities being introduced:
      
-     **For DataSync v8.0 and Later:** Releases synchronize bidirectionally and automatically. There is no need to manually associate a release with a specific artifact for the sync to trigger.
-     **For DataSync Pre-v8.0:** Releases will only synchronize if they are actively assigned to an item. The field mappings behave as follows:
+     **For Jira Server DataSync:** Releases will only synchronize if they are actively assigned to an item. The field mappings behave as follows:
 
      | Artifact Type      | Spira Field      | Jira Field      |
      | :----------------- | :--------------- | :-------------- |
