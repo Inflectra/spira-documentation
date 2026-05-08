@@ -16,7 +16,7 @@ This page shows summary information about releases in Spira's addons, data syncs
         - Unified artifact search tool that reduces the number of tools and token usage for LLMs [RQ:5631]
 
 ## April 2026
-- [Azure DevOps Data Synchronization](.../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.0:
+- [Azure DevOps Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.0:
 
     - [IN:12625] TFS/ADO dataSync plugin to support unidirectional incident sync modes
 
