@@ -4926,22 +4926,57 @@
 </ul>
 </li>
 </ul>
-<p>When you have a blank Spira product, the datasync will create all needed releases in Spira, mapped to the corresponding Jira version.</p>
-<p>If you are syncing an existing product with releases in it to Jira, you should manually add the mapping information to Spira releases, to make sure you don't get duplicates being made. For each release/version that exists in both Spira and Jira at the time of starting the datasync for the first time:</p>
+<details class="tip" open="open">
+<summary>Manual release mapping</summary>
+<p>To ensure your existing releases in Spira and Jira synchronize correctly, you should manually map them together before running the DataSync for the first time. As an extra benefit, performing this initial mapping prevents the integration from accidentally creating duplicate releases. </p>
+<p>Here are step-by-Step mapping instructions: </p>
 <ul>
-<li>Find the ID of the Jira version you want to map to a release in Spira</li>
-<li>Go to the product in Spira</li>
-<li>Open the Release list page</li>
-<li>Go to the overview tab of the release</li>
-<li>Look for the field called <strong>Jira ID</strong> (used to store the identifier of the equivalent version in Jira)</li>
-<li>Set the value to the Jira version ID</li>
-<li>Click "Save"</li>
+<li>Open the <a href="#jira-configuration-helper">Jira configuration helper</a> and switch to the Versions tab;</li>
+<li>Go to the product in Spira the release belongs to;</li>
+<li>Open the Release list page and locate the release you need map;</li>
+<li>Go to the overview tab of that release;</li>
+<li>Look for the field called JiraID (used to store the identifier of the equivalent version in Jira);</li>
+<li>Set the value to the Jira version ID gathered from the configuration helper tool;</li>
+<li>Click "Save".</li>
 </ul>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_25.png"/></p>
+</details>
 <details class="info">
 <summary>How to find the Jira version ID</summary>
 <p>The Jira ID for a version can be found using the <a href="#jira-configuration-helper">Jira Configuration Helper</a> on the <strong>Versions</strong> tab.</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_26.png"/></p>
+</details>
+<p><em>Note:</em> When you have a blank Spira product, the datasync will create all needed releases in Spira, mapped to the corresponding Jira version.</p>
+<details class="info">
+<summary>Release synchronization behavior specific for datasync version</summary>
+<p>Spira releases/sprints and Jira versions/sprints are functionally different items by design <sup id="fnref:Spira-releases"><a class="footnote-ref" href="#fn:Spira-releases">1</a></sup>. Furthermore, the way the integration handles their synchronization depends on your DataSync plugin version, upon newer capabilities being introduced:</p>
+<p><strong>For Jira Server DataSync:</strong> Releases will only synchronize if they are actively assigned to an item. The field mappings behave as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Artifact Type</th>
+<th style="text-align: left;">Spira Field</th>
+<th style="text-align: left;">Jira Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Bug / Incident</td>
+<td style="text-align: left;">Detected Release</td>
+<td style="text-align: left;">Affects Version</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bug / Incident</td>
+<td style="text-align: left;">Resolved Release</td>
+<td style="text-align: left;">Fix Version</td>
+</tr>
+<tr>
+<td style="text-align: left;">Requirement</td>
+<td style="text-align: left;">Release</td>
+<td style="text-align: left;">Fix Version</td>
+</tr>
+</tbody>
+</table>
 </details>
 <h3 id="standard-field-data-mapping">Standard Field Data Mapping<a class="headerlink" href="#standard-field-data-mapping" title="Permanent link">¶</a></h3>
 <p>Mapping field values between Spira and Jira is a very important part of the configuration. Without this step, the datasync will not know what values to match things up with. For example, it will not know that an Jira issue with a type of "New Feature" should become an incident in Spira with a type of "Enhancement"</p>
@@ -5210,6 +5245,14 @@
 <li>As the issue progresses through the customized Jira workflow, changes to the type of issue, changes to its status, priority, description and resolution will be updated automatically in Spira. In essence, Spira acts as a read-only viewer of these incidents.</li>
 </ul>
 <p>You are now able to perform test coverage and incident reporting inside Spira using the test cases managed by Spira and the incidents managed on behalf of Spira inside Jira.</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:Spira-releases">
+<p>Spira treats Releases as primary, independent artifacts with their own workflows, deep hierarchies, and testing relationships. <a class="footnote-backref" href="#fnref:Spira-releases" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

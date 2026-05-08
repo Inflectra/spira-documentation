@@ -4639,8 +4639,7 @@
 <p>Now click "Add" to save the plug-in and return you to the list of plug-ins. Now follow the instructions below.</p>
 </div>
 <p>With the plug-in place, click on its "edit" button to open its detailed settings page.</p>
-<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_78.png"/></p>
-<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_78b.png"/></p>
+<p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_78c.png"/></p>
 <p>You need to fill out the following fields for the TFS Plug-in to operate correctly:</p>
 <ul>
 <li><strong>Name</strong>: this needs to be set to <strong>MsTfsDataSync</strong>.</li>
@@ -4665,6 +4664,18 @@ time-zones here.</li>
 <li><strong>Spira Artifact ID Field</strong>: If you would like the system to display the Spira artifact ID (e.g. IN5 for incidents or TK36 for tasks) in a custom field inside ADO, you should just enter the name of the appropriate ADO field from your process template (e.g. Spira.IncidentId) and then when the incident or task is added to ADO, the corresponding Spira ID will be added to that field of the work item.</li>
 <li><strong>Spira Detector Field</strong>: Depending on your ADO process template, the data-synchronization plugin may not be allowed to set the detector of the incident inside ADO. If you would like the system to display the detector of the incident (as recorded in Spira) in a custom field inside ADO, you should just enter the name of the appropriate ADO field from your process template (e.g. Spira.Detector) and then when the incident is added to ADO, the corresponding detector's name will be added to that field of the work item.</li>
 <li><strong>Requirement Types</strong>: This field should contain a comma-separated list of work item types that you want to synchronize as Spira Requirements as opposed to Incidents. Normally you would want to list at least the ADO 'User Story' work item type in this field.</li>
+<li>
+<p><strong>Incident Sync Direction</strong>: This field controls the direction of synchronization between Spira and ADO for all supported artifacts. Enter one of the following values:</p>
+<ul>
+<li><strong>Bidirectional</strong> (default): Artifacts are synchronized in both directions between Spira and ADO.</li>
+<li><strong>UpdateSpira</strong>: Only updates Spira with changes from ADO. Changes made in Spira will not be pushed to ADO.</li>
+<li><strong>UpdateADO</strong>: Only updates ADO with changes from Spira. Changes made in ADO will not be pushed to Spira.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Minimum version</p>
+<p>This property requires Spira v9.1 or later.</p>
+</div>
+</li>
 </ul>
 <details class="info">
 <summary>How to get your ADO Personal Access Token</summary>
