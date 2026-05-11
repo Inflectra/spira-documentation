@@ -30,9 +30,7 @@ The next step is to configure the plug-in within Spira so that the system knows 
 
 With the plug-in place, click on its "edit" button to open its detailed settings page.
 
-![](img/Using_SpiraTest_with_MS-TFS_78.png)
-
-![](img/Using_SpiraTest_with_MS-TFS_78b.png)
+![](img/Using_SpiraTest_with_MS-TFS_78c.png)
 
 You need to fill out the following fields for the TFS Plug-in to operate correctly:
 
@@ -54,6 +52,14 @@ time-zones here.
 -   **Spira Artifact ID Field**: If you would like the system to display the Spira artifact ID (e.g. IN5 for incidents or TK36 for tasks) in a custom field inside ADO, you should just enter the name of the appropriate ADO field from your process template (e.g. Spira.IncidentId) and then when the incident or task is added to ADO, the corresponding Spira ID will be added to that field of the work item.
 -   **Spira Detector Field**: Depending on your ADO process template, the data-synchronization plugin may not be allowed to set the detector of the incident inside ADO. If you would like the system to display the detector of the incident (as recorded in Spira) in a custom field inside ADO, you should just enter the name of the appropriate ADO field from your process template (e.g. Spira.Detector) and then when the incident is added to ADO, the corresponding detector's name will be added to that field of the work item.
 -   **Requirement Types**: This field should contain a comma-separated list of work item types that you want to synchronize as Spira Requirements as opposed to Incidents. Normally you would want to list at least the ADO 'User Story' work item type in this field.
+-   **Incident Sync Direction**: This field controls the direction of synchronization between Spira and ADO for all supported artifacts. Enter one of the following values:
+
+    -   **Bidirectional** (default): Artifacts are synchronized in both directions between Spira and ADO.
+    -   **UpdateSpira**: Only updates Spira with changes from ADO. Changes made in Spira will not be pushed to ADO.
+    -   **UpdateADO**: Only updates ADO with changes from Spira. Changes made in ADO will not be pushed to Spira.
+
+    !!! info "Minimum version"
+        This property requires Spira v9.1 or later.
 
 
 ??? info "How to get your ADO Personal Access Token"
