@@ -94,22 +94,19 @@ When generating content for a requirement, the following information is provided
 
 #### Requirement Test Coverage
 
-From the requirement details page you can evaluate how well the requirement is covered by its test cases. This feature analyzes the requirement and produce a structured coverage report.
+From the requirement details page you can evaluate how well the requirement is covered by its test cases. This feature analyzes the requirement and produces a structured coverage report.
 
-*What data is considered*: The analysis considers the requirement's name, description, and steps/scenarios. For broader context, it also looks at the parent requirement hierarchy, sibling requirements, and the product name. Each linked test case is evaluated using its name, type, description, and all test steps.
+- **What data is considered**: The analysis considers the requirement's name, description, and steps/scenarios. For broader context, it also looks at the parent requirement hierarchy, sibling requirements, and the product name. Each linked test case is evaluated using its name, type, description, and all test steps.
+- **How sibling requirements are used**: Sibling requirements (other children of the same parent) help define what is out of scope for the current requirement. If a testable topic is clearly a sibling's responsibility, it won't be flagged as a coverage gap. This means well-structured requirement hierarchies produce more accurate results. Up to 30 siblings are considered.
+- **What the output includes**: The report provides an overall coverage percentage, a breakdown of testable topics with their mapped test cases, a list of uncovered topics, and actionable suggestions for improving coverage. If a linked test case appears unrelated to the requirement, it will be flagged as a potential mislink and won't count toward coverage.
+- **Requirements for the analysis to run**:
 
-*How sibling requirements are used*: Sibling requirements (other children of the same parent) help define what is out of scope for the current requirement. If a testable topic clearly belongs to a sibling's responsibility, it won't be flagged as a coverage gap. This means well-structured requirement hierarchies produce more accurate results. Up to 30 siblings are considered.
+    - At least one test case must be linked to the requirement.
+    - The requirement must have either steps/scenarios or a description with at least 5 words.
+    - The total number of test steps across all linked test cases must not exceed 500.
+    - The requirement must not have more than 100 steps/scenarios.
 
-*What the output includes*: The report provides an overall coverage percentage, a breakdown of testable topics with their mapped test cases, a list of uncovered topics, and actionable suggestions for improving coverage. If a linked test case appears unrelated to the requirement, it will be flagged as a potential mislink and won't count toward coverage.
-
-*Requirements for the analysis to run*:
-
-- At least one test case must be linked to the requirement.
-- The requirement must have either steps/scenarios or a description with at least 5 words.
-- The total number of test steps across all linked test cases must not exceed 500.
-- The requirement must not have more than 100 steps/scenarios.
-
-If any of these conditions are not met, a message will explain why the analysis could not be completed.
+    If any of these conditions are not met, a message will explain why the analysis could not be completed.
 
 #### Requirement Analysis
 From the requirement details page you can analyze the requirement to see how well it is written and organized, based off specific frameworks. This provides valuable insights into the quality of the text and how effectively it may communicate its meaning to others.
