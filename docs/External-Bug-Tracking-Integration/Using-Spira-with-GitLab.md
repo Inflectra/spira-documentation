@@ -125,6 +125,21 @@ However, you may start out with the situation where you already have pre-existin
 
 In addition to the standard fields and custom properties, you will see an additional text property called "**GitLab ID**" that is used to store the mapped external identifier for the equivalent Milestone in GitLab. You need to locate the ID of the equivalent version in GitLab, enter it into this text-box and click \[Save\]. You should now repeat for all the other pre-existing releases.
 
+!!! info "Synchronization of Releases and Milestones"
+
+     The integration currently treats Spira Releases and GitLab Milestones as equivalent entities. However, the behavior depends on which field is used in Spira:
+     
+     **Planned Release vs. Detected Release:** Only values in the Planned Release field are synchronized to GitLab.
+                 
+     - The Detected Release field is currently not synchronized. If you have a new incident where only the Detected Release is filled, you may need to transition the incident status (e.g., from New to Assigned) to expose the Planned Release field so the data-sync can pick it up.
+      
+     **Bidirectional Mapping:**
+         
+     - Spira to GitLab: A "Planned Release" in Spira creates a "Milestone" in GitLab.
+       
+     - GitLab to Spira: A "Milestone" created in GitLab is synchronized back to Spira as a Sprint.
+         
+     **Current Association Limitation:** When an Incident is synced to GitLab, the corresponding Milestone is created in the GitLab Milestone list. However, by default, the specific GitLab Issue may not be automatically linked to that Milestone during the first sync cycle. Users may currently need to manually verify this association in GitLab.
 
 ## Using the Data Synchronization
 
