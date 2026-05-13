@@ -127,7 +127,7 @@ In addition to the standard fields and custom properties, you will see an additi
 
 !!! info "Synchronization of Releases and Milestones"
 
-     The integration currently treating Spira Releases and GitLab Milestones as equivalent entities. However, the behavior depends on which field is used in Spira:
+     The integration currently treats Spira Releases and GitLab Milestones as equivalent entities. However, the behavior depends on which field is used in Spira:
      
      **Planned Release vs. Detected Release:** Only values in the Planned Release field are synchronized to GitLab.
                  
