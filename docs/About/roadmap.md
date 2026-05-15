@@ -15,10 +15,10 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 ## Q2 2026
 - Enhanced security with the ability to enforce users to have MFA authentication configured
 - Intelligent test coverage analysis for a requirement
-- Build in chatbot to provide intelligent help and answer questions about how to use Spira
 - Spira MCP Server providing an AI-friendly interface to Spira data, enabling tighter integration with AI-powered development tools like Kiro and Claude Code
 
 ## Q3 2026
+- Build in chatbot to provide intelligent help and answer questions about how to use Spira
 - Natural language custom report creation for administrators, using Inflectra.ai agents
 
 ## Longer term thematic ideas
