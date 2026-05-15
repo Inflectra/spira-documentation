@@ -157,10 +157,10 @@ Click \[Update\] to confirm these settings. Once you have enabled the project fo
      
      **Auto-Map Users**:
      - This setting allows the data sync plugin to dynamically match users, reducing administrative overhead. 
-     *Note*: Currently, the 'Auto-Map Users' feature is supported only for Incidents. Requirements and Tasks still require manual mapping entries.
+     *Note*: Currently, the 'Auto-Map Users' feature is supported for Incidents, Requirements and Tasks.
       
      - Logic: The plugin matches the Spira Username to the Azure DevOps **'UniqueName'** field (often the email address).
-     - Requirement: Usernames must match 100% (case and characters). 
+     - Requirement: Usernames must match exactly (characters). 
      - Limitation: If this setting is enabled, Spira bypasses the manual mapping table. You cannot use manual entries to override Auto-Map. 
      
 To configure the mapping of users in the two systems, you need to go to Administration \> Users \> View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing work items in ADO/TFS:
