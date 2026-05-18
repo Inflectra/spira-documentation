@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## May 15 2026
+
+!!! success "New features"
+    - **[Requirement Test Coverage](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-test-coverage)**
+
+        - As an Inflectra.ai and Requirement user, from a Requirement details page, I can evaluate the Test Coverage of the Requirement using Inflectra.ai [RQ:5626]
+
 ## April 20 2026
 
 !!! bug "Bug fixes and enhancements"
