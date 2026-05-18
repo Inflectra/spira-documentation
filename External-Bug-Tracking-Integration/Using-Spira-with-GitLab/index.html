@@ -4385,6 +4385,24 @@
 <p>However, you may start out with the situation where you already have pre-existing Releases / Milestones in both systems that you need to associate in the data-mapping. If you don't do this, you may find that duplicates get created when you first enable the data-synchronization service. Therefore, for any Releases/Iterations that already exist in BOTH systems please navigate to Planning &gt; Releases and click on the Release/Iteration in question. Make sure you have the 'Overview' tab visible and expand the "Details" section of the release/iteration:</p>
 <p><img alt="" src="../img/Using_Spira_with_GitLab_222.png"/></p>
 <p>In addition to the standard fields and custom properties, you will see an additional text property called "<strong>GitLab ID</strong>" that is used to store the mapped external identifier for the equivalent Milestone in GitLab. You need to locate the ID of the equivalent version in GitLab, enter it into this text-box and click [Save]. You should now repeat for all the other pre-existing releases.</p>
+<div class="admonition info">
+<p class="admonition-title">Synchronization of Releases and Milestones</p>
+<p>The integration currently treats Spira Releases and GitLab Milestones as equivalent entities. However, the behavior depends on which field is used in Spira:</p>
+<p><strong>Planned Release vs. Detected Release:</strong> Only values in the Planned Release field are synchronized to GitLab.</p>
+<ul>
+<li>The Detected Release field is currently not synchronized. If you have a new incident where only the Detected Release is filled, you may need to transition the incident status (e.g., from New to Assigned) to expose the Planned Release field so the data-sync can pick it up.</li>
+</ul>
+<p><strong>Bidirectional Mapping:</strong></p>
+<ul>
+<li>
+<p>Spira to GitLab: A "Planned Release" in Spira creates a "Milestone" in GitLab.</p>
+</li>
+<li>
+<p>GitLab to Spira: A "Milestone" created in GitLab is synchronized back to Spira as a Sprint.</p>
+</li>
+</ul>
+<p><strong>Current Association Limitation:</strong> When an Incident is synced to GitLab, the corresponding Milestone is created in the GitLab Milestone list. However, by default, the specific GitLab Issue may not be automatically linked to that Milestone during the first sync cycle. Users may currently need to manually verify this association in GitLab.</p>
+</div>
 <h2 id="using-the-data-synchronization">Using the Data Synchronization<a class="headerlink" href="#using-the-data-synchronization" title="Permanent link">¶</a></h2>
 <p>Assuming everything was done correctly, the plug-in should start working. Start your Data Sync service and verify that issues in GitLab appear inside Spira. Note that the Data Sync service is not running constantly, so it may take some time for changes to materialize.</p>
 <p>Congratulations, you have just integrated your Spira instance with GitLab's integrated issue tracker!</p>
