@@ -156,8 +156,8 @@ Click \[Update\] to confirm these settings. Once you have enabled the project fo
      - Requirement: Each Spira user ID must be paired with their corresponding ADO identity.
      
      **Auto-Map Users**:
-     
-     - This setting allows the data sync plugin to dynamically match users, reducing administrative overhead. *Note*: Currently, the 'Auto-Map Users' feature is supported for Incidents, Requirements and Tasks.
+
+     - This setting allows the data sync plugin to dynamically match users, reducing administrative overhead. **Note**: Currently, the 'Auto-Map Users' feature is supported for Incidents, Requirements and Tasks.
       
      - Logic: The plugin matches the Spira Username to the Azure DevOps **'UniqueName'** field (often the email address).
      - Requirement: Usernames must match exactly (characters). 
