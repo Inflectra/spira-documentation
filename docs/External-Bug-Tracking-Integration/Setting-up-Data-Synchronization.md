@@ -31,7 +31,7 @@ To function correctly, this Spira user must meet the following criteria:
 - Active Status: The account must be active and have login access to Spira.
 - Dedicated Exclusivity: Do not use the personal credentials of a human team member. A dedicated service account ensures that changes made by the integration are clearly marked in the audit logs (e.g., "Updated by DataSync"), preventing confusion and making troubleshooting much easier.
 - Product Roles: The user must be explicitly added as a member of every Spira product you intend to synchronize.
-- Proper Product Roles: The user must be assigned a Project Role with sufficient permissions to view, create, and modify all artifacts involved in the sync. For example, if you are syncing bugs, the user needs "Create" and "Modify" permissions for Incidents. If they lack these permissions, the sync will fail when trying to write data.
+- Proper Product Roles: The user must be assigned a Product Role with sufficient permissions to view, create, and modify all artifacts involved in the sync. For example, if you are syncing bugs, the user needs "Create" and "Modify" permissions for Incidents. If they lack these permissions, the sync will fail when trying to write data.
 
 ## Choosing Your Synchronization Method
 
