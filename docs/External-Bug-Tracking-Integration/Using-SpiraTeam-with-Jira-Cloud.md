@@ -563,6 +563,46 @@ You can save time using [Auto-Map](#using-the-auto-map-properties-feature).
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_27.png)
 
+!!! info "Custom Property types should exactly match in both applications"
+            
+     To ensure custom property mapping works properly and maintains a reliable bi-directional data flow, your data types must align precisely across both applications. Even minor differences in field types can cause synchronization failures.
+      
+     1. **Custom Field Type Compatibility**
+     
+     When mapping fields, ensure that the selected data types correspond exactly between systems. Use the table below as a guide for proper type alignment:
+     
+     - **Date → Date Picker** - Cannot map to a DateTime field; types must match precisely.
+     
+     - **List → Single-Select List** - Used for picking a single option from a dropdown menu.
+     
+     - **Multiselect List → Multi-Select List** - Used when a user needs to select multiple options.
+     
+     - **Text → Free Text (Short or Plain)** - Handles unformatted, plain text only.
+     
+     - **Rich Text → Free Text (Rich Text / Unlimited)** - Required if you need to sync formatting, links, and screenshots.
+     
+     - **Release → Version / Release / Sprint** - Must be set to 'Release' on both sides to sync correctly.
+     
+     - **User → User Picker** - Must be set to 'User' on both sides to map system identities.
+               
+     2. **Standard Field Mapping Scope**
+          
+     As a general rule, Spira custom properties must be mapped exclusively to custom fields in your external application. Except for the specific native fields listed in the table below, there are no options to map standard system fields to custom properties.
+       
+     - [Severity](#severity) (Allowed: Yes) — Requires a corresponding custom property to be manually created in Jira.
+     
+     - [DueDate native Jira field](#due-date) (Allowed: Yes) — Supported natively without additional configuration.
+     
+     - [Resolution native Jira field](#resolution-field) (Allowed: Yes) — Supported natively without additional configuration.
+     
+     - [Environment native Jira field](#environment-field) (Allowed: Yes) — Supported natively without additional configuration.
+     
+     - [Security Level native Jira field](#security-level-field) (Allowed: Yes) — Supported natively without additional configuration.
+     
+     - [IssueKey native Jira field](#issue-key-field) (Allowed: Yes) — Supported natively without additional configuration.
+        
+     - All Other Native Fields (Allowed: No) — Must use custom fields/properties on both sides. 
+
 To start, go to the data mapping home page for the selected product you were on to [activate the datasync](#activate-the-datasync). Then click on the name of the custom property  you want to add data-mapping information for. Below are the four different types of mapping that you can use
 
 === "Scalar properties"
