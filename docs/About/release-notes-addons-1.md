@@ -19,6 +19,10 @@ This page shows summary information about releases in Spira's addons, data syncs
 - [Azure DevOps Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.0:
 
     - [IN:12625] TFS/ADO dataSync plugin to support unidirectional incident sync modes
+    - [IN:12539] Add ID range based pagination to the ADO data sync's work item retrieval, to enable projects of any size to be migrated
+    - [IN:12625] TFS/ADO dataSync plugin to support unidirectional incident sync modes
+    - [IN:12632] TFS/ADO DataSync Throw Object Null Error if Priority Blank in ADO
+    - [IN:12654] Improvements to ADO dataSync Rich Text sync descriptions
 
 ## March 2026
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.5:
