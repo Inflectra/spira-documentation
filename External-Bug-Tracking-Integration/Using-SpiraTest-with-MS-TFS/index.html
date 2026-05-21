@@ -4770,11 +4770,31 @@ time-zones here.</li>
 <p>Click [Update] to confirm these settings. Once you have enabled the project for data-synchronization, you can now enter the other data mapping values outlined below.</p>
 <p><strong><em>Note: Once you have successfully configured the project, when creating a new project, you should choose the option to "Create Project from Existing Project" rather than "Use Default Template" so that all the project mappings get copied across to the new project.</em></strong></p>
 <h3 id="configuring-the-user-mapping">Configuring the User Mapping<a class="headerlink" href="#configuring-the-user-mapping" title="Permanent link">¶</a></h3>
-<p>To configure the mapping of users in the two systems, you need to go to Administration &gt; Users &gt; View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing work items in TFS:</p>
+<div class="admonition info">
+<p class="admonition-title">User Mapping Methods</p>
+<p><strong>Manual User Mapping</strong>:</p>
+<ul>
+<li>This is the most precise method and is the recommended approach to ensure accurate data attribution. You manually create an entry in the User Mappings table for every user participating in the sync.</li>
+<li>Best for: Environments where usernames or email formats differ between Spira and ADO.</li>
+<li>Requirement: Each Spira user ID must be paired with their corresponding ADO identity.</li>
+</ul>
+<p><strong>Auto-Map Users</strong>:</p>
+<ul>
+<li>
+<p>This setting allows the data sync plugin to dynamically match users, reducing administrative overhead. <strong>Note</strong>: Currently, the 'Auto-Map Users' feature is supported for Incidents, Requirements and Tasks.</p>
+</li>
+<li>
+<p>Logic: The plugin matches the Spira Username to the Azure DevOps <strong>'UniqueName'</strong> field (often the email address).</p>
+</li>
+<li>Requirement: Usernames must match exactly (characters). </li>
+<li>Limitation: If this setting is enabled, Spira bypasses the manual mapping table. You cannot use manual entries to override Auto-Map. </li>
+</ul>
+</div>
+<p>To configure the mapping of users in the two systems, you need to go to Administration &gt; Users &gt; View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing work items in ADO/TFS:</p>
 <p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_83.png"/></p>
-<p>You will notice that in the special <strong>Data Mapping</strong> tab, there is a list of all the configured data-synchronization plug-ins. In the text box next to the TFS Data-Sync plug-in you need to enter the full name of this Windows User (not the login). This is the name of the user as they appear inside work items within TFS:</p>
+<p>You will notice that in the special <strong>Data Mapping</strong> tab, there is a list of all the configured data-synchronization plug-ins. In the text box next to the TFS Data-Sync plug-in you need to enter the full name of this Windows User / ADO user (not the login). This is the name of the user as they appear inside work items within TFS/ADO:</p>
 <p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_84.png"/></p>
-<p>This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in TFS. Click [Update] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
+<p>This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in TFS/ADO. Click [Update] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.</p>
 <p><em>If you have set the "Auto-Map Users" option in the TFS 2012 plugin, you can skip this section completely.</em></p>
 <h3 id="configuring-the-release-mapping">Configuring the Release Mapping<a class="headerlink" href="#configuring-the-release-mapping" title="Permanent link">¶</a></h3>
 <p>When the data-synchronization service runs, when it comes across a release/iteration in Spira that it has not seen before, it will create a corresponding "Iteration" in TFS. Similarly if it comes across a new Iteration in TFS that it has not seen before, it will create a new Release/Iteration in Spira. Therefore when using both systems together, it is recommended that you only enter new Releases/Iterations in one system and let the data-synchronization service add them to the other system.</p>
