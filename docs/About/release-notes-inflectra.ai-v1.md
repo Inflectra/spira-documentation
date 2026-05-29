@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## May 29 2026
+
+!!! bug "Bug fixes and enhancements"
+    - Fix bugs related to using the Requirement Coverage feature in other languages than English [IN:12739] [IN:12740] [IN:12771] [IN:12772]
+    - Fix Release Analysis not working under certain conditions [IN:12774]
+    - Fix artifact names being created without spaces when using French language settings [IN:12554]
+
 ## May 18 2026
 
 !!! success "New features"
