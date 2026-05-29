@@ -1,5 +1,14 @@
 # Release Notes for Spira v9
 
+## Version 9.2 (June 2026)
+??? bug "Bug fixes and enhancements"
+    - Add a date selector to the data sync "Reset Sync" functionality [IN:12545]
+    - Fix a bug where the "Enable RSS Feeds" click area was oversized, causing accidental API token regeneration [IN:12562]
+    - Fix a database error when updating custom property state for an Incident Status under certain conditions [IN:12729]
+    - Fix a database timeout related to adding test cases to a release via the API [IN:12704]
+    - Fix incorrect HTTP protocol detection in certain reverse proxy configurations [IN:12732]
+    - Resolve database lock conflicts in high throughput scenarios [IN:12759]
+
 ## Version 9.1 (May 2026)
 ??? bug "Bug fixes and enhancements"
     
