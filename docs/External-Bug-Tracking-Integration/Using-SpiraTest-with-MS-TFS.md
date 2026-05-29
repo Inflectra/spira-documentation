@@ -147,15 +147,31 @@ Click \[Update\] to confirm these settings. Once you have enabled the project fo
 
 ### Configuring the User Mapping
 
-To configure the mapping of users in the two systems, you need to go to Administration \> Users \> View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing work items in TFS:
+!!! info "User Mapping Methods"
+     
+     **Manual User Mapping**:
+   
+     - This is the most precise method and is the recommended approach to ensure accurate data attribution. You manually create an entry in the User Mappings table for every user participating in the sync.
+     - Best for: Environments where usernames or email formats differ between Spira and ADO.
+     - Requirement: Each Spira user ID must be paired with their corresponding ADO identity.
+     
+     **Auto-Map Users**:
+
+     - This setting allows the data sync plugin to dynamically match users, reducing administrative overhead. **Note**: Currently, the 'Auto-Map Users' feature is supported for Incidents, Requirements and Tasks.
+      
+     - Logic: The plugin matches the Spira Username to the Azure DevOps **'UniqueName'** field (often the email address).
+     - Requirement: Usernames must match exactly (characters). 
+     - Limitation: If this setting is enabled, Spira bypasses the manual mapping table. You cannot use manual entries to override Auto-Map. 
+     
+To configure the mapping of users in the two systems, you need to go to Administration \> Users \> View Edit Users, which will bring up the list of users in the system. Then click on the "Edit" button for a particular user that will be editing work items in ADO/TFS:
 
 ![](img/Using_SpiraTest_with_MS-TFS_83.png)
 
-You will notice that in the special **Data Mapping** tab, there is a list of all the configured data-synchronization plug-ins. In the text box next to the TFS Data-Sync plug-in you need to enter the full name of this Windows User (not the login). This is the name of the user as they appear inside work items within TFS:
+You will notice that in the special **Data Mapping** tab, there is a list of all the configured data-synchronization plug-ins. In the text box next to the TFS Data-Sync plug-in you need to enter the full name of this Windows User / ADO user (not the login). This is the name of the user as they appear inside work items within TFS/ADO:
 
 ![](img/Using_SpiraTest_with_MS-TFS_84.png)
 
-This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in TFS. Click \[Update\] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.
+This will allow the data-synchronization plug-in to know which user in Spira match which equivalent user in TFS/ADO. Click \[Update\] once you've entered the appropriate login name. You should now repeat for the other users who will be active in both systems.
 
 *If you have set the "Auto-Map Users" option in the TFS 2012 plugin, you can skip this section completely.*
 

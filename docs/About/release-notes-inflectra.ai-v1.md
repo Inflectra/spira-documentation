@@ -1,6 +1,6 @@
 # Release Notes for Inflectra.ai
 
-## May 15 2026
+## May 18 2026
 
 !!! success "New features"
     - **[Requirement Test Coverage](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#requirement-test-coverage)**
