@@ -216,7 +216,7 @@ You need to fill in the following fields for the plugin to operate correctly:
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
 
-**Note:** Even if the complete user mapping in place, there is a limitation to synchronize a comment author names. The limitation is due to Jira API as it does not let an external system post a comment on behalf of another user.
+**Note:** Note: Even with full user mapping configured, synchronizing comment author names is limited by the Jira API. This is due to restrictions within the Jira API, which does not allow an external system to post comments on behalf of another user.
 
 User mapping has two different modes: auto-mapping users; and manual user mapping.
 
