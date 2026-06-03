@@ -533,6 +533,14 @@ A SpiraApp can make requests to Spira to perform certain actions on certain page
     spiraAppManager.setWindowLocation("https://inflectra.com");
     ```
 
+??? note "closeDialog()"
+    Close the current SpiraApp dialog if one exists, and return true. Returns false if there was no dialog open.
+
+    Example:
+    
+    ```js
+    spiraAppManager.closeDialog();
+    ```
 
 ## UX generator
 ### Dropdown list dialog
@@ -572,6 +580,53 @@ The helper function `createComboDialog` creates a modal dialog box where users c
     );
     ```
 
+### Custom dialog
+The helper function `createDynamicDialog` creates an empty modal dialog box with a title and closing callback, and returns the HTML Element for its inner div. This can then be used to render custom HTML, a Mustache template, a React component, or more. Use `closeDialog` if you need to close this dialog programmatically.
+
+=== "Parameters"
+
+    - **title**: the title of the dialog (string)
+    - **onClose**: function to be called when the dialog is closed by the user, or by a new dialog overwriting it. This function does not receive any parameters.
+
+=== "Example"
+
+    ```js hl_lines="2-6" linenums="1"
+    // Create the dialog and save the div reference to 'content'
+    var content = spiraAppManager.createDynamicDialog('React Counter', function() {
+        console.log('React popup closed, cleaning up');
+        // free up page resources when the dialog is closed
+        ReactDOM.unmountComponentAtNode(content);
+    });
+
+    // shorthand for cleaner React syntax
+    var e = React.createElement;
+
+    // Functional component containing a number display and two buttons:
+    // one to increment the display and one to reset it.
+    function Counter() {
+        var [count, setCount] = React.useState(0);
+
+        return e('div', { style: { padding: '1rem' } },
+            e('p', null, 'Count: ' + count),
+            // put buttons inside a div with the 'btn-group' class for a look similar to built-in dialogs
+            e('div', { className: 'btn-group' },
+                e('button', {
+                    className: 'btn btn-primary',
+                    type:'button',
+                    onClick: function(ev) { setCount(count + 1); }
+                }, 'Increment'),
+                e('button', {
+                    className: 'btn btn-default',
+                    type:'button',
+                    onClick: function(ev) { setCount(0); }
+                }, 'Reset')
+            )
+        );
+    }
+
+    // Render a new Counter into the reference returned by the createDynamicDialog function
+    ReactDOM.render(e(Counter), content);
+    ```
 
 ## User Context 
 The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.
