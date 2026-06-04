@@ -216,6 +216,8 @@ You need to fill in the following fields for the plugin to operate correctly:
 ## User Mapping
 The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.
 
+**Note:** Note: Even with full user mapping configured, synchronizing comment author names is limited by the Jira API. This is due to restrictions within the Jira API, which does not allow an external system to post comments on behalf of another user.
+
 User mapping has two different modes: auto-mapping users; and manual user mapping.
 
 Set the "auto-map" field described above to yes to use auto-mapping. In this mode, all users in Spira need to have the same username as users in Jira. This is a big time-saver but only works if you can guarantee that all usernames are the same in both systems.
@@ -563,6 +565,31 @@ You can save time using [Auto-Map](#using-the-auto-map-properties-feature).
 
 ![](img/Using_SpiraTeam_with_JIRA_5+_27.png)
 
+??? Warning "Custom Property types should exactly match in both applications"
+     To ensure custom property mapping works properly and maintains a reliable bi-directional data flow, your data types must align precisely across both applications. Even minor differences in field types can cause synchronization failures.
+     
+     1. **Custom Field Type Compatibility**: When mapping fields, ensure that the selected data types correspond exactly between systems. Use the table below as a guide for proper type alignment (Spira → Jira):     
+     
+         - **Date → Date Picker** - Cannot map to a DateTime field; types must match precisely.
+         - **List → Select List (Single choice)** - Used for picking a single option from a dropdown menu.
+         - **Multiselect List → Select List (Multiple choices)** - Used when a user needs to select multiple options.
+         - **Text → Text (Short Text or Text Field)** - Handles unformatted, plain text only.
+         - **Release → Version picker (Single version)** - Used to synchronize releases / versions.
+         - **User → User Picker (Single user)** - Must be set to 'User' on both sides to map system identities.
+         - **Integer → Number** - Used to synchronize only numeric data.
+         - **Boolean → Checkbox** - In case you need to get values like yes or no (0 or 1)
+         
+     2. **Standard Field Mapping Scope**: As a general rule, Spira custom properties must be mapped exclusively to custom fields in your external application. Except for the specific native fields listed in the table below, there are no options to map standard system fields to custom properties.
+              
+         - [Severity](#severity) (Allowed: Yes) — Requires a corresponding custom property to be manually created in Jira.
+         - [DueDate native Jira field](#due-date) (Allowed: Yes) — For tasks and incidents: Spira's "Start Date" syncs natively to Jira's due date field. For requirements a corresponding custom property needs to be manually created in Spira.
+         - [Resolution native Jira field](#resolution-field) (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.
+         - [Environment native Jira field](#environment-field) (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.
+         - [Security Level native Jira field](#security-level-field) (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.
+         - [IssueKey native Jira field](#issue-key-field) (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.
+         - [Component](#component_1) (Allowed: Yes) - Need to enter matching Jira component ID for each one, works for incidents and requirements.
+         - All Other Native Fields (Allowed: No) — You must use custom fields or properties, since DataSync basically does not recognize them.
+     
 To start, go to the data mapping home page for the selected product you were on to [activate the datasync](#activate-the-datasync). Then click on the name of the custom property  you want to add data-mapping information for. Below are the four different types of mapping that you can use
 
 === "Scalar properties"
