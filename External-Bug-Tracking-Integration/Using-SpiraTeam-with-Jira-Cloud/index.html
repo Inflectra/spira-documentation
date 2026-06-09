@@ -5003,6 +5003,7 @@ Please note that Jira has limited capabilities for exporting and importing text 
 </div>
 <h2 id="user-mapping">User Mapping<a class="headerlink" href="#user-mapping" title="Permanent link">¶</a></h2>
 <p>The datasync does not create users itself. Instead, it maps existing users in Spira to existing users in Jira, where it can. These mappings mean that the datasync will correctly show who is, for example, assigned to an incident, if that field was updated from Jira during the datasync.</p>
+<p><strong>Note:</strong> Note: Even with full user mapping configured, synchronizing comment author names is limited by the Jira API. This is due to restrictions within the Jira API, which does not allow an external system to post comments on behalf of another user.</p>
 <p>User mapping has two different modes: auto-mapping users; and manual user mapping.</p>
 <p>Set the "auto-map" field described above to yes to use auto-mapping. In this mode, all users in Spira need to have the same username as users in Jira. This is a big time-saver but only works if you can guarantee that all usernames are the same in both systems.</p>
 <p>If you are not auto mapping users (the field is set to no in the plugin configuration) follow these steps:</p>
@@ -5364,6 +5365,38 @@ Please note that Jira has limited capabilities for exporting and importing text 
 </ul>
 <p>You can save time using <a href="#using-the-auto-map-properties-feature">Auto-Map</a>.</p>
 <p><img alt="" src="../img/Using_SpiraTeam_with_JIRA_5%2B_27.png"/></p>
+<details class="warning">
+<summary>Custom Property types should exactly match in both applications</summary>
+<p>To ensure custom property mapping works properly and maintains a reliable bi-directional data flow, your data types must align precisely across both applications. Even minor differences in field types can cause synchronization failures.</p>
+<ol>
+<li>
+<p><strong>Custom Field Type Compatibility</strong>: When mapping fields, ensure that the selected data types correspond exactly between systems. Use the table below as a guide for proper type alignment (Spira → Jira):     </p>
+<ul>
+<li><strong>Date → Date Picker</strong> - Cannot map to a DateTime field; types must match precisely.</li>
+<li><strong>List → Select List (Single choice)</strong> - Used for picking a single option from a dropdown menu.</li>
+<li><strong>Multiselect List → Select List (Multiple choices)</strong> - Used when a user needs to select multiple options.</li>
+<li><strong>Text → Text (Short Text or Text Field)</strong> - Handles unformatted, plain text only.</li>
+<li><strong>Release → Version picker (Single version)</strong> - Used to synchronize releases / versions.</li>
+<li><strong>User → User Picker (Single user)</strong> - Must be set to 'User' on both sides to map system identities.</li>
+<li><strong>Integer → Number</strong> - Used to synchronize only numeric data.</li>
+<li><strong>Boolean → Checkbox</strong> - In case you need to get values like yes or no (0 or 1)</li>
+</ul>
+</li>
+<li>
+<p><strong>Standard Field Mapping Scope</strong>: As a general rule, Spira custom properties must be mapped exclusively to custom fields in your external application. Except for the specific native fields listed in the table below, there are no options to map standard system fields to custom properties.</p>
+<ul>
+<li><a href="#severity">Severity</a> (Allowed: Yes) — Requires a corresponding custom property to be manually created in Jira.</li>
+<li><a href="#due-date">DueDate native Jira field</a> (Allowed: Yes) — For tasks and incidents: Spira's "Start Date" syncs natively to Jira's due date field. For requirements a corresponding custom property needs to be manually created in Spira.</li>
+<li><a href="#resolution-field">Resolution native Jira field</a> (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.</li>
+<li><a href="#environment-field">Environment native Jira field</a> (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.</li>
+<li><a href="#security-level-field">Security Level native Jira field</a> (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.</li>
+<li><a href="#issue-key-field">IssueKey native Jira field</a> (Allowed: Yes) — Requires a corresponding custom property to be manually created in Spira.</li>
+<li><a href="#component_1">Component</a> (Allowed: Yes) - Need to enter matching Jira component ID for each one, works for incidents and requirements.</li>
+<li>All Other Native Fields (Allowed: No) — You must use custom fields or properties, since DataSync basically does not recognize them.</li>
+</ul>
+</li>
+</ol>
+</details>
 <p>To start, go to the data mapping home page for the selected product you were on to <a href="#activate-the-datasync">activate the datasync</a>. Then click on the name of the custom property  you want to add data-mapping information for. Below are the four different types of mapping that you can use</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="scalar-properties" name="__tabbed_4" type="radio"/><input id="list-properties" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="scalar-properties">Scalar properties</label><label for="list-properties">List properties</label></div>
 <div class="tabbed-content">

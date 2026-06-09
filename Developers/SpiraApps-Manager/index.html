@@ -3849,6 +3849,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-dialog">
+<span class="md-ellipsis">
+      
+        Custom dialog
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -4227,6 +4236,15 @@
 <span class="md-ellipsis">
       
         Dropdown list dialog
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-dialog">
+<span class="md-ellipsis">
+      
+        Custom dialog
       
     </span>
 </a>
@@ -4928,6 +4946,13 @@
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">setWindowLocation</span><span class="p">(</span><span class="s2">"https://inflectra.com"</span><span class="p">);</span>
 </code></pre></div>
 </details>
+<details class="note">
+<summary>closeDialog()</summary>
+<p>Close the current SpiraApp dialog if one exists, and return true. Returns false if there was no dialog open.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">closeDialog</span><span class="p">();</span>
+</code></pre></div>
+</details>
 <h2 id="ux-generator">UX generator<a class="headerlink" href="#ux-generator" title="Permanent link">¶</a></h2>
 <h3 id="dropdown-list-dialog">Dropdown list dialog<a class="headerlink" href="#dropdown-list-dialog" title="Permanent link">¶</a></h3>
 <p>The helper function <code>createComboDialog</code> creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
@@ -4988,9 +5013,93 @@
 </div>
 </div>
 </div>
+<h3 id="custom-dialog">Custom dialog<a class="headerlink" href="#custom-dialog" title="Permanent link">¶</a></h3>
+<p>The helper function <code>createDynamicDialog</code> creates an empty modal dialog box with a title and closing callback, and returns the HTML Element for its inner div. This can then be used to render custom HTML, a Mustache template, a React component, or more. Use <code>closeDialog</code> if you need to close this dialog programmatically.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="parameters_4" name="__tabbed_10" type="radio"/><input id="example_6" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="parameters_4">Parameters</label><label for="example_6">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>title</strong>: the title of the dialog (string)</li>
+<li><strong>onClose</strong>: function to be called when the dialog is closed by the user, or by a new dialog overwriting it. This function does not receive any parameters.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Create the dialog and save the div reference to 'content'</span>
+<span class="hll"><span class="kd">var</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">createDynamicDialog</span><span class="p">(</span><span class="s1">'React Counter'</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'React popup closed, cleaning up'</span><span class="p">);</span>
+</span><span class="hll"><span class="w">    </span><span class="c1">// free up page resources when the dialog is closed</span>
+</span><span class="hll"><span class="w">    </span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">unmountComponentAtNode</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+</span><span class="hll"><span class="p">});</span>
+</span>
+<span class="c1">// shorthand for cleaner React syntax</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">;</span>
+
+<span class="c1">// Functional component containing a number display and two buttons:</span>
+<span class="c1">// one to increment the display and one to reset it.</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">Counter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="p">[</span><span class="nx">count</span><span class="p">,</span><span class="w"> </span><span class="nx">setCount</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">useState</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">e</span><span class="p">(</span><span class="s1">'div'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">padding</span><span class="o">:</span><span class="w"> </span><span class="s1">'1rem'</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">e</span><span class="p">(</span><span class="s1">'p'</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s1">'Count: '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">count</span><span class="p">),</span>
+<span class="w">        </span><span class="c1">// put buttons inside a div with the 'btn-group' class for a look similar to built-in dialogs</span>
+<span class="w">        </span><span class="nx">e</span><span class="p">(</span><span class="s1">'div'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">className</span><span class="o">:</span><span class="w"> </span><span class="s1">'btn-group'</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">e</span><span class="p">(</span><span class="s1">'button'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">className</span><span class="o">:</span><span class="w"> </span><span class="s1">'btn btn-primary'</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="s1">'button'</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">onClick</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span><span class="w"> </span><span class="s1">'Increment'</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">e</span><span class="p">(</span><span class="s1">'button'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">className</span><span class="o">:</span><span class="w"> </span><span class="s1">'btn btn-default'</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="s1">'button'</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">onClick</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">setCount</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span><span class="w"> </span><span class="s1">'Reset'</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Render a new Counter into the reference returned by the createDynamicDialog function</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">e</span><span class="p">(</span><span class="nx">Counter</span><span class="p">),</span><span class="w"> </span><span class="nx">content</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <h2 id="user-context">User Context<a class="headerlink" href="#user-context" title="Permanent link">¶</a></h2>
 <p>The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="available-context" name="__tabbed_10" type="radio"/><input id="examples_3" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="available-context">Available Context</label><label for="examples_3">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="available-context" name="__tabbed_11" type="radio"/><input id="examples_3" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="available-context">Available Context</label><label for="examples_3">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -5026,7 +5135,7 @@
 </div>
 </div>
 <h2 id="format-helpers">Format Helpers<a class="headerlink" href="#format-helpers" title="Permanent link">¶</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="explanation_3" name="__tabbed_11" type="radio"/><input id="examples_4" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="examples_4">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_3" name="__tabbed_12" type="radio"/><input id="examples_4" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="examples_4">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -5107,7 +5216,7 @@
 <p class="admonition-title">Secure storage</p>
 <p>New storage items can be created as secure, meaning they are fully encrypted. To ensure full security, secure storage items cannot be sent to the client. There is currently no way to access or use secure storage items and functionality for this will be added in the future.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:6"><input checked="checked" id="insert" name="__tabbed_12" type="radio"/><input id="update" name="__tabbed_12" type="radio"/><input id="get-single-value" name="__tabbed_12" type="radio"/><input id="get-multiple-values" name="__tabbed_12" type="radio"/><input id="delete-single-item" name="__tabbed_12" type="radio"/><input id="delete-multiple-items" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="insert">Insert</label><label for="update">Update</label><label for="get-single-value">Get Single Value</label><label for="get-multiple-values">Get Multiple Values</label><label for="delete-single-item">Delete Single Item</label><label for="delete-multiple-items">Delete Multiple Items</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:6"><input checked="checked" id="insert" name="__tabbed_13" type="radio"/><input id="update" name="__tabbed_13" type="radio"/><input id="get-single-value" name="__tabbed_13" type="radio"/><input id="get-multiple-values" name="__tabbed_13" type="radio"/><input id="delete-single-item" name="__tabbed_13" type="radio"/><input id="delete-multiple-items" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="insert">Insert</label><label for="update">Update</label><label for="get-single-value">Get Single Value</label><label for="get-multiple-values">Get Multiple Values</label><label for="delete-single-item">Delete Single Item</label><label for="delete-multiple-items">Delete Multiple Items</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -5417,7 +5526,7 @@
 <h2 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">¶</a></h2>
 <p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use a string provided by a SpiraApp.
 Do not use this for storing secure information.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="explanation_4" name="__tabbed_13" type="radio"/><input id="best-practices" name="__tabbed_13" type="radio"/><input id="examples_5" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_5">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="explanation_4" name="__tabbed_14" type="radio"/><input id="best-practices" name="__tabbed_14" type="radio"/><input id="examples_5" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_5">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
