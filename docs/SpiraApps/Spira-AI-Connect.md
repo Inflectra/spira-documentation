@@ -1,8 +1,11 @@
 ---
 # Spira AI Connect SpiraApp
+
+Spira AI Connect gives you a more flexible “bring your own LLM” architecture. Instead of being tied to a single AI provider, organizations can configure Spira to connect to the AI service that best fits their needs.
+
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases, risks, and tasks using generative AI. It provides a unified, provider-agnostic interface that supports **any OpenAI-compatible REST endpoint** (OpenAI, Azure OpenAI, Groq, Mistral, Together AI, Fireworks, Perplexity, and more) as well as **AWS Bedrock** (Claude, Llama, and Nova models).
+This SpiraApp lets you generate downstream artifacts from Spira requirements, test cases, risks, and tasks using generative AI. It provides a unified, provider-agnostic interface that supports **any OpenAI-compatible REST endpoint** (OpenAI, Azure OpenAI, Groq, Mistral, Together AI, Fireworks, Perplexity, and more) as well as **AWS Bedrock** (Claude, Llama, Nova and more models).
 
 A system administrator configures credentials for one provider, and all users interact with AI features without needing to know which backend is active.
 
@@ -72,7 +75,7 @@ Log into your AWS Console and navigate to the **Bedrock** services section. Then
 
 ![AWS Bedrock Model Access](img/spiraaiconnect-aws-config1.png)
 
-On this page you can request access to various LLM model families and models. Please request access to at least one supported model family in AWS Bedrock (**Nova**, Anthropic Claude, or Llama).
+On this page you can request access to various LLM model families and models. Please request access to at least one supported model family in AWS Bedrock (Nova, Anthropic Claude, Llama, etc).
 
 ![AWS IAM Users](img/spiraaiconnect-aws-config2.png)
 
@@ -91,25 +94,29 @@ Now that you have the IAM group created, attach the following policies/permissio
 - **AmazonBedrockReadOnly** — this is a built-in AWS managed permission
 - **Invoke-Any-Foundational-Model** — this is an inline permission that we need to create.
 
-To create the new Invoke Any Foundational Model permission, use the inline policy editor:
-
-![AWS IAM Policy Creator](img/spiraaiconnect-aws-config6.png)
-
-To simplify things, use the following JSON policy:
+To create the new Invoke Any Foundational Model permission, use the inline policy editor with the following JSON policy:
 
 ```json
 {
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "VisualEditor0",
-			"Effect": "Allow",
-			"Action": "bedrock:InvokeModel",
-			"Resource": "arn:aws:bedrock:*::foundation-model/*"
-		}
-	]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowBedrockModelInvocation",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream"
+            ],
+            "Resource": [
+                "arn:aws:bedrock:*::foundation-model/*",
+                "arn:aws:bedrock:*:*:inference-profile/*"
+            ]
+        }
+    ]
 }
 ```
+
+This policy grants access to all foundation models and cross-region inference profiles in AWS Bedrock.
 
 Finally, create an **Access Key** for this user so that it can be called from the SpiraApp. Click on the section **Access Keys**:
 
