@@ -1,5 +1,13 @@
 # Release Notes for Inflectra.ai
 
+## June 12 2026
+
+!!! bug "Bug fixes and enhancements"
+    - Fix a bug related to data scrolling in the sidebar [IN:12278]
+    - Fix a bug related to EARS analysis follow-up actions [IN:12860]
+    - Modifies the tooltip styling in the sidebar [IN:11390]
+    - Removes unnecessary AI parameters in some regions [IN:12849]
+
 ## May 29 2026
 
 !!! bug "Bug fixes and enhancements"
