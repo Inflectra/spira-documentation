@@ -1,5 +1,16 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
+## June 2026
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.6:
+
+    - Bug Fixes and Enhancements:
+        - [IN:12818] Adds validation and warnings for one-to-one product/project mapping violations
+        - [IN:12719] Adds Jira issue ID to missing mapping log messages to aid in administrative troubleshooting
+        - [IN:11176] Fixes a bug where custom Integer and Text fields do not reset
+        - [IN:12793] Fixes a bug where hierarchy is not forced to re-sync when resetting sync
+        - [IN:11520] Fixes a bug related to handling higher numbers for time fields
+        - [IN:12814] Performance optimizations for syncing comments, releases, components, users, and custom properties
+
 ## May 2026
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
 
