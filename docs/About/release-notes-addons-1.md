@@ -12,6 +12,11 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [IN:12814] Performance optimizations for syncing comments, releases, components, users, and custom properties
 
 ## May 2026
+- [YouTrack Data Synchronization](../External-Bug-Tracking-Integration/Using-Spira-with-YouTrack.md):
+
+    - Bug Fixes and Enhancements:
+        - [IN:12706] Improve authentication error handling to display clearer messages when API token format is incorrect, and fix token prefix validation to handle all known formats
+
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
 
     - Enhancements and New Features:
