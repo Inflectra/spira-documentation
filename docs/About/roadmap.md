@@ -12,12 +12,16 @@
 ## What has been released
 Please take a look at our [release notes](release-notes-v8.md) to see a complete list of the changes (large and small) that we have recently delivered.
 
-## Q2 2026
+### Q2 2026
 - Enhanced security with the ability to enforce users to have MFA authentication configured
 - Intelligent test coverage analysis for a requirement
 - Spira MCP Server providing an AI-friendly interface to Spira data, enabling tighter integration with AI-powered development tools like Kiro and Claude Code
 
-## Q3 2026
+## Coming next
+These features are planned for upcoming releases. Please note timelines may shift as work progresses.
+
+### Q3 2026
+- Portfolio artifacts for SpiraPlan: Strategic Outcomes and Portfolio Milestones
 - Build in chatbot to provide intelligent help and answer questions about how to use Spira
 - Natural language custom report creation for administrators, using Inflectra.ai agents
 
