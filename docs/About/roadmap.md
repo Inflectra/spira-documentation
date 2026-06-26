@@ -21,7 +21,8 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 These features are planned for upcoming releases. Please note timelines may shift as work progresses.
 
 ### Q3 2026
-- Portfolio artifacts for SpiraPlan: Strategic Outcomes and Portfolio Milestones
+- Portfolio level planning with "Strategic Outcomes" and "Portfolio Milestones"
+    {: .edition-spiraplan}
 - Build in chatbot to provide intelligent help and answer questions about how to use Spira
 - Natural language custom report creation for administrators, using Inflectra.ai agents
 
@@ -45,9 +46,7 @@ The list below are features that we are focused on delivering but not in the abo
     {: .edition-spiraplan}
 - Further enhance **administrative audit tracking** with system and template level change tracking.
 - New **product team features** so that members can receive notifications and let users assign a team to artifacts.
-    {: .edition-spiraplan}
-- **Portfolio level planning** with "Strategic Outcomes" and "Portfolio Milestones"
-    {: .edition-spiraplan}
+    {: .edition-spiraplan}    
 - **New testing tools**: Dynamic/smart test sets whose test cases are live updated based on a set of user-controlled criteria.
 - **Enhanced source code management**: improve integration with Git cloud providers, the ability to tie a branch to a sprint or release.
 - **Resource tracking**: New resource planning tools to let you plan activity based on required skills, time, and other metrics. Tagging users or teams (e.g. with skills) can help with this.
