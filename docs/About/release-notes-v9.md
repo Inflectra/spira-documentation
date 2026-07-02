@@ -2,7 +2,7 @@
 
 ## Version 9.3 (July 2026)
 !!! info "Summary"
-    This version introduces new Portfolio artifacts for SpiraPlan:  Strategic Outcomes and Portfolio Milestones bring new portfolio-level planning to help organizations track high-level goals and key delivery milestones across programs and products.
+    This version introduces new Portfolio artifacts for SpiraPlan: [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) bring new portfolio-level planning to help organizations track high-level goals and key delivery milestones across programs and products.
 
 ??? success "New Features"
     - As a portfolio manager, I can plan out the necessary work of the portfolio, linked to program capabilities and portfolio milestones, so I can ensure the portfolio objectives will be delivered [RQ:5682]
@@ -19,7 +19,7 @@
     - As a portfolio viewer, I want to be able to open an Artifacts dropdown on portfolio pages to navigate to my portfolio milestones and strategic outcomes [RQ:5696]
 
 ??? bug "Bug fixes and enhancements"
-    - Adds a new Testing Setting to disable actual test duration record [IN:12782]
+    - Adds a new [Testing Setting](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) to disable actual test duration recording [IN:12782]
     - Security enhancement for SpiraApps [IN:11359]
 
 ## Version 9.2 (June 2026)
