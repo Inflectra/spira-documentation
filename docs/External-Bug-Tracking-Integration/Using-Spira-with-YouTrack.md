@@ -3,11 +3,35 @@
 
 This section outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (hereafter referred to as Spira) with JetBrains' YouTrack (YouTrack).
 
+## Overview
+
 YouTrack issues can now be synchronized with Spira. This integration service enables two-way syncing of Spira incidents and, if specified, tasks with YouTrack issues. Once set up, by default, all issues in a YouTrack project will sync to Incidents in Spira. You can specify certain types of issues to sync as Tasks in Spira instead if you want.
 
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
+This data sync plugin can sync the following information:
+
+| YouTrack Artifact | Spira Artifact |
+| :--- | :--- |
+| Project (External Key) | Product |
+| Users (Auto-Map Only) | Users |
+| Issues (Default / All Types if Custom 02 is blank) | Incidents |
+| Issues (Specific Types defined in Custom 02) | Tasks |
+| Issue Attachments & Comment Attachments | Documents / Attachments |
+
+The table below shows a summary of how data is synced from/to Spira and YouTrack based on the plugin architecture (YouTrack uses two-way synchronization for supported artifacts and handles types based on the **Custom 02** system setting):
+
+| Artifact / Entity | YouTrack to Spira Flow | Spira to YouTrack Flow | Notes / Constraints |
+| :--- | :--- | :--- | :--- |
+| **Incidents** | **New & Updates** | **New & Updates** | Default behavior for all YouTrack issue types. |
+| **Tasks** | **New & Updates** | **New & Updates** | Only applies to issue types specified in the `Custom 02` system setting (e.g., Task, Epic). |
+| **Attachments** | **New Only** | *(Not Synced)* | Saves files attached to YouTrack issues and YouTrack comments down to Spira. |
+
+> ⚙️ **Task vs. Incident Differentiation (`Custom 02`):** By default, all YouTrack issues map directly to Spira Incidents. To separate specific issue types out as Spira Tasks, populate the **Custom 02** field at the system level with a comma-separated list of the exact YouTrack issue type names (e.g., `Task,Epic`).
+>
+> 👥 **Note on User Synchronization:** Manual user ID mapping is not supported by this plugin. YouTrack synchronization relies entirely on automated matching:
+> - **Auto-Map Users:** Must be set to **Yes**. The plugin automatically maps users one-to-one by auditing and pairing identical First and Last Names across platforms. External usernames with duplicate names are safely ignored by the sync engine.
 
 ## Configuring YouTrack
 Before integrating with Spira, you need to configure YouTrack to allow Rest API connections. There are a few different ways to do this. However, we recommend using a permanent token for authentication requests. You can generate your own permanent tokens in your YouTrack user profile. For instructions, please refer to the [YouTrack documentation](https://www.jetbrains.com/help/youtrack/standalone/Manage-Permanent-Token.html#obtain-permanent-token).

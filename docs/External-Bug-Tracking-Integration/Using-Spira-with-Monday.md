@@ -1,6 +1,8 @@
 # Using Spira with *monday.com*
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
+## Overview
+
 The *monday.com* products are cloud-based platforms that allows users to create their own applications and work management software with more than 50 integrations with other applications.
 
 This page outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (called Spira from here on) with *monday.com* products. This data sync engine lets you add new *monday.com* items to Spira as Tasks (not available in SpiraTest) and Incidents (and vice versa). The data sync also lets you update artifacts and items in both systems/directions.
@@ -8,6 +10,31 @@ This page outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (called Spira f
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
+This data sync plugin can sync the following information:
+
+| monday.com Artifact | Spira Artifact |
+| :--- | :--- |
+| Workspace / Task Board | Product / Tasks |
+| Workspace / Incident Board | Product / Incidents |
+| Sub-items (on Boards) | Tasks (linked as Associations) |
+| Users (Manual or Auto-Map) | Users |
+| Column: People (Creator / Owner) | Detected By / Owner |
+| Column: Single Dropdown / Status | Status, Priority, Type, Severity |
+| Column: Date (Start / End Date) | Start Date / End Date |
+
+The table below shows a summary of how data is synced from/to Spira and monday.com based on the configured Sync Mode:
+
+| Sync Mode | Incidents | Tasks | Sub-items |
+| :--- | :--- | :--- | :--- |
+| **bidirectional** (Default) | **New & Updates:** <br>monday.com <-> Spira | **New & Updates:** <br>monday.com <-> Spira | **New & Updates:** <br>monday.com -> Spira <br>*(Creates Spira Tasks)* |
+| **monday_to_spira** | **New & Updates:** <br>monday.com -> Spira | **New & Updates:** <br>monday.com -> Spira | **New & Updates:** <br>monday.com -> Spira <br>*(Creates Spira Tasks)* |
+| **spira_to_monday** | **New & Updates:** <br>Spira -> monday.com | **New & Updates:** <br>Spira -> monday.com | *(Ignored / Not Synced)* |
+
+>⚠️ **Note on Descriptions:** Due to the nature of text fields in monday.com (which only support plain text), descriptions will only be synced from monday.com to Spira **on creation**, but will sync from Spira to monday.com **all the time** (continuous update).
+>
+>**Note on User Synchronization:** The behavior of user tracking relies on your user mapping approach:
+> - **Auto-Map Users enabled:** Automatically pairs users across platforms, provided their usernames are identical in both systems.
+> - **Manual User Mapping:** Navigating to *Administration > Users > View Edit Users > Data Mapping* is required. Under the *Monday.com Data-Sync* option, enter the exact **display name** of the user as it appears in monday.com. This maps the **Creator** and **Owner** (People column) fields.
 
 ## Configuring the Plug-In
 Now that the data synchronization service / application itself is set up, we are ready to move to the next step. You need to tell Spira how to access your *monday.com* app. Inside Spira, go to the Administration page (as a system admin) and navigate to Integration > Data Synchronization. Check if you see a plug-in called **MondayDataSync**.
