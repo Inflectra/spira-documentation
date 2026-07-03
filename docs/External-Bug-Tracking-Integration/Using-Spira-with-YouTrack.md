@@ -22,11 +22,9 @@ This data sync plugin can sync the following information:
 
 The table below shows a summary of how data is synced from/to Spira and YouTrack based on the plugin architecture (YouTrack uses two-way synchronization for supported artifacts and handles types based on the **Custom 02** system setting):
 
-| Artifact / Entity | YouTrack to Spira Flow | Spira to YouTrack Flow | Notes / Constraints |
-| :--- | :--- | :--- | :--- |
-| **Incidents** | **New & Updates** | **New & Updates** | Default behavior for all YouTrack issue types. |
-| **Tasks** | **New & Updates** | **New & Updates** | Only applies to issue types specified in the `Custom 02` system setting (e.g., Task, Epic). |
-| **Attachments** | **New Only** | *(Not Synced)* | Saves files attached to YouTrack issues and YouTrack comments down to Spira. |
+| Sync Mode | Releases | Requirements | Incidents | Tasks |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bidirectional** (Default) | (not synced) | (not synced) | YouTrack <-> Spira | YouTrack <-> Spira <br>*(For types specified in Custom 02)* |
 
 > ⚙️ **Task vs. Incident Differentiation (`Custom 02`):** By default, all YouTrack issues map directly to Spira Incidents. To separate specific issue types out as Spira Tasks, populate the **Custom 02** field at the system level with a comma-separated list of the exact YouTrack issue type names (e.g., `Task,Epic`).
 >
