@@ -1,5 +1,31 @@
 # Release Notes for Spira v9
 
+## Version 9.3 (July 2026)
+!!! info "Summary"
+    With new Portfolio artifacts in SpiraPlan, organizations can now better plan and manage high level goals with [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and track key delivery targets with [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) across programs and products.
+        {: .edition-spiraplan}
+
+??? success "New Features"
+    - Portfolio [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md)
+        {: .edition-spiraplan}
+
+        - As a portfolio member, I can plan out the necessary work of the portfolio, linked to program capabilities and portfolio milestones, so I can ensure the portfolio objectives will be delivered [RQ:5682]
+        - As a portfolio member, I can view, create, and edit strategic outcomes on a details page, so I can plan out portfolio level work needs [RQ:5685]
+        - As a portfolio member, I can view, create, edit strategic outcomes on a filterable list page, so I can plan out portfolio level work needs [RQ:5683]
+        - As a portfolio member, I can add or remove associations between strategic outcomes and this portfolio's program capabilities, so I can correctly organize my programs' capabilities [RQ:5686]
+        - As a Portfolio member, I want to be able to make portfolio milestones to aggregate release progress and alignment at a high level across multiple program milestones [RQ:5688]
+        - As a portfolio member, I can view and edit portfolio milestones on a details page, so I can plan out portfolio level work needs [RQ:5689]
+        - As a portfolio member, I can view portfolio milestones on a filterable list page, so I can plan out portfolio level work needs [RQ:5691]
+        - As a portfolio member, I can filter and sort the portfolio milestones list page by any available field, so that I can organize my milestones into the view I need at that moment [RQ:5694]
+        - As a portfolio member, I can view portfolio milestones' program milestone start and end dates, to better manage program level timetables [RQ:5695]
+        - As a portfolio member, I can add or remove associations between portfolio milestones and this portfolio's program milestones, so I can plan out the scope of the milestone [RQ:5692]
+        - As a portfolio member, I can view strategic outcome associations to each portfolio milestone, to give me flexibility in seeing how the portfolio data is organized [RQ:5693]
+        - As a portfolio member, I want to be able to open an Artifacts dropdown on portfolio pages to navigate to my portfolio milestones and strategic outcomes [RQ:5696]
+
+??? bug "Bug fixes and enhancements"
+    - Adds a new [Testing Setting](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) to disable actual test duration recording [IN:12782]
+    - Security enhancement for SpiraApps [IN:11359]
+
 ## Version 9.2 (June 2026)
 ??? bug "Bug fixes and enhancements"
     - Add a date selector to the data sync "Reset Sync" functionality [IN:12545]

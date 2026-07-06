@@ -9,19 +9,22 @@ There are a number of places in the manifest file where lookups are required. Th
 ### Setting types
 The following IDs are allowed for the settingTypeId property for system admin settings and product admin settings. Not all of these are currently supported, and some are not available in system settings.
 
-| ID  | Setting Type                   | Product Settings | System Settings |
-| --- | ------------------------------ | ---------------- | --------------- |
-| 1   | Plain text                     | Y                | Y               |
-| 2   | Rich text (html)               | Y                | Y               |
-| 3   | ArtifactCustomProperty         | Y                |                 |
-| 4   | Integer                        | Y                | Y               |
-| 5   | ArtifactStatusSingleSelect     | Y                |                 |
-| 6   | ArtifactStatusMultiSelect      |                  |                 |
-| 7   | ArtifactStandardField          | Y                |                 |
-| 8   | ArtifactFlexibleCustomProperty |                  |                 |
-| 9   | Multi line plain text          | Y                | Y               |
-| 10  | Boolean                        | Y                | Y               |
-| 11  | ArtifactTypeSingleSelect       | Y                |                |
+| ID  | Setting Type                                                          | Product Settings | System Settings |
+| --- | --------------------------------------------------------------------- | ---------------- | --------------- |
+| 1   | Plain text                                                            | Y                | Y               |
+| 2   | Rich text (html)                                                      | Y                | Y               |
+| 3   | ArtifactCustomProperty                                                | Y                |                 |
+| 4   | Integer                                                               | Y                | Y               |
+| 5   | ArtifactStatusSingleSelect                                            | Y                |                 |
+| 6   | ArtifactStatusMultiSelect                                             |                  |                 |
+| 7   | ArtifactStandardField                                                 | Y                |                 |
+| 8   | ArtifactFlexibleCustomProperty                                        |                  |                 |
+| 9   | Multi line plain text                                                 | Y                | Y               |
+| 10  | Boolean                                                               | Y                | Y               |
+| 11  | ArtifactTypeSingleSelect                                              | Y                |                 |
+| 12  | ArtifactTypeMultiSelect                                               | Y                |                 |
+| 13  | [FixedUrl](./SpiraApps-Manifest.md/#url-whitelisting-settings)        |                  | Y               |
+| 14  | [ConfigurableUrl](./SpiraApps-Manifest.md/#url-whitelisting-settings) |                  | Y               |
 
 ### Artifact Types
 The list below shows the relevant IDs for different artifacts in Spira.

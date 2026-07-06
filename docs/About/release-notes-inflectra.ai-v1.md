@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## July 06 2026
+
+!!! bug "Bug fixes and enhancements"
+    - Fix a bug preventing the Release Analysis feature from working correctly [IN:13072]
+    - Fix a bug related to the position of AI-generated test steps [IN:13090]
+    - Add support for improved model choices, specifically for multi-modal interactions (for use by Inflectra.ai in Rapise) [IN:12803]
+    
 ## June 12 2026
 
 !!! bug "Bug fixes and enhancements"
