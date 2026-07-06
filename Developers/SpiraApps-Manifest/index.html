@@ -713,17 +713,67 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Portfolios
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Portfolios
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Spira-User-Manual/Portfolio-Homepage/">
 <span class="md-ellipsis">
     
   
-    Portfolio Homepage
+    Homepage
   
 
     
   </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spira-User-Manual/Portfolio-Strategic-Outcomes/">
+<span class="md-ellipsis">
+    
+  
+    Strategic Outcomes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spira-User-Manual/Portfolio-Milestones/">
+<span class="md-ellipsis">
+    
+  
+    Portfolio Milestones
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Spira-User-Manual/Enterprise-Homepage/">
@@ -1695,6 +1745,18 @@
     
   
     Risks+
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SpiraApps/Spira-AI-Connect/">
+<span class="md-ellipsis">
+    
+  
+    Spira AI Connect
   
 
     
@@ -3779,6 +3841,19 @@
       
     </span>
 </a>
+<nav aria-label="System admin settings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#url-whitelisting-settings">
+<span class="md-ellipsis">
+      
+        Url Whitelisting Settings
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#product-admin-settings">
@@ -4171,6 +4246,19 @@
       
     </span>
 </a>
+<nav aria-label="System admin settings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#url-whitelisting-settings">
+<span class="md-ellipsis">
+      
+        Url Whitelisting Settings
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#product-admin-settings">
@@ -4351,7 +4439,7 @@
 <li><strong>settingTypeId</strong>: an integer for the type of <a href="../SpiraApps-Reference/#setting-types">setting</a></li>
 <li><strong>name</strong>: codeFriendlyUniqueName</li>
 <li><strong>caption</strong>: User friendly Name</li>
-<li><strong>isSecure</strong>: boolean (true or false - defaults to false)</li>
+<li><strong>isSecure</strong>: true or false - defaults to false (<a href="#url-whitelisting-settings">URL Whitelist</a> is expected to be defined if any setting is secure)</li>
 <li><strong>placeholder</strong>: Placeholder for the setting to help users</li>
 <li><strong>position</strong>: Optional int for the order to show the settings in</li>
 <li><strong>tooltip</strong>: On hover tooltip for users</li>
@@ -4372,6 +4460,91 @@
 </div>
 </div>
 </div>
+<h4 id="url-whitelisting-settings">Url Whitelisting Settings<a class="headerlink" href="#url-whitelisting-settings" title="Permanent link">¶</a></h4>
+<p>A SpiraApp can use the two setting types <strong>FixedUrl</strong> (ID 13) and <strong>ConfigurableUrl</strong> (ID 14) to provide enhanced security. These settings create a URL whitelist that restricts which external URLs the SpiraApp is allowed to call. They can only be used as system admin settings.</p>
+<p><strong>FixedUrl vs ConfigurableUrl:</strong></p>
+<ul>
+<li><strong>FixedUrl</strong>: The URL value is set by the SpiraApp developer in the manifest and cannot be changed by admins. Use this for known, stable endpoints that should always be allowed (e.g. a specific third-party API base URL) or point to cloud APIs used as a default. </li>
+<li><strong>ConfigurableUrl</strong>: The URL value is left for a system admin to populate after installation. Use this when the target URL may vary between customer environments (e.g. a self-hosted service endpoint). Best practice is to ask admins for the complete URL including protocol if you want to restrict to a specific endpoint. If a defaultSettingName is defined, the specified fixedUrl setting will be ignored from the whitelist once the user configures a different URL. </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="explanation_3" name="__tabbed_4" type="radio"/><input id="example_3" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="example_3">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>FixedUrl</strong> settings have the following additional required property:</p>
+<ul>
+<li><strong>settingTypeId</strong>: <code>13</code></li>
+<li><strong>value</strong>: A fixed URL value to add to the whitelist (set by the developer, not editable by admins)</li>
+</ul>
+<p><strong>ConfigurableUrl</strong> settings have the following additional optional property:</p>
+<ul>
+<li><strong>settingTypeId</strong>: <code>14</code></li>
+<li><strong>defaultSettingName</strong>: The "name" property of a FixedUrl setting to indicate the FixedUrl is a fallback value for this one. This excludes that FixedUrl from the whitelist while this setting is populated by the end user. </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">settings</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">settingTypeId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">analyticsApiUrl</span>
+<span class="w">    </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analytics Service URL</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://api.analytics-service.com/v2</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">tooltip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fixed endpoint for the analytics integration</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">settingTypeId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">customServiceUrl</span>
+<span class="w">    </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Custom Service Base URL</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">tooltip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enter the full base URL of your service instance</span>
+<span class="w">    </span><span class="nt">defaultSettingName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">analyticsApiUrl</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">settingTypeId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apiKey</span>
+<span class="w">    </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">API Key</span>
+<span class="w">    </span><span class="nt">isSecure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">placeholder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enter your API key</span>
+<span class="w">    </span><span class="nt">position</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">    </span><span class="nt">tooltip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Your API key for the service</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>How URL matching works:</strong></p>
+<p>When a SpiraApp makes an external REST API call, Spira validates whether the requested URL matches any configured URL whitelist setting. The matching rules are:</p>
+<ul>
+<li>A setting value must contain at least a valid domain name (e.g. <code>google.com</code>). IP addresses (both IPv4 and IPv6) and localhost are not allowed.</li>
+<li>If no protocol is specified, both HTTP and HTTPS are accepted, and any subdomain is allowed. The matching uses a suffix check against the host portion of the requested URL.</li>
+<li>If a protocol is specified (e.g. <code>https://</code>), only that protocol is accepted and subdomains are only allowed if explicitly included.</li>
+<li>Port, path, and other URL components are treated as a prefix match if specified, but are wildcards if omitted.</li>
+<li>Query parameters are not enforced or restricted.</li>
+<li>Maximum URL setting length is 8192 characters (UTF-8).</li>
+</ul>
+<details class="example">
+<summary>URL matching examples</summary>
+<table>
+<thead>
+<tr>
+<th>Setting Value</th>
+<th>Matches</th>
+<th>Does Not Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>google.com</code></td>
+<td><code>http://google.com/api</code>, <code>https://maps.google.com/data</code>, <code>https://sub.deep.google.com</code></td>
+<td><code>http://notgoogle.com</code></td>
+</tr>
+<tr>
+<td><code>https://www.google.com/chat</code></td>
+<td><code>https://www.google.com/chat</code>, <code>https://www.google.com/chat/messages?id=5</code></td>
+<td><code>http://www.google.com/chat</code>, <code>https://google.com/chat</code>, <code>https://mail.google.com</code></td>
+</tr>
+<tr>
+<td><code>https://api.example.com:8080/v2</code></td>
+<td><code>https://api.example.com:8080/v2/users</code></td>
+<td><code>https://api.example.com/v2</code>, <code>http://api.example.com:8080/v2</code></td>
+</tr>
+</tbody>
+</table>
+</details>
 <h3 id="product-admin-settings">Product admin settings<a class="headerlink" href="#product-admin-settings" title="Permanent link">¶</a></h3>
 <p>A SpiraApp can also have product level settings. These settings are unique per product and are useful for:</p>
 <ul>
@@ -4381,7 +4554,7 @@
 </ul>
 <p>Only non-secure settings are available to SpiraApps client side.</p>
 <p>The settings is an array of objects, each object must be in the form as below. See our reference for <a href="../SpiraApps-Reference/#setting-types">settingTypeIds</a></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="explanation_3" name="__tabbed_4" type="radio"/><input id="example_3" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="example_3">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="explanation_4" name="__tabbed_5" type="radio"/><input id="example_4" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="example_4">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4414,7 +4587,7 @@
 <h3 id="page-contents">Page Contents<a class="headerlink" href="#page-contents" title="Permanent link">¶</a></h3>
 <p>A SpiraApp can run on a <a href="../SpiraApps-Reference/#pages">wide number of pages</a> including the SpiraApp product admin settings page itself. The functionality comes from code (JS, HTML, and CSS) from the SpiraApp. This code is loaded onto the page based on the configuration provided in the manifest. You can load different javascript code on each page, or the same code. Different SpiraApp features use different code types (for example, only page columns uses HTML).</p>
 <p>The pageContents setting is an array of objects, one for each page that content should appear on. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="explanation_4" name="__tabbed_5" type="radio"/><input id="example_4" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="example_4">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="explanation_5" name="__tabbed_6" type="radio"/><input id="example_5" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="explanation_5">Explanation</label><label for="example_5">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4437,7 +4610,7 @@
 <h3 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">¶</a></h3>
 <p>Users can proactively interact with a SpiraApp via menu buttons on <a href="../SpiraApps-Reference/#pages">product pages</a> including the SpiraApp product admin settings page. Each menu button has a number of entries. These entries provide the actual links to the SpiraApp code. For example, if users have 5 different actions they can take with a SpiraApp, then there will be 5 entries in the menu button - 5 menu entries in the button's dropdown.</p>
 <p>The menu setting is an array of objects, one for each page the menu should be on. Each menu object will have an entries key that contains an array of "entry" objects.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="explanation_5" name="__tabbed_6" type="radio"/><input id="example_5" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="explanation_5">Explanation</label><label for="example_5">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="explanation_6" name="__tabbed_7" type="radio"/><input id="example_6" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="explanation_6">Explanation</label><label for="example_6">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>Menu object</strong>:</p>
@@ -4480,7 +4653,7 @@
 <h3 id="page-columns">Page Columns<a class="headerlink" href="#page-columns" title="Permanent link">¶</a></h3>
 <p>Artifact list pages can have a special type of SpiraApp where SpiraApp functionality is provided as a column. </p>
 <p>The pageColumns setting is an array of objects, with only one object per unique page id.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="explanation_6" name="__tabbed_7" type="radio"/><input id="example_6" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="explanation_6">Explanation</label><label for="example_6">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="explanation_7" name="__tabbed_8" type="radio"/><input id="example_7" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="explanation_7">Explanation</label><label for="example_7">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4503,7 +4676,7 @@
 <h2 id="dashboards">Dashboards<a class="headerlink" href="#dashboards" title="Permanent link">¶</a></h2>
 <p>SpiraApps can run as custom widgets on <a href="../SpiraApps-Reference/#dashboard-types">specific dashboard pages</a> in Spira. These widgets can show rich dynamic and interactive content to users.</p>
 <p>The dashboards setting is an array of objects, with only one object per unique dashboard id.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="explanation_7" name="__tabbed_8" type="radio"/><input id="example_7" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="explanation_7">Explanation</label><label for="example_7">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="explanation_8" name="__tabbed_9" type="radio"/><input id="example_8" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4528,7 +4701,7 @@
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
 <p>SpiraApps can store arbitrary data using key/value pairs. These key/value pairs can be added programmatically but also in the manifest. </p>
 <p>Manifest storage can only be used to add system level storage items. On upgrading a SpiraApp, storage items that existed before will be updated. Storage items removed from the manifest are not removed during the upgrade process, so should be removed programmatically.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="explanation_8" name="__tabbed_9" type="radio"/><input id="example_8" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="explanation_8">Explanation</label><label for="example_8">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="explanation_9" name="__tabbed_10" type="radio"/><input id="example_9" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="explanation_9">Explanation</label><label for="example_9">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>

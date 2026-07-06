@@ -713,17 +713,67 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Portfolios
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Portfolios
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Spira-User-Manual/Portfolio-Homepage/">
 <span class="md-ellipsis">
     
   
-    Portfolio Homepage
+    Homepage
   
 
     
   </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spira-User-Manual/Portfolio-Strategic-Outcomes/">
+<span class="md-ellipsis">
+    
+  
+    Strategic Outcomes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spira-User-Manual/Portfolio-Milestones/">
+<span class="md-ellipsis">
+    
+  
+    Portfolio Milestones
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../Spira-User-Manual/Enterprise-Homepage/">
@@ -1782,6 +1832,18 @@
     
   
     Risks+
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SpiraApps/Spira-AI-Connect/">
+<span class="md-ellipsis">
+    
+  
+    Spira AI Connect
   
 
     
@@ -4210,6 +4272,7 @@
 <li><strong>Every test step that does not pass must have an Incident</strong>: (default = no) turn this setting on to make sure that failed steps have an attached incident. This setting applies to marking a test step as Failed, Blocked, Caution, or N/A. When this setting is on, a tester will not be made to add a new incident every time they fail a step. If a step does not already have an incident linked to it the tester must either link an existing incident or make a new one.</li>
 <li><strong>Allow users to mark every step in a test case as N/A at once</strong>: (default = no) normally you can mark individual test steps as N/A. To do so you must enter an actual result for the test step. Turn this setting to show the users an "N/A All" button on the first test step of a test case. Any test steps marked in N/A in this way do not require the user to enter an actual result. Any test steps with a blank actual result will have a default actual result added automatically by the system. </li>
 <li><strong>Users can create Tasks during execution (including exploratory testing)</strong>: (default = no) some testing workflows using tasks to log issues from testers to developers. This is more streamlined than using incidents, and can be particularly useful for issues that originated during a development cycle (ie are not existing bugs). Turning this setting on adds a task tab to both exploratory and normal test execution ot let testers quickly log tasks against the release and test step. </li>
+<li><strong>Disable actual duration recording (always report 0 minutes)</strong>: (default = no) when turned on, the system records 0.0h as the actual duration for every test case executed, regardless of how long the tester spent. This is intended for organizations operating in jurisdictions where local laws restrict or prohibit tracking granular, task-by-task time spent by individual workers. Turning this on ensures no per-test-case timing data is captured.</li>
 </ul>
 </li>
 <li>
