@@ -96,7 +96,7 @@ A SpiraApp can require system level settings to be configured and stored. These 
     - **settingTypeId**: an integer for the type of [setting](./SpiraApps-Reference.md/#setting-types)
     - **name**: codeFriendlyUniqueName
     - **caption**: User friendly Name
-    - **isSecure**: boolean (true or false - defaults to false)
+    - **isSecure**: true or false - defaults to false ([URL Whitelist](./SpiraApps-Manifest/#url-whitelisting-settings) is expected to be defined if used)
     - **placeholder**: Placeholder for the setting to help users
     - **position**: Optional int for the order to show the settings in
     - **tooltip**: On hover tooltip for users
@@ -117,8 +117,65 @@ A SpiraApp can require system level settings to be configured and stored. These 
     ```
 #### Url Whitelisting Settings
 
-A SpiraApp can use the two setting types FixedUrl and ConfigurableUrl to give enhanced security when working with secure data like API Keys or third-party service credentials. These can only be used as System admin settings, and have one unique property each:
-- FixedUrl settings have an additional 'value' property, which 
+A SpiraApp can use the two setting types **FixedUrl** (ID 13) and **ConfigurableUrl** (ID 14) to provide enhanced security. These settings create a URL whitelist that restricts which external URLs the SpiraApp is allowed to call. They can only be used as system admin settings.
+
+**FixedUrl vs ConfigurableUrl:**
+
+- **FixedUrl**: The URL value is set by the SpiraApp developer in the manifest and cannot be changed by admins. Use this for known, stable endpoints that should always be allowed (e.g. a specific third-party API base URL) or point to cloud APIs used as a default. 
+- **ConfigurableUrl**: The URL value is left for a system admin to populate after installation. Use this when the target URL may vary between customer environments (e.g. a self-hosted service endpoint). Best practice is to ask admins for the complete URL including protocol if you want to restrict to a specific endpoint. If a defaultSettingName is defined, the specified fixedUrl setting will be ignored from the whitelist once the user configures a different URL. 
+
+=== "Explanation"
+    **FixedUrl** settings have the following additional required property:
+
+    - **settingTypeId**: `13`
+    - **value**: A fixed URL value to add to the whitelist (set by the developer, not editable by admins)
+
+    **ConfigurableUrl** settings have the following additional optional property:
+
+    - **settingTypeId**: `14`
+    - **defaultSettingName**: The "name" property of a FixedUrl setting to indicate the FixedUrl is a fallback value for this one. This excludes that FixedUrl from the whitelist while this setting is populated by the end user. 
+=== "Example"
+
+    ```yaml
+    settings:
+      - settingTypeId: 13
+        name: analyticsApiUrl
+        caption: Analytics Service URL
+        value: https://api.analytics-service.com/v2
+        position: 1
+        tooltip: Fixed endpoint for the analytics integration
+      - settingTypeId: 14
+        name: customServiceUrl
+        caption: Custom Service Base URL
+        position: 2
+        tooltip: Enter the full base URL of your service instance
+        defaultSettingName: analyticsApiUrl
+      - settingTypeId: 1
+        name: apiKey
+        caption: API Key
+        isSecure: true
+        placeholder: Enter your API key
+        position: 3
+        tooltip: Your API key for the service
+    ```
+
+**How URL matching works:**
+
+When a SpiraApp makes an external REST API call, Spira validates whether the requested URL matches any configured URL whitelist setting. The matching rules are:
+
+- A setting value must contain at least a valid domain name (e.g. `google.com`). IP addresses (both IPv4 and IPv6) and localhost are not allowed.
+- If no protocol is specified, both HTTP and HTTPS are accepted, and any subdomain is allowed. The matching uses a suffix check against the host portion of the requested URL.
+- If a protocol is specified (e.g. `https://`), only that protocol is accepted and subdomains are only allowed if explicitly included.
+- Port, path, and other URL components are treated as a prefix match if specified, but are wildcards if omitted.
+- Query parameters are not enforced or restricted.
+- Maximum URL setting length is 8192 characters (UTF-8).
+
+??? example "URL matching examples"
+    | Setting Value | Matches | Does Not Match |
+    | --- | --- | --- |
+    | `google.com` | `http://google.com/api`, `https://maps.google.com/data`, `https://sub.deep.google.com` | `http://notgoogle.com` |
+    | `https://www.google.com/chat` | `https://www.google.com/chat`, `https://www.google.com/chat/messages?id=5` | `http://www.google.com/chat`, `https://google.com/chat`, `https://mail.google.com` |
+    | `https://api.example.com:8080/v2` | `https://api.example.com:8080/v2/users` | `https://api.example.com/v2`, `http://api.example.com:8080/v2` |
 
 ### Product admin settings
 A SpiraApp can also have product level settings. These settings are unique per product and are useful for:
