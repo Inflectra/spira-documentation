@@ -96,7 +96,7 @@ A SpiraApp can require system level settings to be configured and stored. These 
     - **settingTypeId**: an integer for the type of [setting](./SpiraApps-Reference.md/#setting-types)
     - **name**: codeFriendlyUniqueName
     - **caption**: User friendly Name
-    - **isSecure**: true or false - defaults to false ([URL Whitelist](./SpiraApps-Manifest/#url-whitelisting-settings) is expected to be defined if used)
+    - **isSecure**: true or false - defaults to false ([URL Whitelist](#url-whitelisting-settings) is expected to be defined if any setting is secure)
     - **placeholder**: Placeholder for the setting to help users
     - **position**: Optional int for the order to show the settings in
     - **tooltip**: On hover tooltip for users
