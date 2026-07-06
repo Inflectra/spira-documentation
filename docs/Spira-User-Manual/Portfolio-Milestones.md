@@ -5,10 +5,15 @@ pdf: true
 # Portfolio Milestones
 !!! abstract "Available in SpiraPlan only"
 
-Portfolio Milestones and [Strategic Outcomes](Portfolio-Strategic-Outcomes.md) give you powerful ways to manage delivery of features and program milestones across multiple products at once - in other words at a portfolio level. Portfolio Milestones let you define cross-program, portfolio-level date goals / milestones (like program milestones). You can link portfolio milestones to program milestones to track their scheduling at a higher level. Portfolio Milestones also let you track strategic outcomes' delivery.
+Portfolio Milestones and [Strategic Outcomes](Portfolio-Strategic-Outcomes.md) give you powerful ways to manage delivery of features and program milestones across multiple programs at once - in other words at a portfolio level. Portfolio Milestones let you define cross-program, portfolio-level date goals / milestones (like program milestones). You can link portfolio milestones to program milestones to track their scheduling at a higher level. Portfolio Milestones also let you track strategic outcomes' delivery.
 
 !!! question "Use cases for portfolio milestones"
-    You can think of portfolio milestones as portfolio-level program milestones. With deep customizations, you can use them in a variety of different ways. Here are a few to help guide you using them.
+    Portfolio Milestones can be used to track long term plans and reviews of cross-program functionality.
+    Here are a few examples of how to use them.
+
+    - You have an HR Portfolio for managing all the people-centric efforts in your organization. Create a portfolio milestone for the year to track key strategic outcomes across all your teams. 
+    - You have a Core Products portfolio for the main software that your organization develops. Create a portfolio milestone to serve as a high-level review of all core products. Link it with integration program milestones and link those with releases to track cross-product feature rollouts across your portfolio.
+    - After several meetings between customers and internal team leads, your executive team has decided on a 3-year plan with a mix of high-level goals, product integrations, and big feature rollouts. To track this efficiently, create a portfolio milestone with a high-level summary of the 3-year plan in the description. Then link it with new strategic outcomes for each of the high-level goals, and with new program milestones for the product integrations and feature rollouts.
 
 
 ## Start and End Dates
