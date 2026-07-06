@@ -1,5 +1,9 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
+
+## July 2026
+- [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
+
 ## June 2026
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.6:
 
