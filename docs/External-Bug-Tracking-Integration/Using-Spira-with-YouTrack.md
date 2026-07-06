@@ -31,7 +31,7 @@ The table below shows a summary of how data is synced from/to Spira and YouTrack
 | :--- | :--- | :--- | :--- | :--- |
 | **Bidirectional** (Default) | (not synced) | (not synced) | Both ways YouTrack <-> Spira | Both ways  YouTrack <-> Spira <br>*(For types specified in Custom 02)* |
 
-### Configuration Notes
+#### Synchronization Notes
 
 **Attachment Synchronization**
 Files attached to YouTrack issues or within YouTrack comments are synchronized one-way (**YouTrack -> Spira**) upon initial creation. Attachment synchronization is not currently supported on updates. 
