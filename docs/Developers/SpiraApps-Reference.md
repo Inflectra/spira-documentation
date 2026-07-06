@@ -21,7 +21,10 @@ The following IDs are allowed for the settingTypeId property for system admin se
 | 8   | ArtifactFlexibleCustomProperty |                  |                 |
 | 9   | Multi line plain text          | Y                | Y               |
 | 10  | Boolean                        | Y                | Y               |
-| 11  | ArtifactTypeSingleSelect       | Y                |                |
+| 11  | ArtifactTypeSingleSelect       | Y                |                 |
+| 12  | ArtifactTypeMultiSelect        | Y                |                 |
+| 13  | FixedUrl                       |                  | Y               |
+| 14  | ConfigurableUrl                |                  | Y               |
 
 ### Artifact Types
 The list below shows the relevant IDs for different artifacts in Spira.

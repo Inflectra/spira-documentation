@@ -115,6 +115,10 @@ A SpiraApp can require system level settings to be configured and stored. These 
         tooltip: By default 5 rows are displayed
         settingGroup: groupAlpha
     ```
+#### Url Whitelisting Settings
+
+A SpiraApp can use the two setting types FixedUrl and ConfigurableUrl to give enhanced security when working with secure data like API Keys or third-party service credentials. These can only be used as System admin settings, and have one unique property each:
+- FixedUrl settings have an additional 'value' property, which 
 
 ### Product admin settings
 A SpiraApp can also have product level settings. These settings are unique per product and are useful for:
