@@ -11,8 +11,12 @@ You can link strategic outcomes to program capabilities to organize at a high le
 If you are NOT a portfolio viewer, you can still see how your organization structures its portfolios, programs, and products from the workspace dropdown.
 
 !!! question "Use cases for strategic outcomes"
-    Strategic outcomes can be used to track big-picture goals across an entire Portfolio.
+    Strategic outcomes can be used to track big-picture goals across an entire portfolio.
+    Here are a few examples for how to use them.
 
+    - You have an HR Portfolio for managing all the people-centric efforts in your organization. Create strategic outcomes for upskilling your employees, or improving internal hiring efforts to reorganize teams with lower risk.
+    - You have a Core Products portfolio for the main software that your organization develops. Create a strategic outcome for improving reliability across the board, or adopting generative AI to help users do more.
+    - You have a 3-year plan in the form of a portfolio milestone, and you want to track efforts towards it all the way down to product requirements. Create strategic outcomes for the big-picture goals, and link them with program capabilities that define how your products could integrate or change to achieve those goals. Product teams should consider those capabilities in their backlog for long-term planning, and link relevant requirements to them as they are requested.
 
 ## Strategic Outcome List
 To access strategic outcomes, navigate to a Portfolio and then open the artifact dropdown. Select "Strategic Outcomes". This will open the strategic outcome list page. You can sort the list by ascending or descending order of any field. You can apply filters for all fields to limit the strategic outcomes you see. At first, the list will be empty.
