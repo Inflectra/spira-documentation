@@ -1,6 +1,12 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## August 2026
+- [Jira Server/Data Center Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md) v7.5:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13151] Adds support for Requirement comma-separated status mappings
+
 ## July 2026
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
 
