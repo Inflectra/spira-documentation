@@ -4,6 +4,27 @@ This page shows summary information about releases in Spira's addons, data syncs
 ## July 2026
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
 
+- [Jira Server/Data Center Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md) v7.4:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13045] Adds the option to resync a single project from the beginning using a special token
+
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.7:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13130] Adds a security warning for instances using the admin user (#1) as their sync user
+        - [IN:13128] Adds support to handle a known cache-related bug in the Jira API that affects the sync
+        - [IN:13045] [IN:13070] Adds the option to resync a single project from the beginning using a special token
+        - [IN:13138] Fixes a bug with empty date fields in Jira syncing to Spira
+        - [IN:13068] Fixes a bug related to manual user mappings when using email as the External Key
+        
+
+- [Azure DevOps Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.1:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13150] Fixes a bug with auto-mapping users for Entra-backed organizations
+
+
 ## June 2026
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.6:
 
