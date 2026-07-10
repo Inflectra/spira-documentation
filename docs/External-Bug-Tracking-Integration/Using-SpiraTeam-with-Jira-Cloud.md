@@ -306,8 +306,6 @@ To activate this product for the datasync, update the following fields:
 
 !!! info "Adding a new Project to an existing plugin"
 
-!!! info "Adding a new Project to an existing plugin"
-
     If you already have an active Jira plugin syncing other Spira projects and want to add a new project to it:
 
     - Go to the Data Sync configuration page in Spira.
