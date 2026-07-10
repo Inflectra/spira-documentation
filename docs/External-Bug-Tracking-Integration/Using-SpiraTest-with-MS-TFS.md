@@ -27,11 +27,23 @@ This data sync plugin can sync the following information:
 
 The table below shows a summary of how data is synced from/to Spira and Azure DevOps (TFS) based on the configured Sync Direction:
 
-| Sync Mode | Releases | Requirements | Incidents | Tasks |
-| :--- | :--- | :--- | :--- | :--- |
-| **Bidirectional** (Default) | ADO <-> Spira | ADO <-> Spira | ADO <-> Spira | ADO <-> Spira |
-| **UpdateSpira** | ADO -> Spira | ADO -> Spira | ADO -> Spira | ADO -> Spira |
-| **UpdateADO** | Spira -> ADO | Spira -> ADO | Spira -> ADO | Spira -> ADO |
+| Sync Mode | Requirements | Incidents | Attachments |
+| :--- | :--- | :--- | :--- |
+| **Standard** (Default) | New: ServiceNow <-> Spira<br>Updates: ServiceNow -> Spira | New: ServiceNow <-> Spira<br>Updates: ServiceNow -> Spira | ServiceNow <-> Spira<br>*(New Only)* |
+
+!!! info "Synchronization Note"
+     
+     **Field Updates Dynamic**
+     
+     While new records can originate from either platform, the integration service tracks on-going field changes exclusively from ServiceNow into Spira. Modifications made to an item inside Spira after its initial creation will not sync back to ServiceNow.
+
+     **User Synchronization**
+     
+     Tracking and mapping user assignments depends on your configured Auto-Map Users toggle:
+     
+     - **Auto-Map Users = yes:** Automatically maps users one-to-one by checking and pairing matching First and Last Names across platforms.
+     
+     - **Auto-Map Users = no:** Requires manual configuration. Administrators must go to *Administration > Users > View Edit Users*, choose the target user's profile, navigate to the *Data Mapping* tab, and enter the exact First and Last Name of the user as it appears in ServiceNow into the **ServiceNow Data Sync ID** field.
 
 ## Configuring the Plug-In
 
