@@ -231,6 +231,16 @@ To activate this product for the datasync, update the following fields:
     - To pause synchronization, simply set the DataSync to *inactive* for the specific product (as explained in a section above).
     - Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.
 
+!!! info "Adding a new Project to an existing plugin"
+
+    If you already have an active Jira plugin syncing other Spira projects and want to add a new project to it:
+
+    - Go to the Data Sync configuration page in Spira.
+    - Find your Jira plugin in the list, select the new project from the dropdown, and click the arrow to open its mappings page.
+    - In the External Key field, enter the Jira project key followed by the `{full}` token. This tells the sync to pull all existing data for that project. For example: `DEMO{full}`
+
+    **Note:** You must manually remove the `{full}` token from the External Key after the first sync cycle completes. Go back to the mappings page and edit the field to contain only the project key (e.g. `DEMO`).
+
 ### Supported Artifacts
 
 !!! info "Supported Artifacts for Jira Synchronization"
