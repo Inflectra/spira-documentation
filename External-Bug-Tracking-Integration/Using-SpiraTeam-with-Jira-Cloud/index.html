@@ -5142,6 +5142,16 @@ Please note that Jira has limited capabilities for exporting and importing text 
 <li>Once synchronization is restarted, all previously mapped Jira IDs will remain intact and correctly linked.</li>
 </ul>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Adding a new Project to an existing plugin</p>
+<p>If you already have an active Jira plugin syncing other Spira projects and want to add a new project to it:</p>
+<ul>
+<li>Go to the Data Sync configuration page in Spira.</li>
+<li>Find your Jira plugin in the list, select the new project from the dropdown, and click the arrow to open its mappings page.</li>
+<li>In the External Key field, enter the Jira project key followed by the <code>{full}</code> token. This tells the sync to pull all existing data for that project. For example: <code>DEMO{full}</code></li>
+</ul>
+<p><strong>Note:</strong> On Spira versions older than 9.4, you must manually remove the <code>{full}</code> token from the External Key after the first sync cycle completes. Go back to the mappings page and edit the field to contain only the project key (e.g. <code>DEMO</code>).</p>
+</div>
 <h3 id="supported-artifacts">Supported Artifacts<a class="headerlink" href="#supported-artifacts" title="Permanent link">¶</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Supported Artifacts for Jira Synchronization</p>
