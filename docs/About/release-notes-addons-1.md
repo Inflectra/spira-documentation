@@ -4,6 +4,17 @@ This page shows summary information about releases in Spira's addons, data syncs
 ## July 2026
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
 
+- [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
+
+    - Enhancements and New Features:
+
+        - Create product artifacts directly from AI coding assistants [RQ:5669]
+        - Filter product artifact searches with advanced criteria to get exactly the information needed [RQ:5657]
+        - Read, search for, and set custom properties on product artifacts [RQ:5670]
+        - Retrieve all associations for a given product artifact [RQ:5675]
+        - Review and add comments to individual product artifacts [RQ:5674]
+        - Update key product artifacts to keep information in Spira up to date [RQ:5673]
+
 - [Jira Server/Data Center Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md) v7.4:
 
     - Bug Fixes and Enhancements:
