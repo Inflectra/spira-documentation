@@ -26,20 +26,22 @@ This data sync plugin can sync the following information:
 
 The table below shows a summary of how data is synced from/to Spira and ServiceNow based on the core plugin architecture (ServiceNow uses fixed internal rules instead of a sync direction toggle field):
 
-| Artifact / Entity | Sync Direction: New Item Creation | Sync Direction: Subsequent Updates |
-| :--- | :--- | :--- |
-| **Incidents** | Bidirectional (ServiceNow <-> Spira) | One-Way (ServiceNow -> Spira Only) |
-| **Requirements** | Bidirectional (ServiceNow <-> Spira) | One-Way (ServiceNow -> Spira Only) |
-| **Attachments** | Bidirectional (Synced on Creation Only) | *(Not Synced on Updates)* |
+| Sync Mode | Requirements | Incidents | Attachments |
+| :--- | :--- | :--- | :--- |
+| **Standard** (Default) | **New:** ServiceNow <-> Spira<br>**Updates:** ServiceNow -> Spira | **New:** ServiceNow <-> Spira<br>**Updates:** ServiceNow -> Spira | ServiceNow <-> Spira<br>*(New Only)* |
 
 !!! info "Synchronization Notes"
      
-    **Field Updates:** While new records can originate from either platform, the integration service tracks on-going field changes exclusively from **ServiceNow into Spira**. Modifications made to an item inside Spira after its initial creation will not sync back to ServiceNow.
+     **Field Updates:** While new records can originate from either platform, the integration service tracks on-going field changes exclusively from **ServiceNow into Spira**. Modifications made to an item inside Spira after its initial creation will not sync back to ServiceNow.
     
-    **Note on User Synchronization:** Tracking and mapping user assignments depends on your configured **Auto-Map Users** toggle:
+     **User Synchronization:** Tracking and mapping user assignments depends on your configured **Auto-Map Users** toggle:
     
      - **Auto-Map Users = yes:** Automatically maps users one-to-one by checking and pairing matching First and Last Names across platforms.
      - **Auto-Map Users = no:** Requires manual configuration. Administrators must go to *Administration > Users > View Edit Users*, choose the target user's profile, navigate to the *Data Mapping* tab, and enter the exact **First and Last Name** of the user as it appears in ServiceNow into the **ServiceNow Data Sync ID** field.
+
+     **New Creations (Bidirectional):** Creating a brand-new record in either ServiceNow or Spira automatically generates its matching counterpart in the opposing system.
+     
+     **Ongoing Updates (One-Way):** Once the items are linked, any subsequent updates to mapped fields (such as Status, Priority, or Description) sync exclusively from ServiceNow to Spira. Changes made in Spira after initial creation do not write back to ServiceNow.
 
 ## Configuring the Integration Service 
 

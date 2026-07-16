@@ -31,13 +31,16 @@ The table below shows a summary of how data is synced from/to Spira and ClickUp 
 
 | Sync Mode (`Custom 01`) | Releases | Requirements | Incidents | Tasks |
 | :--- | :--- | :--- | :--- | :--- |
-| **bidirectional** | ClickUp -> Spira <br>*(New Only)* | ClickUp -> Spira | **New:** ClickUp <-> Spira <br>**Updates:** ClickUp -> Spira | **New:** ClickUp <-> Spira <br>**Updates:** ClickUp -> Spira |
-| **clickup_to_spira** | ClickUp -> Spira <br>*(New Only)* | ClickUp -> Spira | ClickUp -> Spira | ClickUp -> Spira |
+| **bidirectional** | ClickUp -> Spira <br>*(One-Way: New Items;<br> Updates: Name)* | ClickUp -> Spira | **New:** ClickUp <-> Spira <br>**Updates:** ClickUp -> Spira | **New:** ClickUp <-> Spira; **Updates:** ClickUp -> Spira |
+| **clickup_to_spira** | ClickUp -> Spira <br>*(One-Way: New Items; <br> Updates: Name)* | ClickUp -> Spira | ClickUp -> Spira | ClickUp -> Spira |
 | **spira_to_clickup** | *(Not Synced)* | *(Not Synced)* | Spira -> ClickUp <br>*(New Only)* | Spira -> ClickUp <br>*(New Only)* |
 
 !!! info "Synchronization Note"
 
-    **Note:** ClickUp integration only supports creating *new* items when flowing from Spira to ClickUp. Subsequent updates made to an item inside Spira will not sync back to ClickUp.
+     **Note:** ClickUp integration only supports creating *new* items when flowing from Spira to ClickUp. Subsequent updates made to an item inside Spira will not sync back to ClickUp.
+
+     **Release & List Scope:**
+     Lists or Milestones configured within ClickUp map directly to Spira Releases. When a list name is updated within ClickUp, the integration updates the corresponding Release name in Spira during the next sync cycle. Other release attributes (such as start/end dates) are only set during initial creation and will not update.
 
 ## System Setup
 This section outlines how to set up the integration between ClickUp and Spira. It assumes you already have a working installation of Spira (**Version 7.3+**) as well as a workspace in ClickUp. To setup the service, you must be logged into a Spira user with System-Administrator level privileges.

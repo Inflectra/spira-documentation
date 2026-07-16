@@ -33,7 +33,7 @@ The table below shows a summary of how data is synced from/to Spira and Salesfor
 
 | Sync Mode | Requirements | Incidents | Attachments | Comments |
 | :--- | :--- | :--- | :--- | :--- |
-| **Standard** (Default) | Salesforce -> Spira | Salesforce <-> Spira | Salesforce <-> Spira <br>*(Deletes sync SF -> Spira only)* | Salesforce <-> Spira |
+| **Standard** (Default) | Salesforce -> Spira | Salesforce <-> Spira | Salesforce <-> Spira <br>*(Deletes sync SF -> Spira only)* | **Incidents:** Salesforce <-> Spira<br>**Requirements:** Salesforce -> Spira |
 
 !!! info "Synchronization Notes"
 
@@ -41,6 +41,14 @@ The table below shows a summary of how data is synced from/to Spira and Salesfor
     
      1. Custom fields/objects automatically get appended with `__c` by Salesforce. **Do not** manually add the `__c` prefix/suffix inside your Spira Data Mapping configuration screens.
      2. Spaces in Salesforce object or field names must be replaced with underscores (e.g., `My_Incident_Object`) when defined in the system settings.
+
+     **Comment:** The direction of comment synchronization is determined entirely by the parent artifact type:
+
+     - **Incident Comments:** Is bidirectional (**Salesforce <-> Spira**). New comments and ongoing updates sync seamlessly between both platforms.
+
+     - **Requirement Comments:** Strict one-way synchronization (**Salesforce -> Spira**). Comments added to Salesforce custom objects mapped as requirements pull into Spira, but comments added within Spira will not sync back to Salesforce.
+     
+     - *Prerequisite:* Comment synchronization requires the Salesforce 'Feed Post and Comments' component to be active on the target objects.
 
     **User Synchronization:** 
     

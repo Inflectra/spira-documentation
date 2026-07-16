@@ -24,7 +24,7 @@ The table below shows a summary of how data is synced from/to Spira and VersionO
 
 | Sync Mode | Releases | Requirements | Incidents |
 | :--- | :--- | :--- | :--- |
-| **Standard** (Default) | VersionOne -> Spira <br>*(New Only)* | VersionOne -> Spira | New: VersionOne <-> Spira<br>Updates: VersionOne -> Spira |
+| **Standard** (Default) | VersionOne -> Spira <br> | VersionOne -> Spira | **New:** VersionOne <-> Spira<br>**Updates:** VersionOne -> Spira |
 
 !!! info "Synchronization Notes"
      
