@@ -39,13 +39,16 @@ Teams can work seamlessly using both Spira and Jira Server or Jira DataCenter (h
 
      - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
      
-     - The **NoRequirements** sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. 
+     - With **NoRequirements** parameter no requirements sync at all. Only Spira creates new incidents and tasks in Jira, while Jira is used as the system where existing incidents and tasks are updated back to Spira.
      
      - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  
      
      - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
      
-     - Comments are always synced from Spira and to Spira.
+     - **Comment Synchronization**: Comment flow is not universally bidirectional. The synchronization of comments matches the exact update logic and direction of their parent artifact: 
+         
+         - If the parent artifact's updates are configured to sync one-way (**Jira -> Spira**), then comments on that artifact will only sync one-way from **Jira -> Spira**.
+         - If the parent artifact supports bidirectional updates (**Jira <-> Spira**), then comments will sync bidirectionally.
      
      - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
 
