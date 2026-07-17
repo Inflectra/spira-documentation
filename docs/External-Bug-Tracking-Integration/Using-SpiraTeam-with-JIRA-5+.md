@@ -103,7 +103,7 @@ Then, for each product you want to sync:
 
 You need to fill in the following fields for the plugin to operate correctly:
 
-- **Name**: (leave this as **JiraDataSync**)
+- **Name**: enter **JiraServerDataSync**, since the name of the plugin should exactly match the DLL name.
 - **Caption**: this is the plugin's display name. Put something like "Jira" or leave it blank. If you have multiple Jira instances, you will need a separate plugin for each one. Each plugin needs the same name so use the caption field to make it clear each one is different
 - **Description**: this is an optional field you can use to help describe to your future self the setup and use of the plugin
 - **Jira URL**: enter the full URL of the Jira instance to connect with (make sure to include any custom port numbers). Entering this URL into a web browser should bring up the Jira login page and is typically of the form: `https://mycompany.atlassian.net`
