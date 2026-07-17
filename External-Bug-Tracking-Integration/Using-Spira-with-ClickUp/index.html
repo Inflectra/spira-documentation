@@ -2776,6 +2776,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#system-setup">
 <span class="md-ellipsis">
       
@@ -4193,6 +4202,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#system-setup">
 <span class="md-ellipsis">
       
@@ -4341,6 +4359,7 @@
 <div class="admonition abstract">
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>ClickUp is a cloud based project management system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This data sync lets you:</p>
 <ul>
 <li>create and update incidents, requirements, and tasks in Spira from ClickUp tasks</li>
@@ -4351,6 +4370,90 @@
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+</div>
+<p>This data sync plugin can sync the following information:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ClickUp Artifact</th>
+<th style="text-align: left;">Spira Artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Workspace / Space</td>
+<td style="text-align: left;">Product</td>
+</tr>
+<tr>
+<td style="text-align: left;">Users (Manual Mapping)</td>
+<td style="text-align: left;">Users</td>
+</tr>
+<tr>
+<td style="text-align: left;">Folders</td>
+<td style="text-align: left;">Releases</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tasks (in Requirements List)</td>
+<td style="text-align: left;">Requirements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tasks (in Incidents List)</td>
+<td style="text-align: left;">Incidents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tasks (in Tasks List)</td>
+<td style="text-align: left;">Tasks</td>
+</tr>
+<tr>
+<td style="text-align: left;">Files (in Custom Property)</td>
+<td style="text-align: left;">Documents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Relations (Default)</td>
+<td style="text-align: left;">Associations</td>
+</tr>
+</tbody>
+</table>
+<p>The table below shows a summary of how data is synced from/to Spira and ClickUp based on the configured Sync Direction (<strong>Custom 01</strong>):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sync Mode (<code>Custom 01</code>)</th>
+<th style="text-align: left;">Releases</th>
+<th style="text-align: left;">Requirements</th>
+<th style="text-align: left;">Incidents</th>
+<th style="text-align: left;">Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>bidirectional</strong></td>
+<td style="text-align: left;">ClickUp -&gt; Spira <br/><em>(One-Way: New Items;<br/> Updates: Name)</em></td>
+<td style="text-align: left;">ClickUp -&gt; Spira</td>
+<td style="text-align: left;"><strong>New:</strong> ClickUp &lt;-&gt; Spira <br/><strong>Updates:</strong> ClickUp -&gt; Spira</td>
+<td style="text-align: left;"><strong>New:</strong> ClickUp &lt;-&gt; Spira; <strong>Updates:</strong> ClickUp -&gt; Spira</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>clickup_to_spira</strong></td>
+<td style="text-align: left;">ClickUp -&gt; Spira <br/><em>(One-Way: New Items; <br/> Updates: Name)</em></td>
+<td style="text-align: left;">ClickUp -&gt; Spira</td>
+<td style="text-align: left;">ClickUp -&gt; Spira</td>
+<td style="text-align: left;">ClickUp -&gt; Spira</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>spira_to_clickup</strong></td>
+<td style="text-align: left;"><em>(Not Synced)</em></td>
+<td style="text-align: left;"><em>(Not Synced)</em></td>
+<td style="text-align: left;">Spira -&gt; ClickUp <br/><em>(New Only)</em></td>
+<td style="text-align: left;">Spira -&gt; ClickUp <br/><em>(New Only)</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Note</p>
+<p><strong>Note:</strong> ClickUp integration only supports creating <em>new</em> items when flowing from Spira to ClickUp. Subsequent updates made to an item inside Spira will not sync back to ClickUp.</p>
+<p><strong>Release &amp; List Scope:</strong>
+ Lists or Milestones configured within ClickUp map directly to Spira Releases. When a list name is updated within ClickUp, the integration updates the corresponding Release name in Spira during the next sync cycle. Other release attributes (such as start/end dates) are only set during initial creation and will not update.</p>
 </div>
 <h2 id="system-setup">System Setup<a class="headerlink" href="#system-setup" title="Permanent link">¶</a></h2>
 <p>This section outlines how to set up the integration between ClickUp and Spira. It assumes you already have a working installation of Spira (<strong>Version 7.3+</strong>) as well as a workspace in ClickUp. To setup the service, you must be logged into a Spira user with System-Administrator level privileges.</p>

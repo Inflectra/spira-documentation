@@ -4264,7 +4264,74 @@
 <p>This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the Version One (V1) project management system from Collabnet (hereafter called V1).</p>
 <p>The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in Spira, and then have the new incidents generated during the run be automatically loaded into V1 as new defects. In addition, user stories in V1 will be automatically added into Spira as new requirements that you can write test plans for.</p>
 <p>Once the incidents are loaded into V1 as defects, the development team can then manage the lifecycle of these defects in V1, and have the status changes in V1 be reflected back in Spira.</p>
-<p>!!! danger "Set up data synchronization"     <strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Set up data synchronization</p>
+<p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+</div>
+<p>This data sync plugin can sync the following information:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">VersionOne (V1) Artifact</th>
+<th style="text-align: left;">Spira Artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Project / Sub-Project</td>
+<td style="text-align: left;">Product</td>
+</tr>
+<tr>
+<td style="text-align: left;">Users (Manual Login Mapping or Auto-Map)</td>
+<td style="text-align: left;">Users</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sprints / Timeboxes / Releases</td>
+<td style="text-align: left;">Releases</td>
+</tr>
+<tr>
+<td style="text-align: left;">Defects</td>
+<td style="text-align: left;">Incidents</td>
+</tr>
+<tr>
+<td style="text-align: left;">User Stories</td>
+<td style="text-align: left;">Requirements</td>
+</tr>
+</tbody>
+</table>
+<p>The table below shows a summary of how data is synced from/to Spira and VersionOne based on the core plugin architecture and synchronization flows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sync Mode</th>
+<th style="text-align: left;">Releases</th>
+<th style="text-align: left;">Requirements</th>
+<th style="text-align: left;">Incidents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Standard</strong> (Default)</td>
+<td style="text-align: left;">VersionOne -&gt; Spira <br/></td>
+<td style="text-align: left;">VersionOne -&gt; Spira</td>
+<td style="text-align: left;"><strong>New:</strong> VersionOne &lt;-&gt; Spira<br/><strong>Updates:</strong> VersionOne -&gt; Spira</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Notes</p>
+<p><strong>Limitations:</strong></p>
+<ol>
+<li><strong>V1 Unique Identifiers:</strong> VersionOne uses a physical ID (e.g., <code>Defect:11291</code>) and a display ID (e.g., <code>D-23232</code>). By default, Spira stores the <em>physical ID</em> as the Data Sync ID. To pull and view the cleaner <em>display ID</em> within Spira, map an incident or requirement text custom property to the special external key <strong><code>V1DisplayId</code></strong>.</li>
+<li><strong>Post-Creation Field Updates:</strong> Once an incident is pushed into VersionOne as a defect, <strong>do not modify it again inside Spira</strong>. On-going changes to the status, priority, type, and resolution are pulled exclusively from VersionOne into Spira.</li>
+<li><strong>Sub-Project Mapping:</strong> If mapping a deep VersionOne project hierarchy, use a single forward slash to define structural nesting in the product's external key (e.g., <code>Project/SubProject</code>).</li>
+</ol>
+<p><strong>User Synchronization:</strong> Tracking field ownership maps accurately across systems according to your <strong>Auto-Map Users</strong> field option:</p>
+<ul>
+<li><strong>Auto-Map = True:</strong> Automatically hooks users across systems if the username in Spira matches the login name in VersionOne exactly.</li>
+<li><strong>Auto-Map = False:</strong> Requires manual profile synchronization. Administrators must navigate to <em>Administration &gt; Users &gt; View Edit  Users</em>, open the user's account, select the <em>Data Mapping</em> tab, and enter the exact VersionOne <strong>Login Name</strong> next to the VersionOne Data-Sync entry.</li>
+</ul>
+</div>
 <h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">¶</a></h2>
 <p>This section outlines how to configure the integration service to connect to V1. It assumes that you already have a working installation of Spira v5.0 or later and an existing provisioned instance of V1. If you have an earlier version of Spira, you will need to upgrade to at least v5.0 before trying to integrate with V1.</p>
 <p>The steps that need to be performed to configure integration with V1 are as follows:</p>

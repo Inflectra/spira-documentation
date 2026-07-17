@@ -2860,6 +2860,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-youtrack">
 <span class="md-ellipsis">
       
@@ -4118,6 +4127,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-youtrack">
 <span class="md-ellipsis">
       
@@ -4192,10 +4210,79 @@
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
 <p>This section outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (hereafter referred to as Spira) with JetBrains' YouTrack (YouTrack).</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>YouTrack issues can now be synchronized with Spira. This integration service enables two-way syncing of Spira incidents and, if specified, tasks with YouTrack issues. Once set up, by default, all issues in a YouTrack project will sync to Incidents in Spira. You can specify certain types of issues to sync as Tasks in Spira instead if you want.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+</div>
+<p>This data sync plugin can sync the following information:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">YouTrack Artifact</th>
+<th style="text-align: left;">Spira Artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Project (External Key)</td>
+<td style="text-align: left;">Product</td>
+</tr>
+<tr>
+<td style="text-align: left;">Users (Auto-Map Only)</td>
+<td style="text-align: left;">Users</td>
+</tr>
+<tr>
+<td style="text-align: left;">Issues (Default / All Types if Custom 02 is blank)</td>
+<td style="text-align: left;">Incidents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Issues (Specific Types defined in Custom 02)</td>
+<td style="text-align: left;">Tasks</td>
+</tr>
+<tr>
+<td style="text-align: left;">Issue Attachments &amp; Comment Attachments</td>
+<td style="text-align: left;">Documents / Attachments</td>
+</tr>
+</tbody>
+</table>
+<p>Synchronization is fully bidirectional for both <strong>New Creations</strong> and <strong>Ongoing Updates</strong>:</p>
+<ul>
+<li><strong>New Creations:</strong> YouTrack or Spira automatically creates its matching record in the opposing system for every new item found.</li>
+<li><strong>Ongoing Updates:</strong> Any subsequent modifications made to fields (such as Status, Priority, or Description) in either system will continuously sync and update the other side, keeping both environments mirrored.</li>
+</ul>
+<p>The table below shows a summary of how data is synced from/to Spira and YouTrack:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sync Mode</th>
+<th style="text-align: left;">Releases</th>
+<th style="text-align: left;">Requirements</th>
+<th style="text-align: left;">Incidents</th>
+<th style="text-align: left;">Tasks</th>
+<th style="text-align: left;">Attachments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bidirectional</strong> (Default)</td>
+<td style="text-align: left;">(not synced)</td>
+<td style="text-align: left;">(not synced)</td>
+<td style="text-align: left;">YouTrack &lt;-&gt; Spira</td>
+<td style="text-align: left;">YouTrack &lt;-&gt; Spira <br/><em>(For types specified in Custom 02)</em></td>
+<td style="text-align: left;">YouTrack &lt;-&gt; Spira</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Notes</p>
+<p><strong>Attachment Synchronization</strong>: Files attached to YouTrack issues/comments or Spira documents are synchronized bidirectionally (<strong>YouTrack &lt;-&gt; Spira</strong>) upon initial creation and on all subsequent updates.</p>
+<p><strong>Task vs. Incident Differentiation (<code>Custom 02</code>):</strong> By default, all YouTrack issues map directly to Spira Incidents. To separate     specific issue types out as Spira Tasks, populate the <strong>Custom 02</strong> field at the system level with a comma-separated list of the exact YouTrack issue type names (e.g., <code>Task,Epic</code>).</p>
+<p><strong>User Synchronization:</strong> Manual user ID mapping is not supported by this plugin. YouTrack synchronization relies entirely on   automated matching:</p>
+<ul>
+<li><strong>Auto-Map Users:</strong> Must be set to <strong>Yes</strong>. The plugin automatically maps users one-to-one by auditing and pairing identical First and Last Names across platforms. External usernames with duplicate names are safely ignored by the sync engine.</li>
+</ul>
 </div>
 <h2 id="configuring-youtrack">Configuring YouTrack<a class="headerlink" href="#configuring-youtrack" title="Permanent link">¶</a></h2>
 <p>Before integrating with Spira, you need to configure YouTrack to allow Rest API connections. There are a few different ways to do this. However, we recommend using a permanent token for authentication requests. You can generate your own permanent tokens in your YouTrack user profile. For instructions, please refer to the <a href="https://www.jetbrains.com/help/youtrack/standalone/Manage-Permanent-Token.html#obtain-permanent-token">YouTrack documentation</a>.</p>

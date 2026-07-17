@@ -2836,6 +2836,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-the-integration-service">
 <span class="md-ellipsis">
       
@@ -4140,6 +4149,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-the-integration-service">
 <span class="md-ellipsis">
       
@@ -4235,10 +4253,96 @@
 <div class="admonition abstract">
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>ServiceNow tables are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into Spira. Attachments will only be synced with creation.</p>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+</div>
+<p>This data sync plugin can sync the following information:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ServiceNow Artifact / Column</th>
+<th style="text-align: left;">Spira Artifact / Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Configured Incidents Table (e.g., <code>incident</code>)</td>
+<td style="text-align: left;">Incidents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Configured Requirements Table (e.g., <code>rm_feature</code>)</td>
+<td style="text-align: left;">Requirements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Users (Manual Name Mapping or Auto-Map)</td>
+<td style="text-align: left;">Users</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>short_description</code> or <code>name</code></td>
+<td style="text-align: left;">Name</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>description</code></td>
+<td style="text-align: left;">Description</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>state</code></td>
+<td style="text-align: left;">Status / State</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>priority</code></td>
+<td style="text-align: left;">Priority / Importance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>severity</code></td>
+<td style="text-align: left;">Incident Severity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>type</code></td>
+<td style="text-align: left;">Type</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>opened_by</code></td>
+<td style="text-align: left;">Author / Detected By</td>
+</tr>
+<tr>
+<td style="text-align: left;">Column: <code>assigned_to</code></td>
+<td style="text-align: left;">Owner</td>
+</tr>
+</tbody>
+</table>
+<p>The table below shows a summary of how data is synced from/to Spira and ServiceNow based on the core plugin architecture (ServiceNow uses fixed internal rules instead of a sync direction toggle field):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sync Mode</th>
+<th style="text-align: left;">Requirements</th>
+<th style="text-align: left;">Incidents</th>
+<th style="text-align: left;">Attachments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Standard</strong> (Default)</td>
+<td style="text-align: left;"><strong>New:</strong> ServiceNow &lt;-&gt; Spira<br/><strong>Updates:</strong> ServiceNow -&gt; Spira</td>
+<td style="text-align: left;"><strong>New:</strong> ServiceNow &lt;-&gt; Spira<br/><strong>Updates:</strong> ServiceNow -&gt; Spira</td>
+<td style="text-align: left;">ServiceNow &lt;-&gt; Spira<br/><em>(New Only)</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Notes</p>
+<p><strong>Field Updates:</strong> While new records can originate from either platform, the integration service tracks on-going field changes exclusively from <strong>ServiceNow into Spira</strong>. Modifications made to an item inside Spira after its initial creation will not sync back to ServiceNow.</p>
+<p><strong>User Synchronization:</strong> Tracking and mapping user assignments depends on your configured <strong>Auto-Map Users</strong> toggle:</p>
+<ul>
+<li><strong>Auto-Map Users = yes:</strong> Automatically maps users one-to-one by checking and pairing matching First and Last Names across platforms.</li>
+<li><strong>Auto-Map Users = no:</strong> Requires manual configuration. Administrators must go to <em>Administration &gt; Users &gt; View Edit Users</em>, choose the target user's profile, navigate to the <em>Data Mapping</em> tab, and enter the exact <strong>First and Last Name</strong> of the user as it appears in ServiceNow into the <strong>ServiceNow Data Sync ID</strong> field.</li>
+</ul>
+<p><strong>New Creations (Bidirectional):</strong> Creating a brand-new record in either ServiceNow or Spira automatically generates its matching counterpart in the opposing system.</p>
+<p><strong>Ongoing Updates (One-Way):</strong> Once the items are linked, any subsequent updates to mapped fields (such as Status, Priority, or Description) sync exclusively from ServiceNow to Spira. Changes made in Spira after initial creation do not write back to ServiceNow.</p>
 </div>
 <h2 id="configuring-the-integration-service">Configuring the Integration Service<a class="headerlink" href="#configuring-the-integration-service" title="Permanent link">¶</a></h2>
 <p>This section outlines how to set up the integration service between ServiceNow and Spira. It assumes that you already have a working installation of Spira and appropriate ServiceNow tables. To setup the service, you must be logged into Spira as a user with System-Administrator level privileges.</p>

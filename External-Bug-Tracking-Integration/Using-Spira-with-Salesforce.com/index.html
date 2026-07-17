@@ -2824,6 +2824,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-salesforce">
 <span class="md-ellipsis">
       
@@ -4145,6 +4154,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-salesforce">
 <span class="md-ellipsis">
       
@@ -4245,6 +4263,7 @@
 <div class="admonition abstract">
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>Salesforce objects are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This integration lets you carry out:</p>
 <ol>
 <li>two-way syncing of incidents between a specific Salesforce object and Spira </li>
@@ -4253,6 +4272,112 @@
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
+</div>
+<p>This data sync plugin can sync the following information:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Salesforce Object / Field</th>
+<th style="text-align: left;">Spira Artifact / Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Configured Incidents Custom Object</td>
+<td style="text-align: left;">Incidents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Configured Requirements Custom Object</td>
+<td style="text-align: left;">Requirements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Users (Manual Name Mapping or Auto-Map)</td>
+<td style="text-align: left;">Users</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Name</code> and/or <code>Title</code></td>
+<td style="text-align: left;">Name</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Description</code></td>
+<td style="text-align: left;">Description</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Status</code></td>
+<td style="text-align: left;">Status / State</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Priority</code></td>
+<td style="text-align: left;">Incident Priority</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Importance</code></td>
+<td style="text-align: left;">Requirement Importance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Severity</code></td>
+<td style="text-align: left;">Incident Severity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Field: <code>Type</code></td>
+<td style="text-align: left;">Type</td>
+</tr>
+<tr>
+<td style="text-align: left;">Object Component: Notes &amp; Attachments</td>
+<td style="text-align: left;">Documents / Attachments</td>
+</tr>
+<tr>
+<td style="text-align: left;">Object Component: Feed Post &amp; Comments</td>
+<td style="text-align: left;">Comments</td>
+</tr>
+</tbody>
+</table>
+<p>The table below shows a summary of how data is synced from/to Spira and Salesforce.com based on the core integration capabilities:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sync Mode</th>
+<th style="text-align: left;">Requirements</th>
+<th style="text-align: left;">Incidents</th>
+<th style="text-align: left;">Attachments</th>
+<th style="text-align: left;">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Standard</strong> (Default)</td>
+<td style="text-align: left;">Salesforce -&gt; Spira</td>
+<td style="text-align: left;">Salesforce &lt;-&gt; Spira</td>
+<td style="text-align: left;">Salesforce &lt;-&gt; Spira <br/><em>(Deletes sync SF -&gt; Spira only)</em></td>
+<td style="text-align: left;"><strong>Incidents:</strong> Salesforce &lt;-&gt; Spira<br/><strong>Requirements:</strong> Salesforce -&gt; Spira</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Notes</p>
+<p><strong>Limitations:</strong> </p>
+<ol>
+<li>Custom fields/objects automatically get appended with <code>__c</code> by Salesforce. <strong>Do not</strong> manually add the <code>__c</code> prefix/suffix inside your Spira Data Mapping configuration screens.</li>
+<li>Spaces in Salesforce object or field names must be replaced with underscores (e.g., <code>My_Incident_Object</code>) when defined in the system settings.</li>
+</ol>
+<p><strong>Comment:</strong> The direction of comment synchronization is determined entirely by the parent artifact type:</p>
+<ul>
+<li>
+<p><strong>Incident Comments:</strong> Is bidirectional (<strong>Salesforce &lt;-&gt; Spira</strong>). New comments and ongoing updates sync seamlessly between both platforms.</p>
+</li>
+<li>
+<p><strong>Requirement Comments:</strong> Strict one-way synchronization (<strong>Salesforce -&gt; Spira</strong>). Comments added to Salesforce custom objects mapped as requirements pull into Spira, but comments added within Spira will not sync back to Salesforce.</p>
+</li>
+<li>
+<p><em>Prerequisite:</em> Comment synchronization requires the Salesforce 'Feed Post and Comments' component to be active on the target objects.</p>
+</li>
+</ul>
+<p><strong>User Synchronization:</strong> </p>
+<p>Tracking user assignments handles ownership mappings according to your <strong>Auto-Map Users</strong>     configuration:</p>
+<ul>
+<li><strong>Auto-Map Users = Yes:</strong> Automatically pairs users across platforms by executing a direct match check on First and Last Names.</li>
+<li><strong>Auto-Map Users = No:</strong> Requires manual user profiling. Administrators must navigate to <em>Administration &gt; Users &gt; View Edit  Users</em>, select the specific user, choose the <em>Data Mapping</em> tab, and enter the exact <strong>First and Last Name</strong> of the user as it exists in Salesforce into the <strong>Salesforce Data Sync ID</strong> field.</li>
+</ul>
 </div>
 <h2 id="configuring-salesforce">Configuring Salesforce<a class="headerlink" href="#configuring-salesforce" title="Permanent link">¶</a></h2>
 <p>Before integrating with Spira, you need to properly configure Salesforce's Rest API service. To do this, create a dedicated "Connected App" in your Salesforce application, as described in <a href="https://help.salesforce.com/articleView?id=connected_app_create_basics.htm&amp;type=5">these instructions</a>. </p>

@@ -4864,20 +4864,44 @@
 </tr>
 </tbody>
 </table>
-<p>Notes about syncing:</p>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Note</p>
 <ul>
-<li>The <strong>Default</strong> sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be seen in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.</li>
-<li>The <strong>Bidirectional</strong> sync mode is similar to default, except that incidents fully sync both ways - for new incidents/issues, and their updates. </li>
-<li>The <strong>Complete</strong> sync mode allows fully bidirectional sync upon creation and update of all the supported artifacts (Releases, Requirements, Incidents, and Tasks).</li>
-<li>The <strong>NoRequirements</strong> sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. </li>
-<li>The <strong>NoIncidents</strong> sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).</li>
-<li>Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. </li>
-<li>Comments are synced bidirectionally by default between Spira and Jira Cloud. You can disable comments syncing using the option on the configuration page.</li>
-<li>Spira artifact tags sync as Jira labels and vice-versa, in the way supported by the sync mode</li>
-<li>Attachments are created in the other system when new artifacts/issues are created or existing ones are updated. Optionally, you can turn off the sync of attachments between the systems by adding an extra parameter to the field Sync Mode.</li>
-<li>If you are syncing Requirements, you can optionally sync the Epic/Story hierarchy from Jira to Spira Requirements and vice-versa. </li>
-<li>If you have two separated Jira instances to sync from/to, please follow <a href="../../HowTo-Guides/Integrations-Troubleshoot/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service">these instructions</a> to set up a second DataSync plugin without data duplication</li>
+<li>
+<p>The <strong>Default</strong> sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be seen in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.</p>
+</li>
+<li>
+<p>The <strong>Bidirectional</strong> sync mode is similar to default, except that incidents fully sync both ways - for new incidents/issues, and their updates. </p>
+</li>
+<li>
+<p>The <strong>Complete</strong> sync mode allows fully bidirectional sync upon creation and update of all the supported artifacts (Releases, Requirements, Incidents, and Tasks).</p>
+</li>
+<li>
+<p>The <strong>NoRequirements</strong> sync mode is for when Spira is used to create new incidents and tasks, but Jira is used as the system where incidents and tasks are updated. </p>
+</li>
+<li>
+<p>The <strong>NoIncidents</strong> sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).</p>
+</li>
+<li>
+<p>Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. </p>
+</li>
+<li>
+<p>Comments are synced bidirectionally by default between Spira and Jira Cloud. You can disable comments syncing using the option on the configuration page.</p>
+</li>
+<li>
+<p>Spira artifact tags sync as Jira labels and vice-versa, in the way supported by the sync mode</p>
+</li>
+<li>
+<p>Attachments are created in the other system when new artifacts/issues are created or existing ones are updated. Optionally, you can turn off the sync of attachments between the systems by adding an extra parameter to the field Sync Mode.</p>
+</li>
+<li>
+<p>If you are syncing Requirements, you can optionally sync the Epic/Story hierarchy from Jira to Spira Requirements and vice-versa. </p>
+</li>
+<li>
+<p>If you have two separated Jira instances to sync from/to, please follow <a href="../../HowTo-Guides/Integrations-Troubleshoot/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service">these instructions</a> to set up a second DataSync plugin without data duplication</p>
+</li>
 </ul>
+</div>
 <h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">¶</a></h2>
 <p>For the data sync to work correctly make sure you meet <strong>all</strong> of the steps below:</p>
 <ul class="task-list">

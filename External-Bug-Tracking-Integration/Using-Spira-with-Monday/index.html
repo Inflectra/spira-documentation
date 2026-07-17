@@ -2812,6 +2812,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-the-plug-in">
 <span class="md-ellipsis">
       
@@ -4207,6 +4216,15 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#configuring-the-plug-in">
 <span class="md-ellipsis">
       
@@ -4369,13 +4387,91 @@
 <div class="admonition abstract">
 <p class="admonition-title">Compatible with SpiraTest, SpiraTeam, SpiraPlan</p>
 </div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
 <p>The <em>monday.com</em> products are cloud-based platforms that allows users to create their own applications and work management software with more than 50 integrations with other applications.</p>
 <p>This page outlines how to use SpiraTest, SpiraTeam, or SpiraPlan (called Spira from here on) with <em>monday.com</em> products. This data sync engine lets you add new <em>monday.com</em> items to Spira as Tasks (not available in SpiraTest) and Incidents (and vice versa). The data sync also lets you update artifacts and items in both systems/directions.</p>
+<p>This data sync plugin can sync the following information:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">monday.com artifact</th>
+<th style="text-align: left;">Spira artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Workspace / Boards</td>
+<td style="text-align: left;">Product</td>
+</tr>
+<tr>
+<td style="text-align: left;">Users</td>
+<td style="text-align: left;">Users</td>
+</tr>
+<tr>
+<td style="text-align: left;">Items</td>
+<td style="text-align: left;">Incidents and Tasks</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sub-items</td>
+<td style="text-align: left;">Incidents and Tasks</td>
+</tr>
+</tbody>
+</table>
+<p>For all active tracking pathways below, the synchronization rules apply directly to both <strong>New Creations</strong> and <strong>Ongoing Updates</strong> according to the configured direction.</p>
+<p>The table below shows a summary of how data is synced from/to Spira and monday.com based on the configured Sync Mode:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sync Mode</th>
+<th style="text-align: left;">Incidents (Items &amp; Sub-items)</th>
+<th style="text-align: left;">Tasks (Items &amp; Sub-items)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>bidirectional</strong> (Default)</td>
+<td style="text-align: left;">monday.com &lt;-&gt; Spira</td>
+<td style="text-align: left;">monday.com &lt;-&gt; Spira</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>monday_to_spira</strong></td>
+<td style="text-align: left;">monday.com -&gt; Spira</td>
+<td style="text-align: left;">monday.com -&gt; Spira</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>spira_to_monday</strong></td>
+<td style="text-align: left;">Spira -&gt; monday.com</td>
+<td style="text-align: left;">Spira -&gt; monday.com</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Synchronization Note</p>
+<p><strong>Description Handling</strong>: Due to the nature of text fields in monday.com (which only support plain text), descriptions will only be synced from monday.com to Spira <strong>on creation</strong>, but will sync from Spira to monday.com <strong>all the time</strong> (continuous update).</p>
+<p><strong>User Synchronization &amp; Mapping Logic</strong> 
+ User tracking across platforms does not match raw login usernames automatically and requires a specific configuration cadence:</p>
+<ul>
+<li>
+<p><strong>Auto-Map Users Requirement:</strong> The <strong>Auto-Map Users</strong> setting must be explicitly set to <strong>Yes</strong>. If this option is turned off, the sync engine skips user tracking entirely, and no users will be matched.</p>
+</li>
+<li>
+<p><strong>Display Name Configuration:</strong> Even with Auto-Map enabled, users are not paired by their account emails or login IDs. Instead, the plugin matches the monday.com <strong>Display Name</strong> against the Spira user mapping external key. </p>
+</li>
+<li>
+<p><strong>Setup Action:</strong> Administrators must navigate to <em>Administration &gt; Users &gt; View Edit Users</em>, select a user profile, and click the <em>Data Mapping</em> tab. Under the <em>Monday.com Data-Sync</em> option, enter the exact <strong>Display Name</strong> of the user as it appears in monday.com. This allows the plugin to properly map the <strong>Creator</strong> and <strong>Owner</strong> (People column) fields.</p>
+</li>
+<li>
+<p><strong>Manual User Mapping:</strong> Required if usernames differ. Navigate to <em>Administration &gt; Users &gt; View Edit Users &gt; Data Mapping</em>. Under the <em>Monday.com Data-Sync</em> option, enter the exact display name of the user as it appears in monday.com to map the Creator and Owner (People column) fields.</p>
+</li>
+</ul>
+<p><strong>New Creations:</strong> Creating a new record in a source system automatically generates its matching counterpart in the mapped destination system.</p>
+<p><strong>Ongoing Updates:</strong> Any subsequent modifications made to mapped fields (such as Status, Priority, or dates) in a designated source system will continuously overwrite and update the destination system to keep the items synchronized.</p>
+</div>
+<h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">¶</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Set up data synchronization</p>
 <p><strong>STOP! Please make sure you have first read the instructions to <a href="../Setting-up-Data-Synchronization/">set up  the data sync</a> before proceeding!</strong></p>
 </div>
-<h2 id="configuring-the-plug-in">Configuring the Plug-In<a class="headerlink" href="#configuring-the-plug-in" title="Permanent link">¶</a></h2>
 <p>Now that the data synchronization service / application itself is set up, we are ready to move to the next step. You need to tell Spira how to access your <em>monday.com</em> app. Inside Spira, go to the Administration page (as a system admin) and navigate to Integration &gt; Data Synchronization. Check if you see a plug-in called <strong>MondayDataSync</strong>.</p>
 <div class="admonition question">
 <p class="admonition-title">What do if the plug-in is not there</p>
