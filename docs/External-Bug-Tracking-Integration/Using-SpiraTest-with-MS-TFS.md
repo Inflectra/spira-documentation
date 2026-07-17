@@ -3,15 +3,74 @@
 
 This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter referred to as Spira) in conjunction with the work item tracking functionality of Microsoft Azure DevOps, also known as Microsoft Team Foundation Server (TFS) hereafter referred to as TFS for brevity.
 
+## Overview
+
 The built-in integration service allows the quality assurance team to manage their requirements and test cases in Spira, execute test runs in Spira, and then have the new incidents generated during the run be automatically loaded into TFS. Once the incidents are loaded into TFS as work items, the development team can then manage the lifecycle of these work items in TFS, and have the status changes in TFS be reflected back in Spira.
 
 Similarly, as the requirements are decomposed into discrete project tasks in Spira, the integration service will automatically load these new tasks into TFS as task work items where the development team can manage their lifecycle, with schedule and progress changes in TFS being reflected back in Spira.
 
-!!! danger "Set up data synchronization"     
-    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
+!!! example "Real world example"
+    - The QA team uses Spira for requirements and test management.
+    - When the QA team finds bugs during testing incidents are created in Spira, and then sync to Jira
+    - The Dev team manages the bug in ADO/TFS, with changes reflected back in Spira
 
+This data sync plugin can sync the following information:
+
+| Azure DevOps (TFS) Artifact | Spira Artifact |
+| :--- | :--- |
+| Project Collection / Project | Product |
+| Users (Manual or Auto-Map) | Users |
+| Iterations / Sprints | Releases |
+| Work Items (e.g., Bug) | Incidents |
+| Work Items (e.g., User Story) | Requirements |
+| Work Items (e.g., Task) | Tasks |
+
+The table below shows a summary of how data is synced from/to Spira and Azure DevOps (TFS) based on the configured Sync Direction:
+
+| Sync Mode | Releases | Requirements | Incidents | Tasks |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bidirectional** (Default) | ADO <-> Spira | ADO -> Spira | ADO <-> Spira | ADO -> Spira |
+| **UpdateSpira** | ADO <-> Spira | ADO -> Spira | ADO -> Spira | ADO -> Spira |
+| **UpdateADO** | ADO <-> Spira | ADO -> Spira | Spira -> ADO | ADO -> Spira |
+
+!!! info "Synchronization Note"
+     
+     - **New Creations:** When an artifact is configured for bidirectional or directional flow, adding a brand-new item in the source system creates its paired counterpart in the destination system.
+     - **Ongoing Updates:** Modifying field values (such as Status, Priority, or Description) syncs those adjustments downstream to keep records aligned according to the permitted pathway directions below.
+     
+     - **Incidents** are the only artifact type affected by the Sync Direction setting. In bidirectional mode, whichever side was updated most recently wins. In UpdateSpira or UpdateADO mode, updates are forced in one direction. However, creation of new incidents always flows both ways regardless of the setting — the direction only controls how updates to existing mapped incidents are handled.
+     
+     - **Releases** are synced bidirectionally but only for creation: when a Spira incident references a release not yet mapped in ADO, a new TFS iteration is created; conversely, when a TFS work item references an iteration not yet mapped in Spira, a new Spira release is created. 
+     Releases are never updated in either direction — they are only created on-demand as part of artifact sync. This behavior is not affected by the Sync Direction setting.
+
+     **Work Item Type Filtering (Task & Requirement Types)**: Azure DevOps uses a unified "Work Item" structure. To tell the sync engine how to route different types:
+     
+     - Populate the **Task Types** field with a comma-separated list of the exact ADO work item types that should sync as Spira Tasks (e.g., `Task`).
+     
+     - Populate the **Requirement Types** field with a comma-separated list of the exact ADO work item types that should sync as Spira Requirements (e.g., `User Story,Epic,Feature`).
+     
+     - Any work item types not explicitly declared in those two fields will automatically sync as Spira Incidents by default.
+     
+     **User Synchronization**: 
+     
+     The behavior of field ownership (such as Assigned To and Creator) maps across platforms based on the Auto-Map Users configuration:
+     
+     - **Auto-Map Users = True:** Automatically pairs users across systems. This requires that the username in Spira matches the login username in ADO/TFS exactly.
+     
+     - **Auto-Map Users = False:** Requires manual profile mapping. Open the user profile in Spira, choose the Data Mapping tab, and enter the full name of the user exactly as it appears inside work items within TFS/ADO into the text field next to the TFS data sync plugin entry.
+     
+     **Custom Field Tracking (Spira Artifact ID & Detector fields)**: 
+     
+     - To view the Spira ID (e.g., IN5 or TK36) directly inside your Azure DevOps process layout, create a custom field in ADO and input its exact process name into the **Spira Artifact ID Field** setting.
+     
+     - To track the name of the original QA tester who logged a bug inside Spira, define an ADO custom field and provide its name in the **Spira Detector Field** option.
+
+---
 
 ## Configuring the Plug-In
+
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
 The next step is to configure the plug-in within Spira so that the system knows how to access the TFS server. Inside Spira, go to the Administration page and navigate to Integration > Data Synchronization. Check if you see a plug-in called **MsTfsDataSync**, as shown below:
 

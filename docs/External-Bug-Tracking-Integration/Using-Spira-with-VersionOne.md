@@ -7,7 +7,37 @@ The built-in integration service allows the quality assurance team to manage the
 
 Once the incidents are loaded into V1 as defects, the development team can then manage the lifecycle of these defects in V1, and have the status changes in V1 be reflected back in Spira.
 
-!!! danger "Set up data synchronization"     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
+
+This data sync plugin can sync the following information:
+
+| VersionOne (V1) Artifact | Spira Artifact |
+| :--- | :--- |
+| Project / Sub-Project | Product |
+| Users (Manual Login Mapping or Auto-Map) | Users |
+| Sprints / Timeboxes / Releases | Releases |
+| Defects | Incidents |
+| User Stories | Requirements |
+
+The table below shows a summary of how data is synced from/to Spira and VersionOne based on the core plugin architecture and synchronization flows:
+
+| Sync Mode | Releases | Requirements | Incidents |
+| :--- | :--- | :--- | :--- |
+| **Standard** (Default) | VersionOne -> Spira <br> | VersionOne -> Spira | **New:** VersionOne <-> Spira<br>**Updates:** VersionOne -> Spira |
+
+!!! info "Synchronization Notes"
+     
+    **Limitations:**
+    
+     1. **V1 Unique Identifiers:** VersionOne uses a physical ID (e.g., `Defect:11291`) and a display ID (e.g., `D-23232`). By default, Spira stores the *physical ID* as the Data Sync ID. To pull and view the cleaner *display ID* within Spira, map an incident or requirement text custom property to the special external key **`V1DisplayId`**.
+     2. **Post-Creation Field Updates:** Once an incident is pushed into VersionOne as a defect, **do not modify it again inside Spira**. On-going changes to the status, priority, type, and resolution are pulled exclusively from VersionOne into Spira.
+     3. **Sub-Project Mapping:** If mapping a deep VersionOne project hierarchy, use a single forward slash to define structural nesting in the product's external key (e.g., `Project/SubProject`).
+     
+    **User Synchronization:** Tracking field ownership maps accurately across systems according to your **Auto-Map Users** field option:
+    
+     - **Auto-Map = True:** Automatically hooks users across systems if the username in Spira matches the login name in VersionOne exactly.
+     - **Auto-Map = False:** Requires manual profile synchronization. Administrators must navigate to *Administration > Users > View Edit  Users*, open the user's account, select the *Data Mapping* tab, and enter the exact VersionOne **Login Name** next to the VersionOne Data-Sync entry.
 
 ## Configuring the Plug-In
 This section outlines how to configure the integration service to connect to V1. It assumes that you already have a working installation of Spira v5.0 or later and an existing provisioned instance of V1. If you have an earlier version of Spira, you will need to upgrade to at least v5.0 before trying to integrate with V1.

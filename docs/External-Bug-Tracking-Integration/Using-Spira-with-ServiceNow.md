@@ -1,11 +1,47 @@
 # Using Spira with ServiceNow
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
+## Overview
+
 ServiceNow tables are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This integration service enables two-way syncing of new incidents and requirements with any table in ServiceNow and syncing of updates from ServiceNow into Spira. Attachments will only be synced with creation.
 
 !!! danger "Set up data synchronization"     
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
 
+This data sync plugin can sync the following information:
+
+| ServiceNow Artifact / Column | Spira Artifact / Field |
+| :--- | :--- |
+| Configured Incidents Table (e.g., `incident`) | Incidents |
+| Configured Requirements Table (e.g., `rm_feature`) | Requirements |
+| Users (Manual Name Mapping or Auto-Map) | Users |
+| Column: `short_description` or `name` | Name |
+| Column: `description` | Description |
+| Column: `state` | Status / State |
+| Column: `priority` | Priority / Importance |
+| Column: `severity` | Incident Severity |
+| Column: `type` | Type |
+| Column: `opened_by` | Author / Detected By |
+| Column: `assigned_to` | Owner |
+
+The table below shows a summary of how data is synced from/to Spira and ServiceNow based on the core plugin architecture (ServiceNow uses fixed internal rules instead of a sync direction toggle field):
+
+| Sync Mode | Requirements | Incidents | Attachments |
+| :--- | :--- | :--- | :--- |
+| **Standard** (Default) | **New:** ServiceNow <-> Spira<br>**Updates:** ServiceNow -> Spira | **New:** ServiceNow <-> Spira<br>**Updates:** ServiceNow -> Spira | ServiceNow <-> Spira<br>*(New Only)* |
+
+!!! info "Synchronization Notes"
+     
+     **Field Updates:** While new records can originate from either platform, the integration service tracks on-going field changes exclusively from **ServiceNow into Spira**. Modifications made to an item inside Spira after its initial creation will not sync back to ServiceNow.
+    
+     **User Synchronization:** Tracking and mapping user assignments depends on your configured **Auto-Map Users** toggle:
+    
+     - **Auto-Map Users = yes:** Automatically maps users one-to-one by checking and pairing matching First and Last Names across platforms.
+     - **Auto-Map Users = no:** Requires manual configuration. Administrators must go to *Administration > Users > View Edit Users*, choose the target user's profile, navigate to the *Data Mapping* tab, and enter the exact **First and Last Name** of the user as it appears in ServiceNow into the **ServiceNow Data Sync ID** field.
+
+     **New Creations (Bidirectional):** Creating a brand-new record in either ServiceNow or Spira automatically generates its matching counterpart in the opposing system.
+     
+     **Ongoing Updates (One-Way):** Once the items are linked, any subsequent updates to mapped fields (such as Status, Priority, or Description) sync exclusively from ServiceNow to Spira. Changes made in Spira after initial creation do not write back to ServiceNow.
 
 ## Configuring the Integration Service 
 

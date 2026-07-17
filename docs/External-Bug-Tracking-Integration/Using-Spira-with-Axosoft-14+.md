@@ -5,7 +5,8 @@ This section outlines how to use SpiraTest, SpiraPlan or SpiraTeam (hereafter re
 
 Once the incidents are loaded into Axosoft as defects, the development team can then manage the lifecycle of these defects in Axosoft, and have the status changes in Axosoft be reflected back in Spira.
 
-!!! danger "Set up data synchronization"     **STOP! Please make sure you have first read the instructions to [set up  the data sync](Setting-up-Data-Synchronization.md) before proceeding!**
+!!! danger "Set up data synchronization"
+    **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
 ## Configuring the Plug-In
 This section outlines how to configure the integration service to export incidents into Axosoft and pick up subsequent status changes in Axosoft and have them update Spira. It assumes that you already have a working installation of Spira v4.0 or later and a working installation of Axosoft 14 or later (either hosted in the cloud or on-premise). If you have an earlier version of Spira, you will need to upgrade to at least v4.0 before trying to integrate with Axosoft.

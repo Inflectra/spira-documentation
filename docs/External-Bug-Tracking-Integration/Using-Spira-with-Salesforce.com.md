@@ -1,6 +1,8 @@
 # Using Spira with Salesforce.com
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
+## Overview
+
 Salesforce objects are a highly customizable system that can be synced with SpiraTest, SpiraTeam or SpiraPlan (Spira from here on). This integration lets you carry out:
 
 1. two-way syncing of incidents between a specific Salesforce object and Spira 
@@ -9,6 +11,51 @@ Salesforce objects are a highly customizable system that can be synced with Spir
 !!! danger "Set up data synchronization"
     **STOP! Please make sure you have first read the instructions to [set up  the data sync](https://spiradoc.inflectra.com/External-Bug-Tracking-Integration/Setting-up-Data-Synchronization/) before proceeding!**
 
+
+This data sync plugin can sync the following information:
+
+| Salesforce Object / Field | Spira Artifact / Field |
+| :--- | :--- |
+| Configured Incidents Custom Object | Incidents |
+| Configured Requirements Custom Object | Requirements |
+| Users (Manual Name Mapping or Auto-Map) | Users |
+| Field: `Name` and/or `Title` | Name |
+| Field: `Description` | Description |
+| Field: `Status` | Status / State |
+| Field: `Priority` | Incident Priority |
+| Field: `Importance` | Requirement Importance |
+| Field: `Severity` | Incident Severity |
+| Field: `Type` | Type |
+| Object Component: Notes & Attachments | Documents / Attachments |
+| Object Component: Feed Post & Comments | Comments |
+
+The table below shows a summary of how data is synced from/to Spira and Salesforce.com based on the core integration capabilities:
+
+| Sync Mode | Requirements | Incidents | Attachments | Comments |
+| :--- | :--- | :--- | :--- | :--- |
+| **Standard** (Default) | Salesforce -> Spira | Salesforce <-> Spira | Salesforce <-> Spira <br>*(Deletes sync SF -> Spira only)* | **Incidents:** Salesforce <-> Spira<br>**Requirements:** Salesforce -> Spira |
+
+!!! info "Synchronization Notes"
+
+    **Limitations:** 
+    
+     1. Custom fields/objects automatically get appended with `__c` by Salesforce. **Do not** manually add the `__c` prefix/suffix inside your Spira Data Mapping configuration screens.
+     2. Spaces in Salesforce object or field names must be replaced with underscores (e.g., `My_Incident_Object`) when defined in the system settings.
+
+     **Comment:** The direction of comment synchronization is determined entirely by the parent artifact type:
+
+     - **Incident Comments:** Is bidirectional (**Salesforce <-> Spira**). New comments and ongoing updates sync seamlessly between both platforms.
+
+     - **Requirement Comments:** Strict one-way synchronization (**Salesforce -> Spira**). Comments added to Salesforce custom objects mapped as requirements pull into Spira, but comments added within Spira will not sync back to Salesforce.
+     
+     - *Prerequisite:* Comment synchronization requires the Salesforce 'Feed Post and Comments' component to be active on the target objects.
+
+    **User Synchronization:** 
+    
+    Tracking user assignments handles ownership mappings according to your **Auto-Map Users**     configuration:
+    
+     - **Auto-Map Users = Yes:** Automatically pairs users across platforms by executing a direct match check on First and Last Names.
+     - **Auto-Map Users = No:** Requires manual user profiling. Administrators must navigate to *Administration > Users > View Edit  Users*, select the specific user, choose the *Data Mapping* tab, and enter the exact **First and Last Name** of the user as it exists in Salesforce into the **Salesforce Data Sync ID** field.
 
 ## Configuring Salesforce
 Before integrating with Spira, you need to properly configure Salesforce's Rest API service. To do this, create a dedicated "Connected App" in your Salesforce application, as described in [these instructions](https://help.salesforce.com/articleView?id=connected_app_create_basics.htm&type=5). 
