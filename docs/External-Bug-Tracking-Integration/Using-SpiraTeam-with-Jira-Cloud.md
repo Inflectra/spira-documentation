@@ -368,6 +368,9 @@ The datasync uses a special mapping field to identify what a Spira artifact shou
      | Bug / Incident     | Resolved Release | Fix Version     |
      | Requirement        | Release          | Fix Version     |
 
+!!! note "Closed releases are not synced to Jira"
+    Spira releases with a status of **Closed** will not be created as new versions in Jira. This is because Jira Cloud does not allow creating versions in an archived state. Closed releases that are already mapped (synced before being closed) are not affected — only unmapped Closed releases are skipped. If you need a Closed release to exist in Jira, first create it with a different status (e.g. Planned), let it sync, and then close it in Spira.
+
 ### Standard Field Data Mapping
 
 !!! info "You can use [Auto-Map](#using-the-auto-map-properties-feature) to simplify and potentially skip the manual mapping process described in this section."
