@@ -66,7 +66,12 @@ The navigation pane shows a list of strategic outcomes. This list is useful as a
 - **Delete**: deletes the current strategic outcome
 
 ### Info bar
-The info bar shows the following information for the strategic outcome: name, icon, ID, type, and status
+The info bar shows the following information for the strategic outcome: name, icon, ID, type, status, and progress mini chart
+
+### Progress
+Strategic outcomes display an automatic progress bar calculated from their linked program capabilities. The progress percentage represents the proportion of linked capabilities that have reached a closed status (Done or Rejected) out of all non-deleted linked capabilities. 
+
+Progress updates in real time as capability statuses change. The progress value is visible as a column on the [strategic outcome list page](#strategic-outcome-list) and as a mini chart in the info bar on the details page.
 
 ### Overview
 The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. Each section displays fields of a similar type. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.
