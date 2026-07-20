@@ -35,30 +35,21 @@ Teams can work seamlessly using both Spira and Jira Server or Jira DataCenter (h
 
 !!! info "Synchronization Note"
      
-     - The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
-
-     - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+    - The **default** sync mode is the best for when the dev team uses Jira, and the QA team uses Spira. Devs in Jira create and manage requirements/user stories, so these sync one-way to Spira. Spira users can see incidents created in Jira, but bugs reported by QA can be see in Jira. After bug creation, Jira users are in charge of updates, which sync back to Spira.
+    - The **bidirectional** sync mode is similar to default, except that incident fully sync both ways - for new incidents/issues, and their updates. 
+    - With **NoRequirements** parameter no requirements sync at all. Only Spira creates new incidents and tasks in Jira, while Jira is used as the system where existing incidents and tasks are updated back to Spira.
+    - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  
+    - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
+    - **Comment Synchronization**: Comment flow is not universally bidirectional. The synchronization of comments matches the exact update logic and direction of their parent artifact: 
+        - If the parent artifact's updates are configured to sync one-way (**Jira -> Spira**), then comments on that artifact will only sync one-way from **Jira -> Spira**.
+        - If the parent artifact supports bidirectional updates (**Jira <-> Spira**), then comments will sync bidirectionally.
+    
+    - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
+    - **Supporting Comma-Separated Status Values** - The Jira Server dataSync plugin supports comma-separated mappings for **Requirements** only, allowing you to map multiple values.
+        - **Limitation:** This currently works for Requirements only. This feature is only supported when running **Spira v9.4 or higher**.
      
-     - With **NoRequirements** parameter no requirements sync at all. Only Spira creates new incidents and tasks in Jira, while Jira is used as the system where existing incidents and tasks are updated back to Spira.
-     
-     - The **NoIncidents** sync mode is for when you want to mainly sync requirements (or tasks) between Spira and Jira, but not incidents. In the other modes, incidents are the default artifact that syncs, but this mode sets requirements to be the default artifact. This means all the Jira Issue types will sync against Requirements or Tasks (if Task Types are configured).  
-     
-     - Users are not synced - instead Jira users are mapped to existing Spira users, wherever possible. 
-     
-     - **Comment Synchronization**: Comment flow is not universally bidirectional. The synchronization of comments matches the exact update logic and direction of their parent artifact: 
-         
-         - If the parent artifact's updates are configured to sync one-way (**Jira -> Spira**), then comments on that artifact will only sync one-way from **Jira -> Spira**.
-         - If the parent artifact supports bidirectional updates (**Jira <-> Spira**), then comments will sync bidirectionally.
-     
-     - Attachments are created in the other system when new artifacts/issues are created. Attachments are not created or changed during updates. Optionally, you can turn off the sync of attachments between the systems adding an extra parameter to the field Sync Mode.
-
-     - **Supporting Comma-Separated Status Values** - The Jira Server dataSync plugin supports comma-separated mappings for **Requirements** only, allowing you to map multiple values.
-
-         - **Limitation:** This currently works for Requirements only. This feature is only supported when running **Spira v9.4 or higher**.
-     
-     - If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
-     
-     - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
+    - If you are syncing requirements, the hierarchy is not synced due to the fundamental differences in how this functions in Jira and Spira
+    - If you have two separated Jira instances to sync from/to, please follow [these instructions](../HowTo-Guides/Integrations-Troubleshoot.md/#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service) to set up a second DataSync plugin without data duplication
 
 ## Checklist
 For the data sync to work correctly make sure you meet **all** of the steps below:
