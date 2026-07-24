@@ -1,6 +1,13 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## August 2026
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.8:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13213] Fixes a bug where custom fields, unmapped or computed Jira fields could be reverted when using the isOlder property
+        - [IN:13214] Fixes a bug where release sync fails when creating a Jira version from a Closed Spira release
+
 ## July 2026
 - [YouTrack Data Synchronization](../External-Bug-Tracking-Integration/Using-Spira-with-YouTrack.md) v2.0:
 
