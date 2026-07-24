@@ -1,5 +1,32 @@
 # Release Notes for Spira v9
 
+## Version 9.4 (August 2026)
+!!! info "Summary"
+    Spira 9.4 focuses on performance and stability, with significant database query optimizations that improve responsiveness across the application, especially for products with large datasets and many custom properties. It also graduates [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) out of beta (SpiraPlan).
+
+??? success "New Features"
+    - [Portfolio Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) are now generally available, having graduated from beta [IN:13112]
+        {: .edition-spiraplan}
+    - New RESTful API endpoints for handling Test Configuration Sets [IN:13129]
+    - New API endpoint for updating the external key mapping of a Spira project for a data sync plugin [IN:13069]
+    - Allow the Jira Server data sync to use comma-separated status values for requirement mapping [IN:13152]
+
+??? bug "Bug fixes and enhancements"
+    - Add Strategic Outcomes and Portfolio Milestones to sample Portfolios [IN:13145]
+    - Fix a performance issue when products have many custom properties [IN:13116]
+    - Performance enhancement for database query [IN:13192] [IN:13123] [IN:13126] [IN:13125] [IN:13132] [IN:13124] [IN:13211]
+    - Fix Inflectra.ai EARS Improve Description throwing an error about electronic signatures when a Task addition triggers an unsaved Status change [IN:13074]
+    - Fix access management for inactive portfolios [IN:13088]
+    - Fix column sorting not working on the Strategic Outcomes list page [IN:13061]
+    - Fix the missing progress bar on the Strategic Outcomes details page [IN:13096]
+    - Fix inconsistent labeling between "Progress" on detail pages and "% Complete" on list pages for portfolio artifacts [IN:13097]
+    - Fix the navigation sidebar row count exceeding the configured "Show Rows" threshold on Strategic Outcomes pages [IN:13105]
+    - Fix Portfolio Milestone Strategic Outcomes tab not correctly loading tooltips [IN:13106]
+    - Fix the Event Log Cleanup process not working correctly [IN:13008]
+    - Fix upgrading to 9.3 failing for some free text indexing configurations [IN:13186]
+    - Fix the installer not automatically updating installed SpiraApps to use new URL settings [IN:12878]
+    - Increase the default maximum number of allowed keys in Web.config [IN:13206]
+
 ## Version 9.3 (July 2026)
 !!! info "Summary"
     With new Portfolio artifacts in SpiraPlan, organizations can now better plan and manage high level goals with [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and track key delivery targets with [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) across programs and products.
