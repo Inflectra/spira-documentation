@@ -14,18 +14,18 @@
 ??? bug "Bug fixes and enhancements"
     - Add Strategic Outcomes and Portfolio Milestones to sample Portfolios [IN:13145]
     - Fix a performance issue when products have many custom properties [IN:13116]
-    - Performance enhancement for database query [IN:13192] [IN:13123] [IN:13126] [IN:13125] [IN:13132] [IN:13124] [IN:13211]
-    - Fix Inflectra.ai EARS Improve Description throwing an error about electronic signatures when a Task addition triggers an unsaved Status change [IN:13074]
     - Fix access management for inactive portfolios [IN:13088]
     - Fix column sorting not working on the Strategic Outcomes list page [IN:13061]
-    - Fix the missing progress bar on the Strategic Outcomes details page [IN:13096]
     - Fix inconsistent labeling between "Progress" on detail pages and "% Complete" on list pages for portfolio artifacts [IN:13097]
-    - Fix the navigation sidebar row count exceeding the configured "Show Rows" threshold on Strategic Outcomes pages [IN:13105]
+    - Fix Inflectra.ai EARS Improve Description throwing an error about electronic signatures when a Task addition triggers an unsaved Status change [IN:13074]
     - Fix Portfolio Milestone Strategic Outcomes tab not correctly loading tooltips [IN:13106]
     - Fix the Event Log Cleanup process not working correctly [IN:13008]
-    - Fix upgrading to 9.3 failing for some free text indexing configurations [IN:13186]
     - Fix the installer not automatically updating installed SpiraApps to use new URL settings [IN:12878]
+    - Fix the missing progress bar on the Strategic Outcomes details page [IN:13096]
+    - Fix the navigation sidebar row count exceeding the configured "Show Rows" threshold on Strategic Outcomes pages [IN:13105]
+    - Fix upgrading to 9.3 failing for some free text indexing configurations [IN:13186]
     - Increase the default maximum number of allowed keys in Web.config [IN:13206]
+    - Performance enhancement for database query [IN:13192] [IN:13123] [IN:13126] [IN:13125] [IN:13132] [IN:13124] [IN:13211]
 
 ## Version 9.3 (July 2026)
 !!! info "Summary"
