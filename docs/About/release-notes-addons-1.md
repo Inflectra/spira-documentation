@@ -2,6 +2,8 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
 ## July 2026
+- [Jenkins Integration](../Build-Server-Integration/Jenkins--Hudson.md) released at v4.0.2
+
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
 
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
