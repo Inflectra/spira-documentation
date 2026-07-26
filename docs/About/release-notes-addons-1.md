@@ -4,6 +4,12 @@ This page shows summary information about releases in Spira's addons, data syncs
 ## July 2026
 - [Jenkins Integration](../Build-Server-Integration/Jenkins--Hudson.md) released at v4.0.2
 
+- [YouTrack Data Synchronization](../External-Bug-Tracking-Integration/Using-Spira-with-YouTrack.md) v2.0:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13216] Improves error messaging for misconfigured project mappings
+        - [IN:13187] Modernizes the Markdown/HTML conversion between Spira and YouTrack for more reliable formatting in both directions
+        
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
 
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
