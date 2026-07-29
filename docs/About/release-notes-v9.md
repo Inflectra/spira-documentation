@@ -2,7 +2,10 @@
 
 ## Version 9.4 (August 2026)
 !!! info "Summary"
-    Spira 9.4 focuses on performance and stability, with significant database query optimizations that improve responsiveness across the application, especially for products with large datasets and many custom properties. It also graduates [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) out of beta (SpiraPlan).
+    Spira 9.4 focuses on performance and stability, with significant database query optimizations that improve responsiveness across the application, especially for products with large datasets and many custom properties.
+    
+    It also graduates [Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) out of beta.
+     {: .edition-spiraplan}
 
 ??? success "New Features"
     - [Portfolio Strategic Outcomes](../Spira-User-Manual/Portfolio-Strategic-Outcomes.md) and [Portfolio Milestones](../Spira-User-Manual/Portfolio-Milestones.md) are now generally available, having graduated from beta [IN:13112]
@@ -25,7 +28,7 @@
     - Fix the navigation sidebar row count exceeding the configured "Show Rows" threshold on Strategic Outcomes pages [IN:13105]
     - Fix upgrading to 9.3 failing for some free text indexing configurations [IN:13186]
     - Increase the default maximum number of allowed keys in Web.config [IN:13206]
-    - Performance enhancement for database query [IN:13192] [IN:13123] [IN:13126] [IN:13125] [IN:13132] [IN:13124] [IN:13211]
+    - Performance enhancements for database query [IN:13192] [IN:13123] [IN:13126] [IN:13125] [IN:13132] [IN:13124] [IN:13211]
 
 ## Version 9.3 (July 2026)
 !!! info "Summary"
