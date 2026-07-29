@@ -91,8 +91,10 @@ The navigation pane shows a list of portfolio milestones. This list is useful as
 ### Info bar
 The info bar shows the following information for the portfolio milestone: name, icon, ID, type, status, and progress mini chart
 
-!!! info "Progress"
-    - Portfolio Milestones are a beta feature in SpiraPlan v9.3, and Progress based on their associated program milestones will be implemented at a later date.
+### Progress
+Portfolio milestones display an automatic progress bar calculated from their linked strategic outcomes. The progress percentage represents the proportion of linked strategic outcomes that have reached a closed status (Done or Rejected).
+
+Progress updates in real time as strategic outcome statuses change. The progress value is visible as a column on the [milestone list page](#milestone-list) and as a mini chart in the info bar on the details page.
 
 ### Overview
 The Overview tab is divided into a number of different sections. Each of these can be collapsed or expanded by clicking on the title of that section. Each section displays fields of a similar type. For instance, all fields regarding dates are grouped together in the "Dates and Times" area.

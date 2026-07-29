@@ -2,11 +2,9 @@
 # Spira Platform Documentation
 
 !!! success "Documentation version"
-    **This site was last updated for version 9.3.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
+    **This site was last updated for version 9.4.0.0 of SpiraTest, SpiraTeam, and SpiraPlan**
 
-    **Current available beta features**
-
-    - Portfolio Artifacts: Portfolio Milestones and Strategic Outcomes (SpiraPlan only)
+    **There are no beta features currently available**
 
 
 This documentation is for the entire Spira suite of products: [SpiraTest, SpiraTeam, SpiraPlan](./About/introduction-to-spira.md), and all relevant addons and extensions. Compare Spira editions [here](./About/edition-comparison.md).
