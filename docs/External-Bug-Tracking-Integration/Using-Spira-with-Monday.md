@@ -27,19 +27,23 @@ The table below shows a summary of how data is synced from/to Spira and monday.c
 | **spira_to_monday** | Spira -> monday.com | Spira -> monday.com |
 
 !!! info "Synchronization Note"
-
+     
      **Description Handling**: Due to the nature of text fields in monday.com (which only support plain text), descriptions will only be synced from monday.com to Spira **on creation**, but will sync from Spira to monday.com **all the time** (continuous update).
+     
+     **User Synchronization & Mapping Logic** 
+     User tracking across platforms does not match raw login usernames automatically and requires a specific configuration cadence:
+     
+     - **Auto-Map Users Requirement:** The **Auto-Map Users** setting must be explicitly set to **Yes**. If this option is turned off, the sync engine skips user tracking entirely, and no users will be matched.
+     
+     - **Display Name Configuration:** Even with Auto-Map enabled, users are not paired by their account emails or login IDs. Instead, the plugin matches the monday.com **Display Name** against the Spira user mapping external key. 
 
-     **User Mapping**
-     User matching requires two things configured together:
+     - **Setup Action:** Administrators must navigate to *Administration > Users > View Edit Users*, select a user profile, and click the *Data Mapping* tab. Under the *Monday.com Data-Sync* option, enter the exact **Display Name** of the user as it appears in monday.com. This allows the plugin to properly map the **Creator** and **Owner** (People column) fields.
+       
+     - **Manual User Mapping:** Required if usernames differ. Navigate to *Administration > Users > View Edit Users > Data Mapping*. Under the *Monday.com Data-Sync* option, enter the exact display name of the user as it appears in monday.com to map the Creator and Owner (People column) fields.
 
-     - **Auto-Map Users** must be set to **Yes**. If disabled, the sync engine skips user resolution entirely and no Creator or Owner fields will be mapped.
-
-     - Each Spira user must have the monday.com **Display Name** set as their external key. Navigate to *Administration > Users > View Edit Users*, select a user profile, click the *Data Mapping* tab, and under *Monday.com Data-Sync*, enter the exact Display Name as it appears in monday.com. The plugin matches on this name — not email or login ID. This enables mapping of the **Creator** and **Owner** (People column) fields.
-
-     **New Creations:** When a record exists in the source system but has no mapping in the destination, the plugin creates a matching counterpart automatically.
-
-     **Ongoing Updates:** Any subsequent modifications to mapped fields (such as Status, Priority, Type, or dates) in the source system will overwrite the destination values to keep items synchronized.
+     **New Creations:** Creating a new record in a source system automatically generates its matching counterpart in the mapped destination system.
+    
+     **Ongoing Updates:** Any subsequent modifications made to mapped fields (such as Status, Priority, or dates) in a designated source system will continuously overwrite and update the destination system to keep the items synchronized.
 
 ## Configuring the Plug-In
 

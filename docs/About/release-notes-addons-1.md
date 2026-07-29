@@ -8,7 +8,26 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [IN:13151] Adds support for Requirement comma-separated status mappings
 
 ## July 2026
+- [Jenkins Integration](../Build-Server-Integration/Jenkins--Hudson.md) released at v4.0.2
+
+- [YouTrack Data Synchronization](../External-Bug-Tracking-Integration/Using-Spira-with-YouTrack.md) v2.0:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13216] Improves error messaging for misconfigured project mappings
+        - [IN:13187] Modernizes the Markdown/HTML conversion between Spira and YouTrack for more reliable formatting in both directions
+        
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
+
+- [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
+
+    - Enhancements and New Features:
+
+        - Create product artifacts directly from AI coding assistants [RQ:5669]
+        - Filter product artifact searches with advanced criteria to get exactly the information needed [RQ:5657]
+        - Read, search for, and set custom properties on product artifacts [RQ:5670]
+        - Retrieve all associations for a given product artifact [RQ:5675]
+        - Review and add comments to individual product artifacts [RQ:5674]
+        - Update key product artifacts to keep information in Spira up to date [RQ:5673]
 
 - [Jira Server/Data Center Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md) v7.4:
 
