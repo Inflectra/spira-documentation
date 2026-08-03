@@ -24,9 +24,9 @@ Production customers need to proactively turn on Inflectra.ai inside Spira, befo
 - System Admin > Workspaces > [View/Edit Product](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product): set "Inflectra.ai" to yes for any existing product you wish to use Inflectra.ai (note that new products will have Inflectra.ai on by default, as will sample products if the site was created at 8.10.0.0 or later)
 
 ### Where is Inflectra.ai available
-You can tell if a page has Inflectra.ai functionality because you will see the Inflectra.ai icon in the navigation bar.
+You can access Inflectra.ai from any page in Spira by clicking the Inflectra.ai icon in the global navigation bar. The sidebar opens in chat mode by default, where you can ask questions using the [Helper Chatbot](#helper-chatbot).
 
-Inflectra.ai is available in the following places:
+Depending on which page you're on, you may also have access to workflow actions that can generate content based on artifacts:
 
 - **Details pages**: Inflectra.ai can generate content based on the current artifact being viewed from its details page. This content can either augment the artifact or create new artifacts.
  
@@ -34,6 +34,7 @@ Inflectra.ai is available in the following places:
     - Test case details page
     - Task details page
     - Risk details page
+    - Release details page
 
 - **List pages**: Inflectra.ai can generate content based on a selected list of artifacts on its list page. This content can either augment the artifact or create new artifacts.
 
@@ -49,7 +50,7 @@ Any new artifact created by Inflectra.ai will have the tag "ai-generated" added 
 Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" added to it automatically.
 
 ### Chat history
-Inflectra.ai stores your chat history in the browser to allow you to look back over the most recent 50 messages. Because it is being stored in the browser, this history does not transfer across browsers or computers. Previous messages are grayed out compared to the current interaction.
+Inflectra.ai stores your chat history in the browser, allowing you to look back over recent messages and continue conversations across page navigations. Because it is stored in the browser, this history does not transfer across browsers or computers. See the [Helper Chatbot](#helper-chatbot) section for more details about conversation history and multiple threads.
 
 ### Loading Indicator
 When Inflectra.ai is performing a task, it will show a progress bar for the artifact currently being processed. Above the progress bar is summary information about what actions are being performed, like how many artifacts, of what type, are being created. On list pages, this summary information also shows how many artifacts are being worked on and how many are finished. 
@@ -64,6 +65,74 @@ The responses from the AI are localized based on the Name and Description of the
 
 ### Responsible AI Usage
 Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
+
+
+## Helper Chatbot
+The Helper Chatbot lets you ask questions about how to use Spira without leaving the application. It searches Spira's official documentation (SpiraDocs) and knowledge base articles to find answers to your questions.
+
+### How it works
+The Helper Chatbot is a specialized AI assistant focused on answering questions about Spira. When you ask a question:
+
+1. The chatbot searches SpiraDocs
+2. It formulates an answer based on the official documentation
+3. It provides source links so you can read more details
+
+The Helper Chatbot can answer questions about how to use Spira, but it cannot create or modify any artifacts. For artifact creation, use the workflow actions described in the sections below.
+
+### Using the Helper Chatbot
+To use the Helper Chatbot:
+
+1. Click the Inflectra.ai icon in the global navigation bar (available on all pages)
+2. The sidebar opens in chat mode by default
+3. Type your question in the chat input at the bottom
+4. Press Enter or click Send to submit your question
+5. The response streams in as formatted text with clickable source links
+
+**Example questions you can ask:**
+
+- "How do I create a test case?"
+- "What's the difference between SpiraTest and SpiraPlan?"
+- "How do I set up email notifications?"
+- "How do I configure my Jira DataSync plugin?"
+
+and so on...
+
+The chatbot considers which page you're currently on to provide more relevant answers. For example, asking "How do I do this?" on the Test Case details page will give you test-case-specific guidance.
+
+### What the Helper Chatbot can and cannot do
+
+**Can do:**
+
+- Answer questions about Spira features and functionality
+- Explain how to use specific pages and workflows
+- Provide step-by-step guidance based on official documentation
+- Link to relevant documentation for deeper reading
+
+**Cannot do:**
+
+- Create, modify, or delete artifacts (use workflow actions instead)
+- Answer questions unrelated to Spira
+- Provide information about features that don't exist in Spira
+- Access your specific product data or artifacts
+
+### Conversation history
+Your Helper Chatbot conversations are stored in your browser. This lets you scroll back through recent messages in the current session. Because history is stored locally in the browser:
+
+- History doesn't transfer between different browsers or computers
+- Opening an incognito/private window starts fresh
+- Clearing browser data clears your chat history
+
+### Multiple conversation threads
+You can have multiple conversation threads open at once — up to 10 threads. This lets you keep separate conversations for different topics.
+
+To manage threads:
+
+- Click the thread dropdown above the chat to see your threads
+- Click "New conversation" to start a fresh thread
+- To rename a thread, double-click its name or press F2
+- Recently closed threads can be reopened from the dropdown
+
+Each thread maintains its own conversation history independently.
 
 
 ## Artifact details pages
