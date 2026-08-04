@@ -132,8 +132,7 @@ To manage threads:
 - To rename a thread, double-click its name or press F2
 - Recently closed threads can be reopened from the dropdown
 
-Each thread maintains its own conversation history independently.
-
+Each thread maintains its own conversation history independently. You can have up to 10 active threads and 10 recently closed threads (oldest closed threads are removed when the limit is reached). Each message can be up to 10,000 characters.
 
 ## Artifact details pages
 On artifact details pages, you can perform actions against one artifact at a time, while viewing the complete data. This provides more detailed information to you about what Inflectra.ai is doing for that artifact. Details pages can also allow more information about the artifact to be shared with Inflectra.ai. 
