@@ -165,14 +165,25 @@ If you don't have a priority equivalent in your table, you can ignore this secti
 
 You must map every priority/importance in Spira to ServiceNow. Descriptions of the field are below:
 
--   **External Key**: If state is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the Spira status. Please take care to **match it exactly** (case, spaces, etc.)
+-   **External Key**: If priority is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If priority is a string in ServiceNow, just write in the value of the string to be mapped to the Spira priority/importance. Please take care to **match it exactly** (case, spaces, etc.)
 -   **Primary**: You must have exactly one primary key for each ServiceNow priority. This is what priority the plug-in should set the incident in Spira to when the priority in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.
 
 Here are the corresponding priorities in ServiceNow:
 
 ![](img/Using_Spira_with_ServiceNow_231.png)
 
-You can use the same logic to configure Incident Severity mappings.
+### Configuring the Incident Severity Mapping
+
+Now click the "Severity" button within the "Incident" section to map incident severies. This will tell the ServiceNow Data Sync plug-in which severities in ServiceNow map to those in Spira.
+
+If you don't have a severity equivalent in your table, you can ignore this section.
+
+![](img/Using_Spira_with_ServiceNow_300.png)
+
+You must map every Severity in Spira to ServiceNow. Descriptions of the field are below:
+
+-   **External Key**: If severity is a dropdown in ServiceNow, it's the 'Label' (*not* 'Value') of the choice, which is also what is shown in the ServiceNow UI. If severity is a string in ServiceNow, just write in the value of the string to be mapped to the Spira severity. Please take care to **match it exactly** (case, spaces, etc.)
+-   **Primary**: You must have exactly one primary key for each ServiceNow severity. This is what severity the plug-in should set the incident in Spira to when the severity in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.
 
 ### Cloning ServiceNow Fields
 
