@@ -53,9 +53,35 @@ This allows you to see at a glance the state of play about a number of key metri
 
 
 ### Requirements Completion
-This column shows a mini chart that shows the percentage completion of all relevant requirements assigned to the release (or that are rolling up from the releases children).
 
-The percentaged complete is worked out by dividing the number of "completed requirements" (described below) by the total number of requirements assigned to the release. A "completed requirement" is a requirement with a status of either "Tested", "Completed", or "Released".
+This section provides a summary of the progress and completion status of requirements assigned to the release. The Requirement Completion progress bar offers a quick visual indicator of completed requirements versus the total count associated with the release scope.
+
+The percentage complete is calculated by dividing the number of completed requirements (status of Tested, Completed, or Released) by the total number of requirements assigned to the release.
+
+!!! info "Understanding Count Differences: Release Details vs. Requirements List Page"
+
+     You may notice a difference between the total requirement count shown on the **Release Details page (Requirements Completion tab)** and the total count when filtering by the same release on the main **Requirements List page**.
+
+     This difference is **by design** due to how Spira handles child sprint/iteration rollups:
+
+     - **Requirements List Page (Filtered by Release):** When you apply a release filter on the main Requirements List page, Spira displays **all requirements in the release hierarchy**. This includes requirements mapped **directly** to the parent release *plus* all requirements mapped to any of its **child iterations or sprints** (e.g., Sprint 1.1, Sprint 1.2).
+     
+     - **Release Details Page (Requirements Tab & Completion Bar):** The Requirements tab on a specific Release Details page counts requirements assigned **directly to that specific release level**. Requirements assigned exclusively to lower-level child sprints are counted within those respective child sprint pages rather than the parent release's direct view.
+
+#### How to Verify Assigned Requirements
+
+If you need to cross-check requirement counts between pages:
+
+- On the Requirements List page, add the Release column to the grid.
+- To match the Release Details page count, filter specifically for the exact parent release ID (excluding child sprint IDs).
+- Ensure summary (parent) requirements vs. detailed child requirements are taken into account, as summary requirements aggregate progress from their child requirements.
+
+!!! example "Example Scenario"
+
+     If a parent Release 1.0 has 2 requirements assigned directly to it, and 3 requirements assigned to Sprint 1.1, then:
+     
+     - The **Requirements List page** (filtered by Release 1.0) will return **5 requirements** (rolling up child sprint items).
+     - The **Release 1.0 Details page** (Requirements Completion tab) will reflect **2 requirements** (directly mapped to Release 1.0).
 
 ### Requirement Count and Points
 These columns (not shown by default) show you the sum of all requirements assigned to the release; and the sum of all the points scored to all those requirements respectively.
