@@ -20,7 +20,7 @@ For cloud-hosted Spira instances you can use Inflectra's cloud data sync to simp
 
 ## How to set up a second DataSync plugin of the same external service {: .section-break}
 
-!!! warning "Avoid Syncing Multiple External Tools to the Same Spira Project for the Same Artifact"
+!!! warning "Avoid Syncing Multiple External Tools to the Same Spira Product for the Same Artifact"
      
      Do not configure multiple external projects (e.g., two different Jira projects coming from the same source URL) or multiple DataSync plugins to sync the same artifact type (such as Requirements, Incidents, or Tasks) into a single Spira product.
 
@@ -32,7 +32,7 @@ For cloud-hosted Spira instances you can use Inflectra's cloud data sync to simp
 
 ### Advanced Considerations: Syncing Multiple External Systems
 
-While Spira supports multiple active DataSync plugins at the system level, combining multiple integrations within a single Spira project requires extreme caution.
+While Spira supports multiple active DataSync plugins at the system level, combining multiple integrations within a single Spira product requires extreme caution.
 
 Depending on your system's specific needs and setup, you might require a separate dataSync plugin for each distinct instance of an external service (Jira, ADO, GitHub, YouTrack, or others supported application). This is necessary when your Spira instance needs to connect to multiple instances of the same external service located at different URLs.
 For example, you might need to sync Spira product A with a Jira project on your company's Sandbox instance, while also syncing Spira product B with a Jira project on a different Jira instance, such as your Jira Production. In order to do this, you need to:
@@ -46,7 +46,7 @@ For example, you might need to sync Spira product A with a Jira project on your 
 
 !!! danger "Avoid more than one dataSync plugin type activation for the same Spira product or external project"
    
-      Having two dataSync plugins of the same type active for the same Spira product and/or external project will lead to duplicate data in one or both applications, depending on your configuration. To avoid this issue, it's recommended to use only one plugin for each combination of Spira product and external project.
+      Having two dataSync plugins of the same type active for the same Spira product and/or external project without careful isolation will lead to duplicate data in one or both applications, depending on your configuration. To avoid this issue, it's recommended to use only one plugin for each combination of Spira product and external project.
 
 When two external projects (e.g., two separate Jira projects from the same source URL, or a Jira project and an Azure DevOps project) are both configured to sync the same artifact type (e.g., Incidents) with the same Spira product, several technical conflicts arise:
 
