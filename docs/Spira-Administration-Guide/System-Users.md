@@ -86,6 +86,7 @@ Once you have made the necessary changes, click the "Save" button to commit them
 
 At the top of the page you can also see information relating to the activity of the user on the system, such as when they last logged in.
 
+#### Memberships and Mappings
 In addition, there are up to four tabs at the bottom of the page called "Membership and Mapping" that allow you to:
 
 - add/remove the user from products
