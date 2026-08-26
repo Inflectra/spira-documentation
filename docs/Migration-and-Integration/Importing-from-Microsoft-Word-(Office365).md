@@ -35,7 +35,7 @@ When you first open the add-in you will see the connection screen. Fill in the d
 
 * **Spira URL:** The web address that you use to access Spira in your browser. This is usually of the form 'http://**company**.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
 * **Username:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
-* **RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new RSS token.*
+* **RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new API Key.*
 
 **If there is a problem connecting to Spira you will be notified with an error message.**
 

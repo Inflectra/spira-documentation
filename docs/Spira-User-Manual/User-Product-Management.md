@@ -403,7 +403,7 @@ When you click on the "***My Profile***" button (the top item in the user dropdo
 
 You can change your user information including your first-name, last-name, middle-initial, avatar icon, department and your choice of start-page. Clicking the "***Save***" button will commit the changes, whereas clicking <Cancel\> returns you back to either "Product Home" or "My Page" depending on whether you have a product currently selected or not.
 
-If you want to be able to subscribe to RSS feeds of the information assigned to you in the "My Page", make sure that the "Enable RSS Feeds" switch is set to "Yes" and an RSS token has been generated underneath.
+If you want to be able to subscribe to RSS feeds of the information assigned to you in the "My Page", make sure that the "Enable API Keys" switch is set to "Yes" and an API Key has been generated underneath.
 
 You can change your start page to be any of the following:
 

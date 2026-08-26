@@ -49,7 +49,7 @@ Once Excel connects to Spira you see a popup "Navigator" where you can see all t
 To authenticate you need to pieces of information:
 
 - username
-- API-key (also called the RSS token)
+- API-key
 
 You can find both of these on your Profile page in the application.
 

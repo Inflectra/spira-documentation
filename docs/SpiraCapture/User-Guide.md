@@ -87,7 +87,7 @@ The action bar has four buttons:
 You can send all selected events to Spira as a single new incident. Once connected to Spira, as explained below, you choose a product, fill out the incident creation form and then create your incident. The selected events, including their screenshots, will be saved into the description field of the new incident. 
 
 ### Connect to Spira
-First, make sure you have enabled API access to Spira. You do this from your Profile Page from within the Spira application. Make sure you **enable rss** and generate an **RSS Token**. This RSS token is the same token you use for API access, which is what SpiraCaptures uses.
+First, make sure you have enabled API access to Spira. You do this from your Profile Page from within the Spira application. Make sure you **enable API Keys** and generate an **API Key**. This API Key is the same token you use for API access, which is what SpiraCaptures uses.
 
 ![](img/enabling-rss.png)
 
@@ -98,7 +98,7 @@ Clicking the **Send selected events to Spira** button will show a popup. The fir
 
 * **Url**: this is the root address of your Spira application
 * **Username**: this is the username you use to log in to Spira
-* **API key/RSS Token**: as described above. Make sure to include it in full - including the { }. TIP: you can click on the RSS Token from your profile page in Spira to save it to the clipboard 
+* **API Key**: as described above. Make sure to include it in full - including the { }. TIP: you can click on the API Key from your profile page in Spira to save it to the clipboard 
 
 ### Create the incident
 Once you are logged in to your Spira (and have your events selected) the popup will require at least 3 fields to be selected/filled in.

@@ -100,7 +100,7 @@ The following attributes need to be set on the instance of the `SpiraTestExtensi
 - **spiraTestExtension.projectId**: The ID of the project inside Spira (this can be found on the project homepage in the "Project Overview" section)
 - **spiraTestExtension.url** - The base url of your Spira instance
 - **spiraTestExtension.userName** - A valid username for the instance of Spira that has access to the project specified above
-- **spiraTestExtension.apiKey** - A valid API Key / RSS Token for the user specified above
+- **spiraTestExtension.apiKey** - A valid API Key for the user specified above
 
 In addition, when calling the `recordResults()` method, you should also pass the **Release ID** and the **Test Set ID** which is used to tell Spira which release and/or test set to associate the test execution with.
 

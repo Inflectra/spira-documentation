@@ -63,7 +63,7 @@
     - Description improvements for the MFA enforcement feature in the application [IN:12426]
     - Fix a bug where a search dialog could cause hidden panels to appear [IN:12498]
     - Fix a bug where incident history change records for the Detected By field showed blank old and new values [IN:7592]
-    - Fix a bug where the "Enable RSS Feeds" click area was oversized, causing accidental API token regeneration [IN:12562]
+    - Fix a bug where the "Enable API Keys" click area was oversized, causing accidental API token regeneration [IN:12562]
     - Fix a bug where users could not filter a resource view by Release [IN:12356]
     - Fix a database error when updating custom property state for an Incident Status in specific workflow configurations [IN:12729]
     - Fix a database timeout related to adding test cases to a release via the API [IN:12704]
