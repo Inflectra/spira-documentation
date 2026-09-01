@@ -1,5 +1,9 @@
 # Release Notes for Spira v9
 
+## Version 9.4.0.1 (August 2026)
+??? bug "Bug fixes and enhancements"
+    - Security fixes [IN:13381]
+
 ## Version 9.4 (August 2026)
 !!! info "Summary"
     Spira 9.4 focuses on performance and stability, with significant database query optimizations that improve responsiveness across the application, especially for products with large datasets and many custom properties.
