@@ -2891,6 +2891,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-the-incident-severity-mapping">
+<span class="md-ellipsis">
+      
+        Configuring the Incident Severity Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#cloning-servicenow-fields">
 <span class="md-ellipsis">
       
@@ -4204,6 +4213,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-the-incident-severity-mapping">
+<span class="md-ellipsis">
+      
+        Configuring the Incident Severity Mapping
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#cloning-servicenow-fields">
 <span class="md-ellipsis">
       
@@ -4461,12 +4479,20 @@
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_230.png"/></p>
 <p>You must map every priority/importance in Spira to ServiceNow. Descriptions of the field are below:</p>
 <ul>
-<li><strong>External Key</strong>: If state is a dropdown in ServiceNow, it's the 'Label' (<em>not</em> 'Value') of the choice, which is also what is shown in the ServiceNow UI. If state is a string in ServiceNow, just write in the value of the string to be mapped to the Spira status. Please take care to <strong>match it exactly</strong> (case, spaces, etc.)</li>
+<li><strong>External Key</strong>: If priority is a dropdown in ServiceNow, it's the 'Label' (<em>not</em> 'Value') of the choice, which is also what is shown in the ServiceNow UI. If priority is a string in ServiceNow, just write in the value of the string to be mapped to the Spira priority/importance. Please take care to <strong>match it exactly</strong> (case, spaces, etc.)</li>
 <li><strong>Primary</strong>: You must have exactly one primary key for each ServiceNow priority. This is what priority the plug-in should set the incident in Spira to when the priority in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.</li>
 </ul>
 <p>Here are the corresponding priorities in ServiceNow:</p>
 <p><img alt="" src="../img/Using_Spira_with_ServiceNow_231.png"/></p>
-<p>You can use the same logic to configure Incident Severity mappings.</p>
+<h3 id="configuring-the-incident-severity-mapping">Configuring the Incident Severity Mapping<a class="headerlink" href="#configuring-the-incident-severity-mapping" title="Permanent link">¶</a></h3>
+<p>Now click the "Severity" button within the "Incident" section to map incident severies. This will tell the ServiceNow Data Sync plug-in which severities in ServiceNow map to those in Spira.</p>
+<p>If you don't have a severity equivalent in your table, you can ignore this section.</p>
+<p><img alt="" src="../img/Using_Spira_with_ServiceNow_300.png"/></p>
+<p>You must map every Severity in Spira to ServiceNow. Descriptions of the field are below:</p>
+<ul>
+<li><strong>External Key</strong>: If severity is a dropdown in ServiceNow, it's the 'Label' (<em>not</em> 'Value') of the choice, which is also what is shown in the ServiceNow UI. If severity is a string in ServiceNow, just write in the value of the string to be mapped to the Spira severity. Please take care to <strong>match it exactly</strong> (case, spaces, etc.)</li>
+<li><strong>Primary</strong>: You must have exactly one primary key for each ServiceNow severity. This is what severity the plug-in should set the incident in Spira to when the severity in ServiceNow changes. This is only used if there are more options in Spira than ServiceNow.</li>
+</ul>
 <h3 id="cloning-servicenow-fields">Cloning ServiceNow Fields<a class="headerlink" href="#cloning-servicenow-fields" title="Permanent link">¶</a></h3>
 <p>Due to some of the assumptions made in the creation of this integration, it is often necessary to create a hidden compatibility layer between the fields you use in your ServiceNow table and those recognized by the Spira data sync. This section will lay out how to create 'hidden'
 fields that will be kept in sync with those in Spira.</p>

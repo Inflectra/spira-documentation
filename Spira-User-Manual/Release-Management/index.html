@@ -359,6 +359,19 @@
       
     </span>
 </a>
+<nav aria-label="Requirements Completion" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-verify-assigned-requirements">
+<span class="md-ellipsis">
+      
+        How to Verify Assigned Requirements
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#requirement-count-and-points">
@@ -4591,6 +4604,19 @@
       
     </span>
 </a>
+<nav aria-label="Requirements Completion" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-verify-assigned-requirements">
+<span class="md-ellipsis">
+      
+        How to Verify Assigned Requirements
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#requirement-count-and-points">
@@ -5153,8 +5179,36 @@ RK(Risk) --&gt; RL;</code></pre>
 </ul>
 <p>This allows you to see at a glance the state of play about a number of key metrics for the release.</p>
 <h3 id="requirements-completion">Requirements Completion<a class="headerlink" href="#requirements-completion" title="Permanent link">¶</a></h3>
-<p>This column shows a mini chart that shows the percentage completion of all relevant requirements assigned to the release (or that are rolling up from the releases children).</p>
-<p>The percentaged complete is worked out by dividing the number of "completed requirements" (described below) by the total number of requirements assigned to the release. A "completed requirement" is a requirement with a status of either "Tested", "Completed", or "Released".</p>
+<p>This section provides a summary of the progress and completion status of requirements assigned to the release. The Requirement Completion progress bar offers a quick visual indicator of completed requirements versus the total count associated with the release scope.</p>
+<p>The percentage complete is calculated by dividing the number of completed requirements (status of Tested, Completed, or Released) by the total number of requirements assigned to the release.</p>
+<div class="admonition info">
+<p class="admonition-title">Understanding Count Differences: Release Details vs. Requirements List Page</p>
+<p>You may notice a difference between the total requirement count shown on the <strong>Release Details page (Requirements Completion tab)</strong> and the total count when filtering by the same release on the main <strong>Requirements List page</strong>.</p>
+<p>This difference is <strong>by design</strong> due to how Spira handles child sprint/iteration rollups:</p>
+<ul>
+<li>
+<p><strong>Requirements List Page (Filtered by Release):</strong> When you apply a release filter on the main Requirements List page, Spira displays <strong>all requirements in the release hierarchy</strong>. This includes requirements mapped <strong>directly</strong> to the parent release <em>plus</em> all requirements mapped to any of its <strong>child iterations or sprints</strong> (e.g., Sprint 1.1, Sprint 1.2).</p>
+</li>
+<li>
+<p><strong>Release Details Page (Requirements Tab &amp; Completion Bar):</strong> The Requirements tab on a specific Release Details page counts requirements assigned <strong>directly to that specific release level</strong>. Requirements assigned exclusively to lower-level child sprints are counted within those respective child sprint pages rather than the parent release's direct view.</p>
+</li>
+</ul>
+</div>
+<h4 id="how-to-verify-assigned-requirements">How to Verify Assigned Requirements<a class="headerlink" href="#how-to-verify-assigned-requirements" title="Permanent link">¶</a></h4>
+<p>If you need to cross-check requirement counts between pages:</p>
+<ul>
+<li>On the Requirements List page, add the Release column to the grid.</li>
+<li>To match the Release Details page count, filter specifically for the exact parent release ID (excluding child sprint IDs).</li>
+<li>Ensure summary (parent) requirements vs. detailed child requirements are taken into account, as summary requirements aggregate progress from their child requirements.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example Scenario</p>
+<p>If a parent Release 1.0 has 2 requirements assigned directly to it, and 3 requirements assigned to Sprint 1.1, then:</p>
+<ul>
+<li>The <strong>Requirements List page</strong> (filtered by Release 1.0) will return <strong>5 requirements</strong> (rolling up child sprint items).</li>
+<li>The <strong>Release 1.0 Details page</strong> (Requirements Completion tab) will reflect <strong>2 requirements</strong> (directly mapped to Release 1.0).</li>
+</ul>
+</div>
 <h3 id="requirement-count-and-points">Requirement Count and Points<a class="headerlink" href="#requirement-count-and-points" title="Permanent link">¶</a></h3>
 <p>These columns (not shown by default) show you the sum of all requirements assigned to the release; and the sum of all the points scored to all those requirements respectively.</p>
 <h3 id="test-coverage">Test coverage<a class="headerlink" href="#test-coverage" title="Permanent link">¶</a></h3>

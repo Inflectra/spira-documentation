@@ -1000,6 +1000,37 @@
       
     </span>
 </a>
+<nav aria-label="How to set up a second DataSync plugin of the same external service" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-considerations-syncing-multiple-external-systems">
+<span class="md-ellipsis">
+      
+        Advanced Considerations: Syncing Multiple External Systems
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-multi-source-syncing-for-the-same-artifact-is-discouraged">
+<span class="md-ellipsis">
+      
+        Why Multi-Source Syncing for the Same Artifact is Discouraged
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-for-multi-tool-architecture">
+<span class="md-ellipsis">
+      
+        Best Practices for Multi-Tool Architecture
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4107,6 +4138,37 @@
       
     </span>
 </a>
+<nav aria-label="How to set up a second DataSync plugin of the same external service" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-considerations-syncing-multiple-external-systems">
+<span class="md-ellipsis">
+      
+        Advanced Considerations: Syncing Multiple External Systems
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-multi-source-syncing-for-the-same-artifact-is-discouraged">
+<span class="md-ellipsis">
+      
+        Why Multi-Source Syncing for the Same Artifact is Discouraged
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices-for-multi-tool-architecture">
+<span class="md-ellipsis">
+      
+        Best Practices for Multi-Tool Architecture
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4137,18 +4199,53 @@
 </li>
 </ul>
 <h2 class="section-break" id="how-to-set-up-a-second-datasync-plugin-of-the-same-external-service">How to set up a second DataSync plugin of the same external service<a class="headerlink" href="#how-to-set-up-a-second-datasync-plugin-of-the-same-external-service" title="Permanent link">¶</a></h2>
-<p>Depending on your system's specific needs and setup, you might require a separate dataSync plugin for each distinct instance of an external service (Jira, GitHub, YouTrack, or others supported). This is necessary when your Spira instance needs to connect to multiple instances of the same external service located at different URLs.
-For example, you might need to sync Spira product A with a Jira project on your company's Jira Sandbox instance, while also syncing Spira product B with a Jira project on a different Jira instance, such as your Jira Production. In order to do this, you need to:</p>
+<div class="admonition warning">
+<p class="admonition-title">Avoid Syncing Multiple External Tools to the Same Spira Product for the Same Artifact</p>
+<p>Do not configure multiple external projects (e.g., two different Jira projects coming from the same source URL) or multiple DataSync plugins to sync the same artifact type (such as Requirements, Incidents, or Tasks) into a single Spira product.</p>
+<p>While Spira allows multiple DataSync plugins and project mappings to be active globally, mapping multiple external projects to the same Spira product for the same artifact creates severe risks of data overwrites, mapping ID collisions, and infinite update loops.</p>
 <ul>
-<li>Create two different DataSync plugins. Their "Name" fields should be defined according to their type (e.g., "JiraDataSync"), and their "Caption" fields should be used to differentiate them (e.g., "Jira Sandbox" and "Jira Production")</li>
+<li>
+<p><strong>Default Best Practice:</strong> Keep a strict 1:1 relationship between a Spira product and an external project (e.g., 1 Jira Project ↔ 1 Spira Product).</p>
+</li>
+<li>
+<p><strong>Allowed Exception:</strong> Multiple external projects or DataSync plugins may target the same Spira product <strong>only if</strong> they manage completely separate, non-overlapping artifact types (e.g., Jira Project A syncs Requirements while Jira Project B syncs Incidents).</p>
+</li>
+</ul>
+</div>
+<h3 id="advanced-considerations-syncing-multiple-external-systems">Advanced Considerations: Syncing Multiple External Systems<a class="headerlink" href="#advanced-considerations-syncing-multiple-external-systems" title="Permanent link">¶</a></h3>
+<p>While Spira supports multiple active DataSync plugins at the system level, combining multiple integrations within a single Spira product requires extreme caution.</p>
+<p>Depending on your system's specific needs and setup, you might require a separate dataSync plugin for each distinct instance of an external service (Jira, ADO, GitHub, YouTrack, or others supported application). This is necessary when your Spira instance needs to connect to multiple instances of the same external service located at different URLs.
+For example, you might need to sync Spira product A with a Jira project on your company's Sandbox instance, while also syncing Spira product B with a Jira project on a different Jira instance, such as your Jira Production. In order to do this, you need to:</p>
+<ul>
+<li>Create two different DataSync plugins. Their "Name" fields should be defined according to their type (e.g., "JiraDataSync" for integration with Jira Cloud), and their "Caption" fields should be used to differentiate them (e.g., "Jira Sandbox" and "Jira Production")</li>
 <li>Make sure to enter the correct credentials (URL, Login, and API Key) for each plugin and complete the configuration as needed</li>
 <li>On the Data Synchronization page in Spira, for each plugin, select the product(s) you want to sync against and configure the mappings</li>
 <li>Finally, activate the Data Sync plugins</li>
 </ul>
+<h3 id="why-multi-source-syncing-for-the-same-artifact-is-discouraged">Why Multi-Source Syncing for the Same Artifact is Discouraged<a class="headerlink" href="#why-multi-source-syncing-for-the-same-artifact-is-discouraged" title="Permanent link">¶</a></h3>
 <div class="admonition danger">
-<p class="admonition-title">Never activate more than one dataSync plugin type for the same Spira product or external project</p>
-<p>Having two dataSync plugins of the same type active for the same Spira product and/or external project will lead to duplicate data in one or both applications, depending on your configuration. To avoid this issue, it's recommended to use only one plugin for each combination of Spira product and external project.</p>
+<p class="admonition-title">Avoid more than one dataSync plugin type activation for the same Spira product or external project</p>
+<p>Having two dataSync plugins of the same type active for the same Spira product and/or external project without careful isolation will lead to duplicate data in one or both applications, depending on your configuration. To avoid this issue, it's recommended to use only one plugin for each combination of Spira product and external project.</p>
 </div>
+<p>When two external projects (e.g., two separate Jira projects from the same source URL, or a Jira project and an Azure DevOps project) are both configured to sync the same artifact type (e.g., Incidents) with the same Spira product, several technical conflicts arise:</p>
+<ol>
+<li><strong>Mapping Table Ambiguity:</strong> Spira tracks external sync state using the project key and  DataSync internal mapping tables (linking Spira Artifact IDs to External IDs per plugin/project). When multiple external projects sync the same artifact type into one Spira product, the sync engine cannot deterministically look up which external project owns an updated Spira item, corrupting the internal mapping relationship.</li>
+<li><strong>Data Race Conditions:</strong> If an item is updated in Tool A, synced to Spira, and then immediately picked up by Tool B's DataSync, Tool B may overwrite fields in Spira with outdated or mismatched metadata from Tool B.</li>
+<li><strong>Echo/Loop Syncing:</strong> Changes pushed from System A into Spira can trigger System B to register a "new change," creating an unintended synchronization loop across both external systems.</li>
+</ol>
+<h3 id="best-practices-for-multi-tool-architecture">Best Practices for Multi-Tool Architecture<a class="headerlink" href="#best-practices-for-multi-tool-architecture" title="Permanent link">¶</a></h3>
+<p>If your organization uses multiple ALM tools (e.g., engineering uses Jira while business uses ADO):</p>
+<ul>
+<li>
+<p><strong>Separate Spira Products:</strong> Create dedicated Spira products for each external project integration, and use Spira's native product-to-product linking or enterprise reporting to aggregate data at the program level.</p>
+</li>
+<li>
+<p><strong>Isolate Artifact Types:</strong> If you <em>must</em> target the same Spira product with multiple external project mappings, ensure that each project mapping handles mutually exclusive artifact types (e.g., Project A syncs Requirements only, Project B syncs Incidents only).</p>
+</li>
+<li>
+<p><strong>Disable Unneeded Sync Directions:</strong> If one project or system is purely used for reading data, set that DataSync configuration to Import Only or Export Only to prevent bidirectional sync conflicts.</p>
+</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
