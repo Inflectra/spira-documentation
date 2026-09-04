@@ -1,7 +1,19 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## September 2026
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.8:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13213] Fixes a bug where the IsOlder property causes some fields to be reset on updates
+        - [IN:13214] Fixes a bug where release sync fails when attempting to create a Jira version from a Closed Spira release
+
 ## August 2026
+- [ServiceNow Data Synchronization](../External-Bug-Tracking-Integration/Using-Spira-with-ServiceNow.md) v7.1:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13280] Fixes a bug where the severity field is not correctly handled
+
 - [Jira Server/Data Center Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md) v7.5:
 
     - Bug Fixes and Enhancements:
