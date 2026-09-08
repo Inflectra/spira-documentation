@@ -43,6 +43,10 @@ Inflectra.ai is available in the following places:
 - **Dashboards**: Inflectra.ai can generate content from user input on the My Page, and it is only accessible to users with the System Admin permission. This content can be used to create new artifacts.
     - My Page (for System Administrators only)
 
+- **All pages**: The chat interface is available on every page where the Inflectra.ai sidebar is shown.
+
+    - [Helper AI Agent](#helper-ai-agent)
+
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
 
@@ -272,6 +276,26 @@ Optional artifacts are below and can be created in any order:
 | ... Risks [^STSP]                   | Identifies risks that may impact the deployment or development of each requirement, including any new child requirements                     |
 | ... Tasks [^STSP]                   | Creates a set of work tasks needed to deliver the functionality in each requirement, including any new child requirements                    |
 
+
+## Helper AI Agent
+The Helper AI Agent answers questions about how to use Spira by searching through the product documentation and streaming answers directly in the sidebar, so you can get help without leaving the page you are working on. To access it, just open the sidebar and interact with the agent via the chat interface. Here are some examples of questions you can ask:
+
+- How can I create test cases in Spira?
+- How do I configure the time tracking field of my Jira data sync plugin?
+- How can I track risks for my releases? Do I need SpiraPlan for that?
+- What can I do on this page?
+
+The Helper AI Agent remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:
+
+| Action | Description |
+| ------ | ----------- |
+| New thread | Start a fresh conversation (up to 10 threads at a time) |
+| Switch thread | Click a thread tab, or press `Enter` or `Space` when it is focused |
+| Rename thread | Double-click a thread tab, or press `F2` when it is focused. Press `Enter` to confirm or `Escape` to cancel |
+| Delete thread | Remove a thread you no longer need |
+| Restore thread | Reopen one of the last 10 closed threads from the restore button |
+
+Conversation threads are saved in your browser, so they persist across page navigations within the same browser.
 
 [^STSP]: Available in SpiraTeam and SpiraPlan
 [^SP]: Available in SpiraPlan
