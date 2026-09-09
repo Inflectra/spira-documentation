@@ -4717,7 +4717,7 @@
 <li>Fix the association type "prerequisite-for" not showing correctly for artifacts associated to an artifact that "depends-on" it (introduced in 6.15.1) [IN:7159]</li>
 <li>Fix the product home page failing with a system error with certain configurations of widgets and permissions [IN:7107]</li>
 <li>Fix updating a release via the API not recording history for the changes [IN:7131]</li>
-<li>Fix users and system admins not being able to turn off RSS Feeds (on user profile or system admin pages respectively) [IN:7098]</li>
+<li>Fix users and system admins not being able to turn off API Keys (on user profile or system admin pages respectively) [IN:7098]</li>
 <li>Fix users not being able to see or set the "displaying" release dropdown on the product home page, if the Product Overview widget is not shown (introduced in 6.15.1) [IN:7138]</li>
 <li>Hide the attachment tab on artifact details pages if the user does not have document view permissions [IN:4779]</li>
 <li>Make code blocks inside the rich text editor more legible when in dark mode [IN:7140]</li>
@@ -5450,7 +5450,7 @@
 <li>Release detail page &gt; test case tab: ensure pagination and rows shown is respected (instead of always showing all test cases) [IN:5878]</li>
 <li>Upgrade Josefin Sans font to v2 so that it supports more accented characters [IN:5887]</li>
 <li>Password Expired page explainer note about password requirements includes information about special characters [IN:5892]</li>
-<li>Fix e-signatures for some artifacts not correctly checking passwords or RSS Tokens [IN:5962]</li>
+<li>Fix e-signatures for some artifacts not correctly checking passwords or API Keys [IN:5962]</li>
 <li>Global navigation: ensure the dropdowns do not get cut off behind browser horizontal scroll bar if the dropdown extends beyond the bottom of the page [IN:5904]</li>
 <li>Cloud Installer: remove duplicate entry in the web.config file for FIPS [IN:5905]</li>
 <li>Product Admin &gt; <a href="../../Spira-Administration-Guide/Product-General-Settings/#product-data-tools">Data Tools</a>: upgrade it to not run check on requirements or releases on page load to improve performance [IN:5940]</li>
@@ -5757,7 +5757,7 @@
 <li>User settings collection service does not accept or return unsafe strings [IN:5580]</li>
 <li>Program home page (general) info tooltips no longer get cut off for widgets at the top of the page [IN:5593]</li>
 <li>Program release list page: start and end dates are colored to improve quickly seeing the state of a release [IN:5594]</li>
-<li>The My Profile page highlights to the user that they need to save after generating a new RSS token [IN:5599]</li>
+<li>The My Profile page highlights to the user that they need to save after generating a new API Key [IN:5599]</li>
 <li>Program, portfolio, and enterprise schedule widgets now show sprints without an active parent inside the correct product [IN:5603]</li>
 <li>Reduce the error logging from the Recent Artifacts Service [IN:5607]</li>
 <li>Fixes bug in the HistoryManager when retrieving history sets by product [IN:5619]</li>
@@ -5970,8 +5970,8 @@
 <li>Users will be able to log into the application using an OAuth provider [RQ:2457]</li>
 <li>Users will be able to log off of the application without signing out of their provider. [RQ:2459]</li>
 <li>Automatic Timout Logoff works as normal [RQ:2481]</li>
-<li>OAuth managed users can use electronic signatures by signing using their RSS Token [RQ:2604]</li>
-<li>OAuth managed users have API Soap access by allowing them to authenticate using their RSS token [RQ:2461]</li>
+<li>OAuth managed users can use electronic signatures by signing using their API Key [RQ:2604]</li>
+<li>OAuth managed users have API Soap access by allowing them to authenticate using their API Key [RQ:2461]</li>
 <li>Users connected using a provider can not use the Forgot Password feature [RQ:2691]</li>
 </ul>
 </li>
@@ -6141,7 +6141,7 @@
 <li>Test Execution Page Leave Button no functionality when on a test case not owned [IN:5218]</li>
 <li>Custom Props of type list: default values are saved but not shown in the admin UI [IN:5224]</li>
 <li>Export buttons on Requirements list page are set for release permissions, not requirement permissions [IN:5240]</li>
-<li>User profile page: clicking username copies rss token not username [IN:5243]</li>
+<li>User profile page: clicking username copies API Key not username [IN:5243]</li>
 <li>Search in dropdowns for anywhere in the values, not just at the start [IN:5244]</li>
 <li>Task board: error occurs when creating a new task with certain settings [IN:5258]</li>
 <li>Error not shown in association panel when the server throws an error message [IN:5276]</li>
@@ -6167,7 +6167,7 @@
 <ul>
 <li>Admin manual: Add info about Product Admin Home and Template Admin Home pages [IN:5020]</li>
 <li>Requirement - Tasks grid can display timezone based exception when certain dates are null [IN:5061]</li>
-<li>RSS Token on user profile and admin user/edit should be blurred like for TaraVault [IN:5072]</li>
+<li>API Key on user profile and admin user/edit should be blurred like for TaraVault [IN:5072]</li>
 <li>Standalone database did not upgrade from 5.4 to 6.x [IN:5127]</li>
 <li>When a custom ESQL custom graph has no data, it will display a bad error message [IN:5129]</li>
 <li>Test set detail page: test case section reflects execution status on list page  [IN:5132]</li>

@@ -4329,7 +4329,7 @@
 <span class="w">        </span><span class="c1">//following are REQUIRED</span>
 <span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"https://demo-us.spiraservice.net/mysite"</span><span class="p">,</span>
 <span class="w">        </span><span class="n">login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"fredbloggs"</span><span class="p">,</span>
-<span class="w">        </span><span class="n">rssToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"{XXXXXXXXXXXXXXXX}"</span><span class="p">,</span><span class="w"> </span><span class="c1">// make sure to use your API/RSS key and not your login password</span>
+<span class="w">        </span><span class="n">rssToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"{XXXXXXXXXXXXXXXX}"</span><span class="p">,</span><span class="w"> </span><span class="c1">// make sure to use your API/API Key and not your login password</span>
 <span class="w">        </span><span class="n">projectId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <span class="w">        </span><span class="c1">//following are OPTIONAL</span>
 <span class="w">        </span><span class="n">releaseId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
@@ -4399,7 +4399,7 @@
 <ul>
 <li><strong>URL</strong> - The URL to the instance of Spira being accessed. This needs to start with http:// or https://.</li>
 <li><strong>Login</strong> - A valid username for the instance of Spira.</li>
-<li><strong>RSS Token</strong>: Use the API key / RSS key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (RSS Feeds must be enabled for this to work).</li>
+<li><strong>RSS Token</strong>: Use the API Key for your user profile <strong>NOT your login password</strong>. This can be found in your profile page (API Keys must be enabled for this to work).</li>
 <li><strong>Project Id</strong> - The ID of the project (this can be found on the project homepage in the "Project Overview" section)</li>
 <li><strong>Release Id</strong> (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning &gt; Releases tab). If you don't want to specify a release, just use the value -1.</li>
 <li><strong>Test Set Id</strong> (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing &gt; Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.</li>
