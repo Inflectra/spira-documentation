@@ -19,7 +19,7 @@ Open the add-in from the ribbon and fill in the login form panel on the right of
 
 - **Spira URL:** The web address that you use to access Spira in your browser. Use the web address you use to access Spira in your browser. This is usually of the form 'http://company.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
 - **User Name:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
-- **RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new RSS token.*
+- **RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new API Key.*
 
 If there is a problem connecting to Spira you will be notified with an error message.
 
@@ -139,7 +139,7 @@ Below are common questions and answers related to common errors you may face whe
 
     `Error: Request has been terminated Possible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.`
 
-    **How to solve this issue**: first, make sure your credentials are correct. You can re-generate your RSS / API Key by going to your user page in Spira. Always remember to click 'Save' after re-generating your RSS key. If the problem persists, ask your Spira administrator to check the Spira API CORS configuration (in Spira: Admin menu > System > Security Settings > Allowed Domains) to see if it is accepting connections from the add-in domain.
+    **How to solve this issue**: first, make sure your credentials are correct. You can re-generate your RSS / API Key by going to your user page in Spira. Always remember to click 'Save' after re-generating your API Key. If the problem persists, ask your Spira administrator to check the Spira API CORS configuration (in Spira: Admin menu > System > Security Settings > Allowed Domains) to see if it is accepting connections from the add-in domain.
 
 
 !!! fail "2. When importing data from a spreadsheet on my computer, I get error messages. How do I solve it?"

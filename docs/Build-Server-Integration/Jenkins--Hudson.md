@@ -30,7 +30,7 @@ Now that the plugin has been installed, you need to go back to the Jenkins homep
 
 ![](img/Jenkins__Hudson_8.png)
 
-Enter in the **URL** you use to access your instance of Spira, together with a valid **username** and **RSS key**. You can find or generate the RSS Key from your user profile page inside Spira - read
+Enter in the **URL** you use to access your instance of Spira, together with a valid **username** and **API Key**. You can find or generate the API Key from your user profile page inside Spira - read
 how to do so [here](http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key). Make sure to include the curly braces - {ExampleRSS} - Once you have entered the values, click on the \[Test Connection\] button to verify that Jenkins can connect to Spira successfully. Once it has connected successfully, click the \[Save\] button at the bottom of the screen to save your connection settings.
 
 

@@ -217,7 +217,7 @@ The overall class is marked with a new @SpiraTestConfiguration attribute that co
 
 - **URL** - The URL to the instance of Spira being accessed. This needs to start with http:// or https://
 - **Login** - A valid username for the instance of Spira.
-- **apiKey** - A valid API Key / RSS Token for the instance of Spira (for the user specified in Login).
+- **apiKey** - A valid API Key for the instance of Spira (for the user specified in Login).
 - **Project Id** - The ID of the project (this can be found on the project homepage in the "Project Overview" section)
 - **Release Id** (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning \> Releases tab). If you don't want to specify a release, just use the value -1.
 - **Test Set Id** (Optional) - The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing \> Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.

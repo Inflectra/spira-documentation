@@ -137,7 +137,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
         //following are REQUIRED
         url = "https://demo-us.spiraservice.net/mysite",
         login = "fredbloggs",
-        rssToken = "{XXXXXXXXXXXXXXXX}", // make sure to use your API/RSS key and not your login password
+        rssToken = "{XXXXXXXXXXXXXXXX}", // make sure to use your API/API Key and not your login password
         projectId = 1,
         //following are OPTIONAL
         releaseId = 7,
@@ -209,7 +209,7 @@ The overall class is marked with a new `@SpiraTestConfiguration` attribute that 
 
 - **URL** - The URL to the instance of Spira being accessed. This needs to start with http:// or https://.
 - **Login** - A valid username for the instance of Spira.
-- **RSS Token**: Use the API key / RSS key for your user profile **NOT your login password**. This can be found in your profile page (RSS Feeds must be enabled for this to work).
+- **RSS Token**: Use the API Key for your user profile **NOT your login password**. This can be found in your profile page (API Keys must be enabled for this to work).
 - **Project Id** - The ID of the project (this can be found on the project homepage in the "Project Overview" section)
 - **Release Id** (Optional) - The ID of the release to associate the test run with. This can be found on the releases list page (click on the Planning \> Releases tab). If you don't want to specify a release, just use the value -1.
 - **Test Set Id** (Optional) -- The ID of the test set to associate the test run with. This can be found on the test set list page (click on the Testing \> Test Sets tab). If you don't want to specify a test set, just use the value -1. If you choose a test set that is associated with a release, then you don't need to explicitly set a release id (i.e. just use -1). However if you do set a release value, it will override the value associated with the test set.

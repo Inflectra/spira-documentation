@@ -1,5 +1,25 @@
 # Release Notes for Spira v9
 
+## Version 9.5 (September 2026)
+!!! info "Summary"
+    Spira 9.5 continues the performance and stability improvements from 9.4, with additional fixes for test run retrieval, test set execution, and global navigation. This release also adds a new testing setting for requiring incidents only on failed test steps.
+
+??? success "New Features"
+    - Adds a new [Testing Setting](../Spira-Administration-Guide/Product-Planning.md/#testing-settings) to only require an incident when a test step is marked as Failed [IN:6510]
+
+??? bug "Bug fixes and enhancements"
+    - Fix a bug where inactive custom list values were displayed on artifact details pages [IN:12784]
+    - Fix a bug where program owners could not remove release associations from program milestones [IN:13346]
+    - Fix a bug where the global navigation could fail to load under certain conditions [IN:12705]
+    - Fix a bug where the global navigation could fail to load in certain Content Security Policy configurations [IN:13111]
+    - Fix a bug where the My Page Pending Test Runs widget logged false "Test Case doesn't exist" warnings [IN:12886]
+    - Fix a performance issue when linking releases to test cases [IN:13259]
+    - Fix a performance issue when retrieving test runs in products with large datasets [IN:13234]
+    - Fix SQL Server deadlock errors when recording automated test runs under high concurrency [IN:13332]
+    - Improve data sync setting placeholder text to include mentions of examples for better clarity [IN:12787]
+    - Rename references to API Keys throughout the application [IN:13281]
+    - Security fixes [IN:13230] [IN:13384] [IN:13385]
+
 ## Version 9.4.0.1 (August 2026)
 ??? bug "Bug fixes and enhancements"
     - Security fixes [IN:13381]
@@ -67,7 +87,7 @@
     - Description improvements for the MFA enforcement feature in the application [IN:12426]
     - Fix a bug where a search dialog could cause hidden panels to appear [IN:12498]
     - Fix a bug where incident history change records for the Detected By field showed blank old and new values [IN:7592]
-    - Fix a bug where the "Enable RSS Feeds" click area was oversized, causing accidental API token regeneration [IN:12562]
+    - Fix a bug where the "Enable API Keys" click area was oversized, causing accidental API token regeneration [IN:12562]
     - Fix a bug where users could not filter a resource view by Release [IN:12356]
     - Fix a database error when updating custom property state for an Incident Status in specific workflow configurations [IN:12729]
     - Fix a database timeout related to adding test cases to a release via the API [IN:12704]
