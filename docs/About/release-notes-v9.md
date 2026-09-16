@@ -1,5 +1,10 @@
 # Release Notes for Spira v9
 
+## Version 9.5.0.1 (September 2026)
+??? bug "Bug fixes and enhancements"
+    - Fix a bug where the My Page dashboard could crash after removing certain widgets [IN:13501]
+    - Fix a bug where paginated retrieval of tasks and requirements always returned the first page of results  [IN:13500]
+
 ## Version 9.5 (September 2026)
 !!! info "Summary"
     Spira 9.5 continues the performance and stability improvements from 9.4, with additional fixes for test run retrieval, test set execution, and global navigation. This release also adds a new testing setting for requiring incidents only on failed test steps.
