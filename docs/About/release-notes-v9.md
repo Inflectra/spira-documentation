@@ -2,7 +2,7 @@
 
 ## Version 9.5.0.1 (September 2026)
 ??? bug "Bug fixes and enhancements"
-     - Fix a bug where paginated retrieval of tasks and requirements always returned the first page of results [IN:13500]
+    - Fix a bug where paginated retrieval of tasks and requirements always returned the first page of results [IN:13500]
     - Fix a bug where the My Page dashboard could crash after removing certain widgets [IN:13501]
    
 ## Version 9.5 (September 2026)
