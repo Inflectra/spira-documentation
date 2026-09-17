@@ -76,7 +76,7 @@ Notice that we have added `reporterOptions` object that specifies how the Cypres
 - **releaseId** - this should be the ID of the Spira release we're reporting against (e.g. `RL:2` would be just `2`)
 - **testSetId** - this should be the ID of the Spira test set we're reporting against (e.g. `TX:3` would be just `3`)
 - **login** - this is the username for a valid Spira user
-- **apiKey** - this is the API Key / RSS Token associated with the Spira user
+- **apiKey** - this is the API Key associated with the Spira user
 - **protocol** - this should be either `http` or `https`
 - **host** - this should be the domain name of your Spira instance (e.g. demo-us.spiraservice.net or myinstance.spiraservice.net)
 - **vdir** - this should be the name of any virtual directory in your instance (e.g. `mysite`). If there is no virtual directly, leave this field empty - see below for troubleshooting.

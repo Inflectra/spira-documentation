@@ -20,7 +20,7 @@ In DevOps, open the project you would like to have builds sync with Spira. Go to
 
 Under Service connections, click the "New service connection" button and click "Spira Configuration." Under connection name, put something helpful like Spira Fred Bloggs
 
-For Spira URL put the 'root' directory of your Spira instance, not including the end slash. For username, put the username you use to sign-in to Spira. For RSS Token, go to your user profile page in Spira, enable RSS Feeds and copy the token into DevOps. Now verify the connection by clicking "Verify connection," if you entered everything correctly, you're good to go!
+For Spira URL put the 'root' directory of your Spira instance, not including the end slash. For username, put the username you use to sign-in to Spira. For API Key, go to your user profile page in Spira, enable API Keys and copy the token into DevOps. Now verify the connection by clicking "Verify connection," if you entered everything correctly, you're good to go!
 
 
 ## Adding the Spira Build Task

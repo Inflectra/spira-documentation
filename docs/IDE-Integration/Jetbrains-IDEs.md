@@ -23,7 +23,7 @@ After your IDE has restarted, go to View \> Tool Windows \> Spira to open up the
 
 ![](img/Jetbrains_IDEs_8.png)
 
-Click on the "View Credentials" button and put in your log-in credentials. Please note that you can obtain the RSS Token by going to your user profile inside Spira. If the RSS Token is blank, make sure to enable RSS, and click Save. 
+Click on the "View Credentials" button and put in your log-in credentials. Please note that you can obtain the API Key by going to your user profile inside Spira. If the API Key is blank, make sure to enable API Keys, and click Save. 
 
 **NOTE: this plugin lets users create artifacts in Spira, so please make sure that the user has create permissions for incidents and tasks to make full use of it.**
 

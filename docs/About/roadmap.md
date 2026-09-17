@@ -20,12 +20,15 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 ### Q3 2026
 - Portfolio level planning with "Strategic Outcomes" and "Portfolio Milestones"
     {: .edition-spiraplan}
+- Built-in Helper AI Agent to provide intelligent help and answer questions about how to use Spira
 
 ## Coming next
 These features are planned for upcoming releases. Please note timelines may shift as work progresses.
 
 ### Q3 2026
-- Build in chatbot to provide intelligent help and answer questions about how to use Spira
+- New AI agents that make Inflectra.ai aware of your data in Spira, so it can help you with questions and actions
+
+### Q4 2026
 - Natural language custom report creation for administrators, using Inflectra.ai agents
 
 ## Longer term thematic ideas

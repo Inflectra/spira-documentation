@@ -69,7 +69,7 @@ LIS.Authentication.Login = 2
 
 - **url**: The base url to your Spira installation, without a '/' at the end.
 - **username**: The username to sign into Spira (we recommend creating a dedicated "xUnit" user to help with auditability).
-- **token**: The user's API Key / RSS Token, found in their profile page as the "RSS Token" field. Note that this is a secret and should not be stored directly in version control.
+- **token**: The user's API Key, found in their profile page as the "API Key" field. Note that this is a secret and should not be stored directly in version control.
 - **project_id**: The ID of the project you would like the test runs to be sent to.
 
 **Optional credential fields**:

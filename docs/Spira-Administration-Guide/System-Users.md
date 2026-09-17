@@ -41,7 +41,7 @@ On this screen, you can:
 - make the user a portfolio viewer. This controls who can access both the homepages of all portfolios and the enterprise homepage
     {: .edition-spiraplan}
 - create their password, password reset question and answer. 
-- if you want the user to be able to subscribe to items in the system as RSS feeds, you can check the "Enable RSS Feeds" checkbox (this will display a GUID token in the text-box)
+- if you want the user to be able to subscribe to items in the system as API Keys, you can check the "Enable API Keys" checkbox (this will display a GUID token in the text-box)
 
 !!! info "System administrators and product roles"
     Note: if a user is a System Administrator, that user will always have the 'Product Owner' role on all their assigned products, regardless of the chosen role. If they stop being a system admin, they will then revert back to their true role.
@@ -63,7 +63,7 @@ On this screen you can edit key information and security about the user:
 - last name
 - username
 - email address
-- RSS token
+- API Key
 - portfolio viewer status (this setting also controls the enterprise homepage access)
     {: .edition-spiraplan}
 - timesheet manager (this setting gives access to the enterprise timesheet page and the ability to approve or reject any user's submitted timesheet)

@@ -176,7 +176,7 @@ On attempting to save changes made after clicking a workflow operation that requ
 ![](img/Requirements_Management_96.png)
 
 !!! info  "How to digitally sign if using OAuth"
-    If you login to Spira using an OAuth / Single Sign On provider like Google or Okta, instead of entering your password use your RSS Key. This is visible on your [My Profile](User-Product-Management.md/#my-profile) page.
+    If you login to Spira using an OAuth / Single Sign On provider like Google or Okta, instead of entering your password use your API Key. This is visible on your [My Profile](User-Product-Management.md/#my-profile) page.
 
 
 ### Emailing

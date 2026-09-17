@@ -20,7 +20,7 @@ Each agent who wants to integrate KronoDesk with Spira needs to enter a Spira us
 
 ![](img/KronoDesk_5.png)
 
-Make sure that **Enable RSS Feeds** is set to Active = Yes, and that there is an RSS Token. This is used as the REST API Key too. Make sure you have the following:
+Make sure that **Enable API Keys** is set to Active = Yes, and that there is an RSS Token. This is used as the REST API Key too. Make sure you have the following:
 
 -   User Name
 -   RSS Token

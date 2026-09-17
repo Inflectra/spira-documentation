@@ -1,5 +1,19 @@
 # Release Notes for Inflectra.ai
 
+## September 08 2026
+
+!!! success "New features"
+    - **[Helper AI Agent](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#helper-ai-agent)**
+
+        A redesigned Inflectra.ai sidebar introduces a chat interface with a built-in Helper AI Agent that answers questions about how to use Spira by searching through the product documentation. You can ask it questions about Spira's features and get a direct, documented answer without leaving the page you are working on. The Helper AI Agent remembers your conversation so you can ask follow-up questions naturally, and the chat interface supports multiple named threads so you can keep separate topics organized and return to them later.
+
+        - As an Inflectra.ai subscriber, I can launch the Helper AI Agent directly from the Inflectra.ai sidebar in Spira [RQ:5647]
+        - As an Inflectra.ai subscriber, I can use the Helper AI Agent to ask a question about how to use Spira and get an answer without leaving the application [RQ:5659] [RQ:5714] [RQ:5711]
+        - The Docs Helper agent responds accurately, cites documentation sources, and politely declines off-topic questions [RQ:5712] [RQ:5713]
+
+!!! bug "Bug fixes and enhancements"
+    - Fix a prompt execution failure when generating a requirement from a test case in the Inflectra.ai sidebar [IN:13275]
+
 ## July 06 2026
 
 !!! bug "Bug fixes and enhancements"

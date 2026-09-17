@@ -24,7 +24,7 @@ This allows Jira users to always see the latest QA coverage information recorded
     
 - **Spira URL**: this needs to be the base URL for your Spira instance, which needs to be in the form of either `https://mysite.spiraservice.net` or `https://demo.spiraservice.net/mysite`
 - **Username**: This is the login you use to connect to Spira (set this to a user who only has read-only permissions to all relevant products in Spira, so that they are not able to write to any product or part of your Spira instance)
-- **API Key**: This is the RSS Token / API key for the user name you specified.
+- **API Key**: This is the API key for the user name you specified.
 
 You can get the Spira [API Key](../HowTo-Guides/Users-profile-management.md/#how-to-get-or-make-your-rss-token-or-api-key) from within the [User Details](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) admin screen of Spira, or if logged in as that user from the [My Profile](../Spira-User-Manual/User-Product-Management.md/#my-profile) page. 
 

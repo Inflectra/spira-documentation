@@ -24,13 +24,13 @@ Hit return when you typed in your URL to move on to the next step. You will be p
 
 ![Spira Username](img/Visual_Studio_Code_44.png)
 
-After you entered your username, hit return to move onto your final step. You will be prompted to enter your RSS Token, which must be enabled in your user profile to work.
+After you entered your username, hit return to move onto your final step. You will be prompted to enter your API Key, which must be enabled in your user profile to work.
 
-Here is the location of the RSS Token in your profile:
+Here is the location of the API Key in your profile:
 
 ![Spira Profile](img/Visual_Studio_Code_45.png)
 
-Here is a sample image of a (fake) RSS Token:
+Here is a sample image of a (fake) API Key:
 
 ![Spira Token](img/Visual_Studio_Code_46.png)
 

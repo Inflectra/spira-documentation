@@ -64,7 +64,7 @@
     - Fix showing a system error when attempting to filter the program list [IN:7569]
         {: .edition-spiratest .edition-spirateam}
     - Fix [exporting a test set to another product](../Spira-User-Manual/Test-Set-Management.md/#exporting-a-test-set-to-a-different-product) so that it also exports tags for both the test set and its test cases [IN:11449]
-    - Improve instructions on the [electronic signature popup](../Spira-User-Manual/Application-Wide.md/#electronic-signatures) to make it clear users can input either their password or RSS token [IN:11121]
+    - Improve instructions on the [electronic signature popup](../Spira-User-Manual/Application-Wide.md/#electronic-signatures) to make it clear users can input either their password or API Key [IN:11121]
     - Improve responsiveness for cloud trial users of SpiraTest by ensuring the server app-pool is kept alive [IN:11575]
     - Make it harder to accidentally delete a datasync plugin and all its mappings by making users interact with a extra confirmation dialog [IN:11760]
     - Improve how a locked out user is [unlocked by a system admin](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user), so that the user can immediately log back in again after being unlocked [IN:11571]
@@ -705,13 +705,13 @@
         - Let users filter tags on list pages with a dropdown control [IN:9179]
     
     - Add the ability for SpiraApps to listen for changes to [form dropdown fields](../Developers/SpiraApps-Manager.md/#page-actions) on details pages of artifacts (using a new registerEvent_dropdownChanged function) [IN:9574]
-    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the [user profile page](../Spira-User-Manual/User-Product-Management.md/#my-profile) [IN:9584]
-    - Automatically save the RSS Key when generating new tokens, or when turning RSS on from the [system admin edit user page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) [IN:9585]
+    - Automatically save the API Key when generating new tokens, or when turning RSS on from the [user profile page](../Spira-User-Manual/User-Product-Management.md/#my-profile) [IN:9584]
+    - Automatically save the API Key when generating new tokens, or when turning RSS on from the [system admin edit user page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) [IN:9585]
     - Create source code provider configuration API endpoints to allow users with many products to set it up without needing to load the UI page for it [IN:9506]
     - Enable the field "EmailsEnabled" when system admins update users via the API [IN:9507]
     - Ensure ordering reports by custom properties works consistently across all languages [IN:9578]
     - Fix requirement statuses not being translated on the template admin [requirement status page](../Spira-Administration-Guide/Template-Requirements.md/#statuses) [IN:9503]
-    - Fix the 'Generate New RSS Key' button on the [system admin user edit page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) to both create a new token and set RSS to enabled [IN:9599]
+    - Fix the 'Generate New API Key' button on the [system admin user edit page](../Spira-Administration-Guide/System-Users.md/#edit-an-existing-user) to both create a new token and set RSS to enabled [IN:9599]
     - Fix upgrading to Spira v8+ not correctly updating data sync configuration files for on premise customers [IN:9653]
     - Improve the usability of the [email popup on artifact details pages](../Spira-User-Manual/Application-Wide.md/#emailing) to reduce the chance of people accidentally sending the same email multiple times [IN:9544]
     

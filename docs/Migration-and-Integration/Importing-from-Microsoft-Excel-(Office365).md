@@ -51,7 +51,7 @@ If you are using Excel in the browser, make sure your SpiraPlan is accessible ov
 
 * **Your Spira URL:** The web address that you use to access Spira in your browser. Use the web address you use to access Spira in your browser. This is usually of the form 'http://**company**.spiraservice.net'. Make sure you remove any suffixes from the address (e.g. Default.aspx or "/")
 * **Your Username:** This is the exact same username you use to log in to Spira. (Not Case Sensitive)
-* **Enter your RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new RSS token.*
+* **Enter your RSS token:** You can find or generate this from your user profile page inside Spira - "{ExampleRSS}". Make sure to include the curly braces and *make sure to hit Save after generating a new API Key.*
 
 **If there is a problem connecting to Spira you will be notified with an error message.**
 
