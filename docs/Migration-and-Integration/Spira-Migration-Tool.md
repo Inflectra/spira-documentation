@@ -14,7 +14,7 @@ This application lets you save a copy of a Spira product template, or a whole Sp
 The application runs on either Windows or Mac OS and is available to [download](https://www.inflectra.com/SpiraTest/Downloads.aspx). To install it follow the instructions in the application installer on your platform.
 
 !!! warning "Minimum Spira versions"
-    - To **back up** a template or product, the source Spira instance must be **7.11 or above**. To **migrate** a template or product, the destination Spira instance must be **8.13 or above**.
+    - To **back up** a template or product, the source Spira instance must be **8.13 or above**. To **migrate** a template or product, the destination Spira instance must be **9.4 or above**.
 
 ## What you can save
 At the start of every backup, you choose to include:
@@ -48,7 +48,7 @@ When you back up a product, the file contains all of its template data (above) p
 
 - **Requirements** - including their comments, attachments, and associations
 - **Test Cases** - including folders, test steps, test case parameters, comments, attachments, and associations
-- **Test Sets** - including folders, the test cases they contain, parameters, comments, attachments, and associations
+- **Test Sets** - including folders, the test cases they contain, parameters, the test configuration set they are linked to, comments, attachments, and associations
 - **Test Configuration Sets** - including their entries and Test Sets
 - **Test Runs** - both manual and automated
 - **Incidents** - including their comments, attachments, and associations
@@ -80,7 +80,7 @@ From here you have two options (note that you must be a system administrator on 
 These options are discussed in more detail below.
 
 ## Logging in
-Every backup and migration begins by logging in to a Spira instance. On the login screen enter:
+To begin a backup or migration, connect to your Spira instance using:
 
 - the **URL** of the Spira instance (for example `https://company-name.spiraservice.net`)
 - your **Username**
@@ -101,10 +101,7 @@ On the next screen you configure the backup.
     - **Backup a Spira Product and its Template**
     - **Backup a Spira Template**
 
-- Then select the item to back up:
-
-    - for a product backup, choose the option **Backup a Spira Product and its Template** from the list.
-    - for a template backup, choose the option **Backup a Spira Template** from the list.
+- Then select the product or template to back up from the list.
 
 - Choose a **folder** to store the backup, and enter a **file name** (letters, numbers, spaces, and the symbols `_`, `-`, and `;` are allowed). The backup is saved with a `.spirabackup` extension.
 
@@ -136,7 +133,7 @@ You can also close the application safely at this time, if you wish.
 ![backup complete](img/Project_Backup_and_Migration_Electron_06.png)
 
 ## Migration
-Once a backup has completed, you can migrate it to a Spira instance. This can be the same instance the backup came from, or any other Spira instance (version 8.13 or above). To start a migration:
+Once a backup has completed, you can migrate it to a Spira instance. This can be the same instance the backup came from, or any other Spira instance (version 9.4 or above). To start a migration:
 
 - click **Migrate** straight after a backup finishes, or click **Open Backup File** from the welcome screen and select the completed `.spirabackup` file
 - log in to the Spira instance you want to upload to
