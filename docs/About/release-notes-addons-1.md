@@ -2,6 +2,18 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
 ## September 2026
+- [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta4:
+    - New Features:
+        - [RQ:5367] Support backing up an entire product's data, in addition to its template
+        - [RQ:5372] Include product membership in product backups, and create new users when necessary
+
+    - Bug Fixes:
+        - [IN:13450] Fix resuming a migration reconnecting to source instance instead of destination
+        - [IN:13038] Migrate Release Type -> WorkflowId mapping to fix releases not migrating properly
+
+!!! warning "Beta Version Limitations"
+    This version of the Product Migration Tool is a beta release, and some users may see errors when migrating Custom Lists. Custom product role permissions also may not be migrated correctly. Please contact [Inflectra support](mailto:support@inflectra.com) if you experience any issues using the tool, and we will work to get them fixed for the full release.
+    
 - [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.8:
 
     - Bug Fixes and Enhancements:
