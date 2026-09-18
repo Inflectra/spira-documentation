@@ -29,7 +29,7 @@ These features are planned for upcoming releases. Please note timelines may shif
 - New AI agents that make Inflectra.ai aware of your data in Spira, so it can help you with questions and actions
 
 ### Q4 2026
-- Natural language custom report creation for administrators, using Inflectra.ai agents
+- New focused AI agents designed to help with specific tasks, such as creating and modifying custom reports and processing documents.
 
 ## Longer term thematic ideas
 The list below are features that we are focused on delivering but not in the above timeline. We look for ways to deliver each (all or in part) with smaller enhancements in the short-term, or to integrate them into our timeline based on user feedback.
