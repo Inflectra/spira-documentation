@@ -76,6 +76,16 @@ The next step is to configure the plug-in within Spira so that the system knows 
 
 ![](img/Using_SpiraTest_with_MS-TFS_77.png)
 
+!!! warning "ATTENTION: 32-bit Architecture Requirement for ADO / TFS DataSync"
+   
+    The Azure DevOps (ADO) / Team Foundation Server (TFS) DataSync plugin is built on a **32-bit (x86)** architecture due to underlying client library dependencies. 
+    
+    If you upgraded or installed Spira On-Premise using the main installer, the default installed **DataSync Service** is **64-bit (x64)**. Attempting to run the 32-bit ADO plugin inside the 64-bit DataSync engine will result in execution failures (Error: "Could not load file or assembly 'MsTfsDataSync' or one of its dependencies.").
+    
+    **Action Required for On-Premise Installations:**
+    You **must** download and run the standalone **32-bit (x86) DataSync Service** executable package from the [Standalone Data-Synchronization Windows Service 32-bit](https://www.inflectra.com/Downloads/SpiraDataSync_StandaloneService_v8.9.0.0_x86.zip) rather than using the default 64-bit DataSync service installed by the Spira setup wizard.
+
+
 !!! question "What do if the plug-in is not there"
     If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.
 
