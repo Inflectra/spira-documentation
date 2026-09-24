@@ -1,5 +1,12 @@
 # Release Notes for Inflectra.ai
 
+## September 24 2026
+
+!!! bug "Bug fixes and enhancements"
+    - As an Inflectra.ai chat user in Spira, I see the response typed out progressively and the sidebar clearly shows when it's busy, so the conversation feels natural and I always know when I can interact again [RQ:5775]
+    - Keep the Inflectra.ai sidebar open as you navigate between pages in Spira, so you no longer need to reopen it each time [IN:13353]
+    - Return the cursor to the chat box after each response, so you can type your next message straight away [IN:13478]
+
 ## September 08 2026
 
 !!! success "New features"
