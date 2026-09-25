@@ -83,7 +83,7 @@ The next step is to configure the plug-in within Spira so that the system knows 
     If you upgraded or installed Spira On-Premise using the main installer, the default installed **DataSync Service** is **64-bit (x64)**. Attempting to run the 32-bit ADO plugin inside the 64-bit DataSync engine will result in execution failures (Error: "Could not load file or assembly 'MsTfsDataSync' or one of its dependencies.").
     
     **Action Required for On-Premise Installations:**
-    You **must** download and run the standalone **32-bit (x86) DataSync Service** executable package from the [Standalone Data-Synchronization Windows Service 32-bit](https://www.inflectra.com/Downloads/SpiraDataSync_StandaloneService_v8.9.0.0_x86.zip) rather than using the default 64-bit DataSync service installed by the Spira setup wizard.
+    You **must** download and run the standalone **32-bit (x86) DataSync Service** executable package from the [Standalone Data-Synchronization Windows Service 32-bit](https://www.inflectra.com/Products/SpiraPlan/Downloads.aspx#BugTrackers) rather than using the default 64-bit DataSync service installed by the Spira setup wizard.
 
 
 !!! question "What do if the plug-in is not there"
