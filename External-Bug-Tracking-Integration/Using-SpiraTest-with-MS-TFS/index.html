@@ -7,9 +7,9 @@
 <link href="../Jira-Spira-QA-Coverage/" rel="prev"/>
 <link href="../Using-Spira-with-Asana/" rel="next"/>
 <link href="../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
 <title>Azure DevOps - SpiraDocs</title>
-<link href="../../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -4834,6 +4834,13 @@
 </div>
 <p>The next step is to configure the plug-in within Spira so that the system knows how to access the TFS server. Inside Spira, go to the Administration page and navigate to Integration &gt; Data Synchronization. Check if you see a plug-in called <strong>MsTfsDataSync</strong>, as shown below:</p>
 <p><img alt="" src="../img/Using_SpiraTest_with_MS-TFS_77.png"/></p>
+<div class="admonition warning">
+<p class="admonition-title">ATTENTION: 32-bit Architecture Requirement for ADO / TFS DataSync</p>
+<p>The Azure DevOps (ADO) / Team Foundation Server (TFS) DataSync plugin is built on a <strong>32-bit (x86)</strong> architecture due to underlying client library dependencies. </p>
+<p>If you upgraded or installed Spira On-Premise using the main installer, the default installed <strong>DataSync Service</strong> is <strong>64-bit (x64)</strong>. Attempting to run the 32-bit ADO plugin inside the 64-bit DataSync engine will result in execution failures (Error: "Could not load file or assembly 'MsTfsDataSync' or one of its dependencies.").</p>
+<p><strong>Action Required for On-Premise Installations:</strong>
+You <strong>must</strong> download and run the standalone <strong>32-bit (x86) DataSync Service</strong> executable package from the <a href="https://www.inflectra.com/Products/SpiraPlan/Downloads.aspx#BugTrackers">Standalone Data-Synchronization Windows Service 32-bit</a> rather than using the default 64-bit DataSync service installed by the Spira setup wizard.</p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">What do if the plug-in is not there</p>
 <p>If you don't see the plug-in in the list, click the ""Add" button at the top of the page. This opens the generic Data Sync plug-in details page. This is not yet customized to help you more easily set up the data sync. We recommend, adding just enough information now to create the plug-in. Then edit the plug-in after its made to complete the process.</p>
@@ -5673,7 +5680,7 @@ database (in TFS 2010 and later it will named after your project collection inst
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-<script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
 </body>
 </html>
