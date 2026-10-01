@@ -316,10 +316,10 @@ Here are some examples of questions you can ask:
 The agent can look up and reason over your live data in Spira. Here are some examples of questions you can ask:
 
 - What is the status of RQ:42, and who owns it?
-- Which incidents for this release are still open and high priority?
+- Which Incidents for the release currently in progress are still open and high priority?
 - Summarize the requirements in the current sprint
 - What work is assigned to me?
-- Are there any new comments on the requirements I own for this sprint?
+- Are there any new comments on the Requirements I own for the sprint currently in progress?
 
 It can retrieve:
 
