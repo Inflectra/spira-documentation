@@ -3,7 +3,6 @@
 ## Version 9.6 (October 2026)
 
 ??? bug "Bug fixes and enhancements"
-    - A comprehensive package of security fixes that reinforce access controls and transport security throughout the application, with a particular focus on the API [IN:10440] [IN:13252] [IN:13254] [IN:13255] [IN:13317] [IN:13320] [IN:13321] [IN:13322] [IN:13323] [IN:13324] [IN:13402] [IN:13468]
     - Addressed a problem where releases with very early start or end dates could cause errors elsewhere in the product [IN:13224]
     - Corrected an issue where progress and linked artifact counts stayed at zero for portfolio and program artifacts after sample data was activated [IN:13343]
     - Documentation, Knowledge Base article, and in-app documentation updates and enhancements [IN:11020] [IN:13221] [IN:13504] [IN:13515] [IN:13342] [IN:13341] [IN:13473]
@@ -16,6 +15,7 @@
     - Resolved a problem where adding a new member to a product was not recorded in history, although role changes and removals were [IN:13253]
     - Resolved a problem where notification emails left out the comment that triggered them [IN:12829]
     - Resolved an inconsistency where test runs of deleted test cases appeared in the test run list but could not be opened [IN:13210]
+    - Various security fixes [IN:10440] [IN:13252] [IN:13254] [IN:13255] [IN:13317] [IN:13320] [IN:13321] [IN:13322] [IN:13323] [IN:13324] [IN:13402] [IN:13468]
 
 ## Version 9.5.0.1 (September 2026)
 ??? bug "Bug fixes and enhancements"
