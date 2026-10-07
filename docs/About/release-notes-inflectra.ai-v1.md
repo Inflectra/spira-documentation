@@ -1,19 +1,5 @@
 # Release Notes for Inflectra.ai
 
-## October 16 2026
-
-!!! success "New features"
-    - **[Ask questions about your data in Spira](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#asking-about-your-spira-data)**
-
-        The chat interface can now answer questions about your own data in Spira. Ask about your requirements, incidents, tests, and more, and get an answer grounded in live data.
-
-        - As an Inflectra.ai user, I can ask questions about my Spira data and get answers grounded in live data retrieved from Spira, so I can explore my data without leaving the page [RQ:5776]
-        - As an Inflectra.ai user, I can ask about how to use Spira and about my own data in the same conversation, and get accurate answers with documentation sources for the how-to questions [RQ:5720]
-
-!!! bug "Bug fixes and enhancements"
-    - Keep the documentation used by Inflectra.ai up to date automatically when the Spira documentation changes, so answers reflect the latest content [IN:13310]
-    - Fix existing test steps, risk mitigations, and requirement scenarios not being included in the information sent to Inflectra.ai when generating related content [IN:13156]
-
 ## September 24 2026
 
 !!! bug "Bug fixes and enhancements"
@@ -24,7 +10,7 @@
 ## September 08 2026
 
 !!! success "New features"
-    - **[Helper AI Agent](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#chat-interface)**
+    - **[Helper AI Agent](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#helper-ai-agent)**
 
         A redesigned Inflectra.ai sidebar introduces a chat interface with a built-in Helper AI Agent that answers questions about how to use Spira by searching through the product documentation. You can ask it questions about Spira's features and get a direct, documented answer without leaving the page you are working on. The Helper AI Agent remembers your conversation so you can ask follow-up questions naturally, and the chat interface supports multiple named threads so you can keep separate topics organized and return to them later.
 

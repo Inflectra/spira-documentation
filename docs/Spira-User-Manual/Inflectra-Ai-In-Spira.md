@@ -43,7 +43,9 @@ Inflectra.ai is available in the following places:
 - **Dashboards**: Inflectra.ai can generate content from user input on the My Page, and it is only accessible to users with the System Admin permission. This content can be used to create new artifacts.
     - My Page (for System Administrators only)
 
-- **All pages**: The [chat interface](#chat-interface) is available on every page where the Inflectra.ai sidebar is shown. Use it to ask questions about how to use Spira, or about your own data.
+- **All pages**: The chat interface is available on every page where the Inflectra.ai sidebar is shown.
+
+    - [Helper AI Agent](#helper-ai-agent)
 
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
@@ -63,7 +65,6 @@ In the following example, the task is for 10 requirements, and 5 requirements ha
 ### Supported Languages
 The Inflectra.ai sidebar labels are localized based on the user's **[culture setting](../Spira-User-Manual/User-Product-Management.md/#regional-settings)** in these languages: English, French, German, Portuguese, Brazilian Portuguese, and Spanish. If the user's culture is not supported, English text will be shown.  
 The responses from the AI are localized based on the Name and Description of the artifact being used. For example, when generating tasks for a requirement written in French, the generated tasks will also be written in French. When the input language cannot be determined or is not recognized, the response will be written in English.  
-The [chat interface](#chat-interface) answers in English only at this time.  
 
 ### Responsible AI Usage
 Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
@@ -276,19 +277,15 @@ Optional artifacts are below and can be created in any order:
 | ... Tasks [^STSP]                   | Creates a set of work tasks needed to deliver the functionality in each requirement, including any new child requirements                    |
 
 
-## Chat Interface
-!!! warning "An API Key is required"
-    Each user needs their own API Key enabled before they can use the chat interface. Go to your [My Profile](User-Product-Management.md/#my-profile) page, set "Enable API Keys" to "Yes", and check that an API Key has been generated underneath it (if the box is blank, click "Generate New"). Until this is done, the chat interface will not be able to answer your questions.
+## Helper AI Agent
+The Helper AI Agent answers questions about how to use Spira by searching through the product documentation and streaming answers directly in the sidebar, so you can get help without leaving the page you are working on. To access it, just open the sidebar and interact with the agent via the chat interface. Here are some examples of questions you can ask:
 
-The chat interface is at the bottom of the Inflectra.ai sidebar, available on every page of Spira. From there you can use natural language to work with specialized AI agents that help you with different tasks. Answers stream straight into the sidebar, so you never have to leave the page you are working on.
+- How can I create test cases in Spira?
+- How do I configure the time tracking field of my Jira data sync plugin?
+- How can I track risks for my releases? Do I need SpiraPlan for that?
+- What can I do on this page?
 
-The chat interface currently supports:
-
-- **[How to use Spira](#asking-how-to-use-spira)**: ask how a feature works, how to complete a task, or how to configure and administer Spira. The agent searches the official Spira documentation and answers with links to the relevant pages
-- **[Your own data in Spira](#asking-about-your-spira-data)**: ask questions about the data in your products and programs. The agent retrieves your live data and answers based on what it finds
-
-### Conversation threads
-The chat interface remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:
+The Helper AI Agent remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:
 
 | Action | Description |
 | ------ | ----------- |
@@ -298,42 +295,7 @@ The chat interface remembers your conversation within a thread, so you can ask f
 | Delete thread | Remove a thread you no longer need |
 | Restore thread | Reopen one of the last 10 closed threads from the restore button |
 
-Conversation threads are saved in your browser, so they persist as you navigate around Spira. Like the rest of your chat history, they do not transfer to other browsers or computers.
-
-### Asking how to use Spira
-Ask about Spira's features, configuration, and administration, or about agile and testing methodology in the context of Spira. To get started, open the Inflectra.ai sidebar and type your question into the chat.
-
-The agent knows which page you are on and which artifact you are viewing, so you can talk about "this requirement" or "this page" without giving it an ID.
-
-Here are some examples of questions you can ask:
-
-- How can I create test cases in Spira?
-- How do I configure the time tracking field of my Jira data sync plugin?
-- How can I track risks for my releases? Do I need SpiraPlan for that?
-- What can I do on this page?
-
-### Asking about your Spira data
-The agent can look up and reason over your live data in Spira. Here are some examples of questions you can ask:
-
-- What is the status of RQ:42, and who owns it?
-- Which Incidents for the release currently in progress are still open and high priority?
-- Summarize the requirements in the current sprint
-- What work is assigned to me?
-- Are there any new comments on the Requirements I own for the sprint currently in progress?
-
-It can retrieve:
-
-- **Product artifacts**: requirements, incidents, test cases, test sets, test runs, tasks, risks, releases, builds, documents, and automation hosts, including their fields, statuses, owners, dates, associations, and test coverage
-- **Program artifacts**: capabilities and program milestones [^SP]
-- **Workspaces**: the products, programs, and templates you have access to
-- **Your own work**: the artifacts assigned to you
-
-A few things to keep in mind:
-
-- **It is read-only.** For now, the agent can retrieve data but cannot create, update, or delete anything in Spira.
-- **It respects your permissions.** The agent only sees what you could see in Spira yourself.
-- **It uses the current product by default.** When you ask about your data without naming a product, the agent answers for the product you are currently in and tells you which one it used. You can name a different product to ask about that one instead.
-
+Conversation threads are saved in your browser, so they persist across page navigations within the same browser.
 
 [^STSP]: Available in SpiraTeam and SpiraPlan
 [^SP]: Available in SpiraPlan
