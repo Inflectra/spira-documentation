@@ -217,29 +217,48 @@ The **executeAwsBedrockRuntime** function call makes a REST API call to the AWS 
 ## Notifications
 SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message. The text provided can either be plain text or basic HTML. Be careful not to overwhelm users by displaying too much information here.
 
-=== "Available Actions"
-    ??? note "**displayErrorMessage(message: string)**" 
-        Shows an error message to the user 
-    ??? note "**displaySuccessMessage(message: string)**" 
-        Shows a success message to the user
-    ??? note "**displayWarningMessage(message: string)**" 
-        Shows a warning message to the user
-    ??? note "**displayConfirmation(message: string, onConfirm: function)**"
-        Shows a message to the user with options to cancel or confirm. If they confirm the function passed in is executed.
-    ??? note "**hideMessage()**" 
-        Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. 
+??? note "displayErrorMessage(message: string)"
+    Shows an error message to the user 
 
-=== "Examples"
+    Example:
 
     ```js
     spiraAppManager.displayErrorMessage("The operation could not complete due to the following error: " + errorMessage);
+    ```
 
+??? note "displaySuccessMessage(message: string)"
+    Shows a success message to the user
+
+    Example:
+
+    ```js
     spiraAppManager.displaySuccessMessage("The operation completed successfully!");
-    
-    spiraAppManager.displayWarningMessage("The operation completed but please note the following warning: " + warningMessage);
+    ```
 
+??? note "displayWarningMessage(message: string)"
+    Shows a warning message to the user
+
+    Example:
+
+    ```js
+    spiraAppManager.displayWarningMessage("The operation completed but please note the following warning: " + warningMessage);
+    ```
+
+??? note "displayConfirmation(message: string, onConfirm: function)"
+    Shows a message to the user with options to cancel or confirm. If they confirm the function passed in is executed.
+
+    Example:
+
+    ```js
     spiraAppManager.displayConfirmation("Do you want to continue with this operation?", continueOperationFunction);
-    
+    ```
+
+??? note "hideMessage()"
+    Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. 
+
+    Example:
+
+    ```js
     spiraAppManager.hideMessage();
     ```
 
@@ -278,18 +297,42 @@ There are a number of events that a SpiraApp can register against. This allows S
         - **handler**:
             - **operation**: Proprietary string detailing what kind of save was done - undefined for normal saves, but can be new, redirect (IN, RK only), or close when doing complex saves
             - **artifactId**: If the operation created a new artifact, it's ID is put here. Always paired with the redirect or new operation, depending on whether the artifact has a separate redirect operation.
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_dataSaved(runOnDataSaved);
+        function runOnDataSaved(operation, artifactId) {
+            console.log(`The ID of the artifact we are looking at is ${artifactId}`);
+        };
+        ```
     
     ??? note "registerEvent_loaded(handler: (dontClearMessages: boolean) => void)"
         Registers an event handler on the details page to trigger when the main form data is loaded. This will be triggered each time the data is refreshed, including switching between artifacts without a full page load.
 
         - **handler**:
             - **dontClearMessages**: Whether or not the page load being performed should clear any displayed errors native to Spira. Unlikely to be meaningful for a SpiraApp.
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_loaded(runOnLoaded);
+        ```
     
     ??? note "registerEvent_dataFailure(handler: (errorMessage: PluginRestException) => void)"
         Registers an event handler on the details page form manager for when data is not saved correctly. 
 
         - **handler**:
             - **PluginRestException**: Object containing an exceptionType and message property
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_dataFailure(runOnDataFailure);
+        function runOnDataFailure(exception) {
+            console.log(`The SpiraApp cannot proceed because Spira had this problem: ${exception}`);
+        };
+        ```
     
     ??? note "registerEvent_operationReverted(handler: (statusId: number, isOpen: boolean) => void)" 
         Registers an event handler on the details page form manager for when a status change is reverted back. 
@@ -297,6 +340,15 @@ There are a number of events that a SpiraApp can register against. This allows S
         - **handler**:
             - **statusId**: ID of the status this operation is reverting to
             - **isOpen**: Whether or not the status being reverted to is open (if supported by artifact)
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_operationReverted(runOnStatusReverted);
+        function runOnStatusReverted(statusId, isOpen) {
+            console.log(`Current status is ${statusId} and it is ${isOpen ? "open" : "closed"}`);
+        };
+        ```
     
     ??? note "registerEvent_dropdownChanged(fieldName: string, <br> handler: (oldValue: string, newValue: string) => boolean): boolean" 
         Registers an event handler on the [specified dropdown field](./SpiraApps-Reference.md/#available-field-names) for when its value changes. 
@@ -306,12 +358,34 @@ There are a number of events that a SpiraApp can register against. This allows S
             - **oldValue**: the value a dropdown had selected prior to user input
             - **newValue**: the value a dropdown is changing to based on user input
         - **return**: boolean of true if the change was successful, false if the field is not found, in other error states an error is thrown
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_dropdownChanged("PriorityId", runOnDropdownChange);
+        function runOnDropdownChange (oldValue, newValue) {
+            if (newValue > 20) {
+                //arbitrarily block any attempts to select a value with an ID above 20
+                //Would be more useful to pull some configuration from a product setting related to these behaviors, but this example is simple
+                return false;
+            }
+        };
+        ```
     
     ??? note "registerEvent_gridLoaded(gridId: string, handler: () => void)" 
         Registers an event handler to trigger when a [specific grid](./SpiraApps-Reference.md#available-grid-ids) is loaded. A grid is loaded on page load, refresh, after a cancelled edit, and after a successful grid update/edit.
 
         - **gridId**: [ID of the relevant grid](./SpiraApps-Reference.md#available-grid-ids)
         - **handler**: Callback for doing any setup which requires a grid on a details page to be loaded 
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_gridLoaded(spiraAppManager.gridIds.requirementSteps, runOnGridLoaded);
+        function runOnGridLoaded() {
+            console.log(`The grid with id ${spiraAppManager.gridIds.requirementSteps} was (re)loaded`);
+        };
+        ```
     
     ??? note "registerEvent_dataPreSave(handler: (operation: string) => void)" 
         Registers an event handler on a details page to trigger after a user has started a save operation, but before the save is submitted to the database. 
@@ -319,11 +393,32 @@ There are a number of events that a SpiraApp can register against. This allows S
         - **handler**:
             - **operation**: Proprietary string detailing what kind of save was done - undefined for normal saves, but can be new, redirect (IN, RK only, for new artifact creation), or close when doing complex saves
 
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_dataPreSave(populateDefaultEffortForNewIncidents); 
+        function populateDefaultEffortForNewIncidents() {
+            let incidentId = spiraAppManager.getDataItemField("IncidentId");
+            let estimatedEffort = spiraAppManager.getDataItemField("EstimatedEffort");
+
+            //if there is no incident id (new incident) and no estimated effort, add a default value
+            if (!estimatedEffort && !incidentId) { 
+                spiraAppManager.updateFormField("EstimatedEffort", null, 120);
+            }
+        };
+        ```
+
 === "All Pages"
     ??? note "registerEvent_windowLoad(handler: () => void)" 
         Registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.
 
         - **handler**: Callback to perform any setup for the SpiraApp that requires window load, such as mounting other events or interacting with the page
+
+        Example:
+
+        ```js
+        spiraAppManager.registerEvent_windowLoad(runOnWindowLoad);
+        ```
 
 === "Dashboards"
     ??? note "registerEvent_dashboardUpdated(handler: () => void)" 
@@ -331,55 +426,11 @@ There are a number of events that a SpiraApp can register against. This allows S
 
         - **handler**: Callback to perform actions or update a SpiraApp widget based on the newly applied release filter. The new releaseId will need to be retrieved separately - not passed as an argument.
 
-=== "Examples"
+        Example:
 
-    ```js
-    spiraAppManager.registerEvent_windowLoad(runOnWindowLoad);
-
-    spiraAppManager.registerEvent_dashboardUpdated(runOnDashboardUpdate);
-
-    spiraAppManager.registerEvent_dataSaved(runOnDataSaved);
-    function runOnDataSaved(operation, artifactId) {
-        console.log(`The ID of the artifact we are looking at is ${artifactId}`);
-    };
-    
-    spiraAppManager.registerEvent_loaded(runOnLoaded);
-
-    spiraAppManager.registerEvent_dataFailure(runOnDataFailure);
-    function runOnDataFailure(exception) {
-        console.log(`The SpiraApp cannot proceed because Spira had this problem: ${exception}`);
-    };
-
-    spiraAppManager.registerEvent_operationReverted(runOnStatusReverted);
-    function runOnStatusReverted(statusId, isOpen) {
-        console.log(`Current status is ${statusId} and it is ${isOpen ? "open" : "closed"}`);
-    };
-
-    spiraAppManager.registerEvent_dropdownChanged("PriorityId", runOnDropdownChange);
-    function runOnDropdownChange (oldValue, newValue) {
-        if (newValue > 20) {
-            //arbitrarily block any attempts to select a value with an ID above 20
-            //Would be more useful to pull some configuration from a product setting related to these behaviors, but this example is simple
-            return false;
-        }
-    };
-
-    spiraAppManager.registerEvent_gridLoaded(spiraAppManager.gridIds.requirementSteps, runOnGridLoaded);
-    function runOnGridLoaded() {
-        console.log(`The grid with id ${spiraAppManager.gridIds.requirementSteps} was (re)loaded`);
-    };
-
-    spiraAppManager.registerEvent_dataPreSave(populateDefaultEffortForNewIncidents); 
-    function populateDefaultEffortForNewIncidents() {
-        let incidentId = spiraAppManager.getDataItemField("IncidentId");
-        let estimatedEffort = spiraAppManager.getDataItemField("EstimatedEffort");
-    
-        //if there is no incident id (new incident) and no estimated effort, add a default value
-        if (!estimatedEffort && !incidentId) { 
-            spiraAppManager.updateFormField("EstimatedEffort", null, 120);
-        }
-    };
-    ```
+        ```js
+        spiraAppManager.registerEvent_dashboardUpdated(runOnDashboardUpdate);
+        ```
 
 ## Page actions
 A SpiraApp can make requests to Spira to perform certain actions on certain pages.
@@ -631,66 +682,93 @@ The helper function `createDynamicDialog` creates an empty modal dialog box with
 ## User Context 
 The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.
 
-=== "Available Context"
-    ??? note "canViewArtifactType(artifactTypeId: number)" 
-        Returns true if the current user can **view** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product.
+??? note "canViewArtifactType(artifactTypeId: number)" 
+    Returns true if the current user can **view** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product.
 
-        - **artifactTypeId**: ID of the artifact type we want to check permissions for 
+    - **artifactTypeId**: ID of the artifact type we want to check permissions for 
 
-    ??? note "canCreateArtifactType(artifactTypeId: number)"
-        Returns true if the current user can **create** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. 
-        
-        - **artifactTypeId**: ID of the artifact type we want to check permissions for 
-    ??? note "canModifyArtifactType(artifactTypeId: number)" 
-        Returns true if the current user can **modify** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. 
-
-        - **artifactTypeId**: ID of the artifact type we want to check permissions for 
-
-=== "Examples"
+    Example:
 
     ```js
     spiraAppManager.canViewArtifactType(1); // returns true if the user can view requirements in this product
+    ```
 
+??? note "canCreateArtifactType(artifactTypeId: number)"
+    Returns true if the current user can **create** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. 
+
+    - **artifactTypeId**: ID of the artifact type we want to check permissions for 
+
+    Example:
+
+    ```js
     spiraAppManager.canCreateArtifactType(2); // returns true if the user can create test cases in this product
+    ```
 
+??? note "canModifyArtifactType(artifactTypeId: number)" 
+    Returns true if the current user can **modify** the specified [artifact type](./SpiraApps-Reference.md/#artifact-types) for the current product. 
+
+    - **artifactTypeId**: ID of the artifact type we want to check permissions for 
+
+    Example:
+
+    ```js
     spiraAppManager.canModifyArtifactType(3); // returns true if the user can modify incidents in this product
     ```
 
 ## Format Helpers
 
-=== "Explanation"
-    ??? note "formatDate(isoDate: string)" 
-        Formats an ISO 8601 datetime into a user friendly date format/timezone based on the user's cultural settings in Spira.
+??? note "formatDate(isoDate: string)" 
+    Formats an ISO 8601 datetime into a user friendly date format/timezone based on the user's cultural settings in Spira.
 
-        - **isoDate**: String of a date in ISO 8601 format (how Spira provides it from the server)
-    ??? note "formatDateTime(isoDate: string)" 
-        Formats an ISO datetime into a user friendly datetime format/timezone based on the user's cultural settings in Spira.
+    - **isoDate**: String of a date in ISO 8601 format (how Spira provides it from the server)
 
-        - **isoDate**: String of a date in ISO 8601 format (how Spira provides it from the server)
-    ??? note "formatCustomFieldName(propertyNumber: number)" 
-        Returns the custom property field name in the form `Custom_01` for a passed in property number
-
-        - **propertyNumber**: Field # of the custom property we want the field name of (for [getDataItemField and updateFormField functions](./SpiraApps-Manager.md/#page-actions))
-    ??? note "convertHtmlToPlainText(htmlTemplate: string)" 
-        Returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)
-    
-        - **htmlTemplate**: Template string of some HTML to remove markup from. Useful for grabbing information from descriptions or rich text custom properties.
-    ??? note "sanitizeHtml(htmlToSanitize: string)"
-        Returns a safe to use and display string based on a provided string. Any SpiraApp that displays rich text should always pass the text through this function before displaying to the user to avoid XSS risks 
-
-        - **htmlToSanitize**: String of HTML which is going to be rendered to the DOM from user input, such as in a dashboard widget rendering the description of an artifact
-
-=== "Examples"
+    Example:
 
     ```js
     spiraAppManager.formatDate("1993-05-16T14:48:00.000Z"); // returns "5/16/1993" if the user's culture is en-US
+    ```
 
+??? note "formatDateTime(isoDate: string)" 
+    Formats an ISO datetime into a user friendly datetime format/timezone based on the user's cultural settings in Spira.
+
+    - **isoDate**: String of a date in ISO 8601 format (how Spira provides it from the server)
+
+    Example:
+
+    ```js
     spiraAppManager.formatDateTime("1993-05-16T14:48:00.000Z"); // returns "5/16/1993 10:48:00 AM" if the user's culture is en-US
+    ```
 
+??? note "formatCustomFieldName(propertyNumber: number)" 
+    Returns the custom property field name in the form `Custom_01` for a passed in property number
+
+    - **propertyNumber**: Field # of the custom property we want the field name of (for [getDataItemField and updateFormField functions](./SpiraApps-Manager.md/#page-actions))
+
+    Example:
+
+    ```js
     spiraAppManager.formatCustomFieldName(5); // returns "Custom_07"
+    ```
 
+??? note "convertHtmlToPlainText(htmlTemplate: string)" 
+    Returns a plain text string for a passed in HTML string (all tags and relevant syntax is removed)
+
+    - **htmlTemplate**: Template string of some HTML to remove markup from. Useful for grabbing information from descriptions or rich text custom properties.
+
+    Example:
+
+    ```js
     spiraAppManager.convertHtmlToPlainText("<p>Hello World</p>"); // returns "Hello World"
+    ```
 
+??? note "sanitizeHtml(htmlToSanitize: string)"
+    Returns a safe to use and display string based on a provided string. Any SpiraApp that displays rich text should always pass the text through this function before displaying to the user to avoid XSS risks 
+
+    - **htmlToSanitize**: String of HTML which is going to be rendered to the DOM from user input, such as in a dashboard widget rendering the description of an artifact
+
+    Example:
+
+    ```js
     spiraAppManager.sanitizeHtml("<image/src/onerror=prompt(8)>"); // returns "&lt;image/src/onerror=prompt(8)&gt" 
     ```
 

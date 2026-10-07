@@ -339,7 +339,7 @@ const template = `
             <th>Type</th>
             <th>Created By</th>
             <th>Date Created</th>
-        <tr>
+        </tr>
         {{#dataItems}}
             <tr role="row">
                 <td>
@@ -348,7 +348,7 @@ const template = `
                 <td>
                     <a class="has-tooltip" href=" {{ incidentUrl }}">
                         {{ name }}
-                        <div class="is-tooltip">[RQ:{{ incidentID }}]</td>
+                        <div class="is-tooltip">[IN:{{ incidentID }}]</div>
                     </a>
                 </td>
                 <td>{{ type }}</td>
@@ -356,7 +356,7 @@ const template = `
                 <td>
                     <span title="{{ datetime }}">{{ date }}</span>
                 </td>
-            <tr>
+            </tr>
         {{/dataItems}}
     </table>
 {{/hasItems}}`;

@@ -21,14 +21,13 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 - Portfolio level planning with "Strategic Outcomes" and "Portfolio Milestones"
     {: .edition-spiraplan}
 - Built-in Helper AI Agent to provide intelligent help and answer questions about how to use Spira
+- AI agents that are aware of your own data in Spira, so you can ask questions about your products and programs and get answers grounded in live data
 
 ## Coming next
 These features are planned for upcoming releases. Please note timelines may shift as work progresses.
 
-### Q3 2026
-- New AI agents that make Inflectra.ai aware of your data in Spira, so it can help you with questions and actions
-
 ### Q4 2026
+- New AI agents in Inflectra.ai that can perform actions on your Spira data
 - New focused AI agents designed to help with specific tasks, such as creating and modifying custom reports, and processing documents.
 
 ## Longer term thematic ideas
@@ -40,11 +39,9 @@ The list below are features that we are focused on delivering but not in the abo
     - Allow users to specify example artifacts to use to customize artifact creation to align with their specific needs
     - Targeted risk analysis of artifacts in different dimensions (such as governance, security, and compliance)
     - Deeper contextual searching and analysis of artifact data and associations to provide new insights and faster workflows
-    - Requirement coverage analysis that evaluates the test coverage of a requirement and suggests edits, additions, or removals of associated test cases and test steps
-    - Application-wide helper chatbot that lets users ask questions about how to use Spira
     - Natural language report creation, allowing users to create custom graphs and reports using natural language
     - Intelligent Document Processing (IDP) to read and summarize documents stored in Spira
-    - Chat with specialist agents across many parts of the application, allowing users to ask for specific information related to their data, request specific actions to be performed, and ask follow-up questions
+    - Chat with specialist agents across many parts of the application, allowing users to request specific actions to be performed as well as asking questions
 
 - **Enhance traceability** with a new requirement view with integrated test case analysis and potentially other artifacts.
 - Evolve **program level functionality** with comment and attachment functionality, and enhanced associations to product level artifacts.
