@@ -7,9 +7,9 @@
 <link href="../SpiraApps-Reference/" rel="prev"/>
 <link href="../../About/roadmap/" rel="next"/>
 <link href="../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
 <title>SpiraAppManager - SpiraDocs</title>
-<link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -4661,48 +4661,45 @@
 </div>
 <h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">¶</a></h2>
 <p>SpiraApps can show and hide messages to the user to provide them with information about the success or failure of actions taken by the SpiraApp. The different message types show different visual cues to the user. The messages are all displayed as a modal message. The text provided can either be plain text or basic HTML. Be careful not to overwhelm users by displaying too much information here.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="available-actions" name="__tabbed_6" type="radio"/><input id="examples_1" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="available-actions">Available Actions</label><label for="examples_1">Examples</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <details class="note">
-<summary><strong>displayErrorMessage(message: string)</strong></summary>
+<summary>displayErrorMessage(message: string)</summary>
 <p>Shows an error message to the user </p>
-</details>
-<details class="note">
-<summary><strong>displaySuccessMessage(message: string)</strong></summary>
-<p>Shows a success message to the user</p>
-</details>
-<details class="note">
-<summary><strong>displayWarningMessage(message: string)</strong></summary>
-<p>Shows a warning message to the user</p>
-</details>
-<details class="note">
-<summary><strong>displayConfirmation(message: string, onConfirm: function)</strong></summary>
-<p>Shows a message to the user with options to cancel or confirm. If they confirm the function passed in is executed.</p>
-</details>
-<details class="note">
-<summary><strong>hideMessage()</strong></summary>
-<p>Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. </p>
-</details>
-</div>
-<div class="tabbed-block">
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayErrorMessage</span><span class="p">(</span><span class="s2">"The operation could not complete due to the following error: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">errorMessage</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displaySuccessMessage</span><span class="p">(</span><span class="s2">"The operation completed successfully!"</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayWarningMessage</span><span class="p">(</span><span class="s2">"The operation completed but please note the following warning: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">warningMessage</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayConfirmation</span><span class="p">(</span><span class="s2">"Do you want to continue with this operation?"</span><span class="p">,</span><span class="w"> </span><span class="nx">continueOperationFunction</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">hideMessage</span><span class="p">();</span>
 </code></pre></div>
-</div>
-</div>
-</div>
+</details>
+<details class="note">
+<summary>displaySuccessMessage(message: string)</summary>
+<p>Shows a success message to the user</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displaySuccessMessage</span><span class="p">(</span><span class="s2">"The operation completed successfully!"</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>displayWarningMessage(message: string)</summary>
+<p>Shows a warning message to the user</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayWarningMessage</span><span class="p">(</span><span class="s2">"The operation completed but please note the following warning: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">warningMessage</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>displayConfirmation(message: string, onConfirm: function)</summary>
+<p>Shows a message to the user with options to cancel or confirm. If they confirm the function passed in is executed.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">displayConfirmation</span><span class="p">(</span><span class="s2">"Do you want to continue with this operation?"</span><span class="p">,</span><span class="w"> </span><span class="nx">continueOperationFunction</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>hideMessage()</summary>
+<p>Hides any currently displayed message. This is useful when a SpiraApp needs to show a message during an operation, but hide after the operation is complete. </p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">hideMessage</span><span class="p">();</span>
+</code></pre></div>
+</details>
 <h2 id="menus">Menus<a class="headerlink" href="#menus" title="Permanent link">¶</a></h2>
 <p>SpiraApps can create <a href="../SpiraApps-Overview/#menus">menu entries</a> on <a href="../SpiraApps-Reference/#pages">relevant pages</a>. If a menu entry's action is to run a JavaScript function, then the SpiraApp needs to register the function to call when the menu entry is clicked. A SpiraApp cannot use the "action" field in the manifest to set the function to run because the code for the SpiraApp is in an IIFE. Therefore the SpiraApp code has to register the function on initiation.</p>
 <p>Use the <code>registerEvent_menuEntryClick</code> function on the spiraAppManager to register the function to execute when a menu entry is clicked.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="parameters_2" name="__tabbed_7" type="radio"/><input id="example_4" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="parameters_2">Parameters</label><label for="example_4">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="parameters_2" name="__tabbed_6" type="radio"/><input id="example_4" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="parameters_2">Parameters</label><label for="example_4">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4733,7 +4730,7 @@
 </div>
 <h2 id="events-handlers">Events handlers<a class="headerlink" href="#events-handlers" title="Permanent link">¶</a></h2>
 <p>There are a number of events that a SpiraApp can register against. This allows SpiraApps to take specific actions at relevant times based on the wider flow on the page. Most have no return value and do not use any returned values from the callback, unless otherwise specified. Function signatures are meant to match TypeScript type syntax.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="details-pages" name="__tabbed_8" type="radio"/><input id="all-pages" name="__tabbed_8" type="radio"/><input id="dashboards" name="__tabbed_8" type="radio"/><input id="examples_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="details-pages">Details Pages</label><label for="all-pages">All Pages</label><label for="dashboards">Dashboards</label><label for="examples_2">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="details-pages" name="__tabbed_7" type="radio"/><input id="all-pages" name="__tabbed_7" type="radio"/><input id="dashboards" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="details-pages">Details Pages</label><label for="all-pages">All Pages</label><label for="dashboards">Dashboards</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -4746,6 +4743,12 @@
 </ul>
 </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataSaved</span><span class="p">(</span><span class="nx">runOnDataSaved</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDataSaved</span><span class="p">(</span><span class="nx">operation</span><span class="p">,</span><span class="w"> </span><span class="nx">artifactId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The ID of the artifact we are looking at is </span><span class="si">${</span><span class="nx">artifactId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>registerEvent_loaded(handler: (dontClearMessages: boolean) =&gt; void)</summary>
@@ -4756,6 +4759,9 @@
 </ul>
 </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_loaded</span><span class="p">(</span><span class="nx">runOnLoaded</span><span class="p">);</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>registerEvent_dataFailure(handler: (errorMessage: PluginRestException) =&gt; void)</summary>
@@ -4766,6 +4772,12 @@
 </ul>
 </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataFailure</span><span class="p">(</span><span class="nx">runOnDataFailure</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDataFailure</span><span class="p">(</span><span class="nx">exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The SpiraApp cannot proceed because Spira had this problem: </span><span class="si">${</span><span class="nx">exception</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>registerEvent_operationReverted(handler: (statusId: number, isOpen: boolean) =&gt; void)</summary>
@@ -4777,6 +4789,12 @@
 </ul>
 </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_operationReverted</span><span class="p">(</span><span class="nx">runOnStatusReverted</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnStatusReverted</span><span class="p">(</span><span class="nx">statusId</span><span class="p">,</span><span class="w"> </span><span class="nx">isOpen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Current status is </span><span class="si">${</span><span class="nx">statusId</span><span class="si">}</span><span class="sb"> and it is </span><span class="si">${</span><span class="nx">isOpen</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"open"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"closed"</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>registerEvent_dropdownChanged(fieldName: string, <br/> handler: (oldValue: string, newValue: string) =&gt; boolean): boolean</summary>
@@ -4790,6 +4808,16 @@
 </li>
 <li><strong>return</strong>: boolean of true if the change was successful, false if the field is not found, in other error states an error is thrown</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dropdownChanged</span><span class="p">(</span><span class="s2">"PriorityId"</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="w"> </span><span class="p">(</span><span class="nx">oldValue</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//arbitrarily block any attempts to select a value with an ID above 20</span>
+<span class="w">        </span><span class="c1">//Would be more useful to pull some configuration from a product setting related to these behaviors, but this example is simple</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>registerEvent_gridLoaded(gridId: string, handler: () =&gt; void)</summary>
@@ -4798,6 +4826,12 @@
 <li><strong>gridId</strong>: <a href="../SpiraApps-Reference/#available-grid-ids">ID of the relevant grid</a></li>
 <li><strong>handler</strong>: Callback for doing any setup which requires a grid on a details page to be loaded </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_gridLoaded</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The grid with id </span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="si">}</span><span class="sb"> was (re)loaded`</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>registerEvent_dataPreSave(handler: (operation: string) =&gt; void)</summary>
@@ -4808,63 +4842,8 @@
 </ul>
 </li>
 </ul>
-</details>
-</div>
-<div class="tabbed-block">
-<details class="note">
-<summary>registerEvent_windowLoad(handler: () =&gt; void)</summary>
-<p>Registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.</p>
-<ul>
-<li><strong>handler</strong>: Callback to perform any setup for the SpiraApp that requires window load, such as mounting other events or interacting with the page</li>
-</ul>
-</details>
-</div>
-<div class="tabbed-block">
-<details class="note">
-<summary>registerEvent_dashboardUpdated(handler: () =&gt; void)</summary>
-<p>Registers an event handler on dashboard pages with a release dropdown when it is changed. This can be useful when a user changes the release on the product dashboard or product reporting page.</p>
-<ul>
-<li><strong>handler</strong>: Callback to perform actions or update a SpiraApp widget based on the newly applied release filter. The new releaseId will need to be retrieved separately - not passed as an argument.</li>
-</ul>
-</details>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_windowLoad</span><span class="p">(</span><span class="nx">runOnWindowLoad</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dashboardUpdated</span><span class="p">(</span><span class="nx">runOnDashboardUpdate</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataSaved</span><span class="p">(</span><span class="nx">runOnDataSaved</span><span class="p">);</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDataSaved</span><span class="p">(</span><span class="nx">operation</span><span class="p">,</span><span class="w"> </span><span class="nx">artifactId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The ID of the artifact we are looking at is </span><span class="si">${</span><span class="nx">artifactId</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_loaded</span><span class="p">(</span><span class="nx">runOnLoaded</span><span class="p">);</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataFailure</span><span class="p">(</span><span class="nx">runOnDataFailure</span><span class="p">);</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDataFailure</span><span class="p">(</span><span class="nx">exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The SpiraApp cannot proceed because Spira had this problem: </span><span class="si">${</span><span class="nx">exception</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_operationReverted</span><span class="p">(</span><span class="nx">runOnStatusReverted</span><span class="p">);</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">runOnStatusReverted</span><span class="p">(</span><span class="nx">statusId</span><span class="p">,</span><span class="w"> </span><span class="nx">isOpen</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Current status is </span><span class="si">${</span><span class="nx">statusId</span><span class="si">}</span><span class="sb"> and it is </span><span class="si">${</span><span class="nx">isOpen</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"open"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"closed"</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dropdownChanged</span><span class="p">(</span><span class="s2">"PriorityId"</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="p">);</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">runOnDropdownChange</span><span class="w"> </span><span class="p">(</span><span class="nx">oldValue</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//arbitrarily block any attempts to select a value with an ID above 20</span>
-<span class="w">        </span><span class="c1">//Would be more useful to pull some configuration from a product setting related to these behaviors, but this example is simple</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_gridLoaded</span><span class="p">(</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="p">,</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">);</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">runOnGridLoaded</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The grid with id </span><span class="si">${</span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">gridIds</span><span class="p">.</span><span class="nx">requirementSteps</span><span class="si">}</span><span class="sb"> was (re)loaded`</span><span class="p">);</span>
-<span class="p">};</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataPreSave</span><span class="p">(</span><span class="nx">populateDefaultEffortForNewIncidents</span><span class="p">);</span><span class="w"> </span>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dataPreSave</span><span class="p">(</span><span class="nx">populateDefaultEffortForNewIncidents</span><span class="p">);</span><span class="w"> </span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">populateDefaultEffortForNewIncidents</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">incidentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">"IncidentId"</span><span class="p">);</span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">estimatedEffort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">getDataItemField</span><span class="p">(</span><span class="s2">"EstimatedEffort"</span><span class="p">);</span>
@@ -4875,6 +4854,31 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>registerEvent_windowLoad(handler: () =&gt; void)</summary>
+<p>Registers an event handler to run on full page load (e.g. to load a dashboard widget on page load). Note that while the page may be fully loaded, some data or logic on the page may still be processing or loading.</p>
+<ul>
+<li><strong>handler</strong>: Callback to perform any setup for the SpiraApp that requires window load, such as mounting other events or interacting with the page</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_windowLoad</span><span class="p">(</span><span class="nx">runOnWindowLoad</span><span class="p">);</span>
+</code></pre></div>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="note">
+<summary>registerEvent_dashboardUpdated(handler: () =&gt; void)</summary>
+<p>Registers an event handler on dashboard pages with a release dropdown when it is changed. This can be useful when a user changes the release on the product dashboard or product reporting page.</p>
+<ul>
+<li><strong>handler</strong>: Callback to perform actions or update a SpiraApp widget based on the newly applied release filter. The new releaseId will need to be retrieved separately - not passed as an argument.</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">registerEvent_dashboardUpdated</span><span class="p">(</span><span class="nx">runOnDashboardUpdate</span><span class="p">);</span>
+</code></pre></div>
+</details>
 </div>
 </div>
 </div>
@@ -5018,7 +5022,7 @@
 <h2 id="ux-generator">UX generator<a class="headerlink" href="#ux-generator" title="Permanent link">¶</a></h2>
 <h3 id="dropdown-list-dialog">Dropdown list dialog<a class="headerlink" href="#dropdown-list-dialog" title="Permanent link">¶</a></h3>
 <p>The helper function <code>createComboDialog</code> creates a modal dialog box where users can choose a value from a dropdown list, and then trigger an action in a SpiraApp based off that choice.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="parameters_3" name="__tabbed_9" type="radio"/><input id="example_5" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="parameters_3">Parameters</label><label for="example_5">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="parameters_3" name="__tabbed_8" type="radio"/><input id="example_5" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="parameters_3">Parameters</label><label for="example_5">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -5077,7 +5081,7 @@
 </div>
 <h3 id="custom-dialog">Custom dialog<a class="headerlink" href="#custom-dialog" title="Permanent link">¶</a></h3>
 <p>The helper function <code>createDynamicDialog</code> creates an empty modal dialog box with a title and closing callback, and returns the HTML Element for its inner div. This can then be used to render custom HTML, a Mustache template, a React component, or more. Use <code>closeDialog</code> if you need to close this dialog programmatically.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="parameters_4" name="__tabbed_10" type="radio"/><input id="example_6" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="parameters_4">Parameters</label><label for="example_6">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="parameters_4" name="__tabbed_9" type="radio"/><input id="example_6" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="parameters_4">Parameters</label><label for="example_6">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -5161,15 +5165,15 @@
 </div>
 <h2 id="user-context">User Context<a class="headerlink" href="#user-context" title="Permanent link">¶</a></h2>
 <p>The SpiraAppManager provides a number of functions to let SpiraApps better understand the current context of the user. Some of these have been discussed above. The following functions provide checks that can be useful in building up a SpiraApp's logic based on information about the user's account.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="available-context" name="__tabbed_11" type="radio"/><input id="examples_3" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="available-context">Available Context</label><label for="examples_3">Examples</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <details class="note">
 <summary>canViewArtifactType(artifactTypeId: number)</summary>
 <p>Returns true if the current user can <strong>view</strong> the specified <a href="../SpiraApps-Reference/#artifact-types">artifact type</a> for the current product.</p>
 <ul>
 <li><strong>artifactTypeId</strong>: ID of the artifact type we want to check permissions for </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canViewArtifactType</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can view requirements in this product</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>canCreateArtifactType(artifactTypeId: number)</summary>
@@ -5177,6 +5181,9 @@
 <ul>
 <li><strong>artifactTypeId</strong>: ID of the artifact type we want to check permissions for </li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canCreateArtifactType</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can create test cases in this product</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>canModifyArtifactType(artifactTypeId: number)</summary>
@@ -5184,28 +5191,20 @@
 <ul>
 <li><strong>artifactTypeId</strong>: ID of the artifact type we want to check permissions for </li>
 </ul>
-</details>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canViewArtifactType</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can view requirements in this product</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canCreateArtifactType</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can create test cases in this product</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canModifyArtifactType</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can modify incidents in this product</span>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">canModifyArtifactType</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns true if the user can modify incidents in this product</span>
 </code></pre></div>
-</div>
-</div>
-</div>
+</details>
 <h2 id="format-helpers">Format Helpers<a class="headerlink" href="#format-helpers" title="Permanent link">¶</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="explanation_3" name="__tabbed_12" type="radio"/><input id="examples_4" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="examples_4">Examples</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <details class="note">
 <summary>formatDate(isoDate: string)</summary>
 <p>Formats an ISO 8601 datetime into a user friendly date format/timezone based on the user's cultural settings in Spira.</p>
 <ul>
 <li><strong>isoDate</strong>: String of a date in ISO 8601 format (how Spira provides it from the server)</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatDate</span><span class="p">(</span><span class="s2">"1993-05-16T14:48:00.000Z"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "5/16/1993" if the user's culture is en-US</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>formatDateTime(isoDate: string)</summary>
@@ -5213,6 +5212,9 @@
 <ul>
 <li><strong>isoDate</strong>: String of a date in ISO 8601 format (how Spira provides it from the server)</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="s2">"1993-05-16T14:48:00.000Z"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "5/16/1993 10:48:00 AM" if the user's culture is en-US</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>formatCustomFieldName(propertyNumber: number)</summary>
@@ -5220,6 +5222,9 @@
 <ul>
 <li><strong>propertyNumber</strong>: Field # of the custom property we want the field name of (for <a href="./#page-actions">getDataItemField and updateFormField functions</a>)</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatCustomFieldName</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "Custom_07"</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>convertHtmlToPlainText(htmlTemplate: string)</summary>
@@ -5227,6 +5232,9 @@
 <ul>
 <li><strong>htmlTemplate</strong>: Template string of some HTML to remove markup from. Useful for grabbing information from descriptions or rich text custom properties.</li>
 </ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">convertHtmlToPlainText</span><span class="p">(</span><span class="s2">"&lt;p&gt;Hello World&lt;/p&gt;"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "Hello World"</span>
+</code></pre></div>
 </details>
 <details class="note">
 <summary>sanitizeHtml(htmlToSanitize: string)</summary>
@@ -5234,22 +5242,10 @@
 <ul>
 <li><strong>htmlToSanitize</strong>: String of HTML which is going to be rendered to the DOM from user input, such as in a dashboard widget rendering the description of an artifact</li>
 </ul>
-</details>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatDate</span><span class="p">(</span><span class="s2">"1993-05-16T14:48:00.000Z"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "5/16/1993" if the user's culture is en-US</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="s2">"1993-05-16T14:48:00.000Z"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "5/16/1993 10:48:00 AM" if the user's culture is en-US</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">formatCustomFieldName</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "Custom_07"</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">convertHtmlToPlainText</span><span class="p">(</span><span class="s2">"&lt;p&gt;Hello World&lt;/p&gt;"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "Hello World"</span>
-
-<span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">sanitizeHtml</span><span class="p">(</span><span class="s2">"&lt;image/src/onerror=prompt(8)&gt;"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "&amp;lt;image/src/onerror=prompt(8)&amp;gt" </span>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">spiraAppManager</span><span class="p">.</span><span class="nx">sanitizeHtml</span><span class="p">(</span><span class="s2">"&lt;image/src/onerror=prompt(8)&gt;"</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns "&amp;lt;image/src/onerror=prompt(8)&amp;gt" </span>
 </code></pre></div>
-</div>
-</div>
-</div>
+</details>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
 <p>SpiraApps can store arbitrary data to the Spira server in the form of key value pairs. This is always scoped to the SpiraApp. Additionally, storage items can be scoped to different relevant dimensions, to let you create rich and diverse experiences for end users. SpiraApps can store information for the following dimensions:</p>
 <ul>
@@ -5278,7 +5274,7 @@
 <p class="admonition-title">Secure storage</p>
 <p>New storage items can be created as secure, meaning they are fully encrypted. To ensure full security, secure storage items cannot be sent to the client. There is currently no way to access or use secure storage items and functionality for this will be added in the future.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:6"><input checked="checked" id="insert" name="__tabbed_13" type="radio"/><input id="update" name="__tabbed_13" type="radio"/><input id="get-single-value" name="__tabbed_13" type="radio"/><input id="get-multiple-values" name="__tabbed_13" type="radio"/><input id="delete-single-item" name="__tabbed_13" type="radio"/><input id="delete-multiple-items" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="insert">Insert</label><label for="update">Update</label><label for="get-single-value">Get Single Value</label><label for="get-multiple-values">Get Multiple Values</label><label for="delete-single-item">Delete Single Item</label><label for="delete-multiple-items">Delete Multiple Items</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:6"><input checked="checked" id="insert" name="__tabbed_10" type="radio"/><input id="update" name="__tabbed_10" type="radio"/><input id="get-single-value" name="__tabbed_10" type="radio"/><input id="get-multiple-values" name="__tabbed_10" type="radio"/><input id="delete-single-item" name="__tabbed_10" type="radio"/><input id="delete-multiple-items" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="insert">Insert</label><label for="update">Update</label><label for="get-single-value">Get Single Value</label><label for="get-multiple-values">Get Multiple Values</label><label for="delete-single-item">Delete Single Item</label><label for="delete-multiple-items">Delete Multiple Items</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -5588,7 +5584,7 @@
 <h2 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">¶</a></h2>
 <p>Local storage is a way to store semi-persistent data in the user's browser. SpiraApps have access to a single storage location with data stored as a string. The storage can be retrieved, updated, or deleted. The storage is accessed via helper functions that use a string provided by a SpiraApp.
 Do not use this for storing secure information.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="explanation_4" name="__tabbed_14" type="radio"/><input id="best-practices" name="__tabbed_14" type="radio"/><input id="examples_5" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="explanation_4">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_5">Examples</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="explanation_3" name="__tabbed_11" type="radio"/><input id="best-practices" name="__tabbed_11" type="radio"/><input id="examples_1" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="explanation_3">Explanation</label><label for="best-practices">Best Practices</label><label for="examples_1">Examples</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="note">
@@ -5688,7 +5684,7 @@ Do not use this for storing secure information.</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-<script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
 </body>
 </html>
