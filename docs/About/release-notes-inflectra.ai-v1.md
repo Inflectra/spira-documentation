@@ -11,8 +11,10 @@
         - As an Inflectra.ai user, I can ask about how to use Spira and about my own data in the same conversation, and get accurate answers with documentation sources for the how-to questions [RQ:5720]
 
 !!! bug "Bug fixes and enhancements"
-    - Keep the documentation used by Inflectra.ai up to date automatically when the Spira documentation changes, so answers reflect the latest content [IN:13310]
+    - Explain [what happens when Inflectra.ai is not enabled for a product](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#when-inflectraai-is-not-enabled-for-a-product): the action buttons now stay visible but disabled, with a tooltip explaining that Inflectra.ai is not enabled for the product [IN:13608]
     - Fix existing test steps, risk mitigations, and requirement scenarios not being included in the information sent to Inflectra.ai when generating related content [IN:13156]
+    - Keep the documentation used by Inflectra.ai up to date automatically when the Spira documentation changes, so answers reflect the latest content [IN:13310]
+    
 
 ## September 24 2026
 

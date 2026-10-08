@@ -45,6 +45,20 @@ Inflectra.ai is available in the following places:
 
 - **All pages**: The [chat interface](#chat-interface) is available on every page where the Inflectra.ai sidebar is shown. Use it to ask questions about how to use Spira, or about your own data.
 
+### When Inflectra.ai is not enabled for a product
+Inflectra.ai is turned on in two places: system wide, and for each individual product. If it is on system wide but off for the product you are currently in, the sidebar still opens, but it runs in a limited mode:
+
+- **The action buttons are visible but disabled.** You can still see every action group for the page you are on, so you know what Inflectra.ai could do there, but the buttons are grayed out and cannot be clicked.
+- **The chat interface only answers questions about how to use Spira.** You can still [ask how to use Spira](#asking-how-to-use-spira) and get answers with links to the documentation. You cannot [ask about your own data](#asking-about-your-spira-data) in that product. No API Key is needed to use it this way.
+
+To enable the disabled actions, a system administrator needs to turn Inflectra.ai on for that product:
+
+- System Admin > Workspaces > [View/Edit Product](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product): set "Inflectra.ai" to "yes"
+
+New products have Inflectra.ai on by default, so this usually only affects products that already existed before Inflectra.ai was added to your site. Once an administrator enables it, refresh the page and the actions become available.
+
+Inflectra.ai also has to be [enabled system wide](../Spira-Administration-Guide/System.md/#general-settings) before it can be used in any product. If it is off system wide, the Inflectra.ai icon does not appear in the navigation bar at all.
+
 ### Tagging AI generated content
 Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.
 
@@ -280,6 +294,8 @@ Optional artifacts are below and can be created in any order:
 !!! warning "An API Key is required"
     Each user needs their own API Key enabled before they can use the chat interface. Go to your [My Profile](User-Product-Management.md/#my-profile) page, set "Enable API Keys" to "Yes", and check that an API Key has been generated underneath it (if the box is blank, click "Generate New"). Until this is done, the chat interface will not be able to answer your questions.
 
+    This applies to products that have Inflectra.ai enabled. In a product [where Inflectra.ai is not enabled](#when-inflectraai-is-not-enabled-for-a-product), the chat answers questions about how to use Spira without needing an API Key.
+
 The chat interface is at the bottom of the Inflectra.ai sidebar, available on every page of Spira. From there you can use natural language to work with specialized AI agents that help you with different tasks. Answers stream straight into the sidebar, so you never have to leave the page you are working on.
 
 The chat interface currently supports:
@@ -332,6 +348,7 @@ A few things to keep in mind:
 
 - **It is read-only.** For now, the agent can retrieve data but cannot create, update, or delete anything in Spira.
 - **It respects your permissions.** The agent only sees what you could see in Spira yourself.
+- **The product needs Inflectra.ai enabled.** In a product [where Inflectra.ai is not enabled](#when-inflectraai-is-not-enabled-for-a-product), the chat can only answer questions about how to use Spira, not about your data in that product.
 - **It uses the current product by default.** When you ask about your data without naming a product, the agent answers for the product you are currently in and tells you which one it used. You can name a different product to ask about that one instead.
 
 
