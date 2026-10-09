@@ -1,6 +1,16 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## October 2026
+- [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta6:
+    - Bug Fixes:
+        - [IN:13572] Attachment links in some fields are still broken after migration
+        - [IN:13491] Errors when migrating some template information (custom lists)
+        - [IN:13589] OOM risk when backing up and migrating documents
+
+!!! warning "Beta Version Limitations"
+    This version of the Product Migration Tool is a beta release, and Requirement scenarios are not yet supported. Product Roles with Limited View enabled may have it disabled after migration. Please contact [Inflectra support](mailto:support@inflectra.com) if you experience any issues using the tool, and we will work to get them fixed for the full release.
+
 ## September 2026
 - [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta5:
 
@@ -8,8 +18,6 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [IN:13556] Forbidden Response error when connecting to certain sites
         - [IN:13493] Project role permissions are blank when creating a new role for a migrated user
 
-!!! warning "Beta Version Limitations"
-    This version of the Product Migration Tool is a beta release, and some users may see errors when migrating Custom Lists. Product Roles with Limited View enabled may have it disabled after migration. Please contact [Inflectra support](mailto:support@inflectra.com) if you experience any issues using the tool, and we will work to get them fixed for the full release.
 
 
 - [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta4:
