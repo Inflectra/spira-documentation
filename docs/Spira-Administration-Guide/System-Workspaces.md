@@ -97,7 +97,7 @@ You need to:
 - decide whether the product should have baselining enabled or not. Read more about baselining [here](../Spira-User-Manual/Release-Management.md/#baselining) 
     {: .edition-spiraplan .edition-spirateam}
 - you should initially make sure that the product is marked as "Active";
-- if available, you can disable Inflectra.ai for this product (it is enabled by default). Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. 
+- if available, you can disable Inflectra.ai for this product (it is enabled by default). Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. If you disable it for the product, users still see the Inflectra.ai sidebar, but its action buttons are disabled and its chat can only answer questions about how to use Spira. Read more about [what users see when Inflectra.ai is not enabled for a product](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#when-inflectraai-is-not-enabled-for-a-product). 
     {: .feature-inflectraai}
 
 
@@ -119,7 +119,7 @@ On this screen you can:
     {: .edition-spiraplan .edition-spirateam}
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
 - toggle the active status
-- toggle Inflectra.ai. Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. 
+- toggle Inflectra.ai. Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. Turn this on for any product where users should be able to use the Inflectra.ai action buttons: while it is off, users can open the sidebar but its action buttons are disabled, with a tooltip explaining that Inflectra.ai is not enabled for the product. Read more about [what users see when Inflectra.ai is not enabled for a product](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#when-inflectraai-is-not-enabled-for-a-product). 
     {: .feature-inflectraai}
 
 Once you have made the necessary changes, click the "Save" button to commit them. If you decide that you want to ignore the changes, click the "Cancel" button and the changes will be discarded.
