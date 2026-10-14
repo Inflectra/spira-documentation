@@ -7,9 +7,9 @@
 <link href="../User-Product-Management/" rel="prev"/>
 <link href="../Product-Homepage/" rel="next"/>
 <link href="../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.0" name="generator"/>
 <title>Inflectra.ai - SpiraDocs</title>
-<link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.618322db.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -279,6 +279,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#when-inflectraai-is-not-enabled-for-a-product">
+<span class="md-ellipsis">
+      
+        When Inflectra.ai is not enabled for a product
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tagging-ai-generated-content">
 <span class="md-ellipsis">
       
@@ -469,13 +478,44 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#helper-ai-agent">
+<a class="md-nav__link" href="#chat-interface">
 <span class="md-ellipsis">
       
-        Helper AI Agent
+        Chat Interface
       
     </span>
 </a>
+<nav aria-label="Chat Interface" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversation-threads">
+<span class="md-ellipsis">
+      
+        Conversation threads
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asking-how-to-use-spira">
+<span class="md-ellipsis">
+      
+        Asking how to use Spira
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asking-about-your-spira-data">
+<span class="md-ellipsis">
+      
+        Asking about your Spira data
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4310,6 +4350,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#when-inflectraai-is-not-enabled-for-a-product">
+<span class="md-ellipsis">
+      
+        When Inflectra.ai is not enabled for a product
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tagging-ai-generated-content">
 <span class="md-ellipsis">
       
@@ -4500,13 +4549,44 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#helper-ai-agent">
+<a class="md-nav__link" href="#chat-interface">
 <span class="md-ellipsis">
       
-        Helper AI Agent
+        Chat Interface
       
     </span>
 </a>
+<nav aria-label="Chat Interface" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversation-threads">
+<span class="md-ellipsis">
+      
+        Conversation threads
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asking-how-to-use-spira">
+<span class="md-ellipsis">
+      
+        Asking how to use Spira
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asking-about-your-spira-data">
+<span class="md-ellipsis">
+      
+        Asking about your Spira data
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4559,12 +4639,21 @@
 </ul>
 </li>
 <li>
-<p><strong>All pages</strong>: The chat interface is available on every page where the Inflectra.ai sidebar is shown.</p>
-<ul>
-<li><a href="#helper-ai-agent">Helper AI Agent</a></li>
-</ul>
+<p><strong>All pages</strong>: The <a href="#chat-interface">chat interface</a> is available on every page where the Inflectra.ai sidebar is shown. Use it to ask questions about how to use Spira, or about your own data.</p>
 </li>
 </ul>
+<h3 id="when-inflectraai-is-not-enabled-for-a-product">When Inflectra.ai is not enabled for a product<a class="headerlink" href="#when-inflectraai-is-not-enabled-for-a-product" title="Permanent link">¶</a></h3>
+<p>Inflectra.ai is turned on in two places: system wide, and for each individual product. If it is on system wide but off for the product you are currently in, the sidebar still opens, but it runs in a limited mode:</p>
+<ul>
+<li><strong>The action buttons are visible but disabled.</strong> You can still see every action group for the page you are on, so you know what Inflectra.ai could do there, but the buttons are grayed out and cannot be clicked.</li>
+<li><strong>The chat interface only answers questions about how to use Spira.</strong> You can still <a href="#asking-how-to-use-spira">ask how to use Spira</a> and get answers with links to the documentation. You cannot <a href="#asking-about-your-spira-data">ask about your own data</a> in that product. No API Key is needed to use it this way.</li>
+</ul>
+<p>To enable the disabled actions, a system administrator needs to turn Inflectra.ai on for that product:</p>
+<ul>
+<li>System Admin &gt; Workspaces &gt; <a href="../../Spira-Administration-Guide/System-Workspaces/#edit-a-product">View/Edit Product</a>: set "Inflectra.ai" to "yes"</li>
+</ul>
+<p>New products have Inflectra.ai on by default, so this usually only affects products that already existed before Inflectra.ai was added to your site. Once an administrator enables it, refresh the page and the actions become available.</p>
+<p>Inflectra.ai also has to be <a href="../../Spira-Administration-Guide/System/#general-settings">enabled system wide</a> before it can be used in any product. If it is off system wide, the Inflectra.ai icon does not appear in the navigation bar at all.</p>
 <h3 id="tagging-ai-generated-content">Tagging AI generated content<a class="headerlink" href="#tagging-ai-generated-content" title="Permanent link">¶</a></h3>
 <p>Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.</p>
 <p>Any artifact that is updated by Inflectra.ai will have the tag "ai-augmented" added to it automatically.</p>
@@ -4576,7 +4665,8 @@
 <p><img alt="" src="../img/Inflectra_ai_requirement_list_progress.png"/></p>
 <h3 id="supported-languages">Supported Languages<a class="headerlink" href="#supported-languages" title="Permanent link">¶</a></h3>
 <p>The Inflectra.ai sidebar labels are localized based on the user's <strong><a href="../User-Product-Management/#regional-settings">culture setting</a></strong> in these languages: English, French, German, Portuguese, Brazilian Portuguese, and Spanish. If the user's culture is not supported, English text will be shown.<br/>
-The responses from the AI are localized based on the Name and Description of the artifact being used. For example, when generating tasks for a requirement written in French, the generated tasks will also be written in French. When the input language cannot be determined or is not recognized, the response will be written in English.  </p>
+The responses from the AI are localized based on the Name and Description of the artifact being used. For example, when generating tasks for a requirement written in French, the generated tasks will also be written in French. When the input language cannot be determined or is not recognized, the response will be written in English.<br/>
+The <a href="#chat-interface">chat interface</a> answers in English only at this time.  </p>
 <h3 id="responsible-ai-usage">Responsible AI Usage<a class="headerlink" href="#responsible-ai-usage" title="Permanent link">¶</a></h3>
 <p>Please see <a href="https://www.inflectra.com/Company/Responsible-AI-Statement.aspx">our page on responsible AI usage</a>. Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at <a href="https://www.inflectra.com/support">www.inflectra.com/support</a>.</p>
 <h2 id="artifact-details-pages">Artifact details pages<a class="headerlink" href="#artifact-details-pages" title="Permanent link">¶</a></h2>
@@ -4898,15 +4988,20 @@ This allows you to get a birds-eye view of a release. </p>
 </tr>
 </tbody>
 </table>
-<h2 id="helper-ai-agent">Helper AI Agent<a class="headerlink" href="#helper-ai-agent" title="Permanent link">¶</a></h2>
-<p>The Helper AI Agent answers questions about how to use Spira by searching through the product documentation and streaming answers directly in the sidebar, so you can get help without leaving the page you are working on. To access it, just open the sidebar and interact with the agent via the chat interface. Here are some examples of questions you can ask:</p>
+<h2 id="chat-interface">Chat Interface<a class="headerlink" href="#chat-interface" title="Permanent link">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">An API Key is required</p>
+<p>Each user needs their own API Key enabled before they can use the chat interface. Go to your <a href="../User-Product-Management/#my-profile">My Profile</a> page, set "Enable API Keys" to "Yes", and check that an API Key has been generated underneath it (if the box is blank, click "Generate New"). Until this is done, the chat interface will not be able to answer your questions.</p>
+<p>This applies to products that have Inflectra.ai enabled. In a product <a href="#when-inflectraai-is-not-enabled-for-a-product">where Inflectra.ai is not enabled</a>, the chat answers questions about how to use Spira without needing an API Key.</p>
+</div>
+<p>The chat interface is at the bottom of the Inflectra.ai sidebar, available on every page of Spira. From there you can use natural language to work with specialized AI agents that help you with different tasks. Answers stream straight into the sidebar, so you never have to leave the page you are working on.</p>
+<p>The chat interface currently supports:</p>
 <ul>
-<li>How can I create test cases in Spira?</li>
-<li>How do I configure the time tracking field of my Jira data sync plugin?</li>
-<li>How can I track risks for my releases? Do I need SpiraPlan for that?</li>
-<li>What can I do on this page?</li>
+<li><strong><a href="#asking-how-to-use-spira">How to use Spira</a></strong>: ask how a feature works, how to complete a task, or how to configure and administer Spira. The agent searches the official Spira documentation and answers with links to the relevant pages</li>
+<li><strong><a href="#asking-about-your-spira-data">Your own data in Spira</a></strong>: ask questions about the data in your products and programs. The agent retrieves your live data and answers based on what it finds</li>
 </ul>
-<p>The Helper AI Agent remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:</p>
+<h3 id="conversation-threads">Conversation threads<a class="headerlink" href="#conversation-threads" title="Permanent link">¶</a></h3>
+<p>The chat interface remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:</p>
 <table>
 <thead>
 <tr>
@@ -4937,7 +5032,40 @@ This allows you to get a birds-eye view of a release. </p>
 </tr>
 </tbody>
 </table>
-<p>Conversation threads are saved in your browser, so they persist across page navigations within the same browser.</p>
+<p>Conversation threads are saved in your browser, so they persist as you navigate around Spira. Like the rest of your chat history, they do not transfer to other browsers or computers.</p>
+<h3 id="asking-how-to-use-spira">Asking how to use Spira<a class="headerlink" href="#asking-how-to-use-spira" title="Permanent link">¶</a></h3>
+<p>Ask about Spira's features, configuration, and administration, or about agile and testing methodology in the context of Spira. To get started, open the Inflectra.ai sidebar and type your question into the chat.</p>
+<p>The agent knows which page you are on and which artifact you are viewing, so you can talk about "this requirement" or "this page" without giving it an ID.</p>
+<p>Here are some examples of questions you can ask:</p>
+<ul>
+<li>How can I create test cases in Spira?</li>
+<li>How do I configure the time tracking field of my Jira data sync plugin?</li>
+<li>How can I track risks for my releases? Do I need SpiraPlan for that?</li>
+<li>What can I do on this page?</li>
+</ul>
+<h3 id="asking-about-your-spira-data">Asking about your Spira data<a class="headerlink" href="#asking-about-your-spira-data" title="Permanent link">¶</a></h3>
+<p>The agent can look up and reason over your live data in Spira. Here are some examples of questions you can ask:</p>
+<ul>
+<li>What is the status of RQ:42, and who owns it?</li>
+<li>Which Incidents for the release currently in progress are still open and high priority?</li>
+<li>Summarize the requirements in the current sprint</li>
+<li>What work is assigned to me?</li>
+<li>Are there any new comments on the Requirements I own for the sprint currently in progress?</li>
+</ul>
+<p>It can retrieve:</p>
+<ul>
+<li><strong>Product artifacts</strong>: requirements, incidents, test cases, test sets, test runs, tasks, risks, releases, builds, documents, and automation hosts, including their fields, statuses, owners, dates, associations, and test coverage</li>
+<li><strong>Program artifacts</strong>: capabilities and program milestones <sup id="fnref:SP"><a class="footnote-ref" href="#fn:SP">2</a></sup></li>
+<li><strong>Workspaces</strong>: the products, programs, and templates you have access to</li>
+<li><strong>Your own work</strong>: the artifacts assigned to you</li>
+</ul>
+<p>A few things to keep in mind:</p>
+<ul>
+<li><strong>It is read-only.</strong> For now, the agent can retrieve data but cannot create, update, or delete anything in Spira.</li>
+<li><strong>It respects your permissions.</strong> The agent only sees what you could see in Spira yourself.</li>
+<li><strong>The product needs Inflectra.ai enabled.</strong> In a product <a href="#when-inflectraai-is-not-enabled-for-a-product">where Inflectra.ai is not enabled</a>, the chat can only answer questions about how to use Spira, not about your data in that product.</li>
+<li><strong>It uses the current product by default.</strong> When you ask about your data without naming a product, the agent answers for the product you are currently in and tells you which one it used. You can name a different product to ask about that one instead.</li>
+</ul>
 <div class="footnote">
 <hr/>
 <ol>
@@ -4986,7 +5114,7 @@ This allows you to get a birds-eye view of a release. </p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-<script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
 </body>
 </html>
