@@ -1,6 +1,6 @@
 # Release Notes for Inflectra.ai
 
-## October 13 2026
+## October 14 2026
 
 !!! success "New features"
     - **[Ask questions about your data in Spira](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#asking-about-your-spira-data)**
