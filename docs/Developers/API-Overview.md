@@ -26,6 +26,9 @@ For every request made to the Spira API, you must provide a valid username and A
 | Accept       | This defines what format the response from the server should have. JSON format is supported so use `Accept: application/json`         |
 | Content-Type | This defines the format of the request payload data sent to the server. For POST and PUT methods use `Content-Type: application/json` |
 
+!!! warning "API Keys can expire"
+    Your system administrator can enable an **API Key Rotation Interval** security policy that makes API Keys expire after a set number of days (the default is 90 days). This applies to the API Key used for both the REST and SOAP APIs. Once a key expires, requests that use it are rejected with an "Access Denied" error until a new key is generated. See the [API Key Rotation Interval](../Spira-Administration-Guide/System.md/#api-key-rotation-interval) setting for more details.
+    
 ## Available Methods
 === "GET"
 
@@ -318,6 +321,7 @@ If something goes wrong with your request, the system will return the error code
     - Verify the provided username and API Key
     - Verify the Provided URL is correct (should be similar to https://companyname.spiraservice.net/services/v7_0/RestService.svc/YOUR_API_ENDPOINT)
     - Generate a new API Key ([here's how](http://spiradoc.inflectra.com/HowTo-Guides/Users-profile-management/#how-to-get-or-make-your-rss-token-or-api-key)) and try again
+    - Check if the API Key has expired. If your administrator has enabled the [API Key Rotation Interval](../Spira-Administration-Guide/System.md/#api-key-rotation-interval) policy, an expired key is rejected by both the REST and SOAP APIs until a new key is generated and your integration is reconfigured with it
     - Check if the user is not locked out
     - Check if the user is part of the workspace (product, program, etc.)
     - Check the syntax: make sure to only use the "?" once in the URL

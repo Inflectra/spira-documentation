@@ -1,5 +1,10 @@
 # Release Notes for Spira v9
 
+## Version 9.7 (December 2026)
+
+??? success "New Features"
+    - Adds a new [API Key Rotation Interval](../Spira-Administration-Guide/System.md/#api-key-rotation-interval) security setting that lets administrators set an expiry lifespan on user API Keys [IN:13416]
+
 ## Version 9.6 (October 2026)
 
 ??? bug "Bug fixes and enhancements"
