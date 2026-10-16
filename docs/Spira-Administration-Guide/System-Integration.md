@@ -33,6 +33,17 @@ This table shows the following information about each data sync plug-in:
 
 Above the table you can add a new data sync or refresh the status of the page to ensure that you are seeing the most up to date information. 
 
+### Auditing data synchronization changes
+
+Changes to data-synchronization configuration are automatically recorded in Spira's history, so you can audit who changed a plug-in's setup and what they changed. There is nothing to enable or configure: the records appear in the existing [System History](System.md/#system-history-changes) and [Product History](Product-General-Settings.md/#product-history-changes) views and reports whenever a qualifying change is made, whether through the administration UI or through the v7.0 SOAP/REST API.
+
+The following actions on this page, and on the plug-in details page, are recorded in System History:
+
+- **Adding a plug-in** is recorded as an **Added** change
+- **Editing a plug-in's settings** is recorded as a **Modified** change, with one detail line per changed setting showing its old value and new value.
+- **Deleting a plug-in** is recorded as a **Deleted** change.
+- **Reset Sync** is recorded as a **Modified** change with a single "Reset Sync" detail line, whose new value is the interval the sync was reset to.
+
 
 ## Source Code Integration
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
