@@ -64,3 +64,5 @@ There are online resources to help you create an avatar in the right way, such a
 5. Make sure "Enable API Key" is set to "Yes"
 6. Look at the "API Key": if this is blank, click "Generate New"
 7. You can now click on the API key to copy it automatically to your clipboard
+
+Your administrator may turn on a policy that makes API Keys expire after a set number of days. If so, your profile shows how long your key has left and warns you before it expires - just click "Generate New" to get a fresh one, then update any integration that uses the key.

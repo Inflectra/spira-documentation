@@ -2,6 +2,9 @@
 
 ## Version 9.6 (October 2026)
 
+??? success "New Features"
+    - Adds a new [API Key Rotation Interval](../Spira-Administration-Guide/System.md/#api-key-rotation-interval) security setting that lets administrators set an expiry lifespan on user API Keys [IN:13416]
+
 ??? bug "Bug fixes and enhancements"
     - Addressed a problem where releases with very early start or end dates could cause errors elsewhere in the product [IN:13224]
     - Corrected an issue where progress and linked artifact counts stayed at zero for portfolio and program artifacts after sample data was activated [IN:13343]
