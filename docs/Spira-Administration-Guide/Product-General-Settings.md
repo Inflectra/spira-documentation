@@ -26,6 +26,8 @@ The following artifact changes are recorded:
 If baselining is enabled for this product, changes to associations, test coverage, and positions of test steps, use case steps, and mitigations are recorded. Certain changes to artifacts are not recorded, such as location changes (indenting, outdenting) and comment additions.
 
 Additionally, certain product administration changes are recorded and displayed. These include turning baselining on and off for a product, all testing settings, and some planning options (for example Work In Progress Limits).
+
+Changes to this product's [data-synchronization mappings](#data-synchronization) are also recorded here. Field-value mappings, custom-property mappings, and project mapping changes are logged as **Modified** changes (showing the old and new value for each changed value), while inserting a new project mapping is logged as an **Added** change. The plug-in password is never recorded, and each record stores the plug-in name so it stays readable even after the plug-in is deleted. See [Auditing product mapping changes](#auditing-product-mapping-changes) for the full breakdown.
  
 ![](img/Product_General_Settings_99.png)
 
@@ -162,6 +164,15 @@ In the above example, only TFS is active for this particular product. Clicking o
     The fields displayed on this page do not dynamically filter or restrict themselves based on your currently active plugin. You will see mapping options for artifacts that your specific external tool may not support.
 
     Before configuring your mappings, please refer to your specific plugin's documentation to verify exactly which Spira artifacts and fields are supported for this synchronization in particular.
+
+### Auditing product mapping changes
+
+Changes you make to a product's data-synchronization mappings are automatically recorded in this product's [Product History Changes](#product-history-changes). Changes made through the v7.0 SOAP/REST API are recorded the same way, against the authenticated API user.
+
+- **Standard field value mappings** are recorded as a **Modified** change, with one detail line per changed value, labeled with the artifact type, field, and value (for example "Incident Priority - High"). The external key and the Primary flag are recorded as separate detail lines.
+- **Custom property and custom property value mappings** are saved as a **Modified** change.
+- **Inserting a project mapping** is recorded as an **Added** change, with detail lines for Active (Yes/No) and the external key.
+- **Activating or deactivating a project mapping, or changing its external key**, is recorded as a **Modified** change.
 
 ## Product Data Tools
 
