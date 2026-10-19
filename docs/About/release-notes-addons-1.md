@@ -2,6 +2,12 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
 ## October 2026
+- [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira) v2.1.0:
+
+    - Enhancements and New Features:
+        - [IN:13533] Add environment variables SPIRA_CREATE_TAGS and SPIRA_UPDATE_TAGS to let users specify tags for create or update operations
+        - [IN:13595] As an MCP user, I can search for relevant artifacts by open vs closed statuses easily
+
 - [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta6:
     - Bug Fixes:
         - [IN:13572] Attachment links in some fields are still broken after migration
@@ -57,7 +63,7 @@ This page shows summary information about releases in Spira's addons, data syncs
         
 - [Spira AIConnect SpiraApp](../SpiraApps/Spira-AI-Connect.md) released at v1.1
 
-- [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira):
+- [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira) v2.0.0:
 
     - Enhancements and New Features:
 
