@@ -48,14 +48,14 @@ Inflectra.ai is available in the following places:
 ### When Inflectra.ai is not enabled for a product
 Inflectra.ai is turned on in two places: system wide, and for each individual product. If it is on system wide but off for the product you are currently in, the sidebar still opens, but it runs in a limited mode:
 
-- **The action buttons are visible but disabled.** You can still see every action group for the page you are on, so you know what Inflectra.ai could do there, but the buttons are grayed out and cannot be clicked.
+- **The quick actions are visible but disabled.** You can still see every quick action group for the page you are on, so you know what Inflectra.ai could do there, but the buttons are grayed out and cannot be clicked.
 - **The chat interface only answers questions about how to use Spira.** You can still [ask how to use Spira](#asking-how-to-use-spira) and get answers with links to the documentation. You cannot [ask about your own data](#asking-about-your-spira-data) in that product. No API Key is needed to use it this way.
 
-To enable the disabled actions, a system administrator needs to turn Inflectra.ai on for that product:
+To enable the disabled quick actions, a system administrator needs to turn Inflectra.ai on for that product:
 
 - System Admin > Workspaces > [View/Edit Product](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product): set "Inflectra.ai" to "yes"
 
-New products have Inflectra.ai on by default, so this usually only affects products that already existed before Inflectra.ai was added to your site. Once an administrator enables it, refresh the page and the actions become available.
+New products have Inflectra.ai on by default, so this usually only affects products that already existed before Inflectra.ai was added to your site. Once an administrator enables it, refresh the page and the quick actions become available.
 
 Inflectra.ai also has to be [enabled system wide](../Spira-Administration-Guide/System.md/#general-settings) before it can be used in any product. If it is off system wide, the Inflectra.ai icon does not appear in the navigation bar at all.
 
@@ -83,14 +83,17 @@ The [chat interface](#chat-interface) answers in English only at this time.
 Please see [our page on responsible AI usage](https://www.inflectra.com/Company/Responsible-AI-Statement.aspx). Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at [www.inflectra.com/support](https://www.inflectra.com/support).
 
 
-## Artifact details pages
+## Quick Actions
+Quick actions are the buttons at the bottom of the Inflectra.ai sidebar that generate or analyze content for you in a single click, without the need of approval for each step. The quick actions you see depend on where you are in Spira: each one is only visible when you are on the corresponding page (for example, the requirement quick actions only appear on a requirement details or list page). If you are on a page with no quick actions, the sidebar still shows the [chat interface](#chat-interface).
+
+### Artifact details pages
 On artifact details pages, you can perform actions against one artifact at a time, while viewing the complete data. This provides more detailed information to you about what Inflectra.ai is doing for that artifact. Details pages can also allow more information about the artifact to be shared with Inflectra.ai. 
 
-### Requirement details page
+#### Requirement details page
 
 ![](img/Inflectra_ai_requirements_details.png)
 
-#### Content Generation from Requirements
+##### Content Generation from Requirements
 From the requirement details page you can generate the following content: 
 
 | Generated Content | Description                                                                                                                                      |
@@ -109,7 +112,7 @@ When generating content for a requirement, the following information is provided
 - Names of the parent, grandparent, and so on, of the requirement (its hierarchy)
 - The product name of the product the requirement is in
 
-#### Requirement Test Coverage
+##### Requirement Test Coverage
 
 From the requirement details page you can evaluate how well the requirement is covered by its test cases. This feature analyzes the requirement and produces a structured coverage report.
 
@@ -125,7 +128,7 @@ From the requirement details page you can evaluate how well the requirement is c
 
     If any of these conditions are not met, a message will explain why the analysis could not be completed.
 
-#### Requirement Analysis
+##### Requirement Analysis
 From the requirement details page you can analyze the requirement to see how well it is written and organized, based off specific frameworks. This provides valuable insights into the quality of the text and how effectively it may communicate its meaning to others.
 
 The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.
@@ -138,7 +141,7 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
 | ... Attachment       | Create a new document with this analysis and attach it to the requirement                                                                                                            |
 | ... Task [^STSP]     | Create a new task with this analysis and attach it to the requirement (for scores between 1 and 4 only)<br>The owner and priority will be automatically set based on the requirement |
 
-#### EARS Analysis
+##### EARS Analysis
 !!! info "EARS"
     The EARS (Easy Approach to Requirements Syntax) framework provides a structured and constrained way to write clear, unambiguous requirements, typically following the "When [optional trigger], while [optional pre-conditions], the [system name] shall [system response]" pattern. Its value lies in reducing ambiguity and errors in requirements specifications, leading to more efficient development and testing, and ultimately, higher quality systems, because its precise structure forces clarity and helps prevent misinterpretations.
 
@@ -158,7 +161,7 @@ The analysis includes a score from 1 to 5. A score of 5 means the requirement is
     Note that screenshots should be preserved in the updated description.
 
 
-### Test Case details page
+#### Test Case details page
 From the test case details page you can generate the following content:
 
 ![](img/Inflectra_ai_testcase_details.png)
@@ -180,11 +183,11 @@ When generating content for a test case, the following information is provided t
 
 - The product name of the product the test case is in
 
-### Releases details page
+#### Releases details page
 
 ![](img/Inflectra_ai_release_details.png)
 
-#### Release Analysis
+##### Release Analysis
 From the release details page you can analyze the release to bring its different parts together into a text summary.
 This allows you to get a birds-eye view of a release. 
 
@@ -194,7 +197,7 @@ This allows you to get a birds-eye view of a release.
 | ... Create Attachment | Create a new document with this analysis and attach it to the release                                                                                   |
 | ... Add comment       | Add a comment with this analysis to the release (the comment will include a label to mark it as ai-generated)                                           |
 
-### Task details page
+#### Task details page
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 From the task details page you can generate the following content: 
@@ -217,7 +220,7 @@ From the task details page you can generate the following content:
 
 
 
-### Risks details page
+#### Risks details page
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 From the risk details page you can generate the following content:
@@ -237,7 +240,7 @@ When generating content for a risk, the following information is provided to Inf
 - Any existing risk mitigations
 - The product name of the product the risk is in
 
-## Artifact list pages
+### Artifact list pages
 When using Inflectra.ai on the list page, you can select a small number of artifacts at a time. 
 
 Please make sure to keep the list page and the Inflectra.ai sidebar open while the operation completes (this may take a few minutes based on the amount of processing required). 
@@ -246,7 +249,7 @@ If Inflectra.ai encounters any problems for a specific artifact it will give you
 
 ![](img/Inflectra_ai_list_errors.png){.border-all}
 
-### Requirements list pages
+#### Requirements list pages
 From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:
 
 ![](img/Inflectra_ai_requirements_list.png)
@@ -267,7 +270,7 @@ When generating content for a requirement on the list page, the following inform
 - Any existing requirement steps
 - The product name of the product the requirement is in
 
-## My Page
+### My Page
 !!! warning "This functionality is only available for System Administrators"
 
 From the My Page, system administrators can quickly generate a new product with a rich set of artifacts, by providing a name and description. The product is created with its own template, along with a high level set of requirements. You can then optionally use AI to generate more artifacts to fill out the product and speed up delivery. This way users can build out an entire product skeleton in a few minutes.
