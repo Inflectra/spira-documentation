@@ -8,6 +8,9 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [IN:13533] Add environment variables SPIRA_CREATE_TAGS and SPIRA_UPDATE_TAGS to let users specify tags for create or update operations
         - [IN:13595] As an MCP user, I can search for relevant artifacts by open vs closed statuses easily
 
+- [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta7:
+    - Updates tool dependencies to maintain security.
+
 - [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta6:
     - Bug Fixes:
         - [IN:13572] Attachment links in some fields are still broken after migration
