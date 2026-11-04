@@ -6,1777 +6,1798 @@
 
     Many tables have a single field shown in *italic* - these are the Primary Keys for that table, which means that field can be used as the unique identifier for each row of data. 
 
+    The Type column gives the data type the view returns. This matters for custom graphs: the first column you select is the category label and can be any type, but the second and later columns are plotted as series and must be numeric.
+
+    Custom property fields are listed as a range, for example `CUST_01 ... CUST_99`, meaning every field in that range exists. They are all String, whatever the property's display type, so a numeric custom property has to be cast before it can be plotted.
+
 ## Artifact Associations
-| R_ArtifactAssociations    |
-| ------------------------- |
-| ARTIFACT_LINK_TYPE_ID     |
-| SOURCE_ARTIFACT_ID        |
-| SOURCE_ARTIFACT_TYPE_ID   |
-| DEST_ARTIFACT_ID          |
-| DEST_ARTIFACT_TYPE_ID     |
-| CREATOR_ID                |
-| CREATION_DATE             |
-| COMMENT                   |
-| SOURCE_ARTIFACT_TYPE_NAME |
-| DEST_ARTIFACT_TYPE_NAME   |
-| CREATOR_NAME              |
-| ARTIFACT_LINK_TYPE_NAME   |
+| R_ArtifactAssociations    | Type     |
+| ------------------------- | -------- |
+| ARTIFACT_LINK_TYPE_ID     | Int32    |
+| SOURCE_ARTIFACT_ID        | Int32    |
+| SOURCE_ARTIFACT_TYPE_ID   | Int32    |
+| DEST_ARTIFACT_ID          | Int32    |
+| DEST_ARTIFACT_TYPE_ID     | Int32    |
+| CREATOR_ID                | Int32    |
+| CREATION_DATE             | DateTime |
+| COMMENT                   | String   |
+| SOURCE_ARTIFACT_TYPE_NAME | String   |
+| DEST_ARTIFACT_TYPE_NAME   | String   |
+| CREATOR_NAME              | String   |
+| ARTIFACT_LINK_TYPE_NAME   | String   |
+| ARTIFACT_LINK_ID          | Int32    |
 
 ## Artifact Associations - Extended
 For normal use we strongly recommend using the standard artifact association view above. This extended view adds the artifact names, which can be very helpful, but will make the reports using it run much slower. 
 
-| R_ArtifactAssociationExtended |
-| ----------------------------- |
-| ARTIFACT_LINK_TYPE_ID         |
-| SOURCE_ARTIFACT_ID            |
-| SOURCE_ARTIFACT_TYPE_ID       |
-| DEST_ARTIFACT_ID              |
-| DEST_ARTIFACT_TYPE_ID         |
-| CREATOR_ID                    |
-| CREATION_DATE                 |
-| COMMENT                       |
-| SOURCE_ARTIFACT_TYPE_NAME     |
-| DEST_ARTIFACT_TYPE_NAME       |
-| CREATOR_NAME                  |
-| ARTIFACT_LINK_TYPE_NAME       |
-| SOURCE_ARTIFACT_NAME          |
-| DEST_ARTIFACT_NAME            |
+| R_ArtifactAssociationExtended | Type     |
+| ----------------------------- | -------- |
+| ARTIFACT_LINK_TYPE_ID         | Int32    |
+| SOURCE_ARTIFACT_ID            | Int32    |
+| SOURCE_ARTIFACT_TYPE_ID       | Int32    |
+| DEST_ARTIFACT_ID              | Int32    |
+| DEST_ARTIFACT_TYPE_ID         | Int32    |
+| CREATOR_ID                    | Int32    |
+| CREATION_DATE                 | DateTime |
+| COMMENT                       | String   |
+| SOURCE_ARTIFACT_TYPE_NAME     | String   |
+| DEST_ARTIFACT_TYPE_NAME       | String   |
+| CREATOR_NAME                  | String   |
+| ARTIFACT_LINK_TYPE_NAME       | String   |
+| SOURCE_ARTIFACT_NAME          | String   |
+| DEST_ARTIFACT_NAME            | String   |
+| ARTIFACT_LINK_ID              | Int32    |
 
 ## Artifact Attachments
-| R_ArtifactAttachments |
-| --------------------- |
-| ARTIFACT_TYPE_ID      |
-| ARTIFACT_ID           |
-| ARTIFACT_TYPE_NAME    |
-| ARTIFACT_NAME         |
-| COMMENT               |
-| CREATOR_ID            |
-| CREATION_DATE         |
-| CREATOR_NAME          |
-| ATTACHMENT_ID         |
-| PROJECT_ID            |
-| ARTIFACT_STATUS_NAME  |
+| R_ArtifactAttachments | Type     |
+| --------------------- | -------- |
+| ARTIFACT_TYPE_ID      | Int32    |
+| ARTIFACT_ID           | Int32    |
+| ARTIFACT_TYPE_NAME    | String   |
+| ARTIFACT_NAME         | String   |
+| COMMENT               | String   |
+| CREATOR_ID            | Int32    |
+| CREATION_DATE         | DateTime |
+| CREATOR_NAME          | String   |
+| ATTACHMENT_ID         | Int32    |
+| PROJECT_ID            | Int32    |
+| ARTIFACT_STATUS_NAME  | String   |
+| ARTIFACT_LINK_ID      | Int32    |
 
 ## Artifact Tags
-| R_ArtifactTags     |
-| ------------------ |
-| ARTIFACT_ID        |
-| ARTIFACT_TYPE_ID   |
-| TAGS               |
-| PROJECT_ID         |
-| PROJECT_NAME       |
-| ARTIFACT_TYPE_NAME |
+| R_ArtifactTags     | Type   |
+| ------------------ | ------ |
+| ARTIFACT_ID        | Int32  |
+| ARTIFACT_TYPE_ID   | Int32  |
+| TAGS               | String |
+| PROJECT_ID         | Int32  |
+| PROJECT_NAME       | String |
+| ARTIFACT_TYPE_NAME | String |
 
 ## Artifact Types
-| R_ArtifactTypes    |
-| ------------------ |
-| *ARTIFACT_TYPE_ID* |
-| NAME               |
-| PREFIX             |
+| R_ArtifactTypes    | Type   |
+| ------------------ | ------ |
+| *ARTIFACT_TYPE_ID* | Int32  |
+| NAME               | String |
+| PREFIX             | String |
 
 ## Attachments
-| R_Attachments                  |
-| ------------------------------ |
-| *ATTACHMENT_ID*                |
-| ATTACHMENT_TYPE_ID             |
-| AUTHOR_ID                      |
-| EDITOR_ID                      |
-| FILENAME                       |
-| DESCRIPTION                    |
-| UPLOAD_DATE                    |
-| EDITED_DATE                    |
-| SIZE                           |
-| CURRENT_VERSION                |
-| PROJECT_ID                     |
-| PROJECT_ATTACHMENT_FOLDER_ID   |
-| CONCURRENCY_DATE               |
-| DOCUMENT_STATUS_ID             |
-| DOCUMENT_TYPE_ID               |
-| DOCUMENT_STATUS_NAME           |
-| DOCUMENT_TYPE_NAME             |
-| TAGS                           |
-| CUST_01...                     |
-| CUST_99                        |
-| IS_KEY_DOCUMENT                |
-| DOCUMENT_STATUS_IS_OPEN_STATUS |
-| PROJECT_IS_ACTIVE              |
-| PROJECT_GROUP_ID               |
-| PROJECT_NAME                   |
-| AUTHOR_NAME                    |
-| EDITOR_NAME                    |
-| ATTACHMENT_TYPE_NAME           |
-| PROJECT_ATTACHMENT_FOLDER_NAME |
+| R_Attachments                  | Type     |
+| ------------------------------ | -------- |
+| *ATTACHMENT_ID*                | Int32    |
+| ATTACHMENT_TYPE_ID             | Int32    |
+| AUTHOR_ID                      | Int32    |
+| EDITOR_ID                      | Int32    |
+| FILENAME                       | String   |
+| DESCRIPTION                    | String   |
+| UPLOAD_DATE                    | DateTime |
+| EDITED_DATE                    | DateTime |
+| SIZE                           | Int32    |
+| CURRENT_VERSION                | String   |
+| PROJECT_ID                     | Int32    |
+| PROJECT_ATTACHMENT_FOLDER_ID   | Int32    |
+| CONCURRENCY                    | Int64    |
+| DOCUMENT_STATUS_ID             | Int32    |
+| DOCUMENT_TYPE_ID               | Int32    |
+| DOCUMENT_STATUS_NAME           | String   |
+| DOCUMENT_TYPE_NAME             | String   |
+| TAGS                           | String   |
+| CUST_01 ... CUST_99            | String   |
+| IS_KEY_DOCUMENT                | Boolean  |
+| DOCUMENT_STATUS_IS_OPEN_STATUS | Boolean  |
+| PROJECT_IS_ACTIVE              | Boolean  |
+| PROJECT_GROUP_ID               | Int32    |
+| PROJECT_NAME                   | String   |
+| AUTHOR_NAME                    | String   |
+| EDITOR_NAME                    | String   |
+| ATTACHMENT_TYPE_NAME           | String   |
+| PROJECT_ATTACHMENT_FOLDER_NAME | String   |
 
 ## Attachment Folders
-| R_AttachmentFolders                 |
-| ----------------------------------- |
-| *PROJECT_ATTACHMENT_FOLDER_ID*      |
-| PROJECT_ID                          |
-| PARENT_PROJECT_ATTACHMENT_FOLDER_ID |
-| NAME                                |
-| PROJECT_NAME                        |
-| PROJECT_GROUP_ID                    |
+| R_AttachmentFolders                 | Type   |
+| ----------------------------------- | ------ |
+| *PROJECT_ATTACHMENT_FOLDER_ID*      | Int32  |
+| PROJECT_ID                          | Int32  |
+| PARENT_PROJECT_ATTACHMENT_FOLDER_ID | Int32  |
+| NAME                                | String |
+| PROJECT_NAME                        | String |
+| PROJECT_GROUP_ID                    | Int32  |
 
 ## Attachment Versions
-| R_AttachmentVersions    |
-| ----------------------- |
-| *ATTACHMENT_VERSION_ID* |
-| ATTACHMENT_ID           |
-| AUTHOR_ID               |
-| FILENAME                |
-| DESCRIPTION             |
-| UPLOAD_DATE             |
-| SIZE                    |
-| VERSION_NUMBER          |
-| IS_CURRENT              |
-| CHANGESET_ID            |
-| AUTHOR_NAME             |
-| ATTACHMENT_TYPE_ID      |
-| PROJECT_ID              |
+| R_AttachmentVersions    | Type     |
+| ----------------------- | -------- |
+| *ATTACHMENT_VERSION_ID* | Int32    |
+| ATTACHMENT_ID           | Int32    |
+| AUTHOR_ID               | Int32    |
+| FILENAME                | String   |
+| DESCRIPTION             | String   |
+| UPLOAD_DATE             | DateTime |
+| SIZE                    | Int32    |
+| VERSION_NUMBER          | String   |
+| IS_CURRENT              | Boolean  |
+| CHANGESET_ID            | Int64    |
+| AUTHOR_NAME             | String   |
+| ATTACHMENT_TYPE_ID      | Int32    |
+| PROJECT_ID              | Int32    |
 
 ## Automation Hosts
-| R_AutomationHosts    |
-| -------------------- |
-| *AUTOMATION_HOST_ID* |
-| PROJECT_ID           |
-| NAME                 |
-| DESCRIPTION          |
-| TOKEN                |
-| LAST_UPDATE_DATE     |
-| IS_DELETED           |
-| CUST_01...           |
-| CUST_99              |
-| PROJECT_NAME         |
-| PROJECT_GROUP_ID     |
-| IS_ACTIVE            |
-| IS_ATTACHMENTS       |
-| CONCURRENCY_DATE     |
-| LAST_CONTACT_DATE    |
+| R_AutomationHosts    | Type     |
+| -------------------- | -------- |
+| *AUTOMATION_HOST_ID* | Int32    |
+| PROJECT_ID           | Int32    |
+| NAME                 | String   |
+| DESCRIPTION          | String   |
+| TOKEN                | String   |
+| LAST_UPDATE_DATE     | DateTime |
+| IS_DELETED           | Boolean  |
+| CUST_01 ... CUST_99  | String   |
+| PROJECT_NAME         | String   |
+| PROJECT_GROUP_ID     | Int32    |
+| IS_ACTIVE            | Boolean  |
+| IS_ATTACHMENTS       | Boolean  |
+| CONCURRENCY          | Int64    |
+| LAST_CONTACT_DATE    | DateTime |
 
 ## Baselines
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 See [this KB](https://www.inflectra.com/Support/KnowledgeBase/KB550.aspx) for some examples of using this custom report table
 
-| R_Baselines             |
-| ----------------------- |
-| *BASELINE_ID*           |
-| PROJECT_ID              |
-| CREATOR_USER_ID         |
-| CHANGESET_ID            |
-| RELEASE_ID              |
-| NAME                    |
-| DESCRIPTION             |
-| IS_ACTIVE               |
-| IS_APPROVED             |
-| IS_DELETED              |
-| CREATION_DATE           |
-| LAST_UPDATE_DATE        |
-| CONCURRENCY_DATE        |
-| BASELINE_CREATOR_LOGIN  |
-| CHANGESET_CREATOR_ID    |
-| CHANGESET_CREATOR_LOGIN |
-| ARTIFACT_TYPE_ID        |
-| ARTIFACT_TYPE_NAME      |
-| CHANGESET_DATE          |
-| CHANGESET_TYPE_ID       |
-| CHANGESET_TYPE_NAME     |
+| R_Baselines             | Type     |
+| ----------------------- | -------- |
+| *BASELINE_ID*           | Int32    |
+| PROJECT_ID              | Int32    |
+| CREATOR_USER_ID         | Int32    |
+| CHANGESET_ID            | Int64    |
+| RELEASE_ID              | Int32    |
+| NAME                    | String   |
+| DESCRIPTION             | String   |
+| IS_ACTIVE               | Boolean  |
+| IS_APPROVED             | Boolean  |
+| IS_DELETED              | Boolean  |
+| CREATION_DATE           | DateTime |
+| LAST_UPDATE_DATE        | DateTime |
+| CONCURRENCY             | Int64    |
+| BASELINE_CREATOR_LOGIN  | String   |
+| CHANGESET_CREATOR_ID    | Int32    |
+| CHANGESET_CREATOR_LOGIN | String   |
+| ARTIFACT_TYPE_ID        | Int32    |
+| ARTIFACT_TYPE_NAME      | String   |
+| CHANGESET_DATE          | DateTime |
+| CHANGESET_TYPE_ID       | Int32    |
+| CHANGESET_TYPE_NAME     | String   |
 
 ## Builds
 Note that BUILD_STATUS_ID can have the following values: 1 = Failed, 2 = Succeeded, 3 = Unstable, 4 = Aborted.
 
-| R_Builds        |
-| --------------- |
-| *BUILD_ID*      |
-| BUILD_STATUS_ID |
-| RELEASE_ID      |
-| PROJECT_ID      |
-| NAME            |
-| DESCRIPTION     |
+| R_Builds               | Type     |
+| ---------------------- | -------- |
+| *BUILD_ID*             | Int32    |
+| BUILD_STATUS_ID        | Int32    |
+| RELEASE_ID             | Int32    |
+| PROJECT_ID             | Int32    |
+| NAME                   | String   |
+| DESCRIPTION            | String   |
+| IS_DELETED             | Boolean  |
+| CREATION_DATE          | DateTime |
+| LAST_UPDATE_DATE       | DateTime |
+| RELEASE_NAME           | String   |
+| RELEASE_VERSION_NUMBER | String   |
+| PROJECT_NAME           | String   |
+| PROJECT_GROUP_ID       | Int32    |
 
 ## Build Statuses
-| R_BuildStatuses |
-| --------------- |
-| BUILD_STATUS_ID |
-| NAME            |
-| IS_ACTIVE       |
+| R_BuildStatuses | Type    |
+| --------------- | ------- |
+| BUILD_STATUS_ID | Int32   |
+| NAME            | String  |
+| IS_ACTIVE       | Boolean |
 
 ## Capabilities
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Capabilities |
-| --------------------------- |
-| *CAPABILITY_ID*             |
-| PROJECT_GROUP_ID            |
-| MILESTONE_ID                |
-| STATUS_ID                   |
-| TYPE_ID                     |
-| PRIORITY_ID                 |
-| NAME                        |
-| DESCRIPTION                 |
-| IS_DELETED                  |
-| PERCENT_COMPLETE            |
-| PROJECT_REQUIREMENT_COUNT   |
-| INDENT_LEVEL                |
-| CONCURRENCY_GUID            |
-| CREATOR_ID                  |
-| OWNER_ID                    |
-| CREATION_DATE               |
-| LAST_UPDATED_DATE           |
-| IS_SUMMARY                  |
-| STATUS_NAME                 |
-| STATUS_IS_OPEN              |
-| TYPE_NAME                   |
-| PRIORITY_NAME               |
-| PRIORITY_COLOR              |
-| PRIORITY_SCORE              |
-| MILESTONE_NAME              |
-| CREATOR_NAME                |
-| OWNER_NAME                  |
-| PROJECT_GROUP_NAME          |
-| CUST_01...                  |
-| CUST_30                     |
+| R_ProjectGroup_Capabilities | Type     |
+| --------------------------- | -------- |
+| *CAPABILITY_ID*             | Int32    |
+| PROJECT_GROUP_ID            | Int32    |
+| MILESTONE_ID                | Int32    |
+| STATUS_ID                   | Int32    |
+| TYPE_ID                     | Int32    |
+| PRIORITY_ID                 | Int32    |
+| NAME                        | String   |
+| DESCRIPTION                 | String   |
+| IS_DELETED                  | Boolean  |
+| PERCENT_COMPLETE            | Int32    |
+| PROJECT_REQUIREMENT_COUNT   | Int32    |
+| INDENT_LEVEL                | String   |
+| CONCURRENCY                 | Int64    |
+| CREATOR_ID                  | Int32    |
+| OWNER_ID                    | Int32    |
+| CREATION_DATE               | DateTime |
+| LAST_UPDATED_DATE           | DateTime |
+| IS_SUMMARY                  | Boolean  |
+| STATUS_NAME                 | String   |
+| STATUS_IS_OPEN              | Boolean  |
+| TYPE_NAME                   | String   |
+| PRIORITY_NAME               | String   |
+| PRIORITY_COLOR              | String   |
+| PRIORITY_SCORE              | Int32    |
+| MILESTONE_NAME              | String   |
+| CREATOR_NAME                | String   |
+| OWNER_NAME                  | String   |
+| PROJECT_GROUP_NAME          | String   |
+| CUST_01 ... CUST_30         | String   |
+| CREATOR_LOGIN               | String   |
+| OWNER_LOGIN                 | String   |
 
 ## Capability Priorities
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Capability_Priorities |
-| ------------------------------------ |
-| *PRIORITY_ID*                        |
-| NAME                                 |
-| COLOR                                |
-| IS_ACTIVE                            |
-| IS_DELETED                           |
-| SCORE                                |
+| R_ProjectGroup_Capability_Priorities | Type    |
+| ------------------------------------ | ------- |
+| *PRIORITY_ID*                        | Int32   |
+| NAME                                 | String  |
+| COLOR                                | String  |
+| IS_ACTIVE                            | Boolean |
+| IS_DELETED                           | Boolean |
+| SCORE                                | Int32   |
 
 ## Capability Requirement Associations
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Capability_Project_Requirements |
-| ---------------------------------------------- |
-| CAPABILITY_ID                                  |
-| REQUIREMENT_ID                                 |
-| ARTIFACT_LINK_TYPE_ID                          |
-| CAPABILITY_NAME                                |
-| REQUIREMENT_NAME                               |
-| ARTIFACT_LINK_TYPE_NAME                        |
+| R_ProjectGroup_Capability_Project_Requirements | Type   |
+| ---------------------------------------------- | ------ |
+| CAPABILITY_ID                                  | Int32  |
+| REQUIREMENT_ID                                 | Int32  |
+| ARTIFACT_LINK_TYPE_ID                          | Int32  |
+| CAPABILITY_NAME                                | String |
+| REQUIREMENT_NAME                               | String |
+| ARTIFACT_LINK_TYPE_NAME                        | String |
 
 ## Capability Statuses
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Capability_Statuses |
-| ---------------------------------- |
-| *STATUS_ID*                        |
-| NAME                               |
-| POSITION                           |
-| IS_ACTIVE                          |
-| IS_DELETED                         |
-| IS_DEFAULT                         |
-| IS_OPEN                            |
-| ON_BOARD                           |
+| R_ProjectGroup_Capability_Statuses | Type    |
+| ---------------------------------- | ------- |
+| *STATUS_ID*                        | Int32   |
+| NAME                               | String  |
+| POSITION                           | Int32   |
+| IS_ACTIVE                          | Boolean |
+| IS_DELETED                         | Boolean |
+| IS_DEFAULT                         | Boolean |
+| IS_OPEN                            | Boolean |
+| ON_BOARD                           | Boolean |
 
 ## Capability Types
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Capability_Types |
-| ------------------------------- |
-| *TYPE_ID*                       |
-| NAME                            |
-| IS_ACTIVE                       |
-| IS_DELETED                      |
-| IS_DEFAULT                      |
+| R_ProjectGroup_Capability_Types | Type    |
+| ------------------------------- | ------- |
+| *TYPE_ID*                       | Int32   |
+| NAME                            | String  |
+| IS_ACTIVE                       | Boolean |
+| IS_DELETED                      | Boolean |
+| IS_DEFAULT                      | Boolean |
 
 ## Comments
-| R_Comments         |
-| ------------------ |
-| ARTIFACT_TYPE_ID   |
-| ARTIFACT_ID        |
-| CREATOR_ID         |
-| COMMENT_TEXT       |
-| CREATION_DATE      |
-| CREATOR_NAME       |
-| ARTIFACT_TYPE_NAME |
+| R_Comments         | Type     |
+| ------------------ | -------- |
+| ARTIFACT_TYPE_ID   | Int32    |
+| ARTIFACT_ID        | Int32    |
+| CREATOR_ID         | Int32    |
+| COMMENT_TEXT       | String   |
+| CREATION_DATE      | DateTime |
+| CREATOR_NAME       | String   |
+| ARTIFACT_TYPE_NAME | String   |
 
 
 ## Components
-| R_Components     |
-| ---------------- |
-| *COMPONENT_ID*   |
-| PROJECT_ID       |
-| NAME             |
-| IS_DELETED       |
-| IS_ACTIVE        |
-| PROJECT_NAME     |
-| PROJECT_GROUP_ID |
+| R_Components     | Type    |
+| ---------------- | ------- |
+| *COMPONENT_ID*   | Int32   |
+| PROJECT_ID       | Int32   |
+| NAME             | String  |
+| IS_DELETED       | Boolean |
+| IS_ACTIVE        | Boolean |
+| PROJECT_NAME     | String  |
+| PROJECT_GROUP_ID | Int32   |
 
 ## Custom Lists
-| R_CustomLists             |
-| ------------------------- |
-| *CUSTOM_PROPERTY_LIST_ID* |
-| PROJECT_ID                |
-| NAME                      |
-| IS_ACTIVE                 |
-| IS_SORTED_ON_VALUE        |
-| PROJECT_NAME              |
-| PROJECT_IS_ACTIVE         |
-| PROJECT_TEMPLATE_ID       |
+| R_CustomLists             | Type    |
+| ------------------------- | ------- |
+| *CUSTOM_PROPERTY_LIST_ID* | Int32   |
+| PROJECT_ID                | Int32   |
+| NAME                      | String  |
+| IS_ACTIVE                 | Boolean |
+| IS_SORTED_ON_VALUE        | Boolean |
+| PROJECT_NAME              | String  |
+| PROJECT_IS_ACTIVE         | Boolean |
+| PROJECT_TEMPLATE_ID       | Int32   |
 
 ## Custom List Values
-| R_CustomListValues                |
-| --------------------------------- |
-| *CUSTOM_PROPERTY_VALUE_ID*        |
-| CUSTOM_PROPERTY_LIST_ID           |
-| NAME                              |
-| PROJECT_ID                        |
-| CUSTOM_PROPERTY_LIST_NAME         |
-| CUSTOM_PROPERTY_LIST_IS_ACTIVE    |
-| PROJECT_NAME                      |
-| PROJECT_IS_ACTIVE                 |
-| IS_ACTIVE                         |
-| IS_DELETED                        |
-| DEPENDENT_CUSTOM_PROPERTY_LIST_ID |
-| PARENT_CUSTOM_PROPERTY_VALUE_ID   |
+| R_CustomListValues                | Type    |
+| --------------------------------- | ------- |
+| *CUSTOM_PROPERTY_VALUE_ID*        | Int32   |
+| CUSTOM_PROPERTY_LIST_ID           | Int32   |
+| NAME                              | String  |
+| PROJECT_ID                        | Int32   |
+| CUSTOM_PROPERTY_LIST_NAME         | String  |
+| CUSTOM_PROPERTY_LIST_IS_ACTIVE    | Boolean |
+| PROJECT_NAME                      | String  |
+| PROJECT_IS_ACTIVE                 | Boolean |
+| IS_ACTIVE                         | Boolean |
+| IS_DELETED                        | Boolean |
+| DEPENDENT_CUSTOM_PROPERTY_LIST_ID | Int32   |
+| PARENT_CUSTOM_PROPERTY_VALUE_ID   | Int32   |
 
 ## Custom Property Definitions
-| R_CustomPropertyDefinitions  |
-| ---------------------------- |
-| *CUSTOM_PROPERTY_ID*         |
-| CUSTOM_PROPERTY_TYPE_ID      |
-| PROJECT_ID                   |
-| ARTIFACT_TYPE_ID             |
-| NAME                         |
-| PROPERTY_NUMBER              |
-| IS_DELETED                   |
-| CUSTOM_PROPERTY_LIST_ID      |
-| LEGACY_NAME                  |
-| PROJECT_NAME                 |
-| PROJECT_IS_ACTIVE            |
-| ARTIFACT_TYPE_NAME           |
-| CUSTOM_PROPERTY_TYPE_NAME    |
-| CUSTOM_PROPERTY_LIST_NAME    |
-| DEPENDENT_CUSTOM_PROPERTY_ID |
-| PROJECT_TEMPLATE_ID          |
+| R_CustomPropertyDefinitions  | Type    |
+| ---------------------------- | ------- |
+| *CUSTOM_PROPERTY_ID*         | Int32   |
+| CUSTOM_PROPERTY_TYPE_ID      | Int32   |
+| PROJECT_ID                   | Int32   |
+| ARTIFACT_TYPE_ID             | Int32   |
+| NAME                         | String  |
+| PROPERTY_NUMBER              | Int32   |
+| IS_DELETED                   | Boolean |
+| CUSTOM_PROPERTY_LIST_ID      | Int32   |
+| LEGACY_NAME                  | String  |
+| PROJECT_NAME                 | String  |
+| PROJECT_IS_ACTIVE            | Boolean |
+| ARTIFACT_TYPE_NAME           | String  |
+| CUSTOM_PROPERTY_TYPE_NAME    | String  |
+| CUSTOM_PROPERTY_LIST_NAME    | String  |
+| DEPENDENT_CUSTOM_PROPERTY_ID | Int32   |
+| PROJECT_TEMPLATE_ID          | Int32   |
+| POSITION                     | Int32   |
+| DESCRIPTION                  | String  |
 
 ## Document Statuses
-| R_DocumentStatuses    |
-| --------------------- |
-| *DOCUMENT_STATUS_ID*  |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| POSITION              |
-| IS_ACTIVE             |
-| IS_OPEN_STATUS        |
-| IS_DEFAULT            |
-| PROJECT_TEMPLATE_NAME |
+| R_DocumentStatuses    | Type    |
+| --------------------- | ------- |
+| *DOCUMENT_STATUS_ID*  | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| POSITION              | Int32   |
+| IS_ACTIVE             | Boolean |
+| IS_OPEN_STATUS        | Boolean |
+| IS_DEFAULT            | Boolean |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Document Types
-| R_DocumentTypes       |
-| --------------------- |
-| *DOCUMENT_TYPE_ID*    |
-| PROJECT_TEMPLATE_ID   |
-| DOCUMENT_WORKFLOW_ID  |
-| NAME                  |
-| DESCRIPTION           |
-| IS_ACTIVE             |
-| IS_DEFAULT            |
-| PROJECT_TEMPLATE_NAME |
+| R_DocumentTypes       | Type    |
+| --------------------- | ------- |
+| *DOCUMENT_TYPE_ID*    | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| DOCUMENT_WORKFLOW_ID  | Int32   |
+| NAME                  | String  |
+| DESCRIPTION           | String  |
+| IS_ACTIVE             | Boolean |
+| IS_DEFAULT            | Boolean |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Events
-| R_Events                 |
-| ------------------------ |
-| EVENT_TYPE_ID            |
-| EVENT_TIME_UTC           |
-| EVENT_TIME               |
-| EVENT_CATEGORY           |
-| EVENT_SEQUENCE           |
-| EVENT_OCCURRENCE         |
-| EVENT_CODE               |
-| EVENT_DETAIL_CODE        |
-| MESSAGE                  |
-| APPLICATION_PATH         |
-| APPLICATION_VIRTUAL_PATH |
-| MACHINE_NAME             |
-| REQUEST_URL              |
-| EXCEPTION_TYPE           |
-| DETAILS                  |
-| EVENT_TYPE_NAME          |
+| R_Events                 | Type     |
+| ------------------------ | -------- |
+| EVENT_TYPE_ID            | Int32    |
+| EVENT_TIME_UTC           | DateTime |
+| EVENT_TIME               | DateTime |
+| EVENT_CATEGORY           | String   |
+| EVENT_SEQUENCE           | Decimal  |
+| EVENT_OCCURRENCE         | Decimal  |
+| EVENT_CODE               | Int32    |
+| EVENT_DETAIL_CODE        | Int32    |
+| MESSAGE                  | String   |
+| APPLICATION_PATH         | String   |
+| APPLICATION_VIRTUAL_PATH | String   |
+| MACHINE_NAME             | String   |
+| REQUEST_URL              | String   |
+| EXCEPTION_TYPE           | String   |
+| DETAILS                  | String   |
+| EVENT_TYPE_NAME          | String   |
+| EVENT_ID                 | String   |
 
 ## Global / System Custom Property Definitions
-| R_GlobalCustomPropertyDefinitions |
-| --------------------------------- |
-| *CUSTOM_PROPERTY_ID*              |
-| CUSTOM_PROPERTY_TYPE_ID           |
-| CUSTOM_PROPERTY_TYPE_NAME         |
-| WORKSPACE_TYPE_ID                 |
-| WORKSPACE_TYPE_NAME               |
-| NAME                              |
-| PROPERTY_NUMBER                   |
-| IS_DELETED                        |
-| CUSTOM_PROPERTY_LIST_ID           |
-| CUSTOM_PROPERTY_LIST_NAME         |
-| POSITION                          |
-| DESCRIPTION                       |
+| R_GlobalCustomPropertyDefinitions | Type    |
+| --------------------------------- | ------- |
+| *CUSTOM_PROPERTY_ID*              | Int32   |
+| CUSTOM_PROPERTY_TYPE_ID           | Int32   |
+| CUSTOM_PROPERTY_TYPE_NAME         | String  |
+| WORKSPACE_TYPE_ID                 | Int32   |
+| WORKSPACE_TYPE_NAME               | String  |
+| NAME                              | String  |
+| PROPERTY_NUMBER                   | Int32   |
+| IS_DELETED                        | Boolean |
+| CUSTOM_PROPERTY_LIST_ID           | Int32   |
+| CUSTOM_PROPERTY_LIST_NAME         | String  |
+| POSITION                          | Int32   |
+| DESCRIPTION                       | String  |
 
 ## Global / System Custom Property Lists
-| R_GlobalCustomLists       |
-| ------------------------- |
-| *CUSTOM_PROPERTY_LIST_ID* |
-| NAME                      |
-| IS_ACTIVE                 |
-| IS_SORTED_ON_VALUE        |
+| R_GlobalCustomLists       | Type    |
+| ------------------------- | ------- |
+| *CUSTOM_PROPERTY_LIST_ID* | Int32   |
+| NAME                      | String  |
+| IS_ACTIVE                 | Boolean |
+| IS_SORTED_ON_VALUE        | Boolean |
 
 ## Global / System Custom Property List Values
-| R_GlobalCustomListValues       |
-| ------------------------------ |
-| *CUSTOM_PROPERTY_VALUE_ID*     |
-| NAME                           |
-| IS_ACTIVE                      |
-| IS_DELETED                     |
-| CUSTOM_PROPERTY_LIST_ID        |
-| CUSTOM_PROPERTY_LIST_NAME      |
-| CUSTOM_PROPERTY_LIST_IS_ACTIVE |
+| R_GlobalCustomListValues       | Type    |
+| ------------------------------ | ------- |
+| *CUSTOM_PROPERTY_VALUE_ID*     | Int32   |
+| NAME                           | String  |
+| IS_ACTIVE                      | Boolean |
+| IS_DELETED                     | Boolean |
+| CUSTOM_PROPERTY_LIST_ID        | Int32   |
+| CUSTOM_PROPERTY_LIST_NAME      | String  |
+| CUSTOM_PROPERTY_LIST_IS_ACTIVE | Boolean |
 
 ## Global / System History Change-Sets
-| R_Global_HistoryChangeSets |
-| -------------------------- |
-| *CHANGESET_ID*             |
-| USER_ID                    |
-| CHANGE_DATE                |
-| CHANGETYPE_ID              |
-| ARTIFACT_TYPE_ID           |
-| ARTIFACT_ID                |
-| ARTIFACT_DESC              |
-| WORKSPACE_TYPE_ID          |
-| WORKSPACE_ID               |
-| CHANGETYPE_NAME            |
-| USER_NAME                  |
-| ARTIFACT_TYPE_NAME         |
-| WORKSPACE_TYPE_NAME        |
+| R_Global_HistoryChangeSets | Type     |
+| -------------------------- | -------- |
+| *CHANGESET_ID*             | Int64    |
+| USER_ID                    | Int32    |
+| CHANGE_DATE                | DateTime |
+| CHANGETYPE_ID              | Int32    |
+| ARTIFACT_TYPE_ID           | Int32    |
+| ARTIFACT_ID                | Int32    |
+| ARTIFACT_DESC              | String   |
+| WORKSPACE_TYPE_ID          | Int32    |
+| WORKSPACE_ID               | Int32    |
+| CHANGETYPE_NAME            | String   |
+| USER_NAME                  | String   |
+| ARTIFACT_TYPE_NAME         | String   |
+| WORKSPACE_TYPE_NAME        | String   |
 
 ## Global / System History Details
-| R_Global_HistoryDetails |
-| ----------------------- |
-| *ARTIFACT_HISTORY_ID*   |
-| FIELD_NAME              |
-| OLD_VALUE               |
-| NEW_VALUE               |
-| CHANGESET_ID            |
-| FIELD_TYPE_ID           |
-| CUSTOM_PROPERTY_ID      |
-| ARTIFACT_ID             |
-| USER_ID                 |
-| ARTIFACT_TYPE_ID        |
-| CHANGE_DATE             |
-| USER_NAME               |
-| CHANGE_NAME             |
-| CHANGETYPE_ID           |
-| ARTIFACT_FIELD_TYPE_ID  |
-| ARTIFACT_TYPE_NAME      |
+| R_Global_HistoryDetails | Type     |
+| ----------------------- | -------- |
+| *ARTIFACT_HISTORY_ID*   | Int64    |
+| FIELD_NAME              | String   |
+| OLD_VALUE               | String   |
+| NEW_VALUE               | String   |
+| CHANGESET_ID            | Int64    |
+| FIELD_TYPE_ID           | Int32    |
+| CUSTOM_PROPERTY_ID      | Int32    |
+| ARTIFACT_ID             | Int32    |
+| USER_ID                 | Int32    |
+| ARTIFACT_TYPE_ID        | Int32    |
+| CHANGE_DATE             | DateTime |
+| USER_NAME               | String   |
+| CHANGE_NAME             | String   |
+| CHANGETYPE_ID           | Int32    |
+| ARTIFACT_FIELD_TYPE_ID  | Int32    |
+| ARTIFACT_TYPE_NAME      | String   |
 
 ## History Change-Sets
-| R_HistoryChangeSets |
-| ------------------- |
-| *CHANGESET_ID*      |
-| USER_ID             |
-| ARTIFACT_TYPE_ID    |
-| ARTIFACT_ID         |
-| CHANGE_DATE         |
-| CHANGETYPE_ID       |
-| PROJECT_ID          |
-| REVERT_ID           |
-| ARTIFACT_DESC       |
-| CHANGETYPE_NAME     |
-| USER_NAME           |
-| ARTIFACT_TYPE_NAME  |
-| SIGNATURE_HASH      |
-| MEANING             |
+| R_HistoryChangeSets | Type     |
+| ------------------- | -------- |
+| *CHANGESET_ID*      | Int32    |
+| USER_ID             | Int32    |
+| ARTIFACT_TYPE_ID    | Int32    |
+| ARTIFACT_ID         | Int32    |
+| CHANGE_DATE         | DateTime |
+| CHANGETYPE_ID       | Int32    |
+| PROJECT_ID          | Int32    |
+| REVERT_ID           | Int32    |
+| ARTIFACT_DESC       | String   |
+| CHANGETYPE_NAME     | String   |
+| USER_NAME           | String   |
+| ARTIFACT_TYPE_NAME  | String   |
+| SIGNATURE_HASH      | String   |
+| MEANING             | String   |
+| CHANGEAREA_ID       | Int32    |
 
 ## History Details
-| R_HistoryDetails   |
-| ------------------ |
-| FIELD_NAME         |
-| OLD_VALUE          |
-| FIELD_CAPTION      |
-| NEW_VALUE          |
-| OLD_VALUE_INT      |
-| OLD_VALUE_DATE     |
-| NEW_VALUE_INT      |
-| NEW_VALUE_DATE     |
-| CHANGESET_ID       |
-| FIELD_ID           |
-| CUSTOM_PROPERTY_ID |
-| ARTIFACT_ID        |
-| USER_ID            |
-| ARTIFACT_TYPE_ID   |
-| CHANGE_DATE        |
-| CHANGER_NAME       |
-| CHANGE_NAME        |
-| CHANGETYPE_ID      |
+| R_HistoryDetails       | Type     |
+| ---------------------- | -------- |
+| FIELD_NAME             | String   |
+| OLD_VALUE              | String   |
+| FIELD_CAPTION          | String   |
+| NEW_VALUE              | String   |
+| OLD_VALUE_INT          | Int32    |
+| OLD_VALUE_DATE         | DateTime |
+| NEW_VALUE_INT          | Int32    |
+| NEW_VALUE_DATE         | DateTime |
+| CHANGESET_ID           | Int32    |
+| FIELD_ID               | Int32    |
+| CUSTOM_PROPERTY_ID     | Int32    |
+| ARTIFACT_ID            | Int32    |
+| USER_ID                | Int32    |
+| ARTIFACT_TYPE_ID       | Int32    |
+| CHANGE_DATE            | DateTime |
+| CHANGER_NAME           | String   |
+| CHANGE_NAME            | String   |
+| CHANGETYPE_ID          | Int32    |
+| ARTIFACT_HISTORY_ID    | Int32    |
+| ARTIFACT_FIELD_TYPE_ID | Int32    |
 
 ## Incidents
-| R_Incidents                     |
-| ------------------------------- |
-| *INCIDENT_ID*                   |
-| PROJECT_ID                      |
-| PRIORITY_ID                     |
-| SEVERITY_ID                     |
-| INCIDENT_STATUS_ID              |
-| INCIDENT_TYPE_ID                |
-| OPENER_ID                       |
-| OWNER_ID                        |
-| DESCRIPTION                     |
-| CREATION_DATE                   |
-| CLOSED_DATE                     |
-| LAST_UPDATE_DATE                |
-| DETECTED_RELEASE_ID             |
-| RESOLVED_RELEASE_ID             |
-| START_DATE                      |
-| COMPLETION_PERCENT              |
-| ESTIMATED_EFFORT                |
-| ACTUAL_EFFORT                   |
-| REMAINING_EFFORT                |
-| PROJECTED_EFFORT                |
-| IS_DELETED                      |
-| VERIFIED_RELEASE_ID             |
-| PRIORITY_NAME                   |
-| PRIORITY_COLOR                  |
-| SEVERITY_NAME                   |
-| SEVERITY_COLOR                  |
-| INCIDENT_STATUS_NAME            |
-| INCIDENT_TYPE_NAME              |
-| OPENER_NAME                     |
-| OWNER_NAME                      |
-| DETECTED_RELEASE_VERSION_NUMBER |
-| RESOLVED_RELEASE_VERSION_NUMBER |
-| VERIFIED_RELEASE_VERSION_NUMBER |
-| PROJECT_GROUP_ID                |
-| PROJECT_NAME                    |
-| CUST_01...                      |
-| CUST_99                         |
-| NAME                            |
-| IS_ATTACHMENTS                  |
-| COMPONENT_IDS                   |
-| INCIDENT_STATUS_IS_OPEN_STATUS  |
-| PROJECT_IS_ACTIVE               |
-| INCIDENT_TYPE_IS_ISSUE          |
-| INCIDENT_TYPE_IS_RISK           |
-| CONCURRENCY_DATE                |
-| RANK                            |
-| END_DATE                        |
-| DETECTED_BUILD_ID               |
-| RESOLVED_BUILD_ID               |
-| DETECTED_BUILD_NAME             |
-| RESOLVED_BUILD_NAME             |
-| TAGS                            |
+| R_Incidents                     | Type     |
+| ------------------------------- | -------- |
+| *INCIDENT_ID*                   | Int32    |
+| PROJECT_ID                      | Int32    |
+| PRIORITY_ID                     | Int32    |
+| SEVERITY_ID                     | Int32    |
+| INCIDENT_STATUS_ID              | Int32    |
+| INCIDENT_TYPE_ID                | Int32    |
+| OPENER_ID                       | Int32    |
+| OWNER_ID                        | Int32    |
+| DESCRIPTION                     | String   |
+| CREATION_DATE                   | DateTime |
+| CLOSED_DATE                     | DateTime |
+| LAST_UPDATE_DATE                | DateTime |
+| DETECTED_RELEASE_ID             | Int32    |
+| RESOLVED_RELEASE_ID             | Int32    |
+| START_DATE                      | DateTime |
+| COMPLETION_PERCENT              | Int32    |
+| ESTIMATED_EFFORT                | Int32    |
+| ACTUAL_EFFORT                   | Int32    |
+| REMAINING_EFFORT                | Int32    |
+| PROJECTED_EFFORT                | Int32    |
+| IS_DELETED                      | Boolean  |
+| VERIFIED_RELEASE_ID             | Int32    |
+| PRIORITY_NAME                   | String   |
+| PRIORITY_COLOR                  | String   |
+| SEVERITY_NAME                   | String   |
+| SEVERITY_COLOR                  | String   |
+| INCIDENT_STATUS_NAME            | String   |
+| INCIDENT_TYPE_NAME              | String   |
+| OPENER_NAME                     | String   |
+| OWNER_NAME                      | String   |
+| DETECTED_RELEASE_VERSION_NUMBER | String   |
+| RESOLVED_RELEASE_VERSION_NUMBER | String   |
+| VERIFIED_RELEASE_VERSION_NUMBER | String   |
+| PROJECT_GROUP_ID                | Int32    |
+| PROJECT_NAME                    | String   |
+| CUST_01 ... CUST_99             | String   |
+| NAME                            | String   |
+| IS_ATTACHMENTS                  | Boolean  |
+| COMPONENT_IDS                   | String   |
+| INCIDENT_STATUS_IS_OPEN_STATUS  | Boolean  |
+| PROJECT_IS_ACTIVE               | Boolean  |
+| INCIDENT_TYPE_IS_ISSUE          | Boolean  |
+| INCIDENT_TYPE_IS_RISK           | Boolean  |
+| CONCURRENCY                     | Int64    |
+| RANK                            | Int32    |
+| END_DATE                        | DateTime |
+| DETECTED_BUILD_ID               | Int32    |
+| RESOLVED_BUILD_ID               | Int32    |
+| DETECTED_BUILD_NAME             | String   |
+| RESOLVED_BUILD_NAME             | String   |
+| TAGS                            | String   |
 
 ## Incident Priorities
-| R_IncidentPriorities  |
-| --------------------- |
-| *PRIORITY_ID*         |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| COLOR                 |
-| IS_ACTIVE             |
-| SCORE                 |
-| PROJECT_TEMPLATE_NAME |
+| R_IncidentPriorities  | Type    |
+| --------------------- | ------- |
+| *PRIORITY_ID*         | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| COLOR                 | String  |
+| IS_ACTIVE             | Boolean |
+| SCORE                 | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Incident Severities
-| R_IncidentSeverities  |
-| --------------------- |
-| *SEVERITY_ID*         |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| COLOR                 |
-| IS_ACTIVE             |
-| SCORE                 |
-| PROJECT_TEMPLATE_NAME |
+| R_IncidentSeverities  | Type    |
+| --------------------- | ------- |
+| *SEVERITY_ID*         | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| COLOR                 | String  |
+| IS_ACTIVE             | Boolean |
+| SCORE                 | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Incident Statuses
-| R_IncidentStatuses    |
-| --------------------- |
-| *INCIDENT_STATUS_ID*  |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| IS_ACTIVE             |
-| IS_OPEN_STATUS        |
-| IS_DEFAULT            |
-| PROJECT_TEMPLATE_NAME |
+| R_IncidentStatuses    | Type    |
+| --------------------- | ------- |
+| *INCIDENT_STATUS_ID*  | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| IS_OPEN_STATUS        | Boolean |
+| IS_DEFAULT            | Boolean |
+| PROJECT_TEMPLATE_NAME | String  |
+| POSITION              | Int32   |
+| ON_BOARD              | Boolean |
 
 ## Incident Types
-| R_IncidentTypes       |
-| --------------------- |
-| *INCIDENT_TYPE_ID*    |
-| PROJECT_TEMPLATE_ID   |
-| WORKFLOW_ID           |
-| NAME                  |
-| IS_ACTIVE             |
-| IS_ISSUE              |
-| IS_DEFAULT            |
-| PROJECT_TEMPLATE_NAME |
+| R_IncidentTypes       | Type    |
+| --------------------- | ------- |
+| *INCIDENT_TYPE_ID*    | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| WORKFLOW_ID           | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| IS_ISSUE              | Boolean |
+| IS_DEFAULT            | Boolean |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Pending Test Runs
-| R_PendingTestRuns      |
-| ---------------------- |
-| *TEST_RUNS_PENDING_ID* |
-| PROJECT_ID             |
-| TEST_SET_ID            |
-| TESTER_ID              |
-| NAME                   |
-| CREATION_DATE          |
-| LAST_UPDATE_DATE       |
-| COUNT_PASSED           |
-| COUNT_FAILED           |
-| COUNT_BLOCKED          |
-| COUNT_CAUTION          |
-| COUNT_NOT_RUN          |
-| COUNT_NOT_APPLICABLE   |
-| TESTER_LOGIN           |
-| TESTER_FULLNAME        |
-| TEST_SET_NAME          |
-| PROJECT_NAME           |
+| R_PendingTestRuns      | Type     |
+| ---------------------- | -------- |
+| *TEST_RUNS_PENDING_ID* | Int32    |
+| PROJECT_ID             | Int32    |
+| TEST_SET_ID            | Int32    |
+| TESTER_ID              | Int32    |
+| NAME                   | String   |
+| CREATION_DATE          | DateTime |
+| LAST_UPDATE_DATE       | DateTime |
+| COUNT_PASSED           | Int32    |
+| COUNT_FAILED           | Int32    |
+| COUNT_BLOCKED          | Int32    |
+| COUNT_CAUTION          | Int32    |
+| COUNT_NOT_RUN          | Int32    |
+| COUNT_NOT_APPLICABLE   | Int32    |
+| TESTER_LOGIN           | String   |
+| TESTER_FULLNAME        | String   |
+| TEST_SET_NAME          | String   |
+| PROJECT_NAME           | String   |
 
 ## Portfolios
 !!! abstract "Available in SpiraPlan only"
 
-| R_Portfolios      |
-| ----------------- |
-| *PORTFOLIO_ID*    |
-| NAME              |
-| DESCRIPTION       |
-| IS_ACTIVE         |
-| START_DATE        |
-| END_DATE          |
-| PERCENT_COMPLETE  |
-| REQUIREMENT_COUNT |
+| R_Portfolios      | Type     |
+| ----------------- | -------- |
+| *PORTFOLIO_ID*    | Int32    |
+| NAME              | String   |
+| DESCRIPTION       | String   |
+| IS_ACTIVE         | Boolean  |
+| START_DATE        | DateTime |
+| END_DATE          | DateTime |
+| PERCENT_COMPLETE  | Int32    |
+| REQUIREMENT_COUNT | Int32    |
 
 ## Program Milestones
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Milestones       |
-| ------------------------------- |
-| *PROJECT_GROUP_MILESTONE_ID*    |
-| PROJECT_GROUP_ID                |
-| TYPE_ID                         |
-| STATUS_ID                       |
-| NAME                            |
-| DESCRIPTION                     |
-| IS_DELETED                      |
-| START_DATE                      |
-| END_DATE                        |
-| PERCENT_COMPLETE                |
-| CHILDREN_START_DATE             |
-| CHILDREN_END_DATE               |
-| PROJECT_RELEASE_COUNT           |
-| PROJECT_GROUP_REQUIREMENT_COUNT |
-| CONCURRENCY_GUID                |
-| CREATOR_ID                      |
-| OWNER_ID                        |
-| CREATION_DATE                   |
-| LAST_UPDATED_DATE               |
-| STATUS_NAME                     |
-| STATUS_IS_OPEN                  |
-| TYPE_NAME                       |
-| CREATOR_NAME                    |
-| OWNER_NAME                      |
-| PROJECT_GROUP_NAME              |
-| CUST_01...                      |
-| CUST_30                         |
+| R_ProjectGroup_Milestones       | Type     |
+| ------------------------------- | -------- |
+| *PROJECT_GROUP_MILESTONE_ID*    | Int32    |
+| PROJECT_GROUP_ID                | Int32    |
+| TYPE_ID                         | Int32    |
+| STATUS_ID                       | Int32    |
+| NAME                            | String   |
+| DESCRIPTION                     | String   |
+| IS_DELETED                      | Boolean  |
+| START_DATE                      | DateTime |
+| END_DATE                        | DateTime |
+| PERCENT_COMPLETE                | Int32    |
+| CHILDREN_START_DATE             | DateTime |
+| CHILDREN_END_DATE               | DateTime |
+| PROJECT_RELEASE_COUNT           | Int32    |
+| PROJECT_GROUP_REQUIREMENT_COUNT | Int32    |
+| CONCURRENCY                     | Int64    |
+| CREATOR_ID                      | Int32    |
+| OWNER_ID                        | Int32    |
+| CREATION_DATE                   | DateTime |
+| LAST_UPDATED_DATE               | DateTime |
+| STATUS_NAME                     | String   |
+| STATUS_IS_OPEN                  | Boolean  |
+| TYPE_NAME                       | String   |
+| CREATOR_NAME                    | String   |
+| OWNER_NAME                      | String   |
+| PROJECT_GROUP_NAME              | String   |
+| CUST_01 ... CUST_30             | String   |
 
 ## Program Milestone Releases
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Milestone_Project_Releases |
-| ----------------------------------------- |
-| *PROJECT_GROUP_MILESTONE_ID*              |
-| RELEASE_ID                                |
-| ARTIFACT_LINK_TYPE_ID                     |
-| PROJECT_GROUP_MILESTONE_NAME              |
-| RELEASE_NAME                              |
-| ARTIFACT_LINK_TYPE_NAME                   |
+| R_ProjectGroup_Milestone_Project_Releases | Type   |
+| ----------------------------------------- | ------ |
+| *PROJECT_GROUP_MILESTONE_ID*              | Int32  |
+| RELEASE_ID                                | Int32  |
+| ARTIFACT_LINK_TYPE_ID                     | Int32  |
+| PROJECT_GROUP_MILESTONE_NAME              | String |
+| RELEASE_NAME                              | String |
+| ARTIFACT_LINK_TYPE_NAME                   | String |
 
 ## Program Milestone Statuses
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Milestone_Statuses |
-| --------------------------------- |
-| *STATUS_ID*                       |
-| NAME                              |
-| IS_ACTIVE                         |
-| IS_DELETED                        |
-| IS_DEFAULT                        |
-| IS_OPEN                           |
+| R_ProjectGroup_Milestone_Statuses | Type    |
+| --------------------------------- | ------- |
+| *STATUS_ID*                       | Int32   |
+| NAME                              | String  |
+| IS_ACTIVE                         | Boolean |
+| IS_DELETED                        | Boolean |
+| IS_DEFAULT                        | Boolean |
+| IS_OPEN                           | Boolean |
 
 ## Program Milestone Types
 !!! abstract "Available in SpiraPlan only"
 
-| R_ProjectGroup_Milestone_Types |
-| ------------------------------ |
-| *TYPE_ID*                      |
-| NAME                           |
-| IS_ACTIVE                      |
-| IS_DELETED                     |
-| IS_DEFAULT                     |
+| R_ProjectGroup_Milestone_Types | Type    |
+| ------------------------------ | ------- |
+| *TYPE_ID*                      | Int32   |
+| NAME                           | String  |
+| IS_ACTIVE                      | Boolean |
+| IS_DELETED                     | Boolean |
+| IS_DEFAULT                     | Boolean |
 
 ## Project Artifacts Sharing 
 Retrieves data about cross product associations
 
-| R_ProjectArtifactSharings |
-| ------------------------- |
-| SOURCE_PROJECT_ID         |
-| DEST_PROJECT_ID           |
-| ARTIFACT_TYPE_ID          |
-| SOURCE_PROJECT_NAME       |
-| DEST_PROJECT_NAME         |
-| ARTIFACT_TYPE_NAME        |
-| ARTIFACT_TYPE_PREFIX      |
+| R_ProjectArtifactSharings | Type   |
+| ------------------------- | ------ |
+| SOURCE_PROJECT_ID         | Int32  |
+| DEST_PROJECT_ID           | Int32  |
+| ARTIFACT_TYPE_ID          | Int32  |
+| SOURCE_PROJECT_NAME       | String |
+| DEST_PROJECT_NAME         | String |
+| ARTIFACT_TYPE_NAME        | String |
+| ARTIFACT_TYPE_PREFIX      | String |
 
 ## Projects (Products)
-| R_Projects                  |
-| --------------------------- |
-| *PROJECT_ID*                |
-| PROJECT_GROUP_ID            |
-| NAME                        |
-| DESCRIPTION                 |
-| CREATION_DATE               |
-| WEBSITE                     |
-| WORKING_HOURS               |
-| WORKING_DAYS                |
-| NON_WORKING_HOURS           |
-| TASK_DEFAULT_EFFORT         |
-| PROJECT_GROUP_NAME          |
-| PROJECT_GROUP_DESCRIPTION   |
-| IS_ACTIVE                   |
-| IS_TIME_TRACK_INCIDENTS     |
-| IS_TIME_TRACK_TASKS         |
-| IS_EFFORT_INCIDENTS         |
-| IS_EFFORT_TASKS             |
-| IS_TASKS_AUTO_CREATE        |
-| REQ_DEFAULT_ESTIMATE        |
-| REQ_POINT_EFFORT            |
-| IS_REQ_STATUS_BY_TASKS      |
-| IS_REQ_STATUS_BY_TEST_CASES |
-| IS_EFFORT_TEST_CASES        |
-| IS_REQ_STATUS_AUTO_PLANNED  |
-| PROJECT_TEMPLATE_ID         |
-| START_DATE                  |
-| END_DATE                    |
-| PERCENT_COMPLETE            |
-| REQUIREMENT_COUNT           |
-| INFLECTRA_AI_ENABLED        |
-| CUST_01...                  |
-| CUST_30                     |
+| R_Projects                  | Type     |
+| --------------------------- | -------- |
+| *PROJECT_ID*                | Int32    |
+| PROJECT_GROUP_ID            | Int32    |
+| NAME                        | String   |
+| DESCRIPTION                 | String   |
+| CREATION_DATE               | DateTime |
+| WEBSITE                     | String   |
+| WORKING_HOURS               | Int32    |
+| WORKING_DAYS                | Int32    |
+| NON_WORKING_HOURS           | Int32    |
+| TASK_DEFAULT_EFFORT         | Int32    |
+| PROJECT_GROUP_NAME          | String   |
+| PROJECT_GROUP_DESCRIPTION   | String   |
+| IS_ACTIVE                   | Boolean  |
+| IS_TIME_TRACK_INCIDENTS     | Boolean  |
+| IS_TIME_TRACK_TASKS         | Boolean  |
+| IS_EFFORT_INCIDENTS         | Boolean  |
+| IS_EFFORT_TASKS             | Boolean  |
+| IS_TASKS_AUTO_CREATE        | Boolean  |
+| REQ_DEFAULT_ESTIMATE        | Decimal  |
+| REQ_POINT_EFFORT            | Int32    |
+| IS_REQ_STATUS_BY_TASKS      | Boolean  |
+| IS_REQ_STATUS_BY_TEST_CASES | Boolean  |
+| IS_EFFORT_TEST_CASES        | Boolean  |
+| IS_REQ_STATUS_AUTO_PLANNED  | Boolean  |
+| PROJECT_TEMPLATE_ID         | Int32    |
+| START_DATE                  | DateTime |
+| END_DATE                    | DateTime |
+| PERCENT_COMPLETE            | Int32    |
+| REQUIREMENT_COUNT           | Int32    |
+| INFLECTRA_AI_ENABLED        | String   |
+| CUST_01 ... CUST_30         | String   |
+| CONCURRENCY                 | Int64    |
 
 ## Project Groups (Programs)
-| R_ProjectGroups     |
-| ------------------- |
-| *PROJECT_GROUP_ID*  |
-| NAME                |
-| DESCRIPTION         |
-| WEBSITE             |
-| PROJECT_TEMPLATE_ID |
-| IS_ACTIVE           |
-| IS_DEFAULT          |
-| PERCENT_COMPLETE    |
-| START_DATE          |
-| END_DATE            |
-| PORTFOLIO_ID        |
-| REQUIREMENT_COUNT   |
+| R_ProjectGroups     | Type     |
+| ------------------- | -------- |
+| *PROJECT_GROUP_ID*  | Int32    |
+| NAME                | String   |
+| DESCRIPTION         | String   |
+| WEBSITE             | String   |
+| PROJECT_TEMPLATE_ID | Int32    |
+| IS_ACTIVE           | Boolean  |
+| IS_DEFAULT          | Boolean  |
+| PERCENT_COMPLETE    | Int32    |
+| START_DATE          | DateTime |
+| END_DATE            | DateTime |
+| PORTFOLIO_ID        | Int32    |
+| REQUIREMENT_COUNT   | Int32    |
 
 ## Project Group Membership (Program Membership)
-| R_ProjectGroup_MembershipUsers |
-| ------------------------------ |
-| PROJECT_GROUP_ID               |
-| PROJECT_GROUP_NAME             |
-| PROJECT_GROUP_IS_ACTIVE        |
-| PROJECT_GROUP_ROLE_ID          |
-| PROJECT_GROUP_ROLE_NAME        |
-| PROJECT_GROUP_ROLE_ISACTIVE    |
-| USER_ID                        |
-| USER_NAME                      |
-| USER_FULLNAME                  |
+| R_ProjectGroup_MembershipUsers | Type    |
+| ------------------------------ | ------- |
+| PROJECT_GROUP_ID               | Int32   |
+| PROJECT_GROUP_NAME             | String  |
+| PROJECT_GROUP_IS_ACTIVE        | Boolean |
+| PROJECT_GROUP_ROLE_ID          | Int32   |
+| PROJECT_GROUP_ROLE_NAME        | String  |
+| PROJECT_GROUP_ROLE_ISACTIVE    | Boolean |
+| USER_ID                        | Int32   |
+| USER_NAME                      | String  |
+| USER_FULLNAME                  | String  |
 
 ## Project (Product) Membership
-| R_ProjectMembership |
-| ------------------- |
-| PROJECT_ID          |
-| USER_ID             |
-| PROJECT_ROLE_ID     |
-| PROJECT_NAME        |
-| PROJECT_ROLE_NAME   |
-| USER_NAME           |
-| FIRST_NAME          |
-| LAST_NAME           |
-| DEPARTMENT          |
-| IS_SYSTEM_ADMIN     |
+| R_ProjectMembership | Type    |
+| ------------------- | ------- |
+| PROJECT_ID          | Int32   |
+| USER_ID             | Int32   |
+| PROJECT_ROLE_ID     | Int32   |
+| PROJECT_NAME        | String  |
+| PROJECT_ROLE_NAME   | String  |
+| USER_NAME           | String  |
+| FIRST_NAME          | String  |
+| LAST_NAME           | String  |
+| DEPARTMENT          | String  |
+| IS_SYSTEM_ADMIN     | Boolean |
 
 ## Project Release Resources
-| R_ProjectReleaseResources |
-| ------------------------- |
-| PROJECT_ID                |
-| USER_ID                   |
-| RELEASE_ID                |
-| INCIDENT_EFFORT           |
-| TASK_EFFORT               |
+| R_ProjectReleaseResources | Type  |
+| ------------------------- | ----- |
+| PROJECT_ID                | Int32 |
+| USER_ID                   | Int32 |
+| RELEASE_ID                | Int32 |
+| INCIDENT_EFFORT           | Int32 |
+| TASK_EFFORT               | Int32 |
 
 ## Project Roles
-| R_ProjectRoles           |
-| ------------------------ |
-| *PROJECT_ROLE_ID*        |
-| NAME                     |
-| IS_ACTIVE                |
-| DESCRIPTION              |
-| IS_ADMIN                 |
-| IS_DISCUSSIONS_ADD       |
-| IS_SOURCE_CODE_VIEW      |
-| IS_SOURCE_CODE_EDIT      |
-| IS_DOCUMENT_FOLDERS_EDIT |
-| IS_LIMITED_VIEW          |
-| IS_TEMPLATE_ADMIN        |
-| ARTIFACT_TYPE_ID         |
-| ARTIFACT                 |
-| PERMISSION               |
+| R_ProjectRoles           | Type    |
+| ------------------------ | ------- |
+| *PROJECT_ROLE_ID*        | Int32   |
+| NAME                     | String  |
+| IS_ACTIVE                | Boolean |
+| DESCRIPTION              | String  |
+| IS_ADMIN                 | Boolean |
+| IS_DISCUSSIONS_ADD       | Boolean |
+| IS_SOURCE_CODE_VIEW      | Boolean |
+| IS_SOURCE_CODE_EDIT      | Boolean |
+| IS_DOCUMENT_FOLDERS_EDIT | Boolean |
+| IS_LIMITED_VIEW          | Boolean |
+| IS_TEMPLATE_ADMIN        | Boolean |
+| ARTIFACT_TYPE_ID         | Int32   |
+| ARTIFACT                 | String  |
+| PERMISSION               | String  |
 
 ## Project (Product) Tags
-| R_ProjectTags |
-| ------------- |
-| PROJECT_ID    |
-| TAG           |
-| PROJECT_NAME  |
+| R_ProjectTags | Type   |
+| ------------- | ------ |
+| PROJECT_ID    | Int32  |
+| TAG           | String |
+| PROJECT_NAME  | String |
 
 ## Project Teams Users
 !!! abstract "Available in SpiraPlan only"
 
-| R_Project_Team_Users |
-| -------------------- |
-| PROJECT_ID           |
-| PROJECT_NAME         |
-| USER_ID              |
-| USER_NAME            |
-| TEAM_ID              |
-| TEAM_NAME            |
+| R_ProjectTeamUsers | Type   |
+| ------------------ | ------ |
+| PROJECT_ID         | Int32  |
+| PROJECT_NAME       | String |
+| USER_ID            | Int32  |
+| USER_NAME          | String |
+| TEAM_ID            | Int32  |
+| TEAM_NAME          | String |
 
 ## Project (Product) Templates
-| R_ProjectTemplates    |
-| --------------------- |
-| *PROJECT_TEMPLATE_ID* |
-| NAME                  |
-| DESCRIPTION           |
-| IS_ACTIVE             |
+| R_ProjectTemplates    | Type    |
+| --------------------- | ------- |
+| *PROJECT_TEMPLATE_ID* | Int32   |
+| NAME                  | String  |
+| DESCRIPTION           | String  |
+| IS_ACTIVE             | Boolean |
 
 ## Releases
-| R_Releases               |
-| ------------------------ |
-| *RELEASE_ID*             |
-| PROJECT_ID               |
-| CREATOR_ID               |
-| NAME                     |
-| VERSION_NUMBER           |
-| DESCRIPTION              |
-| INDENT_LEVEL             |
-| CREATION_DATE            |
-| LAST_UPDATE_DATE         |
-| START_DATE               |
-| END_DATE                 |
-| RESOURCE_COUNT           |
-| DAYS_NON_WORKING         |
-| PLANNED_EFFORT           |
-| AVAILABLE_EFFORT         |
-| COUNT_BLOCKED            |
-| COUNT_CAUTION            |
-| COUNT_FAILED             |
-| COUNT_NOT_APPLICABLE     |
-| COUNT_NOT_RUN            |
-| COUNT_PASSED             |
-| TASK_COUNT               |
-| TASK_PERCENT_ON_TIME     |
-| TASK_PERCENT_LATE_FINISH |
-| TASK_PERCENT_NOT_START   |
-| TASK_PERCENT_LATE_START  |
-| TASK_ESTIMATED_EFFORT    |
-| TASK_ACTUAL_EFFORT       |
-| TASK_PROJECTED_EFFORT    |
-| TASK_REMAINING_EFFORT    |
-| IS_DELETED               |
-| CREATOR_NAME             |
-| FULL_NAME                |
-| PROJECT_NAME             |
-| PROJECT_GROUP_ID         |
-| CUST_01...               |
-| CUST_99                  |
-| RELEASE_TYPE_ID          |
-| RELEASE_STATUS_ID        |
-| OWNER_ID                 |
-| IS_SUMMARY               |
-| IS_ATTACHMENTS           |
-| OWNER_NAME               |
-| RELEASE_TYPE_NAME        |
-| RELEASE_STATUS_NAME      |
-| CONCURRENCY_DATE         |
-| MILESTONE_ID             |
-| PERCENT_COMPLETE         |
-| PLANNED_POINTS           |
-| REQUIREMENT_POINTS       |
-| REQUIREMENT_COUNT        |
-| TAGS                     |
+| R_Releases               | Type     |
+| ------------------------ | -------- |
+| *RELEASE_ID*             | Int32    |
+| PROJECT_ID               | Int32    |
+| CREATOR_ID               | Int32    |
+| NAME                     | String   |
+| VERSION_NUMBER           | String   |
+| DESCRIPTION              | String   |
+| INDENT_LEVEL             | String   |
+| CREATION_DATE            | DateTime |
+| LAST_UPDATE_DATE         | DateTime |
+| START_DATE               | DateTime |
+| END_DATE                 | DateTime |
+| RESOURCE_COUNT           | Decimal  |
+| DAYS_NON_WORKING         | Decimal  |
+| PLANNED_EFFORT           | Int32    |
+| AVAILABLE_EFFORT         | Int32    |
+| COUNT_BLOCKED            | Int32    |
+| COUNT_CAUTION            | Int32    |
+| COUNT_FAILED             | Int32    |
+| COUNT_NOT_APPLICABLE     | Int32    |
+| COUNT_NOT_RUN            | Int32    |
+| COUNT_PASSED             | Int32    |
+| TASK_COUNT               | Int32    |
+| TASK_PERCENT_ON_TIME     | Int32    |
+| TASK_PERCENT_LATE_FINISH | Int32    |
+| TASK_PERCENT_NOT_START   | Int32    |
+| TASK_PERCENT_LATE_START  | Int32    |
+| TASK_ESTIMATED_EFFORT    | Int32    |
+| TASK_ACTUAL_EFFORT       | Int32    |
+| TASK_PROJECTED_EFFORT    | Int32    |
+| TASK_REMAINING_EFFORT    | Int32    |
+| IS_DELETED               | Boolean  |
+| CREATOR_NAME             | String   |
+| FULL_NAME                | String   |
+| PROJECT_NAME             | String   |
+| PROJECT_GROUP_ID         | Int32    |
+| CUST_01 ... CUST_99      | String   |
+| RELEASE_TYPE_ID          | Int32    |
+| RELEASE_STATUS_ID        | Int32    |
+| OWNER_ID                 | Int32    |
+| IS_SUMMARY               | Boolean  |
+| IS_ATTACHMENTS           | Boolean  |
+| OWNER_NAME               | String   |
+| RELEASE_TYPE_NAME        | String   |
+| RELEASE_STATUS_NAME      | String   |
+| CONCURRENCY              | Int64    |
+| PERCENT_COMPLETE         | Int32    |
+| PLANNED_POINTS           | Decimal  |
+| REQUIREMENT_POINTS       | Decimal  |
+| REQUIREMENT_COUNT        | Int32    |
+| TAGS                     | String   |
+| BRANCH_ID                | Int32    |
 
 ## Release Test Case Mapping
-| R_ReleaseTestCases     |
-| ---------------------- |
-| RELEASE_ID             |
-| TEST_CASE_ID           |
-| RELEASE_NAME           |
-| RELEASE_VERSION_NUMBER |
-| TEST_CASE_NAME         |
-| PROJECT_ID             |
-| PROJECT_NAME           |
-| RELEASE_TYPE_ID        |
-| RELEASE_TYPE_NAME      |
-| EXECUTION_STATUS_ID    |
-| EXECUTION_DATE         |
-| ACTUAL_DURATION        |
+| R_ReleaseTestCases     | Type     |
+| ---------------------- | -------- |
+| RELEASE_ID             | Int32    |
+| TEST_CASE_ID           | Int32    |
+| RELEASE_NAME           | String   |
+| RELEASE_VERSION_NUMBER | String   |
+| TEST_CASE_NAME         | String   |
+| PROJECT_ID             | Int32    |
+| PROJECT_NAME           | String   |
+| RELEASE_TYPE_ID        | Int32    |
+| RELEASE_TYPE_NAME      | String   |
+| EXECUTION_STATUS_ID    | Int32    |
+| EXECUTION_DATE         | DateTime |
+| ACTUAL_DURATION        | Int32    |
 
 ## Requirements
-| R_Requirements           |
-| ------------------------ |
-| *REQUIREMENT_ID*         |
-| AUTHOR_ID                |
-| OWNER_ID                 |
-| RELEASE_ID               |
-| PROJECT_ID               |
-| IMPORTANCE_ID            |
-| NAME                     |
-| CREATION_DATE            |
-| INDENT_LEVEL             |
-| DESCRIPTION              |
-| LAST_UPDATE_DATE         |
-| COVERAGE_COUNT_TOTAL     |
-| COVERAGE_COUNT_PASSED    |
-| COVERAGE_COUNT_FAILED    |
-| COVERAGE_COUNT_CAUTION   |
-| COVERAGE_COUNT_BLOCKED   |
-| TASK_COUNT               |
-| TASK_ESTIMATED_EFFORT    |
-| TASK_ACTUAL_EFFORT       |
-| TASK_PROJECTED_EFFORT    |
-| TASK_REMAINING_EFFORT    |
-| TASK_PERCENT_ON_TIME     |
-| TASK_PERCENT_LATE_FINISH |
-| TASK_PERCENT_NOT_START   |
-| TASK_PERCENT_LATE_START  |
-| IS_DELETED               |
-| AUTHOR_NAME              |
-| OWNER_NAME               |
-| IMPORTANCE_NAME          |
-| RELEASE_VERSION_NUMBER   |
-| PROJECT_NAME             |
-| PROJECT_GROUP_ID         |
-| CUST_01...               |
-| CUST_99                  |
-| REQUIREMENT_TYPE_ID      |
-| REQUIREMENT_STATUS_ID    |
-| COMPONENT_ID             |
-| IS_SUMMARY               |
-| IS_ATTACHMENTS           |
-| CONCURRENCY_DATE         |
-| REQUIREMENT_STATUS_NAME  |
-| REQUIREMENT_TYPE_NAME    |
-| COMPONENT_NAME           |
-| ESTIMATE_POINTS          |
-| ESTIMATED_EFFORT         |
-| RANK                     |
-| GOAL_ID                  |
-| START_DATE               |
-| END_DATE                 |
-| PERCENT_COMPLETE         |
-| TAGS                     |
+| R_Requirements           | Type     |
+| ------------------------ | -------- |
+| *REQUIREMENT_ID*         | Int32    |
+| AUTHOR_ID                | Int32    |
+| OWNER_ID                 | Int32    |
+| RELEASE_ID               | Int32    |
+| PROJECT_ID               | Int32    |
+| IMPORTANCE_ID            | Int32    |
+| NAME                     | String   |
+| CREATION_DATE            | DateTime |
+| INDENT_LEVEL             | String   |
+| DESCRIPTION              | String   |
+| LAST_UPDATE_DATE         | DateTime |
+| COVERAGE_COUNT_TOTAL     | Int32    |
+| COVERAGE_COUNT_PASSED    | Int32    |
+| COVERAGE_COUNT_FAILED    | Int32    |
+| COVERAGE_COUNT_CAUTION   | Int32    |
+| COVERAGE_COUNT_BLOCKED   | Int32    |
+| TASK_COUNT               | Int32    |
+| TASK_ESTIMATED_EFFORT    | Int32    |
+| TASK_ACTUAL_EFFORT       | Int32    |
+| TASK_PROJECTED_EFFORT    | Int32    |
+| TASK_REMAINING_EFFORT    | Int32    |
+| TASK_PERCENT_ON_TIME     | Int32    |
+| TASK_PERCENT_LATE_FINISH | Int32    |
+| TASK_PERCENT_NOT_START   | Int32    |
+| TASK_PERCENT_LATE_START  | Int32    |
+| IS_DELETED               | Boolean  |
+| AUTHOR_NAME              | String   |
+| OWNER_NAME               | String   |
+| IMPORTANCE_NAME          | String   |
+| RELEASE_VERSION_NUMBER   | String   |
+| PROJECT_NAME             | String   |
+| PROJECT_GROUP_ID         | Int32    |
+| CUST_01 ... CUST_99      | String   |
+| REQUIREMENT_TYPE_ID      | Int32    |
+| REQUIREMENT_STATUS_ID    | Int32    |
+| COMPONENT_ID             | Int32    |
+| IS_SUMMARY               | Boolean  |
+| IS_ATTACHMENTS           | Boolean  |
+| CONCURRENCY              | Int64    |
+| REQUIREMENT_STATUS_NAME  | String   |
+| REQUIREMENT_TYPE_NAME    | String   |
+| COMPONENT_NAME           | String   |
+| ESTIMATE_POINTS          | Decimal  |
+| ESTIMATED_EFFORT         | Int32    |
+| RANK                     | Int32    |
+| GOAL_ID                  | Int32    |
+| START_DATE               | DateTime |
+| END_DATE                 | DateTime |
+| PERCENT_COMPLETE         | Int32    |
+| TAGS                     | String   |
+| IS_SUSPECT               | Boolean  |
 
 ## Requirement Importances
-| R_Requirement_Importance |
-| ------------------------ |
-| *IMPORTANCE_ID*          |
-| PROJECT_TEMPLATE_ID      |
-| NAME                     |
-| IS_ACTIVE                |
-| COLOR                    |
-| SCORE                    |
+| R_Requirement_Importance | Type    |
+| ------------------------ | ------- |
+| *IMPORTANCE_ID*          | Int32   |
+| PROJECT_TEMPLATE_ID      | Int32   |
+| NAME                     | String  |
+| IS_ACTIVE                | Boolean |
+| COLOR                    | String  |
+| SCORE                    | Int32   |
 
 ## Requirement Incidents
-| R_RequirementIncidents |
-| ---------------------- |
-| REQUIREMENT_ID         |
-| INCIDENT_ID            |
-| DETECTED_RELEASE_ID    |
-| IS_OPEN_STATUS         |
+| R_RequirementIncidents | Type    |
+| ---------------------- | ------- |
+| REQUIREMENT_ID         | Int32   |
+| INCIDENT_ID            | Int32   |
+| DETECTED_RELEASE_ID    | Int32   |
+| IS_OPEN_STATUS         | Boolean |
 
 ## Requirement Incidents - Extended
 For normal use we strongly recommend using the standard artifact association view above. This extended view adds the artifact names, which can be very helpful, but will make the reports using it run much slower. 
 
-| R_RequirementIncidents |
-| ---------------------- |
-| REQUIREMENT_ID         |
-| INCIDENT_ID            |
-| DETECTED_RELEASE_ID    |
-| IS_OPEN_STATUS         |
-| REQUIREMENT_NAME       |
-| INCIDENT_NAME          |
+| R_RequirementIncidentExtended | Type    |
+| ----------------------------- | ------- |
+| REQUIREMENT_ID                | Int32   |
+| INCIDENT_ID                   | Int32   |
+| DETECTED_RELEASE_ID           | Int32   |
+| IS_OPEN_STATUS                | Boolean |
+| REQUIREMENT_NAME              | String  |
+| INCIDENT_NAME                 | String  |
 
 ## Requirement Steps
-| R_RequirementSteps           |
-| ---------------------------- |
-| REQUIREMENT_ID               |
-| POSITION                     |
-| DESCRIPTION                  |
-| IS_DELETED                   |
-| CREATION_DATE                |
-| LAST_UPDATE_DATE             |
-| CONCURRENCY_DATE             |
-| REQUIREMENT_NAME             |
-| REQUIREMENT_LAST_UPDATE_DATE |
-| PROJECT_IS_ACTIVE            |
-| PROJECT_PROJECT_GROUP_ID     |
-| PROJECT_NAME                 |
+| R_RequirementSteps           | Type     |
+| ---------------------------- | -------- |
+| REQUIREMENT_ID               | Int32    |
+| POSITION                     | Int32    |
+| DESCRIPTION                  | String   |
+| IS_DELETED                   | Boolean  |
+| CREATION_DATE                | DateTime |
+| LAST_UPDATE_DATE             | DateTime |
+| CONCURRENCY                  | Int64    |
+| REQUIREMENT_NAME             | String   |
+| REQUIREMENT_LAST_UPDATE_DATE | DateTime |
+| PROJECT_IS_ACTIVE            | Boolean  |
+| PROJECT_PROJECT_GROUP_ID     | Int32    |
+| PROJECT_NAME                 | String   |
+| REQUIREMENT_STEP_ID          | Int32    |
 
 ## Requirement Test Case Coverage
-| R_RequirementTestCases |
-| ---------------------- |
-| REQUIREMENT_ID         |
-| TEST_CASE_ID           |
-| REQUIREMENT_NAME       |
-| TEST_CASE_NAME         |
-| PROJECT_ID             |
-| PROJECT_NAME           |
+| R_RequirementTestCases | Type   |
+| ---------------------- | ------ |
+| REQUIREMENT_ID         | Int32  |
+| TEST_CASE_ID           | Int32  |
+| REQUIREMENT_NAME       | String |
+| TEST_CASE_NAME         | String |
+| PROJECT_ID             | Int32  |
+| PROJECT_NAME           | String |
 
 ## Requirement Test Step Coverage
-| R_RequirementTestSteps |
-| ---------------------- |
-| TEST_STEP_ID           |
-| REQUIREMENT_NAME       |
-| POSITION               |
-| STEP_DESCRIPTION       |
-| EXPECTED_RESULT        |
-| SAMPLE_DATA            |
-| PROJECT_ID             |
-| PROJECT_NAME           |
+| R_RequirementTestSteps | Type   |
+| ---------------------- | ------ |
+| TEST_STEP_ID           | Int32  |
+| REQUIREMENT_NAME       | String |
+| POSITION               | Int32  |
+| STEP_DESCRIPTION       | String |
+| EXPECTED_RESULT        | String |
+| SAMPLE_DATA            | String |
+| PROJECT_ID             | Int32  |
+| PROJECT_NAME           | String |
+| REQUIREMENT_ID         | Int32  |
 
 ## Requirement Types
-| R_RequirementTypes      |
-| ----------------------- |
-| *REQUIREMENT_TYPE_ID*   |
-| REQUIREMENT_WORKFLOW_ID |
-| PROJECT_TEMPLATE_ID     |
-| NAME                    |
-| ICON                    |
-| IS_ACTIVE               |
-| IS_STEPS                |
-| IS_DEFAULT              |
-| IS_KEY_TYPE             |
-| PROJECT_TEMPLATE_NAME   |
+| R_RequirementTypes      | Type    |
+| ----------------------- | ------- |
+| *REQUIREMENT_TYPE_ID*   | Int32   |
+| REQUIREMENT_WORKFLOW_ID | Int32   |
+| PROJECT_TEMPLATE_ID     | Int32   |
+| NAME                    | String  |
+| ICON                    | String  |
+| IS_ACTIVE               | Boolean |
+| IS_STEPS                | Boolean |
+| IS_DEFAULT              | Boolean |
+| IS_KEY_TYPE             | Boolean |
+| PROJECT_TEMPLATE_NAME   | String  |
 
 ## Risks
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_Risks                  |
-| ------------------------ |
-| *RISK_ID*                |
-| RISK_IMPACT_ID           |
-| RISK_STATUS_ID           |
-| RISK_PROBABILITY_ID      |
-| RISK_TYPE_ID             |
-| PROJECT_ID               |
-| CREATOR_ID               |
-| OWNER_ID                 |
-| PROJECT_GROUP_ID         |
-| RELEASE_ID               |
-| COMPONENT_ID             |
-| NAME                     |
-| DESCRIPTION              |
-| IS_DELETED               |
-| CREATION_DATE            |
-| LAST_UPDATE_DATE         |
-| CONCURRENCY_DATE         |
-| REVIEW_DATE              |
-| GOAL_ID                  |
-| CLOSED_DATE              |
-| IS_ATTACHMENTS           |
-| RISK_PROBABILITY_NAME    |
-| RISK_PROBABILITY_COLOR   |
-| RISK_PROBABILITY_SCORE   |
-| RISK_IMPACT_NAME         |
-| RISK_IMPACT_COLOR        |
-| RISK_IMPACT_SCORE        |
-| RISK_EXPOSURE            |
-| RISK_STATUS_NAME         |
-| RISK_STATUS_IS_OPEN      |
-| RISK_TYPE_NAME           |
-| CREATOR_NAME             |
-| OWNER_NAME               |
-| RELEASE_VERSION_NUMBER   |
-| RELEASE_NAME             |
-| COMPONENT_NAME           |
-| GOAL_NAME                |
-| PROJECT_IS_ACTIVE        |
-| PROJECT_PROJECT_GROUP_ID |
-| PROJECT_NAME             |
-| CUST_01...               |
-| CUST_99                  |
-| TAGS                     |
+| R_Risks                  | Type     |
+| ------------------------ | -------- |
+| *RISK_ID*                | Int32    |
+| RISK_IMPACT_ID           | Int32    |
+| RISK_STATUS_ID           | Int32    |
+| RISK_PROBABILITY_ID      | Int32    |
+| RISK_TYPE_ID             | Int32    |
+| PROJECT_ID               | Int32    |
+| CREATOR_ID               | Int32    |
+| OWNER_ID                 | Int32    |
+| PROJECT_GROUP_ID         | Int32    |
+| RELEASE_ID               | Int32    |
+| COMPONENT_ID             | Int32    |
+| NAME                     | String   |
+| DESCRIPTION              | String   |
+| IS_DELETED               | Boolean  |
+| CREATION_DATE            | DateTime |
+| LAST_UPDATE_DATE         | DateTime |
+| CONCURRENCY              | Int64    |
+| REVIEW_DATE              | DateTime |
+| GOAL_ID                  | Int32    |
+| CLOSED_DATE              | DateTime |
+| IS_ATTACHMENTS           | Boolean  |
+| RISK_PROBABILITY_NAME    | String   |
+| RISK_PROBABILITY_COLOR   | String   |
+| RISK_PROBABILITY_SCORE   | Int32    |
+| RISK_IMPACT_NAME         | String   |
+| RISK_IMPACT_COLOR        | String   |
+| RISK_IMPACT_SCORE        | Int32    |
+| RISK_EXPOSURE            | Int32    |
+| RISK_STATUS_NAME         | String   |
+| RISK_STATUS_IS_OPEN      | Boolean  |
+| RISK_TYPE_NAME           | String   |
+| CREATOR_NAME             | String   |
+| OWNER_NAME               | String   |
+| RELEASE_VERSION_NUMBER   | String   |
+| RELEASE_NAME             | String   |
+| COMPONENT_NAME           | String   |
+| GOAL_NAME                | String   |
+| PROJECT_IS_ACTIVE        | Boolean  |
+| PROJECT_PROJECT_GROUP_ID | Int32    |
+| PROJECT_NAME             | String   |
+| CUST_01 ... CUST_99      | String   |
+| TAGS                     | String   |
+| RISK_DETECTABILITY_ID    | Int32    |
+| RANK                     | Int32    |
 
 ## Risk Impacts
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_RiskImpacts         |
-| --------------------- |
-| *RISK_IMPACT_ID*      |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| COLOR                 |
-| IS_ACTIVE             |
-| POSITION              |
-| SCORE                 |
-| PROJECT_TEMPLATE_NAME |
+| R_RiskImpacts         | Type    |
+| --------------------- | ------- |
+| *RISK_IMPACT_ID*      | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| COLOR                 | String  |
+| IS_ACTIVE             | Boolean |
+| POSITION              | Int32   |
+| SCORE                 | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Risk Mitigations
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_RiskMitigations        |
-| ------------------------ |
-| RISK_ID                  |
-| *RISK_MITIGATION_ID*     |
-| POSITION                 |
-| DESCRIPTION              |
-| IS_DELETED               |
-| CREATION_DATE            |
-| LAST_UPDATE_DATE         |
-| CONCURRENCY_DATE         |
-| IS_ACTIVE                |
-| REVIEW_DATE              |
-| RISK_NAME                |
-| RISK_REVIEW_DATE         |
-| PROJECT_IS_ACTIVE        |
-| PROJECT_PROJECT_GROUP_ID |
-| PROJECT_NAME             |
-| PROJECT_ID               |
+| R_RiskMitigations        | Type     |
+| ------------------------ | -------- |
+| RISK_ID                  | Int32    |
+| *RISK_MITIGATION_ID*     | Int32    |
+| POSITION                 | Int32    |
+| DESCRIPTION              | String   |
+| IS_DELETED               | Boolean  |
+| CREATION_DATE            | DateTime |
+| LAST_UPDATE_DATE         | DateTime |
+| CONCURRENCY              | Int64    |
+| IS_ACTIVE                | Boolean  |
+| REVIEW_DATE              | DateTime |
+| RISK_NAME                | String   |
+| RISK_REVIEW_DATE         | DateTime |
+| PROJECT_IS_ACTIVE        | Boolean  |
+| PROJECT_PROJECT_GROUP_ID | Int32    |
+| PROJECT_NAME             | String   |
+| PROJECT_ID               | Int32    |
 
 ## Risk Probabilities
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_RiskProbabilities   |
-| --------------------- |
-| *RISK_PROBABILITY_ID* |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| COLOR                 |
-| IS_ACTIVE             |
-| POSITION              |
-| SCORE                 |
-| PROJECT_TEMPLATE_NAME |
+| R_RiskProbabilities   | Type    |
+| --------------------- | ------- |
+| *RISK_PROBABILITY_ID* | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| COLOR                 | String  |
+| IS_ACTIVE             | Boolean |
+| POSITION              | Int32   |
+| SCORE                 | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Risk Statuses
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_RiskStatuses        |
-| --------------------- |
-| *RISK_STATUS_ID*      |
-| NAME                  |
-| IS_ACTIVE             |
-| IS_DEFAULT            |
-| IS_OPEN               |
-| POSITION              |
-| PROJECT_TEMPLATE_ID   |
-| PROJECT_TEMPLATE_NAME |
+| R_RiskStatuses        | Type    |
+| --------------------- | ------- |
+| *RISK_STATUS_ID*      | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| IS_DEFAULT            | Boolean |
+| IS_OPEN               | Boolean |
+| POSITION              | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Risk Types
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_RiskTypes           |
-| --------------------- |
-| *RISK_TYPE_ID*        |
-| NAME                  |
-| IS_ACTIVE             |
-| IS_DEFAULT            |
-| PROJECT_TEMPLATE_ID   |
-| RISK_WORKFLOW_ID      |
-| PROJECT_TEMPLATE_NAME |
+| R_RiskTypes           | Type    |
+| --------------------- | ------- |
+| *RISK_TYPE_ID*        | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| IS_DEFAULT            | Boolean |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| RISK_WORKFLOW_ID      | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Source Code Associations
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_SourceCodeAssociations         |
-| -------------------------------- |
-| ARTIFACT_SOURCE_CODE_REVISION_ID |
-| ARTIFACT_TYPE_ID                 |
-| ARTIFACT_ID                      |
-| REVISION_KEY                     |
-| COMMENT                          |
-| CREATION_DATE                    |
-| ARTIFACT_TYPE_NAME               |
-| ARTIFACT_TYPE_PREFIX             |
+| R_SourceCodeAssociations         | Type     |
+| -------------------------------- | -------- |
+| ARTIFACT_SOURCE_CODE_REVISION_ID | Int32    |
+| ARTIFACT_TYPE_ID                 | Int32    |
+| ARTIFACT_ID                      | Int32    |
+| REVISION_KEY                     | String   |
+| COMMENT                          | String   |
+| CREATION_DATE                    | DateTime |
+| ARTIFACT_TYPE_NAME               | String   |
+| ARTIFACT_TYPE_PREFIX             | String   |
 
 
 ## Source Code Commits
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_SourceCodeCommits                |
-| ---------------------------------- |
-| VERSION_CONTROL_SYSTEM_ID          |
-| PROJECT_ID                         |
-| *REVISION_ID*                      |
-| NAME                               |
-| REVISION_KEY                       |
-| AUTHOR_NAME                        |
-| MESSAGE                            |
-| UPDATE_DATE                        |
-| CONTENT_CHANGED                    |
-| PROPERTIES_CHANGED                 |
-| VERSION_CONTROL_SYSTEM_NAME        |
-| VERSION_CONTROL_SYSTEM_DESCRIPTION |
-| VERSION_CONTROL_SYSTEM_IS_ACTIVE   |
-| PROJECT_NAME                       |
-| BRANCH_NAME                        |
-| BRANCH_PATH                        |
-| BRANCH_IS_HEAD                     |
+| R_SourceCodeCommits                | Type     |
+| ---------------------------------- | -------- |
+| VERSION_CONTROL_SYSTEM_ID          | Int32    |
+| PROJECT_ID                         | Int32    |
+| *REVISION_ID*                      | Int32    |
+| NAME                               | String   |
+| REVISION_KEY                       | String   |
+| AUTHOR_NAME                        | String   |
+| MESSAGE                            | String   |
+| UPDATE_DATE                        | DateTime |
+| CONTENT_CHANGED                    | Boolean  |
+| PROPERTIES_CHANGED                 | Boolean  |
+| VERSION_CONTROL_SYSTEM_NAME        | String   |
+| VERSION_CONTROL_SYSTEM_DESCRIPTION | String   |
+| VERSION_CONTROL_SYSTEM_IS_ACTIVE   | Boolean  |
+| PROJECT_NAME                       | String   |
+| BRANCH_NAME                        | String   |
+| BRANCH_PATH                        | String   |
+| BRANCH_IS_HEAD                     | Boolean  |
 
 ## Tasks
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_Tasks                |
-| ---------------------- |
-| *TASK_ID*              |
-| TASK_STATUS_ID         |
-| PROJECT_ID             |
-| REQUIREMENT_ID         |
-| RELEASE_ID             |
-| CREATOR_ID             |
-| OWNER_ID               |
-| TASK_PRIORITY_ID       |
-| NAME                   |
-| DESCRIPTION            |
-| CREATION_DATE          |
-| LAST_UPDATE_DATE       |
-| START_DATE             |
-| END_DATE               |
-| COMPLETION_PERCENT     |
-| ESTIMATED_EFFORT       |
-| ACTUAL_EFFORT          |
-| PROJECTED_EFFORT       |
-| REMAINING_EFFORT       |
-| IS_DELETED             |
-| TASK_STATUS_NAME       |
-| OWNER_NAME             |
-| CREATOR_NAME           |
-| TASK_PRIORITY_NAME     |
-| PROJECT_NAME           |
-| PROJECT_GROUP_ID       |
-| RELEASE_VERSION_NUMBER |
-| CUST_01...             |
-| CUST_99                |
-| TASK_TYPE_ID           |
-| TASK_FOLDER_ID         |
-| IS_ATTACHMENTS         |
-| CONCURRENCY_DATE       |
-| REQUIREMENT_NAME       |
-| TASK_TYPE_NAME         |
-| COMPONENT_ID           |
-| COMPONENT_NAME         |
-| RISK_ID                |
-| TAGS                   |
+| R_Tasks                | Type     |
+| ---------------------- | -------- |
+| *TASK_ID*              | Int32    |
+| TASK_STATUS_ID         | Int32    |
+| PROJECT_ID             | Int32    |
+| REQUIREMENT_ID         | Int32    |
+| RELEASE_ID             | Int32    |
+| CREATOR_ID             | Int32    |
+| OWNER_ID               | Int32    |
+| TASK_PRIORITY_ID       | Int32    |
+| NAME                   | String   |
+| DESCRIPTION            | String   |
+| CREATION_DATE          | DateTime |
+| LAST_UPDATE_DATE       | DateTime |
+| START_DATE             | DateTime |
+| END_DATE               | DateTime |
+| COMPLETION_PERCENT     | Int32    |
+| ESTIMATED_EFFORT       | Int32    |
+| ACTUAL_EFFORT          | Int32    |
+| PROJECTED_EFFORT       | Int32    |
+| REMAINING_EFFORT       | Int32    |
+| IS_DELETED             | Boolean  |
+| TASK_STATUS_NAME       | String   |
+| OWNER_NAME             | String   |
+| CREATOR_NAME           | String   |
+| TASK_PRIORITY_NAME     | String   |
+| PROJECT_NAME           | String   |
+| PROJECT_GROUP_ID       | Int32    |
+| RELEASE_VERSION_NUMBER | String   |
+| CUST_01 ... CUST_99    | String   |
+| TASK_TYPE_ID           | Int32    |
+| TASK_FOLDER_ID         | Int32    |
+| IS_ATTACHMENTS         | Boolean  |
+| CONCURRENCY            | Int64    |
+| REQUIREMENT_NAME       | String   |
+| TASK_TYPE_NAME         | String   |
+| COMPONENT_ID           | Int32    |
+| COMPONENT_NAME         | String   |
+| RISK_ID                | Int32    |
+| TAGS                   | String   |
+| RANK                   | Int32    |
 
 ## Task Folders
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_TaskFolders         |
-| --------------------- |
-| *TASK_FOLDER_ID*      |
-| PROJECT_ID            |
-| NAME                  |
-| PARENT_TASK_FOLDER_ID |
-| HIERARCHY_LEVEL       |
-| INDENT_LEVEL          |
+| R_TaskFolders         | Type   |
+| --------------------- | ------ |
+| *TASK_FOLDER_ID*      | Int32  |
+| PROJECT_ID            | Int32  |
+| NAME                  | String |
+| PARENT_TASK_FOLDER_ID | Int32  |
+| HIERARCHY_LEVEL       | Int32  |
+| INDENT_LEVEL          | String |
 
 ## Task Priorities
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_TaskPriorities      |
-| --------------------- |
-| *TASK_PRIORITY_ID*    |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| IS_ACTIVE             |
-| COLOR                 |
-| SCORE                 |
-| PROJECT_TEMPLATE_NAME |
+| R_TaskPriorities      | Type    |
+| --------------------- | ------- |
+| *TASK_PRIORITY_ID*    | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| COLOR                 | String  |
+| SCORE                 | Int32   |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Task Types
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_TaskTypes           |
-| --------------------- |
-| *TASK_TYPE_ID*        |
-| PROJECT_TEMPLATE_ID   |
-| TASK_WORKFLOW_ID      |
-| NAME                  |
-| POSITION              |
-| IS_ACTIVE             |
-| IS_DEFAULT            |
-| IS_PULL_REQUEST       |
-| PROJECT_TEMPLATE_NAME |
+| R_TaskTypes           | Type    |
+| --------------------- | ------- |
+| *TASK_TYPE_ID*        | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| TASK_WORKFLOW_ID      | Int32   |
+| NAME                  | String  |
+| POSITION              | Int32   |
+| IS_ACTIVE             | Boolean |
+| IS_DEFAULT            | Boolean |
+| IS_PULL_REQUEST       | Boolean |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Teams
 !!! abstract "Available in SpiraPlan only"
 
-| R_Teams     |
-| ----------- |
-| *TEAM_ID*   |
-| NAME        |
-| DESCRIPTION |
-| IS_ACTIVE   |
-| IS_DELETED  |
+| R_Teams     | Type    |
+| ----------- | ------- |
+| *TEAM_ID*   | Int32   |
+| NAME        | String  |
+| DESCRIPTION | String  |
+| IS_ACTIVE   | Boolean |
+| IS_DELETED  | Boolean |
 
 ## Test Cases
-| R_TestCases              |
-| ------------------------ |
-| *TEST_CASE_ID*           |
-| EXECUTION_STATUS_ID      |
-| TEST_CASE_PRIORITY_ID    |
-| PROJECT_ID               |
-| AUTHOR_ID                |
-| NAME                     |
-| OWNER_ID                 |
-| DESCRIPTION              |
-| EXECUTION_DATE           |
-| CREATION_DATE            |
-| LAST_UPDATE_DATE         |
-| AUTOMATION_ENGINE_ID     |
-| AUTOMATION_ATTACHMENT_ID |
-| ESTIMATED_DURATION       |
-| IS_DELETED               |
-| EXECUTION_STATUS_NAME    |
-| TEST_CASE_PRIORITY_NAME  |
-| AUTHOR_NAME              |
-| OWNER_NAME               |
-| AUTOMATION_ENGINE_NAME   |
-| PROJECT_NAME             |
-| PROJECT_GROUP_ID         |
-| CUST_01...               |
-| CUST_99                  |
-| CONCURRENCY_DATE         |
-| TEST_CASE_STATUS_ID      |
-| TEST_CASE_TYPE_ID        |
-| TEST_CASE_FOLDER_ID      |
-| IS_ATTACHMENTS           |
-| IS_TEST_STEPS            |
-| ACTUAL_DURATION          |
-| TEST_CASE_STATUS_NAME    |
-| TEST_CASE_TYPE_NAME      |
-| COMPONENT_IDS            |
-| IS_SUSPECT               |
-| TAGS                     |
+| R_TestCases              | Type     |
+| ------------------------ | -------- |
+| *TEST_CASE_ID*           | Int32    |
+| EXECUTION_STATUS_ID      | Int32    |
+| TEST_CASE_PRIORITY_ID    | Int32    |
+| PROJECT_ID               | Int32    |
+| AUTHOR_ID                | Int32    |
+| NAME                     | String   |
+| OWNER_ID                 | Int32    |
+| DESCRIPTION              | String   |
+| EXECUTION_DATE           | DateTime |
+| CREATION_DATE            | DateTime |
+| LAST_UPDATE_DATE         | DateTime |
+| AUTOMATION_ENGINE_ID     | Int32    |
+| AUTOMATION_ATTACHMENT_ID | Int32    |
+| ESTIMATED_DURATION       | Int32    |
+| IS_DELETED               | Boolean  |
+| EXECUTION_STATUS_NAME    | String   |
+| TEST_CASE_PRIORITY_NAME  | String   |
+| AUTHOR_NAME              | String   |
+| OWNER_NAME               | String   |
+| AUTOMATION_ENGINE_NAME   | String   |
+| PROJECT_NAME             | String   |
+| PROJECT_GROUP_ID         | Int32    |
+| CUST_01 ... CUST_99      | String   |
+| CONCURRENCY              | Int64    |
+| TEST_CASE_STATUS_ID      | Int32    |
+| TEST_CASE_TYPE_ID        | Int32    |
+| TEST_CASE_FOLDER_ID      | Int32    |
+| IS_ATTACHMENTS           | Boolean  |
+| IS_TEST_STEPS            | Boolean  |
+| ACTUAL_DURATION          | Int32    |
+| TEST_CASE_STATUS_NAME    | String   |
+| TEST_CASE_TYPE_NAME      | String   |
+| COMPONENT_IDS            | String   |
+| IS_SUSPECT               | Boolean  |
+| TAGS                     | String   |
+| RANK                     | Int32    |
 
 ## Test Case Folders
-| R_TestCaseFolders          |
-| -------------------------- |
-| *TEST_CASE_FOLDER_ID*      |
-| PARENT_TEST_CASE_FOLDER_ID |
-| PROJECT_ID                 |
-| NAME                       |
-| DESCRIPTION                |
-| EXECUTION_DATE             |
-| LAST_UPDATE_DATE           |
-| ESTIMATED_DURATION         |
-| ACTUAL_DURATION            |
-| COUNT_PASSED               |
-| COUNT_FAILED               |
-| COUNT_BLOCKED              |
-| COUNT_CAUTION              |
-| COUNT_NOT_RUN              |
-| COUNT_NOT_APPLICABLE       |
-| PROJECT_NAME               |
-| PROJECT_GROUP_ID           |
-| HIERARCHY_LEVEL            |
-| INDENT_LEVEL               |
+| R_TestCaseFolders          | Type     |
+| -------------------------- | -------- |
+| *TEST_CASE_FOLDER_ID*      | Int32    |
+| PARENT_TEST_CASE_FOLDER_ID | Int32    |
+| PROJECT_ID                 | Int32    |
+| NAME                       | String   |
+| DESCRIPTION                | String   |
+| EXECUTION_DATE             | DateTime |
+| LAST_UPDATE_DATE           | DateTime |
+| ESTIMATED_DURATION         | Int32    |
+| ACTUAL_DURATION            | Int32    |
+| COUNT_PASSED               | Int32    |
+| COUNT_FAILED               | Int32    |
+| COUNT_BLOCKED              | Int32    |
+| COUNT_CAUTION              | Int32    |
+| COUNT_NOT_RUN              | Int32    |
+| COUNT_NOT_APPLICABLE       | Int32    |
+| PROJECT_NAME               | String   |
+| PROJECT_GROUP_ID           | Int32    |
+| HIERARCHY_LEVEL            | Int32    |
+| INDENT_LEVEL               | String   |
 
 ## Test Case Incidents
-| R_TestCaseIncidents |
-| ------------------- |
-| TEST_CASE_ID        |
-| INCIDENT_ID         |
-| DETECTED_RELEASE_ID |
-| RESOLVED_RELEASE_ID |
-| VERIFIED_RELEASE_ID |
-| IS_OPEN_STATUS      |
+| R_TestCaseIncidents | Type    |
+| ------------------- | ------- |
+| TEST_CASE_ID        | Int32   |
+| INCIDENT_ID         | Int32   |
+| DETECTED_RELEASE_ID | Int32   |
+| RESOLVED_RELEASE_ID | Int32   |
+| VERIFIED_RELEASE_ID | Int32   |
+| IS_OPEN_STATUS      | Boolean |
 
 ## Test Case Priorities
-| R_TestCase_Priorities |
-| --------------------- |
-| TEST_CASE_PRIORITY_ID |
-| PROJECT_TEMPLATE_ID   |
-| NAME                  |
-| IS_ACTIVE             |
-| COLOR                 |
-| SCORE                 |
+| R_TestCasePriorities  | Type    |
+| --------------------- | ------- |
+| TEST_CASE_PRIORITY_ID | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| COLOR                 | String  |
+| SCORE                 | Int32   |
 
 ## Test Case Types
-| R_TestCaseTypes       |
-| --------------------- |
-| *TEST_CASE_TYPE_ID*   |
-| PROJECT_TEMPLATE_ID   |
-| TEST_CASE_WORKFLOW_ID |
-| NAME                  |
-| IS_ACTIVE             |
-| POSITION              |
-| IS_DEFAULT            |
-| IS_EXPLORATORY        |
-| IS_BDD                |
-| PROJECT_TEMPLATE_NAME |
+| R_TestCaseTypes       | Type    |
+| --------------------- | ------- |
+| *TEST_CASE_TYPE_ID*   | Int32   |
+| PROJECT_TEMPLATE_ID   | Int32   |
+| TEST_CASE_WORKFLOW_ID | Int32   |
+| NAME                  | String  |
+| IS_ACTIVE             | Boolean |
+| POSITION              | Int32   |
+| IS_DEFAULT            | Boolean |
+| IS_EXPLORATORY        | Boolean |
+| IS_BDD                | Boolean |
+| PROJECT_TEMPLATE_NAME | String  |
 
 ## Test Configuration Entries
-| R_TestConfigurationEntries       |
-| -------------------------------- |
-| TEST_CONFIGURATION_ID            |
-| TEST_CONFIGURATION_SET_ID        |
-| POSITION                         |
-| TEST_CONFIGURATION_SET_NAME      |
-| IS_TEST_CONFIGURATION_SET_ACTIVE |
-| CUSTOM_PROPERTY_VALUE_ID         |
-| TEST_CASE_PARAMETER_NAME         |
-| TEST_CASE_PARAMETER_VALUE        |
-| PROJECT_NAME                     |
-| PROJECT_GROUP_ID                 |
-| PROJECT_ID                       |
+| R_TestConfigurationEntries       | Type    |
+| -------------------------------- | ------- |
+| TEST_CONFIGURATION_ID            | Int32   |
+| TEST_CONFIGURATION_SET_ID        | Int32   |
+| POSITION                         | Int32   |
+| TEST_CONFIGURATION_SET_NAME      | String  |
+| IS_TEST_CONFIGURATION_SET_ACTIVE | Boolean |
+| CUSTOM_PROPERTY_VALUE_ID         | Int32   |
+| TEST_CASE_PARAMETER_NAME         | String  |
+| TEST_CASE_PARAMETER_VALUE        | String  |
+| PROJECT_NAME                     | String  |
+| PROJECT_GROUP_ID                 | Int32   |
+| PROJECT_ID                       | Int32   |
 
 ## Test Configuration Sets
-| R_TestConfigurationSets     |
-| --------------------------- |
-| *TEST_CONFIGURATION_SET_ID* |
-| PROJECT_ID                  |
-| NAME                        |
-| DESCRIPTION                 |
-| IS_ACTIVE                   |
-| IS_DELETED                  |
-| CREATION_DATE               |
-| LAST_UPDATED_DATE           |
-| CONCURRENCY_DATE            |
-| PROJECT_NAME                |
-| PROJECT_GROUP_ID            |
+| R_TestConfigurationSets     | Type     |
+| --------------------------- | -------- |
+| *TEST_CONFIGURATION_SET_ID* | Int32    |
+| PROJECT_ID                  | Int32    |
+| NAME                        | String   |
+| DESCRIPTION                 | String   |
+| IS_ACTIVE                   | Boolean  |
+| IS_DELETED                  | Boolean  |
+| CREATION_DATE               | DateTime |
+| LAST_UPDATED_DATE           | DateTime |
+| CONCURRENCY                 | Int64    |
+| PROJECT_NAME                | String   |
+| PROJECT_GROUP_ID            | Int32    |
 
 ## Test Runs
 Note that the TEST_RUN_TYPE_ID can have two values: 1 = Manual, 2 = Automated
 
-| R_TestRuns             |
-| ---------------------- |
-| *TEST_RUN_ID*          |
-| TEST_CASE_ID           |
-| NAME                   |
-| DESCRIPTION            |
-| ESTIMATED_DURATION     |
-| ACTUAL_DURATION        |
-| TEST_RUN_TYPE_ID       |
-| TESTER_ID              |
-| EXECUTION_STATUS_ID    |
-| START_DATE             |
-| END_DATE               |
-| RUNNER_NAME            |
-| RUNNER_TEST_NAME       |
-| RUNNER_ASSERT_COUNT    |
-| RUNNER_MESSAGE         |
-| RUNNER_STACK_TRACE     |
-| EXECUTION_STATUS_NAME  |
-| TESTER_NAME            |
-| TEST_RUNS_PENDING_ID   |
-| RELEASE_ID             |
-| TEST_SET_ID            |
-| TEST_SET_TEST_CASE_ID  |
-| RELEASE_NAME           |
-| RELEASE_VERSION_NUMBER |
-| TEST_SET_NAME          |
-| TEST_RUN_TYPE_NAME     |
-| AUTOMATION_HOST_ID     |
-| AUTOMATION_HOST_NAME   |
-| AUTOMATION_ENGINE_ID   |
-| BUILD_ID               |
-| BUILD_NAME             |
-| TEST_RUN_FORMAT_ID     |
-| PROJECT_NAME           |
-| PROJECT_GROUP_ID       |
-| CUST_01...             |
-| CUST_99                |
-| IS_ATTACHMENTS         |
-| IS_DELETED             |
-| CONCURRENCY_DATE       |
-| PROJECT_ID             |
-| CHANGESET_ID           |
-| TEST_CONFIGURATION_ID  |
-| TAGS                   |
+| R_TestRuns             | Type     |
+| ---------------------- | -------- |
+| *TEST_RUN_ID*          | Int32    |
+| TEST_CASE_ID           | Int32    |
+| NAME                   | String   |
+| DESCRIPTION            | String   |
+| ESTIMATED_DURATION     | Int32    |
+| ACTUAL_DURATION        | Int32    |
+| TEST_RUN_TYPE_ID       | Int32    |
+| TESTER_ID              | Int32    |
+| EXECUTION_STATUS_ID    | Int32    |
+| START_DATE             | DateTime |
+| END_DATE               | DateTime |
+| RUNNER_NAME            | String   |
+| RUNNER_TEST_NAME       | String   |
+| RUNNER_ASSERT_COUNT    | Int32    |
+| RUNNER_MESSAGE         | String   |
+| RUNNER_STACK_TRACE     | String   |
+| EXECUTION_STATUS_NAME  | String   |
+| TESTER_NAME            | String   |
+| TEST_RUNS_PENDING_ID   | Int32    |
+| RELEASE_ID             | Int32    |
+| TEST_SET_ID            | Int32    |
+| TEST_SET_TEST_CASE_ID  | Int32    |
+| RELEASE_NAME           | String   |
+| RELEASE_VERSION_NUMBER | String   |
+| TEST_SET_NAME          | String   |
+| TEST_RUN_TYPE_NAME     | String   |
+| AUTOMATION_HOST_ID     | Int32    |
+| AUTOMATION_HOST_NAME   | String   |
+| AUTOMATION_ENGINE_ID   | Int32    |
+| BUILD_ID               | Int32    |
+| BUILD_NAME             | String   |
+| TEST_RUN_FORMAT_ID     | Int32    |
+| PROJECT_NAME           | String   |
+| PROJECT_GROUP_ID       | Int32    |
+| CUST_01 ... CUST_99    | String   |
+| IS_ATTACHMENTS         | Boolean  |
+| IS_DELETED             | Boolean  |
+| CONCURRENCY            | Int64    |
+| PROJECT_ID             | Int32    |
+| CHANGESET_ID           | Int64    |
+| TEST_CONFIGURATION_ID  | Int32    |
+| TAGS                   | String   |
 
 ## Test Run Incidents
-| R_TestRunIncidents  |
-| ------------------- |
-| TEST_RUN_ID         |
-| INCIDENT_ID         |
-| DETECTED_RELEASE_ID |
-| RESOLVED_RELEASE_ID |
-| VERIFIED_RELEASE_ID |
-| IS_OPEN_STATUS      |
-| TEST_STEP_ID        |
-| TEST_RUN_STEP_ID    |
+| R_TestRunIncidents  | Type    |
+| ------------------- | ------- |
+| TEST_RUN_ID         | Int32   |
+| INCIDENT_ID         | Int32   |
+| DETECTED_RELEASE_ID | Int32   |
+| RESOLVED_RELEASE_ID | Int32   |
+| VERIFIED_RELEASE_ID | Int32   |
+| IS_OPEN_STATUS      | Boolean |
+| TEST_STEP_ID        | Int32   |
+| TEST_RUN_STEP_ID    | Int32   |
 
 ## Test Run Steps
-| R_TestRunSteps        |
-| --------------------- |
-| *TEST_RUN_STEP_ID*    |
-| EXECUTION_STATUS_ID   |
-| TEST_CASE_ID          |
-| TEST_STEP_ID          |
-| TEST_RUN_ID           |
-| DESCRIPTION           |
-| POSITION              |
-| EXPECTED_RESULT       |
-| SAMPLE_DATA           |
-| ACTUAL_RESULT         |
-| EXECUTION_STATUS_NAME |
-| TEST_CASE_NAME        |
-| PROJECT_ID            |
-| PROJECT_NAME          |
-| PROJECT_GROUP_ID      |
-| START_DATE            |
-| END_DATE              |
-| ACTUAL_DURATION       |
+| R_TestRunSteps        | Type     |
+| --------------------- | -------- |
+| *TEST_RUN_STEP_ID*    | Int32    |
+| EXECUTION_STATUS_ID   | Int32    |
+| TEST_CASE_ID          | Int32    |
+| TEST_STEP_ID          | Int32    |
+| TEST_RUN_ID           | Int32    |
+| DESCRIPTION           | String   |
+| POSITION              | Int32    |
+| EXPECTED_RESULT       | String   |
+| SAMPLE_DATA           | String   |
+| ACTUAL_RESULT         | String   |
+| EXECUTION_STATUS_NAME | String   |
+| TEST_CASE_NAME        | String   |
+| PROJECT_ID            | Int32    |
+| PROJECT_NAME          | String   |
+| PROJECT_GROUP_ID      | Int32    |
+| START_DATE            | DateTime |
+| END_DATE              | DateTime |
+| ACTUAL_DURATION       | Int32    |
 
 ## Test Sets
-| R_TestSets                  |
-| --------------------------- |
-| *TEST_SET_ID*               |
-| PROJECT_ID                  |
-| RELEASE_ID                  |
-| TEST_SET_STATUS_ID          |
-| CREATOR_ID                  |
-| OWNER_ID                    |
-| AUTOMATION_HOST_ID          |
-| TEST_RUN_TYPE_ID            |
-| RECURRENCE_ID               |
-| NAME                        |
-| DESCRIPTION                 |
-| CREATION_DATE               |
-| PLANNED_DATE                |
-| LAST_UPDATE_DATE            |
-| IS_DELETED                  |
-| CONCURRENCY_DATE            |
-| RELEASE_VERSION_NUMBER      |
-| PROJECT_NAME                |
-| TEST_CASE_COUNT             |
-| TEST_SET_STATUS_NAME        |
-| CREATOR_NAME                |
-| OWNER_NAME                  |
-| PROJECT_ACTIVE_YN           |
-| PROJECT_IS_ACTIVE           |
-| AUTOMATION_HOST_NAME        |
-| TEST_RUN_TYPE_NAME          |
-| RECURRENCE_NAME             |
-| PROJECT_GROUP_ID            |
-| CUST_01...                  |
-| CUST_99                     |
-| TEST_SET_FOLDER_ID          |
-| IS_ATTACHMENTS              |
-| BUILD_EXECUTE_TIME_INTERVAL |
-| ESTIMATED_DURATION          |
-| ACTUAL_DURATION             |
-| COUNT_PASSED                |
-| COUNT_FAILED                |
-| COUNT_CAUTION               |
-| COUNT_BLOCKED               |
-| COUNT_NOT_RUN               |
-| COUNT_NOT_APPLICABLE        |
-| EXECUTION_DATE              |
-| IS_DYNAMIC                  |
-| DYNAMIC_QUERY               |
-| IS_AUTO_SCHEDULED           |
-| TEST_CONFIGURATION_SET_ID   |
-| TAGS                        |
+| R_TestSets                  | Type     |
+| --------------------------- | -------- |
+| *TEST_SET_ID*               | Int32    |
+| PROJECT_ID                  | Int32    |
+| RELEASE_ID                  | Int32    |
+| TEST_SET_STATUS_ID          | Int32    |
+| CREATOR_ID                  | Int32    |
+| OWNER_ID                    | Int32    |
+| AUTOMATION_HOST_ID          | Int32    |
+| TEST_RUN_TYPE_ID            | Int32    |
+| RECURRENCE_ID               | Int32    |
+| NAME                        | String   |
+| DESCRIPTION                 | String   |
+| CREATION_DATE               | DateTime |
+| PLANNED_DATE                | DateTime |
+| LAST_UPDATE_DATE            | DateTime |
+| IS_DELETED                  | Boolean  |
+| CONCURRENCY                 | Int64    |
+| RELEASE_VERSION_NUMBER      | String   |
+| PROJECT_NAME                | String   |
+| TEST_CASE_COUNT             | Int32    |
+| TEST_SET_STATUS_NAME        | String   |
+| CREATOR_NAME                | String   |
+| OWNER_NAME                  | String   |
+| PROJECT_ACTIVE_YN           | String   |
+| PROJECT_IS_ACTIVE           | Boolean  |
+| AUTOMATION_HOST_NAME        | String   |
+| TEST_RUN_TYPE_NAME          | String   |
+| RECURRENCE_NAME             | String   |
+| PROJECT_GROUP_ID            | Int32    |
+| CUST_01 ... CUST_99         | String   |
+| TEST_SET_FOLDER_ID          | Int32    |
+| IS_ATTACHMENTS              | Boolean  |
+| BUILD_EXECUTE_TIME_INTERVAL | Int32    |
+| ESTIMATED_DURATION          | Int32    |
+| ACTUAL_DURATION             | Int32    |
+| COUNT_PASSED                | Int32    |
+| COUNT_FAILED                | Int32    |
+| COUNT_CAUTION               | Int32    |
+| COUNT_BLOCKED               | Int32    |
+| COUNT_NOT_RUN               | Int32    |
+| COUNT_NOT_APPLICABLE        | Int32    |
+| EXECUTION_DATE              | DateTime |
+| IS_DYNAMIC                  | Boolean  |
+| DYNAMIC_QUERY               | String   |
+| IS_AUTO_SCHEDULED           | Boolean  |
+| TEST_CONFIGURATION_SET_ID   | Int32    |
+| TAGS                        | String   |
+| RANK                        | Int32    |
 
 ## Test Set Folders
-| R_TestSetFolders          |
-| ------------------------- |
-| *TEST_SET_FOLDER_ID*      |
-| PROJECT_ID                |
-| PARENT_TEST_SET_FOLDER_ID |
-| NAME                      |
-| DESCRIPTION               |
-| CREATION_DATE             |
-| LAST_UPDATE_DATE          |
-| EXECUTION_DATE            |
-| ESTIMATED_DURATION        |
-| ACTUAL_DURATION           |
-| COUNT_PASSED              |
-| COUNT_FAILED              |
-| COUNT_CAUTION             |
-| COUNT_BLOCKED             |
-| COUNT_NOT_RUN             |
-| COUNT_NOT_APPLICABLE      |
-| PROJECT_NAME              |
-| PROJECT_GROUP_ID          |
-| HIERARCHY_LEVEL           |
-| INDENT_LEVEL              |
+| R_TestSetFolders          | Type     |
+| ------------------------- | -------- |
+| *TEST_SET_FOLDER_ID*      | Int32    |
+| PROJECT_ID                | Int32    |
+| PARENT_TEST_SET_FOLDER_ID | Int32    |
+| NAME                      | String   |
+| DESCRIPTION               | String   |
+| CREATION_DATE             | DateTime |
+| LAST_UPDATE_DATE          | DateTime |
+| EXECUTION_DATE            | DateTime |
+| ESTIMATED_DURATION        | Int32    |
+| ACTUAL_DURATION           | Int32    |
+| COUNT_PASSED              | Int32    |
+| COUNT_FAILED              | Int32    |
+| COUNT_CAUTION             | Int32    |
+| COUNT_BLOCKED             | Int32    |
+| COUNT_NOT_RUN             | Int32    |
+| COUNT_NOT_APPLICABLE      | Int32    |
+| PROJECT_NAME              | String   |
+| PROJECT_GROUP_ID          | Int32    |
+| HIERARCHY_LEVEL           | Int32    |
+| INDENT_LEVEL              | String   |
 
 ## Test Set Incidents
-| R_TestSetIncidents  |
-| ------------------- |
-| TEST_SET_ID         |
-| INCIDENT_ID         |
-| DETECTED_RELEASE_ID |
-| RESOLVED_RELEASE_ID |
-| VERIFIED_RELEASE_ID |
-| IS_OPEN_STATUS      |
+| R_TestSetIncidents  | Type    |
+| ------------------- | ------- |
+| TEST_SET_ID         | Int32   |
+| INCIDENT_ID         | Int32   |
+| DETECTED_RELEASE_ID | Int32   |
+| RESOLVED_RELEASE_ID | Int32   |
+| VERIFIED_RELEASE_ID | Int32   |
+| IS_OPEN_STATUS      | Boolean |
 
 ## Test Set Test Cases
-| R_TestSetTestCases      |
-| ----------------------- |
-| *TEST_SET_TEST_CASE_ID* |
-| TEST_SET_ID             |
-| TEST_CASE_ID            |
-| OWNER_ID                |
-| POSITION                |
-| TEST_SET_NAME           |
-| TEST_CASE_NAME          |
-| OWNER_NAME              |
-| PROJECT_ID              |
-| PROJECT_NAME            |
-| PLANNED_DATE            |
-| IS_SETUP_TEARDOWN       |
+| R_TestSetTestCases      | Type     |
+| ----------------------- | -------- |
+| *TEST_SET_TEST_CASE_ID* | Int32    |
+| TEST_SET_ID             | Int32    |
+| TEST_CASE_ID            | Int32    |
+| OWNER_ID                | Int32    |
+| POSITION                | Int32    |
+| TEST_SET_NAME           | String   |
+| TEST_CASE_NAME          | String   |
+| OWNER_NAME              | String   |
+| PROJECT_ID              | Int32    |
+| PROJECT_NAME            | String   |
+| PLANNED_DATE            | DateTime |
+| IS_SETUP_TEARDOWN       | Boolean  |
 
 ## Test Steps
-| R_TestSteps           |
-| --------------------- |
-| *TEST_STEP_ID*        |
-| TEST_CASE_ID          |
-| EXECUTION_STATUS_ID   |
-| DESCRIPTION           |
-| LINKED_TEST_CASE_ID   |
-| POSITION              |
-| EXPECTED_RESULT       |
-| SAMPLE_DATA           |
-| LAST_UPDATE_DATE      |
-| IS_DELETED            |
-| EXECUTION_STATUS_NAME |
-| TEST_CASE_NAME        |
-| PROJECT_ID            |
-| PROJECT_NAME          |
-| PROJECT_GROUP_ID      |
-| CUST_01...            |
-| CUST_99               |
-| IS_ATTACHMENTS        |
-| CONCURRENCY_DATE      |
-| PRECONDITION          |
+| R_TestSteps           | Type     |
+| --------------------- | -------- |
+| *TEST_STEP_ID*        | Int32    |
+| TEST_CASE_ID          | Int32    |
+| EXECUTION_STATUS_ID   | Int32    |
+| DESCRIPTION           | String   |
+| LINKED_TEST_CASE_ID   | Int32    |
+| POSITION              | Int32    |
+| EXPECTED_RESULT       | String   |
+| SAMPLE_DATA           | String   |
+| LAST_UPDATE_DATE      | DateTime |
+| IS_DELETED            | Boolean  |
+| EXECUTION_STATUS_NAME | String   |
+| TEST_CASE_NAME        | String   |
+| PROJECT_ID            | Int32    |
+| PROJECT_NAME          | String   |
+| PROJECT_GROUP_ID      | Int32    |
+| CUST_01 ... CUST_99   | String   |
+| IS_ATTACHMENTS        | Boolean  |
+| CONCURRENCY           | Int64    |
+| PRECONDITION          | String   |
 
 
 ## Timesheets
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_Timesheets          |
-| --------------------- |
-| *TIMESHEET_ID*        |
-| SUBMITTER_USER_ID     |
-| SUBMITTER_USER_NAME   |
-| APPROVER_USER_ID      |
-| APPROVER_USER_NAME    |
-| TIMESHEET_STATUS_ID   |
-| TIMESHEET_STATUS_NAME |
-| CREATION_DATE         |
-| APPROVAL_DATE         |
-| LAST_UPDATE_DATE      |
-| START_DATE            |
-| END_DATE              |
-| COMMENTS              |
-| APPROVER_COMMENTS     |
+| R_Timesheets          | Type     |
+| --------------------- | -------- |
+| *TIMESHEET_ID*        | Int32    |
+| SUBMITTER_USER_ID     | Int32    |
+| SUBMITTER_USER_NAME   | String   |
+| APPROVER_USER_ID      | Int32    |
+| APPROVER_USER_NAME    | String   |
+| TIMESHEET_STATUS_ID   | Int32    |
+| TIMESHEET_STATUS_NAME | String   |
+| CREATION_DATE         | DateTime |
+| APPROVAL_DATE         | DateTime |
+| LAST_UPDATE_DATE      | DateTime |
+| START_DATE            | DateTime |
+| END_DATE              | DateTime |
+| COMMENTS              | String   |
+| APPROVER_COMMENTS     | String   |
 
 ## Timesheet Entries
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
-| R_TimesheetEntries   |
-| -------------------- |
-| *TIMESHEET_ENTRY_ID* |
-| TIMESHEET_ID         |
-| USER_ID              |
-| USER_NAME            |
-| ARTIFACT_TYPE_ID     |
-| ARTIFACT_TYPE_NAME   |
-| ARTIFACT_ID          |
-| ARTIFACT_NAME        |
-| EFFORT_MINUTES       |
-| EFFORT_DATE          |
-| PROJECT_ID           |
-| PROJECT_NAME         |
-| PROJECT_GROUP_ID     |
-| PROJECT_GROUP_NAME   |
-| RESOURCE_CATEGORY_ID |
+| R_TimesheetEntries   | Type     |
+| -------------------- | -------- |
+| *TIMESHEET_ENTRY_ID* | Int32    |
+| TIMESHEET_ID         | Int32    |
+| USER_ID              | Int32    |
+| USER_NAME            | String   |
+| ARTIFACT_TYPE_ID     | Int32    |
+| ARTIFACT_TYPE_NAME   | String   |
+| ARTIFACT_ID          | Int32    |
+| ARTIFACT_NAME        | String   |
+| EFFORT_MINUTES       | Int32    |
+| EFFORT_DATE          | DateTime |
+| PROJECT_ID           | Int32    |
+| PROJECT_NAME         | String   |
+| PROJECT_GROUP_ID     | Int32    |
+| PROJECT_GROUP_NAME   | String   |
+| RESOURCE_CATEGORY_ID | Int32    |
 
 ## Timesheet Statuses
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
-| R_TimesheetStatuses   |
-| --------------------- |
-| *TIMESHEET_STATUS_ID* |
-| TIMESHEET_STATUS_NAME |
-| IS_ACTIVE             |
-| IS_OPEN               |
+| R_TimesheetStatuses   | Type    |
+| --------------------- | ------- |
+| *TIMESHEET_STATUS_ID* | Int32   |
+| TIMESHEET_STATUS_NAME | String  |
+| IS_ACTIVE             | Boolean |
+| IS_OPEN               | Boolean |
 
 ## Timesheets with Entries
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 
 This table combines the information from the timesheets table and the timesheet entries table to give a unified view of a timesheet and all of its key information. 
 
-| R_TimesheetWithEntries |
-| ---------------------- |
-| *TIMESHEET_ID*         |
-| SUBMITTER_USER_ID      |
-| SUBMITTER_USER_NAME    |
-| APPROVER_USER_ID       |
-| APPROVER_USER_NAME     |
-| TIMESHEET_STATUS_ID    |
-| TIMESHEET_STATUS_NAME  |
-| CREATION_DATE          |
-| APPROVAL_DATE          |
-| LAST_UPDATE_DATE       |
-| START_DATE             |
-| END_DATE               |
-| COMMENTS               |
-| APPROVER_COMMENTS      |
-| TIMESHEET_ENTRY_ID     |
-| ARTIFACT_TYPE_ID       |
-| ARTIFACT_TYPE_NAME     |
-| ARTIFACT_ID            |
-| ARTIFACT_NAME          |
-| EFFORT_MINUTES         |
-| EFFORT_DATE            |
-| PROJECT_ID             |
-| PROJECT_NAME           |
-| PROJECT_GROUP_ID       |
-| PROJECT_GROUP_NAME     |
-| RESOURCE_CATEGORY_ID   |
+| R_TimesheetWithEntries | Type     |
+| ---------------------- | -------- |
+| *TIMESHEET_ID*         | Int32    |
+| SUBMITTER_USER_ID      | Int32    |
+| SUBMITTER_USER_NAME    | String   |
+| APPROVER_USER_ID       | Int32    |
+| APPROVER_USER_NAME     | String   |
+| TIMESHEET_STATUS_ID    | Int32    |
+| TIMESHEET_STATUS_NAME  | String   |
+| CREATION_DATE          | DateTime |
+| APPROVAL_DATE          | DateTime |
+| LAST_UPDATE_DATE       | DateTime |
+| START_DATE             | DateTime |
+| END_DATE               | DateTime |
+| COMMENTS               | String   |
+| APPROVER_COMMENTS      | String   |
+| TIMESHEET_ENTRY_ID     | Int32    |
+| ARTIFACT_TYPE_ID       | Int32    |
+| ARTIFACT_TYPE_NAME     | String   |
+| ARTIFACT_ID            | Int32    |
+| ARTIFACT_NAME          | String   |
+| EFFORT_MINUTES         | Int32    |
+| EFFORT_DATE            | DateTime |
+| PROJECT_ID             | Int32    |
+| PROJECT_NAME           | String   |
+| PROJECT_GROUP_ID       | Int32    |
+| PROJECT_GROUP_NAME     | String   |
+| RESOURCE_CATEGORY_ID   | Int32    |
 
 
 ## Users
-| R_Users                         |
-| ------------------------------- |
-| *USER_ID*                       |
-| USER_NAME                       |
-| EMAIL_ADDRESS                   |
-| IS_ACTIVE                       |
-| CREATION_DATE                   |
-| LDAP_DN                         |
-| FIRST_NAME                      |
-| LAST_NAME                       |
-| MIDDLE_INITIAL                  |
-| DEPARTMENT                      |
-| LAST_UPDATE_DATE                |
-| TIMEZONE                        |
-| LAST_OPENED_PROJECT_ID          |
-| IS_APPROVED                     |
-| LAST_LOGIN_DATE                 |
-| LAST_ACTIVITY_DATE              |
-| ORGANIZATION                    |
-| LAST_OPENED_PROJECT_GROUP_ID    |
-| LAST_OPENED_PROJECT_TEMPLATE_ID |
-| IS_ADMIN                        |
-| IS_REPORT_ADMIN                 |
-| IS_RESOURCE_ADMIN               |
-| IS_PORTFOLIO_ADMIN              |
-| LAST_PASSWORD_CHANGED_DATE      |
+| R_Users                         | Type     |
+| ------------------------------- | -------- |
+| *USER_ID*                       | Int32    |
+| USER_NAME                       | String   |
+| EMAIL_ADDRESS                   | String   |
+| IS_ACTIVE                       | Boolean  |
+| CREATION_DATE                   | DateTime |
+| LDAP_DN                         | String   |
+| FIRST_NAME                      | String   |
+| LAST_NAME                       | String   |
+| MIDDLE_INITIAL                  | String   |
+| DEPARTMENT                      | String   |
+| LAST_UPDATE_DATE                | DateTime |
+| TIMEZONE                        | String   |
+| LAST_OPENED_PROJECT_ID          | Int32    |
+| IS_APPROVED                     | Boolean  |
+| LAST_LOGIN_DATE                 | DateTime |
+| LAST_ACTIVITY_DATE              | DateTime |
+| ORGANIZATION                    | String   |
+| LAST_OPENED_PROJECT_GROUP_ID    | Int32    |
+| LAST_OPENED_PROJECT_TEMPLATE_ID | Int32    |
+| IS_ADMIN                        | Boolean  |
+| IS_REPORT_ADMIN                 | Boolean  |
+| IS_RESOURCE_ADMIN               | Boolean  |
+| IS_PORTFOLIO_ADMIN              | Boolean  |
+| LAST_PASSWORD_CHANGED_DATE      | DateTime |
+| LOGIN_PROVIDER_NAME             | String   |
+| IS_TIMESHEET_MANAGER            | Boolean  |
