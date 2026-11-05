@@ -12,6 +12,7 @@
 
 ## Artifact Associations
 **System-level.** Links between any two artifacts, by id and type.
+
 | R_ArtifactAssociations    | Type     | Links to |
 | ------------------------- | -------- | -------- |
 | ARTIFACT_LINK_TYPE_ID     | Int32    |  |
@@ -31,6 +32,7 @@
 ## Artifact Associations - Extended
 **System-level.** Links between any two artifacts, including the name of each one.
 Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving the names makes this view substantially slower.
+
 | R_ArtifactAssociationExtended | Type     | Links to |
 | ----------------------------- | -------- | -------- |
 | ARTIFACT_LINK_TYPE_ID         | Int32    |  |
@@ -51,6 +53,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Artifact Attachments
 **Product-level.** Which attachments are attached to which artifacts.
+
 | R_ArtifactAttachments | Type     | Links to |
 | --------------------- | -------- | -------- |
 | ARTIFACT_TYPE_ID      | Int32    | R_ArtifactTypes.ARTIFACT_TYPE_ID |
@@ -68,6 +71,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Artifact Tags
 **Product-level.** Tags applied to artifacts.
+
 | R_ArtifactTags     | Type   | Links to |
 | ------------------ | ------ | -------- |
 | ARTIFACT_ID        | Int32  |  |
@@ -79,6 +83,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Artifact Types
 **System-level.** Lookup of the artifact types in Spira, such as Requirement or Incident.
+
 | R_ArtifactTypes    | Type   | Links to |
 | ------------------ | ------ | -------- |
 | *ARTIFACT_TYPE_ID* | Int32  |  |
@@ -87,6 +92,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Attachments
 **Product-level.** Documents and attached files, with their current version metadata.
+
 | R_Attachments                  | Type     | Links to |
 | ------------------------------ | -------- | -------- |
 | *ATTACHMENT_ID*                | Int32    |  |
@@ -120,6 +126,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Attachment Folders
 **Product-level.** Folder structure organising a product's documents.
+
 | R_AttachmentFolders                 | Type   | Links to |
 | ----------------------------------- | ------ | -------- |
 | *PROJECT_ATTACHMENT_FOLDER_ID*      | Int32  |  |
@@ -131,6 +138,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Attachment Versions
 **Product-level.** Version history of a document, one row per uploaded version.
+
 | R_AttachmentVersions    | Type     | Links to |
 | ----------------------- | -------- | -------- |
 | *ATTACHMENT_VERSION_ID* | Int32    |  |
@@ -149,6 +157,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 
 ## Automation Hosts
 **Product-level.** Machines registered to run automated tests.
+
 | R_AutomationHosts    | Type     | Links to |
 | -------------------- | -------- | -------- |
 | *AUTOMATION_HOST_ID* | Int32    |  |
@@ -170,6 +179,7 @@ Prefer R_ArtifactAssociations unless the artifact names are needed. Resolving th
 **Product-level.** Snapshots of a product's artifacts taken at a point in time.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 Worked examples of reporting on baselines are in Inflectra KB550.
+
 | R_Baselines             | Type     | Links to |
 | ----------------------- | -------- | -------- |
 | *BASELINE_ID*           | Int32    |  |
@@ -197,6 +207,7 @@ Worked examples of reporting on baselines are in Inflectra KB550.
 ## Builds
 **Product-level.** Builds reported by a continuous integration server against a release.
 BUILD_STATUS_ID: 1 = Failed, 2 = Succeeded, 3 = Unstable, 4 = Aborted
+
 | R_Builds               | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | *BUILD_ID*             | Int32    |  |
@@ -215,6 +226,7 @@ BUILD_STATUS_ID: 1 = Failed, 2 = Succeeded, 3 = Unstable, 4 = Aborted
 
 ## Build Statuses
 **System-level.** Lookup of build outcome names.
+
 | R_BuildStatuses   | Type    | Links to |
 | ----------------- | ------- | -------- |
 | *BUILD_STATUS_ID* | Int32   |  |
@@ -224,6 +236,7 @@ BUILD_STATUS_ID: 1 = Failed, 2 = Succeeded, 3 = Unstable, 4 = Aborted
 ## Capabilities
 **Program-level.** Capabilities planned at program level, above product requirements.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capabilities | Type     | Links to |
 | --------------------------- | -------- | -------- |
 | *CAPABILITY_ID*             | Int32    |  |
@@ -262,6 +275,7 @@ BUILD_STATUS_ID: 1 = Failed, 2 = Succeeded, 3 = Unstable, 4 = Aborted
 **System-level.** Lookup of capability priority names.
 !!! abstract "Available in SpiraPlan only"
 Capability priorities, not incident or task priorities. PRIORITY_ID is also the key of R_IncidentPriorities, so take care which one a query means.
+
 | R_ProjectGroup_Capability_Priorities | Type    | Links to |
 | ------------------------------------ | ------- | -------- |
 | *PRIORITY_ID*                        | Int32   |  |
@@ -274,6 +288,7 @@ Capability priorities, not incident or task priorities. PRIORITY_ID is also the 
 ## Capability Requirement Associations
 **System-level.** Which product requirements deliver which program capability.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Capability_Project_Requirements | Type   | Links to |
 | ---------------------------------------------- | ------ | -------- |
 | CAPABILITY_ID                                  | Int32  | R_ProjectGroup_Capabilities.CAPABILITY_ID |
@@ -287,6 +302,7 @@ Capability priorities, not incident or task priorities. PRIORITY_ID is also the 
 **System-level.** Lookup of capability status names.
 !!! abstract "Available in SpiraPlan only"
 STATUS_ID is also the key of R_ProjectGroup_Milestone_Statuses. These are different sets of values.
+
 | R_ProjectGroup_Capability_Statuses | Type    | Links to |
 | ---------------------------------- | ------- | -------- |
 | *STATUS_ID*                        | Int32   |  |
@@ -302,6 +318,7 @@ STATUS_ID is also the key of R_ProjectGroup_Milestone_Statuses. These are differ
 **System-level.** Lookup of capability type names.
 !!! abstract "Available in SpiraPlan only"
 TYPE_ID is also the key of R_ProjectGroup_Milestone_Types.
+
 | R_ProjectGroup_Capability_Types | Type    | Links to |
 | ------------------------------- | ------- | -------- |
 | *TYPE_ID*                       | Int32   |  |
@@ -312,6 +329,7 @@ TYPE_ID is also the key of R_ProjectGroup_Milestone_Types.
 
 ## Comments
 **System-level.** Comments posted on any artifact.
+
 | R_Comments         | Type     | Links to |
 | ------------------ | -------- | -------- |
 | ARTIFACT_TYPE_ID   | Int32    |  |
@@ -325,6 +343,7 @@ TYPE_ID is also the key of R_ProjectGroup_Milestone_Types.
 
 ## Components
 **Product-level.** Components a product is divided into.
+
 | R_Components     | Type    | Links to |
 | ---------------- | ------- | -------- |
 | *COMPONENT_ID*   | Int32   |  |
@@ -337,6 +356,7 @@ TYPE_ID is also the key of R_ProjectGroup_Milestone_Types.
 
 ## Custom Lists
 **Product-level.** Custom lists defined in a product template.
+
 | R_CustomLists             | Type    | Links to |
 | ------------------------- | ------- | -------- |
 | *CUSTOM_PROPERTY_LIST_ID* | Int32   |  |
@@ -350,6 +370,7 @@ TYPE_ID is also the key of R_ProjectGroup_Milestone_Types.
 
 ## Custom List Values
 **Product-level.** The selectable values of a product-template custom list.
+
 | R_CustomListValues                | Type    | Links to |
 | --------------------------------- | ------- | -------- |
 | *CUSTOM_PROPERTY_VALUE_ID*        | Int32   |  |
@@ -368,6 +389,7 @@ TYPE_ID is also the key of R_ProjectGroup_Milestone_Types.
 ## Custom Property Definitions
 **Product-level.** Which CUST_nn column each product-template custom property occupies, and what the customer calls it.
 This is how a customer-facing custom property name resolves to a CUST_nn column. The mapping is per product template, so it differs between products.
+
 | R_CustomPropertyDefinitions  | Type    | Links to |
 | ---------------------------- | ------- | -------- |
 | *CUSTOM_PROPERTY_ID*         | Int32   |  |
@@ -391,6 +413,7 @@ This is how a customer-facing custom property name resolves to a CUST_nn column.
 
 ## Document Statuses
 **System-level.** Lookup of document status names.
+
 | R_DocumentStatuses    | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *DOCUMENT_STATUS_ID*  | Int32   |  |
@@ -404,6 +427,7 @@ This is how a customer-facing custom property name resolves to a CUST_nn column.
 
 ## Document Types
 **System-level.** Lookup of document type names.
+
 | R_DocumentTypes       | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *DOCUMENT_TYPE_ID*    | Int32   |  |
@@ -417,6 +441,7 @@ This is how a customer-facing custom property name resolves to a CUST_nn column.
 
 ## Events
 **System-level.** Audit trail of system events.
+
 | R_Events                 | Type     | Links to |
 | ------------------------ | -------- | -------- |
 | EVENT_TYPE_ID            | Int32    |  |
@@ -440,6 +465,7 @@ This is how a customer-facing custom property name resolves to a CUST_nn column.
 ## Global / System Custom Property Definitions
 **System-level.** Custom property definitions that apply system-wide rather than per template.
 System-wide equivalent of R_CustomPropertyDefinitions.
+
 | R_GlobalCustomPropertyDefinitions | Type    | Links to |
 | --------------------------------- | ------- | -------- |
 | *CUSTOM_PROPERTY_ID*              | Int32   |  |
@@ -458,6 +484,7 @@ System-wide equivalent of R_CustomPropertyDefinitions.
 ## Global / System Custom Property Lists
 **System-level.** Custom lists defined once for the whole system.
 System-wide equivalent of R_CustomLists, which is per product template.
+
 | R_GlobalCustomLists       | Type    | Links to |
 | ------------------------- | ------- | -------- |
 | *CUSTOM_PROPERTY_LIST_ID* | Int32   |  |
@@ -468,6 +495,7 @@ System-wide equivalent of R_CustomLists, which is per product template.
 ## Global / System Custom Property List Values
 **System-level.** The selectable values of a system-wide custom list.
 System-wide equivalent of R_CustomListValues, which is per product template.
+
 | R_GlobalCustomListValues       | Type    | Links to |
 | ------------------------------ | ------- | -------- |
 | *CUSTOM_PROPERTY_VALUE_ID*     | Int32   |  |
@@ -481,6 +509,7 @@ System-wide equivalent of R_CustomListValues, which is per product template.
 ## Global / System History Change-Sets
 **System-level.** Change sets recording edits to system-level administrative data.
 Covers administrative objects rather than product artifacts. For artifact edits use R_HistoryChangeSets.
+
 | R_Global_HistoryChangeSets | Type     | Links to |
 | -------------------------- | -------- | -------- |
 | *CHANGESET_ID*             | Int64    |  |
@@ -500,6 +529,7 @@ Covers administrative objects rather than product artifacts. For artifact edits 
 ## Global / System History Details
 **System-level.** Field-level before and after values for system-level changes.
 System-level counterpart of R_HistoryDetails.
+
 | R_Global_HistoryDetails | Type     | Links to |
 | ----------------------- | -------- | -------- |
 | *ARTIFACT_HISTORY_ID*   | Int64    |  |
@@ -521,6 +551,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## History Change-Sets
 **Product-level.** One row per save against a product artifact, grouping the fields changed.
+
 | R_HistoryChangeSets | Type     | Links to |
 | ------------------- | -------- | -------- |
 | *CHANGESET_ID*      | Int32    |  |
@@ -541,6 +572,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## History Details
 **System-level.** Field-level before and after values for each artifact change.
+
 | R_HistoryDetails       | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | FIELD_NAME             | String   |  |
@@ -566,6 +598,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Incidents
 **Product-level.** Incidents - bugs, issues and other defects raised against a product.
+
 | R_Incidents                     | Type     | Links to |
 | ------------------------------- | -------- | -------- |
 | *INCIDENT_ID*                   | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -622,6 +655,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Incident Priorities
 **System-level.** Lookup of incident priority names.
+
 | R_IncidentPriorities  | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *PRIORITY_ID*         | Int32   |  |
@@ -634,6 +668,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Incident Severities
 **System-level.** Lookup of incident severity names.
+
 | R_IncidentSeverities  | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *SEVERITY_ID*         | Int32   |  |
@@ -646,6 +681,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Incident Statuses
 **System-level.** Lookup of incident status names, and whether each one counts as open.
+
 | R_IncidentStatuses    | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *INCIDENT_STATUS_ID*  | Int32   |  |
@@ -660,6 +696,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Incident Types
 **System-level.** Lookup of incident type names, such as Bug or Enhancement.
+
 | R_IncidentTypes       | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *INCIDENT_TYPE_ID*    | Int32   |  |
@@ -673,6 +710,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Pending Test Runs
 **Product-level.** Test runs started but not yet completed.
+
 | R_PendingTestRuns      | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | *TEST_RUNS_PENDING_ID* | Int32    |  |
@@ -696,6 +734,7 @@ System-level counterpart of R_HistoryDetails.
 ## Portfolios
 **System-level.** Portfolios grouping programs together.
 !!! abstract "Available in SpiraPlan only"
+
 | R_Portfolios      | Type     | Links to |
 | ----------------- | -------- | -------- |
 | *PORTFOLIO_ID*    | Int32    |  |
@@ -710,6 +749,7 @@ System-level counterpart of R_HistoryDetails.
 ## Program Milestones
 **Program-level.** Milestones planned at program level.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestones       | Type     | Links to |
 | ------------------------------- | -------- | -------- |
 | *PROJECT_GROUP_MILESTONE_ID*    | Int32    |  |
@@ -742,6 +782,7 @@ System-level counterpart of R_HistoryDetails.
 ## Program Milestone Releases
 **System-level.** Which product releases roll up to which program milestone.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestone_Project_Releases | Type   | Links to |
 | ----------------------------------------- | ------ | -------- |
 | *PROJECT_GROUP_MILESTONE_ID*              | Int32  | R_ProjectGroup_Milestones.PROJECT_GROUP_MILESTONE_ID |
@@ -754,6 +795,7 @@ System-level counterpart of R_HistoryDetails.
 ## Program Milestone Statuses
 **System-level.** Lookup of program milestone status names.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestone_Statuses | Type    | Links to |
 | --------------------------------- | ------- | -------- |
 | *STATUS_ID*                       | Int32   |  |
@@ -766,6 +808,7 @@ System-level counterpart of R_HistoryDetails.
 ## Program Milestone Types
 **System-level.** Lookup of program milestone type names.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_Milestone_Types | Type    | Links to |
 | ------------------------------ | ------- | -------- |
 | *TYPE_ID*                      | Int32   |  |
@@ -776,6 +819,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project Artifacts Sharing 
 **System-level.** Artifacts shared between products.
+
 | R_ProjectArtifactSharings | Type   | Links to |
 | ------------------------- | ------ | -------- |
 | SOURCE_PROJECT_ID         | Int32  | R_Projects.PROJECT_ID |
@@ -788,6 +832,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Projects (Products)
 **System-level.** Products, called projects in the database. The main scoping table.
+
 | R_Projects                  | Type     | Links to |
 | --------------------------- | -------- | -------- |
 | *PROJECT_ID*                | Int32    |  |
@@ -825,6 +870,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project Groups (Programs)
 **System-level.** Programs, each grouping a set of products.
+
 | R_ProjectGroups     | Type     | Links to |
 | ------------------- | -------- | -------- |
 | *PROJECT_GROUP_ID*  | Int32    |  |
@@ -843,6 +889,7 @@ System-level counterpart of R_HistoryDetails.
 ## Project Group Membership (Program Membership)
 **Program-level.** Which users belong to which program.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectGroup_MembershipUsers | Type    | Links to |
 | ------------------------------ | ------- | -------- |
 | PROJECT_GROUP_ID               | Int32   | R_ProjectGroups.PROJECT_GROUP_ID |
@@ -857,6 +904,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project (Product) Membership
 **Product-level.** Which users belong to which product, and in which role.
+
 | R_ProjectMembership | Type    | Links to |
 | ------------------- | ------- | -------- |
 | PROJECT_ID          | Int32   | R_Projects.PROJECT_ID |
@@ -872,6 +920,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project Release Resources
 **Product-level.** Resource allocation figures per product release.
+
 | R_ProjectReleaseResources | Type  | Links to |
 | ------------------------- | ----- | -------- |
 | *PROJECT_ID*              | Int32 |  |
@@ -882,6 +931,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project Roles
 **System-level.** Roles a product member can hold, with their permissions.
+
 | R_ProjectRoles           | Type    | Links to |
 | ------------------------ | ------- | -------- |
 | *PROJECT_ROLE_ID*        | Int32   |  |
@@ -901,6 +951,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project (Product) Tags
 **Product-level.** Tags applied to products.
+
 | R_ProjectTags | Type   | Links to |
 | ------------- | ------ | -------- |
 | PROJECT_ID    | Int32  |  |
@@ -910,6 +961,7 @@ System-level counterpart of R_HistoryDetails.
 ## Project Teams Users
 **Product-level.** Which users belong to which team within a product.
 !!! abstract "Available in SpiraPlan only"
+
 | R_ProjectTeamUsers | Type   | Links to |
 | ------------------ | ------ | -------- |
 | PROJECT_ID         | Int32  | R_Projects.PROJECT_ID |
@@ -921,6 +973,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Project (Product) Templates
 **System-level.** Templates products draw their types, statuses and custom properties from.
+
 | R_ProjectTemplates    | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *PROJECT_TEMPLATE_ID* | Int32   |  |
@@ -930,6 +983,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Releases
 **Product-level.** Releases, sprints and phases a product is delivered in.
+
 | R_Releases               | Type     | Links to |
 | ------------------------ | -------- | -------- |
 | *RELEASE_ID*             | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -986,6 +1040,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Release Test Case Mapping
 **Product-level.** Which test cases are assigned to which release.
+
 | R_ReleaseTestCases     | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | RELEASE_ID             | Int32    | R_Releases.RELEASE_ID |
@@ -1003,6 +1058,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Requirements
 **Product-level.** Requirements - the features and user stories planned for a product.
+
 | R_Requirements           | Type     | Links to |
 | ------------------------ | -------- | -------- |
 | *REQUIREMENT_ID*         | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -1059,6 +1115,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Requirement Importances
 **System-level.** Lookup of requirement importance names.
+
 | R_Requirement_Importance | Type    | Links to |
 | ------------------------ | ------- | -------- |
 | *IMPORTANCE_ID*          | Int32   |  |
@@ -1070,6 +1127,7 @@ System-level counterpart of R_HistoryDetails.
 
 ## Requirement Incidents
 **System-level.** Links between requirements and incidents, by id.
+
 | R_RequirementIncidents | Type    | Links to |
 | ---------------------- | ------- | -------- |
 | REQUIREMENT_ID         | Int32   |  |
@@ -1080,6 +1138,7 @@ System-level counterpart of R_HistoryDetails.
 ## Requirement Incidents - Extended
 **System-level.** Links between requirements and incidents, including the name of each.
 Prefer R_RequirementIncidents unless the names are needed. Resolving them makes this view slower.
+
 | R_RequirementIncidentExtended | Type    | Links to |
 | ----------------------------- | ------- | -------- |
 | REQUIREMENT_ID                | Int32   |  |
@@ -1091,6 +1150,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Requirement Steps
 **System-level.** The individual steps or scenarios recorded against a requirement.
+
 | R_RequirementSteps           | Type     | Links to |
 | ---------------------------- | -------- | -------- |
 | REQUIREMENT_ID               | Int32    |  |
@@ -1109,6 +1169,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Requirement Test Case Coverage
 **Product-level.** Which test cases cover which requirements.
+
 | R_RequirementTestCases | Type   | Links to |
 | ---------------------- | ------ | -------- |
 | REQUIREMENT_ID         | Int32  |  |
@@ -1120,6 +1181,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Requirement Test Step Coverage
 **Product-level.** Test steps generated from requirement steps.
+
 | R_RequirementTestSteps | Type   | Links to |
 | ---------------------- | ------ | -------- |
 | TEST_STEP_ID           | Int32  | R_TestSteps.TEST_STEP_ID |
@@ -1134,6 +1196,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Requirement Types
 **System-level.** Lookup of requirement type names, such as Feature or User Story.
+
 | R_RequirementTypes      | Type    | Links to |
 | ----------------------- | ------- | -------- |
 | *REQUIREMENT_TYPE_ID*   | Int32   |  |
@@ -1150,6 +1213,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Risks
 **Product-level.** Risks identified against a product.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_Risks                  | Type     | Links to |
 | ------------------------ | -------- | -------- |
 | *RISK_ID*                | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -1200,6 +1264,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Risk Impacts
 **System-level.** Lookup of risk impact names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskImpacts         | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *RISK_IMPACT_ID*      | Int32   |  |
@@ -1214,6 +1279,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Risk Mitigations
 **System-level.** Mitigation actions recorded against a risk.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskMitigations        | Type     | Links to |
 | ------------------------ | -------- | -------- |
 | RISK_ID                  | Int32    | R_Risks.RISK_ID |
@@ -1236,6 +1302,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Risk Probabilities
 **System-level.** Lookup of risk probability names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskProbabilities   | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *RISK_PROBABILITY_ID* | Int32   |  |
@@ -1250,6 +1317,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Risk Statuses
 **System-level.** Lookup of risk status names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskStatuses        | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *RISK_STATUS_ID*      | Int32   |  |
@@ -1264,6 +1332,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Risk Types
 **System-level.** Lookup of risk type names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_RiskTypes           | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *RISK_TYPE_ID*        | Int32   |  |
@@ -1277,6 +1346,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Source Code Associations
 **System-level.** Links between artifacts and source code revisions.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_SourceCodeAssociations           | Type     | Links to |
 | ---------------------------------- | -------- | -------- |
 | *ARTIFACT_SOURCE_CODE_REVISION_ID* | Int32    |  |
@@ -1292,6 +1362,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Source Code Commits
 **Product-level.** Commits read from a connected source control provider.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_SourceCodeCommits                | Type     | Links to |
 | ---------------------------------- | -------- | -------- |
 | VERSION_CONTROL_SYSTEM_ID          | Int32    |  |
@@ -1315,6 +1386,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Tasks
 **Product-level.** Tasks - the development work breaking down a requirement.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_Tasks                | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | *TASK_ID*              | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -1360,6 +1432,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Task Folders
 **Product-level.** Folder structure organising a product's tasks.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TaskFolders         | Type   | Links to |
 | --------------------- | ------ | -------- |
 | *TASK_FOLDER_ID*      | Int32  |  |
@@ -1372,6 +1445,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Task Priorities
 **System-level.** Lookup of task priority names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TaskPriorities      | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *TASK_PRIORITY_ID*    | Int32   |  |
@@ -1385,6 +1459,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Task Types
 **System-level.** Lookup of task type names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TaskTypes           | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *TASK_TYPE_ID*        | Int32   |  |
@@ -1400,6 +1475,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Teams
 **System-level.** Teams defined within a product.
 !!! abstract "Available in SpiraPlan only"
+
 | R_Teams     | Type    | Links to |
 | ----------- | ------- | -------- |
 | *TEAM_ID*   | Int32   |  |
@@ -1410,6 +1486,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Cases
 **Product-level.** Test cases defined for a product.
+
 | R_TestCases              | Type     | Links to |
 | ------------------------ | -------- | -------- |
 | *TEST_CASE_ID*           | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -1451,6 +1528,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Case Folders
 **Product-level.** Folder structure organising a product's test cases.
+
 | R_TestCaseFolders          | Type     | Links to |
 | -------------------------- | -------- | -------- |
 | *TEST_CASE_FOLDER_ID*      | Int32    |  |
@@ -1475,6 +1553,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Case Incidents
 **System-level.** Which incidents were raised from which test cases.
+
 | R_TestCaseIncidents | Type    | Links to |
 | ------------------- | ------- | -------- |
 | TEST_CASE_ID        | Int32   |  |
@@ -1486,6 +1565,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Case Priorities
 **System-level.** Lookup of test case priority names.
+
 | R_TestCasePriorities    | Type    | Links to |
 | ----------------------- | ------- | -------- |
 | *TEST_CASE_PRIORITY_ID* | Int32   |  |
@@ -1497,6 +1577,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Case Types
 **System-level.** Lookup of test case type names.
+
 | R_TestCaseTypes       | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *TEST_CASE_TYPE_ID*   | Int32   |  |
@@ -1512,6 +1593,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Configuration Entries
 **System-level.** The individual parameter values making up a test configuration set.
+
 | R_TestConfigurationEntries       | Type    | Links to |
 | -------------------------------- | ------- | -------- |
 | *TEST_CONFIGURATION_ID*          | Int32   |  |
@@ -1528,6 +1610,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 
 ## Test Configuration Sets
 **Program-level.** Sets of parameter combinations a test set can be run against.
+
 | R_TestConfigurationSets     | Type     | Links to |
 | --------------------------- | -------- | -------- |
 | *TEST_CONFIGURATION_SET_ID* | Int32    |  |
@@ -1545,6 +1628,7 @@ Prefer R_RequirementIncidents unless the names are needed. Resolving them makes 
 ## Test Runs
 **Product-level.** Executions of a test case, with their result and timing.
 TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
+
 | R_TestRuns             | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | *TEST_RUN_ID*          | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -1592,6 +1676,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Run Incidents
 **System-level.** Which incidents were raised from which test runs.
+
 | R_TestRunIncidents  | Type    | Links to |
 | ------------------- | ------- | -------- |
 | *TEST_RUN_ID*       | Int32   |  |
@@ -1605,6 +1690,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Run Steps
 **Product-level.** The result recorded for each step of a test run.
+
 | R_TestRunSteps        | Type     | Links to |
 | --------------------- | -------- | -------- |
 | *TEST_RUN_STEP_ID*    | Int32    |  |
@@ -1628,6 +1714,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Sets
 **Product-level.** Test sets - groups of test cases scheduled to be run together.
+
 | R_TestSets                  | Type     | Links to |
 | --------------------------- | -------- | -------- |
 | *TEST_SET_ID*               | Int32    | R_ArtifactTags.ARTIFACT_ID |
@@ -1680,6 +1767,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Set Folders
 **Product-level.** Folder structure organising a product's test sets.
+
 | R_TestSetFolders          | Type     | Links to |
 | ------------------------- | -------- | -------- |
 | *TEST_SET_FOLDER_ID*      | Int32    |  |
@@ -1705,6 +1793,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Set Incidents
 **System-level.** Which incidents were raised from which test sets.
+
 | R_TestSetIncidents  | Type    | Links to |
 | ------------------- | ------- | -------- |
 | TEST_SET_ID         | Int32   |  |
@@ -1716,6 +1805,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Set Test Cases
 **System-level.** Which test cases belong to which test set, and in what order.
+
 | R_TestSetTestCases      | Type     | Links to |
 | ----------------------- | -------- | -------- |
 | *TEST_SET_TEST_CASE_ID* | Int32    |  |
@@ -1733,6 +1823,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 
 ## Test Steps
 **Product-level.** The individual steps making up a test case.
+
 | R_TestSteps           | Type     | Links to |
 | --------------------- | -------- | -------- |
 | *TEST_STEP_ID*        | Int32    |  |
@@ -1760,6 +1851,7 @@ TEST_RUN_TYPE_ID: 1 = Manual, 2 = Automated
 **System-level.** Weekly timesheets submitted for approval.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 One row per timesheet. For the time booked within one, use R_TimesheetEntries.
+
 | R_Timesheets          | Type     | Links to |
 | --------------------- | -------- | -------- |
 | *TIMESHEET_ID*        | Int32    |  |
@@ -1780,6 +1872,7 @@ One row per timesheet. For the time booked within one, use R_TimesheetEntries.
 ## Timesheet Entries
 **System-level.** Individual time entries booked against an artifact.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TimesheetEntries   | Type     | Links to |
 | -------------------- | -------- | -------- |
 | *TIMESHEET_ENTRY_ID* | Int32    |  |
@@ -1801,6 +1894,7 @@ One row per timesheet. For the time booked within one, use R_TimesheetEntries.
 ## Timesheet Statuses
 **System-level.** Lookup of timesheet status names.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
+
 | R_TimesheetStatuses   | Type    | Links to |
 | --------------------- | ------- | -------- |
 | *TIMESHEET_STATUS_ID* | Int32   |  |
@@ -1812,6 +1906,7 @@ One row per timesheet. For the time booked within one, use R_TimesheetEntries.
 **System-level.** One row per time entry, with its parent timesheet's fields joined on.
 !!! abstract "Available in SpiraTeam and SpiraPlan only"
 Combines R_Timesheets and R_TimesheetEntries. One row per entry, not per timesheet, so summing a timesheet-level column over this view double counts.
+
 | R_TimesheetWithEntries | Type     | Links to |
 | ---------------------- | -------- | -------- |
 | TIMESHEET_ID           | Int32    | R_Timesheets.TIMESHEET_ID |
@@ -1844,6 +1939,7 @@ Combines R_Timesheets and R_TimesheetEntries. One row per entry, not per timeshe
 
 ## Users
 **System-level.** User accounts, with their profile details.
+
 | R_Users                         | Type     | Links to |
 | ------------------------------- | -------- | -------- |
 | *USER_ID*                       | Int32    |  |
