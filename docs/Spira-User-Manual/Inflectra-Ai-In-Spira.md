@@ -304,7 +304,7 @@ The chat interface is at the bottom of the Inflectra.ai sidebar, available on ev
 The chat interface currently supports:
 
 - **[How to use Spira](#asking-how-to-use-spira)**: ask how a feature works, how to complete a task, or how to configure and administer Spira. The agent searches the official Spira documentation and answers with links to the relevant pages
-- **[Your own data in Spira](#asking-about-your-spira-data)**: ask questions about the data in your products and programs. The agent retrieves your live data and answers based on what it finds
+- **[Your own data in Spira](#asking-about-your-spira-data)**: ask questions about the data in your products and programs. In a product, you can also ask the agent to create or modify supported data; it presents each proposed change for your approval
 
 ### Conversation threads
 The chat interface remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:
@@ -340,6 +340,16 @@ The agent can look up and reason over your live data in Spira. Here are some exa
 - What work is assigned to me?
 - Are there any new comments on the Requirements I own for the sprint currently in progress?
 
+#### Creating and updating your Spira data
+The agent can propose actions to create new artifacts, update existing artifacts, add comments, and create associations between artifacts in the current product. It does not make any change until you select the proposed actions and approve them. Ask the agent to revise a proposal before approval if it needs adjustment.
+
+For example, you can ask the agent to:
+
+- Create a task called "Prepare the test environment" and assign it to me
+- Change the priority of IN:123 to High and assign it to Alex
+- Add a comment to TC:45 that says "Verified on the staging environment"
+- Make RQ:42 depend on RQ:17
+
 It can retrieve:
 
 - **Product artifacts**: requirements, incidents, test cases, test sets, test runs, tasks, risks, releases, builds, documents, and automation hosts, including their fields, statuses, owners, dates, associations, and test coverage
@@ -349,7 +359,9 @@ It can retrieve:
 
 A few things to keep in mind:
 
-- **It is read-only.** For now, the agent can retrieve data but cannot create, update, or delete anything in Spira.
+- **You approve every change.** The agent displays every proposed action and runs only the actions you select and approve.
+- **It cannot delete data.** 
+- **It cannot create new products.** Instead, system administrators can [create products using the Quick Action on My Page](#my-page).
 - **It respects your permissions.** The agent only sees what you could see in Spira yourself.
 - **The product needs Inflectra.ai enabled.** In a product [where Inflectra.ai is not enabled](#when-inflectraai-is-not-enabled-for-a-product), the chat can only answer questions about how to use Spira, not about your data in that product.
 - **It uses the current product by default.** When you ask about your data without naming a product, the agent answers for the product you are currently in and tells you which one it used. You can name a different product to ask about that one instead.
