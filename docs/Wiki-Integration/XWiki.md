@@ -9,6 +9,8 @@
 XWiki is a powerful, open-source enterprise wiki platform. It serves as a modern knowledge management system and application platform designed for teams and organizations that need more than just static documentation. Our Spira Extension for XWiki seamlessly connects live requirements, test coverage, release milestones, and defect tracking directly into the
 XWwiki knowledge base.
 
+![Spira incident table embedded in XWiki](img/xwiki-spira-incident-table-embed.png)
+
 This documentation describes how to integrate Spira with XWiki and also provides a tutorial on how to enable the special Spira theme and use the special Spira macros in your XWiki pages.
 
 ## Overview
@@ -185,6 +187,8 @@ With both parts in place, continue to
 The extension connects to a single SpiraPlan instance and default product,
 configured once in the administration settings.
 
+![Spira extension settings inside XWiki](img/xwiki-spira-config-settings.png)
+
 1. Open **Administration**: select your avatar in the top-right corner and choose
    **Administration**.
 2. In the navigation menu, under the **Other** category, select **SpiraPlan**.
@@ -206,6 +210,8 @@ configured once in the administration settings.
 The extension includes an optional theme that restyles your wiki to match
 SpiraPlan. The theme is entirely optional; the macros work with any XWiki theme,
 and you can apply or remove the theme at any time.
+
+![Spira theme configuration inside XWiki](img/xwiki-spira-theme-config.png)
 
 1. Open **Administration → Look & Feel → Themes**.
 2. In the **Color Theme** list, select **SpiraPlan**. If it does not appear there,
@@ -260,15 +266,13 @@ task, test case, and so on — directly in a page. All you need is the artifact'
 
 ### Add a macro with the wizard
 
-1. In the editor toolbar, select the insert button ![insert button](images/insert%20button.png) and choose **Other Macros**.
+1. In the editor toolbar, select the `insert` button and choose **Other Macros**.
 2. In the **Select Macro** window, type `spira` in the filter box, then choose
    **Spira**.
 
-   ![The Select Macro window filtered for "spira", showing the Spira and SpiraPlan Table macros](images/Selectmacrowindow.png)
-
 3. Complete the macro form:
 
-   ![The Spira macro wizard, showing the Id field and the optional DisplayMode, ProjectId, and ShowDescription parameters](images/Spira%20Macro%20Wizard%20full%20shot.png)
+   ![The Spira macro wizard, showing the Id field and the optional DisplayMode, ProjectId, and ShowDescription parameters](img/xwiki-spira-macro-insert-1.png)
 
    - **Id** *(required)* — the artifact to embed, for example `RQ:4`.
    - **DisplayMode** — how the artifact appears:
@@ -284,7 +288,7 @@ task, test case, and so on — directly in a page. All you need is the artifact'
 
 A requirement added as a card, with its description, renders like this:
 
-![A SpiraPlan requirement rendered as a card, showing RQ:4 "Ability to add new books to the system", status COMPLETED, owner, and priority](images/spira-card.png)
+![A SpiraPlan requirement rendered as a card, showing RQ:4 "Ability to add new books to the system", status COMPLETED, owner, and priority](img/xwiki-spira-arifact-card-macro.png)
 
 > **Prefer to type it?** You can enter the macro directly in the source editor
 > instead of using the wizard. The card above is:
@@ -295,6 +299,8 @@ A requirement added as a card, with its description, renders like this:
 > ```
 > {{spira id="RQ:4" projectId="1" displayMode="inline"/}}
 > ```
+
+![XWiki page showing a Spira artifact as a card vs. inline](img/xwiki-spira-inline-vs-card-view.png)
 
 ### Parameters
 
@@ -326,12 +332,12 @@ release backlog.
 
 ### Add a table with the wizard
 
-1. In the editor toolbar, select the insert button ![insert button](images/insert%20button.png) and choose **Other Macros**.
+1. In the editor toolbar, select the `insert` button and choose **Other Macros**.
 2. In the **Select Macro** window, type `spira` in the filter box, then choose
    **SpiraPlan Table**.
 3. Complete the macro form:
 
-   ![The SpiraPlan Table macro wizard, showing the ArtifactType field and the optional Filter, MaxResults, Project, and Query parameters](images/SpiraPlan%20Table%20Macro%20Wizard.png)
+   ![The SpiraPlan Table macro wizard, showing the ArtifactType field and the optional Filter, MaxResults, Project, and Query parameters](img/xwiki-spira-macro-table-insert-1.png)
 
    - **ArtifactType** *(required)* — the kind of artifact to list: Requirement,
      Task, Incident, Test Case, Test Run, Test Set, Risk, Automation Host, or
@@ -347,7 +353,7 @@ release backlog.
 
 A table of incidents renders like this, with ID, name, and status columns:
 
-![A SpiraPlan Table of incidents, showing ID, name, and status columns](images/incident%20table.png)
+![A SpiraPlan Table of incidents, showing ID, name, and status columns](img/xwiki-spira-incident-table-embed.png)
 
 ### Simple and advanced filtering
 
@@ -397,11 +403,11 @@ Planned status is `RequirementStatusId` **2**, so the filter is:
 Paste that into the wizard's **Filter** field, with **ArtifactType** set to
 **Requirement**:
 
-![The SpiraPlan Table wizard with ArtifactType set to Requirement and the release-and-status JSON in the Filter field](images/Advanced%20SpiraPlan%20Table%20filter.png)
+![The SpiraPlan Table wizard with ArtifactType set to Requirement and the release-and-status JSON in the Filter field](img/xwiki-spira-macro-table-insert-2.png)
 
 The result is the release 1.0 backlog:
 
-![The rendered release backlog table, listing the requirements in release 1.0 with their statuses](images/advanced%20filter%20table.png)
+![The rendered release backlog table, listing the requirements in release 1.0 with their statuses](img/xwiki-spira-requirement-table-embed.png)
 
 For a different product or release, substitute your own `ReleaseId` and
 `RequirementStatusId` values.
