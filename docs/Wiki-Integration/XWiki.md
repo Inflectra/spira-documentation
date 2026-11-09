@@ -2,8 +2,8 @@
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
 !!! info This guide was written for the Spira Extension for XWiki (beta), running on
-    XWiki 18.7 and connected to SpiraPlan. Screens and field names may differ
-    slightly in other versions. The page uses the term 'SpiraPlan' generically
+    XWiki 18.7 and connected to Spira. Screens and field names may differ
+    slightly in other versions. The page uses the term 'Spira' generically
     to refer to any of the editions of the Spira platform.
 
 XWiki is a powerful, open-source enterprise wiki platform. It serves as a modern knowledge management system and application platform designed for teams and organizations that need more than just static documentation. Our Spira Extension for XWiki seamlessly connects live requirements, test coverage, release milestones, and defect tracking directly into the
@@ -16,12 +16,12 @@ This documentation describes how to integrate Spira with XWiki and also provides
 ## Overview
 
 This extension for the popular XWiki provides two special macros for embedding
-live SpiraPlan artifact cards and artifact tables into XWiki pages. In addition,
-the extension includes a special, optional SpiraPlan theme that can be used to
-give the wiki brand consistency with SpiraPlan.
+live Spira artifact cards and artifact tables into XWiki pages. In addition,
+the extension includes a special, optional Spira theme that can be used to
+give the wiki brand consistency with Spira.
 
 In practice, that means you place a small instruction (a *macro*) on a page, and
-the extension fetches the current data from SpiraPlan every time the page is
+the extension fetches the current data from Spira every time the page is
 viewed — no copying and pasting of status updates.
 
 The extension provides two macros:
@@ -47,7 +47,7 @@ advanced filters for views such as a release backlog or a list of open incidents
 - [Preparing Your Account](#preparing-your-account)
 - [Installing the Extension](#installing-the-extension)
 - [Configuring the Spira Connection](#configuring-the-spira-connection)
-- [Applying the SpiraPlan Theme](#applying-the-spiraplan-theme)
+- [Applying the Spira Theme](#applying-the-spira-theme)
 - [Understanding Pages and Macros](#understanding-pages-and-macros)
 - [Using the Spira Macro](#using-the-spira-macro)
 - [Using the Spira Table Macro](#using-the-spira-table-macro)
@@ -58,13 +58,13 @@ advanced filters for views such as a release backlog or a list of open incidents
 
 ## Background
 
-Many teams adopt the combination of XWiki and SpiraPlan as an open-source
+Many teams adopt the combination of XWiki and Spira as an open-source
 alternative to proprietary documentation platforms such as Atlassian Confluence.
 The pairing connects structured quality-assurance data with collaborative
 technical writing: live requirements, test coverage, release milestones, and
 defect tracking appear directly inside the knowledge base.
 
-By bringing real-time SpiraPlan views — from single-item inline badges to
+By bringing real-time Spira views — from single-item inline badges to
 query-driven backlog tables — into customizable XWiki pages, engineering and
 product teams can keep a single source of truth without double entry, constant
 context-switching, or third-party marketplace add-ons. The result is live,
@@ -96,18 +96,18 @@ Capabilities relevant to this guide include:
 
 ## Extension Features Overview
 
-The SpiraPlan Extension for XWiki provides two main features:
+The Spira Extension for XWiki provides two main features:
 
-- **Embedded Spira macros.** Two macros let you embed SpiraPlan content in a page:
+- **Embedded Spira macros.** Two macros let you embed Spira content in a page:
   one for an individual artifact (the **Spira** macro) and one for a table of
   artifacts matching a query or filter (the **Spira Table** macro).
-- **SpiraPlan theme and skin.** An optional theme changes the color scheme and
-  navigation bar to match SpiraPlan. The theme is entirely optional — the macros
+- **Spira theme and skin.** An optional theme changes the color scheme and
+  navigation bar to match Spira. The theme is entirely optional — the macros
   work with any standard or custom XWiki theme.
 
 To use these features you first install the extension, then configure it so it
-knows how to connect to your instance of SpiraPlan or SpiraTeam. After that, you
-can optionally apply the SpiraPlan theme, and then begin embedding artifacts with
+knows how to connect to your instance of Spira or SpiraTeam. After that, you
+can optionally apply the Spira theme, and then begin embedding artifacts with
 the `spira` and `spiraTable` macros. The rest of this guide follows exactly that
 order.
 
@@ -134,13 +134,13 @@ visual editor and the full set of editing tools is available.
 
 ## Installing the Extension
 
-The SpiraPlan extension comes in two parts, and both must be present before the
+The Spira extension comes in two parts, and both must be present before the
 macros will work:
 
 - the **macro component** (a JAR), which provides the `spira` and `spiraTable`
-  macros and the connection to SpiraPlan; and
+  macros and the connection to Spira; and
 - the **UI pages** (a XAR), which provide the configuration screen and the
-  optional SpiraPlan theme.
+  optional Spira theme.
 
 The two parts are installed separately: the UI pages are imported through XWiki's
 Import screen, and the macro component is added to the server's library folder.
@@ -184,7 +184,7 @@ With both parts in place, continue to
 
 ## Configuring the Spira Connection
 
-The extension connects to a single SpiraPlan instance and default product,
+The extension connects to a single Spira instance and default product,
 configured once in the administration settings.
 
 ![Spira extension settings inside XWiki](img/xwiki-spira-config-settings.png)
@@ -205,10 +205,10 @@ configured once in the administration settings.
 
 ---
 
-## Applying the SpiraPlan Theme
+## Applying the Spira Theme
 
 The extension includes an optional theme that restyles your wiki to match
-SpiraPlan. The theme is entirely optional; the macros work with any XWiki theme,
+Spira. The theme is entirely optional; the macros work with any XWiki theme,
 and you can apply or remove the theme at any time.
 
 ![Spira theme configuration inside XWiki](img/xwiki-spira-theme-config.png)
@@ -260,7 +260,7 @@ the source form for reference.
 
 ## Using the Spira Macro
 
-The Spira macro embeds a single SpiraPlan artifact — a requirement, incident,
+The Spira macro embeds a single Spira artifact — a requirement, incident,
 task, test case, and so on — directly in a page. All you need is the artifact's
 **ID** and its **project**.
 
@@ -280,7 +280,7 @@ task, test case, and so on — directly in a page. All you need is the artifact'
      - *Inline* — a compact badge that sits within a line of text, ideal when
        space is tight.
      - *Table* — a single summary row.
-   - **ProjectId** — the SpiraPlan project; leave blank to use the default
+   - **ProjectId** — the Spira project; leave blank to use the default
      project configured for the extension.
    - **ShowDescription** — tick this to include the artifact's description (card
      mode only).
@@ -288,7 +288,7 @@ task, test case, and so on — directly in a page. All you need is the artifact'
 
 A requirement added as a card, with its description, renders like this:
 
-![A SpiraPlan requirement rendered as a card, showing RQ:4 "Ability to add new books to the system", status COMPLETED, owner, and priority](img/xwiki-spira-arifact-card-macro.png)
+![A Spira requirement rendered as a card, showing RQ:4 "Ability to add new books to the system", status COMPLETED, owner, and priority](img/xwiki-spira-arifact-card-macro.png)
 
 > **Prefer to type it?** You can enter the macro directly in the source editor
 > instead of using the wizard. The card above is:
@@ -326,7 +326,7 @@ The artifact ID is a two-letter prefix followed by the number — for example
 
 ## Using the Spira Table Macro
 
-The Spira Table macro embeds a list of SpiraPlan artifacts that match a query or
+The Spira Table macro embeds a list of Spira artifacts that match a query or
 filter — for example, all incidents mentioning "book", or the requirements in a
 release backlog.
 
@@ -334,10 +334,10 @@ release backlog.
 
 1. In the editor toolbar, select the `insert` button and choose **Other Macros**.
 2. In the **Select Macro** window, type `spira` in the filter box, then choose
-   **SpiraPlan Table**.
+   **Spira Table**.
 3. Complete the macro form:
 
-   ![The SpiraPlan Table macro wizard, showing the ArtifactType field and the optional Filter, MaxResults, Project, and Query parameters](img/xwiki-spira-macro-table-insert-1.png)
+   ![The Spira Table macro wizard, showing the ArtifactType field and the optional Filter, MaxResults, Project, and Query parameters](img/xwiki-spira-macro-table-insert-1.png)
 
    - **ArtifactType** *(required)* — the kind of artifact to list: Requirement,
      Task, Incident, Test Case, Test Run, Test Set, Risk, Automation Host, or
@@ -346,14 +346,14 @@ release backlog.
      release or status (see [Advanced Table Filters](#advanced-table-filters)).
      When supplied, it overrides **Query**.
    - **MaxResults** — the maximum number of rows to display (default 10).
-   - **Project** — the SpiraPlan project; leave blank to use the default project.
+   - **Project** — the Spira project; leave blank to use the default project.
    - **Query** — a simple text filter; lists artifacts whose name contains this
      text.
 4. Select **Submit**. The table renders in the page.
 
 A table of incidents renders like this, with ID, name, and status columns:
 
-![A SpiraPlan Table of incidents, showing ID, name, and status columns](img/xwiki-spira-incident-table-embed.png)
+![A Spira Table of incidents, showing ID, name, and status columns](img/xwiki-spira-incident-table-embed.png)
 
 ### Simple and advanced filtering
 
@@ -375,7 +375,7 @@ The two filtering options cover most needs:
 
 ## Advanced Table Filters
 
-The **Filter** parameter accepts a raw SpiraPlan **RemoteFilter** array — the same
+The **Filter** parameter accepts a raw Spira **RemoteFilter** array — the same
 structure the Spira REST API uses. This lets you build views such as a release
 backlog by combining conditions on specific fields.
 
@@ -403,7 +403,7 @@ Planned status is `RequirementStatusId` **2**, so the filter is:
 Paste that into the wizard's **Filter** field, with **ArtifactType** set to
 **Requirement**:
 
-![The SpiraPlan Table wizard with ArtifactType set to Requirement and the release-and-status JSON in the Filter field](img/xwiki-spira-macro-table-insert-2.png)
+![The Spira Table wizard with ArtifactType set to Requirement and the release-and-status JSON in the Filter field](img/xwiki-spira-macro-table-insert-2.png)
 
 The result is the release 1.0 backlog:
 
