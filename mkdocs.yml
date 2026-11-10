@@ -291,6 +291,7 @@ nav:
     - Jira Server: External-Bug-Tracking-Integration/Using-SpiraTeam-with-JIRA-5+.md
     - Jira Spira QA Coverage: External-Bug-Tracking-Integration/Jira-Spira-QA-Coverage.md
     - Azure DevOps: External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md
+    - Azure DevOps QE Coverage: External-Bug-Tracking-Integration/Azure-DevOps-QE-Coverage.md
     - Asana: External-Bug-Tracking-Integration/Using-Spira-with-Asana.md
     - Axosoft: External-Bug-Tracking-Integration/Using-Spira-with-Axosoft-14+.md
     - ClickUp: External-Bug-Tracking-Integration/Using-Spira-with-ClickUp.md
@@ -364,6 +365,8 @@ nav:
     - Jama Contour: Requirements-Management-Integration/Importing-From-Jama-Contour.md
     - RequisitePro: Requirements-Management-Integration/Importing-From-RequisitePro.md
     - VersionOne: Requirements-Management-Integration/Importing-From-VersionOne.md
+  - Wikis:
+    - XWiki: Wiki-Integration/XWiki.md
 - Developers:
     - API Overview: Developers/API-Overview.md
     - SpiraApp Development:
