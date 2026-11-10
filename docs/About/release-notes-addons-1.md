@@ -8,6 +8,14 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [IN:13533] Add environment variables SPIRA_CREATE_TAGS and SPIRA_UPDATE_TAGS to let users specify tags for create or update operations
         - [IN:13595] As an MCP user, I can search for relevant artifacts by open vs closed statuses easily
 
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.9:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13532] Fixes a bug where data could be lost when Jira temporarily drops or resets the connection, or is unavailable
+
+- [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta7:
+    - Updates tool dependencies to maintain security.
+
 - [Product Migration Tool](../Migration-and-Integration/Spira-Migration-Tool.md) v2.0.0-beta6:
     - Bug Fixes:
         - [IN:13572] Attachment links in some fields are still broken after migration
