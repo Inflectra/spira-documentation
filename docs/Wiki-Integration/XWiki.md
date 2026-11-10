@@ -1,13 +1,14 @@
 # Using Spira with XWiki
 !!! abstract "Compatible with SpiraTest, SpiraTeam, SpiraPlan"
 
-!!! info This guide was written for the Spira Extension for XWiki (beta), running on
+!!! info "About this guide"
+    This guide was written for the Spira Extension for XWiki (beta), running on
     XWiki 18.7 and connected to Spira. Screens and field names may differ
     slightly in other versions. The page uses the term 'Spira' generically
     to refer to any of the editions of the Spira platform.
 
 XWiki is a powerful, open-source enterprise wiki platform. It serves as a modern knowledge management system and application platform designed for teams and organizations that need more than just static documentation. Our Spira Extension for XWiki seamlessly connects live requirements, test coverage, release milestones, and defect tracking directly into the
-XWwiki knowledge base.
+XWiki knowledge base.
 
 ![Spira incident table embedded in XWiki](img/xwiki-spira-incident-table-embed.png)
 
