@@ -1,6 +1,12 @@
 # Release Notes for Spira Addons
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
+## November 2026
+- [Azure DevOps Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.2:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13523] Consolidates the event log entries for unmapped users and missing fields into a single summary message per issue type, per sync cycle, to reduce log noise
+
 ## October 2026
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira) v2.1.0:
 
