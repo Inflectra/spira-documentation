@@ -1,5 +1,20 @@
 # Release Notes for Inflectra.ai
 
+## November 20 2026
+
+!!! success "New features"
+    - **[Creating and updating your Spira data](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#creating-and-updating-your-spira-data)**
+
+        You can now ask the agent to create and update your data in Spira. It proposes the actions it wants to take and makes no change until you approve them.
+
+        - As an Inflectra.ai subscriber, I can ask agents to modify my data and approve/reject the operations before they execute [RQ:5719]
+
+!!! bug "Bug fixes and enhancements"
+    - Allow the Inflectra.ai sidebar to be resized horizontally and viewed full screen [IN:13563]
+    - Fix incorrect test case links in the results of the requirement test coverage evaluation [IN:12792]
+    - Keep the "AI action in progress in another tab" indicator visible for as long as the other tab is producing a response [IN:13649]
+    - Move the [quick actions](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#quick-actions) below the chat box, restyle them as chips, and let you show or hide them [IN:13655]
+
 ## October 14 2026
 
 !!! success "New features"
