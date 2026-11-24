@@ -16,3 +16,5 @@ Spira includes an array of keyboard shortcuts to speed up navigation and use of 
 There are two main ways of using the shortcuts: either pressing a key or key(s) at the same time (indicated by a single key or "a + b"); or pressing a number of keys in succession as with normal typing (indicated by "a ... b"). The popup menu explaining the shortcuts is illustrated below (please note that the keyboard shortcuts displayed will vary depending on the current page:
 
 ![](img/Appendix_1_Keyboard_Shortcuts_473.png)
+
+On artifact details pages with a comments section, press "c" to go to the [comment field](Application-Wide.md/#comments). Spira expands the comments section if it is collapsed, scrolls to the comment box, and places your cursor in it. This shortcut is only available if you are allowed to add comments.
