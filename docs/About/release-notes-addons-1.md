@@ -10,6 +10,11 @@ This page shows summary information about releases in Spira's addons, data syncs
         - [RQ:5755] Apply an optional Spira theme to keep the wiki visually consistent with Spira
         - [RQ:5764] Configure the connection to Spira and the default product from the XWiki administration screens
 
+- [Azure DevOps Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.2:
+
+    - Bug Fixes and Enhancements:
+        - [IN:13523] Consolidates the event log entries for unmapped users and missing fields into a single summary message per issue type, per sync cycle, to reduce log noise
+
 ## October 2026
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira) v2.1.0:
 
