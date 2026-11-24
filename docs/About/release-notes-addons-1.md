@@ -2,6 +2,14 @@
 This page shows summary information about releases in Spira's addons, data syncs, integrations, and optional features.
 
 ## November 2026
+- [Spira Extension for XWiki](../Wiki-Integration/XWiki.md) v1.0 (beta): new extension to embed live Spira data in the pages of an XWiki knowledge base
+
+    - New Features:
+        - [RQ:5740] Embed a single Spira artifact in a wiki page as a card, an inline badge, or a table row
+        - [RQ:5727] Embed a table of Spira artifacts matching a text query or an advanced field filter
+        - [RQ:5755] Apply an optional Spira theme to keep the wiki visually consistent with Spira
+        - [RQ:5764] Configure the connection to Spira and the default product from the XWiki administration screens
+
 - [Azure DevOps Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTest-with-MS-TFS.md) v8.2:
 
     - Bug Fixes and Enhancements:
