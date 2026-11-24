@@ -23,11 +23,13 @@ Please take a look at our [release notes](release-notes-v8.md) to see a complete
 - Built-in Helper AI Agent to provide intelligent help and answer questions about how to use Spira
 - AI agents that are aware of your own data in Spira, so you can ask questions about your products and programs and get answers grounded in live data
 
+### Q4 2026
+- New AI agents in Inflectra.ai that can perform actions on your Spira data
+
+
 ## Coming next
 These features are planned for upcoming releases. Please note timelines may shift as work progresses.
 
-### Q4 2026
-- New AI agents in Inflectra.ai that can perform actions on your Spira data
 - New focused AI agents designed to help with specific tasks, such as creating and modifying custom reports, and processing documents.
 
 ## Longer term thematic ideas
