@@ -54,7 +54,6 @@ The spreadsheet is generating using the following columns:
 - **Test Step ID**: the unique ID of each Test Step from Spira - this is only populated for test step rows. You can't edit this field.
 - **Test Case Name**: The name of the Test Case in Spira.
 - **Release**: The release associated with the Test Case in Spira.
-- **Set Case Unique ID**: This is a unique cross-reference ID for the Test Case within the Test Set. It is blank if the Test Case is not part of a Test Set and is only populated in Test Case rows. You can't edit this field.
 - **Test Step Description**: the full text of the description field for each Test Step in Spira (only populated in Test Step rows).
 - **Test Step Expected Result**: the full text of the expected result field for each Test Step in Spira (only populated in Test Step rows).
 - **Test Step Sample Data**: the full text of the sample data field for each Test Step in Spira (only populated in Test Step rows).
