@@ -15,6 +15,9 @@ This page shows summary information about releases in Spira's addons, data syncs
     - Bug Fixes and Enhancements:
         - [IN:13523] Consolidates the event log entries for unmapped users and missing fields into a single summary message per issue type, per sync cycle, to reduce log noise
 
+- [Jira Cloud Data Synchronization](../External-Bug-Tracking-Integration/Using-SpiraTeam-with-Jira-Cloud.md) v8.10:
+    - Bug Fixes and Enhancements:
+        - [IN:13913] Fixes a bug where changes could be skipped when Jira is temporarily unavailable. The data sync now reports the problem correctly and resumes from an earlier sync date on the next run
 ## October 2026
 - [Spira MCP Server](https://github.com/Inflectra/mcp-server-spira) v2.1.0:
 
