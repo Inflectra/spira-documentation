@@ -336,6 +336,16 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#quick-actions">
+<span class="md-ellipsis">
+      
+        Quick Actions
+      
+    </span>
+</a>
+<nav aria-label="Quick Actions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#artifact-details-pages">
 <span class="md-ellipsis">
       
@@ -477,6 +487,9 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#chat-interface">
 <span class="md-ellipsis">
@@ -513,6 +526,19 @@
       
     </span>
 </a>
+<nav aria-label="Asking about your Spira data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-and-updating-your-spira-data">
+<span class="md-ellipsis">
+      
+        Creating and updating your Spira data
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4457,6 +4483,16 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#quick-actions">
+<span class="md-ellipsis">
+      
+        Quick Actions
+      
+    </span>
+</a>
+<nav aria-label="Quick Actions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#artifact-details-pages">
 <span class="md-ellipsis">
       
@@ -4598,6 +4634,9 @@
     </span>
 </a>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#chat-interface">
 <span class="md-ellipsis">
@@ -4634,6 +4673,19 @@
       
     </span>
 </a>
+<nav aria-label="Asking about your Spira data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-and-updating-your-spira-data">
+<span class="md-ellipsis">
+      
+        Creating and updating your Spira data
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -4695,14 +4747,14 @@
 <h3 id="when-inflectraai-is-not-enabled-for-a-product">When Inflectra.ai is not enabled for a product<a class="headerlink" href="#when-inflectraai-is-not-enabled-for-a-product" title="Permanent link">¶</a></h3>
 <p>Inflectra.ai is turned on in two places: system wide, and for each individual product. If it is on system wide but off for the product you are currently in, the sidebar still opens, but it runs in a limited mode:</p>
 <ul>
-<li><strong>The action buttons are visible but disabled.</strong> You can still see every action group for the page you are on, so you know what Inflectra.ai could do there, but the buttons are grayed out and cannot be clicked.</li>
+<li><strong>The quick actions are visible but disabled.</strong> You can still see every quick action group for the page you are on, so you know what Inflectra.ai could do there, but the buttons are grayed out and cannot be clicked.</li>
 <li><strong>The chat interface only answers questions about how to use Spira.</strong> You can still <a href="#asking-how-to-use-spira">ask how to use Spira</a> and get answers with links to the documentation. You cannot <a href="#asking-about-your-spira-data">ask about your own data</a> in that product. No API Key is needed to use it this way.</li>
 </ul>
-<p>To enable the disabled actions, a system administrator needs to turn Inflectra.ai on for that product:</p>
+<p>To enable the disabled quick actions, a system administrator needs to turn Inflectra.ai on for that product:</p>
 <ul>
 <li>System Admin &gt; Workspaces &gt; <a href="../../Spira-Administration-Guide/System-Workspaces/#edit-a-product">View/Edit Product</a>: set "Inflectra.ai" to "yes"</li>
 </ul>
-<p>New products have Inflectra.ai on by default, so this usually only affects products that already existed before Inflectra.ai was added to your site. Once an administrator enables it, refresh the page and the actions become available.</p>
+<p>New products have Inflectra.ai on by default, so this usually only affects products that already existed before Inflectra.ai was added to your site. Once an administrator enables it, refresh the page and the quick actions become available.</p>
 <p>Inflectra.ai also has to be <a href="../../Spira-Administration-Guide/System/#general-settings">enabled system wide</a> before it can be used in any product. If it is off system wide, the Inflectra.ai icon does not appear in the navigation bar at all.</p>
 <h3 id="tagging-ai-generated-content">Tagging AI generated content<a class="headerlink" href="#tagging-ai-generated-content" title="Permanent link">¶</a></h3>
 <p>Any new artifact created by Inflectra.ai will have the tag "ai-generated" added to it automatically.</p>
@@ -4719,11 +4771,13 @@ The responses from the AI are localized based on the Name and Description of the
 The <a href="#chat-interface">chat interface</a> answers in English only at this time.  </p>
 <h3 id="responsible-ai-usage">Responsible AI Usage<a class="headerlink" href="#responsible-ai-usage" title="Permanent link">¶</a></h3>
 <p>Please see <a href="https://www.inflectra.com/Company/Responsible-AI-Statement.aspx">our page on responsible AI usage</a>. Inflectra.ai may refuse to fulfil any request which it deems to be inappropriate or potentially harmful. If you believe a reasonable request is being denied, please contact Inflectra technical support at <a href="https://www.inflectra.com/support">www.inflectra.com/support</a>.</p>
-<h2 id="artifact-details-pages">Artifact details pages<a class="headerlink" href="#artifact-details-pages" title="Permanent link">¶</a></h2>
+<h2 id="quick-actions">Quick Actions<a class="headerlink" href="#quick-actions" title="Permanent link">¶</a></h2>
+<p>Quick actions are the buttons at the bottom of the Inflectra.ai sidebar that generate or analyze content for you in a single click, without the need of approval for each step. The quick actions you see depend on where you are in Spira: each one is only visible when you are on the corresponding page (for example, the requirement quick actions only appear on a requirement details or list page). If you are on a page with no quick actions, the sidebar still shows the <a href="#chat-interface">chat interface</a>.</p>
+<h3 id="artifact-details-pages">Artifact details pages<a class="headerlink" href="#artifact-details-pages" title="Permanent link">¶</a></h3>
 <p>On artifact details pages, you can perform actions against one artifact at a time, while viewing the complete data. This provides more detailed information to you about what Inflectra.ai is doing for that artifact. Details pages can also allow more information about the artifact to be shared with Inflectra.ai. </p>
-<h3 id="requirement-details-page">Requirement details page<a class="headerlink" href="#requirement-details-page" title="Permanent link">¶</a></h3>
+<h4 id="requirement-details-page">Requirement details page<a class="headerlink" href="#requirement-details-page" title="Permanent link">¶</a></h4>
 <p><img alt="" src="../img/Inflectra_ai_requirements_details.png"/></p>
-<h4 id="content-generation-from-requirements">Content Generation from Requirements<a class="headerlink" href="#content-generation-from-requirements" title="Permanent link">¶</a></h4>
+<h5 id="content-generation-from-requirements">Content Generation from Requirements<a class="headerlink" href="#content-generation-from-requirements" title="Permanent link">¶</a></h5>
 <p>From the requirement details page you can generate the following content: </p>
 <table>
 <thead>
@@ -4760,7 +4814,7 @@ The <a href="#chat-interface">chat interface</a> answers in English only at this
 <li>Names of the parent, grandparent, and so on, of the requirement (its hierarchy)</li>
 <li>The product name of the product the requirement is in</li>
 </ul>
-<h4 id="requirement-test-coverage">Requirement Test Coverage<a class="headerlink" href="#requirement-test-coverage" title="Permanent link">¶</a></h4>
+<h5 id="requirement-test-coverage">Requirement Test Coverage<a class="headerlink" href="#requirement-test-coverage" title="Permanent link">¶</a></h5>
 <p>From the requirement details page you can evaluate how well the requirement is covered by its test cases. This feature analyzes the requirement and produces a structured coverage report.</p>
 <ul>
 <li><strong>What data is considered</strong>: The analysis considers the requirement's name, description, and steps/scenarios. For broader context, it also looks at the parent requirement hierarchy, sibling requirements, and the product name. Each linked test case is evaluated using its name, type, description, and all test steps.</li>
@@ -4777,7 +4831,7 @@ The <a href="#chat-interface">chat interface</a> answers in English only at this
 <p>If any of these conditions are not met, a message will explain why the analysis could not be completed.</p>
 </li>
 </ul>
-<h4 id="requirement-analysis">Requirement Analysis<a class="headerlink" href="#requirement-analysis" title="Permanent link">¶</a></h4>
+<h5 id="requirement-analysis">Requirement Analysis<a class="headerlink" href="#requirement-analysis" title="Permanent link">¶</a></h5>
 <p>From the requirement details page you can analyze the requirement to see how well it is written and organized, based off specific frameworks. This provides valuable insights into the quality of the text and how effectively it may communicate its meaning to others.</p>
 <p>The analysis includes a score from 1 to 5. A score of 5 means the requirement is very well written and does not need to be improved, while a score of 1 means lots of work is needed. Along with a score, detailed notes and guidance are provided about how to improve the requirement and why, as well as what is in good shape already.</p>
 <table>
@@ -4806,7 +4860,7 @@ The <a href="#chat-interface">chat interface</a> answers in English only at this
 </tr>
 </tbody>
 </table>
-<h4 id="ears-analysis">EARS Analysis<a class="headerlink" href="#ears-analysis" title="Permanent link">¶</a></h4>
+<h5 id="ears-analysis">EARS Analysis<a class="headerlink" href="#ears-analysis" title="Permanent link">¶</a></h5>
 <div class="admonition info">
 <p class="admonition-title">EARS</p>
 <p>The EARS (Easy Approach to Requirements Syntax) framework provides a structured and constrained way to write clear, unambiguous requirements, typically following the "When [optional trigger], while [optional pre-conditions], the [system name] shall [system response]" pattern. Its value lies in reducing ambiguity and errors in requirements specifications, leading to more efficient development and testing, and ultimately, higher quality systems, because its precise structure forces clarity and helps prevent misinterpretations.</p>
@@ -4825,7 +4879,7 @@ The <a href="#chat-interface">chat interface</a> answers in English only at this
 <p>The new description will overwrite the existing one, but the artifact is not saved. You must review the new description to decide whether or not to accept the changes. </p>
 <p>Note that screenshots should be preserved in the updated description.</p>
 </div>
-<h3 id="test-case-details-page">Test Case details page<a class="headerlink" href="#test-case-details-page" title="Permanent link">¶</a></h3>
+<h4 id="test-case-details-page">Test Case details page<a class="headerlink" href="#test-case-details-page" title="Permanent link">¶</a></h4>
 <p>From the test case details page you can generate the following content:</p>
 <p><img alt="" src="../img/Inflectra_ai_testcase_details.png"/></p>
 <table>
@@ -4862,9 +4916,9 @@ The <a href="#chat-interface">chat interface</a> answers in English only at this
 <p>The product name of the product the test case is in</p>
 </li>
 </ul>
-<h3 id="releases-details-page">Releases details page<a class="headerlink" href="#releases-details-page" title="Permanent link">¶</a></h3>
+<h4 id="releases-details-page">Releases details page<a class="headerlink" href="#releases-details-page" title="Permanent link">¶</a></h4>
 <p><img alt="" src="../img/Inflectra_ai_release_details.png"/></p>
-<h4 id="release-analysis">Release Analysis<a class="headerlink" href="#release-analysis" title="Permanent link">¶</a></h4>
+<h5 id="release-analysis">Release Analysis<a class="headerlink" href="#release-analysis" title="Permanent link">¶</a></h5>
 <p>From the release details page you can analyze the release to bring its different parts together into a text summary.
 This allows you to get a birds-eye view of a release. </p>
 <table>
@@ -4889,7 +4943,7 @@ This allows you to get a birds-eye view of a release. </p>
 </tr>
 </tbody>
 </table>
-<h3 id="task-details-page">Task details page<a class="headerlink" href="#task-details-page" title="Permanent link">¶</a></h3>
+<h4 id="task-details-page">Task details page<a class="headerlink" href="#task-details-page" title="Permanent link">¶</a></h4>
 <div class="admonition abstract">
 <p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
 </div>
@@ -4920,7 +4974,7 @@ This allows you to get a birds-eye view of a release. </p>
 <p>You can enter a value in the text input and hit enter to submit it, or quick select one of your previous entries. Previous entries are stored in the browser, so will not transfer to other browsers or computers. </p>
 </div>
 <p><img alt="" class="border-all" src="../img/Inflectra_ai_task_detail_input.png"/></p>
-<h3 id="risks-details-page">Risks details page<a class="headerlink" href="#risks-details-page" title="Permanent link">¶</a></h3>
+<h4 id="risks-details-page">Risks details page<a class="headerlink" href="#risks-details-page" title="Permanent link">¶</a></h4>
 <div class="admonition abstract">
 <p class="admonition-title">Available in SpiraTeam and SpiraPlan only</p>
 </div>
@@ -4949,12 +5003,12 @@ This allows you to get a birds-eye view of a release. </p>
 <li>Any existing risk mitigations</li>
 <li>The product name of the product the risk is in</li>
 </ul>
-<h2 id="artifact-list-pages">Artifact list pages<a class="headerlink" href="#artifact-list-pages" title="Permanent link">¶</a></h2>
+<h3 id="artifact-list-pages">Artifact list pages<a class="headerlink" href="#artifact-list-pages" title="Permanent link">¶</a></h3>
 <p>When using Inflectra.ai on the list page, you can select a small number of artifacts at a time. </p>
 <p>Please make sure to keep the list page and the Inflectra.ai sidebar open while the operation completes (this may take a few minutes based on the amount of processing required). </p>
 <p>If Inflectra.ai encounters any problems for a specific artifact it will give you a clear message, to help you understand which artifacts were successfully acted upon and which ones were not. See example below:</p>
 <p><img alt="" class="border-all" src="../img/Inflectra_ai_list_errors.png"/></p>
-<h3 id="requirements-list-pages">Requirements list pages<a class="headerlink" href="#requirements-list-pages" title="Permanent link">¶</a></h3>
+<h4 id="requirements-list-pages">Requirements list pages<a class="headerlink" href="#requirements-list-pages" title="Permanent link">¶</a></h4>
 <p>From the requirements list page (both the hierarchical and sortable pages) you can select up to 10 requirements (unless otherwise stated) to generate the following content:</p>
 <p><img alt="" src="../img/Inflectra_ai_requirements_list.png"/></p>
 <table>
@@ -4995,7 +5049,7 @@ This allows you to get a birds-eye view of a release. </p>
 <li>Any existing requirement steps</li>
 <li>The product name of the product the requirement is in</li>
 </ul>
-<h2 id="my-page">My Page<a class="headerlink" href="#my-page" title="Permanent link">¶</a></h2>
+<h3 id="my-page">My Page<a class="headerlink" href="#my-page" title="Permanent link">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">This functionality is only available for System Administrators</p>
 </div>
@@ -5048,7 +5102,7 @@ This allows you to get a birds-eye view of a release. </p>
 <p>The chat interface currently supports:</p>
 <ul>
 <li><strong><a href="#asking-how-to-use-spira">How to use Spira</a></strong>: ask how a feature works, how to complete a task, or how to configure and administer Spira. The agent searches the official Spira documentation and answers with links to the relevant pages</li>
-<li><strong><a href="#asking-about-your-spira-data">Your own data in Spira</a></strong>: ask questions about the data in your products and programs. The agent retrieves your live data and answers based on what it finds</li>
+<li><strong><a href="#asking-about-your-spira-data">Your own data in Spira</a></strong>: ask questions about the data in your products and programs. In a product, you can also ask the agent to create or modify supported data; it presents each proposed change for your approval</li>
 </ul>
 <h3 id="conversation-threads">Conversation threads<a class="headerlink" href="#conversation-threads" title="Permanent link">¶</a></h3>
 <p>The chat interface remembers your conversation within a thread, so you can ask follow-up questions naturally. You can manage multiple named conversation threads to keep separate topics organized:</p>
@@ -5102,6 +5156,15 @@ This allows you to get a birds-eye view of a release. </p>
 <li>What work is assigned to me?</li>
 <li>Are there any new comments on the Requirements I own for the sprint currently in progress?</li>
 </ul>
+<h4 id="creating-and-updating-your-spira-data">Creating and updating your Spira data<a class="headerlink" href="#creating-and-updating-your-spira-data" title="Permanent link">¶</a></h4>
+<p>The agent can propose actions to create new artifacts, update existing artifacts, add comments, and create associations between artifacts in the current product. It does not make any change until you select the proposed actions and approve them. Ask the agent to revise a proposal before approval if it needs adjustment.</p>
+<p>For example, you can ask the agent to:</p>
+<ul>
+<li>Create a task called "Prepare the test environment" and assign it to me</li>
+<li>Change the priority of IN:123 to High and assign it to Alex</li>
+<li>Add a comment to TC:45 that says "Verified on the staging environment"</li>
+<li>Make RQ:42 depend on RQ:17</li>
+</ul>
 <p>It can retrieve:</p>
 <ul>
 <li><strong>Product artifacts</strong>: requirements, incidents, test cases, test sets, test runs, tasks, risks, releases, builds, documents, and automation hosts, including their fields, statuses, owners, dates, associations, and test coverage</li>
@@ -5111,7 +5174,9 @@ This allows you to get a birds-eye view of a release. </p>
 </ul>
 <p>A few things to keep in mind:</p>
 <ul>
-<li><strong>It is read-only.</strong> For now, the agent can retrieve data but cannot create, update, or delete anything in Spira.</li>
+<li><strong>You approve every change.</strong> The agent displays every proposed action and runs only the actions you select and approve.</li>
+<li><strong>It cannot delete data.</strong> </li>
+<li><strong>It cannot create new products.</strong> Instead, system administrators can <a href="#my-page">create products using the Quick Action on My Page</a>.</li>
 <li><strong>It respects your permissions.</strong> The agent only sees what you could see in Spira yourself.</li>
 <li><strong>The product needs Inflectra.ai enabled.</strong> In a product <a href="#when-inflectraai-is-not-enabled-for-a-product">where Inflectra.ai is not enabled</a>, the chat can only answer questions about how to use Spira, not about your data in that product.</li>
 <li><strong>It uses the current product by default.</strong> When you ask about your data without naming a product, the agent answers for the product you are currently in and tells you which one it used. You can name a different product to ask about that one instead.</li>
