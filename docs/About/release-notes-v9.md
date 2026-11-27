@@ -1,5 +1,42 @@
 # Release Notes for Spira v9
 
+## Version 9.7 (December 2026)
+
+!!! info "Summary"
+    Spira 9.7 focuses on security and stability, with security fixes, a new API key rotation setting, and improved performance when working with requirements. It also records data sync changes in history and adds an option to confirm deletions by typing your username.
+
+??? success "New Features"
+    - Adds a new [API Key Rotation Interval](../Spira-Administration-Guide/System.md/#security-settings) security setting that lets administrators set an expiry lifespan on user API Keys [IN:13416]
+    - Adds a new [Require Username Confirmation on Delete](../Spira-Administration-Guide/System-Workspaces.md/#edit-a-product) product setting that makes users type their username before deleting an artifact [IN:13505]
+    - Records data synchronization changes in [product history](../Spira-Administration-Guide/Product-General-Settings.md/#auditing-product-mapping-changes) and [system history](../Spira-Administration-Guide/System.md/#system-history-changes), to help administrators audit and troubleshoot data syncs [IN:13071] [IN:13596]
+    - New REST API endpoints to list, view, create, update, and delete [custom graphs](../Spira-Administration-Guide/System-Reporting.md/#edit-graphs), and to preview a graph query's results [RQ:6037] [RQ:6038] [RQ:6039] [RQ:6040] [RQ:6041] [RQ:6042]
+    - New REST API endpoints to retrieve a single product member's details and role, including for the current user [IN:13703]
+
+??? bug "Bug fixes and enhancements"
+    - Add a default timeout to REST API requests [IN:13437]
+    - Add missing role settings, such as Template Admin and Limited View, to the product role API [IN:13579]
+    - Correct an error when showing or hiding system custom property columns on list pages [IN:12773]
+    - Documentation and Knowledge Base article updates and enhancements [IN:10464] [IN:11919]
+    - Enforce the template's Status Bulk Edit setting consistently across the application [IN:12870]
+    - Fix an error in the Source Code Commits widget on the product home page [IN:13409]
+    - Fix SOAP API errors when Spira is hosted behind a load balancer or proxy that handles HTTPS [IN:13632]
+    - Fix the event log cleanup not trimming the log on busy systems [IN:13807]
+    - Fix the login page clearing the username and password without logging the user in [IN:11085]
+    - Fix workflow page buttons losing their text and icons when a warning is shown [IN:12351]
+    - Improve [adding comments](../Spira-User-Manual/Application-Wide.md/#comments) on details pages, with the comment box shown above existing comments when sorted newest first and a new [keyboard shortcut](../Spira-User-Manual/Appendix-1-Keyboard-Shortcuts.md) to jump to it [IN:5221]
+    - Keep report section editing dialogs open when clicking outside them, so unsaved changes are not lost [IN:6713]
+    - Keep the selected value in [user and release fields](../Spira-User-Manual/Application-Wide.md/#unavailable-users-and-releases) when that user or release is no longer available [IN:6309] [IN:10284]
+    - Prevent an error when recording large numbers of automated test runs [IN:13638]
+    - Reduce SQL Server deadlocks and improve performance when working with requirements under heavy load [IN:13464] [IN:13524] [IN:13525] [IN:13526] [IN:13640] [IN:13944]
+    - Remove unnecessary event log warnings when a data sync plug-in is not enabled for a product [IN:11976]
+    - Restore the incident ID in the subject of notification emails sent when a comment is added [IN:13496]
+    - Security fixes [IN:8983] [IN:13318] [IN:13364] [IN:13489] [IN:13716] [IN:13717] [IN:13718] [IN:13719] [IN:13721] [IN:13824] [IN:13825]
+    - Show each product only once in the product dropdown when adding an association [IN:13326]
+    - Stop dashboard widgets from adding event log warnings about deleted artifacts [IN:13329] [IN:13330]
+    - Stop sending workflow transition emails to inactive users and to users who have turned off email notifications [IN:13499]
+    - Update the Library Information System sample product's test cases and test sets [IN:13784]
+    - Update the login page news banner [IN:13687]
+
 ## Version 9.6 (October 2026)
 
 ??? bug "Bug fixes and enhancements"

@@ -213,7 +213,13 @@ Many artifacts have a comments section that allows you to add and view discussio
 
 ![](img/Requirements_Management_104.png)
 
-Existing comments are displayed in order underneath the textbox in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "***Add Comment***" button.
+Existing comments are displayed in date order (either newest first or oldest first). To add a new comment, enter it into the textbox, and click the "***Add Comment***" button.
+
+### Unavailable Users and Releases
+User and release fields keep their value even when that user or release can no longer be picked from the field's dropdown. Saving the artifact keeps the value, so you are not forced to pick a new one. This also applies when you edit an artifact on its list page.
+
+- **Users**: a user field (such as Owner, Author, or Detected By) can be set to someone who has since been made inactive or removed from the product. The details page shows their name crossed out, with the tooltip "The user is unavailable".
+- **Releases**: a release field can be set to a release that its dropdown no longer lists. The details page still shows that release. For example, if the product is set to [show only active releases in the Detected Release field](../Spira-Administration-Guide/Product-Planning.md/#general), an incident whose detected release has since been closed still shows that release.
 
 ### Comments
 The Comments section of an artifact lets you add and view comments related to that artifact:
@@ -224,7 +230,7 @@ There are two parts to comments:
 
 **Viewing existing comments**: 
 
-- at the top of the comments section is a list of all comments previously made on the artifact
+- the comments section lists all comments previously made on the artifact
 - comments are shown in date order (you can pick either newest-first or oldest-first)
 - you can control whether comments are visible or not using the workflow controls for all artifacts that support workflows
 - existing comments are *not* shown on popup forms (like those for editing an artifact on the Planning Board)
@@ -233,6 +239,7 @@ There are two parts to comments:
 
 - There is a special permission on each product role that allows users with that role to add comments. Users who have this permission can add comments to all relevant artifacts. Users without this permission on their role can never add comments in that product.
 - To add a comment to the artifact, enter your text into the rich text box, then click the "***Add Comment***" button to save.
+- The comment box is shown above the existing comments when they are sorted newest first, and below them when sorted oldest first. Press "c" to jump straight to it (see [keyboard shortcuts](Appendix-1-Keyboard-Shortcuts.md)).
 
 **Deleting comments**:
 Users can delete comments that were made in error or that are no longer relevant. Who can delete what comments?

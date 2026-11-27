@@ -118,6 +118,7 @@ On this screen you can:
 - enable/disable [baselining](../Spira-User-Manual/Release-Management.md/#baselining) 
     {: .edition-spiraplan .edition-spirateam}
 - toggle if searching on a list page should filter on both name and description fields, or just the name field (default is name and description). For very large lists of products, searching by description may result in slower performance. If that is the case, toggle this option to reduce the search range and potentially improve performance. 
+- toggle "Require Username Confirmation on Delete?" (default is No). When set to Yes, anyone deleting an artifact in this product, from its list or details page, must first type their own username into a confirmation dialog. This extra step helps prevent accidental deletions.
 - toggle the active status
 - toggle Inflectra.ai. Note that Inflectra.ai also needs to be [enabled system wide](./System.md/#general-settings) for users to access it in the product. Turn this on for any product where users should be able to use the Inflectra.ai quick actions: while it is off, users can open the sidebar but its quick actions are disabled, with a tooltip explaining that Inflectra.ai is not enabled for the product. Read more about [what users see when Inflectra.ai is not enabled for a product](../Spira-User-Manual/Inflectra-Ai-In-Spira.md/#when-inflectraai-is-not-enabled-for-a-product). 
     {: .feature-inflectraai}
